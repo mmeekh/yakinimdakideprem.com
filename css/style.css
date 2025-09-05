@@ -32,7 +32,7 @@ body {
 
 /* Hero Bölümü */
 .hero {
-    background: linear-gradient(135deg, rgba(211, 47, 47, 0.9), rgba(244, 67, 54, 0.8)), url('assets/images/hero-bg.jpg');
+    background: linear-gradient(135deg, rgba(211, 47, 47, 0.9), rgba(244, 67, 54, 0.8)), url('images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -145,6 +145,11 @@ main {
     min-width: 300px;
 }
 
+.map-content {
+    display: flex;
+    align-items: flex-start;
+}
+
 .earthquake-list {
     flex: 1;
     min-width: 300px;
@@ -211,7 +216,7 @@ main {
 
 /* Harita Konteyneri */
 .map-container {
-    height: 980px; /* Harita yüksekliği artırıldı */
+    height: 1470px; /* Harita yüksekliği %50 artırıldı */
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -226,11 +231,14 @@ main {
 
 /* Büyüklük Göstergesi */
 .magnitude-legend {
-    margin-top: 20px;
+    margin-top: 0;
+    margin-right: 20px;
     background: white;
     padding: 15px;
     border-radius: 8px;
     box-shadow: var(--shadow);
+    width: 160px;
+    flex-shrink: 0;
 }
 
 .legend-title {
@@ -241,7 +249,8 @@ main {
 
 .legend-items {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .legend-item {
@@ -400,6 +409,7 @@ main {
     padding: 80px 0;
     background-color: #f9f9f9;
     margin-top: 60px;
+    flex-basis: 100%;
 }
 
 .features-section h2 {
@@ -614,7 +624,7 @@ footer {
 
 @media (max-width: 576px) {
     .map-container {
-        height: 500px;
+        height: 750px;
     }
     
     .hero {
