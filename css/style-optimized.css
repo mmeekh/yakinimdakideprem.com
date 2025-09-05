@@ -124,6 +124,7 @@ main {
     overflow: hidden;
     position: sticky;
     top: var(--space-2xl);
+    opacity: 0.85; /* %5 daha şeffaf (0.9 -> 0.85) */
 }
 
 /* ========================================
@@ -241,6 +242,7 @@ main {
     box-shadow: var(--shadow-sm);
     width: 160px;
     flex-shrink: 0;
+    opacity: 0.85; /* %5 daha şeffaf (0.9 -> 0.85) */
 }
 
 .legend-title {
@@ -357,7 +359,7 @@ main {
 .features-section {
     padding: var(--space-5xl) 0;
     background-color: var(--bg-primary);
-    margin-top: var(--space-3xl);
+    margin-top: 0;
     flex-basis: 100%;
 }
 

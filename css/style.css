@@ -18,19 +18,20 @@
     background-position: center;
     background-attachment: fixed;
     color: white;
-    padding: 30px 0 20px; /* Padding 1.3x azaltıldı */
+    padding: 60px 0 16px; /* Üst padding artırıldı, metin aşağı kaydırıldı */
     margin-top: 0;
-    min-height: 35vh; /* Yükseklik 1.3x azaltıldı (50vh -> 35vh) */
+    min-height: 28vh; /* Yükseklik %20 azaltıldı (35vh -> 28vh) */
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Metinleri yukarıdan başlat */
 }
 
 .hero .container {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Container içeriğini yukarıdan başlat */
     justify-content: space-between;
     gap: var(--spacing-xl);
     width: 100%;
+    padding-top: 20px; /* Ek üst boşluk */
 }
 
 .hero-content {
@@ -159,6 +160,7 @@ main {
     overflow: hidden;
     position: sticky;
     top: 30px;
+    opacity: 0.85; /* %5 daha şeffaf (0.9 -> 0.85) */
 }
 
 /* Harita Başlığı */
@@ -218,8 +220,8 @@ main {
 
 /* Harita Konteyneri */
 .map-container {
-    height: 425px !important; /* %15 kısaltılmış harita yüksekliği */
-    min-height: 425px !important; /* Minimum yükseklik garantisi */
+    height: 328px !important; /* %10 artırılmış harita yüksekliği */
+    min-height: 328px !important; /* Minimum yükseklik garantisi */
     width: 100% !important; /* Container genişliği */
     max-width: 100% !important;
     border-radius: 12px;
@@ -272,6 +274,7 @@ main {
     box-shadow: var(--shadow);
     width: 160px;
     flex-shrink: 0;
+    opacity: 0.85; /* %5 daha şeffaf (0.9 -> 0.85) */
 }
 
 .legend-title {
@@ -380,7 +383,7 @@ main {
 
 /* Ben Kimim Bölümü */
 .about-section {
-    padding: 80px 0;
+    padding: 64px 0; /* %20 azaltıldı (80px -> 64px) */
     background-color: white;
 }
 
@@ -443,9 +446,9 @@ main {
 
 /* Özellikler Bölümü */
 .features-section {
-    padding: 80px 0;
+    padding: 64px 0; /* %20 azaltıldı (80px -> 64px) */
     background-color: #f9f9f9;
-    margin-top: 60px;
+    margin-top: 0;
     flex-basis: 100%;
 }
 
@@ -637,8 +640,8 @@ footer {
     }
     
     .map-container {
-        height: 350px !important; /* Tablet için yarıya indirilmiş yükseklik */
-        min-height: 350px !important;
+        height: 385px !important; /* Tablet için %10 artırılmış yükseklik */
+        min-height: 385px !important;
         width: 100% !important; /* Container genişliği */
         max-width: 100% !important;
     }
@@ -681,15 +684,15 @@ footer {
     }
     
     .map-container {
-        height: 300px !important; /* Mobil için yarıya indirilmiş yükseklik */
-        min-height: 300px !important;
+        height: 330px !important; /* Mobil için %10 artırılmış yükseklik */
+        min-height: 330px !important;
         width: 100% !important; /* Container genişliği */
         max-width: 100% !important;
     }
     
     .hero {
-        padding: 20px 0 15px; /* Mobil padding 1.3x azaltıldı */
-        min-height: 25vh; /* Mobil yükseklik 1.3x azaltıldı */
+        padding: 40px 0 12px; /* Mobil padding artırıldı, metin aşağı kaydırıldı */
+        min-height: 20vh; /* Mobil yükseklik %20 azaltıldı (25vh -> 20vh) */
     }
     
     .hero-content h1 {
@@ -882,6 +885,7 @@ footer {
     border-radius: 12px;
     box-shadow: var(--shadow);
     z-index: 1000;
+    opacity: 0.85; /* %5 daha şeffaf (0.9 -> 0.85) */
 }
 
 .map-wrapper .magnitude-legend {
@@ -894,6 +898,7 @@ footer {
     border-radius: 8px;
     box-shadow: var(--shadow);
     z-index: 1000;
+    opacity: 0.85; /* %5 daha şeffaf (0.9 -> 0.85) */
 }
 
 .map-wrapper .update-info {

@@ -36,7 +36,7 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 150px 0 100px;
+    padding: 140px 0 80px; /* Üst padding artırıldı, metin aşağı kaydırıldı */
     text-align: center;
     margin-top: 0;
 }
@@ -83,7 +83,7 @@ body {
 
 /* Hakkımda Bölümü */
 .about-section {
-    padding: 100px 0;
+    padding: 80px 0; /* %20 azaltıldı (100px -> 80px) */
     background-color: white;
 }
 
@@ -155,7 +155,7 @@ body {
 
 /* Misyon ve Vizyon Bölümü */
 .mission-vision {
-    padding: 100px 0;
+    padding: 80px 0; /* %20 azaltıldı (100px -> 80px) */
     background-color: #f9f9f9;
 }
 
@@ -223,7 +223,7 @@ body {
 
 /* Değerler Bölümü */
 .values-section {
-    padding: 100px 0;
+    padding: 80px 0; /* %20 azaltıldı (100px -> 80px) */
     background-color: white;
 }
 
@@ -272,7 +272,7 @@ body {
 
 /* İletişim Bölümü */
 .contact-section {
-    padding: 100px 0;
+    padding: 80px 0; /* %20 azaltıldı (100px -> 80px) */
     background-color: #f9f9f9;
 }
 
@@ -555,14 +555,14 @@ footer {
 
 @media (max-width: 576px) {
     .hero {
-        padding: 100px 0 60px;
+        padding: 100px 0 48px; /* Üst padding artırıldı, metin aşağı kaydırıldı */
     }
     
     .about-section,
     .mission-vision,
     .values-section,
     .contact-section {
-        padding: 60px 0;
+        padding: 48px 0; /* %20 azaltıldı (60px -> 48px) */
     }
     
     .about-content {

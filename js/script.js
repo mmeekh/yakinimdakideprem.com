@@ -416,7 +416,7 @@ function resizeMapContainer() {
   }
 
   if (mapEl) {
-    mapEl.style.height = `${window.innerHeight - headerHeight}px`;
+    mapEl.style.height = `${(window.innerHeight - headerHeight) * 0.8}px`;
   }
 
   if (AppState.map) {
