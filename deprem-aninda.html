@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İlk Yardım Çantası - Anlık Deprem</title>
+    <title>Deprem Anında - Anlık Deprem</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/ilk-yardim.css">
+    <link rel="stylesheet" href="css/deprem-aninda.css">
     <link rel="icon" href="assets/images/logo.png" type="image/png">
 </head>
 <body>
@@ -18,8 +18,8 @@
             </div>
             <nav>
                 <a href="index.html">Ana Sayfa</a>
-                <a href="deprem-aninda.html">Deprem Anında</a>
-                <a href="ilk-yardim-cantasi.html" class="active">İlk Yardım Çantası</a>
+                <a href="deprem-aninda.html" class="active">Deprem Anında</a>
+                <a href="ilk-yardim-cantasi.html">İlk Yardım Çantası</a>
                 <a href="ben-kimim.html">Ben Kimim</a>
             </nav>
         </div>
@@ -27,143 +27,53 @@
 
     <header>
         <div class="container">
-            <h1>İlk Yardım Çantası Hazırlama</h1>
-            <p>Deprem anında hayat kurtaracak malzemeler</p>
+            <h1>Deprem Anında Güvenlik Rehberi</h1>
+            <p>Deprem sırasında kendinizi ve sevdiklerinizi koruyun</p>
         </div>
     </header>
 
     <main class="container">
-        <section class="video-container">
-            <h2>İlk Yardım Çantası Nasıl Hazırlanır?</h2>
-            <div class="video-wrapper">
-                <video controls poster="assets/images/video-poster.jpg">
-                    <source src="assets/videos/ilk-yardim.mp4" type="video/mp4">
-                    Tarayıcınız video etiketini desteklemiyor.
-                </video>
+        <section class="safety-guides">
+            <div class="guide-card">
+                <div class="guide-icon">
+                    <i class="fas fa-house-damage"></i>
+                </div>
+                <h2>Bina İçindeyseniz</h2>
+                <p>Çök-Kapan-Tutun hareketini uygulayın. Pencerelerden ve ağır eşyalardan uzak durun.</p>
             </div>
-            <div class="video-description">
-                <p>Bu videoda, deprem ve afet durumlarında hayati önem taşıyan ilk yardım çantasının nasıl hazırlanacağını adım adım öğrenin. Uzmanlar tarafından hazırlanan bu rehberle, siz ve sevdikleriniz için en doğru çantayı hazırlayabilirsiniz.</p>
+            <div class="guide-card">
+                <div class="guide-icon">
+                    <i class="fas fa-road"></i>
+                </div>
+                <h2>Dışarıdaysanız</h2>
+                <p>Binalardan, ağaçlardan ve devrilebilecek cisimlerden uzak açık alanlara yönelin.</p>
             </div>
-        </section>
-
-        <section class="supply-list">
-            <h2>Gerekli Malzemeler</h2>
-            <div class="supply-categories">
-                <div class="category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-tint"></i>
-                        </div>
-                        <h3>Su ve Gıda</h3>
-                    </div>
-                    <ul>
-                        <li>Su (kişi başı 4 litre/gün)</li>
-                        <li>Uzun ömürlü konserve gıdalar</li>
-                        <li>Kuru meyve ve kuruyemiş</li>
-                        <li>Çikolata ve enerji barları</li>
-                        <li>Bebek maması (varsa)</li>
-                        <li>Özel diyet gıdalar (gerekirse)</li>
-                    </ul>
+            <div class="guide-card">
+                <div class="guide-icon">
+                    <i class="fas fa-car"></i>
                 </div>
-
-                <div class="category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-first-aid"></i>
-                        </div>
-                        <h3>İlk Yardım Malzemeleri</h3>
-                    </div>
-                    <ul>
-                        <li>İlk yardım kitleri</li>
-                        <li>Reçeteli ilaçlar (2 haftalık)</li>
-                        <li>Ağrı kesiciler ve ateş düşürücüler</li>
-                        <li>Sargı bezi ve yapışkanlı bant</li>
-                        <li>Antiseptik solüsyonlar</li>
-                        <li>Eldiven ve maske</li>
-                    </ul>
-                </div>
-
-                <div class="category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h3>Araç ve Ekipmanlar</h3>
-                    </div>
-                    <ul>
-                        <li>Pil el feneri ve yedek piller</li>
-                        <li>Portatif radyo</li>
-                        <li>Çok amaçlı İsviçre çakısı</li>
-                        <li>İp ve bant</li>
-                        <li>Yangın söndürücü</li>
-                        <li>Para ve önemli belgeler</li>
-                    </ul>
-                </div>
-
-                <div class="category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-tshirt"></i>
-                        </div>
-                        <h3>Kişisel Eşyalar</h3>
-                    </div>
-                    <ul>
-                        <li>Değiştirme kıyafetleri</li>
-                        <li>Uyku tulumu veya battaniye</li>
-                        <li>Güneş gözlüğü</li>
-                        <li>Kişisel bakım ürünleri</li>
-                        <li>İletişim için powerbank</li>
-                        <li>Yedek anahtarlar</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="checklist-section">
-                <h3>İlk Yardım Çantası Kontrol Listesi</h3>
-                <div class="checklist-intro">
-                    <p>Aşağıdaki kontrol listesini kullanarak ilk yardım çantanızı düzenli olarak kontrol edin ve eksikleri tamamlayın:</p>
-                </div>
-                <div class="checklist-download">
-                    <a href="#" class="btn btn-primary">
-                        <i class="fas fa-download"></i> Kontrol Listesini İndir (PDF)
-                    </a>
-                </div>
+                <h2>Araç Kullanırken</h2>
+                <p>Güvenli bir şekilde kenara çekin, köprü ve tünellerden uzak durun.</p>
             </div>
         </section>
 
-        <section class="tips-section">
-            <h2>İpuçları ve Öneriler</h2>
-            <div class="tips-grid">
-                <div class="tip-card">
-                    <div class="tip-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>Düzenli Kontrol</h3>
-                    <p>İlk yardım çantasını 6 ayda bir kontrol edin. Son kullanma tarihi geçmiş ürünleri değiştirin.</p>
+        <section class="emergency-contacts">
+            <h2>Acil İletişim Numaraları</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">112</div>
+                    <h3>Acil Çağrı Merkezi</h3>
+                    <p>İtfaiye, ambulans ve polis</p>
                 </div>
-                
-                <div class="tip-card">
-                    <div class="tip-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Kolay Ulaşılabilir</h3>
-                    <p>Çantayı kolayca ulaşabileceğiniz bir yerde tutun. Tüm aile üyeleri nerede olduğunu bilmeli.</p>
+                <div class="contact-item">
+                    <div class="contact-icon">AFAD</div>
+                    <h3>Afet ve Acil Durum Yönetimi</h3>
+                    <p>www.afad.gov.tr</p>
                 </div>
-                
-                <div class="tip-card">
-                    <div class="tip-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Aile Planı</h3>
-                    <p>Her aile üyesi için özel ihtiyaçları düşünün. Bebekler, yaşlılar ve özel ihtiyaçlı bireyler için ek malzemeler ekleyin.</p>
-                </div>
-                
-                <div class="tip-card">
-                    <div class="tip-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Dijital Yedek</h3>
-                    <p>Önemli belgelerin dijital kopyalarını bulut depolamada saklayın. Acil durum iletişim bilgilerinizi telefonunuza kaydedin.</p>
+                <div class="contact-item">
+                    <div class="contact-icon">AKUT</div>
+                    <h3>Arama Kurtarma</h3>
+                    <p>www.akut.org.tr</p>
                 </div>
             </div>
         </section>
@@ -213,6 +123,6 @@
         </div>
     </footer>
 
-    <script src="js/ilk-yardim.js"></script>
+    <script src="js/deprem-aninda.js"></script>
 </body>
 </html>
