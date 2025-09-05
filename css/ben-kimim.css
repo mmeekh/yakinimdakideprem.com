@@ -32,7 +32,7 @@ body {
 
 /* Hero Bölümü */
 .hero {
-    background: linear-gradient(135deg, rgba(211, 47, 47, 0.9), rgba(244, 67, 54, 0.8)), url('assets/images/hero-bg.jpg');
+    background: linear-gradient(135deg, rgba(211, 47, 47, 0.9), rgba(244, 67, 54, 0.8)), url('images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     color: white;
