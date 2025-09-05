@@ -267,6 +267,10 @@ main {
     border-radius: var(--radius-xs);
 }
 
+.legend-item span {
+    color: #000;
+}
+
 /* ========================================
    EARTHQUAKE LIST
 ======================================== */

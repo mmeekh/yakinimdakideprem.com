@@ -218,8 +218,8 @@ main {
 
 /* Harita Konteyneri */
 .map-container {
-    height: 500px !important; /* Yarıya indirilmiş harita yüksekliği */
-    min-height: 500px !important; /* Minimum yükseklik garantisi */
+    height: 425px !important; /* %15 kısaltılmış harita yüksekliği */
+    min-height: 425px !important; /* Minimum yükseklik garantisi */
     width: 100% !important; /* Container genişliği */
     max-width: 100% !important;
     border-radius: 12px;
@@ -296,6 +296,10 @@ main {
     width: 20px;
     height: 20px;
     border-radius: 4px;
+}
+
+.legend-item span {
+    color: #000;
 }
 
 /* Deprem Listesi */
@@ -868,8 +872,9 @@ footer {
 
 .map-wrapper .earthquake-list {
     position: absolute;
-    top: 20px;
+    top: 50%;
     right: 20px;
+    transform: translateY(-50%);
     width: 300px;
     max-height: calc(100% - 40px);
     overflow-y: auto;
@@ -881,8 +886,9 @@ footer {
 
 .map-wrapper .magnitude-legend {
     position: absolute;
-    top: 20px;
+    top: 50%;
     left: 20px;
+    transform: translateY(-50%);
     background: white;
     padding: 10px;
     border-radius: 8px;
