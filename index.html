@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anlık Deprem - Gerçek Zamanlı Deprem Bilgileri</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Gizli Header -->
+    <header id="hidden-header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Anlık Deprem Logo">
+                <span>Anlık Deprem</span>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Ana Sayfa</a>
+                <a href="deprem-aninda.html">Deprem Anında</a>
+                <a href="ilk-yardim-cantasi.html">İlk Yardım Çantası</a>
+                <a href="ben-kimim.html">Ben Kimim</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Bölümü -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Türkiye'nin Gerçek Zamanlı Deprem Bilgi Platformu</h1>
+                <p>En son depremleri anında takip edin, hayat kurtaran bilgileri öğrenin</p>
+                <div class="hero-buttons">
+                    <a href="#map-section" class="btn btn-primary">Haritayı Görüntüle</a>
+                    <a href="deprem-aninda.html" class="btn btn-secondary">Deprem Anında</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number" id="daily-quakes">0</div>
+                        <div class="stat-label">Bugünkü Depremler</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="max-magnitude">0.0</div>
+                        <div class="stat-label">En Büyük Deprem</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="last-update-time">--:--</div>
+                        <div class="stat-label">Son Güncelleme</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ana İçerik -->
+    <main class="container">
+        <div id="map-section" class="map-section">
+            <div class="map-header">
+                <h1>Türkiye Deprem Haritası</h1>
+                <div class="update-info">
+                    <span id="last-update">Son güncelleme: Yükleniyor...</span>
+                    <button id="refresh-btn" class="btn-refresh">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Harita Alanı -->
+            <div id="map" class="map-container"></div>
+            
+            <!-- Büyüklük Göstergesi -->
+            <div class="magnitude-legend">
+                <div class="legend-title">Deprem Büyüklüğü</div>
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <div class="color-box" style="background-color: rgba(255, 0, 0, 0.3);"></div>
+                        <span>3.0 - 4.0</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box" style="background-color: rgba(255, 0, 0, 0.6);"></div>
+                        <span>4.0 - 5.0</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box" style="background-color: rgba(255, 0, 0, 0.9);"></div>
+                        <span>5.0+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Son Depremler Listesi -->
+        <aside class="earthquake-list">
+            <div class="list-header">
+                <h2>Son Depremler</h2>
+                <div class="filter-controls">
+                    <select id="magnitude-filter">
+                        <option value="all">Tüm Büyüklükler</option>
+                        <option value="3">3.0+</option>
+                        <option value="4">4.0+</option>
+                        <option value="5">5.0+</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="earthquake-items" id="earthquake-items">
+                <!-- Deprem verileri JS ile doldurulacak -->
+                <div class="loading">Depremler yükleniyor...</div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Özellikler Bölümü -->
+    <section class="features-section">
+        <div class="container">
+            <h2>Platform Özellikleri</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Gerçek Zamanlı Harita</h3>
+                    <p>USGS verileri ile güncellenen Türkiye deprem haritası</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Deprem Anında</h3>
+                    <p>Hayat kurtaran bilgiler ve güvenli alanlar</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <h3>İlk Yardım Çantası</h3>
+                    <p>Videolu anlatımlarla çantanızı hazırlayın</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Anlık Bildirimler</h3>
+                    <p>Önemli depremler hakkında anlık bildirimler</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Anlık Deprem Logo">
+                    <h3>Anlık Deprem</h3>
+                    <p>Hayat kurtaran bilgiler</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Hızlı Linkler</h4>
+                        <ul>
+                            <li><a href="index.html">Ana Sayfa</a></li>
+                            <li><a href="deprem-aninda.html">Deprem Anında</a></li>
+                            <li><a href="ilk-yardim-cantasi.html">İlk Yardım Çantası</a></li>
+                            <li><a href="ben-kimim.html">Ben Kimim</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Kaynaklar</h4>
+                        <ul>
+                            <li><a href="https://earthquake.usgs.gov" target="_blank">USGS</a></li>
+                            <li><a href="https://deprem.afad.gov.tr" target="_blank">AFAD</a></li>
+                            <li><a href="https://koeri.boun.edu.tr" target="_blank">KOERİ</a></li>
+                            <li><a href="#" target="_blank">Deprem Eğitimleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>İletişim</h4>
+                        <ul>
+                            <li><a href="mailto:info@anlikdeprem.com">info@anlikdeprem.com</a></li>
+                            <li><a href="#" target="_blank">Bize Ulaşın</a></li>
+                            <li><a href="#" target="_blank">Gizlilik Politikası</a></li>
+                            <li><a href="#" target="_blank">Kullanım Şartları</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Anlık Deprem | Toplumu Geliştirmek İçin Çabalayan Bir Girişim</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Ana Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
