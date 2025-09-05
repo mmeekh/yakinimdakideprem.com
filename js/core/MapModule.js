@@ -185,8 +185,8 @@ class MapModule {
         width: ${parentWidth}px !important;
         max-width: none !important;
         min-width: ${parentWidth}px !important;
-        height: 500px !important;
-        min-height: 500px !important;
+        height: 385px !important;
+        min-height: 385px !important;
       `;
       
       mapContent.style.cssText = `
