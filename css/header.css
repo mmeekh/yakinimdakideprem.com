@@ -1,19 +1,13 @@
 /* Gizli Header */
 #hidden-header {
     position: fixed;
-    top: -80px;
+    top: 0;
     left: 0;
     width: 100%;
     background: rgba(33, 33, 33, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: var(--shadow);
-}
-
-#hidden-header:hover,
-#hidden-header:focus-within {
-    top: 0;
 }
 
 #hidden-header .container {

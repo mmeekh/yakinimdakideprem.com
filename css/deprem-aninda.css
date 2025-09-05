@@ -131,6 +131,9 @@ body {
     text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .contact-item:hover {
