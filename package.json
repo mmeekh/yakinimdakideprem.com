@@ -1,0 +1,60 @@
+{
+  "name": "anlik-deprem",
+  "version": "2.0.0",
+  "description": "Türkiye'nin gerçek zamanlı deprem bilgi platformu - Optimized version",
+  "main": "js/main.js",
+  "scripts": {
+    "build": "npm run build:css && npm run build:js && npm run build:html",
+    "build:css": "npm run css:minify && npm run css:purge",
+    "build:js": "npm run js:minify && npm run js:bundle",
+    "build:html": "npm run html:minify",
+    "css:minify": "cleancss -o dist/css/style.min.css css/style-optimized.css",
+    "css:purge": "purgecss --css dist/css/style.min.css --content '*.html' --output dist/css/",
+    "js:minify": "terser js/main.js -o dist/js/main.min.js -c -m",
+    "js:bundle": "webpack --mode=production",
+    "html:minify": "html-minifier-terser --collapse-whitespace --remove-comments --minify-css --minify-js -o dist/index.html index-optimized.html",
+    "dev": "npm run watch & npm run serve",
+    "watch": "chokidar 'css/**/*.css' 'js/**/*.js' '*.html' -c 'npm run build'",
+    "serve": "http-server -p 8080 -c-1",
+    "lighthouse": "lighthouse http://localhost:8080 --output=html --output-path=./lighthouse-report.html",
+    "test": "npm run test:accessibility && npm run test:performance",
+    "test:accessibility": "pa11y http://localhost:8080",
+    "test:performance": "npm run lighthouse",
+    "clean": "rimraf dist/",
+    "prebuild": "npm run clean"
+  },
+  "keywords": [
+    "deprem",
+    "earthquake",
+    "türkiye",
+    "real-time",
+    "usgs",
+    "afad",
+    "harita",
+    "map"
+  ],
+  "author": "Anlık Deprem Team",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.19.4",
+    "html-minifier-terser": "^7.2.0",
+    "purgecss": "^5.0.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "chokidar-cli": "^3.0.0",
+    "http-server": "^14.1.1",
+    "lighthouse": "^11.0.0",
+    "pa11y": "^7.0.0",
+    "rimraf": "^5.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
