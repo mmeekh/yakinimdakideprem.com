@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
     <!-- Gizli Header -->
     <header id="hidden-header">
         <div class="container">
             <div class="logo">
-                <img src="assets/images/logo.png" alt="Anlık Deprem Logo">
+                <img src="images/logo.png" alt="Anlık Deprem Logo">
                 <span>Anlık Deprem</span>
             </div>
             <nav>
@@ -69,27 +69,29 @@
                     </button>
                 </div>
             </div>
-            
-            <!-- Harita Alanı -->
-            <div id="map" class="map-container"></div>
-            
-            <!-- Büyüklük Göstergesi -->
-            <div class="magnitude-legend">
-                <div class="legend-title">Deprem Büyüklüğü</div>
-                <div class="legend-items">
-                    <div class="legend-item">
-                        <div class="color-box" style="background-color: rgba(255, 0, 0, 0.3);"></div>
-                        <span>3.0 - 4.0</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="color-box" style="background-color: rgba(255, 0, 0, 0.6);"></div>
-                        <span>4.0 - 5.0</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="color-box" style="background-color: rgba(255, 0, 0, 0.9);"></div>
-                        <span>5.0+</span>
+
+            <div class="map-content">
+                <!-- Büyüklük Göstergesi -->
+                <div class="magnitude-legend">
+                    <div class="legend-title">Deprem Büyüklüğü</div>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <div class="color-box" style="background-color: rgba(255, 0, 0, 0.3);"></div>
+                            <span>3.0 - 4.0</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="color-box" style="background-color: rgba(255, 0, 0, 0.6);"></div>
+                            <span>4.0 - 5.0</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="color-box" style="background-color: rgba(255, 0, 0, 0.9);"></div>
+                            <span>5.0+</span>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Harita Alanı -->
+                <div id="map" class="map-container"></div>
             </div>
         </div>
 
@@ -112,51 +114,50 @@
                 <div class="loading">Depremler yükleniyor...</div>
             </div>
         </aside>
-    </main>
-
-    <!-- Özellikler Bölümü -->
-    <section class="features-section">
-        <div class="container">
-            <h2>Platform Özellikleri</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-map-marked-alt"></i>
+        <!-- Özellikler Bölümü -->
+        <section class="features-section">
+            <div class="container">
+                <h2>Platform Özellikleri</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Gerçek Zamanlı Harita</h3>
+                        <p>USGS verileri ile güncellenen Türkiye deprem haritası</p>
                     </div>
-                    <h3>Gerçek Zamanlı Harita</h3>
-                    <p>USGS verileri ile güncellenen Türkiye deprem haritası</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>Deprem Anında</h3>
+                        <p>Hayat kurtaran bilgiler ve güvenli alanlar</p>
                     </div>
-                    <h3>Deprem Anında</h3>
-                    <p>Hayat kurtaran bilgiler ve güvenli alanlar</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-first-aid"></i>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-first-aid"></i>
+                        </div>
+                        <h3>İlk Yardım Çantası</h3>
+                        <p>Videolu anlatımlarla çantanızı hazırlayın</p>
                     </div>
-                    <h3>İlk Yardım Çantası</h3>
-                    <p>Videolu anlatımlarla çantanızı hazırlayın</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bell"></i>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h3>Anlık Bildirimler</h3>
+                        <p>Önemli depremler hakkında anlık bildirimler</p>
                     </div>
-                    <h3>Anlık Bildirimler</h3>
-                    <p>Önemli depremler hakkında anlık bildirimler</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="assets/images/logo.png" alt="Anlık Deprem Logo">
+                    <img src="images/logo.png" alt="Anlık Deprem Logo">
                     <h3>Anlık Deprem</h3>
                     <p>Hayat kurtaran bilgiler</p>
                 </div>
