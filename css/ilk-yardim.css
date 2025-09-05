@@ -30,77 +30,6 @@ body {
     padding: 0 20px;
 }
 
-/* Gizli Header */
-#hidden-header {
-    position: fixed;
-    top: -80px;
-    left: 0;
-    width: 100%;
-    background: rgba(33, 33, 33, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: var(--shadow);
-}
-
-#hidden-header:hover,
-#hidden-header:focus-within {
-    top: 0;
-}
-
-#hidden-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo img {
-    height: 40px;
-}
-
-.logo span {
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-#hidden-header nav {
-    display: flex;
-    gap: 25px;
-}
-
-#hidden-header nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    position: relative;
-    transition: var(--transition);
-}
-
-#hidden-header nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: var(--primary-color);
-    transition: width 0.3s ease;
-}
-
-#hidden-header nav a:hover::after,
-#hidden-header nav a.active::after {
-    width: 100%;
-}
-
 /* Sayfa Header */
 header {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -452,13 +381,6 @@ footer {
         grid-template-columns: 1fr;
     }
     
-    #hidden-header nav {
-        gap: 15px;
-    }
-    
-    #hidden-header nav a {
-        font-size: 14px;
-    }
     
     .footer-content {
         flex-direction: column;
