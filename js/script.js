@@ -406,44 +406,22 @@ function startAutoRefresh() {
 
 // Resize map container to proper width
 function resizeMapContainer() {
-  const mapContainer = document.querySelector('.map-container');
-  const mapContent = document.querySelector('.map-content');
-  const mapSection = document.querySelector('.map-section');
+  const header = document.getElementById('hidden-header');
+  const mapWrapper = document.querySelector('.map-wrapper');
+  const mapEl = document.getElementById('map');
+  const headerHeight = header ? header.offsetHeight : 0;
 
-  if (mapContainer && mapContent && mapSection) {
-    // Parent'ın genişliğini al
-    const parentWidth = mapContent.offsetWidth;
-    
-    // Harita container'ını zorla genişlet
-    mapContainer.style.cssText = `
-      width: ${parentWidth}px !important;
-      max-width: none !important;
-      min-width: ${parentWidth}px !important;
-      height: 500px !important;
-      min-height: 500px !important;
-    `;
-    
-    // Parent container'ları da genişlet
-    mapContent.style.cssText = `
-      width: 100% !important;
-      max-width: none !important;
-      margin: 0 auto !important;
-    `;
-    
-    mapSection.style.cssText = `
-      width: 120% !important;
-      max-width: 120% !important;
-      margin: 0 auto !important;
-    `;
-    
-    console.log(`Harita genişliği ${parentWidth}px olarak ayarlandı`);
-    
-    // Leaflet haritasını yeniden boyutlandır
+  if (mapWrapper) {
+    mapWrapper.style.marginTop = `${headerHeight}px`;
+  }
+
+  if (mapEl) {
+    mapEl.style.height = `${window.innerHeight - headerHeight}px`;
+  }
+
+  if (AppState.map) {
     setTimeout(() => {
-      if (AppState.map) {
-        AppState.map.invalidateSize();
-      }
-      window.dispatchEvent(new Event('resize'));
+      AppState.map.invalidateSize();
     }, 100);
   }
 }
