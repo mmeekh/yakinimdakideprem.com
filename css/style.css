@@ -298,6 +298,10 @@ main {
     border-radius: 4px;
 }
 
+.legend-item span {
+    color: #000;
+}
+
 /* Deprem Listesi */
 .list-header {
     display: flex;
@@ -868,8 +872,9 @@ footer {
 
 .map-wrapper .earthquake-list {
     position: absolute;
-    top: 20px;
+    top: 50%;
     right: 20px;
+    transform: translateY(-50%);
     width: 300px;
     max-height: calc(100% - 40px);
     overflow-y: auto;
@@ -881,8 +886,9 @@ footer {
 
 .map-wrapper .magnitude-legend {
     position: absolute;
-    top: 20px;
+    top: 50%;
     left: 20px;
+    transform: translateY(-50%);
     background: white;
     padding: 10px;
     border-radius: 8px;
