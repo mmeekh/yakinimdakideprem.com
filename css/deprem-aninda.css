@@ -63,11 +63,38 @@ body {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
 }
 
 .guide-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+}
+
+.guide-read-more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: var(--transition);
+}
+
+.guide-card:hover .guide-read-more {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .guide-icon {

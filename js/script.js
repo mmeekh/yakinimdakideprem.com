@@ -1,277 +1,480 @@
-// Global değişkenler
-let map;
-let earthquakeData = [];
-let markers = [];
-let refreshInterval;
+/**
+ * Anlık Deprem - Ana JavaScript Modülü
+ * Optimized version with better error handling and performance
+ */
 
-// Sayfa yüklendiğinde çalışacak fonksiyon
+// Global state management
+const AppState = {
+  map: null,
+  earthquakeData: [],
+  markers: [],
+  refreshInterval: null,
+  isInitialized: false,
+  lastUpdateTime: null
+};
+
+// Configuration constants
+const CONFIG = {
+  REFRESH_INTERVAL: 120000, // 2 minutes
+  MAP_CENTER: [39.0, 35.0], // Türkiye merkezi
+  MAP_ZOOM: 6, // Türkiye'yi tam gösteren zoom seviyesi
+  API_TIMEOUT: 10000,
+  MAX_RADIUS_KM: 1000,
+  MIN_MAGNITUDE: 2.5,
+  HOURS_BACK: 24
+};
+
+// Utility functions
+const Utils = {
+  formatTime: (date) => date.toLocaleTimeString("tr-TR"),
+  formatDateTime: (date) => date.toLocaleString("tr-TR"),
+  debounce: (func, wait) => {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+};
+
+// Initialize application
 document.addEventListener("DOMContentLoaded", () => {
-  initMap();
-  fetchEarthquakeData();
-  setupEventListeners();
-  updateStats();
-
-  // Her 2 dakikada bir veri güncelle
-  refreshInterval = setInterval(() => {
-    fetchEarthquakeData();
-    updateStats();
-  }, 120000);
+  try {
+    initApp();
+  } catch (error) {
+    console.error("Uygulama başlatılamadı:", error);
+    showErrorMessage("Uygulama başlatılırken bir hata oluştu.");
+  }
 });
 
-// Haritayı başlat
-function initMap() {
-  // Türkiye merkezli harita
-  map = L.map("map").setView([39.0, 35.0], 6);
-
-  // OpenStreetMap katmanı
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  }).addTo(map);
+async function initApp() {
+  if (AppState.isInitialized) return;
+  
+  initMap();
+  await fetchEarthquakeData();
+  setupEventListeners();
+  updateStats();
+  startAutoRefresh();
+  
+  AppState.isInitialized = true;
 }
 
-// USGS API'den deprem verilerini çek
+// Map initialization
+function initMap() {
+  try {
+    // Show loading indicator
+    const mapContainer = document.getElementById("map");
+    if (mapContainer) {
+      mapContainer.innerHTML = '<div class="map-loading"><i class="fas fa-spinner fa-spin"></i>Harita yükleniyor...</div>';
+    }
+
+    AppState.map = L.map("map").setView(CONFIG.MAP_CENTER, CONFIG.MAP_ZOOM);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      maxZoom: 18,
+      minZoom: 4
+    }).addTo(AppState.map);
+
+    // Hide loading indicator when map is ready
+    AppState.map.whenReady(() => {
+      console.log("Harita başarıyla yüklendi");
+      // Harita yüklendikten sonra boyutlandır
+      setTimeout(() => {
+        AppState.map.invalidateSize();
+        console.log("Harita boyutlandırıldı");
+        
+        // Harita genişliğini zorla ayarla
+        resizeMapContainer();
+      }, 100);
+    });
+  } catch (error) {
+    console.error("Harita başlatılamadı:", error);
+    showErrorMessage("Harita yüklenirken bir hata oluştu.");
+  }
+}
+
+// Fetch earthquake data from USGS API
 async function fetchEarthquakeData() {
+  const startTime = Date.now();
+  
   try {
     const params = new URLSearchParams({
       format: "geojson",
-      starttime: new Date(Date.now() - 86400000).toISOString(), // Son 24 saat
-      latitude: 39.0,
-      longitude: 35.0,
-      maxradiuskm: 1000,
-      minmagnitude: 2.5,
+      starttime: new Date(Date.now() - CONFIG.HOURS_BACK * 3600000).toISOString(),
+      latitude: CONFIG.MAP_CENTER[0],
+      longitude: CONFIG.MAP_CENTER[1],
+      maxradiuskm: CONFIG.MAX_RADIUS_KM,
+      minmagnitude: CONFIG.MIN_MAGNITUDE,
       orderby: "magnitude-desc",
+      limit: 100
     });
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), CONFIG.API_TIMEOUT);
 
     const response = await fetch(
       `https://earthquake.usgs.gov/fdsnws/event/1/query?${params}`,
+      { signal: controller.signal }
     );
 
-    // 200 dışındaki durumlar için hata fırlat
+    clearTimeout(timeoutId);
+
     if (!response.ok) {
       throw new Error(`USGS API hata kodu: ${response.status}`);
     }
 
     const data = await response.json();
-
-    // Veriyi işle
     processEarthquakeData(data.features);
-
-    // Son güncelleme zamanını güncelle
-    const now = new Date();
-    document.getElementById("last-update").textContent =
-      `Son güncelleme: ${now.toLocaleTimeString("tr-TR")}`;
-    document.getElementById("last-update-time").textContent =
-      `${now.getHours().toString().padStart(2, "0")}:${now.getMinutes().toString().padStart(2, "0")}`;
+    updateLastUpdateTime();
+    
+    console.log(`Veri yükleme süresi: ${Date.now() - startTime}ms`);
   } catch (error) {
     console.error("Deprem verileri alınamadı:", error);
-
-    // İnternet bağlantısı yoksa veya API yanıt vermiyorsa örnek veriler göster
-    const sampleFeatures = [
-      {
-        id: "sample1",
-        properties: {
-          mag: 4.2,
-          place: "Ankara, Türkiye",
-          time: Date.now() - 3600000,
-        },
-        geometry: { coordinates: [32.85, 39.92, 10] },
-      },
-      {
-        id: "sample2",
-        properties: {
-          mag: 3.5,
-          place: "İzmir, Türkiye",
-          time: Date.now() - 7200000,
-        },
-        geometry: { coordinates: [27.14, 38.42, 8] },
-      },
-      {
-        id: "sample3",
-        properties: {
-          mag: 5.1,
-          place: "Kahramanmaraş, Türkiye",
-          time: Date.now() - 14400000,
-        },
-        geometry: { coordinates: [36.95, 37.58, 15] },
-      },
-    ];
-
-    processEarthquakeData(sampleFeatures);
-
-    document.getElementById("last-update").textContent =
-      "Son güncelleme: Örnek veriler gösteriliyor";
-    document.getElementById("last-update-time").textContent = "--:--";
+    handleDataFetchError(error);
   }
 }
 
-// Deprem verilerini işle
+// Handle data fetch errors
+function handleDataFetchError(error) {
+  if (error.name === 'AbortError') {
+    showErrorMessage("Veri yükleme zaman aşımına uğradı. Lütfen tekrar deneyin.");
+  } else {
+    showErrorMessage("Veri yüklenirken bir hata oluştu. Örnek veriler gösteriliyor.");
+    loadSampleData();
+  }
+}
+
+// Load sample data when API fails
+function loadSampleData() {
+  const sampleFeatures = [
+    {
+      id: "sample1",
+      properties: {
+        mag: 4.2,
+        place: "Ankara, Türkiye",
+        time: Date.now() - 3600000,
+      },
+      geometry: { coordinates: [32.85, 39.92, 10] },
+    },
+    {
+      id: "sample2",
+      properties: {
+        mag: 3.5,
+        place: "İzmir, Türkiye",
+        time: Date.now() - 7200000,
+      },
+      geometry: { coordinates: [27.14, 38.42, 8] },
+    },
+    {
+      id: "sample3",
+      properties: {
+        mag: 5.1,
+        place: "Kahramanmaraş, Türkiye",
+        time: Date.now() - 14400000,
+      },
+      geometry: { coordinates: [36.95, 37.58, 15] },
+    },
+  ];
+
+  processEarthquakeData(sampleFeatures);
+  updateLastUpdateTime(true);
+}
+
+// Update last update time display
+function updateLastUpdateTime(isSample = false) {
+  const now = new Date();
+  const timeString = Utils.formatTime(now);
+  const timeDisplay = `${now.getHours().toString().padStart(2, "0")}:${now.getMinutes().toString().padStart(2, "0")}`;
+  
+  const lastUpdateEl = document.getElementById("last-update");
+  const lastUpdateTimeEl = document.getElementById("last-update-time");
+  
+  if (lastUpdateEl) {
+    lastUpdateEl.textContent = isSample 
+      ? "Son güncelleme: Örnek veriler gösteriliyor"
+      : `Son güncelleme: ${timeString}`;
+  }
+  
+  if (lastUpdateTimeEl) {
+    lastUpdateTimeEl.textContent = isSample ? "--:--" : timeDisplay;
+  }
+  
+  AppState.lastUpdateTime = now;
+}
+
+// Process earthquake data
 function processEarthquakeData(features) {
-  earthquakeData = features.map((feature) => ({
+  AppState.earthquakeData = features.map((feature) => ({
     id: feature.id,
-    magnitude: feature.properties.mag,
-    location: feature.properties.place,
+    magnitude: feature.properties.mag || 0,
+    location: feature.properties.place || "Bilinmeyen Konum",
     time: new Date(feature.properties.time),
     coordinates: {
       lat: feature.geometry.coordinates[1],
       lng: feature.geometry.coordinates[0],
     },
-    depth: feature.geometry.coordinates[2],
+    depth: feature.geometry.coordinates[2] || 0,
     source: "USGS",
   }));
 
-  // Haritayı ve listeyi güncelle
+  // Update UI components
   updateMap();
   updateEarthquakeList();
   updateStats();
 }
 
-// Haritayı güncelle
+// Update map with earthquake data
 function updateMap() {
-  // Eski işaretçileri temizle
-  markers.forEach((marker) => map.removeLayer(marker));
-  markers = [];
+  if (!AppState.map) return;
+  
+  // Clear existing markers
+  AppState.markers.forEach((marker) => AppState.map.removeLayer(marker));
+  AppState.markers = [];
 
-  // Yeni işaretçileri ekle
-  earthquakeData.forEach((eq) => {
-    const intensity = Math.min(eq.magnitude / 8, 1); // 0-1 arası yoğunluk
-    const radius = eq.magnitude * 15000; // Büyüklüğe göre yarıçap
+  // Add new markers
+  AppState.earthquakeData.forEach((eq) => {
+    const intensity = Math.min(eq.magnitude / 8, 1);
+    const radius = Math.max(eq.magnitude * 15000, 5000); // Minimum radius
 
     const marker = L.circle([eq.coordinates.lat, eq.coordinates.lng], {
       color: `rgba(255, 0, 0, ${intensity})`,
       fillColor: `rgba(255, 0, 0, ${intensity * 0.5})`,
       radius: radius,
       weight: 2,
-    }).addTo(map);
+      opacity: 0.8,
+      fillOpacity: 0.3
+    }).addTo(AppState.map);
 
-    // Popup ekle
+    // Add popup with earthquake details
     marker.bindPopup(`
-            <div style="text-align: center; min-width: 200px;">
-                <h3>${eq.location}</h3>
-                <p><strong>Büyüklük:</strong> ${eq.magnitude.toFixed(1)}</p>
-                <p><strong>Derinlik:</strong> ${eq.depth.toFixed(1)} km</p>
-                <p><strong>Zaman:</strong> ${eq.time.toLocaleString("tr-TR")}</p>
-                <p><small>Kaynak: ${eq.source}</small></p>
-            </div>
-        `);
+      <div style="text-align: center; min-width: 200px; font-family: 'Segoe UI', sans-serif;">
+        <h3 style="margin: 0 0 10px 0; color: #d32f2f;">${eq.location}</h3>
+        <p style="margin: 5px 0;"><strong>Büyüklük:</strong> ${eq.magnitude.toFixed(1)}</p>
+        <p style="margin: 5px 0;"><strong>Derinlik:</strong> ${eq.depth.toFixed(1)} km</p>
+        <p style="margin: 5px 0;"><strong>Zaman:</strong> ${Utils.formatDateTime(eq.time)}</p>
+        <p style="margin: 5px 0; font-size: 12px; color: #666;">Kaynak: ${eq.source}</p>
+      </div>
+    `);
 
-    markers.push(marker);
+    AppState.markers.push(marker);
   });
 }
 
-// Deprem listesini güncelle
+// Update earthquake list
 function updateEarthquakeList() {
   const container = document.getElementById("earthquake-items");
-  const filterValue = document.getElementById("magnitude-filter").value;
+  const filterValue = document.getElementById("magnitude-filter")?.value || "all";
 
-  // Filtre uygula
-  let filteredData = earthquakeData;
+  if (!container) return;
+
+  // Apply filter
+  let filteredData = AppState.earthquakeData;
   if (filterValue !== "all") {
-    filteredData = earthquakeData.filter(
-      (eq) => eq.magnitude >= parseFloat(filterValue),
-    );
+    const minMagnitude = parseFloat(filterValue);
+    filteredData = AppState.earthquakeData.filter(eq => eq.magnitude >= minMagnitude);
   }
 
   if (filteredData.length === 0) {
-    container.innerHTML =
-      '<div class="loading">Belirtilen kritere uygun deprem bulunamadı.</div>';
+    container.innerHTML = '<div class="loading">Belirtilen kritere uygun deprem bulunamadı.</div>';
     return;
   }
 
-  // Listeyi oluştur
+  // Create list HTML
   container.innerHTML = filteredData
-    .map(
-      (eq) => `
-        <div class="earthquake-item" data-id="${eq.id}">
-            <div class="magnitude" style="background-color: ${getMagnitudeColor(eq.magnitude)}">
-                ${eq.magnitude.toFixed(1)}
-            </div>
-            <div class="details">
-                <h3>${eq.location}</h3>
-                <p class="time">${eq.time.toLocaleString("tr-TR")}</p>
-                <p class="depth">Derinlik: ${eq.depth.toFixed(1)} km</p>
-            </div>
+    .map(eq => `
+      <div class="earthquake-item" data-id="${eq.id}">
+        <div class="magnitude" style="background-color: ${getMagnitudeColor(eq.magnitude)}">
+          ${eq.magnitude.toFixed(1)}
         </div>
-    `,
-    )
+        <div class="details">
+          <h3>${eq.location}</h3>
+          <p class="time">${Utils.formatDateTime(eq.time)}</p>
+          <p class="depth">Derinlik: ${eq.depth.toFixed(1)} km</p>
+        </div>
+      </div>
+    `)
     .join("");
 
-  // Listeye tıklama olayı ekle
-  document.querySelectorAll(".earthquake-item").forEach((item) => {
+  // Add click events to list items
+  container.querySelectorAll(".earthquake-item").forEach((item) => {
     item.addEventListener("click", function () {
       const eqId = this.getAttribute("data-id");
-      const eq = earthquakeData.find((e) => e.id === eqId);
-      if (eq) {
-        map.setView([eq.coordinates.lat, eq.coordinates.lng], 8);
-        markers.forEach((marker) => {
-          if (
-            marker.getLatLng().lat === eq.coordinates.lat &&
-            marker.getLatLng().lng === eq.coordinates.lng
-          ) {
-            marker.openPopup();
-          }
-        });
+      const eq = AppState.earthquakeData.find(e => e.id === eqId);
+      if (eq && AppState.map) {
+        AppState.map.setView([eq.coordinates.lat, eq.coordinates.lng], 8);
+        // Find and open corresponding marker popup
+        const marker = AppState.markers.find(m => 
+          Math.abs(m.getLatLng().lat - eq.coordinates.lat) < 0.001 &&
+          Math.abs(m.getLatLng().lng - eq.coordinates.lng) < 0.001
+        );
+        if (marker) marker.openPopup();
       }
     });
   });
 }
 
-// İstatistikleri güncelle
+// Update statistics
 function updateStats() {
-  // Bugünkü deprem sayısı
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  const todayQuakes = earthquakeData.filter((eq) => {
+  // Count today's earthquakes
+  const todayQuakes = AppState.earthquakeData.filter(eq => {
     const eqDate = new Date(eq.time);
     eqDate.setHours(0, 0, 0, 0);
     return eqDate.getTime() === today.getTime();
   });
 
-  document.getElementById("daily-quakes").textContent = todayQuakes.length;
+  // Update daily count
+  const dailyQuakesEl = document.getElementById("daily-quakes");
+  if (dailyQuakesEl) {
+    dailyQuakesEl.textContent = todayQuakes.length;
+  }
 
-  // En büyük deprem
-  if (earthquakeData.length > 0) {
-    const maxMag = Math.max(...earthquakeData.map((eq) => eq.magnitude));
-    document.getElementById("max-magnitude").textContent = maxMag.toFixed(1);
+  // Find maximum magnitude
+  if (AppState.earthquakeData.length > 0) {
+    const maxMag = Math.max(...AppState.earthquakeData.map(eq => eq.magnitude));
+    const maxMagnitudeEl = document.getElementById("max-magnitude");
+    if (maxMagnitudeEl) {
+      maxMagnitudeEl.textContent = maxMag.toFixed(1);
+    }
   }
 }
 
-// Büyüklüğe göre renk belirle
+// Get color based on magnitude
 function getMagnitudeColor(mag) {
-  if (mag >= 6) return "#d32f2f"; // Koyu kırmızı
-  if (mag >= 5) return "#f44336"; // Kırmızı
-  if (mag >= 4) return "#ff9800"; // Turuncu
-  if (mag >= 3) return "#ffc107"; // Sarı
-  return "#4caf50"; // Yeşil
+  if (mag >= 6) return "#d32f2f"; // Dark red
+  if (mag >= 5) return "#f44336"; // Red
+  if (mag >= 4) return "#ff9800"; // Orange
+  if (mag >= 3) return "#ffc107"; // Yellow
+  return "#4caf50"; // Green
 }
 
-// Olay dinleyicileri
+// Setup event listeners
 function setupEventListeners() {
-  // Yenileme butonu
-  document.getElementById("refresh-btn").addEventListener("click", () => {
-    // Yenileme animasyonu
-    const btn = document.getElementById("refresh-btn");
-    btn.querySelector("i").style.animation = "spin 1s linear infinite";
+  // Refresh button
+  const refreshBtn = document.getElementById("refresh-btn");
+  if (refreshBtn) {
+    refreshBtn.addEventListener("click", handleRefresh);
+  }
 
-    // Veriyi yeniden çek
-    fetchEarthquakeData();
-
-    // Animasyonu durdur
-    setTimeout(() => {
-      btn.querySelector("i").style.animation = "";
-    }, 1000);
-  });
-
-  // Büyüklük filtresi
-  document.getElementById("magnitude-filter").addEventListener("change", () => {
-    updateEarthquakeList();
-  });
+  // Magnitude filter
+  const magnitudeFilter = document.getElementById("magnitude-filter");
+  if (magnitudeFilter) {
+    magnitudeFilter.addEventListener("change", Utils.debounce(updateEarthquakeList, 300));
+  }
 }
 
-// Sayfa kapatıldığında interval'i temizle
+// Handle refresh button click
+async function handleRefresh() {
+  const btn = document.getElementById("refresh-btn");
+  const icon = btn?.querySelector("i");
+  
+  if (icon) {
+    icon.style.animation = "spin 1s linear infinite";
+  }
+
+  try {
+    await fetchEarthquakeData();
+  } catch (error) {
+    console.error("Yenileme hatası:", error);
+  } finally {
+    setTimeout(() => {
+      if (icon) {
+        icon.style.animation = "";
+      }
+    }, 1000);
+  }
+}
+
+// Start auto refresh
+function startAutoRefresh() {
+  if (AppState.refreshInterval) {
+    clearInterval(AppState.refreshInterval);
+  }
+  
+  AppState.refreshInterval = setInterval(() => {
+    fetchEarthquakeData();
+    updateStats();
+  }, CONFIG.REFRESH_INTERVAL);
+}
+
+// Resize map container to proper width
+function resizeMapContainer() {
+  const mapContainer = document.querySelector('.map-container');
+  const mapContent = document.querySelector('.map-content');
+  const mapSection = document.querySelector('.map-section');
+
+  if (mapContainer && mapContent && mapSection) {
+    // Parent'ın genişliğini al
+    const parentWidth = mapContent.offsetWidth;
+    
+    // Harita container'ını zorla genişlet
+    mapContainer.style.cssText = `
+      width: ${parentWidth}px !important;
+      max-width: none !important;
+      min-width: ${parentWidth}px !important;
+      height: 500px !important;
+      min-height: 500px !important;
+    `;
+    
+    // Parent container'ları da genişlet
+    mapContent.style.cssText = `
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 auto !important;
+    `;
+    
+    mapSection.style.cssText = `
+      width: 120% !important;
+      max-width: 120% !important;
+      margin: 0 auto !important;
+    `;
+    
+    console.log(`Harita genişliği ${parentWidth}px olarak ayarlandı`);
+    
+    // Leaflet haritasını yeniden boyutlandır
+    setTimeout(() => {
+      if (AppState.map) {
+        AppState.map.invalidateSize();
+      }
+      window.dispatchEvent(new Event('resize'));
+    }, 100);
+  }
+}
+
+// Show error message
+function showErrorMessage(message) {
+  console.error(message);
+  // You can add a toast notification here if needed
+}
+
+// Cleanup on page unload
 window.addEventListener("beforeunload", () => {
-  if (refreshInterval) {
-    clearInterval(refreshInterval);
+  if (AppState.refreshInterval) {
+    clearInterval(AppState.refreshInterval);
+  }
+});
+
+// Cleanup on page visibility change
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    if (AppState.refreshInterval) {
+      clearInterval(AppState.refreshInterval);
+    }
+  } else {
+    startAutoRefresh();
+  }
+});
+
+// Resize map on window resize
+window.addEventListener("resize", () => {
+  if (AppState.isInitialized) {
+    resizeMapContainer();
   }
 });

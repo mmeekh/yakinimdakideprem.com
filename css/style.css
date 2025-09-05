@@ -1,74 +1,64 @@
-/* Genel Ayarlar */
-:root {
-    --primary-color: #d32f2f;
-    --secondary-color: #f44336;
-    --dark-color: #212121;
-    --light-color: #f5f5f5;
-    --text-color: #333;
-    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
-}
+/* Import Global Styles */
+@import url('./variables.css');
+@import url('./base.css');
+@import url('./components.css');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ========================================
+   ANLIK DEPREM SPECIFIC STYLES
+======================================== */
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    color: var(--text-color);
-    line-height: 1.6;
-    scroll-behavior: smooth;
-}
+/* ========================================
+   HERO SECTION
+======================================== */
 
-.container {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Hero Bölümü */
+/* Hero Section */
 .hero {
     background: linear-gradient(135deg, rgba(211, 47, 47, 0.9), rgba(244, 67, 54, 0.8)), url('images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     color: white;
-    padding: 120px 0 80px;
+    padding: 30px 0 20px; /* Padding 1.3x azaltıldı */
     margin-top: 0;
+    min-height: 35vh; /* Yükseklik 1.3x azaltıldı (50vh -> 35vh) */
+    display: flex;
+    align-items: center;
 }
 
 .hero .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    gap: var(--spacing-xl);
+    width: 100%;
 }
 
 .hero-content {
     flex: 1;
+    max-width: 600px;
 }
 
 .hero-content h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-md);
     line-height: 1.2;
+    font-weight: 700;
 }
 
 .hero-content p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-lg);
     opacity: 0.9;
     max-width: 500px;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 15px;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
 }
 
+/* Button Components */
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -78,17 +68,21 @@ body {
     transition: var(--transition);
     cursor: pointer;
     border: none;
-    font-size: 16px;
+    font-size: var(--font-size-base);
+    text-align: center;
+    min-width: 140px;
 }
 
 .btn-primary {
     background-color: white;
     color: var(--primary-color);
+    box-shadow: var(--shadow);
 }
 
 .btn-primary:hover {
     background-color: var(--light-color);
     transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
 }
 
 .btn-secondary {
@@ -99,6 +93,7 @@ body {
 
 .btn-secondary:hover {
     background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
 }
 
 .hero-image {
@@ -134,29 +129,36 @@ body {
 
 /* Ana Layout */
 main {
-    display: flex;
-    flex-wrap: wrap;
     margin-top: 30px;
+}
+
+.main-layout {
+    display: flex;
     gap: 30px;
+    align-items: flex-start;
 }
 
 .map-section {
-    flex: 3;
+    flex: 2;
     min-width: 300px;
 }
 
 .map-content {
     display: flex;
     align-items: flex-start;
+    width: 100%;
 }
 
 .earthquake-list {
     flex: 1;
     min-width: 300px;
+    max-width: 400px;
     background: white;
     border-radius: 12px;
     box-shadow: var(--shadow);
     overflow: hidden;
+    position: sticky;
+    top: 30px;
 }
 
 /* Harita Başlığı */
@@ -216,17 +218,48 @@ main {
 
 /* Harita Konteyneri */
 .map-container {
-    height: 1470px; /* Harita yüksekliği %50 artırıldı */
+    height: 500px !important; /* Yarıya indirilmiş harita yüksekliği */
+    min-height: 500px !important; /* Minimum yükseklik garantisi */
+    width: 100% !important; /* Container genişliği */
+    max-width: 100% !important;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow);
     background: #e0e0e0;
     position: relative;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.map-container:hover {
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(211, 47, 47, 0.2);
 }
 
 #map {
     height: 100%;
     width: 100%;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+/* Harita yükleme durumu */
+.map-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+    color: #666;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+.map-loading i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: var(--primary-color);
 }
 
 /* Büyüklük Göstergesi */
@@ -555,16 +588,19 @@ footer {
 
 /* Responsive */
 @media (max-width: 1024px) {
-    main {
+    .main-layout {
         flex-direction: column;
     }
     
     .map-section {
         flex: none;
+        width: 100%;
     }
     
     .earthquake-list {
         flex: none;
+        max-width: none;
+        position: static;
     }
     
     .hero .container {
@@ -591,6 +627,18 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .map-section {
+        width: 120% !important; /* Tablet için genişlik */
+        max-width: 120% !important;
+    }
+    
+    .map-container {
+        height: 350px !important; /* Tablet için yarıya indirilmiş yükseklik */
+        min-height: 350px !important;
+        width: 100% !important; /* Container genişliği */
+        max-width: 100% !important;
+    }
+    
     .map-header {
         flex-direction: column;
         align-items: flex-start;
@@ -623,12 +671,21 @@ footer {
 }
 
 @media (max-width: 576px) {
+    .map-section {
+        width: 120% !important; /* Mobil için genişlik */
+        max-width: 120% !important;
+    }
+    
     .map-container {
-        height: 750px;
+        height: 300px !important; /* Mobil için yarıya indirilmiş yükseklik */
+        min-height: 300px !important;
+        width: 100% !important; /* Container genişliği */
+        max-width: 100% !important;
     }
     
     .hero {
-        padding: 80px 0 50px;
+        padding: 20px 0 15px; /* Mobil padding 1.3x azaltıldı */
+        min-height: 25vh; /* Mobil yükseklik 1.3x azaltıldı */
     }
     
     .hero-content h1 {
@@ -644,4 +701,153 @@ footer {
         width: 100%;
         max-width: 250px;
     }
+}
+
+/* Yasal Sayfalar */
+.legal-page {
+    max-width: 900px;
+    margin: 60px auto;
+    line-height: 1.8;
+}
+
+.legal-page h1 {
+    font-size: 42px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.last-updated {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.last-updated i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+.legal-section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.legal-section h2 {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+.legal-section h3 {
+    font-size: 22px;
+    color: var(--dark-color);
+    margin: 25px 0 15px 0;
+}
+
+.legal-section p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.legal-section ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.legal-section li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.contact-info {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: var(--primary-color);
+    width: 20px;
+}
+
+.warning-box {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.warning-box i {
+    color: #856404;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.warning-box p {
+    margin: 0;
+    color: #856404;
+    font-weight: 500;
+}
+
+.cookie-table {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.cookie-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cookie-table th,
+.cookie-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.cookie-table th {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.cookie-table tr:hover {
+    background: #f8f9fa;
+}
+
+.legal-footer {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+    text-align: center;
+    font-style: italic;
+    color: var(--text-light);
 }

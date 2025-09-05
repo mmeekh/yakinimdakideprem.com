@@ -8,14 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="icon" href="images/logo.png" type="image/png">
+    <!-- Favicon Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="icons/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="icons/favicon-128x128.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
     <!-- Gizli Header -->
     <header id="hidden-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Anlık Deprem Logo">
+                <img src="icons/logo.png" alt="Anlık Deprem Logo" width="60" height="60">
                 <span>Anlık Deprem</span>
             </a>
             <nav>
@@ -60,61 +70,63 @@
 
     <!-- Ana İçerik -->
     <main class="container">
-        <div id="map-section" class="map-section">
-            <div class="map-header">
-                <h1>Türkiye Deprem Haritası</h1>
-                <div class="update-info">
-                    <span id="last-update">Son güncelleme: Yükleniyor...</span>
-                    <button id="refresh-btn" class="btn-refresh">
-                        <i class="fas fa-sync-alt"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="map-content">
-                <!-- Büyüklük Göstergesi -->
-                <div class="magnitude-legend">
-                    <div class="legend-title">Deprem Büyüklüğü</div>
-                    <div class="legend-items">
-                        <div class="legend-item">
-                            <div class="color-box" style="background-color: rgba(255, 0, 0, 0.3);"></div>
-                            <span>3.0 - 4.0</span>
-                        </div>
-                        <div class="legend-item">
-                            <div class="color-box" style="background-color: rgba(255, 0, 0, 0.6);"></div>
-                            <span>4.0 - 5.0</span>
-                        </div>
-                        <div class="legend-item">
-                            <div class="color-box" style="background-color: rgba(255, 0, 0, 0.9);"></div>
-                            <span>5.0+</span>
-                        </div>
+        <div class="main-layout">
+            <div id="map-section" class="map-section">
+                <div class="map-header">
+                    <h1>Türkiye Deprem Haritası</h1>
+                    <div class="update-info">
+                        <span id="last-update">Son güncelleme: Yükleniyor...</span>
+                        <button id="refresh-btn" class="btn-refresh">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Harita Alanı -->
-                <div id="map" class="map-container"></div>
-            </div>
-        </div>
+                <div class="map-content">
+                    <!-- Büyüklük Göstergesi -->
+                    <div class="magnitude-legend">
+                        <div class="legend-title">Deprem Büyüklüğü</div>
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <div class="color-box" style="background-color: rgba(255, 0, 0, 0.3);"></div>
+                                <span>3.0 - 4.0</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="color-box" style="background-color: rgba(255, 0, 0, 0.6);"></div>
+                                <span>4.0 - 5.0</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="color-box" style="background-color: rgba(255, 0, 0, 0.9);"></div>
+                                <span>5.0+</span>
+                            </div>
+                        </div>
+                    </div>
 
-        <!-- Son Depremler Listesi -->
-        <aside class="earthquake-list">
-            <div class="list-header">
-                <h2>Son Depremler</h2>
-                <div class="filter-controls">
-                    <select id="magnitude-filter">
-                        <option value="all">Tüm Büyüklükler</option>
-                        <option value="3">3.0+</option>
-                        <option value="4">4.0+</option>
-                        <option value="5">5.0+</option>
-                    </select>
+                    <!-- Harita Alanı -->
+                    <div id="map" class="map-container"></div>
                 </div>
             </div>
-            
-            <div class="earthquake-items" id="earthquake-items">
-                <!-- Deprem verileri JS ile doldurulacak -->
-                <div class="loading">Depremler yükleniyor...</div>
-            </div>
-        </aside>
+
+            <!-- Son Depremler Listesi -->
+            <aside class="earthquake-list">
+                <div class="list-header">
+                    <h2>Son Depremler</h2>
+                    <div class="filter-controls">
+                        <select id="magnitude-filter">
+                            <option value="all">Tüm Büyüklükler</option>
+                            <option value="3">3.0+</option>
+                            <option value="4">4.0+</option>
+                            <option value="5">5.0+</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="earthquake-items" id="earthquake-items">
+                    <!-- Deprem verileri JS ile doldurulacak -->
+                    <div class="loading">Depremler yükleniyor...</div>
+                </div>
+            </aside>
+        </div>
         <!-- Özellikler Bölümü -->
         <section class="features-section">
             <div class="container">
@@ -158,7 +170,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/logo.png" alt="Anlık Deprem Logo">
+                    <img src="icons/logo.png" alt="Anlık Deprem Logo" width="50" height="50">
                     <h3>Anlık Deprem</h3>
                     <p>Hayat kurtaran bilgiler</p>
                 </div>
@@ -186,9 +198,16 @@
                         <h4>İletişim</h4>
                         <ul>
                             <li><a href="mailto:info@anlikdeprem.com">info@anlikdeprem.com</a></li>
-                            <li><a href="#" target="_blank">Bize Ulaşın</a></li>
-                            <li><a href="#" target="_blank">Gizlilik Politikası</a></li>
-                            <li><a href="#" target="_blank">Kullanım Şartları</a></li>
+                            <li><a href="tel:+902121234567">+90 (212) 123 45 67</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Yasal</h4>
+                        <ul>
+                            <li><a href="kullanim-sartlari.html">Kullanım Şartları</a></li>
+                            <li><a href="gizlilik-politikasi.html">Gizlilik Politikası</a></li>
+                            <li><a href="cerez-politikasi.html">Çerez Politikası</a></li>
+                            <li><a href="sorumluluk-reddi.html">Sorumluluk Reddi</a></li>
                         </ul>
                     </div>
                 </div>
