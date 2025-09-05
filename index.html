@@ -21,7 +21,7 @@
     <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
-    <!-- Gizli Header -->
+    <!-- Sabit Header -->
     <header id="hidden-header">
         <div class="container">
             <a href="index.html" class="logo">
@@ -38,77 +38,32 @@
         </div>
     </header>
 
-    <!-- Hero Bölümü -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Türkiye'nin Gerçek Zamanlı Deprem Bilgi Platformu</h1>
-                <p>En son depremleri anında takip edin, hayat kurtaran bilgileri öğrenin</p>
-                <div class="hero-buttons">
-                    <a href="#map-section" class="btn btn-primary">Haritayı Görüntüle</a>
-                    <a href="deprem-aninda.html" class="btn btn-secondary">Deprem Anında</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-number" id="daily-quakes">0</div>
-                        <div class="stat-label">Bugünkü Depremler</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" id="max-magnitude">0.0</div>
-                        <div class="stat-label">En Büyük Deprem</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" id="last-update-time">--:--</div>
-                        <div class="stat-label">Son Güncelleme</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
+        <!-- Harita ve Overlay Alanı -->
+        <div class="map-wrapper">
+            <div id="map"></div>
 
-    <!-- Ana İçerik -->
-    <main class="container">
-        <div class="main-layout">
-            <div id="map-section" class="map-section">
-                <div class="map-header">
-                    <h1>Türkiye Deprem Haritası</h1>
-                    <div class="update-info">
-                        <span id="last-update">Son güncelleme: Yükleniyor...</span>
-                        <button id="refresh-btn" class="btn-refresh">
-                            <i class="fas fa-sync-alt"></i>
-                        </button>
+            <!-- Büyüklük Göstergesi -->
+            <div class="magnitude-legend overlay">
+                <div class="legend-title">Deprem Büyüklüğü</div>
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <div class="color-box" style="background-color: rgba(255, 0, 0, 0.3);"></div>
+                        <span>3.0 - 4.0</span>
                     </div>
-                </div>
-
-                <div class="map-content">
-                    <!-- Büyüklük Göstergesi -->
-                    <div class="magnitude-legend">
-                        <div class="legend-title">Deprem Büyüklüğü</div>
-                        <div class="legend-items">
-                            <div class="legend-item">
-                                <div class="color-box" style="background-color: rgba(255, 0, 0, 0.3);"></div>
-                                <span>3.0 - 4.0</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="color-box" style="background-color: rgba(255, 0, 0, 0.6);"></div>
-                                <span>4.0 - 5.0</span>
-                            </div>
-                            <div class="legend-item">
-                                <div class="color-box" style="background-color: rgba(255, 0, 0, 0.9);"></div>
-                                <span>5.0+</span>
-                            </div>
-                        </div>
+                    <div class="legend-item">
+                        <div class="color-box" style="background-color: rgba(255, 0, 0, 0.6);"></div>
+                        <span>4.0 - 5.0</span>
                     </div>
-
-                    <!-- Harita Alanı -->
-                    <div id="map" class="map-container"></div>
+                    <div class="legend-item">
+                        <div class="color-box" style="background-color: rgba(255, 0, 0, 0.9);"></div>
+                        <span>5.0+</span>
+                    </div>
                 </div>
             </div>
 
             <!-- Son Depremler Listesi -->
-            <aside class="earthquake-list">
+            <aside class="earthquake-list overlay">
                 <div class="list-header">
                     <h2>Son Depremler</h2>
                     <div class="filter-controls">
@@ -120,13 +75,20 @@
                         </select>
                     </div>
                 </div>
-                
                 <div class="earthquake-items" id="earthquake-items">
-                    <!-- Deprem verileri JS ile doldurulacak -->
                     <div class="loading">Depremler yükleniyor...</div>
                 </div>
             </aside>
+
+            <!-- Güncelleme Bilgisi -->
+            <div class="update-info overlay">
+                <span id="last-update">Son güncelleme: Yükleniyor...</span>
+                <button id="refresh-btn" class="btn-refresh">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
         </div>
+
         <!-- Özellikler Bölümü -->
         <section class="features-section">
             <div class="container">
@@ -225,3 +187,4 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+
