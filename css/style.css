@@ -218,8 +218,8 @@ main {
 
 /* Harita Konteyneri */
 .map-container {
-    height: 500px !important; /* Yarıya indirilmiş harita yüksekliği */
-    min-height: 500px !important; /* Minimum yükseklik garantisi */
+    height: 425px !important; /* %15 kısaltılmış harita yüksekliği */
+    min-height: 425px !important; /* Minimum yükseklik garantisi */
     width: 100% !important; /* Container genişliği */
     max-width: 100% !important;
     border-radius: 12px;
