@@ -1,6 +1,6 @@
-# 🌍 Anlık Deprem - Full-Stack Deprem Bilgi Platformu
+# 🌍 Yakınımdaki Deprem - Full-Stack Deprem Bilgi Platformu
 
-[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://github.com/anlikdeprem/anlikdeprem)
+[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://github.com/yakınımdakideprem/yakınımdakideprem)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Docker](https://img.shields.io/badge/docker-compose-blue.svg)](https://docker.com/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)](https://fastapi.tiangolo.com/)
@@ -88,7 +88,7 @@ Türkiye'nin en kapsamlı **full-stack** deprem bilgi platformu. **FastAPI backe
 ## 📁 Proje Yapısı
 
 ```
-anlikdeprem/
+yakınımdakideprem/
 ├── 📁 backend/                       # Backend projesi
 │   ├── 📁 app/                       # FastAPI uygulaması
 │   │   ├── 📄 main.py               # Ana FastAPI uygulaması
@@ -164,8 +164,8 @@ anlikdeprem/
 
 ```bash
 # Projeyi klonlayın
-git clone https://github.com/anlikdeprem/anlikdeprem.git
-cd anlikdeprem
+git clone https://github.com/yakınımdakideprem/yakınımdakideprem.git
+cd yakınımdakideprem
 
 # Backend dizinine geçin
 cd backend
@@ -209,7 +209,7 @@ Sistem sağlık durumu
 {
   "status": "ok",
   "env": "dev",
-  "service": "anlikdeprem-api"
+  "service": "yakınımdakideprem-api"
 }
 ```
 
@@ -287,7 +287,7 @@ Deprem istatistikleri
 
 ```bash
 # Uygulama Bilgileri
-APP_NAME=anlikdeprem-api
+APP_NAME=yakınımdakideprem-api
 APP_ENV=dev
 APP_VERSION=0.1.0
 PORT=8000
@@ -363,7 +363,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
 services:
   api:
     build: .
-    container_name: anlikdeprem-api
+    container_name: yakınımdakideprem-api
     env_file: .env
     environment:
       - PORT=${PORT:-8000}
@@ -373,7 +373,7 @@ services:
 
   caddy:
     image: caddy:2.8
-    container_name: anlikdeprem-caddy
+    container_name: yakınımdakideprem-caddy
     depends_on:
       - api
     ports:
@@ -531,9 +531,9 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 ## 📞 İletişim
 
-- **Website**: [anlikdeprem.com](https://anlikdeprem.com)
-- **Email**: info@anlikdeprem.com
-- **GitHub**: [@anlikdeprem](https://github.com/anlikdeprem)
+- **Website**: [yakınımdakideprem.com](https://yakınımdakideprem.com)
+- **Email**: info@yakınımdakideprem.com
+- **GitHub**: [@yakınımdakideprem](https://github.com/yakınımdakideprem)
 
 ## 🙏 Teşekkürler
 
@@ -549,4 +549,4 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 **⚠️ Önemli Not**: Bu platform eğitim ve bilgilendirme amaçlıdır. Acil durumlarda her zaman resmi kurumları (112, AFAD) arayın.
 
-**🌍 Anlık Deprem** - Full-Stack Teknoloji ile Toplumu Geliştirmek İçin Çabalayan Bir Girişim
+**🌍 Yakınımdaki Deprem** - Full-Stack Teknoloji ile Toplumu Geliştirmek İçin Çabalayan Bir Girişim

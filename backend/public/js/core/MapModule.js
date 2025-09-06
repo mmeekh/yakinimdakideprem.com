@@ -1,5 +1,5 @@
 /**
- * Map Module - Anlık Deprem
+ * Map Module - Yakınımdaki Deprem
  * Handles map initialization and earthquake visualization
  */
 

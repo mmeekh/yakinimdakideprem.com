@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 from typing import List, Optional, Dict, Any
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 def format_time_ago(dt: datetime) -> str:
@@ -67,7 +68,7 @@ class EarthquakeCache:
         """Cache'i temizle"""
         self.cache.clear()
 
-APP_NAME = os.getenv("APP_NAME", "anlikdeprem-api")
+APP_NAME = os.getenv("APP_NAME", "yakınımdakideprem-api")
 APP_ENV = os.getenv("APP_ENV", "dev")
 APP_VERSION = os.getenv("APP_VERSION", "0.1.0")
 
@@ -292,3 +293,21 @@ async def get_earthquake_stats():
                 "last_update_ago": format_time_ago(now)
             }
         }
+
+@app.get("/api/pdf/first-aid-checklist")
+async def download_first_aid_checklist():
+    """İlk yardım çantası kontrol listesi PDF'ini indir - Static dosya"""
+    try:
+        # Static PDF dosyasını döndür
+        pdf_path = "checklist.pdf"
+        
+        if not os.path.exists(pdf_path):
+            raise HTTPException(status_code=404, detail="PDF dosyası bulunamadı")
+        
+        return FileResponse(
+            path=pdf_path,
+            filename="ilk-yardim-cantasi-kontrol-listesi.pdf",
+            media_type="application/pdf"
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"PDF indirme hatası: {str(e)}")

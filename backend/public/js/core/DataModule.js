@@ -1,5 +1,5 @@
 /**
- * Data Module - Anlık Deprem
+ * Data Module - Yakınımdaki Deprem
  * Handles earthquake data fetching and processing
  */
 

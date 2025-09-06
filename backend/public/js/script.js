@@ -1,5 +1,5 @@
 /**
- * Anlık Deprem - Ana JavaScript Modülü
+ * Yakınımdaki Deprem - Ana JavaScript Modülü
  * Optimized version with better error handling and performance
  */
 

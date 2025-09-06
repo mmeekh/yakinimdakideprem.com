@@ -1,6 +1,6 @@
 {
-  "name": "Anlık Deprem - Gerçek Zamanlı Deprem Bilgileri",
-  "short_name": "Anlık Deprem",
+  "name": "Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri",
+  "short_name": "Yakınımdaki Deprem",
   "description": "Türkiye ve çevresindeki depremleri gerçek zamanlı olarak takip edin",
   "start_url": "/",
   "display": "standalone",
