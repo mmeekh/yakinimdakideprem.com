@@ -1,0 +1,33 @@
+services:
+  api:
+    build: .
+    container_name: anlikdeprem-api
+    env_file: .env
+    environment:
+      - PORT=${PORT:-8000}
+    expose:
+      - "8000"
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2.8
+    container_name: anlikdeprem-caddy
+    depends_on:
+      - api
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - DOMAIN=${DOMAIN}
+      - ACME_EMAIL=${ACME_EMAIL}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+      # İsteğe bağlı: frontend statik kök (./public klasörü varsa)
+      - ./public:/srv
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:

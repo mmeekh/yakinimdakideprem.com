@@ -1,0 +1,23 @@
+# Last Updates - Proje Güncellemeleri
+
+## Kullanım Amacı
+Bu dosya, projede çalışmaya başlayacak bir chatbot'un, önceki yapay zekanın yaptığı değişiklikleri takip etmesi için oluşturulmuştur. Her update çalıştığında buraya not alınacaktır.
+
+## Güncellemeler
+
+### 2025-09-06 - Dinamik Zaman Güncelleme Sistemi
+- Backend'de `format_time_ago` fonksiyonu eklendi (Python)
+- Frontend'de `formatTimeAgo` fonksiyonu eklendi (JavaScript)
+- "Son güncelleme" gösterimi statik saat formatından dinamik "X dakika Y saniye önce" formatına çevrildi
+- Zaman güncelleme aralığı 10 saniyeden 1 saniyeye düşürüldü
+- "0 saniye önce" yerine "az önce" yazısı eklendi
+- Akıllı veri güncelleme sistemi: Sadece yeni veri geldiğinde harita/liste güncelleniyor
+- Veri hash sistemi ile değişiklik kontrolü eklendi
+- `AppState.lastDataHash` ile veri değişikliği takibi
+
+### 2025-09-06 - USGS API Entegrasyonu İyileştirmeleri
+- Global deprem verisi çekme (Türkiye merkezli değil)
+- Deprem listesi zamana göre sıralama (en yeni → en eski)
+- 1 dakikalık cache sistemi eklendi (2 dakikadan düşürüldü)
+- API parametreleri optimize edildi (24 saat, 2.5+ büyüklük)
+- Güncelleme hızı artırıldı: 2 dakika → 1 dakika

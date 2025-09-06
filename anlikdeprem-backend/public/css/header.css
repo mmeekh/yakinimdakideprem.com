@@ -1,0 +1,86 @@
+/* Gizli Header */
+#hidden-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(33, 33, 33, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    box-shadow: var(--shadow);
+}
+
+#hidden-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+}
+
+.logo span {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#hidden-header nav {
+    display: flex;
+    gap: 25px;
+}
+
+#hidden-header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    transition: var(--transition);
+}
+
+#hidden-header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+#hidden-header nav a:hover::after,
+#hidden-header nav a.active::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #hidden-header nav {
+        gap: 15px;
+    }
+
+    #hidden-header nav a {
+        font-size: 14px;
+    }
+    
+    .logo img {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .logo span {
+        font-size: 20px;
+    }
+}
