@@ -1,0 +1,15 @@
+# Node artifacts
+node_modules/
+dist/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.venv/
+
+# Environment files
+.env
+.env.bak
+
+# OS files
+.DS_Store
