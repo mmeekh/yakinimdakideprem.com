@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Kimim - Anlık Deprem</title>
-    <meta name="description" content="anlikdeprem blogu: deprem bilinci ve hazırlık üzerine kişisel deneyimler ve güvenilir kaynaklar.">
-    <meta name="keywords" content="anlikdeprem, deprem blog, deprem bilinci, afet hazırlığı">
+    <title>Biz Kimiz - Yakınımdaki Deprem | Türk Milleti İçin Ücretsiz Deprem Bilgi Platformu</title>
+    <meta name="description" content="Yakınımdaki Deprem ekibi: Türk milleti için tamamen ücretsiz deprem bilgi platformu. Uzman ekibimizle deprem güvenliği, afet hazırlığı ve hayat kurtaran rehberler sunuyoruz.">
+    <meta name="keywords" content="biz kimiz, yakınımdaki deprem ekibi, deprem uzmanları, afet yönetimi, deprem güvenliği, ücretsiz deprem bilgisi, Türk milleti, deprem hazırlığı">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/ben-kimim.css">
     <link rel="stylesheet" href="css/header.css">
+    <!-- Three.js for flag animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <!-- Favicon Icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
@@ -26,14 +28,14 @@
     <header id="hidden-header">
         <div class="container">
             <a href="/" class="logo">
-                <img src="icons/logo.png" alt="Anlık Deprem Logo" width="60" height="60">
-                <span>Anlık Deprem</span>
+                <img src="icons/logo.png" alt="Yakınımdaki Deprem Logo" width="60" height="60">
+                <span>Yakınımdaki Deprem</span>
             </a>
             <nav>
                 <a href="/">Ana Sayfa</a>
                 <a href="/deprem-aninda.html">Deprem Anında</a>
                 <a href="/ilk-yardim-cantasi.html">İlk Yardım Çantası</a>
-                <a href="/ben-kimim.html" class="active">Ben Kimim</a>
+                <a href="/ben-kimim.html" class="active">Biz Kimiz</a>
                 <a href="/blog.html">Blog</a>
             </nav>
         </div>
@@ -42,30 +44,31 @@
     <!-- Hero Bölümü -->
     <section class="hero">
         <div class="container">
-            <h1>Toplumu Geliştirmek İçin Çabalayan Bir Birey</h1>
-            <p>Deprem bilinci oluşturmak ve toplumu hazırlamak için çalışan bir girişimci</p>
-            <p class="seo-text">Bilgi paylaşımı için <strong>anlikdeprem</strong> blogunu takip edin.</p>
-            <div class="scroll-indicator">
-                <a href="#about" class="scroll-btn">
-                    <i class="fas fa-chevron-down"></i>
-                </a>
-            </div>
+            <h1>Ücretsiz Deprem Bilgi Platformu</h1>
+            <p class="seo-text">Tamamen <strong>ücretsiz</strong> ve <strong>reklamsız</strong> hizmet veriyoruz. <strong>Yakınımdaki Deprem</strong> platformunu takip edin.</p>
         </div>
     </section>
 
-    <!-- Hakkımda Bölümü -->
+    <!-- Hakkımızda Bölümü -->
     <section id="about" class="about-section">
         <div class="container">
             <div class="about-content">
                 <div class="about-image">
-                    <img src="images/profile.jpg" alt="anlikdeprem Profil Fotoğrafı">
+                    <div id="flag-container" class="flag-animation-container">
+                        <div class="flag-loading" style="display: none;">
+                            <i class="fas fa-flag"></i>
+                            <p>Bayrak yükleniyor...</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-text">
-                    <h2>Ben Kimim?</h2>
-                    <p>Merhaba, ben <strong>Toplumu Geliştirmek İçin Çabalayan Bir Birey</strong> olarak bu platformu oluşturdum. Depremler gibi doğal afetlerin ne kadar yıkıcı olabileceğini biliyorum ve toplumumuzun bu konuda bilinçlenmesi gerektiğine inanıyorum.</p>
-                    <p>Bu platform, deprem anında ne yapılması gerektiği, ilk yardım çantası nasıl hazırlanır gibi hayati bilgileri ve en son deprem verilerini tek bir yerde toplamak için tasarlandı. Amacım, insanların doğru bilgilere kolayca erişmesini sağlamak ve afet anında daha hazırlıklı olmalarına yardımcı olmak. Rehberlerimi hazırlarken <a href="https://deprem.afad.gov.tr" target="_blank">AFAD</a> ve <a href="https://earthquake.usgs.gov" target="_blank">USGS</a> gibi güvenilir kaynaklardan yararlanıyorum.</p>
-                    <p>Profesyonel olarak yazılım geliştirme ve afet yönetimi konularında çalışıyorum. Bu projeyi tamamen toplumsal fayda sağlamak amacıyla, kar amacı gütmeden geliştirdim.</p>
-                    <p>Daha kapsamlı hazırlık önerileri için <a href="/https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/earthquake.html" target="_blank">American Red Cross Earthquake Safety</a> gibi uluslararası kaynakları da inceleyebilirsiniz.</p>
+                    <h2>Biz Kimiz?</h2>
+                    <p><strong>Yakınımdaki Deprem</strong> ekibi olarak, Türk milleti için tamamen <strong>ücretsiz</strong> ve <strong>reklamsız</strong> bir deprem bilgi platformu oluşturduk. Amacımız, deprem konusunda toplumsal bilinç oluşturmak ve her vatandaşımızın afet anında hazırlıklı olmasını sağlamaktır.</p>
+                    
+                    <p>Uzman ekibimiz, deprem mühendisliği, afet yönetimi, yazılım geliştirme ve eğitim alanlarında deneyimli profesyonellerden oluşmaktadır. Platformumuzda sunduğumuz tüm bilgiler, <a href="https://deprem.afad.gov.tr" target="_blank">AFAD</a> (Afet ve Acil Durum Yönetimi Başkanlığı), <a href="https://earthquake.usgs.gov" target="_blank">USGS</a> (Amerika Jeoloji Araştırmaları Kurumu) ve <a href="https://koeri.boun.edu.tr" target="_blank">KOERİ</a> (Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü) gibi güvenilir kurumlardan alınmaktadır.</p>
+                    
+                    <p>Bu platformu, kar amacı gütmeden, tamamen toplumsal fayda sağlamak için geliştirdik. Türk milleti için ücretsiz hizmet vermek, bizim en büyük motivasyon kaynağımızdır.</p>
+                    
                     <div class="about-quote">
                         <i class="fas fa-quote-left"></i>
                         <p>Bilgi, en güçlü hazırlık aracıdır. Doğru bilgi, hayat kurtarır.</p>
@@ -79,8 +82,8 @@
     <section class="mission-vision">
         <div class="container">
             <div class="section-header">
-                <h2>Misyonum ve Vizyonum</h2>
-                <p>Topluma katkı sağlamak için yola çıktım</p>
+                <h2>Misyonumuz ve Vizyonumuz</h2>
+                <p>Türk milleti için ücretsiz hizmet vererek toplumsal fayda sağlıyoruz</p>
             </div>
             
             <div class="mv-cards">
@@ -88,16 +91,49 @@
                     <div class="mv-icon">
                         <i class="fas fa-bullseye"></i>
                     </div>
-                    <h3>Misyonum</h3>
-                    <p>Deprem konusunda toplumu bilinçlendirmek, doğru bilgi ve kaynaklarla donatarak afet anında kayıpların en aza indirilmesine katkı sağlamak.</p>
+                    <h3>Misyonumuz</h3>
+                    <p>Türk milleti için tamamen ücretsiz ve reklamsız bir deprem bilgi platformu sunarak, deprem konusunda toplumsal bilinç oluşturmak ve afet anında kayıpların en aza indirilmesine katkı sağlamak.</p>
                 </div>
                 
                 <div class="mv-card">
                     <div class="mv-icon">
                         <i class="fas fa-eye"></i>
                     </div>
-                    <h3>Vizyonum</h3>
-                    <p>Deprem öncesi hazırlığın standart haline geldiği, her bireyin temel afet bilgisine sahip olduğu bir Türkiye yaratmak.</p>
+                    <h3>Vizyonumuz</h3>
+                    <p>Deprem öncesi hazırlığın standart haline geldiği, her Türk vatandaşının temel afet bilgisine sahip olduğu ve ücretsiz bilgi kaynaklarına kolayca erişebildiği bir Türkiye yaratmak.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Bölümü -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>İletişim</h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Instagram</h3>
+                            <p><a href="https://www.instagram.com/heremmkh" target="_blank">@heremmkh</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://www.linkedin.com/in/emin-kılıç-250b14210" target="_blank">Emin Kılıç</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -107,123 +143,82 @@
     <section class="values-section">
         <div class="container">
             <div class="section-header">
-                <h2>Değerlerim</h2>
-                <p>Çalışmalarımı temellendiren ilkeler</p>
+                <h2>Değerlerimiz</h2>
+                <p>Çalışmalarımızı temellendiren ilkeler</p>
             </div>
             
             <div class="values-grid">
                 <div class="value-item">
                     <div class="value-icon">
-                        <i class="fas fa-hands-helping"></i>
+                        <i class="fas fa-gift"></i>
                     </div>
-                    <h3>Toplumsal Fayda</h3>
-                    <p>Tüm çalışmalarımı topluma katkı sağlamak amacıyla yapıyorum</p>
+                    <h3>Ücretsiz Hizmet</h3>
+                    <p>Türk milleti için tamamen ücretsiz ve reklamsız hizmet sunuyoruz</p>
                 </div>
                 
                 <div class="value-item">
                     <div class="value-icon">
                         <i class="fas fa-check-circle"></i>
                     </div>
-                    <h3>Doğruluk</h3>
-                    <p>Bilgilerin doğruluğu ve güvenilirliği benim için en önemli öncelik</p>
+                    <h3>Doğruluk ve Güvenilirlik</h3>
+                    <p>Bilgilerin doğruluğu ve güvenilirliği bizim için en önemli öncelik</p>
                 </div>
                 
                 <div class="value-item">
                     <div class="value-icon">
-                        <i class="fas fa-lightbulb"></i>
+                        <i class="fas fa-hands-helping"></i>
                     </div>
-                    <h3>Yenilikçilik</h3>
-                    <p>Problemlere yenilikçi çözümler bulmak için sürekli araştırıyorum</p>
+                    <h3>Toplumsal Fayda</h3>
+                    <p>Tüm çalışmalarımızı topluma katkı sağlamak amacıyla yapıyoruz</p>
                 </div>
                 
                 <div class="value-item">
                     <div class="value-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>İş Birliği</h3>
-                    <p>Farklı disiplinlerden insanlarla iş birliği yaparak daha iyi sonuçlar elde ediyorum</p>
+                    <h3>Ekip Çalışması</h3>
+                    <p>Farklı disiplinlerden uzmanlarla iş birliği yaparak daha iyi sonuçlar elde ediyoruz</p>
                 </div>
             </div>
         </div>
     </section>
 
+
+
+    <!-- Referanslar Bölümü -->
     <section class="references-section">
         <div class="container">
-            <h2>Referanslar</h2>
-            <ul>
-                <li><a href="https://deprem.afad.gov.tr" target="_blank">AFAD Deprem Dairesi Başkanlığı</a></li>
-                <li><a href="https://earthquake.usgs.gov" target="_blank">USGS Earthquake Hazards Program</a></li>
-                <li><a href="/https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/earthquake.html" target="_blank">American Red Cross Earthquake Safety Tips</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- İletişim Bölümü -->
-    <section class="contact-section">
-        <div class="container">
             <div class="section-header">
-                <h2>İletişime Geçin</h2>
-                <p>Projem hakkında görüşlerinizi paylaşabilirsiniz</p>
+                <h2>Güvenilir Kaynaklarımız</h2>
+                <p>Bilgilerimizi aldığımız resmi kurumlar ve uzman kuruluşlar</p>
             </div>
             
-            <div class="contact-content">
-                <div class="contact-form">
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="Adınız Soyadınız" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="E-posta Adresiniz" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" placeholder="Konu" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" placeholder="Mesajınız" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Gönder</button>
-                    </form>
-                    <div id="form-message" class="form-message"></div>
+            <div class="references-grid">
+                <div class="reference-item">
+                    <div class="reference-logo">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>AFAD</h3>
+                    <p>Afet ve Acil Durum Yönetimi Başkanlığı</p>
+                    <a href="https://deprem.afad.gov.tr" target="_blank" class="reference-link">deprem.afad.gov.tr</a>
                 </div>
                 
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>E-posta</h3>
-                            <p>info@anlikdeprem.com</p>
-                        </div>
+                <div class="reference-item">
+                    <div class="reference-logo">
+                        <i class="fas fa-globe-americas"></i>
                     </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Konum</h3>
-                            <p>İstanbul, Türkiye</p>
-                        </div>
+                    <h3>USGS</h3>
+                    <p>Amerika Jeoloji Araştırmaları Kurumu</p>
+                    <a href="https://earthquake.usgs.gov" target="_blank" class="reference-link">earthquake.usgs.gov</a>
+                </div>
+                
+                <div class="reference-item">
+                    <div class="reference-logo">
+                        <i class="fas fa-university"></i>
                     </div>
-                    
-                    <div class="social-links">
-                        <h3>Sosyal Medya</h3>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
+                    <h3>KOERİ</h3>
+                    <p>Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü</p>
+                    <a href="https://koeri.boun.edu.tr" target="_blank" class="reference-link">koeri.boun.edu.tr</a>
                 </div>
             </div>
         </div>
@@ -234,8 +229,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="icons/logo.png" alt="Anlık Deprem Logo" width="60" height="60">
-                    <h3>Anlık Deprem</h3>
+                    <img src="icons/logo.png" alt="Yakınımdaki Deprem Logo" width="60" height="60">
+                    <h3>Yakınımdaki Deprem</h3>
                     <p>Hayat kurtaran bilgiler</p>
                 </div>
                 <div class="footer-links">
@@ -261,7 +256,7 @@
                     <div class="footer-column">
                         <h4>İletişim</h4>
                         <ul>
-                            <li><a href="mailto:info@anlikdeprem.com">info@anlikdeprem.com</a></li>
+                            <li><a href="mailto:info@yakınımdakideprem.com">info@yakınımdakideprem.com</a></li>
                             <li><a href="tel:+902121234567">+90 (212) 123 45 67</a></li>
                         </ul>
                     </div>
@@ -277,11 +272,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Anlık Deprem | Toplumu Geliştirmek İçin Çabalayan Bir Girişim</p>
+                <p>&copy; 2023 Yakınımdaki Deprem | Toplumu Geliştirmek İçin Çabalayan Bir Girişim</p>
             </div>
         </div>
     </footer>
     <script src="js/header.js"></script>
+    <script src="js/flag-animation.js"></script>
     <script src="js/ben-kimim.js"></script>
 </body>
 </html>

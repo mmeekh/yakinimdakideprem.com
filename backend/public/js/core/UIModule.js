@@ -1,5 +1,5 @@
 /**
- * UI Module - Anlık Deprem
+ * UI Module - Yakınımdaki Deprem
  * Handles user interface updates and interactions
  */
 

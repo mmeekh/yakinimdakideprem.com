@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Çerez Politikası - Anlık Deprem</title>
-    <meta name="description" content="Anlık Deprem çerez politikası. Web sitemizde kullanılan çerezlerin türleri, amaçları ve yönetimi hakkında bilgiler.">
-    <meta name="keywords" content="çerez politikası, cookies, anlık deprem, web çerezleri, veri toplama">
-    <meta name="author" content="Anlık Deprem">
-    <meta property="og:title" content="Çerez Politikası - Anlık Deprem">
-    <meta property="og:description" content="Anlık Deprem çerez politikası ve çerez kullanımı hakkında bilgiler.">
+    <title>Çerez Politikası - Yakınımdaki Deprem</title>
+    <meta name="description" content="Yakınımdaki Deprem çerez politikası. Web sitemizde kullanılan çerezlerin türleri, amaçları ve yönetimi hakkında bilgiler.">
+    <meta name="keywords" content="çerez politikası, cookies, yakınımdaki deprem, web çerezleri, veri toplama">
+    <meta name="author" content="Yakınımdaki Deprem">
+    <meta property="og:title" content="Çerez Politikası - Yakınımdaki Deprem">
+    <meta property="og:description" content="Yakınımdaki Deprem çerez politikası ve çerez kullanımı hakkında bilgiler.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://anlikdeprem.com/cerez-politikasi.html">
-    <link rel="canonical" href="/https://anlikdeprem.com/cerez-politikasi.html">
+    <meta property="og:url" content="https://yakınımdakideprem.com/cerez-politikasi.html">
+    <link rel="canonical" href="/https://yakınımdakideprem.com/cerez-politikasi.html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
@@ -31,14 +31,14 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="icons/logo.png" alt="Anlık Deprem Logo" width="60" height="60">
-                <span>Anlık Deprem</span>
+                <img src="icons/logo.png" alt="Yakınımdaki Deprem Logo" width="60" height="60">
+                <span>Yakınımdaki Deprem</span>
             </div>
             <nav class="nav">
                 <a href="/">Ana Sayfa</a>
                 <a href="/deprem-aninda.html">Deprem Anında</a>
                 <a href="/ilk-yardim-cantasi.html">İlk Yardım Çantası</a>
-                <a href="/ben-kimim.html">Ben Kimim</a>
+                <a href="/ben-kimim.html">Biz Kimiz</a>
                 <a href="/blog.html">Blog</a>
             </nav>
         </div>
@@ -197,7 +197,7 @@
                 <h2>10. İletişim</h2>
                 <p>Çerez politikası ile ilgili sorularınız için:</p>
                 <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> E-posta: cookies@anlikdeprem.com</p>
+                    <p><i class="fas fa-envelope"></i> E-posta: cookies@yakınımdakideprem.com</p>
                     <p><i class="fas fa-phone"></i> Telefon: +90 (212) 123 45 67</p>
                     <p><i class="fas fa-map-marker-alt"></i> Adres: İstanbul, Türkiye</p>
                 </div>
@@ -213,15 +213,15 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="icons/logo.png" alt="Anlık Deprem Logo" width="60" height="60">
-                    <span>Anlık Deprem</span>
+                    <img src="icons/logo.png" alt="Yakınımdaki Deprem Logo" width="60" height="60">
+                    <span>Yakınımdaki Deprem</span>
                 </div>
                 <div class="footer-links">
                     <h4>Hızlı Linkler</h4>
                     <a href="/">Ana Sayfa</a>
                     <a href="/deprem-aninda.html">Deprem Anında</a>
                     <a href="/blog.html">Blog</a>
-                    <a href="/ben-kimim.html">Ben Kimim</a>
+                    <a href="/ben-kimim.html">Biz Kimiz</a>
                 </div>
                 <div class="footer-legal">
                     <h4>Yasal</h4>
@@ -232,12 +232,12 @@
                 </div>
                 <div class="footer-contact">
                     <h4>İletişim</h4>
-                    <p><i class="fas fa-envelope"></i> info@anlikdeprem.com</p>
+                    <p><i class="fas fa-envelope"></i> info@yakınımdakideprem.com</p>
                     <p><i class="fas fa-phone"></i> +90 (212) 123 45 67</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Anlık Deprem. Tüm hakları saklıdır.</p>
+                <p>&copy; 2023 Yakınımdaki Deprem. Tüm hakları saklıdır.</p>
             </div>
         </div>
     </footer>
@@ -249,7 +249,7 @@
             try {
                 const response = await fetch("/api/health");
                 if (response.ok) {
-                    console.log("Backend ba�lant�s� ba�ar�l�");
+                    console.log("Backend ba�lant�s� ba�ar�l�");
                     const statsResponse = await fetch("/api/earthquakes/stats");
                     if (statsResponse.ok) {
                         const statsData = await statsResponse.json();
@@ -259,7 +259,7 @@
                     }
                 }
             } catch (error) {
-                console.warn("Backend ba�lant�s� hatas�:", error);
+                console.warn("Backend ba�lant�s� hatas�:", error);
             }
         });
 
@@ -274,7 +274,7 @@
             }
             const lastUpdateEl = document.getElementById("last-update");
             if (lastUpdateEl) {
-                lastUpdateEl.textContent = `Son g�ncelleme: ${new Date().toLocaleString("tr-TR")}`;
+                lastUpdateEl.textContent = `Son g�ncelleme: ${new Date().toLocaleString("tr-TR")}`;
             }
         }
     </script>

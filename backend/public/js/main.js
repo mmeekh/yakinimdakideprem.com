@@ -1,5 +1,5 @@
 /**
- * Main Application Entry Point - Anlık Deprem
+ * Main Application Entry Point - Yakınımdaki Deprem
  * Optimized modular architecture
  */
 
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Make app globally available for debugging
     window.app = app;
     
-    console.log('Anlık Deprem application initialized successfully');
+    console.log('Yakınımdaki Deprem application initialized successfully');
   } catch (error) {
     console.error('Failed to initialize application:', error);
     

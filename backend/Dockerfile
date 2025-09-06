@@ -6,13 +6,11 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-# İsteğe bağlı sistem paketleri (gerektikçe aç)
-# RUN apt-get update && apt-get install -y --no-install-recommends build-essential && rm -rf /var/lib/apt/lists/*
-
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY app app
+COPY checklist.pdf .
 
 EXPOSE 8000
 # Üretimde FastAPI CLI ile Uvicorn çalıştır

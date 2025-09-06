@@ -1,5 +1,5 @@
 /**
- * Stats Module - Anlık Deprem
+ * Stats Module - Yakınımdaki Deprem
  * Handles statistics calculation and display
  */
 

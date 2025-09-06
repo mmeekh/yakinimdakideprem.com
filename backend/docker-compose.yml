@@ -1,7 +1,7 @@
 services:
   api:
     build: .
-    container_name: anlikdeprem-api
+    container_name: yakinimdakideprem-api
     env_file: .env
     environment:
       - PORT=${PORT:-8000}
@@ -11,7 +11,7 @@ services:
 
   caddy:
     image: caddy:2.8
-    container_name: anlikdeprem-caddy
+    container_name: yakinimdakideprem-caddy
     depends_on:
       - api
     ports:

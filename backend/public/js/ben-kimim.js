@@ -11,6 +11,7 @@ const PAGE_CONFIG = {
 
 // State management
 let isInitialized = false;
+let flagAnimation = null;
 
 // Initialize page functionality
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setupContactForm();
         setupAnimations();
         setupBackendConnection();
+        setupFlagAnimation();
         isInitialized = true;
     } catch (error) {
         console.error('Sayfa başlatılamadı:', error);
@@ -33,7 +35,10 @@ function setupScrollEffect() {
     let ticking = false;
     const hiddenHeader = document.getElementById('hidden-header');
 
-    if (!hiddenHeader) return;
+    if (!hiddenHeader) {
+        console.warn('hidden-header elementi bulunamadı');
+        return;
+    }
 
     window.addEventListener('scroll', () => {
         if (!ticking) {
@@ -50,12 +55,15 @@ function setupScrollEffect() {
 function handleScroll(lastScrollTop, hiddenHeader) {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrollTop > lastScrollTop && scrollTop > PAGE_CONFIG.SCROLL_THRESHOLD) {
-        // Scrolling down - hide header
-        hiddenHeader.style.top = '-80px';
-    } else {
-        // Scrolling up - show header
-        hiddenHeader.style.top = '0';
+    // hiddenHeader'ın var olduğunu kontrol et
+    if (hiddenHeader && hiddenHeader.style) {
+        if (scrollTop > lastScrollTop && scrollTop > PAGE_CONFIG.SCROLL_THRESHOLD) {
+            // Scrolling down - hide header
+            hiddenHeader.style.top = '-80px';
+        } else {
+            // Scrolling up - show header
+            hiddenHeader.style.top = '0';
+        }
     }
 
     lastScrollTop = scrollTop;
@@ -137,7 +145,7 @@ function setupAnimations() {
 async function setupBackendConnection() {
     try {
         // Test backend connection
-        const response = await fetch('/api/health');
+        const response = await fetch('/health');
         if (response.ok) {
             console.log('Backend bağlantısı başarılı');
             
@@ -150,10 +158,11 @@ async function setupBackendConnection() {
                 }
             }
         } else {
-            console.warn('Backend bağlantısı başarısız');
+            console.warn('Backend bağlantısı başarısız:', response.status);
         }
     } catch (error) {
         console.warn('Backend bağlantısı hatası:', error);
+        // Hata durumunda sessizce devam et
     }
 }
 
@@ -176,3 +185,36 @@ function updatePageWithStats(stats) {
         lastUpdateEl.textContent = `Son güncelleme: ${new Date().toLocaleString('tr-TR')}`;
     }
 }
+
+// Setup flag animation
+function setupFlagAnimation() {
+    const flagContainer = document.getElementById('flag-container');
+    if (!flagContainer) {
+        console.warn('Bayrak container bulunamadı');
+        return;
+    }
+
+    // Three.js yüklendiğini kontrol et
+    if (typeof THREE === 'undefined') {
+        console.error('Three.js yüklenemedi');
+        return;
+    }
+
+    try {
+        // Bayrak animasyonunu başlat
+        flagAnimation = new FlagAnimation('flag-container');
+        
+        console.log('Bayrak animasyonu başlatıldı');
+    } catch (error) {
+        console.error('Bayrak animasyonu başlatılamadı:', error);
+        // Hata durumunda sessizce devam et
+    }
+}
+
+// Cleanup on page unload
+window.addEventListener('beforeunload', () => {
+    if (flagAnimation) {
+        flagAnimation.destroy();
+        flagAnimation = null;
+    }
+});

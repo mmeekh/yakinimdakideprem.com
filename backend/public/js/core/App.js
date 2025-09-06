@@ -1,5 +1,5 @@
 /**
- * Core Application Module - Anlık Deprem
+ * Core Application Module - Yakınımdaki Deprem
  * Main application controller and state management
  */
 
