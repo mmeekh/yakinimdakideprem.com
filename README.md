@@ -89,7 +89,7 @@ Türkiye'nin en kapsamlı **full-stack** deprem bilgi platformu. **FastAPI backe
 
 ```
 anlikdeprem/
-├── 📁 anlikdeprem-backend/           # Backend projesi
+├── 📁 backend/                       # Backend projesi
 │   ├── 📁 app/                       # FastAPI uygulaması
 │   │   ├── 📄 main.py               # Ana FastAPI uygulaması
 │   │   └── 📁 api/                  # API modülleri
@@ -168,7 +168,7 @@ git clone https://github.com/anlikdeprem/anlikdeprem.git
 cd anlikdeprem
 
 # Backend dizinine geçin
-cd anlikdeprem-backend
+cd backend
 
 # Docker container'ları başlatın
 docker compose up -d --build
