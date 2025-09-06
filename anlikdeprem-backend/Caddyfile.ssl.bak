@@ -1,0 +1,32 @@
+{
+    email {$ACME_EMAIL}
+}
+
+# www -> kök domaine yönlendir
+www.{$DOMAIN} {
+    redir https://{$DOMAIN}{uri} permanent
+}
+
+{$DOMAIN} {
+    encode zstd gzip
+
+    # API trafiğini backend'e yönlendir
+    @api path /api/* /health /version
+    handle @api {
+        reverse_proxy api:8000
+    }
+
+    # (İsteğe bağlı) Statik dosya/SPA servisi — bir frontend klasörü mount edersen çalışır
+    handle {
+        root * /srv
+        try_files {path} /index.html
+        file_server
+    }
+
+    header {
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        Permissions-Policy "geolocation=(), microphone=()"
+    }
+}
