@@ -76,6 +76,14 @@
                         <span>8.0+</span>
                     </div>
                 </div>
+                <button id="turkey-btn" class="turkey-btn">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Türkiye'ye Git
+                </button>
+                <button id="night-mode-btn" class="night-mode-btn">
+                    <i class="fas fa-moon"></i>
+                    Gece Modu
+                </button>
             </div>
 
             <!-- Son Depremler Listesi -->
@@ -108,35 +116,81 @@
         <!-- Özellikler Bölümü -->
         <section class="features-section">
             <div class="container">
-                <h2>Platform Özellikleri</h2>
+                <h2>Deprem İstatistikleri</h2>
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-map-marked-alt"></i>
+                            <i class="fas fa-list-ol"></i>
                         </div>
-                        <h3>Gerçek Zamanlı Harita</h3>
-                        <p>USGS verileri ile güncellenen Türkiye deprem haritası</p>
+                        <h3>Türkiye'deki Son 5 Deprem</h3>
+                        <div class="recent-earthquakes">
+                            <div class="earthquake-item-small">
+                                <span class="magnitude-small">4.2</span>
+                                <span class="location-small">Ankara, Türkiye</span>
+                            </div>
+                            <div class="earthquake-item-small">
+                                <span class="magnitude-small">3.8</span>
+                                <span class="location-small">İzmir, Türkiye</span>
+                            </div>
+                            <div class="earthquake-item-small">
+                                <span class="magnitude-small">3.5</span>
+                                <span class="location-small">Bursa, Türkiye</span>
+                            </div>
+                            <div class="earthquake-item-small">
+                                <span class="magnitude-small">3.2</span>
+                                <span class="location-small">Antalya, Türkiye</span>
+                            </div>
+                            <div class="earthquake-item-small">
+                                <span class="magnitude-small">2.9</span>
+                                <span class="location-small">Trabzon, Türkiye</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-exclamation-triangle"></i>
+                            <i class="fas fa-clock"></i>
                         </div>
-                        <h3>Deprem Anında</h3>
-                        <p>Hayat kurtaran bilgiler ve güvenli alanlar</p>
+                        <h3>Son 24 Saatteki Deprem Sayısı</h3>
+                        <div class="daily-count">
+                            <span class="count-number">47</span>
+                            <span class="count-label">deprem</span>
+                        </div>
+                        <div class="hourly-average">
+                            <span class="average-number">2.0</span>
+                            <span class="average-label">saatlik ortalama</span>
+                        </div>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-first-aid"></i>
+                            <i class="fas fa-calendar-week"></i>
                         </div>
-                        <h3>İlk Yardım Çantası</h3>
-                        <p>Videolu anlatımlarla çantanızı hazırlayın</p>
+                        <h3>Son 1 Hafta</h3>
+                        <div class="weekly-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">312</span>
+                                <span class="stat-label">toplam deprem</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">44.6</span>
+                                <span class="stat-label">günlük ortalama</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-bell"></i>
+                            <i class="fas fa-calendar-alt"></i>
                         </div>
-                        <h3>Anlık Bildirimler</h3>
-                        <p>Önemli depremler hakkında anlık bildirimler</p>
+                        <h3>Son 1 Ay</h3>
+                        <div class="monthly-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">1,247</span>
+                                <span class="stat-label">toplam deprem</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">40.2</span>
+                                <span class="stat-label">günlük ortalama</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

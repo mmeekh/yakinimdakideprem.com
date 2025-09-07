@@ -7,23 +7,31 @@ services:
       - PORT=${PORT:-8000}
     expose:
       - "8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
     restart: unless-stopped
 
   caddy:
     image: caddy:2.8
     container_name: yakinimdakideprem-caddy
     depends_on:
-      - api
+      api:
+        condition: service_healthy
     ports:
-      - "8080:8080"
+      - "80:80"
+      - "443:443"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
-      # İsteğe bağlı: frontend statik kök (./public klasörü varsa)
+      - caddy_logs:/var/log/caddy
       - ./public:/srv
     restart: unless-stopped
 
 volumes:
   caddy_data:
   caddy_config:
+  caddy_logs:

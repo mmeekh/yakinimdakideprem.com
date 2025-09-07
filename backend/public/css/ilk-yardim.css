@@ -50,16 +50,6 @@ body {
     text-align: left;
 }
 
-.header-icon {
-    flex-shrink: 0;
-    opacity: 0.9;
-    transition: var(--transition);
-}
-
-.header-icon:hover {
-    opacity: 1;
-    transform: scale(1.05);
-}
 
 .page-header h1 {
     font-size: 36px;
@@ -401,9 +391,6 @@ footer {
         text-align: center;
     }
     
-    .header-icon {
-        order: -1;
-    }
     
     .page-header h1 {
         font-size: 28px;
