@@ -7,12 +7,17 @@ services:
       - PORT=${PORT:-8000}
     expose:
       - "8000"
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
-      interval: 10s
-      timeout: 3s
-      retries: 5
     restart: unless-stopped
+
+    # Health check - basit ve güvenilir
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+    networks: [webnet]
 
   caddy:
     image: caddy:2.8
@@ -30,8 +35,13 @@ services:
       - caddy_logs:/var/log/caddy
       - ./public:/srv
     restart: unless-stopped
+    networks: [webnet]
 
 volumes:
   caddy_data:
   caddy_config:
   caddy_logs:
+
+networks:
+  webnet:
+    driver: bridge
