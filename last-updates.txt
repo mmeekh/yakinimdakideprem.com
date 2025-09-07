@@ -21,3 +21,22 @@ Bu dosya, projede çalışmaya başlayacak bir chatbot'un, önceki yapay zekanı
 - 1 dakikalık cache sistemi eklendi (2 dakikadan düşürüldü)
 - API parametreleri optimize edildi (24 saat, 2.5+ büyüklük)
 - Güncelleme hızı artırıldı: 2 dakika → 1 dakika
+
+### 2025-01-27 - UI/UX İyileştirmeleri ve İstatistik Bölümü Güncellemeleri
+- "Biz Kimiz" sayfası kompaktlaştırıldı (yükseklik azaltıldı, bayrak boyutu korundu)
+- "Misyon ve Vizyon" bölümü küçültüldü (padding, font boyutları azaltıldı)
+- "Değerlerimiz" bölümü kaldırıldı
+- İletişim bilgileri "Biz Kimiz" bölümünün sonuna taşındı (sadece Instagram @swordnest)
+- "İlk Yardım Çantası" sayfasından logo kaldırıldı
+- Ana sayfa harita bölümü küçültüldü:
+  * "Son Depremler" %8 genişlik, %10 yükseklik azaltıldı
+  * "Deprem Büyüklüğü" %10 genişlik ve yükseklik azaltıldı
+  * "Son güncelleme" %20 küçültüldü ve şeffaflık eşitlendi
+- Gece modu butonu eklendi (harita için CSS filter ile)
+- "Platform Özellikleri" → "Deprem İstatistikleri" olarak değiştirildi
+- İstatistik kartları güncellendi:
+  * "Gerçek Zamanlı Harita" → "Türkiye'deki Son 5 Deprem" (örnek verilerle)
+  * "Deprem Anında" → "Son 24 Saatteki Deprem Sayısı" (47 deprem, 2.0 saatlik ortalama)
+  * "İlk Yardım Çantası" → "Son 1 Hafta" (312 toplam, 44.6 günlük ortalama)
+  * "Anlık Bildirimler" → "Son 1 Ay" (1,247 toplam, 40.2 günlük ortalama)
+- Yeni CSS stilleri eklendi: renk kodlamalı istatistik kutuları, gece modu filtreleri

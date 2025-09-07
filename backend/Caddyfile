@@ -1,34 +1,41 @@
 {
-    auto_https off
+  email admin@yakinimdakideprem.com
 }
 
-:8080 {
-    encode zstd gzip
+yakinimdakideprem.com {
+  encode zstd gzip
 
-    # API (FastAPI) rotaları: sağlılık ve echo dahil
-    @api path /api/* /health /version
-    handle @api {
-        reverse_proxy api:8000
-    }
-
-    # FastAPI dokümantasyon ve OpenAPI (Swagger/Redoc)
-    @apidocs path /docs* /openapi.json /redoc*
-    handle @apidocs {
-        reverse_proxy api:8000
-    }
-
-    # Frontend statik dosyalar
-    handle {
-        root * /srv
-        try_files {path} /index.html
-        file_server
-    }
-
+  @api path /api/* /health /version
+  handle @api {
+    reverse_proxy api:8000
     header {
-        X-Content-Type-Options "nosniff"
-        X-Frame-Options "DENY"
-        Referrer-Policy "strict-origin-when-cross-origin"
-        Permissions-Policy "geolocation=(), microphone=()"
-        Cache-Control "public, max-age=3600"
+      Cache-Control "no-store"
     }
+  }
+
+  @apidocs path /docs* /openapi.json /redoc*
+  handle @apidocs {
+    reverse_proxy api:8000
+  }
+
+  # Statikler
+  handle {
+    root * /srv
+    try_files {path} /index.html
+    file_server
+  }
+
+  header {
+    X-Content-Type-Options "nosniff"
+    X-Frame-Options "DENY"
+    Referrer-Policy "strict-origin-when-cross-origin"
+    Permissions-Policy "geolocation=(self), microphone=()"
+    Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    # Statiklere özel cache istersen: response matcher ile ayırabilirsin
+  }
+
+  log {
+    output file /var/log/caddy/access.log
+    format json
+  }
 }

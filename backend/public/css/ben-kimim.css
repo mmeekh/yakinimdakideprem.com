@@ -83,14 +83,14 @@ body {
 
 /* Hakkımda Bölümü */
 .about-section {
-    padding: 80px 0; /* %20 azaltıldı (100px -> 80px) */
+    padding: 50px 0; /* %37.5 azaltıldı (80px -> 50px) */
     background-color: white;
 }
 
 .about-content {
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 40px; /* %33 azaltıldı (60px -> 40px) */
 }
 
 .about-image {
@@ -136,11 +136,11 @@ body {
 }
 
 .about-text h2 {
-    font-size: 36px;
-    margin-bottom: 25px;
+    font-size: 30px; /* %17 azaltıldı (36px -> 30px) */
+    margin-bottom: 18px; /* %28 azaltıldı (25px -> 18px) */
     color: var(--dark-color);
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 12px; /* %20 azaltıldı (15px -> 12px) */
 }
 
 .about-text h2::after {
@@ -154,15 +154,15 @@ body {
 }
 
 .about-text p {
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* %25 azaltıldı (20px -> 15px) */
     color: #555;
-    line-height: 1.8;
-    font-size: 16px;
+    line-height: 1.6; /* %11 azaltıldı (1.8 -> 1.6) */
+    font-size: 15px; /* %6 azaltıldı (16px -> 15px) */
 }
 
 .about-quote {
-    margin-top: 30px;
-    padding: 20px;
+    margin-top: 20px; /* %33 azaltıldı (30px -> 20px) */
+    padding: 15px; /* %25 azaltıldı (20px -> 15px) */
     background-color: rgba(211, 47, 47, 0.05);
     border-left: 4px solid var(--primary-color);
     border-radius: 0 8px 8px 0;
@@ -180,40 +180,96 @@ body {
     color: var(--dark-color);
 }
 
+/* About Contact */
+.about-contact {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.about-contact .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.about-contact .contact-item:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.about-contact .contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(211, 47, 47, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.about-contact .contact-text h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+}
+
+.about-contact .contact-text p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.about-contact .contact-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.about-contact .contact-text a:hover {
+    text-decoration: underline;
+}
+
 /* Misyon ve Vizyon Bölümü */
 .mission-vision {
-    padding: 80px 0; /* %20 azaltıldı (100px -> 80px) */
+    padding: 40px 0; /* %50 azaltıldı (80px -> 40px) */
     background-color: #f9f9f9;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px; /* %50 azaltıldı (60px -> 30px) */
 }
 
 .section-header h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
+    font-size: 28px; /* %22 azaltıldı (36px -> 28px) */
+    margin-bottom: 10px; /* %33 azaltıldı (15px -> 10px) */
     color: var(--dark-color);
 }
 
 .section-header p {
-    font-size: 18px;
+    font-size: 16px; /* %11 azaltıldı (18px -> 16px) */
     color: #666;
-    max-width: 600px;
+    max-width: 500px; /* %17 azaltıldı (600px -> 500px) */
     margin: 0 auto;
 }
 
 .mv-cards {
     display: flex;
-    gap: 40px;
+    gap: 20px; /* %50 azaltıldı (40px -> 20px) */
 }
 
 .mv-card {
     flex: 1;
     background: white;
-    border-radius: 15px;
-    padding: 40px 30px;
+    border-radius: 12px; /* %20 azaltıldı (15px -> 12px) */
+    padding: 25px 20px; /* %37.5 azaltıldı (40px 30px -> 25px 20px) */
     text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
@@ -228,24 +284,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 25px;
+    width: 60px; /* %25 azaltıldı (80px -> 60px) */
+    height: 60px; /* %25 azaltıldı (80px -> 60px) */
+    margin: 0 auto 15px; /* %40 azaltıldı (25px -> 15px) */
     background-color: rgba(211, 47, 47, 0.1);
     color: var(--primary-color);
     border-radius: 50%;
-    font-size: 30px;
+    font-size: 24px; /* %20 azaltıldı (30px -> 24px) */
 }
 
 .mv-card h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 20px; /* %17 azaltıldı (24px -> 20px) */
+    margin-bottom: 12px; /* %40 azaltıldı (20px -> 12px) */
     color: var(--dark-color);
 }
 
 .mv-card p {
     color: #666;
-    line-height: 1.8;
+    line-height: 1.6; /* %11 azaltıldı (1.8 -> 1.6) */
+    font-size: 14px; /* Daha kompakt metin için font boyutu eklendi */
 }
 
 /* Değerler Bölümü */
@@ -297,134 +354,6 @@ body {
     line-height: 1.6;
 }
 
-/* İletişim Bölümü */
-.contact-section {
-    padding: 80px 0; /* %20 azaltıldı (100px -> 80px) */
-    background-color: #f9f9f9;
-}
-
-.contact-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-form {
-    flex: 3;
-    background: white;
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: var(--shadow);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-    cursor: pointer;
-    border: none;
-    font-size: 16px;
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.btn:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-3px);
-}
-
-.form-message {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    display: none;
-}
-
-.form-message.success {
-    background-color: rgba(76, 175, 80, 0.1);
-    color: #4caf50;
-    border: 1px solid #4caf50;
-}
-
-.form-message.error {
-    background-color: rgba(244, 67, 54, 0.1);
-    color: #f44336;
-    border: 1px solid #f44336;
-}
-
-.contact-info {
-    flex: 2;
-}
-
-.contact-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 30px;
-    background: white;
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: var(--shadow);
-}
-
-.contact-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    min-width: 50px;
-    background-color: rgba(211, 47, 47, 0.1);
-    color: var(--primary-color);
-    border-radius: 50%;
-    font-size: 20px;
-    margin-right: 20px;
-}
-
-.contact-text h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    color: var(--dark-color);
-}
-
-.contact-text p {
-    color: #666;
-}
-
-.contact-text p a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.contact-text p a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
-}
 
 .social-links {
     background: white;
@@ -600,9 +529,8 @@ footer {
     
     .about-section,
     .mission-vision,
-    .values-section,
-    .contact-section {
-        padding: 48px 0; /* %20 azaltıldı (60px -> 48px) */
+    .values-section {
+        padding: 20px 0; /* %17 azaltıldı (24px -> 20px) */
     }
     
     .about-content {

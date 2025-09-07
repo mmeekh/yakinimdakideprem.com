@@ -493,6 +493,18 @@ function setupEventListeners() {
   if (magnitudeFilter) {
     magnitudeFilter.addEventListener("change", Utils.debounce(updateEarthquakeList, 300));
   }
+
+  // Turkey button
+  const turkeyBtn = document.getElementById("turkey-btn");
+  if (turkeyBtn) {
+    turkeyBtn.addEventListener("click", goToTurkey);
+  }
+
+  // Night mode button
+  const nightModeBtn = document.getElementById("night-mode-btn");
+  if (nightModeBtn) {
+    nightModeBtn.addEventListener("click", toggleNightMode);
+  }
 }
 
 // Handle refresh button click
@@ -514,6 +526,78 @@ async function handleRefresh() {
         icon.style.animation = "";
       }
     }, 1000);
+  }
+}
+
+// Go to Turkey on map
+function goToTurkey() {
+  if (AppState.map) {
+    // Türkiye koordinatları ve zoom seviyesi
+    const turkeyCenter = [39.0, 35.0]; // Türkiye merkezi
+    const turkeyZoom = 6; // Türkiye'yi tam gösteren zoom seviyesi
+    
+    // Haritayı Türkiye'ye odakla
+    AppState.map.setView(turkeyCenter, turkeyZoom);
+    
+    // Buton animasyonu
+    const btn = document.getElementById("turkey-btn");
+    if (btn) {
+      btn.style.transform = "scale(0.95)";
+      setTimeout(() => {
+        btn.style.transform = "";
+      }, 150);
+    }
+    
+    console.log("Harita Türkiye'ye odaklandı");
+  }
+}
+
+// Toggle night mode
+function toggleNightMode() {
+  const body = document.body;
+  const nightModeBtn = document.getElementById("night-mode-btn");
+  const icon = nightModeBtn?.querySelector("i");
+  
+  // Toggle night mode class
+  body.classList.toggle("night-mode");
+  
+  // Update button state and icon
+  if (body.classList.contains("night-mode")) {
+    nightModeBtn.classList.add("active");
+    if (icon) {
+      icon.className = "fas fa-sun";
+    }
+    nightModeBtn.innerHTML = '<i class="fas fa-sun"></i> Gündüz Modu';
+    
+    // Apply dark filter to existing map
+    const mapElement = document.getElementById('map');
+    if (mapElement) {
+      mapElement.style.filter = 'invert(1) hue-rotate(180deg) brightness(0.8) contrast(1.2)';
+    }
+    
+    console.log("Gece modu aktif");
+  } else {
+    nightModeBtn.classList.remove("active");
+    if (icon) {
+      icon.className = "fas fa-moon";
+    }
+    nightModeBtn.innerHTML = '<i class="fas fa-moon"></i> Gece Modu';
+    
+    // Remove dark filter from map
+    const mapElement = document.getElementById('map');
+    if (mapElement) {
+      mapElement.style.filter = '';
+    }
+    
+    console.log("Gündüz modu aktif");
+  }
+  
+  // Buton animasyonu
+  if (nightModeBtn) {
+    nightModeBtn.style.transform = "scale(0.95)";
+    setTimeout(() => {
+      nightModeBtn.style.transform = "";
+    }, 150);
   }
 }
 

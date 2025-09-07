@@ -152,8 +152,8 @@ main {
 
 .earthquake-list {
     flex: 1;
-    min-width: 300px;
-    max-width: 400px;
+    min-width: 276px; /* %8 azaltıldı (300px -> 276px) */
+    max-width: 368px; /* %8 azaltıldı (400px -> 368px) */
     background: white;
     border-radius: 12px;
     box-shadow: var(--shadow);
@@ -181,11 +181,11 @@ main {
 .update-info {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12.15px; /* %10 daha azaltıldı (13.5px -> 12.15px) */
 }
 
 #last-update {
-    font-size: 14px;
+    font-size: 11.34px; /* %10 daha azaltıldı (12.6px -> 11.34px) */
     color: #666;
 }
 
@@ -195,10 +195,10 @@ main {
     cursor: pointer;
     color: var(--primary-color);
     transition: var(--transition);
-    padding: 8px;
+    padding: 6.48px; /* %10 daha azaltıldı (7.2px -> 6.48px) */
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 32.4px; /* %10 daha azaltıldı (36px -> 32.4px) */
+    height: 32.4px; /* %10 daha azaltıldı (36px -> 32.4px) */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -269,24 +269,24 @@ main {
     margin-top: 0;
     margin-right: 20px;
     background: white;
-    padding: 15px;
+    padding: 13.5px; /* %10 azaltıldı (15px -> 13.5px) */
     border-radius: 8px;
     box-shadow: var(--shadow);
-    width: 160px;
+    width: 144px; /* %10 azaltıldı (160px -> 144px) */
     flex-shrink: 0;
     opacity: 0.85; /* %5 daha şeffaf (0.9 -> 0.85) */
 }
 
 .legend-title {
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 9px; /* %10 azaltıldı (10px -> 9px) */
     color: var(--dark-color);
 }
 
 .legend-items {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 9px; /* %10 azaltıldı (10px -> 9px) */
 }
 
 .legend-item {
@@ -303,6 +303,130 @@ main {
 
 .legend-item span {
     color: #000;
+}
+
+/* Türkiye'ye Git Butonu */
+.turkey-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 8px 12px;
+    background: linear-gradient(135deg, #E30A17, #C41E3A);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.turkey-btn:hover {
+    background: linear-gradient(135deg, #C41E3A, #A0151F);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(227, 10, 23, 0.3);
+}
+
+.turkey-btn i {
+    font-size: 11px;
+}
+
+/* Gece Modu Butonu */
+.night-mode-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.night-mode-btn:hover {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.3);
+}
+
+.night-mode-btn.active {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.night-mode-btn.active:hover {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+.night-mode-btn i {
+    font-size: 11px;
+}
+
+/* Gece Modu Harita Stilleri */
+.night-mode .map-wrapper #map {
+    filter: invert(1) hue-rotate(180deg) brightness(0.8) contrast(1.2);
+}
+
+.night-mode .map-wrapper .earthquake-list {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+.night-mode .map-wrapper .earthquake-list .list-header {
+    border-bottom-color: #34495e;
+}
+
+.night-mode .map-wrapper .earthquake-list .list-header h2 {
+    color: #ecf0f1;
+}
+
+.night-mode .map-wrapper .earthquake-list .earthquake-item {
+    border-bottom-color: #34495e;
+}
+
+.night-mode .map-wrapper .earthquake-list .earthquake-item:hover {
+    background-color: #34495e;
+}
+
+.night-mode .map-wrapper .earthquake-list .earthquake-item .details h3 {
+    color: #ecf0f1;
+}
+
+.night-mode .map-wrapper .earthquake-list .earthquake-item .details .time,
+.night-mode .map-wrapper .earthquake-list .earthquake-item .details .depth {
+    color: #bdc3c7;
+}
+
+.night-mode .map-wrapper .magnitude-legend {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+.night-mode .map-wrapper .magnitude-legend .legend-title {
+    color: #ecf0f1;
+}
+
+.night-mode .map-wrapper .magnitude-legend .legend-item span {
+    color: #ecf0f1;
+}
+
+.night-mode .map-wrapper .update-info {
+    background: #2c3e50;
+    color: #ecf0f1;
+    opacity: 0.85; /* Deprem Büyüklüğü kısmı kadar şeffaf */
+}
+
+.night-mode .map-wrapper .update-info #last-update {
+    color: #bdc3c7;
 }
 
 /* Deprem Listesi */
@@ -329,7 +453,7 @@ main {
 }
 
 .earthquake-items {
-    max-height: 600px;
+    max-height: 540px; /* %10 azaltıldı (600px -> 540px) */
     overflow-y: auto;
 }
 
@@ -446,7 +570,7 @@ main {
 
 /* Özellikler Bölümü */
 .features-section {
-    padding: 64px 0; /* %20 azaltıldı (80px -> 64px) */
+    padding: 51px 0; /* %20 daha azaltıldı (64px -> 51px) */
     background-color: #f9f9f9;
     margin-top: 0;
     flex-basis: 100%;
@@ -454,21 +578,21 @@ main {
 
 .features-section h2 {
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 50px;
+    font-size: 32px; /* Yazı boyutu eski haline getirildi */
+    margin-bottom: 40px; /* %20 azaltıldı (50px -> 40px) */
     color: var(--dark-color);
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* %20 azaltıldı (250px -> 200px) */
+    gap: 24px; /* %20 azaltıldı (30px -> 24px) */
 }
 
 .feature-card {
     background: white;
-    border-radius: 12px;
-    padding: 30px;
+    border-radius: 10px; /* %20 azaltıldı (12px -> 10px) */
+    padding: 24px; /* %20 azaltıldı (30px -> 24px) */
     text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
@@ -483,24 +607,168 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 20px;
+    width: 56px; /* %20 azaltıldı (70px -> 56px) */
+    height: 56px; /* %20 azaltıldı (70px -> 56px) */
+    margin: 0 auto 16px; /* %20 azaltıldı (20px -> 16px) */
     background-color: rgba(211, 47, 47, 0.1);
     color: var(--primary-color);
     border-radius: 50%;
-    font-size: 28px;
+    font-size: 28px; /* İkon yazı boyutu eski haline getirildi */
 }
 
 .feature-card h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 20px; /* Yazı boyutu eski haline getirildi */
+    margin-bottom: 12px; /* %20 azaltıldı (15px -> 12px) */
     color: var(--dark-color);
 }
 
 .feature-card p {
     color: #666;
     line-height: 1.6;
+}
+
+/* Son 5 Deprem Stilleri */
+.recent-earthquakes {
+    margin-top: 15px;
+}
+
+.earthquake-item-small {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0; /* %20 azaltıldı (8px -> 6px) */
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px; /* Yazı boyutu eski haline getirildi */
+    font-weight: bold; /* Yazılar bold yapıldı */
+}
+
+.earthquake-item-small:last-child {
+    border-bottom: none;
+}
+
+.magnitude-small {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px; /* %20 azaltıldı (35px -> 28px) */
+    height: 20px; /* %20 azaltıldı (25px -> 20px) */
+    border-radius: 3px; /* %20 azaltıldı (4px -> 3px) */
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.earthquake-item-small:nth-child(1) .magnitude-small { background-color: #ff5722; } /* 4.2 - Kırmızı */
+.earthquake-item-small:nth-child(2) .magnitude-small { background-color: #ff9800; } /* 3.8 - Turuncu */
+.earthquake-item-small:nth-child(3) .magnitude-small { background-color: #ffc107; } /* 3.5 - Sarı */
+.earthquake-item-small:nth-child(4) .magnitude-small { background-color: #ffc107; } /* 3.2 - Sarı */
+.earthquake-item-small:nth-child(5) .magnitude-small { background-color: #4caf50; } /* 2.9 - Yeşil */
+
+.location-small {
+    color: #555;
+    font-size: 13px; /* Yazı boyutu eski haline getirildi */
+    flex: 1;
+}
+
+/* Günlük Deprem Sayısı Stilleri */
+.daily-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(211, 47, 47, 0.1), rgba(244, 67, 54, 0.05));
+    border-radius: 12px;
+    border: 2px solid rgba(211, 47, 47, 0.2);
+}
+
+.count-number {
+    font-size: 32px; /* %10 azaltıldı (36px -> 32px) */
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 4px; /* %20 azaltıldı (5px -> 4px) */
+}
+
+.count-label {
+    font-size: 14px; /* Yazı boyutu eski haline getirildi */
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Saatlik Ortalama Stilleri */
+.hourly-average {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(139, 195, 74, 0.05));
+    border-radius: 8px;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.average-number {
+    font-size: 24px; /* Yazı boyutu eski haline getirildi */
+    font-weight: bold;
+    color: #4caf50;
+    line-height: 1;
+    margin-bottom: 2px; /* %20 azaltıldı (3px -> 2px) */
+}
+
+.average-label {
+    font-size: 12px; /* Yazı boyutu eski haline getirildi */
+    color: #666;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+}
+
+/* Haftalık ve Aylık İstatistik Stilleri */
+.weekly-stats,
+.monthly-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* %20 azaltıldı (12px -> 10px) */
+    margin-top: 12px; /* %20 azaltıldı (15px -> 12px) */
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* %20 azaltıldı (12px -> 10px) */
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(30, 136, 229, 0.05));
+    border-radius: 6px; /* %20 azaltıldı (8px -> 6px) */
+    border: 1px solid rgba(33, 150, 243, 0.2);
+}
+
+.monthly-stats .stat-item {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.1), rgba(142, 36, 170, 0.05));
+    border: 1px solid rgba(156, 39, 176, 0.2);
+}
+
+.stat-number {
+    font-size: 20px; /* Yazı boyutu eski haline getirildi */
+    font-weight: bold;
+    color: #2196f3;
+    line-height: 1;
+    margin-bottom: 2px; /* %20 azaltıldı (3px -> 2px) */
+}
+
+.monthly-stats .stat-number {
+    color: #9c27b0;
+}
+
+.stat-label {
+    font-size: 11px; /* Yazı boyutu eski haline getirildi */
+    color: #666;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
 }
 
 /* Footer */
@@ -878,8 +1146,8 @@ footer {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-    width: 300px;
-    max-height: calc(100% - 40px);
+    width: 276px; /* %8 azaltıldı (300px -> 276px) */
+    max-height: calc(90% - 40px); /* %10 azaltıldı (100% -> 90%) */
     overflow-y: auto;
     background: white;
     border-radius: 12px;
@@ -894,7 +1162,7 @@ footer {
     left: 20px;
     transform: translateY(-50%);
     background: white;
-    padding: 10px;
+    padding: 9px; /* %10 azaltıldı (10px -> 9px) */
     border-radius: 8px;
     box-shadow: var(--shadow);
     z-index: 1000;
@@ -907,13 +1175,14 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     background: white;
-    padding: 10px 15px;
+    padding: 8.1px 12.15px; /* %10 daha azaltıldı (9px 13.5px -> 8.1px 12.15px) */
     border-radius: 8px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8.1px; /* %10 daha azaltıldı (9px -> 8.1px) */
     box-shadow: var(--shadow);
     z-index: 1000;
+    opacity: 0.85; /* Deprem Büyüklüğü kısmı kadar şeffaf */
 }
 
 @media (max-width: 768px) {
@@ -924,7 +1193,7 @@ footer {
         transform: translateX(-50%);
         bottom: 20px;
         top: auto;
-        max-height: 40%;
+        max-height: 36%; /* %10 azaltıldı (40% -> 36%) */
     }
 
     .map-wrapper #map {

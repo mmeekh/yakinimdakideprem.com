@@ -132,7 +132,7 @@ function setupAnimations() {
     }, observerOptions);
     
     // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.mv-card, .value-item, .contact-item');
+    const animatedElements = document.querySelectorAll('.mv-card, .value-item, .about-contact .contact-item');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
