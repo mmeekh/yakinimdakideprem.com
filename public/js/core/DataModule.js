@@ -20,7 +20,6 @@ class DataModule {
       const params = new URLSearchParams({
         hours_back: this.app.config.HOURS_BACK,
         min_magnitude: this.app.config.MIN_MAGNITUDE,
-        max_radius: this.app.config.MAX_RADIUS_KM,
         limit: 100
       });
 

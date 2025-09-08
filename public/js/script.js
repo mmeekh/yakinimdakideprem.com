@@ -12,7 +12,8 @@ const AppState = {
   timeUpdateInterval: null,
   isInitialized: false,
   lastUpdateTime: null,
-  lastDataHash: null // Veri değişikliğini kontrol etmek için
+  lastDataHash: null, // Veri değişikliğini kontrol etmek için
+  mapMode: 'hybrid' // harita modu: hybrid, turkey, global
 };
 
 // Configuration constants
@@ -22,7 +23,7 @@ const CONFIG = {
   MAP_ZOOM: 6, // Türkiye'yi tam gösteren zoom seviyesi
   API_TIMEOUT: 10000,
   MAX_RADIUS_KM: 5000, // Çok geniş alan
-  MIN_MAGNITUDE: 1.0, // Çok düşük büyüklük
+  MIN_MAGNITUDE: 1.5, // Kandilli API için optimize edildi
   HOURS_BACK: 168 // 1 hafta
 };
 
@@ -79,16 +80,14 @@ function initMap() {
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 18,
-      minZoom: 4
+      minZoom: 2
     }).addTo(AppState.map);
 
     // Hide loading indicator when map is ready
     AppState.map.whenReady(() => {
-      console.log("Harita başarıyla yüklendi");
       // Harita yüklendikten sonra boyutlandır
       setTimeout(() => {
         AppState.map.invalidateSize();
-        console.log("Harita boyutlandırıldı");
         
         // Harita genişliğini zorla ayarla
         resizeMapContainer();
@@ -106,14 +105,10 @@ async function fetchEarthquakeData() {
   
   try {
     const params = new URLSearchParams({
-      format: "geojson",
-      starttime: new Date(Date.now() - CONFIG.HOURS_BACK * 3600000).toISOString(),
-      latitude: CONFIG.MAP_CENTER[0],
-      longitude: CONFIG.MAP_CENTER[1],
-      maxradiuskm: CONFIG.MAX_RADIUS_KM,
-      minmagnitude: CONFIG.MIN_MAGNITUDE,
-      orderby: "magnitude-desc",
-      limit: 100
+      hours_back: CONFIG.HOURS_BACK / 24, // 168 saat = 7 gün
+      min_magnitude: CONFIG.MIN_MAGNITUDE,
+      limit: 100,
+      mode: AppState.mapMode // Harita modunu ekle
     });
 
     const controller = new AbortController();
@@ -143,14 +138,11 @@ async function fetchEarthquakeData() {
           processEarthquakeData(data.data);
           updateLastUpdateTime(false, data.last_update_ago);
           AppState.lastDataHash = currentDataHash;
-          console.log(`Yeni veri yüklendi: ${data.data.length} deprem`);
         } else {
-          console.log('Veri değişmedi, sadece zaman güncelleniyor');
           updateLastUpdateTime(false, data.last_update_ago);
         }
       } else {
         // Gerçek veri yok, örnek veri göster
-        console.log('Gerçek veri bulunamadı, örnek veriler gösteriliyor');
         loadSampleData();
       }
     } else {
@@ -159,14 +151,11 @@ async function fetchEarthquakeData() {
         processEarthquakeData(data.data);
         updateLastUpdateTime(true, data.last_update_ago);
         AppState.lastDataHash = currentDataHash;
-        console.log('Backend\'den yeni örnek veriler gösteriliyor');
       } else {
-        console.log('Örnek veri değişmedi, sadece zaman güncelleniyor');
         updateLastUpdateTime(true, data.last_update_ago);
       }
     }
     
-    console.log(`Veri yükleme süresi: ${Date.now() - startTime}ms`);
   } catch (error) {
     console.error("Deprem verileri alınamadı:", error);
     handleDataFetchError(error);
@@ -459,6 +448,9 @@ function updateStats() {
     dailyQuakesEl.textContent = todayQuakes.length;
   }
 
+  // Update recent earthquakes section (now handled by turkey-earthquakes.js)
+  // updateRecentEarthquakes();
+
   // Find maximum magnitude
   if (AppState.earthquakeData.length > 0) {
     const maxMag = Math.max(...AppState.earthquakeData.map(eq => eq.magnitude));
@@ -548,7 +540,6 @@ function goToTurkey() {
       }, 150);
     }
     
-    console.log("Harita Türkiye'ye odaklandı");
   }
 }
 
@@ -575,7 +566,6 @@ function toggleNightMode() {
       mapElement.style.filter = 'invert(1) hue-rotate(180deg) brightness(0.8) contrast(1.2)';
     }
     
-    console.log("Gece modu aktif");
   } else {
     nightModeBtn.classList.remove("active");
     if (icon) {
@@ -589,7 +579,6 @@ function toggleNightMode() {
       mapElement.style.filter = '';
     }
     
-    console.log("Gündüz modu aktif");
   }
   
   // Buton animasyonu
@@ -620,6 +609,38 @@ function startAutoRefresh() {
   AppState.timeUpdateInterval = setInterval(() => {
     updateTimeDisplays();
   }, 1000); // 1 saniyede bir güncelle
+}
+
+// Update recent earthquakes section with real data
+function updateRecentEarthquakes() {
+  const recentEarthquakesContainer = document.querySelector('.recent-earthquakes');
+  if (!recentEarthquakesContainer || !AppState.earthquakeData.length) return;
+
+  // Get top 5 earthquakes by magnitude
+  const top5Earthquakes = AppState.earthquakeData
+    .sort((a, b) => b.magnitude - a.magnitude)
+    .slice(0, 5);
+
+  // Clear existing content
+  recentEarthquakesContainer.innerHTML = '';
+
+  // Add new earthquake items
+  top5Earthquakes.forEach((eq, index) => {
+    const earthquakeItem = document.createElement('div');
+    earthquakeItem.className = 'earthquake-item-small';
+    
+    const magnitude = document.createElement('span');
+    magnitude.className = 'magnitude-small';
+    magnitude.textContent = eq.magnitude.toFixed(1);
+    
+    const location = document.createElement('span');
+    location.className = 'location-small';
+    location.textContent = eq.location || 'Bilinmeyen Konum';
+    
+    earthquakeItem.appendChild(magnitude);
+    earthquakeItem.appendChild(location);
+    recentEarthquakesContainer.appendChild(earthquakeItem);
+  });
 }
 
 // Update time displays dynamically
@@ -697,4 +718,102 @@ window.addEventListener("resize", () => {
   if (AppState.isInitialized) {
     resizeMapContainer();
   }
+});
+
+// ========================================
+// MAP MODE TOGGLE FUNCTIONALITY
+// ========================================
+
+function initMapModeToggle() {
+  const modeBtn = document.getElementById('map-mode-btn');
+  const modeOptions = document.querySelectorAll('.mode-option');
+  
+  if (!modeBtn) return;
+  
+  // Ana buton tıklama
+  modeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    // Dropdown açma/kapama (CSS hover ile yönetiliyor)
+  });
+  
+  // Seçenek butonları
+  modeOptions.forEach(option => {
+    option.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const mode = option.dataset.mode;
+      setMapMode(mode);
+    });
+  });
+  
+  // Dışarı tıklama ile kapatma
+  document.addEventListener('click', () => {
+    // CSS hover ile yönetildiği için gerek yok
+  });
+}
+
+function setMapMode(mode) {
+  AppState.mapMode = mode;
+  
+  // Buton metnini güncelle
+  const modeBtn = document.getElementById('map-mode-btn');
+  const modeBtnIcon = modeBtn.querySelector('i');
+  const modeBtnText = modeBtn.querySelector('span');
+  
+  // Aktif seçeneği güncelle
+  document.querySelectorAll('.mode-option').forEach(option => {
+    option.classList.remove('active');
+    if (option.dataset.mode === mode) {
+      option.classList.add('active');
+    }
+  });
+  
+  // Ana buton metnini güncelle
+  switch(mode) {
+    case 'turkey':
+      modeBtnIcon.className = 'fas fa-map-marker-alt';
+      modeBtnText.textContent = 'Türkiye\'deki Depremler';
+      break;
+    case 'global':
+      modeBtnIcon.className = 'fas fa-globe-americas';
+      modeBtnText.textContent = 'Global\'deki Depremler';
+      break;
+    case 'hybrid':
+    default:
+      modeBtnIcon.className = 'fas fa-globe';
+      modeBtnText.textContent = 'Türkiye + Global';
+      break;
+  }
+  
+  // Harita merkezini ve zoom seviyesini güncelle
+  updateMapView(mode);
+  
+  // Verileri yeniden yükle
+  fetchEarthquakeData();
+  
+  console.log(`Harita modu değiştirildi: ${mode}`);
+}
+
+function updateMapView(mode) {
+  if (!AppState.map) return;
+  
+  switch(mode) {
+    case 'turkey':
+      // Türkiye merkezi - yakın zoom
+      AppState.map.setView([39.0, 35.0], 6);
+      break;
+    case 'global':
+      // Türkiye merkezi - uzak zoom (dünya depremlerini görmek için)
+      AppState.map.setView([39.0, 35.0], 3);
+      break;
+    case 'hybrid':
+    default:
+      // Türkiye merkezi (hibrit için)
+      AppState.map.setView([39.0, 35.0], 6);
+      break;
+  }
+}
+
+// Sayfa yüklendiğinde buton işlevselliğini başlat
+document.addEventListener('DOMContentLoaded', () => {
+  initMapModeToggle();
 });

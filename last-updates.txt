@@ -22,6 +22,39 @@ Bu dosya, projede çalışmaya başlayacak bir chatbot'un, önceki yapay zekanı
 - API parametreleri optimize edildi (24 saat, 2.5+ büyüklük)
 - Güncelleme hızı artırıldı: 2 dakika → 1 dakika
 
+### 2025-01-27 - Harita Modu Toggle Butonu
+- Harita üst orta kısmına Türkiye-Global seçenekli buton eklendi
+- 3 mod seçeneği: Türkiye + Global (hibrit), Türkiye, Global
+- %30 şeffaflık ile modern tasarım
+- Hover ile dropdown menü açılması
+- Harita merkezi ve zoom seviyesi otomatik güncelleme
+- Backend'de mode parametresi ile veri filtreleme
+- Cache sistemi mode'a göre optimize edildi
+- Mobile responsive tasarım
+
+### 2025-01-27 - Hibrit API Sistemi (Kandilli + USGS)
+- Hibrit deprem veri sistemi oluşturuldu
+- Türkiye için Kandilli Rasathanesi API'si (2.0+ büyüklük)
+- Dünya için USGS API'si (1.5+ büyüklük, Türkiye dışı)
+- Paralel veri çekme sistemi (asyncio.gather)
+- Türkiye sınırları tanımlandı (35.8-42.0°N, 25.7-45.0°E)
+- Otomatik veri filtreleme ve birleştirme
+- İstatistik endpoint'i hibrit veri ile güncellendi
+- Cache sistemi hibrit veri için optimize edildi
+- Hata toleransı: Bir API başarısız olsa bile diğeri çalışır
+
+### 2025-01-27 - Kandilli Rasathanesi API Entegrasyonu
+- USGS API'si yerine Kandilli Rasathanesi API'si entegre edildi
+- Backend'de yeni API endpoint'i oluşturuldu (kandilli/live)
+- Türkiye odaklı daha doğru ve güncel deprem verileri
+- Minimum büyüklük 2.5'ten 2.0'a düşürüldü (Kandilli standardı)
+- Türkçe konum bilgileri ve şehir isimleri
+- En yakın şehir ve havalimanı bilgileri eklendi
+- Cache sistemi Kandilli API için optimize edildi
+- Frontend konfigürasyonu güncellendi (MIN_MAGNITUDE: 1.5)
+- DataModule'den max_radius parametresi kaldırıldı
+- İstatistik endpoint'i Kandilli API'si ile güncellendi
+
 ### 2025-01-27 - UI/UX İyileştirmeleri ve İstatistik Bölümü Güncellemeleri
 - "Biz Kimiz" sayfası kompaktlaştırıldı (yükseklik azaltıldı, bayrak boyutu korundu)
 - "Misyon ve Vizyon" bölümü küçültüldü (padding, font boyutları azaltıldı)
@@ -40,3 +73,8 @@ Bu dosya, projede çalışmaya başlayacak bir chatbot'un, önceki yapay zekanı
   * "İlk Yardım Çantası" → "Son 1 Hafta" (312 toplam, 44.6 günlük ortalama)
   * "Anlık Bildirimler" → "Son 1 Ay" (1,247 toplam, 40.2 günlük ortalama)
 - Yeni CSS stilleri eklendi: renk kodlamalı istatistik kutuları, gece modu filtreleri
+- İstatistik bölümü boyut optimizasyonu:
+  * Genel bölüm boyutları %20 küçültüldü (padding, margin, gap değerleri)
+  * Yazı boyutları korundu, sadece spacing azaltıldı
+  * "47" sayısı %10 küçültüldü (36px -> 32px)
+  * Deprem listesi yazıları bold yapıldı (daha okunabilir)

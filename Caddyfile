@@ -1,0 +1,42 @@
+{
+    auto_https off
+    # Local development için debug modu
+    debug
+    # HTTP'yi zorla kullan
+    http_port 8080
+}
+
+# Local development için localhost:8080
+localhost:8080 {
+    encode zstd gzip
+
+    # API (FastAPI) rotaları: sağlılık ve echo dahil
+    @api path /api/* /health /version
+    handle @api {
+        reverse_proxy api:8000
+    }
+
+    # FastAPI dokümantasyon ve OpenAPI (Swagger/Redoc)
+    @apidocs path /docs* /openapi.json /redoc*
+    handle @apidocs {
+        reverse_proxy api:8000
+    }
+
+    # Frontend statik dosyalar - local development için
+    handle {
+        root * /srv
+        try_files {path} /index.html
+        file_server
+    }
+
+    # Local development için daha esnek header'lar
+    header {
+        X-Content-Type-Options "nosniff"
+        # Local development için CORS'u açık bırak
+        Access-Control-Allow-Origin "*"
+        Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+        Access-Control-Allow-Headers "Content-Type, Authorization"
+        # Cache'i local development için kapat
+        Cache-Control "no-cache, no-store, must-revalidate"
+    }
+}

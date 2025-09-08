@@ -1,0 +1,34 @@
+{
+    auto_https off
+}
+
+:8080 {
+    encode zstd gzip
+
+    # API (FastAPI) rotaları: sağlılık ve echo dahil
+    @api path /api/* /health /version
+    handle @api {
+        reverse_proxy api:8000
+    }
+
+    # FastAPI dokümantasyon ve OpenAPI (Swagger/Redoc)
+    @apidocs path /docs* /openapi.json /redoc*
+    handle @apidocs {
+        reverse_proxy api:8000
+    }
+
+    # Frontend statik dosyalar
+    handle {
+        root * /srv
+        try_files {path} /index.html
+        file_server
+    }
+
+    header {
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        Permissions-Policy "geolocation=(), microphone=()"
+        Cache-Control "public, max-age=3600"
+    }
+}
