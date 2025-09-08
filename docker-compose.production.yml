@@ -9,39 +9,21 @@ services:
       - "8000"
     restart: unless-stopped
 
-    # Health check - basit ve güvenilir
-    healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
-
-    networks: [webnet]
-
   caddy:
     image: caddy:2.8
     container_name: yakinimdakideprem-caddy
     depends_on:
-      api:
-        condition: service_healthy
+      - api
     ports:
-      - "80:80"
-      - "443:443"
+      - "8080:8080"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
-      - caddy_logs:/var/log/caddy
+      # İsteğe bağlı: frontend statik kök (./public klasörü varsa)
       - ./public:/srv
     restart: unless-stopped
-    networks: [webnet]
 
 volumes:
   caddy_data:
   caddy_config:
-  caddy_logs:
-
-networks:
-  webnet:
-    driver: bridge

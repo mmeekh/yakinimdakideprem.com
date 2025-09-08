@@ -88,68 +88,63 @@ Türkiye'nin en kapsamlı **full-stack** deprem bilgi platformu. **FastAPI backe
 ## 📁 Proje Yapısı
 
 ```
-yakınımdakideprem/
-├── 📁 backend/                       # Backend projesi
-│   ├── 📁 app/                       # FastAPI uygulaması
-│   │   ├── 📄 main.py               # Ana FastAPI uygulaması
-│   │   └── 📁 api/                  # API modülleri
-│   ├── 📁 public/                   # Frontend dosyaları (Caddy tarafından servis edilir)
-│   │   ├── 📄 index.html            # Ana sayfa
-│   │   ├── 📄 deprem-aninda.html    # Deprem güvenlik rehberi
-│   │   ├── 📄 ilk-yardim-cantasi.html # İlk yardım çantası rehberi
-│   │   ├── 📄 ben-kimim.html        # Hakkımızda sayfası
-│   │   ├── 📄 blog.html             # Blog ana sayfası
-│   │   ├── 📄 blog-*.html           # Blog yazıları
-│   │   ├── 📄 kullanim-sartlari.html # Kullanım şartları
-│   │   ├── 📄 gizlilik-politikasi.html # Gizlilik politikası
-│   │   ├── 📄 cerez-politikasi.html # Çerez politikası
-│   │   ├── 📄 sorumluluk-reddi.html # Sorumluluk reddi
-│   │   ├── 📄 site.webmanifest      # PWA manifest
-│   │   ├── 📁 css/                  # Stil dosyaları
-│   │   │   ├── 📄 style.css         # Ana stil dosyası
-│   │   │   ├── 📄 style-optimized.css # Optimize edilmiş stiller
-│   │   │   ├── 📄 variables.css     # CSS değişkenleri
-│   │   │   ├── 📄 base.css          # Temel stiller
-│   │   │   ├── 📄 components.css    # Bileşen stilleri
-│   │   │   ├── 📄 header.css        # Header stilleri
-│   │   │   ├── 📄 ben-kimim.css     # Hakkımızda stilleri
-│   │   │   ├── 📄 blog.css          # Blog stilleri
-│   │   │   ├── 📄 deprem-aninda.css # Deprem rehberi stilleri
-│   │   │   └── 📄 ilk-yardim.css    # İlk yardım stilleri
-│   │   ├── 📁 js/                   # JavaScript dosyaları
-│   │   │   ├── 📄 script.js         # Ana JavaScript dosyası
-│   │   │   ├── 📄 main.js           # Giriş noktası
-│   │   │   ├── 📄 header.js         # Header işlevselliği
-│   │   │   ├── 📄 ben-kimim.js      # Hakkımızda işlevselliği
-│   │   │   ├── 📄 deprem-aninda.js  # Deprem rehberi işlevselliği
-│   │   │   └── 📁 core/             # Modüler JavaScript
-│   │   │       ├── 📄 App.js        # Ana uygulama sınıfı
-│   │   │       ├── 📄 DataModule.js # Veri yönetimi
-│   │   │       ├── 📄 MapModule.js  # Harita işlevselliği
-│   │   │       ├── 📄 StatsModule.js # İstatistik modülü
-│   │   │       └── 📄 UIModule.js   # UI yönetimi
-│   │   ├── 📁 components/           # HTML bileşenleri
-│   │   │   ├── 📄 header.html       # Header bileşeni
-│   │   │   ├── 📄 footer.html       # Footer bileşeni
-│   │   │   └── 📄 navigation.html   # Navigasyon bileşeni
-│   │   ├── 📁 images/               # Görsel dosyalar
-│   │   │   ├── 📄 hero-bg.jpg       # Ana sayfa arka planı
-│   │   │   ├── 📄 binaicindeyseniz.webp # Bina içi rehber görseli
-│   │   │   ├── 📄 disaridayken.webp # Dışarıda rehber görseli
-│   │   │   ├── 📄 arackullarnirken.webp # Araç kullanım rehberi
-│   │   │   └── 📄 depremcantasi.webp # İlk yardım çantası görseli
-│   │   └── 📁 icons/                # İkon dosyaları
-│   │       ├── 📄 logo.png          # Ana logo
-│   │       ├── 📄 favicon-*.png     # Favicon dosyaları
-│   │       ├── 📄 apple-touch-icon.png # iOS ikonu
-│   │       └── 📄 android-chrome-*.png # Android ikonları
-│   ├── 📄 Dockerfile               # Docker image tanımı
-│   ├── 📄 docker-compose.yml       # Docker Compose konfigürasyonu
-│   ├── 📄 Caddyfile               # Caddy reverse proxy konfigürasyonu
-│   ├── 📄 requirements.txt        # Python bağımlılıkları
-│   └── 📄 .env                    # Ortam değişkenleri
-├── 📄 package.json                # NPM konfigürasyonu (frontend build için)
-├── 📄 webpack.config.js           # Webpack konfigürasyonu
+anlikdeprem/
+├── 📁 app/                         # FastAPI uygulaması
+│   ├── 📄 main.py                 # Ana FastAPI uygulaması
+│   └── 📁 api/                    # API modülleri
+├── 📁 public/                     # Frontend dosyaları (Caddy tarafından servis edilir)
+│   ├── 📄 index.html              # Ana sayfa
+│   ├── 📄 deprem-aninda.html      # Deprem güvenlik rehberi
+│   ├── 📄 ilk-yardim-cantasi.html # İlk yardım çantası rehberi
+│   ├── 📄 ben-kimim.html          # Hakkımızda sayfası
+│   ├── 📄 blog.html               # Blog ana sayfası
+│   ├── 📄 blog-*.html             # Blog yazıları
+│   ├── 📄 kullanim-sartlari.html  # Kullanım şartları
+│   ├── 📄 gizlilik-politikasi.html # Gizlilik politikası
+│   ├── 📄 cerez-politikasi.html   # Çerez politikası
+│   ├── 📄 sorumluluk-reddi.html   # Sorumluluk reddi
+│   ├── 📄 site.webmanifest        # PWA manifest
+│   ├── 📁 css/                    # Stil dosyaları
+│   │   ├── 📄 style.css           # Ana stil dosyası
+│   │   ├── 📄 style-optimized.css # Optimize edilmiş stiller
+│   │   ├── 📄 variables.css       # CSS değişkenleri
+│   │   ├── 📄 base.css            # Temel stiller
+│   │   ├── 📄 components.css      # Bileşen stilleri
+│   │   ├── 📄 header.css          # Header stilleri
+│   │   ├── 📄 ben-kimim.css       # Hakkımızda stilleri
+│   │   ├── 📄 blog.css            # Blog stilleri
+│   │   ├── 📄 deprem-aninda.css   # Deprem rehberi stilleri
+│   │   └── 📄 ilk-yardim.css      # İlk yardım stilleri
+│   ├── 📁 js/                     # JavaScript dosyaları
+│   │   ├── 📄 script.js           # Ana JavaScript dosyası
+│   │   ├── 📄 main.js             # Giriş noktası
+│   │   ├── 📄 header.js           # Header işlevselliği
+│   │   ├── 📄 ben-kimim.js        # Hakkımızda işlevselliği
+│   │   ├── 📄 deprem-aninda.js    # Deprem rehberi işlevselliği
+│   │   └── 📁 core/               # Modüler JavaScript
+│   │       ├── 📄 App.js          # Ana uygulama sınıfı
+│   │       ├── 📄 DataModule.js   # Veri yönetimi
+│   │       ├── 📄 MapModule.js    # Harita işlevselliği
+│   │       ├── 📄 StatsModule.js  # İstatistik modülü
+│   │       └── 📄 UIModule.js     # UI yönetimi
+│   ├── 📁 images/                 # Görsel dosyalar
+│   │   ├── 📄 hero-bg.jpg         # Ana sayfa arka planı
+│   │   ├── 📄 binaicindeyseniz.webp # Bina içi rehber görseli
+│   │   ├── 📄 disaridayken.webp   # Dışarıda rehber görseli
+│   │   ├── 📄 arackullarnirken.webp # Araç kullanım rehberi
+│   │   └── 📄 depremcantasi.webp  # İlk yardım çantası görseli
+│   └── 📁 icons/                  # İkon dosyaları
+│       ├── 📄 logo.png            # Ana logo
+│       ├── 📄 favicon-*.png       # Favicon dosyaları
+│       ├── 📄 apple-touch-icon.png # iOS ikonu
+│       └── 📄 android-chrome-*.png # Android ikonları
+├── 📄 Dockerfile                  # Docker image tanımı
+├── 📄 docker-compose.yml          # Docker Compose konfigürasyonu
+├── 📄 docker-compose.production.yml # Production Docker Compose
+├── 📄 Caddyfile                   # Caddy reverse proxy konfigürasyonu
+├── 📄 Caddyfile.production        # Production Caddy konfigürasyonu
+├── 📄 requirements.txt            # Python bağımlılıkları
+├── 📄 checklist.pdf               # Proje kontrol listesi
 └── 📄 README.md                   # Bu dosya
 ```
 
@@ -166,9 +161,6 @@ yakınımdakideprem/
 # Projeyi klonlayın
 git clone https://github.com/yakınımdakideprem/yakınımdakideprem.git
 cd yakınımdakideprem
-
-# Backend dizinine geçin
-cd backend
 
 # Docker container'ları başlatın
 docker compose up -d --build

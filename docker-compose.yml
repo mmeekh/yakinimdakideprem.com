@@ -1,0 +1,34 @@
+services:
+  api:
+    build: .
+    container_name: yakinimdakideprem-api-local
+    env_file: .env
+    environment:
+      - PORT=${PORT:-8000}
+      - ENVIRONMENT=development
+    ports:
+      - "8000:8000"  # Local development için port expose et
+    volumes:
+      - ./:/app  # Local development için kod değişikliklerini takip et
+    restart: unless-stopped
+    # Local development için hot reload
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  caddy:
+    image: caddy:2.8
+    container_name: yakinimdakideprem-caddy-local
+    depends_on:
+      - api
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+      # Local development için public klasörünü mount et
+      - ./public:/srv
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:

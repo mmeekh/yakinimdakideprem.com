@@ -43,6 +43,24 @@
         <div class="map-wrapper">
             <div id="map"></div>
 
+            <!-- Türkiye-Global Toggle Butonu -->
+            <div class="map-mode-toggle overlay">
+                <button id="map-mode-btn" class="mode-btn active" data-mode="hybrid">
+                    <i class="fas fa-globe"></i>
+                    <span>Türkiye + Global</span>
+                </button>
+                <div class="mode-options">
+                    <button class="mode-option" data-mode="turkey">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Türkiye'deki Depremler</span>
+                    </button>
+                    <button class="mode-option" data-mode="global">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>Global'deki Depremler</span>
+                    </button>
+                </div>
+            </div>
+
             <!-- Büyüklük Göstergesi -->
             <div class="magnitude-legend overlay">
                 <div class="legend-title">Deprem Büyüklüğü</div>
@@ -124,25 +142,10 @@
                         </div>
                         <h3>Türkiye'deki Son 5 Deprem</h3>
                         <div class="recent-earthquakes">
-                            <div class="earthquake-item-small">
-                                <span class="magnitude-small">4.2</span>
-                                <span class="location-small">Ankara, Türkiye</span>
-                            </div>
-                            <div class="earthquake-item-small">
-                                <span class="magnitude-small">3.8</span>
-                                <span class="location-small">İzmir, Türkiye</span>
-                            </div>
-                            <div class="earthquake-item-small">
-                                <span class="magnitude-small">3.5</span>
-                                <span class="location-small">Bursa, Türkiye</span>
-                            </div>
-                            <div class="earthquake-item-small">
-                                <span class="magnitude-small">3.2</span>
-                                <span class="location-small">Antalya, Türkiye</span>
-                            </div>
-                            <div class="earthquake-item-small">
-                                <span class="magnitude-small">2.9</span>
-                                <span class="location-small">Trabzon, Türkiye</span>
+                            <!-- Gerçek veriler JavaScript ile doldurulacak -->
+                            <div class="loading-placeholder">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                <span>Veriler yükleniyor...</span>
                             </div>
                         </div>
                     </div>
@@ -152,11 +155,11 @@
                         </div>
                         <h3>Son 24 Saatteki Deprem Sayısı</h3>
                         <div class="daily-count">
-                            <span class="count-number">47</span>
+                            <span class="count-number">-</span>
                             <span class="count-label">deprem</span>
                         </div>
                         <div class="hourly-average">
-                            <span class="average-number">2.0</span>
+                            <span class="average-number">-</span>
                             <span class="average-label">saatlik ortalama</span>
                         </div>
                     </div>
@@ -167,11 +170,11 @@
                         <h3>Son 1 Hafta</h3>
                         <div class="weekly-stats">
                             <div class="stat-item">
-                                <span class="stat-number">312</span>
+                                <span class="stat-number">-</span>
                                 <span class="stat-label">toplam deprem</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number">44.6</span>
+                                <span class="stat-number">-</span>
                                 <span class="stat-label">günlük ortalama</span>
                             </div>
                         </div>
@@ -183,11 +186,11 @@
                         <h3>Son 1 Ay</h3>
                         <div class="monthly-stats">
                             <div class="stat-item">
-                                <span class="stat-number">1,247</span>
+                                <span class="stat-number">-</span>
                                 <span class="stat-label">toplam deprem</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number">40.2</span>
+                                <span class="stat-number">-</span>
                                 <span class="stat-label">günlük ortalama</span>
                             </div>
                         </div>
@@ -255,6 +258,10 @@
     <script src="js/header.js"></script>
     <!-- Ana Script -->
     <script src="js/script.js"></script>
+    <!-- Türkiye Depremleri Script -->
+    <script src="js/turkey-earthquakes.js"></script>
+    <!-- İstatistik Güncelleyici Script -->
+    <script src="js/statistics-updater.js"></script>
 </body>
 </html>
 
