@@ -349,7 +349,7 @@ Deprem istatistikleri
 APP_NAME=yakınımdakideprem-api
 APP_ENV=dev
 APP_VERSION=0.1.0
-PORT=8000
+PORT=8001
 
 # CORS Ayarları
 CORS_ORIGINS=http://localhost:8080,http://localhost:3000

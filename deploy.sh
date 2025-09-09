@@ -83,7 +83,7 @@ log_info "Health check yapılıyor..."
 sleep 10
 
 # API health check
-if curl -f http://localhost:8000/health > /dev/null 2>&1; then
+if curl -f http://localhost:8001/health > /dev/null 2>&1; then
     log_info "✅ API sağlıklı"
 else
     log_warn "⚠️  API health check başarısız"
