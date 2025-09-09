@@ -19,6 +19,16 @@
     <link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
     <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J03Y3ZWDWD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-J03Y3ZWDWD');
+    </script>
 </head>
 <body>
     <!-- Sabit Header -->
@@ -131,73 +141,6 @@
             </div>
         </div>
 
-        <!-- Özellikler Bölümü -->
-        <section class="features-section">
-            <div class="container">
-                <h2>Deprem İstatistikleri</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-list-ol"></i>
-                        </div>
-                        <h3>Türkiye'deki Son 5 Deprem</h3>
-                        <div class="recent-earthquakes">
-                            <!-- Gerçek veriler JavaScript ile doldurulacak -->
-                            <div class="loading-placeholder">
-                                <i class="fas fa-spinner fa-spin"></i>
-                                <span>Veriler yükleniyor...</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>Son 24 Saatteki Deprem Sayısı</h3>
-                        <div class="daily-count">
-                            <span class="count-number">-</span>
-                            <span class="count-label">deprem</span>
-                        </div>
-                        <div class="hourly-average">
-                            <span class="average-number">-</span>
-                            <span class="average-label">saatlik ortalama</span>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-calendar-week"></i>
-                        </div>
-                        <h3>Son 1 Hafta</h3>
-                        <div class="weekly-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">-</span>
-                                <span class="stat-label">toplam deprem</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">-</span>
-                                <span class="stat-label">günlük ortalama</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-calendar-alt"></i>
-                        </div>
-                        <h3>Son 1 Ay</h3>
-                        <div class="monthly-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">-</span>
-                                <span class="stat-label">toplam deprem</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">-</span>
-                                <span class="stat-label">günlük ortalama</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
@@ -261,7 +204,6 @@
     <!-- Türkiye Depremleri Script -->
     <script src="js/turkey-earthquakes.js"></script>
     <!-- İstatistik Güncelleyici Script -->
-    <script src="js/statistics-updater.js"></script>
 </body>
 </html>
 

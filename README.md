@@ -155,7 +155,7 @@ anlikdeprem/
 - **Docker Compose** >= 2.0.0
 - **Git** (projeyi klonlamak için)
 
-### Hızlı Başlangıç
+### Local Development
 
 ```bash
 # Projeyi klonlayın
@@ -172,11 +172,27 @@ docker compose ps
 docker compose logs -f
 ```
 
+### Production Deployment (HTTPS)
+
+```bash
+# Production deployment için
+docker-compose -f docker-compose.https.yml up -d
+
+# Veya deployment script'ini kullanın (Linux/Mac)
+./deploy.sh
+```
+
 ### Erişim Adresleri
 
+#### Local Development
 - **Ana Sayfa**: http://localhost:8080/
 - **API Dokümantasyonu**: http://localhost:8080/docs
 - **API Health Check**: http://localhost:8080/health
+
+#### Production (HTTPS)
+- **Ana Sayfa**: https://yakinimdakideprem.com/
+- **API Dokümantasyonu**: https://yakinimdakideprem.com/docs
+- **API Health Check**: https://yakinimdakideprem.com/health
 - **API Echo Test**: http://localhost:8080/api/echo?q=merhaba
 
 ### Geliştirme Modu
@@ -191,6 +207,57 @@ docker compose up -d --build
 # Logları takip edin
 docker compose logs -f api
 docker compose logs -f caddy
+```
+
+## 🔒 HTTPS ve Production Hazırlık
+
+### ✅ Hazır Özellikler
+- **Otomatik SSL**: Let's Encrypt ile otomatik HTTPS
+- **Security Headers**: Güvenlik optimizasyonları
+- **Rate Limiting**: API koruması
+- **Health Checks**: Container sağlık kontrolü
+- **Domain Yönlendirme**: www subdomain'den ana domain'e yönlendirme
+
+### 📁 Production Dosyaları
+- `Caddyfile.https` - HTTPS yapılandırması
+- `docker-compose.https.yml` - Production container yapılandırması
+- `env.production` - Production environment variables
+- `deploy.sh` - Otomatik deployment script'i
+
+### 🌐 Domain Yapılandırması
+1. **DNS Ayarları**: Domain'inizi sunucu IP'sine yönlendirin
+2. **Domain Güncelleme**: `Caddyfile.https` dosyasında domain'i güncelleyin
+3. **Email Ayarları**: SSL sertifika için email adresini güncelleyin
+4. **Firewall**: 80 ve 443 portlarını açın
+
+### 🚀 Production Deployment Adımları
+```bash
+# 1. Domain'i güncelleyin
+nano Caddyfile.https
+
+# 2. Email adresini güncelleyin
+nano env.production
+
+# 3. Production deployment'ı başlatın
+docker-compose -f docker-compose.https.yml up -d
+
+# 4. SSL sertifikasını kontrol edin
+docker exec yakinimdakideprem-caddy caddy list-certificates
+```
+
+### 🔧 Production Yönetimi
+```bash
+# Logları görüntüle
+docker-compose -f docker-compose.https.yml logs -f
+
+# Container'ları yeniden başlat
+docker-compose -f docker-compose.https.yml restart
+
+# Container'ları durdur
+docker-compose -f docker-compose.https.yml down
+
+# SSL sertifikalarını yenile
+docker exec yakinimdakideprem-caddy caddy reload
 ```
 
 ## 🌐 API Endpoints

@@ -276,7 +276,7 @@ def echo(q: str = "hello"):
 async def get_earthquakes(
     hours_back: int = Query(24, ge=1, le=720, description="Son kaç saatlik veriler"),  # 24 saat
     min_magnitude: float = Query(2.0, ge=0, le=10, description="Minimum büyüklük"),  # 2.0+ (Kandilli standardı)
-    limit: int = Query(100, ge=1, le=500, description="Maksimum sonuç sayısı"),
+    limit: int = Query(100, ge=1, le=2000, description="Maksimum sonuç sayısı"),
     mode: str = Query("hybrid", description="Veri modu: hybrid, turkey, global")
 ):
     """Deprem verilerini getir - Hibrit sistem (Türkiye: Kandilli, Dünya: USGS)"""

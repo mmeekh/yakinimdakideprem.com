@@ -25,21 +25,49 @@ function isInTurkey(lat, lng) {
 }
 
 /**
+ * Mevcut mode'u güvenli şekilde alır
+ */
+function getCurrentMode() {
+  // AppState'e güvenli erişim
+  if (typeof window !== 'undefined' && window.AppState && window.AppState.mapMode) {
+    return window.AppState.mapMode;
+  }
+  return 'hybrid'; // Varsayılan mode
+}
+
+/**
  * Türkiye deprem verilerini API'den çeker
+ * Mode seçimine göre çalışır
  */
 async function fetchTurkeyEarthquakes() {
   try {
-    const response = await fetch('/api/earthquakes?hours_back=168&min_magnitude=1.5&limit=500');
+    const currentMode = getCurrentMode();
+    console.log(`Türkiye deprem verileri çekiliyor (mode: ${currentMode})...`);
+    
+    // Mode parametresi ile API çağrısı
+    const response = await fetch(`/api/earthquakes?hours_back=168&min_magnitude=1.5&limit=500&mode=${currentMode}`);
     const data = await response.json();
     
     if (data.success && data.data) {
-      // Türkiye sınırları içindeki depremleri filtrele
-      turkeyEarthquakes = data.data.filter(eq => 
-        isInTurkey(eq.coordinates.lat, eq.coordinates.lng)
-      );
+      // Mode'a göre filtreleme yap
+      if (currentMode === 'turkey') {
+        // Türkiye mode: Sadece Kandilli verileri (zaten Türkiye'de)
+        turkeyEarthquakes = data.data;
+      } else if (currentMode === 'global') {
+        // Global mode: USGS verileri içinde Türkiye sınırları içindekileri filtrele
+        turkeyEarthquakes = data.data.filter(eq => 
+          isInTurkey(eq.coordinates.lat, eq.coordinates.lng)
+        );
+      } else {
+        // Hibrit mode: API'den gelen tüm verileri kullan (Türkiye + Global)
+        // API zaten mode'a göre filtreleme yapıyor, ek filtreleme gerekmez
+        turkeyEarthquakes = data.data;
+      }
       
       // Büyüklüğe göre sırala (en büyük önce)
       turkeyEarthquakes.sort((a, b) => b.magnitude - a.magnitude);
+      
+      console.log(`Türkiye deprem verileri güncellendi: ${turkeyEarthquakes.length} deprem (mode: ${currentMode})`);
       
       updateTurkeyEarthquakesDisplay();
     }
@@ -175,6 +203,9 @@ function showTurkeyEarthquakesError() {
  * Sayfa yüklendiğinde çalışır
  */
 document.addEventListener('DOMContentLoaded', () => {
+  // Başlığı güncelle
+  updateTurkeyEarthquakesTitle();
+  
   // Sayfa yüklendikten sonra kısa bir gecikme ile veri çek
   setTimeout(() => {
     fetchTurkeyEarthquakes();
@@ -186,8 +217,51 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 300000); // 5 dakika
 });
 
+/**
+ * Mode değişikliğinde Türkiye depremlerini günceller
+ */
+async function updateTurkeyEarthquakesOnModeChange() {
+  console.log('Mode değişikliği tespit edildi, Türkiye depremleri güncelleniyor...');
+  console.log('Mevcut mode:', getCurrentMode());
+  
+  // Başlığı mode'a göre güncelle
+  updateTurkeyEarthquakesTitle();
+  
+  
+  await fetchTurkeyEarthquakes();
+}
+
+/**
+ * Türkiye depremleri başlığını mode'a göre günceller
+ */
+function updateTurkeyEarthquakesTitle() {
+  const titleElement = document.querySelector('.feature-card h3');
+  if (!titleElement) return;
+  
+  const currentMode = getCurrentMode();
+  let title = '';
+  
+  switch(currentMode) {
+    case 'turkey':
+      title = 'Türkiye\'deki Son 5 Deprem';
+      break;
+    case 'global':
+      title = 'Türkiye\'deki Son 5 Deprem (Global Veri)';
+      break;
+    case 'hybrid':
+    default:
+      title = 'En Büyük 5 Deprem (Hibrit Veri)';
+      break;
+  }
+  
+  titleElement.textContent = title;
+  console.log(`Başlık güncellendi: ${title}`);
+}
+
 // Global olarak erişilebilir yap
 window.TurkeyEarthquakes = {
   fetch: fetchTurkeyEarthquakes,
-  update: updateTurkeyEarthquakesDisplay
+  update: updateTurkeyEarthquakesDisplay,
+  updateOnModeChange: updateTurkeyEarthquakesOnModeChange,
+  getCurrentMode: getCurrentMode
 };

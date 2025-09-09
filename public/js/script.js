@@ -790,6 +790,15 @@ function setMapMode(mode) {
   // Verileri yeniden yükle
   fetchEarthquakeData();
   
+  
+  // Türkiye depremlerini mode değişikliğine göre güncelle
+  if (window.TurkeyEarthquakes && window.TurkeyEarthquakes.updateOnModeChange) {
+    console.log('Türkiye depremleri güncelleniyor...');
+    window.TurkeyEarthquakes.updateOnModeChange();
+  } else {
+    console.warn('TurkeyEarthquakes.updateOnModeChange bulunamadı');
+  }
+  
   console.log(`Harita modu değiştirildi: ${mode}`);
 }
 
