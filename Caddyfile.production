@@ -1,20 +1,44 @@
 {
-    auto_https off
+    # Production için HTTPS otomatik yönetimi
+    auto_https on
+    # Let's Encrypt email (gerçek email ile değiştirin)
+    email admin@yakinimdakideprem.com
+    # Rate limiting
+    rate_limit {
+        zone static {
+            key {remote_host}
+            events 100
+            window 1m
+        }
+    }
 }
 
-:8080 {
+# ========================================
+# YAKINIMDAKIDEPREM.COM DOMAIN BLOĞU
+# ========================================
+yakinimdakideprem.com {
     encode zstd gzip
 
-    # API (FastAPI) rotaları: sağlılık ve echo dahil
+    # API (FastAPI) rotaları - yakinimdakideprem-api:8001'e yönlendir
     @api path /api/* /health /version
     handle @api {
-        reverse_proxy api:8000
+        reverse_proxy yakinimdakideprem-api:8001 {
+            header_up Host {host}
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
     }
 
-    # FastAPI dokümantasyon ve OpenAPI (Swagger/Redoc)
+    # FastAPI dokümantasyon ve OpenAPI
     @apidocs path /docs* /openapi.json /redoc*
     handle @apidocs {
-        reverse_proxy api:8000
+        reverse_proxy yakinimdakideprem-api:8001 {
+            header_up Host {host}
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
     }
 
     # Frontend statik dosyalar
@@ -24,11 +48,109 @@
         file_server
     }
 
+    # Security headers
     header {
+        # Security headers
         X-Content-Type-Options "nosniff"
         X-Frame-Options "DENY"
+        X-XSS-Protection "1; mode=block"
         Referrer-Policy "strict-origin-when-cross-origin"
         Permissions-Policy "geolocation=(), microphone=()"
+        
+        # HTTPS zorunlu
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        
+        # Cache headers
         Cache-Control "public, max-age=3600"
+        
+        # CORS
+        Access-Control-Allow-Origin "https://yakinimdakideprem.com"
+        Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+        Access-Control-Allow-Headers "Content-Type, Authorization"
     }
+
+    # Rate limiting
+    rate_limit {
+        zone api {
+            key {remote_host}
+            events 1000
+            window 1h
+        }
+    }
+}
+
+# www subdomain'den ana domain'e yönlendirme
+www.yakinimdakideprem.com {
+    redir https://yakinimdakideprem.com{uri} permanent
+}
+
+# ========================================
+# PDFISLEMLERI.COM DOMAIN BLOĞU
+# ========================================
+pdfislemleri.com {
+    encode zstd gzip
+
+    # API (FastAPI) rotaları - pdfislemleri-api:8000'e yönlendir
+    @api path /api/* /health /version
+    handle @api {
+        reverse_proxy pdfislemleri-api:8000 {
+            header_up Host {host}
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+
+    # FastAPI dokümantasyon ve OpenAPI
+    @apidocs path /docs* /openapi.json /redoc*
+    handle @apidocs {
+        reverse_proxy pdfislemleri-api:8000 {
+            header_up Host {host}
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+
+    # Frontend statik dosyalar
+    handle {
+        root * /srv
+        try_files {path} /index.html
+        file_server
+    }
+
+    # Security headers
+    header {
+        # Security headers
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        X-XSS-Protection "1; mode=block"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        Permissions-Policy "geolocation=(), microphone=()"
+        
+        # HTTPS zorunlu
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        
+        # Cache headers
+        Cache-Control "public, max-age=3600"
+        
+        # CORS
+        Access-Control-Allow-Origin "https://pdfislemleri.com"
+        Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+        Access-Control-Allow-Headers "Content-Type, Authorization"
+    }
+
+    # Rate limiting
+    rate_limit {
+        zone api {
+            key {remote_host}
+            events 1000
+            window 1h
+        }
+    }
+}
+
+# www subdomain'den ana domain'e yönlendirme
+www.pdfislemleri.com {
+    redir https://pdfislemleri.com{uri} permanent
 }

@@ -1,21 +1,19 @@
 services:
   api:
-    build: .
+    build: . 
     container_name: yakinimdakideprem-api
     environment:
-      - PORT=8001
+      - PORT=8000
       - ENVIRONMENT=production
     expose:
-      - "8001"
+      - "8000"
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 40s
-    networks:
-      - yakinimdakideprem-network
 
   caddy:
     image: caddy:2.8
@@ -27,21 +25,14 @@ services:
       - "80:80"    # HTTP (HTTPS'e yönlendirme için)
       - "443:443"  # HTTPS
     volumes:
-      - ./Caddyfile.production:/etc/caddy/Caddyfile
+      - ./Caddyfile.https:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
       - ./public:/srv
     restart: unless-stopped
     environment:
       - CADDY_DOCKER_CADDYFILE_PATH=/etc/caddy/Caddyfile
-    networks:
-      - yakinimdakideprem-network
 
 volumes:
   caddy_data:
   caddy_config:
-
-networks:
-  yakinimdakideprem-network:
-    driver: bridge
-    name: yakinimdakideprem-network
