@@ -4,15 +4,15 @@ services:
     container_name: yakinimdakideprem-api-local
     env_file: .env
     environment:
-      - PORT=${PORT:-8000}
+      - PORT=${PORT:-8001}
       - ENVIRONMENT=development
     ports:
-      - "8000:8000"  # Local development için port expose et
+      - "8001:8001"  # Local development için port expose et
     volumes:
       - ./:/app  # Local development için kod değişikliklerini takip et
     restart: unless-stopped
     # Local development için hot reload
-    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
 
   caddy:
     image: caddy:2.8

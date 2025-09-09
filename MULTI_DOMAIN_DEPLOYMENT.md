@@ -48,7 +48,7 @@ services:
   api:
     container_name: yakinimdakideprem-api
     expose:
-      - "8000"
+      - "8001"
     networks:
       - yakinimdakideprem-network
 
@@ -75,7 +75,7 @@ networks:
 yakinimdakideprem.com {
     @api path /api/* /health /version
     handle @api {
-        reverse_proxy yakinimdakideprem-api:8000
+        reverse_proxy yakinimdakideprem-api:8001
     }
     
     handle {

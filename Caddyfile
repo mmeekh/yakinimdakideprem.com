@@ -13,13 +13,13 @@ localhost:8080 {
     # API (FastAPI) rotaları: sağlılık ve echo dahil
     @api path /api/* /health /version
     handle @api {
-        reverse_proxy api:8000
+        reverse_proxy api:8001
     }
 
     # FastAPI dokümantasyon ve OpenAPI (Swagger/Redoc)
     @apidocs path /docs* /openapi.json /redoc*
     handle @apidocs {
-        reverse_proxy api:8000
+        reverse_proxy api:8001
     }
 
     # Frontend statik dosyalar - local development için

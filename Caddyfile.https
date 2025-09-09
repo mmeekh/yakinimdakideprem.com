@@ -23,7 +23,7 @@ yakinimdakideprem.com {
     # API (FastAPI) rotaları
     @api path /api/* /health /version
     handle @api {
-        reverse_proxy api:8000
+        reverse_proxy api:8001
         header_up Host {host}
         header_up X-Real-IP {remote_host}
         header_up X-Forwarded-For {remote_host}
@@ -33,7 +33,7 @@ yakinimdakideprem.com {
     # FastAPI dokümantasyon ve OpenAPI
     @apidocs path /docs* /openapi.json /redoc*
     handle @apidocs {
-        reverse_proxy api:8000
+        reverse_proxy api:8001
         header_up Host {host}
         header_up X-Real-IP {remote_host}
         header_up X-Forwarded-For {remote_host}
