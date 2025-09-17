@@ -745,7 +745,7 @@ window.addEventListener("resize", () => {
 });
 
 // Handle pageshow events (e.g. browser back/forward cache)
-window.addEventListener("pageshow", (event) => {
+window.addEventListener("pageshow", async (event) => {
   const navigationEntries = typeof performance !== "undefined" && performance.getEntriesByType
     ? performance.getEntriesByType("navigation")
     : [];
@@ -760,22 +760,18 @@ window.addEventListener("pageshow", (event) => {
   }
 
   if (!AppState.isInitialized) {
-    initApp();
+    await initApp();
     return;
   }
 
-  if (!AppState.map) {
-    initMap();
-  } else {
-    setTimeout(() => {
-      AppState.map.invalidateSize();
-      updateMap();
-    }, 100);
-  }
+  // BFCache geri dönüşlerinde Leaflet haritasını tamamen yeniden oluştur
+  resetExistingMap();
+  initMap();
 
   if (!AppState.earthquakeData || AppState.earthquakeData.length === 0) {
-    fetchEarthquakeData();
+    await fetchEarthquakeData();
   } else {
+    updateMap();
     updateEarthquakeList();
     updateStats();
   }
@@ -783,6 +779,10 @@ window.addEventListener("pageshow", (event) => {
   startAutoRefresh();
   updateTimeDisplays();
   resizeMapContainer();
+
+  if (window.TurkeyEarthquakes && typeof window.TurkeyEarthquakes.fetch === 'function') {
+    window.TurkeyEarthquakes.fetch();
+  }
 });
 
 // ========================================
