@@ -16,6 +16,10 @@ const AppState = {
   mapMode: 'hybrid' // harita modu: hybrid, turkey, global
 };
 
+if (typeof window !== 'undefined') {
+  window.AppState = AppState;
+}
+
 // Configuration constants
 const CONFIG = {
   REFRESH_INTERVAL: 60000, // 1 minute
