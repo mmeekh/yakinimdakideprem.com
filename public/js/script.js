@@ -69,6 +69,8 @@ async function initApp() {
 // Map initialization
 function initMap() {
   try {
+    resetExistingMap();
+
     // Show loading indicator
     const mapContainer = document.getElementById("map");
     if (mapContainer) {
@@ -96,6 +98,28 @@ function initMap() {
   } catch (error) {
     console.error("Harita başlatılamadı:", error);
     showErrorMessage("Harita yüklenirken bir hata oluştu.");
+  }
+}
+
+// Remove previously created Leaflet map instance if it exists
+function resetExistingMap() {
+  if (AppState.map) {
+    try {
+      AppState.map.off();
+      AppState.map.remove();
+    } catch (error) {
+      console.warn("Önceki harita kaldırılırken hata oluştu:", error);
+    }
+    AppState.map = null;
+  }
+
+  const mapContainer = document.getElementById("map");
+  if (mapContainer && mapContainer._leaflet_id) {
+    try {
+      delete mapContainer._leaflet_id;
+    } catch (error) {
+      mapContainer._leaflet_id = null;
+    }
   }
 }
 
@@ -718,6 +742,47 @@ window.addEventListener("resize", () => {
   if (AppState.isInitialized) {
     resizeMapContainer();
   }
+});
+
+// Handle pageshow events (e.g. browser back/forward cache)
+window.addEventListener("pageshow", (event) => {
+  const navigationEntries = typeof performance !== "undefined" && performance.getEntriesByType
+    ? performance.getEntriesByType("navigation")
+    : [];
+  const navigationType = navigationEntries && navigationEntries.length > 0
+    ? navigationEntries[0].type
+    : null;
+
+  const isBackForwardNavigation = event.persisted || navigationType === "back_forward";
+
+  if (!isBackForwardNavigation) {
+    return;
+  }
+
+  if (!AppState.isInitialized) {
+    initApp();
+    return;
+  }
+
+  if (!AppState.map) {
+    initMap();
+  } else {
+    setTimeout(() => {
+      AppState.map.invalidateSize();
+      updateMap();
+    }, 100);
+  }
+
+  if (!AppState.earthquakeData || AppState.earthquakeData.length === 0) {
+    fetchEarthquakeData();
+  } else {
+    updateEarthquakeList();
+    updateStats();
+  }
+
+  startAutoRefresh();
+  updateTimeDisplays();
+  resizeMapContainer();
 });
 
 // ========================================

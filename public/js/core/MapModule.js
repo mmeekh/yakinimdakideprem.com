@@ -48,8 +48,23 @@ class MapModule {
    * Create the map instance
    */
   createMap() {
+    this.destroyExistingMap();
+
+    const mapElement = document.getElementById('map');
+    if (!mapElement) {
+      throw new Error('Harita konteyneri bulunamadı');
+    }
+
+    if (mapElement._leaflet_id) {
+      try {
+        delete mapElement._leaflet_id;
+      } catch (error) {
+        mapElement._leaflet_id = null;
+      }
+    }
+
     this.map = L.map('map').setView(
-      this.app.config.MAP_CENTER, 
+      this.app.config.MAP_CENTER,
       this.app.config.MAP_ZOOM
     );
 
@@ -292,6 +307,21 @@ class MapModule {
   fitBounds(bounds) {
     if (this.map) {
       this.map.fitBounds(bounds);
+    }
+  }
+
+  /**
+   * Destroy existing Leaflet map instance if present
+   */
+  destroyExistingMap() {
+    if (this.map) {
+      try {
+        this.map.off();
+        this.map.remove();
+      } catch (error) {
+        console.warn('Mevcut harita kaldırılırken hata oluştu:', error);
+      }
+      this.map = null;
     }
   }
 }
