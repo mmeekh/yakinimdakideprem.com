@@ -264,6 +264,10 @@ def root():
 def health():
     return {"status": "ok", "env": APP_ENV, "service": APP_NAME}
 
+@app.get("/api/health")
+def api_health():
+    return {"status": "ok", "env": APP_ENV, "service": APP_NAME}
+
 @app.get("/version")
 def version():
     return {"version": APP_VERSION}
