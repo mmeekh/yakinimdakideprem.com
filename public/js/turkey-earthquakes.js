@@ -205,7 +205,7 @@ function showTurkeyEarthquakesError() {
 document.addEventListener('DOMContentLoaded', () => {
   // Başlığı güncelle
   updateTurkeyEarthquakesTitle();
-  
+
   // Sayfa yüklendikten sonra kısa bir gecikme ile veri çek
   setTimeout(() => {
     fetchTurkeyEarthquakes();
@@ -215,6 +215,31 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(() => {
     fetchTurkeyEarthquakes();
   }, 300000); // 5 dakika
+});
+
+// Browser back/forward cache geri dönüşlerinde listeyi yenile
+window.addEventListener('pageshow', (event) => {
+  const navigationEntries = typeof performance !== 'undefined' && performance.getEntriesByType
+    ? performance.getEntriesByType('navigation')
+    : [];
+  const navigationType = navigationEntries && navigationEntries.length > 0
+    ? navigationEntries[0].type
+    : null;
+
+  const isBackForwardNavigation = event.persisted || navigationType === 'back_forward';
+
+  if (!isBackForwardNavigation) {
+    return;
+  }
+
+  // Mode başlığını yeniden ayarla ve gerekirse verileri çek
+  updateTurkeyEarthquakesTitle();
+
+  if (!turkeyEarthquakes.length) {
+    fetchTurkeyEarthquakes();
+  } else {
+    updateTurkeyEarthquakesDisplay();
+  }
 });
 
 /**
