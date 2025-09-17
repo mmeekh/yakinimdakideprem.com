@@ -746,14 +746,32 @@ window.addEventListener("resize", () => {
 
 // Handle pageshow events (e.g. browser back/forward cache)
 window.addEventListener("pageshow", async (event) => {
-  const navigationEntries = typeof performance !== "undefined" && performance.getEntriesByType
+  const navigationEntries = typeof performance !== "undefined" && typeof performance.getEntriesByType === "function"
     ? performance.getEntriesByType("navigation")
     : [];
-  const navigationType = navigationEntries && navigationEntries.length > 0
-    ? navigationEntries[0].type
+
+  const hasBackForwardEntry = Array.isArray(navigationEntries)
+    ? navigationEntries.some((entry) => entry && entry.type === "back_forward")
+    : false;
+
+  const hasActivationStart = Array.isArray(navigationEntries)
+    ? navigationEntries.some((entry) => entry && typeof entry.activationStart === "number" && entry.activationStart > 0)
+    : false;
+
+  const legacyNavigation = typeof performance !== "undefined" && performance.navigation
+    ? performance.navigation
     : null;
 
-  const isBackForwardNavigation = event.persisted || navigationType === "back_forward";
+  const legacyBackForward = legacyNavigation && typeof legacyNavigation.type === "number" && typeof legacyNavigation.TYPE_BACK_FORWARD === "number"
+    ? legacyNavigation.type === legacyNavigation.TYPE_BACK_FORWARD
+    : false;
+
+  const isBackForwardNavigation = Boolean(
+    event.persisted ||
+    hasBackForwardEntry ||
+    hasActivationStart ||
+    legacyBackForward
+  );
 
   if (!isBackForwardNavigation) {
     return;
