@@ -586,3 +586,40 @@ footer {
     font-size: var(--font-size-xs) !important;
     color: var(--text-muted) !important;
 }
+
+/* Mobile info dropdown adjustments */
+.mobile-info-content .mobile-panel {
+    position: static;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    opacity: 1;
+}
+
+.mobile-info-content .magnitude-legend.mobile-panel {
+    margin-bottom: 16px;
+}
+
+.mobile-info-content .earthquake-list.mobile-panel {
+    max-height: none;
+    padding: 0;
+}
+
+.mobile-info-content .earthquake-list.mobile-panel .list-header {
+    padding: 16px;
+}
+
+.mobile-info-content .earthquake-list.mobile-panel .earthquake-items {
+    max-height: none;
+}
+
+.mobile-info-content .earthquake-list.mobile-panel .earthquake-item {
+    padding: 16px;
+}
+
+@media (max-width: 900px) {
+    .map-wrapper .magnitude-legend,
+    .map-wrapper .earthquake-list {
+        display: none;
+    }
+}
