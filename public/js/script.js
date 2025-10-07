@@ -12,8 +12,7 @@ const AppState = {
   timeUpdateInterval: null,
   isInitialized: false,
   lastUpdateTime: null,
-  lastDataHash: null, // Veri değişikliğini kontrol etmek için
-  mapMode: 'hybrid' // harita modu: hybrid, turkey, global
+  lastDataHash: null // Veri değişikliğini kontrol etmek için
 };
 
 if (typeof window !== 'undefined') {
@@ -133,10 +132,9 @@ async function fetchEarthquakeData() {
   
   try {
     const params = new URLSearchParams({
-      hours_back: CONFIG.HOURS_BACK / 24, // 168 saat = 7 gün
+      hours_back: CONFIG.HOURS_BACK,
       min_magnitude: CONFIG.MIN_MAGNITUDE,
-      limit: 100,
-      mode: AppState.mapMode // Harita modunu ekle
+      limit: 250
     });
 
     const controller = new AbortController();
@@ -192,6 +190,8 @@ async function fetchEarthquakeData() {
 
 // Handle data fetch errors
 function handleDataFetchError(error) {
+  document.dispatchEvent(new CustomEvent('earthquakes:error', { detail: error }));
+
   if (error.name === 'AbortError') {
     showErrorMessage("Veri yükleme zaman aşımına uğradı. Lütfen tekrar deneyin.");
   } else {
@@ -334,6 +334,11 @@ function processEarthquakeData(earthquakes) {
   updateMap();
   updateEarthquakeList();
   updateStats();
+
+  const latestData = Array.isArray(AppState.earthquakeData) ? AppState.earthquakeData : [];
+  document.dispatchEvent(new CustomEvent('earthquakes:updated', {
+    detail: latestData.map(eq => ({ ...eq }))
+  }));
 }
 
 // Update map with earthquake data
@@ -802,114 +807,8 @@ window.addEventListener("pageshow", async (event) => {
   updateTimeDisplays();
   resizeMapContainer();
 
-  if (window.TurkeyEarthquakes && typeof window.TurkeyEarthquakes.fetch === 'function') {
-    window.TurkeyEarthquakes.fetch();
-  }
-});
-
-// ========================================
-// MAP MODE TOGGLE FUNCTIONALITY
-// ========================================
-
-function initMapModeToggle() {
-  const modeBtn = document.getElementById('map-mode-btn');
-  const modeOptions = document.querySelectorAll('.mode-option');
-  
-  if (!modeBtn) return;
-  
-  // Ana buton tıklama
-  modeBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    // Dropdown açma/kapama (CSS hover ile yönetiliyor)
-  });
-  
-  // Seçenek butonları
-  modeOptions.forEach(option => {
-    option.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const mode = option.dataset.mode;
-      setMapMode(mode);
-    });
-  });
-  
-  // Dışarı tıklama ile kapatma
-  document.addEventListener('click', () => {
-    // CSS hover ile yönetildiği için gerek yok
-  });
-}
-
-function setMapMode(mode) {
-  AppState.mapMode = mode;
-  
-  // Buton metnini güncelle
-  const modeBtn = document.getElementById('map-mode-btn');
-  const modeBtnIcon = modeBtn.querySelector('i');
-  const modeBtnText = modeBtn.querySelector('span');
-  
-  // Aktif seçeneği güncelle
-  document.querySelectorAll('.mode-option').forEach(option => {
-    option.classList.remove('active');
-    if (option.dataset.mode === mode) {
-      option.classList.add('active');
-    }
-  });
-  
-  // Ana buton metnini güncelle
-  switch(mode) {
-    case 'turkey':
-      modeBtnIcon.className = 'fas fa-map-marker-alt';
-      modeBtnText.textContent = 'Türkiye\'deki Depremler';
-      break;
-    case 'global':
-      modeBtnIcon.className = 'fas fa-globe-americas';
-      modeBtnText.textContent = 'Global\'deki Depremler';
-      break;
-    case 'hybrid':
-    default:
-      modeBtnIcon.className = 'fas fa-globe';
-      modeBtnText.textContent = 'Türkiye + Global';
-      break;
-  }
-  
-  // Harita merkezini ve zoom seviyesini güncelle
-  updateMapView(mode);
-  
-  // Verileri yeniden yükle
-  fetchEarthquakeData();
-  
-  
-  // Türkiye depremlerini mode değişikliğine göre güncelle
-  if (window.TurkeyEarthquakes && window.TurkeyEarthquakes.updateOnModeChange) {
-    console.log('Türkiye depremleri güncelleniyor...');
-    window.TurkeyEarthquakes.updateOnModeChange();
-  } else {
-    console.warn('TurkeyEarthquakes.updateOnModeChange bulunamadı');
-  }
-  
-  console.log(`Harita modu değiştirildi: ${mode}`);
-}
-
-function updateMapView(mode) {
-  if (!AppState.map) return;
-  
-  switch(mode) {
-    case 'turkey':
-      // Türkiye merkezi - yakın zoom
-      AppState.map.setView([39.0, 35.0], 6);
-      break;
-    case 'global':
-      // Türkiye merkezi - uzak zoom (dünya depremlerini görmek için)
-      AppState.map.setView([39.0, 35.0], 3);
-      break;
-    case 'hybrid':
-    default:
-      // Türkiye merkezi (hibrit için)
-      AppState.map.setView([39.0, 35.0], 6);
-      break;
-  }
-}
-
-// Sayfa yüklendiğinde buton işlevselliğini başlat
-document.addEventListener('DOMContentLoaded', () => {
-  initMapModeToggle();
+  const latestData = Array.isArray(AppState.earthquakeData) ? AppState.earthquakeData : [];
+  document.dispatchEvent(new CustomEvent('earthquakes:updated', {
+    detail: latestData.map(eq => ({ ...eq }))
+  }));
 });

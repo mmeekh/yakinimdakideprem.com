@@ -485,15 +485,17 @@ footer {
     .about-content {
         flex-direction: column;
     }
-    
+
     .about-image {
         text-align: center;
     }
-    
+
     .mv-cards {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
     }
-    
+
     .contact-content {
         flex-direction: column;
     }
@@ -503,48 +505,105 @@ footer {
     .hero h1 {
         font-size: 36px;
     }
-    
+
     .hero p {
         font-size: 18px;
     }
-    
+
     .about-text h2 {
         font-size: 28px;
     }
-    
+
     .section-header h2 {
         font-size: 28px;
     }
-    
-    .values-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+    .mv-card {
+        padding: 18px 16px;
+        border-radius: 10px;
     }
-    
+
+    .mv-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .mv-card h3 {
+        font-size: 18px;
+    }
+
+    .mv-card p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .value-item {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .value-icon {
+        width: 54px;
+        height: 54px;
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .value-item h3 {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .value-item p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
 }
 
 @media (max-width: 576px) {
     .hero {
         padding: 100px 0 48px; /* Üst padding artırıldı, metin aşağı kaydırıldı */
     }
-    
+
     .about-section,
     .mission-vision,
     .values-section {
         padding: 20px 0; /* %17 azaltıldı (24px -> 20px) */
     }
-    
+
     .about-content {
-        gap: 30px;
+        gap: 24px;
     }
-    
+
+    .mv-cards {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+        gap: 12px;
+    }
+
+    .mv-card {
+        padding: 16px 14px;
+    }
+
     .values-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+        gap: 12px;
     }
-    
+
+    .value-item {
+        padding: 18px;
+    }
+
     .footer-content {
         flex-direction: column;
     }
-    
+
     .footer-links {
         flex-direction: column;
         gap: 30px;
@@ -701,56 +760,69 @@ footer {
 
 .references-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 36px;
 }
 
 .reference-item {
     background: white;
     border-radius: 12px;
-    padding: 30px;
+    padding: 20px 16px;
     text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
 .reference-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .reference-logo {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 20px;
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 12px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .reference-item h3 {
     color: var(--primary-color);
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin-bottom: 6px;
+    font-size: 17px;
 }
 
 .reference-item p {
     color: #666;
-    margin-bottom: 15px;
-    font-size: 14px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.45;
+    min-height: 42px;
 }
 
 .reference-link {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.reference-link::after {
+    content: '35d';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 11px;
 }
 
 .reference-link:hover {
@@ -767,6 +839,53 @@ footer {
         grid-template-columns: 1fr;
     }
     
+    .references-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 380px) {
+    .mv-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .references-grid {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+        gap: 12px;
+    }
+
+    .reference-item {
+        padding: 16px 14px;
+    }
+
+    .reference-logo {
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .reference-item h3 {
+        font-size: 16px;
+    }
+
+    .reference-item p {
+        font-size: 12px;
+        min-height: 36px;
+    }
+
+    .reference-link {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
     .references-grid {
         grid-template-columns: 1fr;
     }

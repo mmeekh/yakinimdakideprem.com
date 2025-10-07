@@ -1094,131 +1094,39 @@ footer {
     }
 }
 
-/* ========================================
-   MAP MODE TOGGLE BUTTON
-======================================== */
-
-.map-mode-toggle {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.45); /* %15 daha şeffaf (0.6 -> 0.45) */
-    border-radius: 12px;
-    padding: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
-    opacity: 0.75; /* Diğer harita elementleriyle aynı şeffaflık */
-}
-
-.map-mode-toggle:hover {
-    background: rgba(255, 255, 255, 0.6); /* %15 daha şeffaf (0.75 -> 0.6) */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.mode-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 16px;
-    background: transparent;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.mode-btn:hover {
-    background: rgba(0, 0, 0, 0.05);
-    color: #1976d2;
-}
-
-.mode-btn.active {
-    background: linear-gradient(135deg, #1976d2, #1565c0);
-    color: white;
-    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
-}
-
-.mode-btn i {
-    font-size: 16px;
-}
-
-.mode-options {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.7); /* %15 daha şeffaf (0.85 -> 0.7) */
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: 4px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-}
-
-.map-mode-toggle:hover .mode-options {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.mode-option {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+/* Mobile info dropdown adjustments */
+.mobile-info-content .mobile-panel {
+    position: static;
     width: 100%;
-    padding: 10px 16px;
-    background: transparent;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-    transition: all 0.2s ease;
-    text-align: left;
+    margin: 0;
+    box-shadow: none;
+    opacity: 1;
 }
 
-.mode-option:hover {
-    background: rgba(25, 118, 210, 0.1);
-    color: #1976d2;
+.mobile-info-content .magnitude-legend.mobile-panel {
+    margin-bottom: 16px;
 }
 
-.mode-option i {
-    font-size: 14px;
-    width: 16px;
-    text-align: center;
+.mobile-info-content .earthquake-list.mobile-panel {
+    max-height: none;
+    padding: 0;
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-    .map-mode-toggle {
-        top: 10px;
-        padding: 6px;
-    }
-    
-    .mode-btn {
-        padding: 8px 12px;
-        font-size: 13px;
-    }
-    
-    .mode-btn i {
-        font-size: 14px;
-    }
-    
-    .mode-option {
-        padding: 8px 12px;
-        font-size: 13px;
+.mobile-info-content .earthquake-list.mobile-panel .list-header {
+    padding: 16px;
+}
+
+.mobile-info-content .earthquake-list.mobile-panel .earthquake-items {
+    max-height: none;
+}
+
+.mobile-info-content .earthquake-list.mobile-panel .earthquake-item {
+    padding: 16px;
+}
+
+@media (max-width: 900px) {
+    .map-wrapper .magnitude-legend,
+    .map-wrapper .earthquake-list {
+        display: none;
     }
 }
