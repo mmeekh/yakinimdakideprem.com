@@ -1130,3 +1130,34 @@ footer {
         display: none;
     }
 }
+
+/* Leaflet popup readability (normal mode) */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: #ffffff;
+    color: #1f2937; /* slate-800 */
+}
+
+.leaflet-popup-content p { color: #1f2937; margin: 6px 0; }
+.leaflet-popup-content p strong { color: #111827; font-weight: 700; }
+
+/* Popup component classes (used by JS) */
+.earthquake-popup { text-align: left; min-width: 220px; font-family: 'Segoe UI', Tahoma, sans-serif; }
+.earthquake-popup__title { margin: 0 0 8px 0; color: #d32f2f; font-weight: 700; font-size: 16px; }
+.earthquake-popup__details p { margin: 6px 0; font-size: 14px; }
+.earthquake-popup__source { margin-top: 6px; font-size: 12px; color: #374151; }
+
+/* Night mode: neutralize map invert for UI overlays and ensure contrast */
+.night-mode .map-wrapper .leaflet-popup,
+.night-mode .map-wrapper .leaflet-control {
+    filter: invert(1) hue-rotate(180deg) brightness(1) contrast(1);
+}
+.night-mode .leaflet-popup-content-wrapper,
+.night-mode .leaflet-popup-tip {
+    background: #0b1220; /* deep slate */
+    color: #e5e7eb; /* text-light */
+}
+.night-mode .leaflet-popup-content p { color: #e5e7eb; }
+.night-mode .leaflet-popup-content p strong { color: #f8fafc; }
+.night-mode .earthquake-popup__title { color: #fca5a5; }
+.night-mode .earthquake-popup__source { color: #cbd5e1; }

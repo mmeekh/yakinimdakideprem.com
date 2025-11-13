@@ -406,6 +406,21 @@ function updateMap() {
       </div>
     `);
 
+    // Override popup with accessible classes for better contrast
+    try {
+      marker.setPopupContent(`
+        <div class="earthquake-popup">
+          <h3 class="earthquake-popup__title">${eq.location}</h3>
+          <div class="earthquake-popup__details">
+            <p><strong>Büyüklük:</strong> ${eq.magnitude.toFixed(1)}</p>
+            <p><strong>Derinlik:</strong> ${eq.depth.toFixed(1)} km</p>
+            <p><strong>Zaman:</strong> ${Utils.formatDateTime(eq.time)}</p>
+          </div>
+          <div class="earthquake-popup__source">Kaynak: ${eq.source}</div>
+        </div>
+      `);
+    } catch (e) {}
+
     AppState.markers.push(marker);
   });
 }
@@ -811,4 +826,30 @@ window.addEventListener("pageshow", async (event) => {
   document.dispatchEvent(new CustomEvent('earthquakes:updated', {
     detail: latestData.map(eq => ({ ...eq }))
   }));
+});
+
+// --- Map recovery helpers to avoid black map on return/navigation ---
+function ensureMapReady() {
+  const mapEl = document.getElementById('map');
+  if (!AppState.map || !mapEl || mapEl.offsetWidth === 0 || mapEl.offsetHeight === 0) {
+    resetExistingMap();
+    initMap();
+    return;
+  }
+  requestAnimationFrame(() => {
+    try { AppState.map.invalidateSize(true); } catch (e) {}
+    resizeMapContainer();
+  });
+}
+
+// When tab becomes visible again
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) {
+    ensureMapReady();
+  }
+});
+
+// When window regains focus
+window.addEventListener('focus', () => {
+  ensureMapReady();
 });

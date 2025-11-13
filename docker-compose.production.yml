@@ -1,0 +1,28 @@
+services:
+  api:
+    build: .
+    container_name: yakinimdakideprem-api
+    env_file: env.production
+    environment:
+      - PORT=${PORT:-8000}
+    expose:
+      - "8000"
+    restart: unless-stopped
+    networks:
+      - web
+
+  static:
+    image: caddy:2.8
+    container_name: yakinimdakideprem-static
+    volumes:
+      - ./public:/srv:ro
+    command: ["caddy", "file-server", "--root", "/srv", "--listen", ":8081", "--browse=false"]
+    expose:
+      - "8081"
+    restart: unless-stopped
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
