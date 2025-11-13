@@ -13,6 +13,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Uygulama
 COPY app app
 
+# PDF dosyasını imaja ekle (API endpointi için)
+COPY checklist.pdf ./
+
 EXPOSE 8000
 
 # Daha deterministik: doğrudan uvicorn

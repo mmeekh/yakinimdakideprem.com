@@ -1,0 +1,12 @@
+This repository now includes production deployment files:
+
+- docker-compose.production.yml
+- Caddyfile.production
+
+They run:
+- FastAPI app at port 8000 (container name: yakinimdakideprem-api)
+- Caddy as reverse proxy/HTTPS + static file server
+
+Usage (on server):
+  docker compose -f docker-compose.production.yml up -d --build
+
