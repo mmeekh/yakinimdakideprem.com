@@ -1,0 +1,74 @@
+VPS Deployment Layout (yakinimdakideprem.com)
+
+Host
+- Hostname: srv972366.hstgr.cloud
+- OS: Ubuntu (Linux 6.8.x)
+
+Docker
+- Networks:
+  - web (bridge) — shared by reverse proxy and apps
+
+- Containers (running):
+  - root-caddy
+    - Image: caddy:latest
+    - Ports: 80/tcp, 443/tcp exposed on host
+    - Network: web
+    - Config: /root/caddy/Caddyfile (imports /etc/caddy/sites/*.Caddyfile)
+    - Mounts:
+      - /root/caddy/Caddyfile -> /etc/caddy/Caddyfile
+      - /root/caddy/sites -> /etc/caddy/sites
+      - /root/projects/pdfislemleri.com/site -> /srv/pdfislemleri.com/site
+
+  - pdfislemleri-api
+    - Network: web
+    - Internal ports: 8000
+
+  - yakinimdakideprem-api
+    - Image: yakinimdakidepremcom-api (FastAPI/Uvicorn)
+    - Network: web
+    - Internal port: 8000
+    - Env file: /root/projects/yakinimdakideprem.com/env.production
+
+  - yakinimdakideprem-static
+    - Image: caddy:2.8 (file-server)
+    - Network: web
+    - Internal port: 8081
+    - Serves static from project public dir: /root/projects/yakinimdakideprem.com/public -> /srv (ro)
+
+Caddy Sites (inside container: /etc/caddy/sites)
+- pdfislemleri.com.Caddyfile
+  - root * /srv/pdfislemleri.com/site
+  - handle /api/* -> reverse_proxy pdfislemleri-api:8000
+  - handle /health -> reverse_proxy pdfislemleri-api:8000
+  - fallback: try_files {path} {path}.html {path}/ /index.html; file_server
+
+- yakinimdakideprem.com.Caddyfile
+  - Site: yakinimdakideprem.com
+    - tls internal (origin TLS for Cloudflare Full)
+    - handle /api/* -> reverse_proxy yakinimdakideprem-api:8000
+    - handle /health -> reverse_proxy yakinimdakideprem-api:8000
+    - fallback: reverse_proxy yakinimdakideprem-static:8081 (serves project public)
+  - Site: www.yakinimdakideprem.com
+    - tls internal
+    - redirect to apex: https://yakinimdakideprem.com{uri}
+
+Projects (host)
+- /root/projects/pdfislemleri.com (existing project)
+- /root/projects/yakinimdakideprem.com (this repo)
+  - docker-compose.production.yml (uses external network: web)
+  - public/ (static content served by yakinimdakideprem-static)
+  - app/ (FastAPI backend)
+
+Cloudflare (recommended)
+- Proxy: ON (orange cloud) for apex and www
+- SSL/TLS mode: Full (not Strict)
+
+Common Commands
+- Reload Caddy: docker exec root-caddy caddy reload --config /etc/caddy/Caddyfile
+- Deploy/update API + static:
+  cd /root/projects/yakinimdakideprem.com
+  docker compose -f docker-compose.production.yml up -d --build
+- Check health (external):
+  curl -I https://yakinimdakideprem.com
+  curl https://yakinimdakideprem.com/health
+
