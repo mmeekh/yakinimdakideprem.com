@@ -145,9 +145,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     Deprem verilerini takip ederken en önemli kriter <strong>güvenilirlik</strong> ve
                     <strong>güncellik</strong>tir. Sosyal medya ve mesaj gruplarında paylaşılan bilgiler her zaman doğru
                     olmayabilir. Bu nedenle, verisini doğrudan resmi veya bilimsel kurumlardan alan platformlara yönelmek
-                    hayati önem taşır. Türkiye’de deprem izleme konusunda başvurmanız gereken ilk kurumlar
+                    hayati önem taşır. Türkiye'de deprem izleme konusunda başvurmanız gereken ilk kurumlar
                     <a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD Deprem Dairesi</a> ve
-                    <a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü</a>’dür.
+                    <a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü</a>'dür.
                 </p>
                 <p>
                     Bu kurumlar, Türkiye ve yakın çevresinde meydana gelen depremleri anlık olarak kaydeder ve büyüklük,
@@ -157,7 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <h3>AFAD Deprem Dairesi ile Son Depremler</h3>
                 <p>
-                    AFAD’ın resmi web sitesinde, son depremler için filtrelenebilir listeler ve harita tabanlı görünümler
+                    AFAD'ın resmi web sitesinde, son depremler için filtrelenebilir listeler ve harita tabanlı görünümler
                     bulunur. Buradan;
                 </p>
                 <ul>
@@ -175,7 +175,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h3>Kandilli Rasathanesi ile Ayrıntılı Sismik Kayıtlar</h3>
                 <p>
                     <strong>Kandilli Rasathanesi</strong> ise özellikle sismoloji alanında akademik ve teknik ayrıntıların
-                    daha fazla öne çıktığı bir kaynaktır. Kandilli’nin web sitesi üzerinden;
+                    daha fazla öne çıktığı bir kaynaktır. Kandilli'nin web sitesi üzerinden;
                 </p>
                 <ul>
                     <li>Son depremler listesine ve interaktif haritaya ulaşabilir,</li>
@@ -203,7 +203,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     açısı sunar.
                 </p>
 
-                <h2>AFAD, Kandilli, USGS ve KOERİ API’lerinin Farkları</h2>
+                <h2>AFAD, Kandilli, USGS ve KOERİ API'lerinin Farkları</h2>
                 <p>
                     “Son deprem” verilerini otomatik olarak işlemek veya kendi uygulamanıza entegre etmek istiyorsanız,
                     kurumların sunduğu <strong>API</strong> hizmetleri kritik önem taşır. Genel olarak:
@@ -214,7 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><strong>USGS API</strong> küresel ölçekte orta ve büyük depremleri listeler, deprem anında otomatik bildirim senaryoları için çok uygundur.</li>
                 </ul>
                 <p>
-                    API’lerin ortak noktası, veriyi genellikle <strong>JSON</strong> veya <strong>XML</strong> formatında
+                    API'lerin ortak noktası, veriyi genellikle <strong>JSON</strong> veya <strong>XML</strong> formatında
                     sunmalarıdır. Bu sayede yazılım geliştiriciler, deprem verilerini haritalara, mobil uygulamalara veya
                     istatistiksel panellere kolayca entegre edebilir. Yakınımdaki Deprem gibi projeler de bu açık
                     verilerden yararlanarak kullanıcıya sade ve anlaşılır bir arayüz sağlar.
@@ -256,63 +256,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <h2>İstanbul ve Türkiye Geneli İçin Örnek Son Depremler Tablosu</h2>
                 <p>
-                    Aşağıdaki tablo, İstanbul ve Türkiye geneli için son depremler verisinin nasıl gösterilebileceğine dair
-                    <strong>statik ve örnek</strong> bir formattır. Gerçek zamanlı veri değildir; sadece hangi başlıkların
-                    takip edilmesi gerektiğini göstermek amacıyla hazırlanmıştır.
+                    Aşağıdaki statik tablo, gerçek zamanlı veriler yerine İstanbul ve Türkiye geneli için
+                    <strong>hangi başlıkların takip edilmesi gerektiğini</strong> göstermek amacıyla hazırlanmıştır.
+                    Kullanıcıya sunacağınız canlı sonuçlarda da aynı başlık yapılarını kullanabilirsiniz.
                 </p>
                 <div class="table-wrapper">
-                    <table class="quake-table">
+                    <table class="quake-table" aria-live="polite">
                         <thead>
                             <tr>
                                 <th>Tarih ve Saat</th>
                                 <th>Büyüklük</th>
                                 <th>Derinlik (km)</th>
                                 <th>Merkez Üssü</th>
-                                <th>Kaynak</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>01.01.2024 08:12</td>
-                                <td>4.2</td>
-                                <td>12.3</td>
-                                <td>Marmara Denizi (İstanbul Açıkları)</td>
-                                <td>AFAD</td>
-                            </tr>
-                            <tr>
-                                <td>01.01.2024 06:47</td>
-                                <td>3.6</td>
-                                <td>7.4</td>
-                                <td>Küçükçekmece / İstanbul</td>
-                                <td>Kandilli</td>
-                            </tr>
-                            <tr>
-                                <td>31.12.2023 23:15</td>
-                                <td>5.1</td>
-                                <td>9.8</td>
-                                <td>Ege Denizi (İzmir Açıkları)</td>
-                                <td>AFAD</td>
-                            </tr>
-                            <tr>
-                                <td>31.12.2023 18:03</td>
-                                <td>4.8</td>
-                                <td>15.2</td>
-                                <td>Erzincan</td>
-                                <td>USGS</td>
-                            </tr>
-                            <tr>
-                                <td>31.12.2023 12:26</td>
-                                <td>3.8</td>
-                                <td>5.6</td>
-                                <td>Hatay</td>
-                                <td>KOERİ</td>
-                            </tr>
+                        <tbody id="blog-quakes">
+                            <tr><td colspan="4">Veriler yükleniyor...</td></tr>
                         </tbody>
                     </table>
                     <p class="table-caption">
-                        Bu tablo <strong>örnek amaçlıdır</strong> ve gerçek zamanlı veriyi temsil etmez. Güncel son deprem
-                        bilgileri için AFAD, Kandilli, USGS ve KOERİ gibi resmi veri sağlayıcılarını ve Yakınımdaki Deprem
-                        haritasını takip edin.
+                        Bu tablo yalnızca örnek niteliğindedir; gerçek zamanlı sonuçlar için AFAD, Kandilli, USGS, KOERİ
+                        ve Yakınımdaki Deprem haritasındaki canlı verilere başvurun.
                     </p>
                 </div>
 
@@ -394,7 +358,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </footer>
 
-    <script src="js/header.js"></script>`r`n    <script src="js/toc.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/toc.js"></script>
+    <script src="js/live-quakes.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGlobalQuakes({
+                tableSelector: '#blog-quakes',
+                limit: 5
+            });
+        });
+    </script>
 </body>
 </html>
 
