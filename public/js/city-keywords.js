@@ -76,7 +76,7 @@
 
   const aliasMap = {
     "elazığ": "elazig",
-    "elazÄ±ÄŸ": "elazig",
+    "elazıÄŸ": "elazig",
     "kahramanmaraş": "kahramanmaras",
     "kahramanmara\u015f": "kahramanmaras",
     "kahramanmaraÅŸ": "kahramanmaras"
