@@ -1,5 +1,5 @@
 ﻿/**
- * YakÄ±nÄ±mdaki Deprem - Ana JavaScript ModÃ¼lÃ¼
+ * Yakınımdaki Deprem - Ana JavaScript Modülü
  * Optimized version with better error handling and performance
  */
 
@@ -22,8 +22,8 @@ if (typeof window !== 'undefined') {
 // Configuration constants
 const CONFIG = {
   REFRESH_INTERVAL: 60000, // 1 minute
-  MAP_CENTER: [39.0, 35.0], // TÃ¼rkiye merkezi
-  MAP_ZOOM: 6, // TÃ¼rkiye'yi tam gÃ¶steren zoom seviyesi
+  MAP_CENTER: [39.0, 35.0], // Türkiye merkezi
+  MAP_ZOOM: 6, // Türkiye'yi tam gösteren zoom seviyesi
   API_TIMEOUT: 10000,
   MAX_RADIUS_KM: 5000, // Ã‡ok geniÅŸ alan
   MIN_MAGNITUDE: 1.5, // Kandilli API iÃ§in optimize edildi
@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
   try {
     initApp();
   } catch (error) {
-    console.error("Uygulama baÅŸlatÄ±lamadÄ±:", error);
-    showErrorMessage("Uygulama baÅŸlatÄ±lÄ±rken bir hata oluÅŸtu.");
+    console.error("Uygulama baÅŸlatılamadı:", error);
+    showErrorMessage("Uygulama baÅŸlatılırken bir hata oluÅŸtu.");
   }
 });
 
@@ -77,7 +77,7 @@ function initMap() {
     // Show loading indicator
     const mapContainer = document.getElementById("map");
     if (mapContainer) {
-      mapContainer.innerHTML = '<div class="map-loading"><i class="fas fa-spinner fa-spin"></i>Harita yÃ¼kleniyor...</div>';
+      mapContainer.innerHTML = '<div class="map-loading"><i class="fas fa-spinner fa-spin"></i>Harita yükleniyor...</div>';
     }
 
     const baseLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -93,7 +93,7 @@ function initMap() {
 
     // Hide loading indicator when map is ready
     AppState.map.whenReady(() => {
-      // Harita yÃ¼klendikten sonra boyutlandÄ±r
+      // Harita yüklendikten sonra boyutlandır
       setTimeout(() => {
         AppState.map.invalidateSize();
         
@@ -102,8 +102,8 @@ function initMap() {
       }, 100);
     });
   } catch (error) {
-    console.error("Harita baÅŸlatÄ±lamadÄ±:", error);
-    showErrorMessage("Harita yÃ¼klenirken bir hata oluÅŸtu.");
+    console.error("Harita baÅŸlatılamadı:", error);
+    showErrorMessage("Harita yüklenirken bir hata oluÅŸtu.");
   }
 }
 
@@ -114,7 +114,7 @@ function resetExistingMap() {
       AppState.map.off();
       AppState.map.remove();
     } catch (error) {
-      console.warn("Ã–nceki harita kaldÄ±rÄ±lÄ±rken hata oluÅŸtu:", error);
+      console.warn("Ã–nceki harita kaldırılırken hata oluÅŸtu:", error);
     }
     AppState.map = null;
   }
@@ -171,11 +171,11 @@ async function fetchEarthquakeData() {
           updateLastUpdateTime(false, data.last_update_ago);
         }
       } else {
-        // GerÃ§ek veri yok, Ã¶rnek veri gÃ¶ster
+        // GerÃ§ek veri yok, örnek veri göster
         loadSampleData();
       }
     } else {
-      // Backend'den Ã¶rnek veri geldi
+      // Backend'den örnek veri geldi
       if (hasDataChanged) {
         processEarthquakeData(data.data);
         updateLastUpdateTime(true, data.last_update_ago);
@@ -186,7 +186,7 @@ async function fetchEarthquakeData() {
     }
     
   } catch (error) {
-    console.error("Deprem verileri alÄ±namadÄ±:", error);
+    console.error("Deprem verileri alınamadı:", error);
     handleDataFetchError(error);
   }
 }
@@ -196,9 +196,9 @@ function handleDataFetchError(error) {
   document.dispatchEvent(new CustomEvent('earthquakes:error', { detail: error }));
 
   if (error.name === 'AbortError') {
-    showErrorMessage("Veri yÃ¼kleme zaman aÅŸÄ±mÄ±na uÄŸradÄ±. LÃ¼tfen tekrar deneyin.");
+    showErrorMessage("Veri yükleme zaman aÅŸımına uÄŸradı. Lütfen tekrar deneyin.");
   } else {
-    showErrorMessage("Veri yÃ¼klenirken bir hata oluÅŸtu. Ã–rnek veriler gÃ¶steriliyor.");
+    showErrorMessage("Veri yüklenirken bir hata oluÅŸtu. Ã–rnek veriler gösteriliyor.");
     loadSampleData();
   }
 }
@@ -210,7 +210,7 @@ function loadSampleData() {
       id: "sample1",
       properties: {
         mag: 4.2,
-        place: "Ankara, TÃ¼rkiye",
+        place: "Ankara, Türkiye",
         time: Date.now() - 3600000,
       },
       geometry: { coordinates: [32.85, 39.92, 10] },
@@ -219,7 +219,7 @@ function loadSampleData() {
       id: "sample2",
       properties: {
         mag: 3.5,
-        place: "Ä°zmir, TÃ¼rkiye",
+        place: "Ä°zmir, Türkiye",
         time: Date.now() - 7200000,
       },
       geometry: { coordinates: [27.14, 38.42, 8] },
@@ -228,7 +228,7 @@ function loadSampleData() {
       id: "sample3",
       properties: {
         mag: 5.1,
-        place: "KahramanmaraÅŸ, TÃ¼rkiye",
+        place: "KahramanmaraÅŸ, Türkiye",
         time: Date.now() - 14400000,
       },
       geometry: { coordinates: [36.95, 37.58, 15] },
@@ -262,32 +262,32 @@ function formatTimeAgo(date) {
   
   if (totalSeconds < 60) {
     if (totalSeconds === 0) {
-      return "az Ã¶nce";
+      return "az önce";
     }
-    return `${totalSeconds} saniye Ã¶nce`;
+    return `${totalSeconds} saniye önce`;
   } else if (totalSeconds < 3600) { // 1 saatten az
     const minutes = Math.floor(totalSeconds / 60);
     const seconds = totalSeconds % 60;
     if (seconds === 0) {
-      return `${minutes} dakika Ã¶nce`;
+      return `${minutes} dakika önce`;
     } else {
-      return `${minutes} dakika ${seconds} saniye Ã¶nce`;
+      return `${minutes} dakika ${seconds} saniye önce`;
     }
-  } else if (totalSeconds < 86400) { // 1 gÃ¼nden az
+  } else if (totalSeconds < 86400) { // 1 günden az
     const hours = Math.floor(totalSeconds / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
     if (minutes === 0) {
-      return `${hours} saat Ã¶nce`;
+      return `${hours} saat önce`;
     } else {
-      return `${hours} saat ${minutes} dakika Ã¶nce`;
+      return `${hours} saat ${minutes} dakika önce`;
     }
-  } else { // 1 gÃ¼nden fazla
+  } else { // 1 günden fazla
     const days = Math.floor(totalSeconds / 86400);
     const hours = Math.floor((totalSeconds % 86400) / 3600);
     if (hours === 0) {
-      return `${days} gÃ¼n Ã¶nce`;
+      return `${days} gün önce`;
     } else {
-      return `${days} gÃ¼n ${hours} saat Ã¶nce`;
+      return `${days} gün ${hours} saat önce`;
     }
   }
 }
@@ -301,11 +301,11 @@ function updateLastUpdateTime(isSample = false, lastUpdateAgo = null) {
   
   if (lastUpdateEl) {
     if (isSample) {
-      lastUpdateEl.textContent = "Son gÃ¼ncelleme: Ã–rnek veriler gÃ¶steriliyor";
+      lastUpdateEl.textContent = "Son güncelleme: Ã–rnek veriler gösteriliyor";
     } else {
-      // Her zaman dinamik zaman gÃ¶ster (backend'den gelen veya fallback)
+      // Her zaman dinamik zaman göster (backend'den gelen veya fallback)
       const timeToShow = lastUpdateAgo || formatTimeAgo(now);
-      lastUpdateEl.textContent = `Son gÃ¼ncelleme: ${timeToShow}`;
+      lastUpdateEl.textContent = `Son güncelleme: ${timeToShow}`;
     }
   }
   
@@ -354,21 +354,21 @@ function updateMap() {
 
   // Add new markers
   AppState.earthquakeData.forEach((eq) => {
-    // Daha belirgin boyut farklarÄ±
-    const radius = Math.max(eq.magnitude * 25000, 3000); // Daha bÃ¼yÃ¼k farklar
+    // Daha belirgin boyut farkları
+    const radius = Math.max(eq.magnitude * 25000, 3000); // Daha büyük farklar
     
-    // Yeni detaylÄ± deprem bÃ¼yÃ¼klÃ¼ÄŸÃ¼ renk sistemi
+    // Yeni detaylı deprem büyüklüÄŸü renk sistemi
     let color, fillColor;
     if (eq.magnitude >= 8.0) {
-      // 8.0+ Ã§ok bÃ¼yÃ¼k depremler - Mor
+      // 8.0+ Ã§ok büyük depremler - Mor
       color = '#7b1fa2';
       fillColor = '#9c27b0';
     } else if (eq.magnitude >= 7.0) {
-      // 7.0-7.9 bÃ¼yÃ¼k depremler - Koyu kÄ±rmÄ±zÄ±/bordo
+      // 7.0-7.9 büyük depremler - Koyu kırmızı/bordo
       color = '#d32f2f';
       fillColor = '#f44336';
     } else if (eq.magnitude >= 6.0) {
-      // 6.0-6.9 kuvvetli depremler - KÄ±rmÄ±zÄ±
+      // 6.0-6.9 kuvvetli depremler - Kırmızı
       color = '#f44336';
       fillColor = '#ff5722';
     } else if (eq.magnitude >= 5.0) {
@@ -380,11 +380,11 @@ function updateMap() {
       color = '#ff9800';
       fillColor = '#ffb74d';
     } else if (eq.magnitude >= 3.0) {
-      // 3.0-3.9 kÃ¼Ã§Ã¼k depremler - SarÄ±
+      // 3.0-3.9 küÃ§ük depremler - Sarı
       color = '#ffc107';
       fillColor = '#ffeb3b';
     } else {
-      // 0-2.9 Ã§ok kÃ¼Ã§Ã¼k/hissedilmez depremler - YeÅŸil
+      // 0-2.9 Ã§ok küÃ§ük/hissedilmez depremler - YeÅŸil
       color = '#4caf50';
       fillColor = '#8bc34a';
     }
@@ -402,7 +402,7 @@ function updateMap() {
     marker.bindPopup(`
       <div style="text-align: center; min-width: 200px; font-family: 'Segoe UI', sans-serif;">
         <h3 style="margin: 0 0 10px 0; color: #d32f2f;">${eq.location}</h3>
-        <p style="margin: 5px 0;"><strong>BÃ¼yÃ¼klÃ¼k:</strong> ${eq.magnitude.toFixed(1)}</p>
+        <p style="margin: 5px 0;"><strong>Büyüklük:</strong> ${eq.magnitude.toFixed(1)}</p>
         <p style="margin: 5px 0;"><strong>Derinlik:</strong> ${eq.depth.toFixed(1)} km</p>
         <p style="margin: 5px 0;"><strong>Zaman:</strong> ${Utils.formatDateTime(eq.time)}</p>
         <p style="margin: 5px 0; font-size: 12px; color: #666;">Kaynak: ${eq.source}</p>
@@ -415,7 +415,7 @@ function updateMap() {
         <div class="earthquake-popup">
           <h3 class="earthquake-popup__title">${eq.location}</h3>
           <div class="earthquake-popup__details">
-            <p><strong>BÃ¼yÃ¼klÃ¼k:</strong> ${eq.magnitude.toFixed(1)}</p>
+            <p><strong>Büyüklük:</strong> ${eq.magnitude.toFixed(1)}</p>
             <p><strong>Derinlik:</strong> ${eq.depth.toFixed(1)} km</p>
             <p><strong>Zaman:</strong> ${Utils.formatDateTime(eq.time)}</p>
           </div>
@@ -443,7 +443,7 @@ function updateEarthquakeList() {
   }
 
   if (filteredData.length === 0) {
-    container.innerHTML = '<div class="loading">Belirtilen kritere uygun deprem bulunamadÄ±.</div>';
+    container.innerHTML = '<div class="loading">Belirtilen kritere uygun deprem bulunamadı.</div>';
     return;
   }
 
@@ -512,15 +512,15 @@ function updateStats() {
   }
 }
 
-// Get color based on magnitude - Yeni detaylÄ± renk sistemi
+// Get color based on magnitude - Yeni detaylı renk sistemi
 function getMagnitudeColor(mag) {
-  if (mag >= 8.0) return "#7b1fa2"; // Mor - 8.0+ (Ã§ok bÃ¼yÃ¼k)
-  if (mag >= 7.0) return "#d32f2f"; // Koyu kÄ±rmÄ±zÄ±/bordo - 7.0-7.9 (bÃ¼yÃ¼k)
-  if (mag >= 6.0) return "#f44336"; // KÄ±rmÄ±zÄ± - 6.0-6.9 (kuvvetli)
+  if (mag >= 8.0) return "#7b1fa2"; // Mor - 8.0+ (Ã§ok büyük)
+  if (mag >= 7.0) return "#d32f2f"; // Koyu kırmızı/bordo - 7.0-7.9 (büyük)
+  if (mag >= 6.0) return "#f44336"; // Kırmızı - 6.0-6.9 (kuvvetli)
   if (mag >= 5.0) return "#ff5722"; // Koyu turuncu - 5.0-5.9 (orta)
   if (mag >= 4.0) return "#ff9800"; // Turuncu - 4.0-4.9 (hafif)
-  if (mag >= 3.0) return "#ffc107"; // SarÄ± - 3.0-3.9 (kÃ¼Ã§Ã¼k)
-  return "#4caf50"; // YeÅŸil - 0-2.9 (Ã§ok kÃ¼Ã§Ã¼k/hissedilmez)
+  if (mag >= 3.0) return "#ffc107"; // Sarı - 3.0-3.9 (küÃ§ük)
+  return "#4caf50"; // YeÅŸil - 0-2.9 (Ã§ok küÃ§ük/hissedilmez)
 }
 
 // Setup event listeners
@@ -562,7 +562,7 @@ async function handleRefresh() {
   try {
     await fetchEarthquakeData();
   } catch (error) {
-    console.error("Yenileme hatasÄ±:", error);
+    console.error("Yenileme hatası:", error);
   } finally {
     setTimeout(() => {
       if (icon) {
@@ -575,11 +575,11 @@ async function handleRefresh() {
 // Go to Turkey on map
 function goToTurkey() {
   if (AppState.map) {
-    // TÃ¼rkiye koordinatlarÄ± ve zoom seviyesi
-    const turkeyCenter = [39.0, 35.0]; // TÃ¼rkiye merkezi
-    const turkeyZoom = 6; // TÃ¼rkiye'yi tam gÃ¶steren zoom seviyesi
+    // Türkiye koordinatları ve zoom seviyesi
+    const turkeyCenter = [39.0, 35.0]; // Türkiye merkezi
+    const turkeyZoom = 6; // Türkiye'yi tam gösteren zoom seviyesi
     
-    // HaritayÄ± TÃ¼rkiye'ye odakla
+    // Haritayı Türkiye'ye odakla
     AppState.map.setView(turkeyCenter, turkeyZoom);
     
     // Buton animasyonu
@@ -609,7 +609,7 @@ function toggleNightMode() {
     if (icon) {
       icon.className = "fas fa-sun";
     }
-    nightModeBtn.innerHTML = '<i class="fas fa-sun"></i> GÃ¼ndÃ¼z Modu';
+    nightModeBtn.innerHTML = '<i class="fas fa-sun"></i> Gündüz Modu';
     
     // Apply dark filter to existing map
     const mapElement = document.getElementById('map');
@@ -652,14 +652,14 @@ function startAutoRefresh() {
     updateStats();
   }, CONFIG.REFRESH_INTERVAL);
   
-  // Dinamik zaman gÃ¼ncelleme iÃ§in ayrÄ± interval (her 10 saniyede)
+  // Dinamik zaman güncelleme iÃ§in ayrı interval (her 10 saniyede)
   if (AppState.timeUpdateInterval) {
     clearInterval(AppState.timeUpdateInterval);
   }
   
   AppState.timeUpdateInterval = setInterval(() => {
     updateTimeDisplays();
-  }, 1000); // 1 saniyede bir gÃ¼ncelle
+  }, 1000); // 1 saniyede bir güncelle
 }
 
 // Update recent earthquakes section with real data
@@ -703,7 +703,7 @@ function updateTimeDisplays() {
     const lastUpdateTimeEl = document.getElementById('last-update-time');
     
     if (lastUpdateEl) {
-      lastUpdateEl.textContent = `Son gÃ¼ncelleme: ${timeAgo}`;
+      lastUpdateEl.textContent = `Son güncelleme: ${timeAgo}`;
     }
     
     if (lastUpdateTimeEl) {
@@ -818,7 +818,7 @@ window.addEventListener("pageshow", async (event) => {
     return;
   }
 
-  // BFCache geri dÃ¶nÃ¼ÅŸlerinde Leaflet haritasÄ±nÄ± tamamen yeniden oluÅŸtur
+  // BFCache geri dönüÅŸlerinde Leaflet haritasını tamamen yeniden oluÅŸtur
   resetExistingMap();
   initMap();
 
