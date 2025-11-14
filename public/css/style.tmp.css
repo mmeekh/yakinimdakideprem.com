@@ -130,8 +130,7 @@
 
 /* Ana Layout */
 main {
-    margin-top: 0;
-    padding-top: 0;
+    margin-top: 30px;
 }
 
 .main-layout {
@@ -1170,25 +1169,3 @@ footer {
 .night-mode .leaflet-popup-content p strong { color: #f8fafc; }
 .night-mode .earthquake-popup__title { color: #fca5a5; }
 .night-mode .earthquake-popup__source { color: #cbd5e1; }
-
-/* Navbar ve harita arasındaki boşlukları sıfırla */
-header,
-nav {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    border-bottom: 0 !important;
-}
-
-main,
-#map,
-.map-container,
-.map-wrapper {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-/* Harita k��e yar��aplar��n�� kald��r (tam kaplama) */
-.map-container,
-#map,
-.map-loading {
-    border-radius: 0 !important;
-}
