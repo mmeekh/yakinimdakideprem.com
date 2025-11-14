@@ -1,0 +1,1 @@
+:root{--accent:#ef4444;--muted:#6b7280;--bg:#ffffff}body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.6;color:#111;background:var(--bg);margin:0}.container{max-width:1100px;margin:0 auto;padding:24px}header,footer{background:#fff}header .logo img{vertical-align:middle}h1{color:var(--accent)}.post{margin-bottom:24px}
