@@ -1,39 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://yakinimdakideprem.com/</loc>
+    <lastmod>2025-11-14T05:40:51+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <lastmod>2025-11-14</lastmod>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/deprem-haritasi.svg</image:loc>
+      <image:caption>Deprem haritası — Yakınımdaki Deprem</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://yakinimdakideprem.com/ben-kimim.html</loc>
+    <lastmod>2025-11-14T05:40:51+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-11-14</lastmod>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/deprem-haritasi.svg</image:loc>
+      <image:caption>Yakınımdaki Deprem ekibi görseli</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://yakinimdakideprem.com/blog.html</loc>
+    <lastmod>2025-11-14T05:40:51+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2025-11-14</lastmod>
   </url>
   <url>
     <loc>https://yakinimdakideprem.com/rehber-hazirlik.html</loc>
+    <lastmod>2025-11-14T05:40:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-aninda.html</loc>
+    <lastmod>2025-11-14T05:40:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/ilk-yardim-cantasi.html</loc>
+    <lastmod>2025-11-14T05:40:51+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog/ilk-yardim-deprem.html</loc>
+    <lastmod>2025-11-14T05:40:51+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://yakinimdakideprem.com/privacy-policy.html</loc>
+    <lastmod>2025-11-14T05:40:51+00:00</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <lastmod>2025-11-14</lastmod>
+    <priority>0.2</priority>
   </url>
   <url>
     <loc>https://yakinimdakideprem.com/terms.html</loc>
+    <lastmod>2025-11-14T05:40:51+00:00</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <lastmod>2025-11-14</lastmod>
+    <priority>0.2</priority>
   </url>
 </urlset>
