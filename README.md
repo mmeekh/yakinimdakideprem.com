@@ -128,11 +128,15 @@ anlikdeprem/
 │   │       ├── 📄 StatsModule.js  # İstatistik modülü
 │   │       └── 📄 UIModule.js     # UI yönetimi
 │   ├── 📁 images/                 # Görsel dosyalar
-│   │   ├── 📄 hero-bg.jpg         # Ana sayfa arka planı
-│   │   ├── 📄 binaicindeyseniz.webp # Bina içi rehber görseli
-│   │   ├── 📄 disaridayken.webp   # Dışarıda rehber görseli
-│   │   ├── 📄 arackullarnirken.webp # Araç kullanım rehberi
-│   │   └── 📄 depremcantasi.webp  # İlk yardım çantası görseli
+│   │   ├── 📄 hero-bg.jpg                        # Ana sayfa arka planı
+│   │   ├── 📄 blog-son-deprem-haberleri.webp      # Öne çıkan haber kartı
+│   │   ├── 📄 blog-deprem-haritasi-rehberi.webp   # Harita rehberi görseli
+│   │   ├── 📄 blog-deprem-oncesi-hazirlik.webp    # Hazırlık rehberi görseli
+│   │   ├── 📄 blog-deprem-cantasi.webp            # Deprem çantası görseli
+│   │   ├── 📄 blog-deprem-guvenlik-bilgileri.webp # Güvenlik rehberi görseli
+│   │   ├── 📄 blog-bina-icindeyseniz.webp         # Bina içi rehber görseli
+│   │   ├── 📄 blog-disaridaysaniz.webp            # Dışarıda rehber görseli
+│   │   └── 📄 blog-arac-kullanirken.webp          # Araç kullanım rehberi görseli
 │   └── 📁 icons/                  # İkon dosyaları
 │       ├── 📄 logo.png            # Ana logo
 │       ├── 📄 favicon-*.png       # Favicon dosyaları
