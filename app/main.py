@@ -1,4 +1,5 @@
 import os
+from copy import deepcopy
 from datetime import datetime, timedelta
 from typing import Dict, Optional, List, Any
 
@@ -40,8 +41,8 @@ def format_time_ago(dt: datetime) -> str:
 class EarthquakeCache:
     """Simple in-memory cache for earthquake responses."""
 
-    def __init__(self, cache_duration_minutes: int = 2) -> None:
-        self.cache_duration = timedelta(minutes=cache_duration_minutes)
+    def __init__(self, cache_duration_seconds: int = 20) -> None:
+        self.cache_duration = timedelta(seconds=cache_duration_seconds)
         self.cache: Dict[str, Dict[str, Any]] = {}
 
     def get(self, cache_key: str) -> Optional[Dict[str, Any]]:
@@ -60,9 +61,24 @@ class EarthquakeCache:
         self.cache.clear()
 
 
+KANDILLI_CACHE_TTL = timedelta(seconds=20)
+_kandilli_cache_data: Optional[List[Dict[str, Any]]] = None
+_kandilli_cache_timestamp: Optional[datetime] = None
+
+
 async def fetch_kandilli_earthquakes(hours_back: int, min_magnitude: float) -> List[Dict[str, Any]]:
     """Fetch earthquake data from Kandilli Observatory API."""
     kandilli_url = "https://api.orhanaydogdu.com.tr/deprem/kandilli/live"
+
+    global _kandilli_cache_data, _kandilli_cache_timestamp
+    now = datetime.now()
+
+    if (
+        _kandilli_cache_data is not None
+        and _kandilli_cache_timestamp
+        and now - _kandilli_cache_timestamp < KANDILLI_CACHE_TTL
+    ):
+        return deepcopy(_kandilli_cache_data)
 
     try:
         async with httpx.AsyncClient(timeout=10.0) as client:
@@ -71,6 +87,8 @@ async def fetch_kandilli_earthquakes(hours_back: int, min_magnitude: float) -> L
             payload = response.json()
     except Exception as exc:  # pragma: no cover - network failure
         print(f"Kandilli API Error: {exc}")
+        if _kandilli_cache_data:
+            return deepcopy(_kandilli_cache_data)
         return []
 
     earthquake_list = payload.get("result", payload if isinstance(payload, list) else [])
@@ -119,6 +137,8 @@ async def fetch_kandilli_earthquakes(hours_back: int, min_magnitude: float) -> L
         )
 
     earthquakes.sort(key=lambda eq: eq["time"], reverse=True)
+    _kandilli_cache_data = deepcopy(earthquakes)
+    _kandilli_cache_timestamp = datetime.now()
     return earthquakes
 
 
@@ -131,7 +151,7 @@ ALLOWED_ORIGINS = [origin.strip() for origin in origins_env.split(",") if origin
 
 app = FastAPI(title=APP_NAME, version=APP_VERSION)
 
-earthquake_cache = EarthquakeCache(cache_duration_minutes=2)
+earthquake_cache = EarthquakeCache(cache_duration_seconds=20)
 
 if ALLOWED_ORIGINS:
     app.add_middleware(

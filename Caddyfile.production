@@ -22,7 +22,21 @@ yakinimdakideprem.com {
         X-Frame-Options "DENY"
         Referrer-Policy "strict-origin-when-cross-origin"
         Permissions-Policy "geolocation=(), microphone=()"
-        Cache-Control "public, max-age=300"
+    }
+
+    @html path *.html
+    header @html {
+        Cache-Control "public, max-age=120"
+    }
+
+    @assets path *.css *.js
+    header @assets {
+        Cache-Control "public, max-age=604800"
+    }
+
+    @images path *.webp
+    header @images {
+        Cache-Control "public, max-age=604800"
     }
 }
 
@@ -46,7 +60,20 @@ www.yakinimdakideprem.com {
         X-Frame-Options "DENY"
         Referrer-Policy "strict-origin-when-cross-origin"
         Permissions-Policy "geolocation=(), microphone=()"
-        Cache-Control "public, max-age=300"
+    }
+
+    @html_www path *.html
+    header @html_www {
+        Cache-Control "public, max-age=120"
+    }
+
+    @assets_www path *.css *.js
+    header @assets_www {
+        Cache-Control "public, max-age=604800"
+    }
+
+    @images_www path *.webp
+    header @images_www {
+        Cache-Control "public, max-age=604800"
     }
 }
-
