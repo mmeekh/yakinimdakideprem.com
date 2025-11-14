@@ -1,2 +1,6 @@
 User-agent: *
+Allow: /
+Disallow: /app/
+Disallow: /docker/
 
+Sitemap: https://yakinimdakideprem.com/sitemap.xml
