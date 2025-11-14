@@ -720,9 +720,9 @@ function resizeMapContainer() {
     mapWrapper.style.marginTop = `${headerHeight}px`;
   }
 
-  if (mapEl) {
-    mapEl.style.height = `${(window.innerHeight - headerHeight) * 0.8}px`;
-  }
+    if (mapEl) {
+      mapEl.style.height = `${(window.innerHeight - headerHeight) * 0.9}px`;
+    }
 
   if (AppState.map) {
     setTimeout(() => {
