@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -74,13 +74,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="/blog.html" rel="noopener noreferrer">Blog</a>
                 <div class="nav-dropdown">
                     <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
-                        Şehir Depremleri <i class="fas fa-chevron-down"></i>
+                        Åehir Depremleri <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="dropdown-menu">
                         <a href="/deprem-istanbul.html" rel="noopener noreferrer">İstanbul Depremi</a>
                         <a href="/deprem-izmir.html" rel="noopener noreferrer">İzmir Depremi</a>
                         <a href="/deprem-ankara.html" rel="noopener noreferrer">Ankara Depremi</a>
                         <a href="/deprem-elazig.html" rel="noopener noreferrer">Elazığ Depremi</a>
+                        <a href='/deprem-kahramanmaras.html' rel='noopener noreferrer'>Kahramanmaraş Depremi</a>
                     </div>
                 </div>
             </nav>
@@ -103,7 +104,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </nav>
 
                 <section>
-                    <h2>Elazığ’da Az Önce Deprem Oldu mu?</h2>
+                    <h2>Elazığâ€™da Az Önce Deprem Oldu mu?</h2>
                     <p id="elazig-summary">Veriler yükleniyor...</p>
                 </section>
 
@@ -128,7 +129,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <section>
                     <h2>Toplanma Alanları ve Destek</h2>
-                    <p>AFAD’ın toplanma alanı servisini <a href="https://www.turkiye.gov.tr/afet-ve-acil-durum-yonetimi-baskanligi-toplanma-alanlari" target="_blank" rel="noopener noreferrer">buradan</a> kullanarak Elazığ’daki güvenli alanları kontrol edin. Mahallenizdeki cami avluları ve okul bahçeleri genellikle AFAD listesinde yer alır.</p>
+                    <p>AFADâ€™ın toplanma alanı servisini <a href="https://www.turkiye.gov.tr/afet-ve-acil-durum-yonetimi-acil-toplanma-alani-sorgulama?bolge=Secimi" target="_blank" rel="noopener noreferrer">buradan</a> kullanarak Elazığâ€™daki güvenli alanları kontrol edin. Mahallenizdeki cami avluları ve okul bahçeleri genellikle AFAD listesinde yer alır.</p>
                 </section>
 
                 <section>
@@ -180,7 +181,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="footer-column">
                         <h4>Yasal</h4>
                         <ul>
-                            <li><a href="/kullanim-sartlari.html" rel="noopener noreferrer">Kullanım Şartları</a></li>
+                            <li><a href="/kullanim-sartlari.html" rel="noopener noreferrer">Kullanım Åartları</a></li>
                             <li><a href="/gizlilik-politikasi.html" rel="noopener noreferrer">Gizlilik Politikası</a></li>
                             <li><a href="/cerez-politikasi.html" rel="noopener noreferrer">Çerez Politikası</a></li>
                             <li><a href="/sorumluluk-reddi.html" rel="noopener noreferrer">Sorumluluk Reddi</a></li>
@@ -196,12 +197,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script src="js/header.js"></script>
     <script src="js/toc.js"></script>
+    <script src="js/city-keywords.js"></script>
     <script src="js/live-quakes.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             renderCityQuakes({
                 tableSelector: '#elazig-quakes',
-                cityKeyword: 'elazığ',
+                cityKeyword: 'elazig',
                 limit: 20,
                 summarySelector: '#elazig-summary'
             });

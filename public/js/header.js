@@ -31,6 +31,7 @@ let legendElement = null;
 let listElement = null;
 let mapWrapper = null;
 let updateInfoElement = null;
+let cityDropdowns = [];
 
 // Initialize header functionality
 document.addEventListener('DOMContentLoaded', () => {
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateInfoElement = document.querySelector('.update-info');
 
     setupHeaderStructure();
+    setupCityDropdowns();
     setHeaderHeightVar();
     setupScrollListener();
     setupKeyboardShortcuts();
@@ -240,6 +242,10 @@ function handleResize() {
     handleResponsivePanels();
 
     if (window.innerWidth > MOBILE_BREAKPOINT) {
+        resetCityDropdowns();
+    }
+
+    if (window.innerWidth > MOBILE_BREAKPOINT) {
         closeNavMenu();
         closeInfoMenu();
     }
@@ -252,6 +258,15 @@ function handleDocumentClick(event) {
 
     if (isInfoOpen && infoDropdown && !infoDropdown.contains(event.target) && !infoToggleButton.contains(event.target)) {
         closeInfoMenu();
+    }
+
+    if (window.innerWidth <= MOBILE_BREAKPOINT) {
+        cityDropdowns.forEach(({ wrapper, button }) => {
+            if (!wrapper.contains(event.target)) {
+                wrapper.classList.remove('open');
+                button.setAttribute('aria-expanded', 'false');
+            }
+        });
     }
 }
 
@@ -352,6 +367,37 @@ function setHeaderHeightVar() {
     if (!headerElement) return;
     const height = headerElement.offsetHeight;
     document.documentElement.style.setProperty('--header-height', height + 'px');
+}
+
+function setupCityDropdowns() {
+    if (!headerElement) return;
+    cityDropdowns = [];
+    const dropdowns = headerElement.querySelectorAll('.nav-dropdown');
+    dropdowns.forEach((dropdown) => {
+        const button = dropdown.querySelector('.dropdown-toggle');
+        if (!button) return;
+        button.setAttribute('aria-expanded', 'false');
+        button.addEventListener('click', (event) => {
+            if (window.innerWidth > MOBILE_BREAKPOINT) return;
+            event.preventDefault();
+            const isOpen = dropdown.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            cityDropdowns.forEach(({ wrapper, button: other }) => {
+                if (wrapper !== dropdown) {
+                    wrapper.classList.remove('open');
+                    other.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+        cityDropdowns.push({ wrapper: dropdown, button });
+    });
+}
+
+function resetCityDropdowns() {
+    cityDropdowns.forEach(({ wrapper, button }) => {
+        wrapper.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+    });
 }
 
 function createVisuallyHiddenSpan(text) {

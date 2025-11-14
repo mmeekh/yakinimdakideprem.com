@@ -91,7 +91,8 @@
 }
 
 .nav-dropdown:hover .dropdown-menu,
-.nav-dropdown:focus-within .dropdown-menu {
+.nav-dropdown:focus-within .dropdown-menu,
+.nav-dropdown.open .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -163,10 +164,15 @@
         opacity: 1;
         visibility: visible;
         transform: none;
+        display: none;
         background: transparent;
         box-shadow: none;
         padding: 4px 0 0;
         gap: 6px;
+    }
+
+    .nav-dropdown.open .dropdown-menu {
+        display: flex;
     }
     
     .dropdown-menu a {

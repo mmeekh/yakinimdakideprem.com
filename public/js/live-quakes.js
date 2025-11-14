@@ -1,6 +1,9 @@
 const QuakeAPI = {
+  cache: null,
   async fetchData(force = false) {
-    if (!force && QuakeAPI.cache) return QuakeAPI.cache;
+    if (!force && QuakeAPI.cache) {
+      return QuakeAPI.cache;
+    }
 
     const params = new URLSearchParams({
       hours_back: 168,
@@ -9,7 +12,10 @@ const QuakeAPI = {
     });
 
     const res = await fetch(`/api/earthquakes?${params.toString()}`);
-    if (!res.ok) throw new Error("Deprem verileri alınamadı");
+    if (!res.ok) {
+      throw new Error("Deprem verileri alınamadı");
+    }
+
     const json = await res.json();
     const data = json.data || [];
     QuakeAPI.cache = data;
@@ -23,8 +29,8 @@ function formatQuakeRow(quake) {
     <tr>
       <td>${time.toLocaleString("tr-TR")}</td>
       <td><strong>${quake.magnitude?.toFixed?.(1) ?? quake.magnitude}</strong></td>
-      <td>${quake.depth ? `${quake.depth} km` : '-'}</td>
-      <td>${quake.place || quake.location || 'Bilinmeyen'}</td>
+      <td>${quake.depth ? `${quake.depth} km` : "-"}</td>
+      <td>${quake.place || quake.location || "Bilinmeyen"}</td>
     </tr>
   `;
 }
@@ -53,8 +59,12 @@ async function renderGlobalQuakes({
       const el = document.querySelector(highlightSelector);
       if (el) {
         el.innerHTML = `
-          <strong>${latest.magnitude?.toFixed?.(1)} Mw</strong> - ${latest.place || "Konum paylaşılmadı"}
-          <br><small>${new Date(latest.time || latest.updated_at).toLocaleString("tr-TR")}</small>
+          <strong>${latest.magnitude?.toFixed?.(1)} Mw</strong> - ${
+            latest.place || "Konum paylaşılmadı"
+          }
+          <br><small>${new Date(latest.time || latest.updated_at).toLocaleString(
+            "tr-TR"
+          )}</small>
         `;
       }
     }
@@ -67,7 +77,9 @@ async function renderGlobalQuakes({
         );
         el.textContent =
           minutesAgo < 5
-            ? `Evet. ${minutesAgo} dakika önce ${latest.place || "bilinmeyen noktada"} ${latest.magnitude?.toFixed?.(1)} büyüklüğünde deprem oldu.`
+            ? `Evet. ${minutesAgo} dakika önce ${
+                latest.place || "bilinmeyen noktada"
+              } ${latest.magnitude?.toFixed?.(1)} büyüklüğünde deprem oldu.`
             : "Son 5 dakika içinde deprem kaydı yok.";
       }
     }
@@ -85,7 +97,8 @@ async function renderGlobalQuakes({
     console.error(error);
     const tbody = document.querySelector(tableSelector);
     if (tbody) {
-      tbody.innerHTML = `<tr><td colspan="4">Veri alınırken hata oluştu.</td></tr>`;
+      tbody.innerHTML =
+        '<tr><td colspan="4">Veri alınırken hata oluştu.</td></tr>';
     }
   }
 }
@@ -98,17 +111,24 @@ async function renderCityQuakes({
 }) {
   try {
     const allData = await QuakeAPI.fetchData();
-    const keyword = normalizeText(cityKeyword);
-    const filtered = allData.filter((quake) =>
-      normalizeText(quake.place || "").includes(keyword)
-    );
+    const aliases =
+      (window.CityKeywords && window.CityKeywords[cityKeyword]) || [
+        cityKeyword
+      ];
+    const normalizedAliases = aliases.map((alias) => normalizeText(alias));
+    const filtered = allData.filter((quake) => {
+      const place = normalizeText(quake.place || quake.location || "");
+      return normalizedAliases.some((alias) => place.includes(alias));
+    });
 
     if (summarySelector) {
       const el = document.querySelector(summarySelector);
       if (el) {
         el.innerHTML =
           filtered.length > 0
-            ? `<strong>Son deprem:</strong> ${filtered[0].magnitude?.toFixed?.(1)} Mw - ${filtered[0].place}`
+            ? `<strong>Son deprem:</strong> ${filtered[0].magnitude?.toFixed?.(
+                1
+              )} Mw - ${filtered[0].place}`
             : "Son kayıtlarda bu şehir için deprem bulunamadı.";
       }
     }
@@ -125,7 +145,8 @@ async function renderCityQuakes({
     console.error(error);
     const tbody = document.querySelector(tableSelector);
     if (tbody) {
-      tbody.innerHTML = `<tr><td colspan="4">Veri alınırken hata oluştu.</td></tr>`;
+      tbody.innerHTML =
+        '<tr><td colspan="4">Veri alınırken hata oluştu.</td></tr>';
     }
   }
 }
