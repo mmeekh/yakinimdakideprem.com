@@ -3,12 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <!-- Favicon Icons -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WQZS53QX');</script>
+<!-- End Google Tag Manager -->
+    <title>Yakınımdaki Deprem Haritası ve Son Deprem Uyarıları</title>
+    <meta name="description" content="Yakınımdaki Deprem haritası AFAD ve Kandilli verilerini birleştirir, son depremleri bildirir ve güvenlik rehberleriyle afet hazırlık planınızı güçlendirir.">
+    <meta name="keywords" content="deprem haritası, son deprem, AFAD verileri, Kandilli raporu, deprem uyarıları, afet hazırlığı, deprem güvenliği, acil durum planı, canlı deprem">
+    <meta name="author" content="Yakınımdaki Deprem">
+    <link rel="canonical" href="https://yakinimdakideprem.com/">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yakınımdaki Deprem Haritası ve Son Deprem Uyarıları">
+    <meta property="og:description" content="Yakınımdaki Deprem haritası AFAD ve Kandilli verilerini birleştirir, son depremleri bildirir ve güvenlik rehberleriyle afet hazırlık planınızı güçlendirir.">
+    <meta property="og:url" content="https://yakinimdakideprem.com/">
+    <meta property="og:site_name" content="Yakınımdaki Deprem">
+    <meta property="og:image" content="https://yakinimdakideprem.com/images/deprem-haritasi.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
+    <meta property="og:image:alt" content="Yakınımdaki Deprem Haritası ve Son Deprem Uyarıları görseli">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@yakindeprem">
+    <meta name="twitter:creator" content="@yakindeprem">
+    <meta name="twitter:title" content="Yakınımdaki Deprem Haritası ve Son Deprem Uyarıları">
+    <meta name="twitter:description" content="Yakınımdaki Deprem haritası AFAD ve Kandilli verilerini birleştirir, son depremleri bildirir ve güvenlik rehberleriyle afet hazırlık planınızı güçlendirir.">
+    <meta name="twitter:image" content="https://yakinimdakideprem.com/images/deprem-haritasi.webp">
+    <meta name="twitter:image:alt" content="Yakınımdaki Deprem Haritası ve Son Deprem Uyarıları görseli">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48x48.png">
@@ -19,36 +42,80 @@
     <link rel="icon" type="image/png" sizes="192x192" href="icons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
     <link rel="manifest" href="site.webmanifest">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J03Y3ZWDWD"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-J03Y3ZWDWD');
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Yakınımdaki Deprem Haritası ve Son Deprem Uyarıları",
+        "description": "Yakınımdaki Deprem haritası AFAD ve Kandilli verilerini birleştirir, son depremleri bildirir ve güvenlik rehberleriyle afet hazırlık planınızı güçlendirir.",
+        "url": "https://yakinimdakideprem.com/",
+        "inLanguage": "tr-TR",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Yakınımdaki Deprem",
+            "url": "https://yakinimdakideprem.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://yakinimdakideprem.com/icons/android-chrome-192x192.png",
+                "width": 192,
+                "height": 192
+            }
+        },
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://yakinimdakideprem.com/images/deprem-haritasi.webp",
+            "width": 1200,
+            "height": 675
+        }
+    }
     </script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQZS53QX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
     <!-- Sabit Header -->
     <header id="hidden-header">
         <div class="container">
-            <a href="/" class="logo">
-                <img src="icons/logo.png" alt="Yakınımdaki Deprem Logo" width="60" height="60">
+            <a rel="noopener noreferrer" href="/" class="logo">
+                <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem Logo" width="60" height="60">
                 <span>Yakınımdaki Deprem</span>
             </a>
             <nav>
-                <a href="/" class="active">Ana Sayfa</a>
-                <a href="/deprem-aninda.html">Deprem Anında</a>
-                <a href="/ilk-yardim-cantasi.html">İlk Yardım Çantası</a>
-                <a href="/ben-kimim.html">Ben Kimim</a>
-                <a href="/blog.html">Blog</a>
+                <a rel="noopener noreferrer" href="/" class="active">Ana Sayfa</a>
+                <a rel="noopener noreferrer" href="/deprem-aninda.html">Deprem Anında</a>
+                <a rel="noopener noreferrer" href="/ilk-yardim-cantasi.html">İlk Yardım Çantası</a>
+                <a rel="noopener noreferrer" href="/ben-kimim.html">Ben Kimim</a>
+                <a rel="noopener noreferrer" href="/blog.html">Blog</a>
             </nav>
         </div>
     </header>
 
     <main>
+        <section class="seo-hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <h1>Türkiye Deprem Haritası ve Erken Uyarılar</h1>
+                        <p>AFAD ve Kandilli verileri eşliğinde son depremleri takip ederken, hazırlık rehberleri ve uzman blog yazılarıyla afet planınızı sürekli güncel tutabilirsiniz.</p>
+                        <div class="hero-links">
+                            <a rel="noopener noreferrer" href="/blog-son-deprem-haberleri.html" class="hero-cta">Son Deprem Haberleri</a>
+                            <a rel="noopener noreferrer" href="/blog-deprem-haritasi.html" class="hero-cta secondary">Risk Haritasını İncele</a>
+                        </div>
+                    </div>
+                    <figure class="hero-visual">
+                        <img loading="lazy" src="images/deprem-haritasi.webp" alt="Güncel deprem haritası görseli" width="1200" height="675">
+                        <figcaption>Yakınımdaki Deprem haritası, güncel fay hareketlerini ve güvenli toplanma alanlarını öne çıkarır.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
         <!-- Harita ve Overlay Alanı -->
         <div class="map-wrapper">
             <div id="map"></div>
@@ -97,7 +164,7 @@
             </div>
 
             <!-- Son Depremler Listesi -->
-            <aside class="earthquake-list overlay">
+            <a rel="noopener noreferrer"side class="earthquake-list overlay">
                 <div class="list-header">
                     <h2>Son Depremler</h2>
                     <div class="filter-controls">
@@ -130,7 +197,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="icons/logo.png" alt="Yakınımdaki Deprem Logo" width="50" height="50">
+                    <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem Logo" width="50" height="50">
                     <h3>Yakınımdaki Deprem</h3>
                     <p>Hayat kurtaran bilgiler</p>
                 </div>
@@ -138,36 +205,36 @@
                     <div class="footer-column">
                         <h4>Hızlı Linkler</h4>
                         <ul>
-                            <li><a href="/">Ana Sayfa</a></li>
-                            <li><a href="/deprem-aninda.html">Deprem Anında</a></li>
-                            <li><a href="/ilk-yardim-cantasi.html">İlk Yardım Çantası</a></li>
-                            <li><a href="/ben-kimim.html">Ben Kimim</a></li>
-                            <li><a href="/blog.html">Blog</a></li>
+                            <li><a rel="noopener noreferrer" href="/">Ana Sayfa</a></li>
+                            <li><a rel="noopener noreferrer" href="/deprem-aninda.html">Deprem Anında</a></li>
+                            <li><a rel="noopener noreferrer" href="/ilk-yardim-cantasi.html">İlk Yardım Çantası</a></li>
+                            <li><a rel="noopener noreferrer" href="/ben-kimim.html">Ben Kimim</a></li>
+                            <li><a rel="noopener noreferrer" href="/blog.html">Blog</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h4>Kaynaklar</h4>
                         <ul>
-                            <li><a href="https://earthquake.usgs.gov" target="_blank">USGS</a></li>
-                            <li><a href="https://deprem.afad.gov.tr" target="_blank">AFAD</a></li>
-                            <li><a href="https://koeri.boun.edu.tr" target="_blank">KOERİ</a></li>
-                            <li><a href="#" target="_blank">Deprem Eğitimleri</a></li>
+                            <li><a rel="noopener noreferrer" href="https://earthquake.usgs.gov" target="_blank">USGS</a></li>
+                            <li><a rel="noopener noreferrer" href="https://deprem.afad.gov.tr" target="_blank">AFAD</a></li>
+                            <li><a rel="noopener noreferrer" href="https://koeri.boun.edu.tr" target="_blank">KOERİ</a></li>
+                            <li><a rel="noopener noreferrer" href="#" target="_blank">Deprem Eğitimleri</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h4>İletişim</h4>
                         <ul>
-                            <li><a href="mailto:info@yakınımdakideprem.com">info@yakınımdakideprem.com</a></li>
-                            <li><a href="tel:+902121234567">+90 (212) 123 45 67</a></li>
+                            <li><a rel="noopener noreferrer" href="mailto:info@yakinimdakideprem.com">info@yakinimdakideprem.com</a></li>
+                            <li><a rel="noopener noreferrer" href="tel:+902121234567">+90 (212) 123 45 67</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h4>Yasal</h4>
                         <ul>
-                            <li><a href="/kullanim-sartlari.html">Kullanım Şartları</a></li>
-                            <li><a href="/gizlilik-politikasi.html">Gizlilik Politikası</a></li>
-                            <li><a href="/cerez-politikasi.html">Çerez Politikası</a></li>
-                            <li><a href="/sorumluluk-reddi.html">Sorumluluk Reddi</a></li>
+                            <li><a rel="noopener noreferrer" href="/kullanim-sartlari.html">Kullanım Şartları</a></li>
+                            <li><a rel="noopener noreferrer" href="/gizlilik-politikasi.html">Gizlilik Politikası</a></li>
+                            <li><a rel="noopener noreferrer" href="/cerez-politikasi.html">Çerez Politikası</a></li>
+                            <li><a rel="noopener noreferrer" href="/sorumluluk-reddi.html">Sorumluluk Reddi</a></li>
                         </ul>
                     </div>
                 </div>

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://yakinimdakideprem.com/sitemap.xml
