@@ -23,7 +23,8 @@ if (typeof window !== 'undefined') {
 const CONFIG = {
   REFRESH_INTERVAL: 60000, // 1 minute
   MAP_CENTER: [39.0, 35.0], // Türkiye merkezi
-  MAP_ZOOM: 6, // Türkiye'yi tam gösteren zoom seviyesi
+  MAP_ZOOM_DESKTOP: 6,
+  MAP_ZOOM_MOBILE: 5,
   API_TIMEOUT: 10000,
   MAX_RADIUS_KM: 5000, // Ã‡ok geniÅŸ alan
   MIN_MAGNITUDE: 1.5, // Kandilli API iÃ§in optimize edildi
@@ -85,9 +86,11 @@ function initMap() {
       attribution: "&copy; OpenStreetMap contributors"
     });
 
+    const initialZoom = window.innerWidth <= 768 ? CONFIG.MAP_ZOOM_MOBILE : CONFIG.MAP_ZOOM_DESKTOP;
+
     AppState.map = L.map("map", {
       center: CONFIG.MAP_CENTER,
-      zoom: CONFIG.MAP_ZOOM,
+      zoom: initialZoom,
       layers: [baseLayer]
     });
 
@@ -865,4 +868,6 @@ document.addEventListener('visibilitychange', () => {
 window.addEventListener('focus', () => {
   ensureMapReady();
 });
+
+
 
