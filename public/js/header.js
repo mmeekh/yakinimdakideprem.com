@@ -1,3 +1,152 @@
+// ---- Cookie Consent (Consent Mode v2) ----
+function initConsentManager() {
+  try {
+    window.dataLayer = window.dataLayer || [];
+    if (typeof window.gtag !== 'function') {
+      window.gtag = function(){ window.dataLayer.push(arguments); };
+    }
+    gtag('consent','default',{
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted'
+    });
+    const consent = getStoredConsent();
+    if (consent && consent.analytics === true) {
+      grantAnalyticsConsent();
+    } else {
+      showCookieBanner();
+    }
+  } catch(e) {}
+}
+
+function getStoredConsent() {
+  try {
+    const raw = localStorage.getItem('cookie_consent');
+    return raw ? JSON.parse(raw) : null;
+  } catch(e){ return null; }
+}
+
+function storeConsent(value) {
+  try {
+    localStorage.setItem('cookie_consent', JSON.stringify({ analytics: !!value, ts: Date.now() }));
+  } catch(e) {}
+}
+
+function grantAnalyticsConsent() {
+  try {
+    gtag('consent','update',{ analytics_storage: 'granted' });
+    if (window.dataLayer) {
+      window.dataLayer.push({ event: 'consent_update', analytics_storage: 'granted' });
+    }
+  } catch(e) {}
+}
+
+function denyAnalyticsConsent() {
+  try {
+    gtag('consent','update',{ analytics_storage: 'denied' });
+    if (window.dataLayer) {
+      window.dataLayer.push({ event: 'consent_update', analytics_storage: 'denied' });
+    }
+  } catch(e) {}
+}
+
+let consentToastTimer = null;
+let consentToastCleanupTimer = null;
+
+function showCookieBanner() {
+  if (document.getElementById('cookie-consent')) return;
+  const banner = document.createElement('div');
+  banner.id = 'cookie-consent';
+  banner.innerHTML = `
+    <div class="cookie-consent__content">
+      <p>Deneyiminizi iyileştirmek için analitik çerezleri kullanıyoruz. Zorunlu çerezler her zaman aktiftir. Analitik için onay veriyor musunuz?</p>
+      <div class="cookie-consent__actions">
+        <button id="cookie-reject" class="btn btn-ghost">Reddet</button>
+        <button id="cookie-accept" class="btn btn-primary">Kabul Et</button>
+      </div>
+    </div>`;
+  document.body.appendChild(banner);
+  const accept = banner.querySelector('#cookie-accept');
+  const reject = banner.querySelector('#cookie-reject');
+  accept.addEventListener('click', () => {
+    storeConsent(true);
+    grantAnalyticsConsent();
+    showConsentToast('Kabul edildi');
+    banner.remove();
+  });
+  reject.addEventListener('click', () => {
+    storeConsent(false);
+    denyAnalyticsConsent();
+    banner.remove();
+  });
+}
+
+function showConsentToast(message) {
+  const DISPLAY_DURATION = 3000;
+  const FADE_DURATION = 220;
+  if (consentToastTimer) {
+    clearTimeout(consentToastTimer);
+    consentToastTimer = null;
+  }
+  if (consentToastCleanupTimer) {
+    clearTimeout(consentToastCleanupTimer);
+    consentToastCleanupTimer = null;
+  }
+  const existing = document.getElementById('cookie-toast');
+  if (existing) {
+    existing.remove();
+  }
+  const toast = document.createElement('div');
+  toast.id = 'cookie-toast';
+  toast.textContent = message;
+  toast.style.position = 'fixed';
+  toast.style.zIndex = '9999';
+  toast.style.padding = '10px 18px';
+  toast.style.borderRadius = '12px';
+  toast.style.fontWeight = '600';
+  toast.style.fontSize = '14px';
+  toast.style.background = 'rgba(0,0,0,0.85)';
+  toast.style.color = '#fff';
+  toast.style.pointerEvents = 'none';
+  toast.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+  toast.style.opacity = '0';
+  if (window.innerWidth <= 600) {
+    toast.style.top = '16px';
+    toast.style.left = '50%';
+    toast.style.transform = 'translate(-50%, -8px)';
+    toast.style.maxWidth = 'calc(100% - 32px)';
+  } else {
+    toast.style.top = '24px';
+    toast.style.right = '24px';
+    toast.style.transform = 'translateY(-8px)';
+  }
+  document.body.appendChild(toast);
+  requestAnimationFrame(() => {
+    toast.style.opacity = '1';
+    if (window.innerWidth <= 600) {
+      toast.style.transform = 'translate(-50%, 0)';
+    } else {
+      toast.style.transform = 'translateY(0)';
+    }
+  });
+  consentToastTimer = setTimeout(() => {
+    toast.style.opacity = '0';
+    if (window.innerWidth <= 600) {
+      toast.style.transform = 'translate(-50%, -8px)';
+    } else {
+      toast.style.transform = 'translateY(-8px)';
+    }
+    consentToastCleanupTimer = setTimeout(() => {
+      if (toast.parentNode) {
+        toast.parentNode.removeChild(toast);
+      }
+      consentToastCleanupTimer = null;
+    }, FADE_DURATION);
+    consentToastTimer = null;
+  }, DISPLAY_DURATION);
+}
+
 /**
  * Header JavaScript - Optimized version
  * Handles header visibility, responsive navigation, and keyboard shortcuts
@@ -35,6 +184,7 @@ let cityDropdowns = [];
 
 // Initialize header functionality
 document.addEventListener('DOMContentLoaded', () => {
+    try { initConsentManager(); } catch (e) {}
     headerElement = document.getElementById('hidden-header');
     if (!headerElement) return;
 
