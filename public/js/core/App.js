@@ -1,5 +1,5 @@
-/**
- * Core Application Module - Yakınımdaki Deprem
+﻿/**
+ * Core Application Module - YakÄ±nÄ±mdaki Deprem
  * Main application controller and state management
  */
 
@@ -18,7 +18,8 @@ class EarthquakeApp {
     this.config = {
       REFRESH_INTERVAL: 120000, // 2 minutes
       MAP_CENTER: [39.0, 35.0],
-      MAP_ZOOM: 6,
+      MAP_ZOOM_DESKTOP: 6,
+      MAP_ZOOM_MOBILE: 5,
       API_TIMEOUT: 10000,
       MAX_RADIUS_KM: 1000,
       MIN_MAGNITUDE: 2.5,
@@ -163,14 +164,14 @@ class EarthquakeApp {
       this.modules.stats.updateStats();
     }, this.config.REFRESH_INTERVAL);
     
-    // Dinamik zaman güncelleme için ayrı interval (her 10 saniyede)
+    // Dinamik zaman gÃ¼ncelleme iÃ§in ayrÄ± interval (her 10 saniyede)
     if (this.state.timeUpdateInterval) {
       clearInterval(this.state.timeUpdateInterval);
     }
     
     this.state.timeUpdateInterval = setInterval(() => {
       this.updateTimeDisplays();
-    }, 10000); // 10 saniyede bir güncelle
+    }, 10000); // 10 saniyede bir gÃ¼ncelle
   }
 
   /**
@@ -184,7 +185,7 @@ class EarthquakeApp {
       const lastUpdateTimeEl = document.getElementById('last-update-time');
       
       if (lastUpdateEl) {
-        lastUpdateEl.textContent = `Son güncelleme: ${timeAgo}`;
+        lastUpdateEl.textContent = `Son gÃ¼ncelleme: ${timeAgo}`;
       }
       
       if (lastUpdateTimeEl) {

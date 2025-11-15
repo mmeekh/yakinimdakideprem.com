@@ -63,9 +63,13 @@ class MapModule {
       }
     }
 
+    const initialZoom = window.innerWidth <= 768
+      ? this.app.config.MAP_ZOOM_MOBILE
+      : this.app.config.MAP_ZOOM_DESKTOP;
+
     this.map = L.map('map').setView(
       this.app.config.MAP_CENTER,
-      this.app.config.MAP_ZOOM
+      initialZoom
     );
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
