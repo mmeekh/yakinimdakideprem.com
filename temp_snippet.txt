@@ -1,0 +1,20 @@
+                    <div class="value-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Doðruluk ve Güvenilirlik</h3>
+                    <p>Bilgilerin doðruluðu ve güvenilirliði bizim için en önemli öncelik</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Toplumsal Fayda</h3>
+                    <p>Tüm çalýþmalarýmýzý topluma katký saðlamak amacýyla yapýyoruz</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Ekip Çalýþmasý</h3>
