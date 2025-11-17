@@ -1,8 +1,6 @@
-{
-    # Üretimde otomatik HTTPS açık (default)
-}
+# Production site config for root-caddy (/root/caddy/sites/yakinimdakideprem.com.Caddyfile)
+# This mirrors Caddyfile.production so it can be dropped into the VPS without edits.
 
-# Apex domain (serves API + static from dedicated containers)
 yakinimdakideprem.com {
     tls internal
     encode zstd gzip
@@ -59,7 +57,6 @@ yakinimdakideprem.com {
     }
 }
 
-# www domain -> canonical apex
 www.yakinimdakideprem.com {
     tls internal
     redir https://yakinimdakideprem.com{uri} permanent
