@@ -1,0 +1,75 @@
+/* Deprem Listesi */
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.list-header h2 {
+    color: var(--dark-color);
+    font-size: 20px;
+}
+
+.filter-controls select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.earthquake-items {
+    max-height: 540px; /* %10 azaltÄ±ldÄ± (600px -> 540px) */
+    overflow-y: auto;
+}
+
+.earthquake-item {
+    display: flex;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.earthquake-item:hover {
+    background-color: #f9f9f9;
+}
+
+.magnitude {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.details h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+}
+
+.details .time {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+.details .depth {
+    font-size: 13px;
+    color: #888;
+}
+
+.loading {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+}
