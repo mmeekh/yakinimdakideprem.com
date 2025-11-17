@@ -898,13 +898,15 @@ footer {
 }
 
 .footer-column ul li a {
-    color: #fff;
+    color: #f1f5f9;
     text-decoration: none;
+    font-weight: 500;
     transition: var(--transition);
 }
 
 .footer-column ul li a:hover {
-    color: var(--secondary-color);
+    color: white;
+    text-decoration: underline;
 }
 
 .footer-bottom {
