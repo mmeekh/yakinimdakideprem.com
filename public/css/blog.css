@@ -870,10 +870,12 @@ footer {
 .footer-logo h3 {
     font-size: 22px;
     margin-bottom: 10px;
+    color: #f8fafc;
 }
 
 .footer-logo p {
-    color: #ccc;
+    color: #e2e8f0;
+    opacity: 0.9;
 }
 
 .footer-links {
@@ -890,7 +892,8 @@ footer {
 
 .footer-column h4 {
     margin-bottom: 15px;
-    color: var(--secondary-color);
+    color: #f8fafc;
+    font-weight: 700;
 }
 
 .footer-column ul {
