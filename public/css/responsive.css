@@ -1,0 +1,132 @@
+/* Responsive */
+@media (max-width: 1024px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    
+    .map-section {
+        flex: none;
+        width: 100%;
+    }
+    
+    .earthquake-list {
+        flex: none;
+        max-width: none;
+        position: static;
+    }
+    
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .map-wrapper {
+        margin-top: 110px;
+    }
+
+    .map-wrapper .leaflet-top {
+        top: 16px;
+    }
+
+    .map-section {
+        width: 120% !important; /* Tablet iÃ§in geniÅŸlik */
+        max-width: 120% !important;
+    }
+    
+    .map-container {
+        height: 385px !important; /* Tablet iÃ§in %10 artÄ±rÄ±lmÄ±ÅŸ yÃ¼kseklik */
+        min-height: 385px !important;
+        width: 100% !important; /* Container geniÅŸliÄŸi */
+        max-width: 100% !important;
+    }
+    
+    .map-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .legend-items {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .map-wrapper {
+        margin-top: 160px;
+    }
+
+    .map-wrapper .leaflet-top {
+        top: 36px !important;
+    }
+
+    .map-section {
+        width: 120% !important; /* Mobil iÃ§in geniÅŸlik */
+        max-width: 120% !important;
+    }
+    
+    .map-container {
+        height: 330px !important; /* Mobil iÃ§in %10 artÄ±rÄ±lmÄ±ÅŸ yÃ¼kseklik */
+        min-height: 330px !important;
+        width: 100% !important; /* Container geniÅŸliÄŸi */
+        max-width: 100% !important;
+    }
+    
+    .hero {
+        padding: 40px 0 12px; /* Mobil padding artÄ±rÄ±ldÄ±, metin aÅŸaÄŸÄ± kaydÄ±rÄ±ldÄ± */
+        min-height: 20vh; /* Mobil yÃ¼kseklik %20 azaltÄ±ldÄ± (25vh -> 20vh) */
+    }
+    
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}

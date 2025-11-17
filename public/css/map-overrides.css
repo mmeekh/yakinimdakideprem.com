@@ -1,0 +1,181 @@
+/* ========================================
+   Yeni Harita YerleÅŸimi
+======================================== */
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 80px; /* header yÃ¼ksekliÄŸi kadar boÅŸluk */
+}
+
+.map-wrapper #map {
+    width: 100%;
+    height: calc(100vh - 80px);
+}
+
+.map-wrapper .earthquake-list {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 276px; /* %8 azaltÄ±ldÄ± (300px -> 276px) */
+    max-height: calc(90% - 40px); /* %10 azaltÄ±ldÄ± (100% -> 90%) */
+    overflow-y: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    opacity: 0.75; /* %10 daha ÅŸeffaf (0.85 -> 0.75) */
+}
+
+.map-wrapper .magnitude-legend {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: white;
+    padding: 9px; /* %10 azaltÄ±ldÄ± (10px -> 9px) */
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    opacity: 0.75; /* %10 daha ÅŸeffaf (0.85 -> 0.75) */
+}
+
+.map-wrapper .update-info {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 8.1px 12.15px; /* %10 daha azaltÄ±ldÄ± (9px 13.5px -> 8.1px 12.15px) */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8.1px; /* %10 daha azaltÄ±ldÄ± (9px -> 8.1px) */
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    opacity: 0.75; /* %10 daha ÅŸeffaf (0.85 -> 0.75) */
+}
+
+@media (max-width: 768px) {
+    .map-wrapper {
+        margin-top: 110px;
+    }
+
+    .map-wrapper .leaflet-top {
+        top: 16px;
+    }
+
+    .map-wrapper .earthquake-list {
+        width: 90%;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        bottom: 20px;
+        top: auto;
+        max-height: 36%; /* %10 azaltÄ±ldÄ± (40% -> 36%) */
+    }
+
+    .map-wrapper #map {
+        height: calc(100vh - 70px);
+    }
+}
+
+/* Mobile info dropdown adjustments */
+.mobile-info-content .mobile-panel {
+    position: static;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    opacity: 1;
+}
+
+.mobile-info-content .magnitude-legend.mobile-panel {
+    margin-bottom: 16px;
+}
+
+.mobile-info-content .earthquake-list.mobile-panel {
+    max-height: none;
+    padding: 0;
+}
+
+.mobile-info-content .earthquake-list.mobile-panel .list-header {
+    padding: 16px;
+}
+
+.mobile-info-content .earthquake-list.mobile-panel .earthquake-items {
+    max-height: none;
+}
+
+.mobile-info-content .earthquake-list.mobile-panel .earthquake-item {
+    padding: 16px;
+}
+
+@media (max-width: 900px) {
+    .map-wrapper .magnitude-legend,
+    .map-wrapper .earthquake-list {
+        display: none;
+    }
+}
+
+/* Leaflet popup readability (normal mode) */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: #ffffff;
+    color: #1f2937; /* slate-800 */
+}
+
+.leaflet-popup-content p { color: #1f2937; margin: 6px 0; }
+.leaflet-popup-content p strong { color: #111827; font-weight: 700; }
+
+/* Popup component classes (used by JS) */
+.earthquake-popup { text-align: left; min-width: 220px; font-family: 'Segoe UI', Tahoma, sans-serif; }
+.earthquake-popup__title { margin: 0 0 8px 0; color: #d32f2f; font-weight: 700; font-size: 16px; }
+.earthquake-popup__details p { margin: 6px 0; font-size: 14px; }
+.earthquake-popup__source { margin-top: 6px; font-size: 12px; color: #374151; }
+
+/* Night mode: neutralize map invert for UI overlays and ensure contrast */
+.night-mode .map-wrapper .leaflet-popup,
+.night-mode .map-wrapper .leaflet-control {
+    filter: invert(1) hue-rotate(180deg) brightness(1) contrast(1);
+}
+.night-mode .leaflet-popup-content-wrapper,
+.night-mode .leaflet-popup-tip {
+    background: #0b1220; /* deep slate */
+    color: #e5e7eb; /* text-light */
+}
+.night-mode .leaflet-popup-content p { color: #e5e7eb; }
+.night-mode .leaflet-popup-content p strong { color: #f8fafc; }
+.night-mode .earthquake-popup__title { color: #fca5a5; }
+.night-mode .earthquake-popup__source { color: #cbd5e1; }
+
+/* Navbar ve harita arasÄ±ndaki boÅŸluklarÄ± sÄ±fÄ±rla */
+header,
+nav {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: 0 !important;
+}
+
+main,
+#map,
+.map-container,
+.map-wrapper {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+/* Harita kï¿½ï¿½e yarï¿½ï¿½aplarï¿½ï¿½nï¿½ï¿½ kaldï¿½ï¿½r (tam kaplama) */
+.map-container,
+#map,
+.map-loading {
+    border-radius: 0 !important;
+}
+
+.earthquake-items {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.earthquake-items::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}

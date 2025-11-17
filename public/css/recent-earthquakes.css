@@ -1,0 +1,92 @@
+/* Son 5 Deprem Stilleri */
+.recent-earthquakes {
+    margin-top: 15px;
+}
+
+.earthquake-item-small {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0; /* %20 azaltÄ±ldÄ± (8px -> 6px) */
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px; /* YazÄ± boyutu eski haline getirildi */
+    font-weight: bold; /* YazÄ±lar bold yapÄ±ldÄ± */
+}
+
+.earthquake-item-small:last-child {
+    border-bottom: none;
+}
+
+.magnitude-small {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px; /* %20 azaltÄ±ldÄ± (35px -> 28px) */
+    height: 20px; /* %20 azaltÄ±ldÄ± (25px -> 20px) */
+    border-radius: 3px; /* %20 azaltÄ±ldÄ± (4px -> 3px) */
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+/* Deprem bÃ¼yÃ¼klÃ¼ÄŸÃ¼ renkleri artÄ±k JavaScript ile dinamik olarak atanÄ±yor */
+
+.location-small {
+    color: #555;
+    font-size: 13px; /* YazÄ± boyutu eski haline getirildi */
+    font-weight: bold; /* Konum yazÄ±larÄ± bold yapÄ±ldÄ± */
+    flex: 1;
+}
+
+/* Loading placeholder for recent earthquakes */
+.loading-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.loading-placeholder i {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+/* TÃ¼rkiye depremleri iÃ§in Ã¶zel stiller */
+.no-data-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+    gap: 10px;
+    text-align: center;
+}
+
+.no-data-message i {
+    font-size: 24px;
+    color: #4caf50;
+}
+
+.error-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #f44336;
+    font-size: 14px;
+    gap: 10px;
+    text-align: center;
+}
+
+.error-message i {
+    font-size: 24px;
+    color: #f44336;
+}
