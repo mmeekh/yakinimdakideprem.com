@@ -348,7 +348,7 @@ function processEarthquakeData(earthquakes) {
 }
 
 // Update map with earthquake data
-function updateMap() {
+function updateMap(dataset = AppState.earthquakeData) {
   if (!AppState.map) return;
   
   // Clear existing markers
@@ -356,7 +356,9 @@ function updateMap() {
   AppState.markers = [];
 
   // Add new markers
-  AppState.earthquakeData.forEach((eq) => {
+  const earthquakes = Array.isArray(dataset) ? dataset : [];
+
+  earthquakes.forEach((eq) => {
     // Daha belirgin boyut farkları
     const radius = Math.max(eq.magnitude * 25000, 3000); // Daha büyük farklar
     
@@ -423,6 +425,12 @@ function updateMap() {
             <p><strong>Zaman:</strong> ${Utils.formatDateTime(eq.time)}</p>
           </div>
           <div class="earthquake-popup__source">Kaynak: ${eq.source}</div>
+          <div class="earthquake-popup__actions">
+            <a class="earthquake-popup__action-btn" href="tel:112">112'yi Ara</a>
+            <a class="earthquake-popup__action-btn" href="deprem-aninda.html" target="_blank" rel="noopener noreferrer">
+              Deprem Anında &#128220;
+            </a>
+          </div>
         </div>
       `);
     } catch (e) {}
@@ -444,6 +452,9 @@ function updateEarthquakeList() {
     const minMagnitude = parseFloat(filterValue);
     filteredData = AppState.earthquakeData.filter(eq => eq.magnitude >= minMagnitude);
   }
+
+  // Update map markers to reflect current filter
+  updateMap(filteredData);
 
   if (filteredData.length === 0) {
     container.innerHTML = '<div class="loading">Belirtilen kritere uygun deprem bulunamadı.</div>';
