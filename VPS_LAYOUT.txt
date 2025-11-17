@@ -72,3 +72,8 @@ Common Commands
   curl -I https://yakinimdakideprem.com
   curl https://yakinimdakideprem.com/health
 
+
+Deployment notes (Caddy site file)
+- Copy repo file `yakinimdakideprem.com.Caddyfile` to `/root/caddy/sites/yakinimdakideprem.com.Caddyfile`.
+- Root Caddyfile already imports `/etc/caddy/sites/*.Caddyfile`, so reload with:
+  docker exec root-caddy caddy reload --config /etc/caddy/Caddyfile
