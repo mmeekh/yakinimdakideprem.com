@@ -1231,3 +1231,13 @@ main,
     border-radius: 0 !important;
 }
 
+.earthquake-items {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.earthquake-items::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
