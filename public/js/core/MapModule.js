@@ -205,6 +205,12 @@ class MapModule {
           <p><strong>Zaman:</strong> ${earthquake.time.toLocaleString('tr-TR')}</p>
           <p class="earthquake-popup__source">Kaynak: ${earthquake.source}</p>
         </div>
+        <div class="earthquake-popup__actions">
+          <a class="earthquake-popup__action-btn" href="tel:112">112'yi Ara</a>
+          <a class="earthquake-popup__action-btn" href="deprem-aninda.html" target="_blank" rel="noopener noreferrer">
+            Deprem Anında &#128220;
+          </a>
+        </div>
       </div>
     `;
   }
