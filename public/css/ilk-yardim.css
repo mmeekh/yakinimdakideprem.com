@@ -368,7 +368,7 @@ footer {
 .footer-column ul li a {
     color: #f1f5f9;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     transition: var(--transition);
 }
 
