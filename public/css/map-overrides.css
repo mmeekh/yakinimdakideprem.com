@@ -1,15 +1,23 @@
 /* ========================================
    Yeni Harita YerleÅŸimi
 ======================================== */
+:root {
+    --map-top-offset: calc(var(--header-height, 80px) + 12px);
+}
+
 .map-wrapper {
     position: relative;
     width: 100%;
-    margin-top: 80px; /* header yÃ¼ksekliÄŸi kadar boÅŸluk */
+    margin-top: var(--map-top-offset);
 }
 
 .map-wrapper #map {
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc((100vh - var(--map-top-offset)) * 1.1);
+}
+
+.map-wrapper .leaflet-top {
+    top: calc(var(--map-top-offset) + 8px);
 }
 
 .map-wrapper .earthquake-list {
@@ -18,7 +26,7 @@
     right: 20px;
     transform: translateY(-50%);
     width: 276px; /* %8 azaltÄ±ldÄ± (300px -> 276px) */
-    max-height: calc(90% - 40px); /* %10 azaltÄ±ldÄ± (100% -> 90%) */
+    max-height: calc(70% - 40px); /* Yükseklik %20 azaltıldı (90% -> 70%) */
     overflow-y: auto;
     background: white;
     border-radius: 12px;
@@ -57,12 +65,16 @@
 }
 
 @media (max-width: 768px) {
+    :root {
+        --map-top-offset: calc(var(--header-height, 88px) + 16px);
+    }
+
     .map-wrapper {
-        margin-top: 110px;
+        margin-top: var(--map-top-offset);
     }
 
     .map-wrapper .leaflet-top {
-        top: 16px;
+        top: calc(var(--map-top-offset) + 10px);
     }
 
     .map-wrapper .earthquake-list {
@@ -76,7 +88,7 @@
     }
 
     .map-wrapper #map {
-        height: calc(100vh - 70px);
+        height: calc(100vh - var(--map-top-offset));
     }
 }
 
@@ -188,8 +200,7 @@ nav {
 
 main,
 #map,
-.map-container,
-.map-wrapper {
+.map-container {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
