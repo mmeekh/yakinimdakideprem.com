@@ -36,6 +36,45 @@
     font-weight: bold;
     white-space: nowrap;
     line-height: 1.1;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo span::after {
+    content: '';
+    position: absolute;
+    inset: -20% -10%;
+    background: linear-gradient(120deg,
+        transparent 0%,
+        rgba(244, 67, 54, 0.18) 32%,
+        rgba(244, 67, 54, 0.65) 50%,
+        rgba(244, 67, 54, 0.18) 68%,
+        transparent 100%);
+    transform: translateX(-130%);
+    animation: logo-red-sweep 3s ease-in-out infinite;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+@keyframes logo-red-sweep {
+    0% {
+        transform: translateX(-130%);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.25;
+    }
+    50% {
+        transform: translateX(130%);
+        opacity: 0.65;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(130%);
+        opacity: 0;
+    }
 }
 
 #hidden-header nav {
