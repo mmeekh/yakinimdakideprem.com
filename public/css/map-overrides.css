@@ -18,7 +18,7 @@
     right: 20px;
     transform: translateY(-50%);
     width: 276px; /* %8 azaltÄ±ldÄ± (300px -> 276px) */
-    max-height: calc(90% - 40px); /* %10 azaltÄ±ldÄ± (100% -> 90%) */
+    max-height: calc(70% - 40px); /* Yükseklik %20 azaltıldı (90% -> 70%) */
     overflow-y: auto;
     background: white;
     border-radius: 12px;
