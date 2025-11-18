@@ -13,11 +13,11 @@
 }
 
 .filter-controls select {
-    padding: 8px 12px;
+    padding: 6.4px 9.6px; /* %20 küçültüldü (8px 12px -> 6.4px 9.6px) */
     border: 1px solid #ddd;
-    border-radius: 6px;
+    border-radius: 4.8px; /* %20 küçültüldü (6px -> 4.8px) */
     background: white;
-    font-size: 14px;
+    font-size: 11.2px; /* %20 küçültüldü (14px -> 11.2px) */
     cursor: pointer;
 }
 
