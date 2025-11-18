@@ -38,41 +38,45 @@
     line-height: 1.1;
     position: relative;
     overflow: hidden;
+    display: inline-block;
 }
 
 .logo span::after {
-    content: '';
+    content: attr(data-text);
     position: absolute;
-    inset: -20% -10%;
+    inset: 0;
+    color: transparent;
     background: linear-gradient(120deg,
         transparent 0%,
-        rgba(244, 67, 54, 0.18) 32%,
-        rgba(244, 67, 54, 0.65) 50%,
-        rgba(244, 67, 54, 0.18) 68%,
+        rgba(255, 77, 64, 0.28) 30%,
+        rgba(255, 46, 46, 0.95) 50%,
+        rgba(255, 77, 64, 0.28) 70%,
         transparent 100%);
-    transform: translateX(-130%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
     animation: logo-red-sweep 3s ease-in-out infinite;
     pointer-events: none;
-    mix-blend-mode: screen;
+    opacity: 0;
 }
 
 @keyframes logo-red-sweep {
     0% {
-        transform: translateX(-130%);
+        background-position: -120% 0;
         opacity: 0;
     }
     10% {
-        opacity: 0.25;
+        opacity: 0.35;
     }
     50% {
-        transform: translateX(130%);
-        opacity: 0.65;
+        background-position: 120% 0;
+        opacity: 0.9;
     }
     60% {
         opacity: 0;
     }
     100% {
-        transform: translateX(130%);
+        background-position: 120% 0;
         opacity: 0;
     }
 }
