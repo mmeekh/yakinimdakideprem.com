@@ -91,7 +91,9 @@ function initMap() {
     AppState.map = L.map("map", {
       center: CONFIG.MAP_CENTER,
       zoom: initialZoom,
-      layers: [baseLayer]
+      layers: [baseLayer],
+      zoomControl: false,
+      attributionControl: false
     });
 
     // Hide loading indicator when map is ready
