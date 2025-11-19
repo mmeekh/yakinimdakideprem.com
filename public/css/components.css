@@ -22,24 +22,29 @@
   background: var(--light-color);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+  margin-top: var(--space-5xl, 80px);
 }
 
 .emergency-guide__layout {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-3xl);
-  align-items: center;
+  align-items: flex-start;
 }
 
 .emergency-guide__media {
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .emergency-guide__media img {
-  width: 100%;
+  width: 90%;
+  max-width: 90%;
   height: auto;
   border-radius: 10%;
   box-shadow: var(--shadow-lg);
+  margin: 0 auto;
 }
 
 .emergency-guide__media figcaption {
@@ -81,6 +86,17 @@
   padding: var(--space-md);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xs);
+}
+
+@media (max-width: 768px) {
+  .emergency-guide {
+    margin-top: var(--space-4xl, 60px);
+  }
+
+  .emergency-guide__media img {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 /* İstanbul risk listeleri ve şehir sayfaları */
