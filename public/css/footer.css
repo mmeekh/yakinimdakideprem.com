@@ -87,9 +87,34 @@ footer {
 }
 
 .footer-bottom {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 12px;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #fff;
     font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 4px 0;
+}
+
+.footer-api-source {
+    color: #e2e8f0;
+    font-size: 13px;
+    text-align: right;
+}
+
+.footer-api-source a {
+    color: var(--primary-color, #f97316);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-api-source a:hover {
+    text-decoration: underline;
 }
