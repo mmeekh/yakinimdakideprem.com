@@ -67,7 +67,10 @@ class MapModule {
       ? this.app.config.MAP_ZOOM_MOBILE
       : this.app.config.MAP_ZOOM_DESKTOP;
 
-    this.map = L.map('map').setView(
+    this.map = L.map('map', {
+      zoomControl: false,
+      attributionControl: false
+    }).setView(
       this.app.config.MAP_CENTER,
       initialZoom
     );
