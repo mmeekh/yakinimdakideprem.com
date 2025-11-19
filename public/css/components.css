@@ -18,29 +18,36 @@
 
 /* Çök-Kapan-Tutun rehberi */
 .emergency-guide {
-  padding: var(--space-4xl) 0;
-  background: var(--light-color);
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-5xl) 0;
+  background: var(--dark-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   margin-top: var(--space-5xl, 80px);
 }
 
 .emergency-guide__layout {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-3xl);
-  align-items: flex-start;
+  gap: var(--space-4xl);
+  align-items: center;
 }
 
 .emergency-guide__media {
-  margin: 0;
+  margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-xl);
 }
 
 .emergency-guide__media img {
-  width: 90%;
-  max-width: 90%;
+  width: 100%;
+  max-width: 480px;
   height: auto;
   border-radius: 10%;
   box-shadow: var(--shadow-lg);
@@ -61,6 +68,8 @@
   border-radius: var(--radius-xl);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 .emergency-guide__eyebrow {
@@ -101,6 +110,15 @@
 @media (max-width: 768px) {
   .emergency-guide {
     margin-top: var(--space-4xl, 60px);
+    padding: var(--space-4xl) 0;
+  }
+
+  .emergency-guide__layout {
+    gap: var(--space-3xl);
+  }
+
+  .emergency-guide__media {
+    padding: var(--space-md);
   }
 
   .emergency-guide__media img {
@@ -109,14 +127,19 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 540px) {
   .emergency-guide {
-    margin-top: var(--space-4xl, 60px);
+    margin-top: var(--space-4xl);
+    padding-top: var(--space-4xl);
   }
 
-  .emergency-guide__media img {
-    width: 100%;
+  .emergency-guide__media,
+  .emergency-guide__content {
     max-width: 100%;
+  }
+
+  .emergency-guide__media {
+    margin-top: var(--space-xl);
   }
 }
 
