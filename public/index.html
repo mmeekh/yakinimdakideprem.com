@@ -83,6 +83,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     </script>
     <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Yakınımdaki Deprem",
+        "url": "https://yakinimdakideprem.com/",
+        "inLanguage": "tr-TR",
+        "description": "Yakınımdaki Deprem, AFAD, Kandilli ve USGS verileriyle Türkiye'deki son depremleri ve hazırlık rehberlerini sunar.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://yakinimdakideprem.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Yakınımdaki Deprem",
+        "url": "https://yakinimdakideprem.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yakinimdakideprem.com/icons/android-chrome-512x512.png",
+          "width": 512,
+          "height": 512
+        },
+        "sameAs": [
+          "https://www.instagram.com/yakinimdakideprem",
+          "https://twitter.com/depremyakinim"
+        ]
+      }
+    ]
+    </script>
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -98,6 +131,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     }
     </script>
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -235,7 +269,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <ul>
                             <li><a href="https://earthquake.usgs.gov" target="_blank" rel="noopener noreferrer">USGS</a></li>
                             <li><a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a></li>
-                            <li><a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">KOERİ</a></li>
+                            <li><a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Kandilli Rasathanesi</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -256,6 +290,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>            </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Yakınımdaki Deprem | Toplumu Geliştirmek İçin Çabalayan Bir Girişim</p>
+                <p class="footer-api-source">Deprem API verileri <a href="https://github.com/orhanayd/kandilli-rasathanesi-api" target="_blank" rel="noopener noreferrer">github.com/orhanayd/kandilli-rasathanesi-api</a> kaynağından çekilmektedir.</p>
             </div>
         </div>
     </footer>
