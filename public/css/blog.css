@@ -170,17 +170,6 @@ body {
     transition: background 0.2s ease;
 }
 
-.highlight-link {
-    color: #d32f2f;
-    text-decoration: underline;
-    font-weight: 600;
-}
-
-.highlight-link:hover,
-.highlight-link:focus {
-    color: #ad1f1f;
-}
-
 /* Blog Makalesi */
 .blog-article {
     max-width: 800px;
