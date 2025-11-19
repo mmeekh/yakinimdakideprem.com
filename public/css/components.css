@@ -16,99 +16,49 @@
   outline: none;
 }
 
-/* Ana sayfa bölümleri arası orta kalınlıkta çizgi */
-.section-divider {
-  width: min(960px, 92%);
-  height: 6px;
-  margin: var(--space-4xl) auto var(--space-3xl);
-  border-radius: var(--radius-full);
-  background: linear-gradient(
-    90deg,
-    rgba(211, 47, 47, 0),
-    rgba(211, 47, 47, 0.75) 20%,
-    rgba(255, 87, 34, 0.85) 60%,
-    rgba(255, 255, 255, 0)
-  );
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
 /* Çök-Kapan-Tutun rehberi */
 .emergency-guide {
-  position: relative;
-  padding: var(--space-5xl) 0 var(--space-4xl);
-  background: linear-gradient(145deg, #ffffff 0%, #fff5f3 70%, #ffe9e4 100%);
+  padding: var(--space-4xl) 0;
+  background: var(--light-color);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  overflow: hidden;
-}
-
-.emergency-guide::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top right, rgba(211, 47, 47, 0.08), transparent 60%);
-  pointer-events: none;
 }
 
 .emergency-guide__layout {
-  position: relative;
-  z-index: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: clamp(var(--space-2xl), 4vw, var(--space-4xl));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-3xl);
   align-items: center;
 }
 
 .emergency-guide__media {
-  margin: 0 auto;
-  max-width: 420px;
-  width: 100%;
-  position: relative;
-}
-
-.emergency-guide__media::after {
-  content: "";
-  position: absolute;
-  inset: 12px;
-  border-radius: 12% / 14%;
-  border: 2px dashed rgba(211, 47, 47, 0.3);
-  pointer-events: none;
+  margin: 0;
 }
 
 .emergency-guide__media img {
-  display: block;
   width: 100%;
   height: auto;
   border-radius: 10%;
   box-shadow: var(--shadow-lg);
-  border: 8px solid var(--white);
 }
 
 .emergency-guide__media figcaption {
   margin-top: var(--space-sm);
   font-size: var(--font-size-sm);
   color: var(--text-muted);
-  text-align: center;
 }
 
 .emergency-guide__content {
   background: var(--white);
-  padding: clamp(var(--space-xl), 3vw, var(--space-3xl));
+  padding: var(--space-2xl);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-light);
-}
-
-.emergency-guide__content h2 {
-  font-size: clamp(var(--font-size-3xl), 2vw, var(--font-size-5xl));
-  line-height: var(--line-height-tight);
-  margin-bottom: var(--space-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 .emergency-guide__eyebrow {
   display: inline-flex;
   padding: 4px var(--space-sm);
-  background: rgba(211, 47, 47, 0.12);
+  background: rgba(211, 47, 47, 0.1);
   color: var(--primary-dark);
   border-radius: var(--radius-full);
   font-size: var(--font-size-sm);
@@ -119,40 +69,18 @@
 }
 
 .emergency-guide__steps {
-  margin: var(--space-xl) 0;
-  padding-left: 0;
+  margin: var(--space-lg) 0;
+  padding-left: 1.2rem;
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
-  counter-reset: guide-step;
+  gap: var(--space-sm);
 }
 
 .emergency-guide__steps li {
-  position: relative;
-  padding: var(--space-lg) var(--space-xl) var(--space-lg) calc(var(--space-3xl) + 8px);
   background: var(--light-color);
+  padding: var(--space-md);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xs);
-  font-weight: var(--font-weight-medium);
-}
-
-.emergency-guide__steps li::before {
-  counter-increment: guide-step;
-  content: counter(guide-step);
-  position: absolute;
-  left: var(--space-lg);
-  top: 50%;
-  transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--primary-color);
-  color: var(--white);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: var(--font-weight-bold);
-  box-shadow: var(--shadow-sm);
 }
 
 /* İstanbul risk listeleri ve şehir sayfaları */
@@ -200,17 +128,8 @@
 }
 
 @media (max-width: 768px) {
-  .section-divider {
-    height: 4px;
-    margin: var(--space-3xl) auto var(--space-2xl);
-  }
-
   .emergency-guide {
-    padding: var(--space-4xl) 0 var(--space-3xl);
-  }
-
-  .emergency-guide__media::after {
-    inset: 8px;
+    padding: var(--space-3xl) 0;
   }
 
   .emergency-guide__content {
@@ -223,18 +142,5 @@
 
   .city-context__list--columns {
     columns: 1;
-  }
-}
-
-@media (max-width: 480px) {
-  .emergency-guide__steps li {
-    padding-left: calc(var(--space-2xl) + 12px);
-  }
-
-  .emergency-guide__steps li::before {
-    left: var(--space-sm);
-    width: 28px;
-    height: 28px;
-    font-size: var(--font-size-sm);
   }
 }
