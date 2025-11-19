@@ -50,27 +50,35 @@
 .emergency-guide__media figcaption {
   margin-top: var(--space-sm);
   font-size: var(--font-size-sm);
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
 }
 
 .emergency-guide__content {
-  background: var(--white);
+  background: var(--dark-light);
+  color: var(--text-white);
   padding: var(--space-2xl);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .emergency-guide__eyebrow {
   display: inline-flex;
   padding: 4px var(--space-sm);
-  background: rgba(211, 47, 47, 0.1);
-  color: var(--primary-dark);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
   border-radius: var(--radius-full);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-bottom: var(--space-md);
+}
+
+.emergency-guide__content h2,
+.emergency-guide__content p {
+  color: var(--text-white);
 }
 
 .emergency-guide__steps {
@@ -82,10 +90,23 @@
 }
 
 .emergency-guide__steps li {
-  background: var(--light-color);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-white);
   padding: var(--space-md);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-xs);
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 768px) {
+  .emergency-guide {
+    margin-top: var(--space-4xl, 60px);
+  }
+
+  .emergency-guide__media img {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
