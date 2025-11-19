@@ -19,10 +19,9 @@
 /* Çök-Kapan-Tutun rehberi */
 .emergency-guide {
   padding: var(--space-4xl) 0;
-  background: var(--dark-color);
-  color: var(--text-white);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--light-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   margin-top: var(--space-5xl, 80px);
 }
 
@@ -30,15 +29,13 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-3xl);
-  align-items: center;
+  align-items: flex-start;
 }
 
 .emergency-guide__media {
   margin: 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .emergency-guide__media img {
@@ -99,6 +96,17 @@
   border-radius: var(--radius-lg);
   box-shadow: none;
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 768px) {
+  .emergency-guide {
+    margin-top: var(--space-4xl, 60px);
+  }
+
+  .emergency-guide__media img {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
