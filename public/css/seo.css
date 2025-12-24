@@ -1,0 +1,278 @@
+/* Visible H1 Overlay on Map */
+.map-h1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #d32f2f;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid #ffeba1;
+}
+
+@media (max-width: 768px) {
+    .map-h1 {
+        top: 10px;
+        font-size: 1rem;
+        width: 90%;
+        white-space: normal;
+        padding: 8px 16px;
+    }
+}
+
+/* SEO Content Section */
+.seo-content {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 55%, #f7f9fc 100%);
+    color: #1f2937;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.seo-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.seo-main {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid #eef1f5;
+    box-shadow: 0 18px 46px rgba(15, 23, 42, 0.08);
+}
+
+.seo-main h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.seo-main h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+.seo-main p,
+.seo-main li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #1f2937;
+    margin-bottom: 15px;
+}
+
+.seo-main strong {
+    color: #0f172a;
+}
+
+.seo-main ul {
+    padding-left: 20px;
+}
+
+.seo-main li {
+    margin-bottom: 10px;
+}
+
+/* Sidebar Quick Links */
+.quick-links-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+}
+
+.quick-links-card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: #0f172a;
+}
+
+.quick-links-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links-card ul li {
+    margin-bottom: 12px;
+}
+
+.quick-links-card ul li a {
+    color: #334155;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-fast);
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.quick-links-card ul li a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+.keyword-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 5px;
+}
+
+.keyword-pills li {
+    background: #fff5f5;
+    color: #b91c1c;
+    border: 1px solid #fbd5d5;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 8px 18px rgba(220, 38, 38, 0.08);
+}
+
+/* FAQ Section */
+.bg-light {
+    background-color: #f5f7fb;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #0f172a;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.faq-section {
+    background: #f5f7fb;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    position: relative;
+    color: #0f172a;
+}
+
+.faq-item {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
+    transition: transform 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.1);
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.faq-item p {
+    color: #334155;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .seo-main {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 992px) {
+    .seo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .seo-content {
+        background: linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
+        color: #e5e7eb;
+    }
+
+    .faq-section {
+        background: #0b1220;
+        border-top-color: #1f2937;
+        border-bottom-color: #1f2937;
+    }
+
+    .seo-main {
+        background: #0f172a;
+        border-color: #1f2937;
+        box-shadow: 0 22px 48px rgba(0, 0, 0, 0.4);
+    }
+
+    .seo-main h2,
+    .seo-main h3,
+    .section-title {
+        color: #f8fafc;
+    }
+
+    .seo-main p,
+    .seo-main li {
+        color: #e5e7eb;
+    }
+
+    .seo-main strong {
+        color: #fca5a5;
+    }
+
+    .quick-links-card {
+        background: #0b1220;
+        border-color: #1f2937;
+        box-shadow: 0 18px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    .quick-links-card h3 {
+        color: #f8fafc;
+    }
+
+    .quick-links-card ul li a {
+        color: #e5e7eb;
+        border-bottom-color: #1f2937;
+    }
+
+    .faq-item {
+        background: #111827;
+        border-color: #1f2937;
+    }
+
+    .faq-item h3 {
+        color: #f8fafc;
+    }
+
+    .faq-item p {
+        color: #cbd5e1;
+    }
+
+    .keyword-pills li {
+        background: rgba(248, 113, 113, 0.15);
+        color: #fca5a5;
+        border-color: rgba(248, 113, 113, 0.35);
+    }
+}

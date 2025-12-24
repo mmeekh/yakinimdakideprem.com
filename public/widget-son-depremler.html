@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Son Depremler Widget</title>
+  <style>
+    :root { --primary: #d32f2f; --text: #1f2933; --muted: #556070; --border: #e5e7eb; --bg: #ffffff; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 12px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8fafc;
+      color: var(--text);
+    }
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      padding: 12px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .header h2 {
+      margin: 0;
+      font-size: 16px;
+      color: var(--text);
+    }
+    .list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .item {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 10px;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fff;
+    }
+    .mag {
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      font-weight: 700;
+      color: #fff;
+      min-height: 48px;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .loc { font-weight: 600; font-size: 14px; }
+    .meta { font-size: 12px; color: var(--muted); }
+    .footer {
+      margin-top: 10px;
+      text-align: right;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+    .error { color: #b91c1c; font-size: 13px; margin: 8px 0 0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <h2>Son Depremler</h2>
+      <span id="updated" class="meta"></span>
+    </div>
+    <ul id="list" class="list">
+      <li class="meta">Yükleniyor...</li>
+    </ul>
+    <div class="footer">
+      <a href="https://yakinimdakideprem.com/" target="_blank" rel="noopener noreferrer">Yakınımdaki Deprem</a>
+    </div>
+    <div id="error" class="error" style="display:none;">Veri alınamadı.</div>
+  </div>
+
+  <script>
+    const listEl = document.getElementById('list');
+    const updatedEl = document.getElementById('updated');
+    const errorEl = document.getElementById('error');
+
+    function magnitudeColor(mag) {
+      if (mag >= 7) return '#b71c1c';
+      if (mag >= 6) return '#d32f2f';
+      if (mag >= 5) return '#f44336';
+      if (mag >= 4) return '#ff9800';
+      if (mag >= 3) return '#ffc107';
+      return '#4caf50';
+    }
+
+    function formatTimeAgo(ts) {
+      const diff = Date.now() - new Date(ts).getTime();
+      const sec = Math.floor(diff / 1000);
+      if (sec < 60) return `${sec} sn önce`;
+      const min = Math.floor(sec / 60);
+      if (min < 60) return `${min} dk önce`;
+      const hr = Math.floor(min / 60);
+      if (hr < 24) return `${hr} sa önce`;
+      const day = Math.floor(hr / 24);
+      return `${day} g önce`;
+    }
+
+    async function loadQuakes() {
+      try {
+        const res = await fetch('/api/earthquakes?limit=5&min_magnitude=2.0&hours_back=72');
+        if (!res.ok) throw new Error('API yanıtı başarısız');
+        const data = await res.json();
+        if (!data.success || !Array.isArray(data.data)) throw new Error('Beklenmeyen yanıt');
+        render(data.data, data.last_update);
+        errorEl.style.display = 'none';
+      } catch (e) {
+        errorEl.style.display = 'block';
+        errorEl.textContent = 'Veri alınamadı. Lütfen daha sonra tekrar deneyin.';
+      }
+    }
+
+    function render(items, lastUpdate) {
+      listEl.innerHTML = '';
+      items.slice(0,5).forEach((item) => {
+        const li = document.createElement('li');
+        li.className = 'item';
+        const mag = document.createElement('div');
+        mag.className = 'mag';
+        mag.style.background = magnitudeColor(item.magnitude);
+        mag.textContent = item.magnitude.toFixed(1);
+        const content = document.createElement('div');
+        content.className = 'content';
+        const loc = document.createElement('div');
+        loc.className = 'loc';
+        loc.textContent = item.location;
+        const meta = document.createElement('div');
+        meta.className = 'meta';
+        meta.textContent = `${formatTimeAgo(item.time)} • Derinlik ${item.depth.toFixed(1)} km • ${item.source}`;
+        content.appendChild(loc);
+        content.appendChild(meta);
+        li.appendChild(mag);
+        li.appendChild(content);
+        listEl.appendChild(li);
+      });
+      if (lastUpdate) {
+        updatedEl.textContent = `Güncellendi: ${new Date(lastUpdate).toLocaleTimeString('tr-TR')}`;
+      }
+    }
+
+    loadQuakes();
+    setInterval(loadQuakes, 30000);
+  </script>
+</body>
+</html>

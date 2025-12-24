@@ -16,7 +16,7 @@ class EarthquakeApp {
     };
 
     this.config = {
-      REFRESH_INTERVAL: 120000, // 2 minutes
+      REFRESH_INTERVAL: 20000, // ~20 seconds
       MAP_CENTER: [39.0, 35.0],
       MAP_ZOOM_DESKTOP: 6,
       MAP_ZOOM_MOBILE: 5,

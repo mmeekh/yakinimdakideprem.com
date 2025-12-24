@@ -23,6 +23,22 @@ services:
     networks:
       - web
 
+  twitter-bot:
+    build: .
+    container_name: yakinimdakideprem-twitter-bot
+    env_file: env.production
+    depends_on:
+      - api
+    command: ["python", "app/twitter_worker.py"]
+    volumes:
+      - twitter_bot_data:/data
+    restart: unless-stopped
+    networks:
+      - web
+
 networks:
   web:
     external: true
+
+volumes:
+  twitter_bot_data:

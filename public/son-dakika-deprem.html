@@ -29,8 +29,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:description" content="Az önce deprem oldu mu sorusuna canlı verilerle yanıt veren hızlı sayfa.">
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/blog-son-deprem-haberleri.webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/blog.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/blog.css?v=202512182020">
+    <link rel="stylesheet" href="css/header.css?v=202512182020">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
@@ -72,7 +72,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     }
     </script>
-    <link rel="stylesheet" href="css/footer.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Ana Sayfa",
+        "item": "https://yakinimdakideprem.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Son Dakika Deprem",
+        "item": "https://yakinimdakideprem.com/son-dakika-deprem.html"
+      }]
+    }
+    </script>
+    <link rel="stylesheet" href="css/footer.css?v=202512182020">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -229,9 +246,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </footer>
 
-    <script src="js/header.js"></script>
-    <script src="js/toc.js"></script>
-    <script src="js/live-quakes.js"></script>
+    <script src="js/header.js?v=202512182020"></script>
+    <script src="js/toc.js?v=202512182020"></script>
+    <script src="js/live-quakes.js?v=202512182020"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             renderGlobalQuakes({
@@ -254,7 +271,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 </body>
 </html>
-
 
 
 

@@ -54,8 +54,51 @@ function denyAnalyticsConsent() {
 let consentToastTimer = null;
 let consentToastCleanupTimer = null;
 
+function ensureCookieStyles() {
+  const styleId = 'cookie-consent-fallback-style';
+  if (document.getElementById(styleId)) return;
+  const root = getComputedStyle(document.documentElement);
+  const hasBgVar = root.getPropertyValue('--bg-dark').trim();
+  const hasTextVar = root.getPropertyValue('--text-white').trim();
+  if (hasBgVar && hasTextVar) return; // vars loaded, no need for fallback
+  const style = document.createElement('style');
+  style.id = styleId;
+  style.textContent = `
+    #cookie-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:1080;background:#161616;color:#fff;box-shadow:0 12px 32px rgba(0,0,0,.22);border-radius:16px;padding:16px;font-size:14px}
+    #cookie-consent .cookie-consent__content{display:flex;flex-direction:column;gap:12px}
+    #cookie-consent .cookie-consent__content p{margin:0;line-height:1.5;color:#f0f0f0}
+    #cookie-consent .cookie-consent__actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+    #cookie-consent .btn{cursor:pointer;padding:10px 16px;border-radius:10px;border:none;font-weight:700}
+    #cookie-consent .btn-primary{background:#d62828;color:#fff}
+    #cookie-consent .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+    @media (max-width:600px){#cookie-consent{left:8px;right:8px;bottom:8px;padding:14px}}
+  `;
+  document.head.appendChild(style);
+}
+
+function styleCookieBanner(el) {
+  if (!el) return;
+  const cs = getComputedStyle(el);
+  const needsBg = cs.backgroundColor === 'rgba(0, 0, 0, 0)' || cs.padding === '0px';
+  if (needsBg) {
+    Object.assign(el.style, {
+      background: '#161616',
+      color: '#fff',
+      padding: '16px',
+      borderRadius: '14px',
+      boxShadow: '0 12px 32px rgba(0,0,0,0.22)'
+    });
+  }
+}
+
 function showCookieBanner() {
-  if (document.getElementById('cookie-consent')) return;
+  const existing = document.getElementById('cookie-consent');
+  if (existing) {
+    ensureCookieStyles();
+    styleCookieBanner(existing);
+    return;
+  }
+  ensureCookieStyles();
   const banner = document.createElement('div');
   banner.id = 'cookie-consent';
   banner.innerHTML = `
@@ -67,6 +110,7 @@ function showCookieBanner() {
       </div>
     </div>`;
   document.body.appendChild(banner);
+  styleCookieBanner(banner);
   const accept = banner.querySelector('#cookie-accept');
   const reject = banner.querySelector('#cookie-reject');
   accept.addEventListener('click', () => {
@@ -181,6 +225,7 @@ let listElement = null;
 let mapWrapper = null;
 let updateInfoElement = null;
 let cityDropdowns = [];
+const dropdownHoverTimers = new WeakMap();
 
 // Initialize header functionality
 document.addEventListener('DOMContentLoaded', () => {
@@ -530,24 +575,59 @@ function setupCityDropdowns() {
         button.addEventListener('click', (event) => {
             if (window.innerWidth > MOBILE_BREAKPOINT) return;
             event.preventDefault();
+            clearHoverTimer(dropdown);
             const isOpen = dropdown.classList.toggle('open');
             button.setAttribute('aria-expanded', String(isOpen));
             cityDropdowns.forEach(({ wrapper, button: other }) => {
                 if (wrapper !== dropdown) {
+                    clearHoverTimer(wrapper);
                     wrapper.classList.remove('open');
                     other.setAttribute('aria-expanded', 'false');
                 }
             });
         });
+        setupDesktopHoverDropdown(dropdown, button);
         cityDropdowns.push({ wrapper: dropdown, button });
     });
 }
 
 function resetCityDropdowns() {
     cityDropdowns.forEach(({ wrapper, button }) => {
+        clearHoverTimer(wrapper);
         wrapper.classList.remove('open');
         button.setAttribute('aria-expanded', 'false');
     });
+}
+
+function setupDesktopHoverDropdown(dropdown, button) {
+    dropdown.addEventListener('mouseenter', () => {
+        if (window.innerWidth <= MOBILE_BREAKPOINT) return;
+        clearHoverTimer(dropdown);
+        dropdown.classList.add('open');
+        button.setAttribute('aria-expanded', 'true');
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+        if (window.innerWidth <= MOBILE_BREAKPOINT) return;
+        scheduleHoverClose(dropdown, button);
+    });
+}
+
+function scheduleHoverClose(dropdown, button) {
+    clearHoverTimer(dropdown);
+    const timer = setTimeout(() => {
+        dropdown.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+    }, 200);
+    dropdownHoverTimers.set(dropdown, timer);
+}
+
+function clearHoverTimer(dropdown) {
+    const timer = dropdownHoverTimers.get(dropdown);
+    if (timer) {
+        clearTimeout(timer);
+        dropdownHoverTimers.delete(dropdown);
+    }
 }
 
 function createVisuallyHiddenSpan(text) {

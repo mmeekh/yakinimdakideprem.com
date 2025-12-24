@@ -1,0 +1,205 @@
+/* Blog Detail Page Styles */
+
+/* Base overrides for blog detail structure */
+.blog-detail-container {
+    padding-top: 0;
+    /* Hero takes top space */
+    width: 100%;
+    margin: 0;
+}
+
+/* Hero Section */
+.blog-hero {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    /* Limit height to 45% of viewport */
+    min-height: 350px;
+    max-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    /* Align content to bottom */
+    margin-top: 60px;
+    /* Space for fixed header */
+}
+
+/* Overlay to improve text readability */
+.blog-hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.9) 100%);
+    z-index: 1;
+}
+
+/* Hero Content */
+.blog-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    color: white;
+}
+
+.blog-hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+}
+
+.blog-hero .meta {
+    display: flex;
+    gap: 20px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.blog-hero .meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.blog-hero .meta i {
+    color: var(--secondary-color, #ff5722);
+}
+
+/* Content Container */
+.content.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+/* Content Typography */
+.content .lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: var(--text-primary);
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color, #d32f2f);
+    margin: 40px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-light);
+}
+
+.content h3 {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin: 30px 0 15px;
+}
+
+.content p {
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.content ul,
+.content ol {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    color: var(--text-primary);
+}
+
+.content li {
+    margin-bottom: 10px;
+}
+
+/* Blog Images */
+.blog-image-wrapper {
+    margin: 30px auto;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background-color: var(--bg-secondary);
+}
+
+@media (min-width: 840px) {
+    .blog-image-wrapper {
+        margin: 40px auto;
+    }
+}
+
+.blog-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blog-image-wrapper .caption {
+    background: var(--bg-primary);
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    text-align: center;
+    margin: 0;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Alert Box */
+.alert-box {
+    background-color: rgba(33, 150, 243, 0.15);
+    /* Transparent blue works on both light/dark */
+    border-left: 4px solid #2196f3;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.alert-box strong {
+    color: #2196f3;
+    /* Brighter blue for better contrast on dark */
+}
+
+/* Links */
+.content a {
+    color: var(--primary-color, #d32f2f);
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.content a:hover {
+    color: var(--secondary-color, #ff5722);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .blog-hero {
+        height: 40vh;
+        min-height: 250px;
+    }
+
+    .blog-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .content.container {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+    .blog-image-wrapper {
+        margin: 30px 0;
+    }
+}

@@ -18,11 +18,11 @@
 
 /* Çök-Kapan-Tutun rehberi */
 .emergency-guide {
-  padding: var(--space-5xl) 0;
+  padding: calc(var(--space-5xl) + var(--space-lg)) 0 var(--space-5xl);
   background: var(--dark-color);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  margin-top: var(--space-5xl, 80px);
+  margin-top: 0;
 }
 
 .emergency-guide__layout {
@@ -109,8 +109,8 @@
 
 @media (max-width: 768px) {
   .emergency-guide {
-    margin-top: var(--space-4xl, 60px);
-    padding: var(--space-4xl) 0;
+    margin-top: 0;
+    padding: calc(var(--space-3xl) + var(--space-md)) 0 var(--space-3xl);
   }
 
   .emergency-guide__layout {
@@ -129,7 +129,7 @@
 
 @media (max-width: 540px) {
   .emergency-guide {
-    margin-top: var(--space-4xl);
+    margin-top: 0;
     padding-top: var(--space-4xl);
   }
 
@@ -147,9 +147,10 @@
 .city-context {
   margin-top: var(--space-4xl);
   padding: var(--space-2xl);
-  background: var(--white);
+  background: #ffffff;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-sm);
+  color: #0f172a;
 }
 
 .city-context__figure {
@@ -166,13 +167,14 @@
 .city-context__figure figcaption {
   margin-top: var(--space-sm);
   font-size: var(--font-size-sm);
-  color: var(--text-muted);
+  color: #6b7280;
 }
 
 .city-context__list {
   margin: var(--space-lg) 0;
   padding-left: var(--space-xl);
   line-height: 1.6;
+  color: #0f172a;
 }
 
 .city-context__list--columns {
@@ -185,6 +187,7 @@
 .city-context__list--columns li {
   break-inside: avoid;
   padding-left: var(--space-sm);
+  color: #0f172a;
 }
 
 @media (max-width: 768px) {

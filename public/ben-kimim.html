@@ -28,8 +28,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/depremcantasi.webp">
         <meta name="keywords" content="ben kimim, yakınımdaki deprem, deprem uzmanları, afet yönetimi, deprem güvenliği, ücretsiz deprem bilgisi, Türk milleti, deprem hazırlığı, güvenli yaşam">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/ben-kimim.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/ben-kimim.css?v=202512182020">
+    <link rel="stylesheet" href="css/header.css?v=202512182020">
     <!-- Three.js for flag animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <!-- Favicon Icons -->
@@ -69,7 +69,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                  }
 }
     </script>
-    <link rel="stylesheet" href="css/footer.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Ana Sayfa",
+        "item": "https://yakinimdakideprem.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Ben Kimim",
+        "item": "https://yakinimdakideprem.com/ben-kimim.html"
+      }]
+    }
+    </script>
+    <link rel="stylesheet" href="css/footer.css?v=202512182020">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -287,6 +304,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <li><a href="https://earthquake.usgs.gov" target="_blank" rel="noopener noreferrer">USGS</a></li>
                             <li><a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a></li>
                             <li><a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Kandilli Rasathanesi</a></li>
+                            <li><a href="/veri-kaynaklari.html" rel="noopener noreferrer">Veri Kaynakları</a></li>
+                            <li><a href="/api.html" rel="noopener noreferrer">API</a></li>
+                            <li><a href="/embed.html" rel="noopener noreferrer">Embed</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -312,13 +332,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </footer>
-    <script src="js/header.js"></script>
-    <script src="js/flag-animation.js"></script>
-    <script src="js/ben-kimim.js"></script>
+    <script src="js/header.js?v=202512182020"></script>
+    <script src="js/flag-animation.js?v=202512182020"></script>
+    <script src="js/ben-kimim.js?v=202512182020"></script>
 </body>
 </html>
-
-
 
 
 

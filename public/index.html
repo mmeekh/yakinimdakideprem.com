@@ -1,50 +1,53 @@
 ﻿<!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WQZS53QX');</script>
-<!-- End Google Tag Manager -->
-    <title>Son Depremler ve Yakınımdaki Deprem - Canlı Takip Haritası</title>
-    <meta name="description" content="Türkiye geneli ve yakınınızdaki son depremleri anlık olarak harita üzerinde izleyin. AFAD ve Kandilli verileriyle en güncel deprem listesi.">
-        <meta name="keywords" content="yakınımdaki deprem, son depremler, deprem haritası, deprem bilgileri, canlı deprem, Türkiye depremleri, gerçek zamanlı deprem, deprem uyarıları, afet hazırlığı, deprem">
+
+    <!-- Performance: Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WQZS53QX');</script>
+    <!-- End Google Tag Manager -->
+    <title>Anlık Deprem, Son Depremler ve Yakınımdaki Deprem - Canlı Harita</title>
+    <meta name="description"
+        content="Anlık deprem haritası ile Türkiye ve şehirlerdeki son depremleri izleyin. AFAD ve Kandilli verileriyle İstanbul'da deprem mi oldu, deprem son dakika ve deprem haritası sorularına canlı yanıt alın.">
+    <meta name="keywords"
+        content="anlık deprem, son depremler, deprem mi oldu, deprem son dakika, deprem haritası, canlı deprem, yakınımdaki deprem, AFAD son depremler, Kandilli son depremler, İstanbul deprem, İzmir deprem, Ankara deprem">
     <meta name="author" content="Yakınımdaki Deprem">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://yakinimdakideprem.com/" />
-<meta property="og:locale" content="tr_TR">
+    <meta property="og:locale" content="tr_TR">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri">
-    <meta property="og:description" content="Yakınımdaki Deprem ile Türkiye ve dünyadaki son depremleri interaktif harita üzerinde görün, büyüklük filtreleriyle size en yakın depremleri takip edin.">
+    <meta property="og:title" content="Anlık Deprem ve Son Depremler - Yakınımdaki Deprem Haritası">
+    <meta property="og:description"
+        content="Türkiye ve şehirlerdeki anlık deprem, deprem son dakika ve deprem mi oldu sorgularını AFAD-Kandilli verileriyle tek ekranda görün.">
     <meta property="og:url" content="https://yakinimdakideprem.com/">
     <meta property="og:site_name" content="Yakınımdaki Deprem">
     <meta property="og:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.png">
     <meta property="og:image:alt" content="Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri görseli">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri">
-    <meta name="twitter:description" content="Yakınımdaki Deprem ile Türkiye ve dünyadaki son depremleri interaktif harita üzerinde görün, büyüklük filtreleriyle size en yakın depremleri takip edin.">
-    <meta name="twitter:image" content="https://yakinimdakideprem.com/images/depremcantasi.webp">
-
-
-
-
-
-
-
-
-
-
-
-
+    <meta name="twitter:title" content="Anlık Deprem ve Son Depremler - Yakınımdaki Deprem Haritası">
+    <meta name="twitter:description"
+        content="Anlık deprem haritası, deprem mi oldu ve deprem son dakika sorguları için AFAD/Kandilli verilerini tek ekranda sunuyoruz.">
+    <meta name="twitter:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.png">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/style.css?v=202512182020">
+    <link rel="stylesheet" href="css/header.css?v=202512182020">
+    <link rel="stylesheet" href="css/components.css?v=202512182020">
     <!-- Favicon Icons -->
     <link rel="shortcut icon" href="/icons/favicon-32x32.png" type="image/png">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
@@ -58,23 +61,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="icon" type="image/png" sizes="512x512" href="icons/android-chrome-512x512.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
-    
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J03Y3ZWDWD"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-J03Y3ZWDWD');
+        gtag('config', 'G-J03Y3ZWDWD');
     </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri",
+      "name": "Anlık Deprem ve Son Depremler - Yakınımdaki Deprem Haritası",
       "url": "https://yakinimdakideprem.com/",
-      "description": "Yakınımdaki Deprem ile Türkiye ve dünyadaki son depremleri interaktif harita üzerinde görün, büyüklük filtreleriyle size en yakın depremleri takip edin.",
+      "description": "Anlık deprem haritası, deprem son dakika ve deprem mi oldu soruları için AFAD ve Kandilli verilerini birleştirerek gösterir.",
       "inLanguage": "tr-TR",
       "isPartOf": {
         "@type": "WebSite",
@@ -91,7 +94,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "name": "Yakınımdaki Deprem",
         "url": "https://yakinimdakideprem.com/",
         "inLanguage": "tr-TR",
-        "description": "Yakınımdaki Deprem, AFAD, Kandilli ve USGS verileriyle Türkiye'deki son depremleri ve hazırlık rehberlerini sunar.",
+        "description": "Yakınımdaki Deprem, AFAD, Kandilli ve USGS verileriyle anlık deprem, deprem son dakika, deprem mi oldu ve deprem haritası sorgularını yanıtlar.",
         "potentialAction": {
           "@type": "SearchAction",
           "target": "https://yakinimdakideprem.com/?q={search_term_string}",
@@ -122,7 +125,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@type": "WebApplication",
       "name": "Yakınımdaki Deprem",
       "url": "https://yakinimdakideprem.com",
-      "description": "Anlık deprem takip ve bilgilendirme sistemi.",
+      "description": "Anlık deprem, son depremler ve deprem mi oldu sorularına cevap veren canlı harita uygulaması.",
       "applicationCategory": "SafetyApplication",
       "operatingSystem": "Web",
       "offers": {
@@ -132,18 +135,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     }
     </script>
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/footer.css?v=202512182020">
+    <style>
+        /* Screen reader only class for SEO H1 */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    </style>
 </head>
+
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQZS53QX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <!-- Sabit Header -->
+    <!-- Gizli Header -->
     <header id="hidden-header">
         <div class="container">
             <a href="/" class="logo" rel="noopener noreferrer">
-                <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem Logo" width="60" height="60">
+                <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem logosu" width="60" height="60">
                 <span data-text="Yakınımdaki Deprem">Yakınımdaki Deprem</span>
             </a>
             <nav>
@@ -152,7 +166,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="/ilk-yardim-cantasi.html" rel="noopener noreferrer">İlk Yardım Çantası</a>
                 <a href="/ben-kimim.html" rel="noopener noreferrer">Ben Kimim</a>
                 <a href="/blog.html" rel="noopener noreferrer">Blog</a>
-                            <div class="nav-dropdown">
+                <div class="nav-dropdown">
                     <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
                         Şehir Depremleri <i class="fas fa-chevron-down"></i>
                     </button>
@@ -167,106 +181,239 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </nav>
         </div>
     </header>
+    <!-- Harita ve Overlay Alanı -->
+    <div class="map-wrapper">
+        <h1 class="map-h1">Anlık Deprem ve Son Depremler - Türkiye Deprem Haritası</h1>
+        <div id="map"></div>
 
-    <main>
-        <!-- Harita ve Overlay Alanı -->
-        <div class="map-wrapper">
-            <div id="map"></div>
-
-            <!-- Büyüklük Göstergesi -->
-            <div class="magnitude-legend overlay">
-                <div class="legend-title">Deprem Büyüklüğü</div>
-                <div class="legend-items">
-                    <div class="legend-item">
-                        <div class="color-box" style="background-color: #4caf50;"></div>
-                        <span>0 - 2.9</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="color-box" style="background-color: #ffc107;"></div>
-                        <span>3.0 - 3.9</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="color-box" style="background-color: #ff9800;"></div>
-                        <span>4.0 - 4.9</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="color-box" style="background-color: #ff5722;"></div>
-                        <span>5.0 - 5.9</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="color-box" style="background-color: #f44336;"></div>
-                        <span>6.0 - 6.9</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="color-box" style="background-color: #d32f2f;"></div>
-                        <span>7.0 - 7.9</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="color-box" style="background-color: #7b1fa2;"></div>
-                        <span>8.0+</span>
-                    </div>
+        <!-- Büyüklük Göstergesi -->
+        <div class="magnitude-legend overlay">
+            <div class="legend-title">Deprem Büyüklüğü</div>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: #4caf50;"></div>
+                    <span>0 - 2.9</span>
                 </div>
-                <button id="turkey-btn" class="turkey-btn">
-                    <i class="fas fa-map-marker-alt"></i>
-                    Türkiye'ye Git
-                </button>
-                <button id="night-mode-btn" class="night-mode-btn">
-                    <i class="fas fa-moon"></i>
-                    Gece Modu
-                </button>
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: #ffc107;"></div>
+                    <span>3.0 - 3.9</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: #ff9800;"></div>
+                    <span>4.0 - 4.9</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: #ff5722;"></div>
+                    <span>5.0 - 5.9</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: #f44336;"></div>
+                    <span>6.0 - 6.9</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: #d32f2f;"></div>
+                    <span>7.0 - 7.9</span>
+                </div>
+                <div class="legend-item">
+                    <div class="color-box" style="background-color: #7b1fa2;"></div>
+                    <span>8.0+</span>
+                </div>
             </div>
-
-            <!-- Son Depremler Listesi -->
-            <aside class="earthquake-list overlay" rel="noopener noreferrer">
-                <div class="list-header">
-                    <h2>Son Depremler</h2>
-                    <div class="filter-controls">
-                        <select id="magnitude-filter">
-                            <option value="all">Tüm Büyüklükler</option>
-                            <option value="3">3.0+</option>
-                            <option value="4">4.0+</option>
-                            <option value="5">5.0+</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="earthquake-items" id="earthquake-items">
-                    <div class="loading">Depremler yükleniyor...</div>
-                </div>
-            </aside>
-
-            <!-- Güncelleme Bilgisi -->
-            <div class="update-info overlay">
-                <span id="last-update">Son güncelleme: Yükleniyor...</span>
-                <button id="refresh-btn" class="btn-refresh">
-                    <i class="fas fa-sync-alt"></i>
-                </button>
-            </div>
+            <button id="turkey-btn" class="turkey-btn">
+                <i class="fas fa-map-marker-alt"></i>
+                Türkiye'ye Git
+            </button>
+            <button id="night-mode-btn" class="night-mode-btn">
+                <i class="fas fa-moon"></i>
+                Gece Modu
+            </button>
         </div>
 
-        <section class="emergency-guide" aria-labelledby="emergency-guide-heading">
-            <div class="container emergency-guide__layout">
-                <figure class="emergency-guide__media">
-                    <img
-                        src="images/cokapantutun.webp"
-                        alt="Çök-kapan-tutun hareketini gösteren acil durum illüstrasyonu"
-                        loading="lazy"
-                        width="3070"
-                        height="2048">
-                    <figcaption>Yazar: Emin Kılıç – Çök-Kapan-Tutun refleksini hatırlatan eğitim görseli.</figcaption>
-                </figure>
-                <div class="emergency-guide__content">
-                    <p class="emergency-guide__eyebrow">Deprem Anında Güvenlik</p>
-                    <h2 id="emergency-guide-heading">Çök-Kapan-Tutun kuralını saniyeler içinde hatırlayın</h2>
-                    <p>Haritadan sonra gelen bu mini rehber, deprem anında reflekslerinizi güçlendirmek için hazırlandı. Çök-Kapan-Tutun tekniği; düşen nesnelerden korunmanızı, baş ve boyun bölgesini güvenceye almanızı ve sarsıntı bitene kadar sabit kalmanızı sağlar.</p>
-                    <ul class="emergency-guide__steps">
-                        <li><strong>Çök:</strong> Dizlerinizin üzerine inerek ağırlık merkezini alçaltın ve dengede kalın.</li>
-                        <li><strong>Kapan:</strong> Baş ve boynunuzu ellerinizle koruyun, mümkünse kask veya yastık gibi ek destek kullanın.</li>
-                        <li><strong>Tutun:</strong> Sağlam bir masa, sıra veya duvar kolonuna tutunarak sarsıntı geçene kadar bekleyin.</li>
-                    </ul>
-                    <p>Elektriklerin kesildiği, merdivenlerin kalabalık olduğu senaryolarda bu üç adım hayat kurtarır. Ailenizle birlikte düzenli tatbikat yaparak kas hafızasını güçlendirin, daha kapsamlı bilgiler için <a class="highlight-link" href="/deprem-aninda.html" rel="noopener noreferrer">Deprem Anında</a> rehberimizi inceleyin.</p>
+        <!-- Son Depremler Listesi -->
+        <aside class="earthquake-list overlay" rel="noopener noreferrer">
+            <div class="list-header">
+                <h2>Son Depremler</h2>
+                <div class="filter-controls">
+                    <select id="magnitude-filter">
+                        <option value="all">Tüm Büyüklükler</option>
+                        <option value="3">3.0+</option>
+                        <option value="4">4.0+</option>
+                        <option value="5">5.0+</option>
+                    </select>
                 </div>
             </div>
-        </section>
+            <div class="earthquake-items" id="earthquake-items">
+                <div class="loading">Depremler yükleniyor...</div>
+            </div>
+        </aside>
+
+        <!-- Güncelleme Bilgisi -->
+        <div class="update-info overlay">
+            <span id="last-update">Son güncelleme: Yükleniyor...</span>
+            <button id="refresh-btn" class="btn-refresh">
+                <i class="fas fa-sync-alt"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- SEO Content Section -->
+    <section class="seo-content section-padding">
+        <div class="container">
+            <div class="seo-grid">
+                <div class="seo-main">
+                    <h2>Anlık Deprem ve Türkiye Deprem Haritası</h2>
+                    <p><strong>Deprem</strong>, Türkiye'nin jeolojik gerçeğidir. Ülkemiz, Kuzey Anadolu Fay Hattı (KAF),
+                        Doğu Anadolu Fay Hattı (DAF) ve Batı Anadolu Fay Hattı (BAF) üzerinde yer aldığından, aktif bir
+                        deprem kuşağındadır.</p>
+                    <p><strong>Yakınımdaki Deprem</strong> ile anlık deprem, son depremler, deprem mi oldu ve deprem son
+                        dakika sorgularını <strong>AFAD</strong> ile <strong>Kandilli Rasathanesi</strong> verilerini
+                        birleştirerek gösteriyoruz. Haritamızda kırmızı ile işaretlenen alanlar yüksek riskli bölgeleri,
+                        yeşil alanlar ise daha düşük sismik hareketliliği temsil eder. İstanbul deprem, İzmir deprem ve
+                        Ankara deprem aramalarına saniyeler içinde cevap almak için haritayı ve listeyi sık sık
+                        yenileyin.</p>
+
+                    <h3>Son Depremler Nereden Takip Edilir?</h3>
+                    <p>Deprem olduğu anda en doğru bilgiye ulaşmak hayati önem taşır. Sitemiz, şu kaynaklardan verileri
+                        derleyerek saniyeler içinde size sunar:</p>
+                    <ul>
+                        <li><strong>AFAD (Afet ve Acil Durum Yönetimi Başkanlığı):</strong> Türkiye'nin resmi afet
+                            yönetim kurumu.</li>
+                        <li><strong>Kandilli Rasathanesi:</strong> Boğaziçi Üniversitesi'ne bağlı, Türkiye'nin en eski
+                            deprem gözlem merkezi.</li>
+                        <li><strong>USGS (Amerika Jeoloji Araştırmaları Kurumu):</strong> Büyük ölçekli depremlerin
+                            global teyidi için kullanılır.</li>
+                    </ul>
+
+                    <h3>En Çok Aranan Deprem Sorguları</h3>
+                    <p>Google'da en çok aranan deprem sorgularını tek ekranda karşılıyoruz: anlık deprem haritası,
+                        son depremler, deprem mi oldu ve şehir bazında deprem son dakika sonuçları.</p>
+                    <ul class="keyword-pills">
+                        <li>Anlık deprem haritası</li>
+                        <li>Son depremler</li>
+                        <li>Deprem mi oldu?</li>
+                        <li>Deprem son dakika</li>
+                        <li>İstanbul deprem</li>
+                        <li>İzmir deprem</li>
+                        <li>Ankara deprem</li>
+                        <li>AFAD son depremler</li>
+                        <li>Kandilli son depremler</li>
+                        <li>Canlı deprem listesi</li>
+                    </ul>
+                    <p>Bu sorgular için sayfayı yer imlerine ekleyin; veriler otomatik yenilenir ve harita odak düğmesi
+                        ile doğrudan Türkiye geneline gidebilirsiniz.</p>
+                </div>
+                <div class="seo-sidebar">
+                    <div class="quick-links-card">
+                        <h3>Önemli Bağlantılar</h3>
+                        <ul>
+                            <li><a href="/deprem-istanbul.html">İstanbul Son Depremler</a></li>
+                            <li><a href="/deprem-izmir.html">İzmir Son Depremler</a></li>
+                            <li><a href="/deprem-kahramanmaras.html">Kahramanmaraş Depremleri</a></li>
+                            <li><a href="/deprem-aninda.html">Deprem Anında Yapılacaklar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section with Schema -->
+    <section class="faq-section section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Sıkça Sorulan Sorular (SSS)</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Az önce deprem mi oldu?</h3>
+                    <p>Türkiye'de her gün yüzlerce mikro deprem olmaktadır. Eğer sarsıntı hissettiyseniz,
+                        anasayfamızdaki "Son Depremler" listesinden en güncel verileri kontrol ediniz. Listemiz her 20
+                        saniyede bir güncellenmektedir.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>İstanbul'da deprem mi oldu, nereden bakarım?</h3>
+                    <p>İstanbul deprem, İzmir deprem ve Ankara deprem gibi şehir sorgularını "Önemli Bağlantılar"
+                        kutusundaki hızlı linklerden ve ana haritadan takip edebilirsiniz. AFAD/Kandilli verileri
+                        dakikalar içinde yenilenir.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Deprem haritası ne kadar güvenilir?</h3>
+                    <p>Verilerimiz doğrudan AFAD ve Kandilli Rasathanesi API'lerinden anlık olarak çekilmektedir. Resmi
+                        verilerle birebir aynıdır ve gecikmesiz yansıtılır.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Deprem anında ilk ne yapmalıyım?</h3>
+                    <p>Deprem anında panik yapmadan <strong>Çök - Kapan - Tutun</strong> hareketini uygulayın. Sağlam
+                        bir eşyanın yanına çömelin, başınızı koruyun ve sarsıntı geçene kadar bekleyin. Detaylı bilgi
+                        için <a href="/deprem-aninda.html">Deprem Anında</a> rehberimizi okuyun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Schema Script -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "Az önce deprem mi oldu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Türkiye'de her gün yüzlerce mikro deprem olmaktadır. Eğer sarsıntı hissettiyseniz, anasayfamızdaki 'Son Depremler' listesinden en güncel verileri kontrol ediniz. Listemiz her 20 saniyede bir güncellenmektedir."
+            }
+          }, {
+            "@type": "Question",
+            "name": "İstanbul'da deprem mi oldu, nereden bakarım?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "İstanbul deprem, İzmir deprem ve Ankara deprem sorgularını 'Önemli Bağlantılar' kutusundaki hızlı linklerden ve ana haritadan kontrol edebilirsiniz. AFAD ve Kandilli verileri dakikalar içinde yenilenir."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Deprem haritası ne kadar güvenilir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Verilerimiz doğrudan AFAD ve Kandilli Rasathanesi API'lerinden anlık olarak çekilmektedir. Resmi verilerle birebir aynıdır ve gecikmesiz yansıtılır."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Deprem anında ilk ne yapmalıyım?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Deprem anında panik yapmadan Çök - Kapan - Tutun hareketini uygulayın. Sağlam bir eşyanın yanına çömelin, başınızı koruyun ve sarsıntı geçene kadar bekleyin."
+            }
+          }]
+        }
+        </script>
+
+    <section class="emergency-guide" aria-labelledby="emergency-guide-heading">
+        <div class="container emergency-guide__layout">
+            <figure class="emergency-guide__media">
+                <img src="images/cokapantutun.webp" alt="Çök-kapan-tutun hareketini gösteren acil durum illüstrasyonu"
+                    loading="lazy" width="3070" height="2048">
+                <figcaption>Yazar: Emin Kılıç – Çök-Kapan-Tutun refleksini hatırlatan eğitim görseli.</figcaption>
+            </figure>
+            <div class="emergency-guide__content">
+                <p class="emergency-guide__eyebrow">Deprem Anında Güvenlik</p>
+                <h2 id="emergency-guide-heading">Çök-Kapan-Tutun kuralını saniyeler içinde hatırlayın</h2>
+                <p>Haritadan sonra gelen bu mini rehber, deprem anında reflekslerinizi güçlendirmek için hazırlandı.
+                    Çök-Kapan-Tutun tekniği; düşen nesnelerden korunmanızı, baş ve boyun bölgesini güvenceye
+                    almanızı ve sarsıntı bitene kadar sabit kalmanızı sağlar.</p>
+                <ul class="emergency-guide__steps">
+                    <li><strong>Çök:</strong> Dizlerinizin üzerine inerek ağırlık merkezini alçaltın ve dengede
+                        kalın.</li>
+                    <li><strong>Kapan:</strong> Baş ve boynunuzu ellerinizle koruyun, mümkünse kask veya yastık gibi
+                        ek destek kullanın.</li>
+                    <li><strong>Tutun:</strong> Sağlam bir masa, sıra veya duvar kolonuna tutunarak sarsıntı geçene
+                        kadar bekleyin.</li>
+                </ul>
+                <p>Elektriklerin kesildiği, merdivenlerin kalabalık olduğu senaryolarda bu üç adım hayat kurtarır.
+                    Ailenizle birlikte düzenli tatbikat yaparak kas hafızasını güçlendirin, daha kapsamlı bilgiler
+                    için <a class="highlight-link" href="/deprem-aninda.html" rel="noopener noreferrer">Deprem
+                        Anında</a> rehberimizi inceleyin.</p>
+            </div>
+        </div>
+    </section>
 
     </main>
 
@@ -277,9 +424,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="footer-logo">
                     <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem Logo" width="50" height="50">
                     <h3>Yakınımdaki Deprem</h3>
-                    <p>Yakınımdakideprem.com bağımsız, ücretsiz bir topluluk projesidir. Resmi kurumlarla bağlantılı değildir.</p>
+                    <p>Yakınımdakideprem.com bağımsız, ücretsiz bir topluluk projesidir. Resmi kurumlarla bağlantılı
+                        değildir.</p>
                 </div>
-                                <div class="footer-links">
+                <div class="footer-links">
                     <div class="footer-column">
                         <h4>Hızlı Linkler</h4>
                         <ul>
@@ -293,50 +441,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="footer-column">
                         <h4>Kaynaklar</h4>
                         <ul>
-                            <li><a href="https://earthquake.usgs.gov" target="_blank" rel="noopener noreferrer">USGS</a></li>
-                            <li><a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a></li>
-                            <li><a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Kandilli Rasathanesi</a></li>
+                            <li><a href="https://earthquake.usgs.gov" target="_blank" rel="noopener noreferrer">USGS</a>
+                            </li>
+                            <li><a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a>
+                            </li>
+                            <li><a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Kandilli
+                                    Rasathanesi</a></li>
+                            <li><a href="/veri-kaynaklari.html" rel="noopener noreferrer">Veri Kaynakları</a></li>
+                            <li><a href="/api.html" rel="noopener noreferrer">API</a></li>
+                            <li><a href="/embed.html" rel="noopener noreferrer">Embed</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h4>İletişim</h4>
                         <ul>
-                            <li><a href="https://www.linkedin.com/in/emin-k%C4%B1l%C4%B1%C3%A7-250b14210/" target="_blank" rel="noopener noreferrer">LinkedIn Profilim</a></li>
+                            <li><a href="/iletisim.html" rel="noopener noreferrer">İletişim</a></li>
+                            <li><a href="https://www.linkedin.com/in/emin-k%C4%B1l%C4%B1%C3%A7-250b14210/"
+                                    target="_blank" rel="noopener noreferrer">LinkedIn Profilim</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h4>Yasal</h4>
                         <ul>
                             <li><a href="/kullanim-sartlari.html" rel="noopener noreferrer">Kullanım Şartları</a></li>
-                            <li><a href="/gizlilik-politikasi.html" rel="noopener noreferrer">Gizlilik Politikası</a></li>
+                            <li><a href="/gizlilik-politikasi.html" rel="noopener noreferrer">Gizlilik Politikası</a>
+                            </li>
                             <li><a href="/cerez-politikasi.html" rel="noopener noreferrer">Çerez Politikası</a></li>
                             <li><a href="/sorumluluk-reddi.html" rel="noopener noreferrer">Sorumluluk Reddi</a></li>
                         </ul>
                     </div>
-                </div>            </div>
+                </div>
+            </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Yakınımdaki Deprem | Toplumu Geliştirmek İçin Çabalayan Bir Girişim</p>
-                <p class="footer-api-source">Deprem API verileri <a href="https://github.com/orhanayd/kandilli-rasathanesi-api" target="_blank" rel="noopener noreferrer">github.com/orhanayd/kandilli-rasathanesi-api</a> kaynağından çekilmektedir.</p>
+                <p class="footer-api-source">Deprem API verileri <a
+                        href="https://github.com/orhanayd/kandilli-rasathanesi-api" target="_blank"
+                        rel="noopener noreferrer">github.com/orhanayd/kandilli-rasathanesi-api</a> kaynağından
+                    çekilmektedir.</p>
             </div>
         </div>
     </footer>
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="js/header.js"></script>
+    <script src="js/header.js?v=202512182020"></script>
     <!-- Ana Script -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=202512182020"></script>
     <!-- Türkiye Depremleri Script -->
-    <script src="js/turkey-earthquakes.js"></script>
+    <script src="js/turkey-earthquakes.js?v=202512182020"></script>
     <!-- İstatistik Güncelleyici Script -->
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-

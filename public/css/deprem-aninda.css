@@ -34,7 +34,7 @@ body {
 .page-header {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
-    padding: 120px 0 60px;
+    padding: 140px 0 60px;
     text-align: center;
     margin-top: 0;
 }
@@ -295,20 +295,20 @@ footer {
     .page-header h1 {
         font-size: 28px;
     }
-    
+
     .safety-guides {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    
+
+
     .footer-content {
         flex-direction: column;
     }
-    
+
     .footer-links {
         flex-direction: column;
         gap: 30px;
@@ -382,16 +382,16 @@ footer {
     .earthquake-stats h2 {
         font-size: 2rem;
     }
-    
+
     .stats-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .stat-item {
         padding: 20px;
     }
-    
+
     .stat-value {
         font-size: 2rem;
     }

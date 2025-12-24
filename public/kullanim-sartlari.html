@@ -29,8 +29,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:description" content="Yakınımdaki Deprem web sitesi kullanım şartları ve koşulları. Hizmet kullanımı için geçerli olan kurallar ve yükümlülükler.">
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/depremcantasi.webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css?v=202512182020">
+    <link rel="stylesheet" href="css/header.css?v=202512182020">
     <!-- Favicon Icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
@@ -68,7 +68,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                  }
 }
     </script>
-    <link rel="stylesheet" href="css/footer.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Ana Sayfa",
+        "item": "https://yakinimdakideprem.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Yasal",
+        "item": "https://yakinimdakideprem.com/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Kullanım Şartları",
+        "item": "https://yakinimdakideprem.com/kullanim-sartlari.html"
+      }]
+    }
+    </script>
+    <link rel="stylesheet" href="css/footer.css?v=202512182020">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -163,15 +185,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <p>Bu kullanım şartları Türk hukukuna tabidir. Uyuşmazlıklar İstanbul mahkemelerinde çözülecektir.</p>
             </section>
 
-            <section class="legal-section">
-                <h2>9. İletişim</h2>
-                <p>Kullanım şartları ile ilgili sorularınız için:</p>
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> E-posta: info@yakınımdakideprem.com</p>
-                    <p><i class="fas fa-phone"></i> Telefon: +90 (212) 123 45 67</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Adres: İstanbul, Türkiye</p>
-                </div>
-            </section>
+	            <section class="legal-section">
+	                <h2>9. İletişim</h2>
+	                <p>Kullanım şartları ile ilgili sorularınız için:</p>
+	                <div class="contact-info">
+	                    <p><i class="fas fa-link"></i> <a href="/iletisim.html" rel="noopener noreferrer">İletişim sayfası</a> üzerinden bize ulaşabilirsiniz.</p>
+	                </div>
+	            </section>
 
             <div class="legal-footer">
                 <p><strong>Not:</strong> Bu kullanım şartları 15 Aralık 2023 tarihinde yürürlüğe girmiştir. Güncellemeler web sitesinde yayınlanacaktır.</p>
@@ -200,11 +220,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <a href="/cerez-politikasi.html" rel="noopener noreferrer">Çerez Politikası</a>
                     <a href="/sorumluluk-reddi.html" rel="noopener noreferrer">Sorumluluk Reddi</a>
                 </div>
-                <div class="footer-contact">
-                    <h4>İletişim</h4>
-                    <p><i class="fas fa-envelope"></i> info@yakınımdakideprem.com</p>
-                    <p><i class="fas fa-phone"></i> +90 (212) 123 45 67</p>
-                </div>
+	                <div class="footer-contact">
+	                    <h4>İletişim</h4>
+	                    <p><a href="/iletisim.html" rel="noopener noreferrer">İletişim</a></p>
+	                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Yakınımdaki Deprem | Toplumu Geliştirmek İçin Çabalayan Bir Girişim</p>
@@ -213,7 +232,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </footer>
 
-    <script src="js/header.js"></script>
+    <script src="js/header.js?v=202512182020"></script>
     <script>
         // Setup backend connection
         document.addEventListener("DOMContentLoaded", async () => {
@@ -251,8 +270,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 </body>
 </html>
-
-
 
 
 

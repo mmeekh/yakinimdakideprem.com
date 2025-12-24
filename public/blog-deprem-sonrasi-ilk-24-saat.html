@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#121212">
+    <title>Deprem Sonrası İlk 24 Saat - Adım Adım Kurtarma Planı | Yakınımdaki Deprem</title>
+    <meta name="description"
+        content="Deprem sonrası ilk 24 saatte yapılması gerekenler: güvenlik kontrolleri, iletişim planı, sağlık taraması ve mahallenize destek için interaktif eylem listesi.">
+    <meta name="keywords"
+        content="deprem sonrası, ilk 24 saat, afet sonrası eylem planı, deprem sonrası yapılacaklar, Yakınımdaki Deprem blog">
+    <meta name="author" content="Yakınımdaki Deprem">
+    <link rel="canonical" href="https://yakinimdakideprem.com/blog-deprem-sonrasi-ilk-24-saat.html">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Deprem Sonrası İlk 24 Saat - Adım Adım Kurtarma Planı">
+    <meta property="og:description"
+        content="Depremden hemen sonra güvenlik, sağlık, iletişim ve mahalle koordinasyonu için 24 saatlik yol haritası.">
+    <meta property="og:url" content="https://yakinimdakideprem.com/blog-deprem-sonrasi-ilk-24-saat.html">
+    <meta property="og:site_name" content="Yakınımdaki Deprem">
+    <meta property="og:image" content="https://yakinimdakideprem.com/images/blog-deprem-sonrasi-ilk-24-saat.webp">
+    <meta property="og:image:alt"
+        content="Deprem sonrası ilk 24 saatte dayanışma ve yardım faaliyetlerini gösteren görsel">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Deprem Sonrası İlk 24 Saat - Adım Adım Kurtarma Planı">
+    <meta name="twitter:description"
+        content="Depremden sonra ilk 24 saatte güvenlik kontrolü, yardım çağrısı ve mahalle desteği için interaktif rehber.">
+    <meta name="twitter:image" content="https://yakinimdakideprem.com/images/blog-deprem-sonrasi-ilk-24-saat.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/blog.css?v=202512182020">
+    <link rel="stylesheet" href="css/header.css?v=202512182020">
+    <link rel="stylesheet" href="css/footer.css?v=202512182020">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Deprem Sonrası İlk 24 Saat - Adım Adım Kurtarma Planı",
+      "description": "Deprem sonrası ilk 24 saatte yapılması gerekenler: güvenlik kontrolleri, iletişim planı, sağlık taraması ve mahallenize destek için interaktif eylem listesi.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://yakinimdakideprem.com/images/blog-deprem-sonrasi-ilk-24-saat.webp",
+        "width": 1200,
+        "height": 675
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Emin Kılıç",
+        "url": "https://yakinimdakideprem.com/ben-kimim.html",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://yakinimdakideprem.com/images/eminkilic.jpg",
+          "width": 1664,
+          "height": 1876
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Yakınımdaki Deprem",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yakinimdakideprem.com/icons/android-chrome-192x192.png"
+        }
+      },
+      "datePublished": "2025-12-06T09:00:00+03:00",
+      "dateModified": "2025-12-06T09:00:00+03:00",
+      "inLanguage": "tr-TR",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://yakinimdakideprem.com/blog-deprem-sonrasi-ilk-24-saat.html"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Ana Sayfa",
+        "item": "https://yakinimdakideprem.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://yakinimdakideprem.com/blog.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Deprem Sonrası İlk 24 Saat",
+        "item": "https://yakinimdakideprem.com/blog-deprem-sonrasi-ilk-24-saat.html"
+      }]
+    }
+    </script>
+    <style>
+        .phase-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 24px 0;
+        }
+
+        .phase-selector button {
+            flex: 1;
+            min-width: 160px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: #f8f8f8;
+            font-weight: 600;
+            transition: all .2s ease;
+        }
+
+        .phase-selector button.active {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: 0 8px 20px rgba(211, 47, 47, 0.25);
+        }
+
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .phase-task {
+            border-radius: 18px;
+            padding: 18px;
+            padding: 18px;
+            background: var(--bg-primary, #f5f5f5);
+            border: 1px solid transparent;
+            transition: transform .2s ease, border-color .2s ease, background .2s ease;
+        }
+
+        .phase-task.active {
+            border-color: var(--primary-color);
+            background: rgba(211, 47, 47, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .phase-task h4 {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        .checklist-board {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 24px;
+        }
+
+        .checklist-board label {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 16px;
+            background: var(--bg-secondary, #fafafa);
+            border-radius: 12px;
+            border: 1px solid var(--border-color, #eee);
+            box-shadow: var(--shadow);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .checklist-board label:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-color);
+        }
+
+        .checklist-board input {
+            margin-top: 4px;
+        }
+
+        .support-cards {
+            margin-top: 32px;
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .support-card {
+            padding: 18px;
+            border-radius: 16px;
+            background: var(--bg-secondary, #2f2f2f);
+            color: var(--text-primary, #fff);
+            border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+            box-shadow: var(--shadow);
+        }
+
+        .support-card span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="hidden-header">
+        <div class="container">
+            <a href="/" class="logo" rel="noopener noreferrer">
+                <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem Logo" width="60" height="60">
+                <span>Yakınımdaki Deprem</span>
+            </a>
+            <nav>
+                <a href="/" rel="noopener noreferrer">Ana Sayfa</a>
+                <a href="/deprem-aninda.html" rel="noopener noreferrer">Deprem Anında</a>
+                <a href="/ilk-yardim-cantasi.html" rel="noopener noreferrer">İlk Yardım Çantası</a>
+                <a href="/ben-kimim.html" rel="noopener noreferrer">Ben Kimim</a>
+                <a href="/blog.html" class="active" rel="noopener noreferrer">Blog</a>
+                <div class="nav-dropdown">
+                    <button class="dropdown-toggle" type="button">
+                        Şehir Depremleri <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="/deprem-istanbul.html" rel="noopener noreferrer">İstanbul Depremi</a>
+                        <a href="/deprem-izmir.html" rel="noopener noreferrer">İzmir Depremi</a>
+                        <a href="/deprem-ankara.html" rel="noopener noreferrer">Ankara Depremi</a>
+                        <a href="/deprem-elazig.html" rel="noopener noreferrer">Elazığ Depremi</a>
+                        <a href="/deprem-kahramanmaras.html" rel="noopener noreferrer">Kahramanmaraş Depremi</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="blog-post">
+            <header class="post-header">
+                <div class="post-meta">
+                    <span class="date"><i class="fas fa-calendar"></i> 25 Kasım 2025</span>
+                    <span class="read-time"><i class="fas fa-clock"></i> 7 dk okuma</span>
+                    <span class="author"><i class="fas fa-user-shield"></i> Yakınımdaki Deprem Kriz Ekibi</span>
+                </div>
+                <h1>Deprem Sonrası İlk 24 Saat: En Kritik Eylem Planı</h1>
+                <p class="post-excerpt">Ardışık artçılar, kesilen iletişim hatları ve belirsizlik... İlk 24 saat, enkaz
+                    altına girmeden önce kendinizi, sevdiklerinizi ve mahallenizi organize etmenin zamanıdır. Bu
+                    interaktif rehber, ilk dakikalardan gün sonuna kadar neleri önceliklendireceğinizi gösterir.</p>
+            </header>
+
+            <div class="featured-image">
+                <img loading="lazy" src="images/blog-deprem-sonrasi-ilk-24-saat.webp"
+                    alt="Deprem sonrası sahada çalışan gönüllüler ve iletişim ekipleri" width="1280" height="720">
+                <p class="image-caption">İlk saatlerde güvenlik taraması ve mahalle koordinasyonu hayat kurtarır.</p>
+            </div>
+
+            <section>
+                <h2>Hemen Sonra (0-2 Saat)</h2>
+                <ul>
+                    <li>Artçı sarsıntılar için güvenli noktaya geçerek binanızı terk edin.</li>
+                    <li>Elektrik, doğalgaz ve su vanalarını kapatın; kıvılcım yaratacak cihazları fişten çekin.</li>
+                    <li>Whatsapp/Telegram üzerinden <strong>“İyiyim”</strong> mesajı atarak hatları meşgul etmeden
+                        yakınlarınızı bilgilendirin.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Interaktif 24 Saat Planlayıcısı</h2>
+                <p>Butonlara dokunarak hangi zaman aralığında nelere odaklanmanız gerektiğini görün.</p>
+                <div class="phase-selector" role="tablist">
+                    <button type="button" data-phase="0-6" class="active">0 - 6 Saat</button>
+                    <button type="button" data-phase="6-12">6 - 12 Saat</button>
+                    <button type="button" data-phase="12-24">12 - 24 Saat</button>
+                </div>
+
+                <div class="phase-grid">
+                    <div class="phase-task active" data-phase="0-6">
+                        <h4><i class="fas fa-heartbeat"></i> Sağlık Tarama Çemberi</h4>
+                        <p>Çevrenizde “yaralı var mı?” diye dolaşın, küçük yaraları dahi kayıt altına alın.</p>
+                    </div>
+                    <div class="phase-task active" data-phase="0-6">
+                        <h4><i class="fas fa-broadcast-tower"></i> Radyo ve AFAD Dinleme</h4>
+                        <p>Radyo veya AFAD uygulamasından resmi uyarıları takip edin, yanlış haberleri yaymayın.</p>
+                    </div>
+                    <div class="phase-task" data-phase="6-12">
+                        <h4><i class="fas fa-people-carry"></i> Mahalle Görev Dağılımı</h4>
+                        <p>Enkaz gözetleme, lojistik, çocuk ve yaşlı bakımı için 3 ekip çıkarın.</p>
+                    </div>
+                    <div class="phase-task" data-phase="6-12">
+                        <h4><i class="fas fa-tint"></i> Su Hijyen Kontrolü</h4>
+                        <p>Şebeke suyunu 10 dk kaynatın; varsa tablet kullanın, bidonları etiketleyin.</p>
+                    </div>
+                    <div class="phase-task" data-phase="12-24">
+                        <h4><i class="fas fa-lightbulb"></i> Enerji Planı</h4>
+                        <p>Powerbank, jeneratör ve araç akülerini paylaştırarak nöbetleşe şarj planı yapın.</p>
+                    </div>
+                    <div class="phase-task" data-phase="12-24">
+                        <h4><i class="fas fa-hand-holding-heart"></i> Psikolojik İlk Yardım</h4>
+                        <p>Çocuklara ve yükselen kaygı yaşayanlara nefes egzersizleri yaptırın, umut mesajı paylaşın.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Kontrol Paneli: Kişisel Görev Listesi</h2>
+                <p>İhtiyaçlarınıza göre aşağıdaki görevleri işaretleyin. Her işaretleme, telefonunuzda yerel olarak
+                    tutulur.</p>
+                <div class="checklist-board">
+                    <label>
+                        <input type="checkbox" data-check-item>
+                        <span>Yakıt ve ateş kaynaklarını kapattım, güvenli alana geçtim.</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" data-check-item>
+                        <span>İlaç kullanan aile üyelerinin dozlarını kontrol ettim.</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" data-check-item>
+                        <span>Mahallemizdeki toplanma alanını işaretledim ve yeni gelenlere rehberlik ediyorum.</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" data-check-item>
+                        <span>Yaralı listesi ve ihtiyaçları AFAD gönüllüsüne iletildi.</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" data-check-item>
+                        <span>Telefon şarjlarını paylaştım, kritik numaraları kâğıda yazdım.</span>
+                    </label>
+                </div>
+            </section>
+
+            <section>
+                <h2>Mahalle Dayanışması İçin Mikro Görevler</h2>
+                <div class="support-cards">
+                    <div class="support-card">
+                        <span><i class="fas fa-child"></i> Çocuk/Ebeveyn</span>
+                        <p>Çocuklara artçıların normal olduğunu anlatın, onları sorumluluk vererek meşgul edin
+                            (battaniye
+                            dağıtımı, su taşıma gibi).</p>
+                    </div>
+                    <div class="support-card">
+                        <span><i class="fas fa-blind"></i> Kırılgan Gruplar</span>
+                        <p>Engelli, yaşlı ve kronik hastaları tek bir çadırda toplayın, ilaç çizelgesini görünür yere
+                            asın.</p>
+                    </div>
+                    <div class="support-card">
+                        <span><i class="fas fa-mobile-alt"></i> Dijital Nöbet</span>
+                        <p>Sosyal medya üzerinden teyitsiz bilgi paylaşmayın; sadece ihtiyaç/konum koordinasyonu için
+                            kullanın.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Sık Yapılan Hatalar</h2>
+                <ul>
+                    <li>Artçı sürerken ağır hasarlı binalara dönmek.</li>
+                    <li>Acil yardım hattını aramak yerine sosyal medya yorumlarına yanıt beklemek.</li>
+                    <li>Çocukların yanında yüksek sesle panik ve kayıp haberleri konuşmak.</li>
+                </ul>
+            </section>
+
+            <footer class="post-footer">
+                <p>Hazırlayan: Yakınımdaki Deprem Kriz İletişim Ekibi</p>
+                <p><strong>Unsplash fotoğraf anahtar kelimeleri:</strong> “earthquake relief volunteers”, “temporary
+                    shelter tents”, “emergency response team night”, “community rebuilding after earthquake”.</p>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem Logo" width="60" height="60">
+                    <h3>Yakınımdaki Deprem</h3>
+                    <p>Yakınımdakideprem.com bağımsız, ücretsiz bir topluluk projesidir. Resmi kurumlarla bağlantılı
+                        değildir.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Hızlı Linkler</h4>
+                        <ul>
+                            <li><a href="/" rel="noopener noreferrer">Ana Sayfa</a></li>
+                            <li><a href="/deprem-aninda.html" rel="noopener noreferrer">Deprem Anında</a></li>
+                            <li><a href="/ilk-yardim-cantasi.html" rel="noopener noreferrer">İlk Yardım Çantası</a></li>
+                            <li><a href="/ben-kimim.html" rel="noopener noreferrer">Ben Kimim</a></li>
+                            <li><a href="/blog.html" rel="noopener noreferrer">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Kaynaklar</h4>
+                        <ul>
+                            <li><a href="https://earthquake.usgs.gov" target="_blank" rel="noopener noreferrer">USGS</a>
+                            </li>
+                            <li><a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a>
+                            </li>
+                            <li><a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Kandilli
+                                    Rasathanesi</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>İletişim</h4>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/emin-k%C4%B1l%C4%B1%C3%A7-250b14210/"
+                                    target="_blank" rel="noopener noreferrer">LinkedIn Profilim</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Yasal</h4>
+                        <ul>
+                            <li><a href="/kullanim-sartlari.html" rel="noopener noreferrer">Kullanım Şartları</a></li>
+                            <li><a href="/gizlilik-politikasi.html" rel="noopener noreferrer">Gizlilik Politikası</a>
+                            </li>
+                            <li><a href="/cerez-politikasi.html" rel="noopener noreferrer">Çerez Politikası</a></li>
+                            <li><a href="/sorumluluk-reddi.html" rel="noopener noreferrer">Sorumluluk Reddi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Yakınımdaki Deprem | Toplumu Geliştirmek İçin Çabalayan Bir Girişim</p>
+                <p class="footer-api-source">Deprem API verileri <a
+                        href="https://github.com/orhanayd/kandilli-rasathanesi-api" target="_blank"
+                        rel="noopener noreferrer">github.com/orhanayd/kandilli-rasathanesi-api</a> kaynağından
+                    çekilmektedir.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('[data-phase]');
+        const tasks = document.querySelectorAll('.phase-task');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const phase = btn.dataset.phase;
+                tasks.forEach(task => {
+                    task.classList.toggle('active', task.dataset.phase === phase);
+                });
+            });
+        });
+
+        const checks = document.querySelectorAll('[data-check-item]');
+        checks.forEach((check, index) => {
+            const key = `post24_${index}`;
+            check.checked = localStorage.getItem(key) === '1';
+            check.addEventListener('change', () => {
+                localStorage.setItem(key, check.checked ? '1' : '0');
+            });
+        });
+    </script>
+</body>
+
+</html>

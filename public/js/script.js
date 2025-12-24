@@ -21,7 +21,7 @@ if (typeof window !== 'undefined') {
 
 // Configuration constants
 const CONFIG = {
-  REFRESH_INTERVAL: 60000, // 1 minute
+  REFRESH_INTERVAL: 20000, // ~20 seconds
   MAP_CENTER: [39.0, 35.0], // Türkiye merkezi
   MAP_ZOOM_DESKTOP: 6,
   MAP_ZOOM_MOBILE: 5,
@@ -881,6 +881,5 @@ document.addEventListener('visibilitychange', () => {
 window.addEventListener('focus', () => {
   ensureMapReady();
 });
-
 
 

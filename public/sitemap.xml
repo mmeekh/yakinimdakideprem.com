@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://yakinimdakideprem.com/</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -14,63 +14,63 @@
 
   <url>
     <loc>https://yakinimdakideprem.com/son-dakika-deprem.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/deprem-istanbul.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/deprem-izmir.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/deprem-ankara.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/deprem-elazig.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/deprem-kahramanmaras.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.78</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/index.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/ben-kimim.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/blog.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -82,78 +82,128 @@
   <!-- Blog yazıları -->
   <url>
     <loc>https://yakinimdakideprem.com/blog-son-deprem-haberleri.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/blog-deprem-guvenlik-bilgileri.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-guvenlik-bilgileri.webp</image:loc>
+      <image:caption>Deprem güvenlik bilgileri ve yapılması gerekenler</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/blog-deprem-haritasi.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/blog-deprem-oncesi-hazirlik.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-oncesi-hazirlik.webp</image:loc>
+      <image:caption>Deprem öncesi hazırlık rehberi</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/blog-deprem-cantasi.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-cantasi.webp</image:loc>
+      <image:caption>Deprem çantası hazırlama listesi</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/blog-bina-icindeyseniz.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-bina-icindeyseniz.webp</image:loc>
+      <image:caption>Deprem anında bina içindeyseniz yapılması gerekenler</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/blog-disaridaysaniz.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-disaridaysaniz.webp</image:loc>
+      <image:caption>Deprem anında dışarıdaysanız yapılması gerekenler</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/blog-arac-kullanirken.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-arac-kullanirken.webp</image:loc>
+      <image:caption>Deprem anında araç kullanırken yapılması gerekenler</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-dask-nedir.html</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-guvenlik-bilgileri.webp</image:loc>
+      <image:caption>DASK Zorunlu Deprem Sigortası rehberi</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-toplanma-alani-sorgulama.html</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-disaridaysaniz.webp</image:loc>
+      <image:caption>Deprem toplanma alanı sorgulama rehberi</image:caption>
+    </image:image>
   </url>
 
   <!-- Rehber sayfalar -->
   <url>
     <loc>https://yakinimdakideprem.com/deprem-aninda.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cokapantutun.webp</image:loc>
+      <image:caption>Çök Kapan Tutun hayat kurtaran hareket</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/rehber-hazirlik.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/ilk-yardim-cantasi.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -161,28 +211,28 @@
   <!-- Yasal ve politika sayfaları -->
   <url>
     <loc>https://yakinimdakideprem.com/gizlilik-politikasi.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/kullanim-sartlari.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/cerez-politikasi.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/sorumluluk-reddi.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-11-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
