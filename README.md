@@ -56,6 +56,12 @@ Türkiye'nin en kapsamlı **full-stack** deprem bilgi platformu. **FastAPI backe
 - **Caching**: Performans optimizasyonu
 - **Documentation**: Otomatik Swagger/OpenAPI dokümantasyonu
 
+### 🤖 Sosyal Medya Entegrasyonu (Twitter Bot)
+- **Otomatik Paylaşım**: 4.0 ve üzeri depremleri otomatik tweet atar
+- **Görsel Oluşturma**: Deprem lokasyonu ve büyüklüğü ile dinamik görsel oluşturur
+- **Akıllı Hashtag**: Lokasyona uygun hashtag (#deprem #istanbul vb.) seçimi
+- **Rate Limiting**: Spam önlemek için akıllı paylaşım sıklığı yönetimi
+
 ## 🛠️ Teknik Özellikler
 
 ### Backend Teknolojileri
