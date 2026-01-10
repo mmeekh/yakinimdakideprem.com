@@ -10,6 +10,7 @@ __pycache__/
 # Environment files
 .env
 .env.bak
+env.production
 
 # OS files
 .DS_Store

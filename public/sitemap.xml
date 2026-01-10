@@ -55,13 +55,6 @@
   </url>
 
   <url>
-    <loc>https://yakinimdakideprem.com/index.html</loc>
-    <lastmod>2025-11-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
     <loc>https://yakinimdakideprem.com/ben-kimim.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -103,6 +96,17 @@
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-sonrasi-ilk-24-saat.html</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-sonrasi-ilk-24-saat.webp</image:loc>
+      <image:caption>Deprem sonrası ilk 24 saatte yapılacaklar</image:caption>
+    </image:image>
   </url>
 
   <url>
@@ -166,7 +170,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-guvenlik-bilgileri.webp</image:loc>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-oncesi-hazirlik.webp</image:loc>
       <image:caption>DASK Zorunlu Deprem Sigortası rehberi</image:caption>
     </image:image>
   </url>
@@ -206,6 +210,49 @@
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+  </url>
+
+  <!-- Bilgi sayfaları -->
+  <url>
+    <loc>https://yakinimdakideprem.com/veri-kaynaklari.html</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://yakinimdakideprem.com/api.html</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://yakinimdakideprem.com/embed.html</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://yakinimdakideprem.com/widget-son-depremler.html</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://yakinimdakideprem.com/iletisim.html</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://yakinimdakideprem.com/editoryal-politika.html</loc>
+    <lastmod>2025-11-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
   <!-- Yasal ve politika sayfaları -->

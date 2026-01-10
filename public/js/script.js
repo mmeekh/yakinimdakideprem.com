@@ -134,7 +134,7 @@ function resetExistingMap() {
   }
 }
 
-// Fetch earthquake data from USGS API
+// Fetch earthquake data from backend API
 async function fetchEarthquakeData() {
   const startTime = Date.now();
   
@@ -881,5 +881,4 @@ document.addEventListener('visibilitychange', () => {
 window.addEventListener('focus', () => {
   ensureMapReady();
 });
-
 

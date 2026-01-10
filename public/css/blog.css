@@ -26,6 +26,11 @@ body {
     color: #0f172a;
     line-height: 1.6;
     scroll-behavior: smooth;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --bg-primary: #f5f7fb;
+    --bg-secondary: #ffffff;
+    --border-color: #e5e7eb;
 }
 
 .container {
@@ -63,13 +68,13 @@ body {
 }
 
 .blog-card {
-    background: var(--bg-secondary, white);
+    background: #ffffff;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
     text-decoration: none;
-    color: inherit;
+    color: #0f172a;
     position: relative;
 }
 
@@ -126,12 +131,13 @@ body {
 .blog-card h2 {
     padding: 20px 20px 10px;
     font-size: 24px;
-    color: var(--text-primary, #212121);
+    color: #0f172a;
 }
 
 .blog-card p {
     padding: 0 20px 20px;
-    color: var(--text-secondary, #666);
+    color: #475569;
+    opacity: 1;
 }
 
 .table-wrapper {

@@ -26,7 +26,7 @@
         content="Anlık deprem haritası ile Türkiye ve şehirlerdeki son depremleri izleyin. AFAD ve Kandilli verileriyle İstanbul'da deprem mi oldu, deprem son dakika ve deprem haritası sorularına canlı yanıt alın.">
     <meta name="keywords"
         content="anlık deprem, son depremler, deprem mi oldu, deprem son dakika, deprem haritası, canlı deprem, yakınımdaki deprem, AFAD son depremler, Kandilli son depremler, İstanbul deprem, İzmir deprem, Ankara deprem">
-    <meta name="author" content="Yakınımdaki Deprem">
+    <meta name="author" content="Emin Kılıç">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://yakinimdakideprem.com/" />
     <meta property="og:locale" content="tr_TR">
@@ -43,6 +43,7 @@
     <meta name="twitter:description"
         content="Anlık deprem haritası, deprem mi oldu ve deprem son dakika sorguları için AFAD/Kandilli verilerini tek ekranda sunuyoruz.">
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.png">
+    <meta name="twitter:image:alt" content="Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri görseli">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css?v=202512182020">
@@ -77,7 +78,7 @@
       "@type": "WebPage",
       "name": "Anlık Deprem ve Son Depremler - Yakınımdaki Deprem Haritası",
       "url": "https://yakinimdakideprem.com/",
-      "description": "Anlık deprem haritası, deprem son dakika ve deprem mi oldu soruları için AFAD ve Kandilli verilerini birleştirerek gösterir.",
+      "description": "Anlık deprem haritası, deprem son dakika ve deprem mi oldu soruları için Kandilli Rasathanesi verilerini hızlıca sunar.",
       "inLanguage": "tr-TR",
       "isPartOf": {
         "@type": "WebSite",
@@ -94,7 +95,7 @@
         "name": "Yakınımdaki Deprem",
         "url": "https://yakinimdakideprem.com/",
         "inLanguage": "tr-TR",
-        "description": "Yakınımdaki Deprem, AFAD, Kandilli ve USGS verileriyle anlık deprem, deprem son dakika, deprem mi oldu ve deprem haritası sorgularını yanıtlar.",
+        "description": "Yakınımdaki Deprem, Kandilli Rasathanesi verileriyle anlık deprem, deprem son dakika, deprem mi oldu ve deprem haritası sorgularını yanıtlar.",
         "potentialAction": {
           "@type": "SearchAction",
           "target": "https://yakinimdakideprem.com/?q={search_term_string}",
@@ -266,22 +267,32 @@
                         Doğu Anadolu Fay Hattı (DAF) ve Batı Anadolu Fay Hattı (BAF) üzerinde yer aldığından, aktif bir
                         deprem kuşağındadır.</p>
                     <p><strong>Yakınımdaki Deprem</strong> ile anlık deprem, son depremler, deprem mi oldu ve deprem son
-                        dakika sorgularını <strong>AFAD</strong> ile <strong>Kandilli Rasathanesi</strong> verilerini
-                        birleştirerek gösteriyoruz. Haritamızda kırmızı ile işaretlenen alanlar yüksek riskli bölgeleri,
+                        dakika sorgularını <strong>Kandilli Rasathanesi</strong> verilerini temel alarak gösteriyoruz.
+                        Resmi duyuru ve acil bilgilendirmeler için ayrıca <strong>AFAD</strong> kaynaklarını takip
+                        etmenizi öneririz. Haritamızda kırmızı ile işaretlenen alanlar yüksek riskli bölgeleri,
                         yeşil alanlar ise daha düşük sismik hareketliliği temsil eder. İstanbul deprem, İzmir deprem ve
                         Ankara deprem aramalarına saniyeler içinde cevap almak için haritayı ve listeyi sık sık
                         yenileyin.</p>
 
+                    <figure class="content-image">
+                        <img src="images/deprem-buyukluk-etkisi-infografik.png"
+                            alt="Richter ölçeğine göre deprem büyüklükleri ve etkileri infografiği" width="800"
+                            height="800" loading="lazy"
+                            style="max-width: 100%; height: auto; margin: 2rem 0; border-radius: 8px;">
+                        <figcaption>Görsel 1: Richter ölçeğine göre deprem büyüklüklerinin hissedilen etkileri ve hasar
+                            potansiyeli.</figcaption>
+                    </figure>
+
                     <h3>Son Depremler Nereden Takip Edilir?</h3>
-                    <p>Deprem olduğu anda en doğru bilgiye ulaşmak hayati önem taşır. Sitemiz, şu kaynaklardan verileri
-                        derleyerek saniyeler içinde size sunar:</p>
+                    <p>Deprem olduğu anda en doğru bilgiye ulaşmak hayati önem taşır. Sitemiz deprem verilerini
+                        <strong>Kandilli Rasathanesi</strong> kaynaklı API üzerinden sunar. Resmi doğrulama ve
+                        bilgilendirme için şu kaynakları takip edebilirsiniz:
+                    </p>
                     <ul>
                         <li><strong>AFAD (Afet ve Acil Durum Yönetimi Başkanlığı):</strong> Türkiye'nin resmi afet
                             yönetim kurumu.</li>
                         <li><strong>Kandilli Rasathanesi:</strong> Boğaziçi Üniversitesi'ne bağlı, Türkiye'nin en eski
                             deprem gözlem merkezi.</li>
-                        <li><strong>USGS (Amerika Jeoloji Araştırmaları Kurumu):</strong> Büyük ölçekli depremlerin
-                            global teyidi için kullanılır.</li>
                     </ul>
 
                     <h3>En Çok Aranan Deprem Sorguları</h3>
@@ -441,8 +452,6 @@
                     <div class="footer-column">
                         <h4>Kaynaklar</h4>
                         <ul>
-                            <li><a href="https://earthquake.usgs.gov" target="_blank" rel="noopener noreferrer">USGS</a>
-                            </li>
                             <li><a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a>
                             </li>
                             <li><a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Kandilli

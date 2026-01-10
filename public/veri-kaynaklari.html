@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -18,10 +18,10 @@
 
     <title>Deprem Verileri Kaynakları ve Metodoloji | Yakınımdaki Deprem</title>
     <meta name="description"
-        content="Anlık deprem ve son depremler verilerinin hangi kaynaklardan geldiğini, nasıl işlendiğini ve gecikme/yanlışlık ihtimallerini öğrenin. AFAD, Kandilli ve USGS referansları.">
+        content="Anlık deprem ve son depremler verilerinin hangi kaynaktan geldiğini, nasıl işlendiğini ve gecikme/yanlışlık ihtimallerini öğrenin. Canlı veriler Kandilli Rasathanesi kaynaklıdır.">
     <meta name="keywords"
-        content="deprem verileri kaynakları, anlık deprem, son depremler, deprem haritası, afad son depremler, kandilli son depremler, usgs deprem, metodoloji">
-    <meta name="author" content="Yakınımdaki Deprem">
+        content="deprem verileri kaynakları, anlık deprem, son depremler, deprem haritası, afad son depremler, kandilli son depremler, deprem metodoloji">
+    <meta name="author" content="Emin Kılıç">
     <link rel="canonical" href="https://yakinimdakideprem.com/veri-kaynaklari.html" />
 
     <meta property="og:locale" content="tr_TR">
@@ -37,11 +37,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Deprem Verileri Kaynakları ve Metodoloji | Yakınımdaki Deprem">
     <meta name="twitter:description"
-        content="Anlık deprem ve son depremler verilerinin kaynakları: AFAD, Kandilli ve USGS. Veri işleme ve güncelleme detayları.">
+        content="Anlık deprem ve son depremler verilerinin kaynağı, veri işleme ve güncelleme detayları. Canlı veriler Kandilli Rasathanesi kaynaklıdır.">
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/blog-son-deprem-haberleri.webp">
+    <meta name="twitter:image:alt" content="Deprem haritası üzerinde son depremler görseli">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/blog.css?v=202512182020">
+    <link rel="stylesheet" href="css/blog.css?v=202601101540">
     <link rel="stylesheet" href="css/header.css?v=202512182020">
     <link rel="stylesheet" href="css/footer.css?v=202512182020">
 
@@ -148,17 +149,17 @@
                     </p>
                 </div>
 
-                <h2>1) Kullandığımız veri kaynakları</h2>
+                <h2>1) Canlı veri kaynağı ve referanslar</h2>
                 <ul>
-                    <li><strong>AFAD:</strong> <a class="highlight-link" href="https://deprem.afad.gov.tr" target="_blank"
+                    <li><strong>Kandilli Rasathanesi (KOERI):</strong> Canlı deprem verisi kaynağı —
+                        <a class="highlight-link" href="https://koeri.boun.edu.tr" target="_blank"
+                            rel="noopener noreferrer">koeri.boun.edu.tr</a></li>
+                    <li><strong>AFAD:</strong> Resmi duyuru ve bilgilendirme kaynağı —
+                        <a class="highlight-link" href="https://deprem.afad.gov.tr" target="_blank"
                             rel="noopener noreferrer">deprem.afad.gov.tr</a></li>
-                    <li><strong>Kandilli Rasathanesi (KOERI):</strong> <a class="highlight-link" href="https://koeri.boun.edu.tr"
-                            target="_blank" rel="noopener noreferrer">koeri.boun.edu.tr</a></li>
-                    <li><strong>USGS:</strong> <a class="highlight-link" href="https://earthquake.usgs.gov" target="_blank"
-                            rel="noopener noreferrer">earthquake.usgs.gov</a></li>
                 </ul>
                 <p>
-                    Sitemizdeki “son depremler” listesi, ağırlıklı olarak Kandilli verilerini sağlayan açık kaynak bir API’den
+                    Sitemizdeki “son depremler” listesi, Kandilli verilerini sağlayan açık kaynak bir API üzerinden
                     derlenmektedir: <a class="highlight-link" href="https://github.com/orhanayd/kandilli-rasathanesi-api"
                         target="_blank" rel="noopener noreferrer">github.com/orhanayd/kandilli-rasathanesi-api</a>.
                 </p>
@@ -179,7 +180,7 @@
 
                 <h2>4) Neden farklı kaynaklarda farklı büyüklük görünüyor?</h2>
                 <p>
-                    Aynı deprem için AFAD, Kandilli ve USGS’de <strong>dakikalar içinde</strong> güncellenen farklı büyüklük/derinlik
+                    Aynı deprem için AFAD ve Kandilli gibi kaynaklarda <strong>dakikalar içinde</strong> güncellenen farklı büyüklük/derinlik
                     değerleri görülebilir. Bunun nedeni farklı ölçüm ağları, hesaplama yöntemleri ve revizyon süreçleridir.
                 </p>
 
@@ -214,7 +215,6 @@
                     <div class="footer-column">
                         <h4>Kaynaklar</h4>
                         <ul>
-                            <li><a href="https://earthquake.usgs.gov" target="_blank" rel="noopener noreferrer">USGS</a></li>
                             <li><a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a></li>
                             <li><a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Kandilli Rasathanesi</a></li>
                             <li><a href="/veri-kaynaklari.html" rel="noopener noreferrer">Veri Kaynakları</a></li>

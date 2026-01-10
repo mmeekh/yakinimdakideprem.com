@@ -8,16 +8,23 @@
 
 Türkiye'nin en kapsamlı **full-stack** deprem bilgi platformu. **FastAPI backend**, **Caddy reverse proxy** ve **modern frontend** ile gerçek zamanlı deprem verileri, interaktif harita ve hayat kurtaran güvenlik rehberleri.
 
+> Bu proje tek kişi tarafından geliştirilmiştir.
+
+## 📣 Otomatik Twitter Paylaşımı
+![Twitter otomatik deprem paylaşımı](public/images/twitter%20postu.jpg)
+
+Otomatik tweet sistemi belirlenen eşik üzerindeki depremleri paylaşır; harita görseline büyüklük rozeti ve renkli çerçeve ekler.
+
 ## 🏗️ Proje Mimarisi
 
 ### **Backend (FastAPI + Docker)**
 - **FastAPI**: Modern, hızlı Python web framework
-- **USGS API Entegrasyonu**: Gerçek zamanlı deprem verileri
+- **Kandilli Rasathanesi API Entegrasyonu**: Gerçek zamanlı deprem verileri
 - **Docker Containerization**: Taşınabilir ve ölçeklenebilir deployment
 - **CORS Desteği**: Cross-origin istekler için güvenli yapılandırma
 
 ### **Reverse Proxy (Caddy)**
-- **Caddy Server**: Otomatik HTTPS ve modern web server
+- **Caddy Server**: TLS ve modern web server
 - **Static File Serving**: Frontend dosyalarını servis etme
 - **API Routing**: Backend API'ye yönlendirme
 - **Security Headers**: Güvenlik optimizasyonları
@@ -25,17 +32,16 @@ Türkiye'nin en kapsamlı **full-stack** deprem bilgi platformu. **FastAPI backe
 ### **Frontend (Vanilla JavaScript + Modern CSS)**
 - **Responsive Design**: Tüm cihazlarda mükemmel görünüm
 - **Interactive Maps**: Leaflet.js ile harita görselleştirme
-- **Real-time Updates**: 2 dakikada bir otomatik veri yenileme
-- **PWA Ready**: Progressive Web App özellikleri
+- **Real-time Updates**: 20 saniyede bir otomatik veri yenileme
+- **PWA Manifest**: site.webmanifest ile ikon ve kurulum bilgisi
 
 ## 🚀 Özellikler
 
 ### 📍 Gerçek Zamanlı Deprem Haritası
-- **USGS API Entegrasyonu**: En güncel deprem verileri
+- **Kandilli Rasathanesi Verileri**: En güncel deprem kayıtları
 - **İnteraktif Leaflet Haritası**: Türkiye odaklı harita görünümü
 - **Büyüklük Filtreleme**: 1.0+, 3.0+, 4.0+, 5.0+ depremleri filtreleme
-- **Otomatik Güncelleme**: 2 dakikada bir otomatik veri yenileme
-- **Geniş Alan Taraması**: 5000km yarıçapında kapsamlı veri
+- **Otomatik Güncelleme**: 20 saniyede bir otomatik veri yenileme
 
 ### 🛡️ Deprem Güvenlik Rehberleri
 - **Bina İçindeyseniz**: Çök-Kapan-Tutun hareketi rehberi
@@ -51,16 +57,16 @@ Türkiye'nin en kapsamlı **full-stack** deprem bilgi platformu. **FastAPI backe
 
 ### 📊 Backend API Özellikleri
 - **RESTful API**: Modern API tasarım prensipleri
-- **Real-time Data**: USGS'den canlı veri çekme
+- **Real-time Data**: Kandilli Rasathanesi verileri
 - **Error Handling**: Kapsamlı hata yönetimi
 - **Caching**: Performans optimizasyonu
 - **Documentation**: Otomatik Swagger/OpenAPI dokümantasyonu
 
 ### 🤖 Sosyal Medya Entegrasyonu (Twitter Bot)
-- **Otomatik Paylaşım**: 4.0 ve üzeri depremleri otomatik tweet atar
-- **Görsel Oluşturma**: Deprem lokasyonu ve büyüklüğü ile dinamik görsel oluşturur
-- **Akıllı Hashtag**: Lokasyona uygun hashtag (#deprem #istanbul vb.) seçimi
-- **Rate Limiting**: Spam önlemek için akıllı paylaşım sıklığı yönetimi
+- **Otomatik Paylaşım**: Eşik üzeri depremleri otomatik tweet atar
+- **Harita Görseli**: Deprem lokasyonu ekran görüntüsü + büyüklüğe göre renkli çerçeve ve "M x.x" rozeti
+- **Akıllı Hashtag**: #bugun #deprem #<il> #sondakika formatı
+- **Geçmiş Olsun Mesajı**: Depremin olduğu il için otomatik mesaj
 
 ## 🛠️ Teknik Özellikler
 
@@ -69,11 +75,11 @@ Türkiye'nin en kapsamlı **full-stack** deprem bilgi platformu. **FastAPI backe
 - **Pydantic**: Veri validasyonu ve serialization
 - **httpx**: Asenkron HTTP client
 - **Docker**: Containerization
-- **Python 3.11+**: Modern Python özellikleri
+- **Python 3.12+**: Modern Python özellikleri
 
 ### Reverse Proxy
 - **Caddy 2.8+**: Modern web server
-- **Automatic HTTPS**: SSL/TLS otomatik yönetimi
+- **TLS Yönetimi**: HTTPS sertifika ve yönlendirme yönetimi
 - **Static File Serving**: Frontend dosya servisi
 - **Security Headers**: Güvenlik optimizasyonları
 
@@ -86,10 +92,7 @@ Türkiye'nin en kapsamlı **full-stack** deprem bilgi platformu. **FastAPI backe
 
 ### Performans Optimizasyonları
 - **WebP Görseller**: %30 daha küçük dosya boyutları
-- **CSS Minification**: CleanCSS ile optimize edilmiş stiller
-- **JavaScript Bundling**: Webpack ile modüler yapı
 - **Lazy Loading**: Görsel yükleme optimizasyonu
-- **Service Worker**: Offline çalışma desteği
 
 ## 📁 Proje Yapısı
 
@@ -182,10 +185,7 @@ docker compose logs -f
 
 ```bash
 # Production deployment için
-docker-compose -f docker-compose.https.yml up -d
-
-# Veya deployment script'ini kullanın (Linux/Mac)
-./deploy.sh
+docker compose -f docker-compose.production.yml up -d --build
 ```
 
 ### Erişim Adresleri
@@ -199,7 +199,7 @@ docker-compose -f docker-compose.https.yml up -d
 - **Ana Sayfa**: https://yakinimdakideprem.com/
 - **API Dokümantasyonu**: https://yakinimdakideprem.com/docs
 - **API Health Check**: https://yakinimdakideprem.com/health
-- **API Echo Test**: http://localhost:8080/api/echo?q=merhaba
+- **API Echo Test**: https://yakinimdakideprem.com/api/echo?q=merhaba
 
 ### Geliştirme Modu
 
@@ -218,52 +218,44 @@ docker compose logs -f caddy
 ## 🔒 HTTPS ve Production Hazırlık
 
 ### ✅ Hazır Özellikler
-- **Otomatik SSL**: Let's Encrypt ile otomatik HTTPS
+- **HTTPS**: Caddy ile TLS (production'da ACME veya `tls internal`)
 - **Security Headers**: Güvenlik optimizasyonları
-- **Rate Limiting**: API koruması
+- **Cache Headers**: HTML ve statik dosyalar için Cache-Control
 - **Health Checks**: Container sağlık kontrolü
 - **Domain Yönlendirme**: www subdomain'den ana domain'e yönlendirme
 
 ### 📁 Production Dosyaları
-- `Caddyfile.https` - HTTPS yapılandırması
-- `docker-compose.https.yml` - Production container yapılandırması
+- `Caddyfile.production` - Reverse proxy yapılandırma örneği
+- `yakinimdakideprem.com.Caddyfile` - Merkezi Caddy için hazır site dosyası
+- `docker-compose.production.yml` - Production container yapılandırması
 - `env.production` - Production environment variables
-- `deploy.sh` - Otomatik deployment script'i
 
 ### 🌐 Domain Yapılandırması
 1. **DNS Ayarları**: Domain'inizi sunucu IP'sine yönlendirin
-2. **Domain Güncelleme**: `Caddyfile.https` dosyasında domain'i güncelleyin
-3. **Email Ayarları**: SSL sertifika için email adresini güncelleyin
+2. **Domain Güncelleme**: `Caddyfile.production` veya `yakinimdakideprem.com.Caddyfile` içindeki domain'i güncelleyin
+3. **TLS Ayarları**: Gerekirse ACME email tanımlayın veya `tls internal` kullanın
 4. **Firewall**: 80 ve 443 portlarını açın
 
 ### 🚀 Production Deployment Adımları
 ```bash
-# 1. Domain'i güncelleyin
-nano Caddyfile.https
+# 1. Domain'i güncelleyin (opsiyonel)
+# Merkezi Caddy kullanıyorsanız: /root/caddy/sites/yakinimdakideprem.com.Caddyfile
+nano Caddyfile.production
 
-# 2. Email adresini güncelleyin
-nano env.production
-
-# 3. Production deployment'ı başlatın
-docker-compose -f docker-compose.https.yml up -d
-
-# 4. SSL sertifikasını kontrol edin
-docker exec yakinimdakideprem-caddy caddy list-certificates
+# 2. Production deployment'ı başlatın
+docker compose -f docker-compose.production.yml up -d --build
 ```
 
 ### 🔧 Production Yönetimi
 ```bash
 # Logları görüntüle
-docker-compose -f docker-compose.https.yml logs -f
+docker compose -f docker-compose.production.yml logs -f
 
 # Container'ları yeniden başlat
-docker-compose -f docker-compose.https.yml restart
+docker compose -f docker-compose.production.yml restart
 
 # Container'ları durdur
-docker-compose -f docker-compose.https.yml down
-
-# SSL sertifikalarını yenile
-docker exec yakinimdakideprem-caddy caddy reload
+docker compose -f docker-compose.production.yml down
 ```
 
 ## 🌐 API Endpoints
@@ -298,10 +290,9 @@ Echo test endpoint'i
 Deprem verilerini getir
 
 **Query Parameters:**
-- `hours_back` (int): Son kaç saatlik veriler (default: 168)
-- `min_magnitude` (float): Minimum büyüklük (default: 1.0)
-- `max_radius` (int): Maksimum yarıçap km (default: 5000)
-- `limit` (int): Maksimum sonuç sayısı (default: 200)
+- `hours_back` (int): Son kaç saatlik veriler (default: 24, min: 1, max: 720)
+- `min_magnitude` (float): Minimum büyüklük (default: 2.0)
+- `limit` (int): Maksimum sonuç sayısı (default: 100, max: 2000)
 
 **Response:**
 ```json
@@ -309,19 +300,21 @@ Deprem verilerini getir
   "success": true,
   "data": [
     {
-      "id": "usgs_id",
+      "id": "eq_20260110_0713",
       "magnitude": 4.5,
-      "location": "40 km W of Asadābād, Afghanistan",
-      "time": "2025-09-05T17:25:51",
+      "location": "Marmara Denizi (İstanbul)",
+      "time": "2026-01-10T07:13:00",
+      "time_ago": "5 dakika önce",
       "coordinates": {
-        "lat": 34.8,
-        "lng": 70.2
+        "lat": 40.99,
+        "lng": 28.95
       },
-      "depth": 10.0,
-      "source": "USGS"
+      "depth": 7.9,
+      "source": "Kandilli"
     }
   ],
-  "last_update": "2025-09-05T18:00:00",
+  "last_update": "2026-01-10T07:15:00",
+  "last_update_ago": "2 dakika önce",
   "total_count": 25
 }
 ```
@@ -341,28 +334,44 @@ Deprem istatistikleri
     "magnitude_3_plus": 12,
     "magnitude_4_plus": 8,
     "magnitude_5_plus": 2,
-    "last_update": "2025-09-05T18:00:00"
+    "last_update": "2026-01-10T07:15:00",
+    "last_update_ago": "2 dakika önce"
   }
 }
 ```
+
+### **GET /api/pdf/first-aid-checklist**
+İlk yardım çantası kontrol listesini indirir.
 
 ## 🔧 Konfigürasyon
 
 ### Environment Variables (.env)
 
 ```bash
-# Uygulama Bilgileri
+# API
 APP_NAME=yakınımdakideprem-api
 APP_ENV=dev
 APP_VERSION=0.1.0
-PORT=8001
+CORS_ORIGINS=http://localhost:8080
 
-# CORS Ayarları
-CORS_ORIGINS=http://localhost:8080,http://localhost:3000
+# Twitter Bot
+TWITTER_MIN_MAGNITUDE=3.0
+TWITTER_HASHTAGS=#bugun #deprem #sondakika
+TWITTER_POLL_INTERVAL=300
+TWITTER_HISTORY_FILE=/data/posted_quakes.json
+TWITTER_API_KEY=your-api-key
+TWITTER_API_SECRET=your-api-secret
+TWITTER_ACCESS_TOKEN=your-access-token
+TWITTER_ACCESS_TOKEN_SECRET=your-access-token-secret
+EARTHQUAKE_API_URL=http://yakinimdakideprem-api:8000/api/earthquakes
 
-# SSL Ayarları (opsiyonel)
-# DOMAIN=yourdomain.com
-# ACME_EMAIL=your-email@example.com
+# (Opsiyonel) Harita görsel ayarları
+TWITTER_MAP_URL=https://staticmap.openstreetmap.de/staticmap.php
+TWITTER_MAP_WIDTH=1000
+TWITTER_MAP_HEIGHT=560
+TWITTER_IMAGE_WIDTH=1200
+TWITTER_IMAGE_HEIGHT=675
+TWITTER_IMAGE_BORDER=12
 ```
 
 ### Caddy Konfigürasyonu
@@ -409,14 +418,19 @@ CORS_ORIGINS=http://localhost:8080,http://localhost:3000
 
 ### Dockerfile
 ```dockerfile
-FROM python:3.11-slim
+FROM python:3.12-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1
 
 WORKDIR /app
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app/ ./app/
+COPY app app
+COPY checklist.pdf ./
 
 EXPOSE 8000
 
@@ -428,17 +442,21 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
 services:
   api:
     build: .
-    container_name: yakınımdakideprem-api
+    container_name: yakınımdakideprem-api-local
     env_file: .env
     environment:
       - PORT=${PORT:-8000}
-    expose:
-      - "8000"
+      - ENVIRONMENT=development
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
     restart: unless-stopped
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
   caddy:
     image: caddy:2.8
-    container_name: yakınımdakideprem-caddy
+    container_name: yakınımdakideprem-caddy-local
     depends_on:
       - api
     ports:
@@ -465,15 +483,13 @@ volumes:
 
 ### Frontend Performansı
 - **WebP Görseller**: %30 daha küçük dosya boyutları
-- **CSS/JS Minification**: Optimize edilmiş dosyalar
 - **Lazy Loading**: İhtiyaç duyulduğunda yükleme
-- **Service Worker**: Offline çalışma
 
 ### Ölçeklenebilirlik
-- **Docker Compose**: Kolay horizontal scaling
-- **Caddy Load Balancing**: Çoklu backend instance desteği
-- **Environment Variables**: Farklı ortamlar için konfigürasyon
-- **Health Checks**: Otomatik sağlık kontrolü
+- **Docker Compose**: Servisleri ayrı çalıştırma (api/static/twitter-bot)
+- **Caddy Reverse Proxy**: Merkezi yönlendirme ve cache header'ları
+- **In-Memory Cache**: API sonuçlarını kısa süreli önbellekleme
+- **Health Checks**: API sağlık kontrolü
 
 ## 🔒 Güvenlik
 
@@ -481,13 +497,10 @@ volumes:
 - **CORS Middleware**: Cross-origin istek kontrolü
 - **Input Validation**: Pydantic ile veri doğrulama
 - **Error Handling**: Güvenli hata yönetimi
-- **Rate Limiting**: API istek sınırlaması (gelecek özellik)
 
 ### Frontend Güvenliği
-- **Content Security Policy**: XSS koruması
-- **HTTPS Only**: Güvenli bağlantı zorunluluğu
+- **HTTPS**: Güvenli bağlantı zorunluluğu
 - **Security Headers**: Caddy ile güvenlik başlıkları
-- **Input Sanitization**: Kullanıcı girdisi temizleme
 
 ## 🧪 Test ve Kalite
 
@@ -526,46 +539,16 @@ docker compose logs -f
 - **Health Endpoint**: `/health` ile sistem durumu
 - **Version Endpoint**: `/version` ile uygulama versiyonu
 - **Error Logging**: Console ve Docker logları
-- **Performance Metrics**: Response time ve throughput
 
 ## 🚀 Deployment
 
 ### Production Deployment
 
-1. **Environment Variables**:
-```bash
-APP_ENV=production
-CORS_ORIGINS=https://yourdomain.com
-DOMAIN=yourdomain.com
-ACME_EMAIL=your-email@example.com
-```
-
-2. **SSL Configuration**:
-```caddy
-yourdomain.com {
-    encode zstd gzip
-    
-    @api path /api/* /health /version
-    handle @api {
-        reverse_proxy api:8000
-    }
-    
-    @apidocs path /docs* /openapi.json /redoc*
-    handle @apidocs {
-        reverse_proxy api:8000
-    }
-    
-    handle {
-        root * /srv
-        try_files {path} /index.html
-        file_server
-    }
-}
-```
-
+1. **Environment Variables**: `env.production` içindeki Twitter anahtarlarını ve eşikleri güncelleyin.
+2. **Caddy Konfigürasyonu**: `Caddyfile.production` veya `yakinimdakideprem.com.Caddyfile` içinde domain/TLS ayarlarını yapın.
 3. **Deploy**:
 ```bash
-docker compose up -d --build
+docker compose -f docker-compose.production.yml up -d --build
 ```
 
 ### Cloud Deployment
@@ -602,8 +585,8 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 ## 🙏 Teşekkürler
 
-- **USGS**: Deprem verileri için
-- **AFAD**: Türkiye deprem bilgileri için
+- **Kandilli Rasathanesi**: Deprem verileri için (API kaynağı: api.orhanaydogdu.com.tr)
+- **AFAD**: Acil durum bilgilendirmeleri için
 - **FastAPI**: Modern Python web framework için
 - **Caddy**: Modern web server için
 - **Leaflet**: Harita kütüphanesi için
