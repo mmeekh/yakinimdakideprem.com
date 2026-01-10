@@ -55,6 +55,28 @@
   </url>
 
   <url>
+    <loc>https://yakinimdakideprem.com/deprem-bursa.html</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/bursa-deprem-risk-haritasi.png</image:loc>
+      <image:caption>Bursa deprem risk haritası ve Gemlik fayı</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-adana.html</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/adana-deprem-risk-haritasi.png</image:loc>
+      <image:caption>Adana deprem risk haritası ve fay hatları</image:caption>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://yakinimdakideprem.com/ben-kimim.html</loc>
     <lastmod>2025-11-23</lastmod>
     <changefreq>monthly</changefreq>
