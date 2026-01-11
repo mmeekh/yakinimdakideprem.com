@@ -203,7 +203,7 @@ const HEADER_CONFIG = {
     SHOW_DELAY: 50
 };
 
-const MOBILE_BREAKPOINT = 768;
+const MOBILE_BREAKPOINT = 900;
 
 // State management
 let lastScrollTop = 0;
@@ -222,6 +222,9 @@ let infoDropdown = null;
 let infoContent = null;
 let legendElement = null;
 let listElement = null;
+let turkeyButton = null;
+let nightModeButton = null;
+let legendActionsContainer = null;
 let mapWrapper = null;
 let updateInfoElement = null;
 let cityDropdowns = [];
@@ -240,6 +243,8 @@ document.addEventListener('DOMContentLoaded', () => {
     mapWrapper = document.querySelector('.map-wrapper');
     legendElement = document.querySelector('.magnitude-legend');
     listElement = document.querySelector('.earthquake-list');
+    turkeyButton = document.getElementById('turkey-btn');
+    nightModeButton = document.getElementById('night-mode-btn');
     updateInfoElement = document.querySelector('.update-info');
 
     setupHeaderStructure();
@@ -248,6 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupScrollListener();
     setupKeyboardShortcuts();
     handleResponsivePanels();
+    setupMobileWelcomeNotice();
 
     window.addEventListener('resize', handleResize);
     document.addEventListener('click', handleDocumentClick);
@@ -520,23 +526,21 @@ function updateOverlayState() {
 }
 
 function handleResponsivePanels() {
-    if (!legendElement || !listElement || !infoContent || !mapWrapper) return;
+    if (!infoContent || !mapWrapper) return;
+    if (!legendElement && !listElement) return;
     if (window.innerWidth <= MOBILE_BREAKPOINT) {
         moveInfoPanelsToDropdown();
+        moveLegendActionsToDropdown();
     } else {
         restoreInfoPanels();
+        restoreLegendActions();
     }
 }
 
 function moveInfoPanelsToDropdown() {
     if (!infoContent) return;
 
-    if (!infoContent.contains(legendElement)) {
-        legendElement.classList.add('mobile-panel');
-        infoContent.appendChild(legendElement);
-    }
-
-    if (!infoContent.contains(listElement)) {
+    if (listElement && !infoContent.contains(listElement)) {
         listElement.classList.add('mobile-panel');
         infoContent.appendChild(listElement);
     }
@@ -555,6 +559,102 @@ function restoreInfoPanels() {
     if (listElement && !mapWrapper.contains(listElement)) {
         listElement.classList.remove('mobile-panel');
         mapWrapper.insertBefore(listElement, referenceNode);
+    }
+}
+
+function ensureLegendActionsContainer() {
+    if (!infoContent) return;
+    if (!legendActionsContainer) {
+        legendActionsContainer = document.createElement('div');
+        legendActionsContainer.className = 'mobile-legend-actions';
+    }
+    if (!infoContent.contains(legendActionsContainer)) {
+        infoContent.insertBefore(legendActionsContainer, infoContent.firstChild);
+    } else if (infoContent.firstChild !== legendActionsContainer) {
+        infoContent.insertBefore(legendActionsContainer, infoContent.firstChild);
+    }
+}
+
+function moveLegendActionsToDropdown() {
+    if (!infoContent) return;
+    if (!turkeyButton && !nightModeButton) return;
+    ensureLegendActionsContainer();
+    if (!legendActionsContainer) return;
+    if (turkeyButton && !legendActionsContainer.contains(turkeyButton)) {
+        legendActionsContainer.appendChild(turkeyButton);
+    }
+    if (nightModeButton && !legendActionsContainer.contains(nightModeButton)) {
+        legendActionsContainer.appendChild(nightModeButton);
+    }
+}
+
+function restoreLegendActions() {
+    if (!legendElement) return;
+    if (turkeyButton && !legendElement.contains(turkeyButton)) {
+        legendElement.appendChild(turkeyButton);
+    }
+    if (nightModeButton && !legendElement.contains(nightModeButton)) {
+        legendElement.appendChild(nightModeButton);
+    }
+}
+
+function setupMobileWelcomeNotice() {
+    const welcomeModal = document.getElementById('mobile-welcome-modal');
+    const menuModal = document.getElementById('mobile-menu-modal');
+    if (!welcomeModal && !menuModal) return;
+    if (window.innerWidth > MOBILE_BREAKPOINT) return;
+    const storageKey = 'mobile_welcome_seen_v1';
+    try {
+        if (localStorage.getItem(storageKey)) {
+            return;
+        }
+    } catch (e) {}
+
+    const showModal = (modal, bodyClass) => {
+        if (!modal) return;
+        document.body.classList.add(bodyClass);
+        modal.classList.add('is-visible');
+        modal.setAttribute('aria-hidden', 'false');
+    };
+
+    const hideModal = (modal, bodyClass) => {
+        if (!modal) return;
+        modal.classList.remove('is-visible');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove(bodyClass);
+    };
+
+    const bindDismiss = (modal, bodyClass, onDismiss) => {
+        if (!modal) return;
+        const dismissTargets = modal.querySelectorAll('[data-action="dismiss"]');
+        const dismiss = () => {
+            hideModal(modal, bodyClass);
+            if (typeof onDismiss === 'function') {
+                onDismiss();
+            }
+        };
+        dismissTargets.forEach((target) => {
+            target.addEventListener('click', dismiss);
+        });
+    };
+
+    const markSeen = () => {
+        try {
+            localStorage.setItem(storageKey, String(Date.now()));
+        } catch (e) {}
+    };
+
+    const showMenuModal = () => {
+        showModal(menuModal, 'nav-welcome-visible');
+    };
+
+    bindDismiss(welcomeModal, 'welcome-visible', menuModal ? showMenuModal : markSeen);
+    bindDismiss(menuModal, 'nav-welcome-visible', markSeen);
+
+    if (welcomeModal) {
+        showModal(welcomeModal, 'welcome-visible');
+    } else if (menuModal) {
+        showMenuModal();
     }
 }
 

@@ -193,6 +193,10 @@ main {
     color: #000;
 }
 
+.legend-short {
+    display: none;
+}
+
 /* TÃ¼rkiye'ye Git Butonu */
 .turkey-btn {
     width: 100%;

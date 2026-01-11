@@ -145,20 +145,15 @@ PROVINCES = [
 def normalize_for_match(text: str) -> str:
     if not text:
         return ""
-    lowered = text.lower()
-    return lowered.translate(
-        str.maketrans(
-            {
-                "ç": "c",
-                "ğ": "g",
-                "ı": "i",
-                "i̇": "i",
-                "İ": "i",
-                "ö": "o",
-                "ş": "s",
-                "ü": "u",
-            }
-        )
+    lowered = text.casefold()
+    lowered = lowered.replace("i̇", "i")
+    return (
+        lowered.replace("ç", "c")
+        .replace("ğ", "g")
+        .replace("ı", "i")
+        .replace("ö", "o")
+        .replace("ş", "s")
+        .replace("ü", "u")
     )
 
 
@@ -336,13 +331,17 @@ def fetch_quakes() -> List[Dict[str, Any]]:
             return []
         data = resp.json()
         if isinstance(data, list):
+            logging.info("API deprem sayısı: %s", len(data))
             return data
         if isinstance(data, dict):
             if data.get("success") is False:
+                logging.warning("API başarısız yanıt döndü.")
                 return []
             if "earthquakes" in data:
+                logging.info("API deprem sayısı: %s", len(data["earthquakes"]))
                 return data["earthquakes"]
             if "data" in data:
+                logging.info("API deprem sayısı: %s", len(data["data"]))
                 return data["data"]
         logging.error("Beklenmeyen API yanıtı: %s", type(data))
         return []
@@ -530,7 +529,14 @@ def format_tweet(quake: Dict[str, Any]) -> str:
     depth = quake.get("depth", "?")
     ts = format_time(str(quake.get("time", "")))
     tags, city = build_tags_and_city(location)
-    tags_section = f\"{' '.join(tags)}\\n\\n\" if tags else \"\"
+    tags_section = f"{' '.join(tags)}\n\n" if tags else ""
+    logging.debug(
+        "Tweet formatı: location=%s mag=%s city=%s tags=%s",
+        location,
+        mag,
+        city,
+        tags,
+    )
     body = (
         "🚨 DEPREM UYARISI\n\n"
         f"📍 Yer: {location}\n"
@@ -553,13 +559,25 @@ def run_once() -> None:
     if not client:
         return
 
-    quakes = pick_strongest_per_location_minute(fetch_quakes())
+    raw_quakes = fetch_quakes()
+    quakes = pick_strongest_per_location_minute(raw_quakes)
+    if raw_quakes:
+        logging.info(
+            "Deprem filtreleme: gelen=%s, gruplanan=%s (konum+dakika)",
+            len(raw_quakes),
+            len(quakes),
+        )
     if not quakes:
         logging.info("Paylaşılacak deprem yok.")
         return
 
     posted = load_history()
     updated = set(posted)
+    logging.info(
+        "Twitter bot çalışıyor. Min büyüklük=%.1f, geçmiş kayıt=%s",
+        MIN_MAGNITUDE,
+        len(posted),
+    )
 
     # Oldest first to preserve order
     for quake in quakes:
@@ -567,8 +585,21 @@ def run_once() -> None:
         try:
             mag = float(quake.get("magnitude", 0))
         except Exception:
+            logging.warning("Geçersiz büyüklük: %s", quake.get("magnitude"))
             continue
-        if not quake_id or quake_id in posted or mag < MIN_MAGNITUDE:
+        if not quake_id:
+            logging.warning("Deprem ID eksik, atlandı: %s", quake)
+            continue
+        if quake_id in posted:
+            logging.info("Daha önce atıldı, atlandı: %s", quake_id)
+            continue
+        if mag < MIN_MAGNITUDE:
+            logging.info(
+                "Eşik altında, atlandı: %s (%.1f < %.1f)",
+                quake.get("location"),
+                mag,
+                MIN_MAGNITUDE,
+            )
             continue
 
         tweet_text = format_tweet(quake)

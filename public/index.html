@@ -46,8 +46,8 @@
     <meta name="twitter:image:alt" content="Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri görseli">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=202512182020">
-    <link rel="stylesheet" href="css/header.css?v=202512182020">
+    <link rel="stylesheet" href="css/style.css?v=2026011235">
+    <link rel="stylesheet" href="css/header.css?v=2026011235">
     <link rel="stylesheet" href="css/components.css?v=202512182020">
     <!-- Favicon Icons -->
     <link rel="shortcut icon" href="/icons/favicon-32x32.png" type="image/png">
@@ -184,6 +184,38 @@
             </nav>
         </div>
     </header>
+    <div id="mobile-welcome-modal" class="mobile-welcome-modal" aria-hidden="true">
+        <div class="mobile-welcome-modal__backdrop"></div>
+        <div class="mobile-welcome-modal__card" role="dialog" aria-modal="true" aria-labelledby="mobile-welcome-title"
+            aria-describedby="mobile-welcome-desc">
+            <span class="mobile-welcome-modal__eyebrow">Hoş geldiniz</span>
+            <h2 id="mobile-welcome-title" class="mobile-welcome-modal__title">Harita araçlarını keşfedin</h2>
+            <p id="mobile-welcome-desc" class="mobile-welcome-modal__message">
+                Katman/filtre butonuna dokunarak son depremleri ve filtreleme seçeneklerini görebilirsiniz.
+            </p>
+            <button type="button" class="mobile-welcome-modal__cta" data-action="dismiss">Tamam</button>
+        </div>
+    </div>
+    <div id="mobile-menu-modal" class="mobile-welcome-modal" aria-hidden="true">
+        <div class="mobile-welcome-modal__backdrop"></div>
+        <div class="mobile-welcome-modal__card" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title"
+            aria-describedby="mobile-menu-desc">
+            <span class="mobile-welcome-modal__eyebrow">Menü</span>
+            <h2 id="mobile-menu-title" class="mobile-welcome-modal__title">Diğer sayfalara geçin</h2>
+            <p id="mobile-menu-desc" class="mobile-welcome-modal__message">
+                Sağ üstteki menüden şunlara ulaşabilirsiniz:
+            </p>
+            <ul class="mobile-welcome-list">
+                <li>Ana Sayfa</li>
+                <li>Deprem Anında</li>
+                <li>İlk Yardım Çantası</li>
+                <li>Ben Kimim</li>
+                <li>Blog</li>
+                <li>Şehir Depremleri</li>
+            </ul>
+            <button type="button" class="mobile-welcome-modal__cta" data-action="dismiss">Tamam</button>
+        </div>
+    </div>
     <!-- Harita ve Overlay Alanı -->
     <div class="map-wrapper">
         <h1 class="map-h1">Anlık Deprem ve Son Depremler - Türkiye Deprem Haritası</h1>
@@ -193,33 +225,37 @@
         <div class="magnitude-legend overlay">
             <div class="legend-title">Deprem Büyüklüğü</div>
             <div class="legend-items">
-                <div class="legend-item">
+                <div class="legend-item" data-short="2">
                     <div class="color-box" style="background-color: #4caf50;"></div>
-                    <span>0 - 2.9</span>
+                    <span class="legend-label">0 - 2.9</span>
+                    <span class="legend-short">2</span>
                 </div>
                 <div class="legend-item">
                     <div class="color-box" style="background-color: #ffc107;"></div>
-                    <span>3.0 - 3.9</span>
+                    <span class="legend-label">3.0 - 3.9</span>
                 </div>
-                <div class="legend-item">
+                <div class="legend-item" data-short="4">
                     <div class="color-box" style="background-color: #ff9800;"></div>
-                    <span>4.0 - 4.9</span>
+                    <span class="legend-label">4.0 - 4.9</span>
+                    <span class="legend-short">4</span>
                 </div>
                 <div class="legend-item">
                     <div class="color-box" style="background-color: #ff5722;"></div>
-                    <span>5.0 - 5.9</span>
+                    <span class="legend-label">5.0 - 5.9</span>
                 </div>
-                <div class="legend-item">
+                <div class="legend-item" data-short="6">
                     <div class="color-box" style="background-color: #f44336;"></div>
-                    <span>6.0 - 6.9</span>
+                    <span class="legend-label">6.0 - 6.9</span>
+                    <span class="legend-short">6</span>
                 </div>
                 <div class="legend-item">
                     <div class="color-box" style="background-color: #d32f2f;"></div>
-                    <span>7.0 - 7.9</span>
+                    <span class="legend-label">7.0 - 7.9</span>
                 </div>
-                <div class="legend-item">
+                <div class="legend-item" data-short="8">
                     <div class="color-box" style="background-color: #7b1fa2;"></div>
-                    <span>8.0+</span>
+                    <span class="legend-label">8.0+</span>
+                    <span class="legend-short">8</span>
                 </div>
             </div>
             <button id="turkey-btn" class="turkey-btn">
@@ -440,7 +476,7 @@
                 <div class="footer-logo">
                     <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem Logo" width="50" height="50">
                     <h3>Yakınımdaki Deprem</h3>
-                    <p>Yakınımdakideprem.com bağımsız, ücretsiz bir topluluk projesidir. Resmi kurumlarla bağlantılı
+                    <p>Yakınımdakideprem.com bağımsız, ücretsiz ve tek kişi tarafından geliştirilen bir projedir. Resmi kurumlarla bağlantılı
                         değildir.</p>
                 </div>
                 <div class="footer-links">
@@ -498,9 +534,9 @@
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="js/header.js?v=202512182020"></script>
+    <script src="js/header.js?v=2026011234"></script>
     <!-- Ana Script -->
-    <script src="js/script.js?v=202512182020"></script>
+    <script src="js/script.js?v=2026011231"></script>
     <!-- Türkiye Depremleri Script -->
     <script src="js/turkey-earthquakes.js?v=202512182020"></script>
     <!-- İstatistik Güncelleyici Script -->

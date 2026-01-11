@@ -297,20 +297,34 @@ function formatTimeAgo(date) {
   }
 }
 
+function formatTimeAgoShort(text) {
+  if (!text) return text;
+  return text
+    .replace(/\b(\d+)\s*saniye\b/g, '$1 sn')
+    .replace(/\b(\d+)\s*dakika\b/g, '$1 dk')
+    .replace(/\b(\d+)\s*saat\b/g, '$1 sa')
+    .replace(/\b(\d+)\s*gün\b/g, '$1 gün');
+}
+
 // Update last update time display
 function updateLastUpdateTime(isSample = false, lastUpdateAgo = null) {
   const now = new Date();
+  const isMobile = window.innerWidth <= 768;
   
   const lastUpdateEl = document.getElementById("last-update");
   const lastUpdateTimeEl = document.getElementById("last-update-time");
   
   if (lastUpdateEl) {
     if (isSample) {
-      lastUpdateEl.textContent = "Son güncelleme: Ã–rnek veriler gösteriliyor";
+      lastUpdateEl.textContent = isMobile
+        ? "Güncelleme: Örnek veri"
+        : "Son güncelleme: Örnek veriler gösteriliyor";
     } else {
       // Her zaman dinamik zaman göster (backend'den gelen veya fallback)
       const timeToShow = lastUpdateAgo || formatTimeAgo(now);
-      lastUpdateEl.textContent = `Son güncelleme: ${timeToShow}`;
+      const displayTime = isMobile ? formatTimeAgoShort(timeToShow) : timeToShow;
+      const prefix = isMobile ? "Güncelleme:" : "Son güncelleme:";
+      lastUpdateEl.textContent = `${prefix} ${displayTime}`;
     }
   }
   
@@ -881,4 +895,3 @@ document.addEventListener('visibilitychange', () => {
 window.addEventListener('focus', () => {
   ensureMapReady();
 });
-

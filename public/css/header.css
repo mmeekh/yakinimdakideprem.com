@@ -240,8 +240,9 @@
         display: none;
         background: transparent;
         box-shadow: none;
-        padding: 4px 0 0;
+        padding: 4px 0 0 12px;
         gap: 6px;
+        margin-top: 6px;
     }
 
     .nav-dropdown.open .dropdown-menu {
@@ -250,7 +251,7 @@
     
     .dropdown-menu a {
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-        padding: 6px 0;
+        padding: 8px 0 8px 4px;
     }
 }
 
@@ -349,26 +350,60 @@ body.info-menu-open {
     }
 
     #hidden-header nav {
-        display: none;
+        display: flex;
         position: fixed;
-        top: calc(var(--header-height, 72px));
+        top: calc(var(--header-height, 72px) - 1px);
         left: 0;
         right: 0;
         background: rgba(33, 33, 33, 0.97);
         flex-direction: column;
         gap: 16px;
         padding: 20px;
+        padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+        max-height: calc(100vh - var(--header-height, 72px));
+        overflow-y: auto;
+        scrollbar-width: none;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
         box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+        scroll-padding-bottom: 24px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
         z-index: 2050;
     }
 
+    #hidden-header nav::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    #mobile-info-dropdown {
+        scrollbar-width: none;
+    }
+
+    #mobile-info-dropdown::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
     body.nav-open #hidden-header nav {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+        transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
     #hidden-header nav a {
         font-size: 16px;
         padding: 8px 0;
+    }
+
+    #hidden-header nav .nav-dropdown {
+        margin-bottom: 16px;
     }
 
     .header-actions {

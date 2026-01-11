@@ -1,6 +1,16 @@
 /* Blog Detail Page Styles */
 
 /* Base overrides for blog detail structure */
+body {
+    background-color: #f5f7fb;
+    color: #0f172a;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --bg-primary: #f5f7fb;
+    --bg-secondary: #ffffff;
+    --border-color: #e5e7eb;
+}
+
 .blog-detail-container {
     padding-top: 0;
     /* Hero takes top space */
@@ -22,7 +32,7 @@
     display: flex;
     align-items: flex-end;
     /* Align content to bottom */
-    margin-top: 60px;
+    margin-top: var(--header-height, 72px);
     /* Space for fixed header */
 }
 
@@ -192,6 +202,12 @@
 
     .blog-hero h1 {
         font-size: 1.8rem;
+    }
+
+    .blog-hero .meta {
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 0.85rem;
     }
 
     .content.container {
