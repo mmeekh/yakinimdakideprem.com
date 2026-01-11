@@ -240,9 +240,9 @@
         display: none;
         background: transparent;
         box-shadow: none;
-        padding: 4px 0 0 12px;
+        padding: 6px 0 0 16px;
         gap: 6px;
-        margin-top: 6px;
+        margin-top: 10px;
     }
 
     .nav-dropdown.open .dropdown-menu {
@@ -251,7 +251,7 @@
     
     .dropdown-menu a {
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-        padding: 8px 0 8px 4px;
+        padding: 8px 0 8px 8px;
     }
 }
 
