@@ -582,6 +582,7 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 - **Website**: [yakınımdakideprem.com](https://yakınımdakideprem.com)
 - **Email**: info@yakınımdakideprem.com
 - **GitHub**: [@yakınımdakideprem](https://github.com/yakınımdakideprem)
+- **LinkedIn**: [Emin Kılıç](https://www.linkedin.com/in/emin-k%C4%B1l%C4%B1%C3%A7-250b14210/)
 
 ## 🙏 Teşekkürler
 
@@ -591,7 +592,6 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 - **Caddy**: Modern web server için
 - **Leaflet**: Harita kütüphanesi için
 - **Docker**: Containerization için
-- **Tüm Katkıda Bulunanlar**: Açık kaynak topluluğu
 
 ---
 
