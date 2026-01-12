@@ -130,7 +130,8 @@
 }
 
 .nav-dropdown:hover .dropdown-toggle i,
-.nav-dropdown:focus-within .dropdown-toggle i {
+.nav-dropdown:focus-within .dropdown-toggle i,
+.nav-dropdown.open .dropdown-toggle i {
     transform: rotate(180deg);
 }
 

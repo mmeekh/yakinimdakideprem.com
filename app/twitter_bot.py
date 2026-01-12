@@ -1,5 +1,6 @@
 import json
 import logging
+import math
 import os
 import re
 import time
@@ -25,6 +26,14 @@ TWEET_TAGS = os.getenv("TWITTER_HASHTAGS", "#bugun #deprem #sondakika")
 MAP_SERVICE_URL = os.getenv(
     "TWITTER_MAP_URL", "https://staticmap.openstreetmap.de/staticmap.php"
 )
+MAP_SERVICE_FALLBACK_URL = os.getenv(
+    "TWITTER_MAP_FALLBACK_URL",
+    "https://maps.wikimedia.org/img/osm-intl,{zoom},{lat},{lng},{width}x{height}.png",
+)
+TILE_SERVER_URL = os.getenv(
+    "TWITTER_TILE_URL", "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+)
+TILE_SIZE = 256
 MAP_WIDTH = int(os.getenv("TWITTER_MAP_WIDTH", "1000"))
 MAP_HEIGHT = int(os.getenv("TWITTER_MAP_HEIGHT", "560"))
 IMAGE_WIDTH = int(os.getenv("TWITTER_IMAGE_WIDTH", "1200"))
@@ -55,6 +64,7 @@ def base_tags() -> List[str]:
 
 
 BASE_TAGS = base_tags()
+REQUIRED_TAGS = ["#bugun", "#deprem", "#sondakika"]
 
 
 PROVINCES = [
@@ -193,23 +203,15 @@ def extract_province(location: str) -> Optional[str]:
 
 
 def build_tags_and_city(location: str) -> Tuple[List[str], Optional[str]]:
-    tags: List[str] = []
-    seen: Set[str] = set()
-    for tag in BASE_TAGS:
-        if tag not in seen:
-            tags.append(tag)
-            seen.add(tag)
-
     city = extract_province(location)
     city_tag = normalize_tag(city) if city else None
-    if city_tag and city_tag not in seen:
-        if "#sondakika" in seen:
-            index = tags.index("#sondakika")
-            tags.insert(index, city_tag)
-        else:
-            tags.append(city_tag)
-        seen.add(city_tag)
-
+    tags: List[str] = []
+    seen: Set[str] = set()
+    ordered = [REQUIRED_TAGS[0], city_tag, REQUIRED_TAGS[1], REQUIRED_TAGS[2]]
+    for tag in ordered:
+        if tag and tag not in seen:
+            tags.append(tag)
+            seen.add(tag)
     return tags, city
 
 
@@ -400,7 +402,8 @@ def pick_text_color(rgb: Tuple[int, int, int]) -> Tuple[int, int, int]:
 
 def draw_magnitude_badge(canvas: Image.Image, magnitude: float, border_hex: str) -> None:
     text = f"M {magnitude:.1f}"
-    font_size = max(22, int(IMAGE_HEIGHT * 0.06))
+    base_size = max(22, int(IMAGE_HEIGHT * 0.06))
+    font_size = int(base_size * 1.3)
     font = load_badge_font(font_size)
 
     draw = ImageDraw.Draw(canvas)
@@ -448,7 +451,97 @@ def map_zoom_for_magnitude(magnitude: float) -> int:
     return 9
 
 
+def clamp_lat(lat: float) -> float:
+    return max(-85.05112878, min(85.05112878, lat))
+
+
+def lat_lng_to_pixel(lat: float, lng: float, zoom: int) -> Tuple[float, float]:
+    lat = clamp_lat(lat)
+    lat_rad = math.radians(lat)
+    n = 2.0 ** zoom
+    x = (lng + 180.0) / 360.0 * n * TILE_SIZE
+    y = (
+        (1.0 - math.log(math.tan(lat_rad) + (1 / math.cos(lat_rad))) / math.pi)
+        / 2.0
+        * n
+        * TILE_SIZE
+    )
+    return x, y
+
+
+def fetch_tile(z: int, x: int, y: int, headers: Dict[str, str]) -> Optional[Image.Image]:
+    url = TILE_SERVER_URL.format(z=z, x=x, y=y)
+    try:
+        resp = requests.get(url, headers=headers, timeout=10)
+        resp.raise_for_status()
+        return Image.open(BytesIO(resp.content)).convert("RGB")
+    except Exception as exc:
+        logging.error("Harita karo alınamadı (%s): %s", url, exc)
+        return None
+
+
+def build_tile_map(lat: float, lng: float, zoom: int) -> Optional[Image.Image]:
+    headers = {"User-Agent": "yakinimdakideprem-twitter-bot/1.0"}
+    center_x, center_y = lat_lng_to_pixel(lat, lng, zoom)
+    top_left_x = center_x - MAP_WIDTH / 2
+    top_left_y = center_y - MAP_HEIGHT / 2
+
+    tile_min_x = int(math.floor(top_left_x / TILE_SIZE))
+    tile_min_y = int(math.floor(top_left_y / TILE_SIZE))
+    tile_max_x = int(math.floor((top_left_x + MAP_WIDTH - 1) / TILE_SIZE))
+    tile_max_y = int(math.floor((top_left_y + MAP_HEIGHT - 1) / TILE_SIZE))
+
+    tiles_across = 2 ** zoom
+    canvas = Image.new("RGB", (MAP_WIDTH, MAP_HEIGHT), "#f8fafc")
+    tiles_loaded = 0
+
+    for tile_x in range(tile_min_x, tile_max_x + 1):
+        for tile_y in range(tile_min_y, tile_max_y + 1):
+            if tile_y < 0 or tile_y >= tiles_across:
+                continue
+            wrapped_x = tile_x % tiles_across
+            tile = fetch_tile(zoom, wrapped_x, tile_y, headers)
+            if not tile:
+                continue
+            paste_x = int(tile_x * TILE_SIZE - top_left_x)
+            paste_y = int(tile_y * TILE_SIZE - top_left_y)
+            canvas.paste(tile, (paste_x, paste_y))
+            tiles_loaded += 1
+
+    if tiles_loaded == 0:
+        logging.error("Harita karoları yüklenemedi.")
+        return None
+    return canvas
+
+
 def fetch_static_map(lat: float, lng: float, zoom: int) -> Optional[Image.Image]:
+    def is_probably_blank(image: Image.Image) -> bool:
+        sample = image.resize((40, 40)).convert("RGB")
+        pixels = list(sample.getdata())
+        if not pixels:
+            return True
+        mins = [255, 255, 255]
+        maxs = [0, 0, 0]
+        total = [0, 0, 0]
+        for r, g, b in pixels:
+            mins[0] = min(mins[0], r)
+            mins[1] = min(mins[1], g)
+            mins[2] = min(mins[2], b)
+            maxs[0] = max(maxs[0], r)
+            maxs[1] = max(maxs[1], g)
+            maxs[2] = max(maxs[2], b)
+            total[0] += r
+            total[1] += g
+            total[2] += b
+        avg = [v / len(pixels) for v in total]
+        spread = max(maxs[i] - mins[i] for i in range(3))
+        return spread < 8 and all(channel > 230 for channel in avg)
+
+    tile_map = build_tile_map(lat, lng, zoom)
+    if tile_map and not is_probably_blank(tile_map):
+        return tile_map
+
+    headers = {"User-Agent": "yakinimdakideprem-twitter-bot/1.0"}
     params = {
         "center": f"{lat},{lng}",
         "zoom": str(zoom),
@@ -456,13 +549,35 @@ def fetch_static_map(lat: float, lng: float, zoom: int) -> Optional[Image.Image]
         "maptype": "mapnik",
         "markers": f"{lat},{lng},red-pushpin",
     }
-    try:
-        resp = requests.get(MAP_SERVICE_URL, params=params, timeout=12)
-        resp.raise_for_status()
-        return Image.open(BytesIO(resp.content)).convert("RGB")
-    except Exception as exc:
-        logging.error("Harita görseli alınamadı: %s", exc)
-        return None
+    urls = [
+        (MAP_SERVICE_URL, params),
+        (
+            MAP_SERVICE_FALLBACK_URL.format(
+                zoom=zoom, lat=lat, lng=lng, width=MAP_WIDTH, height=MAP_HEIGHT
+            ),
+            None,
+        ),
+    ]
+
+    for url, url_params in urls:
+        try:
+            resp = requests.get(url, params=url_params, headers=headers, timeout=12)
+            resp.raise_for_status()
+            content_type = resp.headers.get("Content-Type", "")
+            if "image" not in content_type:
+                logging.warning(
+                    "Harita görseli beklenen türde değil: %s (%s)", url, content_type
+                )
+                continue
+            image = Image.open(BytesIO(resp.content)).convert("RGB")
+            if is_probably_blank(image):
+                logging.warning("Harita görseli boş görünüyor: %s", url)
+                continue
+            return image
+        except Exception as exc:
+            logging.error("Harita görseli alınamadı (%s): %s", url, exc)
+            continue
+    return None
 
 
 def build_quake_image(quake: Dict[str, Any]) -> Optional[str]:
@@ -603,6 +718,7 @@ def run_once() -> None:
             continue
 
         tweet_text = format_tweet(quake)
+        logging.info("Tweet etiketleri: %s", " ".join(build_tags_and_city(quake.get("location", ""))[0]))
         media_ids: Optional[List[str]] = None
         image_path = build_quake_image(quake)
         if image_path and media_api:
