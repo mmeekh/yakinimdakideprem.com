@@ -6,21 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Performance: Preconnect to external domains -->
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://unpkg.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WQZS53QX');</script>
-    <!-- End Google Tag Manager -->
     <title>Anlık Deprem, Son Depremler ve Yakınımdaki Deprem - Canlı Harita</title>
     <meta name="description"
         content="Anlık deprem haritası ve son depremler: Kandilli ve AFAD verileriyle Türkiye ve şehirlerde canlı deprem takibi.">
@@ -44,10 +29,25 @@
         content="Anlık deprem haritası, deprem mi oldu ve deprem son dakika sorguları için AFAD/Kandilli verilerini tek ekranda sunuyoruz.">
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.png">
     <meta name="twitter:image:alt" content="Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri görseli">
+    <!-- Performance: Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WQZS53QX');</script>
+    <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="css/leaflet.min.css?v=202601131900" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=2026011235">
-    <link rel="stylesheet" href="css/header.css?v=2026011237">
+    <link rel="stylesheet" href="css/style.min.css?v=202601131955">
+    <link rel="stylesheet" href="css/header.min.css?v=202601131955">
     <link rel="stylesheet" href="css/components.min.css?v=202601131900">
     <!-- Favicon Icons -->
     <link rel="shortcut icon" href="/icons/favicon-32x32.png" type="image/png">
@@ -534,9 +534,9 @@
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="js/header.js?v=2026011234"></script>
+    <script src="js/header.min.js?v=202601131955"></script>
     <!-- Ana Script -->
-    <script src="js/script.js?v=2026011231"></script>
+    <script src="js/script.min.js?v=202601131955"></script>
     <!-- Türkiye Depremleri Script -->
     <script src="js/turkey-earthquakes.min.js?v=202601131900"></script>
     <!-- İstatistik Güncelleyici Script -->
