@@ -1,7 +1,7 @@
 /* Import Global Styles */
 @import url('./variables.css');
 @import url('./base.css');
-@import url('./components.css');
+@import url('./components.min.css');
 
 /* ========================================
    ANLIK DEPREM SPECIFIC STYLES
