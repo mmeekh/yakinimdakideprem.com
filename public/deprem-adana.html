@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/blog.css?v=202601101540">
     <link rel="stylesheet" href="css/components.min.css?v=202601131900">
-    <link rel="stylesheet" href="css/header.min.css?v=202601131955">
+    <link rel="stylesheet" href="css/header.min.css?v=202601132030">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
@@ -123,13 +123,21 @@
             </a>
             <nav>
                 <a href="/" rel="noopener noreferrer">Ana Sayfa</a>
-                <a href="/deprem-aninda.html" rel="noopener noreferrer">Deprem Anında</a>
-                <a href="/deprem-adana.html" class="active" rel="noopener noreferrer">Adana Deprem</a>
-                <a href="/ben-kimim.html" rel="noopener noreferrer">Ben Kimim</a>
-                <a href="/blog.html" rel="noopener noreferrer">Blog</a>
+                <a href="/son-dakika-deprem.html" rel="noopener noreferrer" class="nav-highlight nav-alert">Son Dakika <span class="alarm-dot" aria-hidden="true"></span></a>
+                <div class="nav-dropdown nav-dropdown-guides">
+                    <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                        Rehberler <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="/deprem-aninda.html" rel="noopener noreferrer">Deprem Anında</a>
+                        <a href="/ilk-yardim-cantasi.html" rel="noopener noreferrer">İlk Yardım Çantası</a>
+                        <a href="/ben-kimim.html" rel="noopener noreferrer">Ben Kimim</a>
+                        <a href="/blog.html" rel="noopener noreferrer">Blog</a>
+                    </div>
+                </div>
                 <div class="nav-dropdown">
                     <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
-                        Diğer Şehirler <i class="fas fa-chevron-down"></i>
+                        Şehir Depremleri <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="dropdown-menu">
                         <a href="/deprem-istanbul.html" rel="noopener noreferrer">İstanbul Depremi</a>
@@ -138,8 +146,7 @@
                         <a href="/deprem-elazig.html" rel="noopener noreferrer">Elazığ Depremi</a>
                         <a href="/deprem-bursa.html" rel="noopener noreferrer">Bursa Depremi</a>
                         <a href="/deprem-adana.html" rel="noopener noreferrer">Adana Depremi</a>
-                        <a href='/deprem-bursa.html' rel='noopener noreferrer'>Bursa Depremi</a>
-                        <a href='/deprem-kahramanmaras.html' rel='noopener noreferrer'>Kahramanmaraş Depremi</a>
+                        <a href="/deprem-kahramanmaras.html" rel="noopener noreferrer">Kahramanmaraş Depremi</a>
                     </div>
                 </div>
             </nav>

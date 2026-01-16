@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/blog.css?v=202601101540">
     <link rel="stylesheet" href="css/components.min.css?v=202601131900">
-    <link rel="stylesheet" href="css/header.min.css?v=202601131955">
+    <link rel="stylesheet" href="css/header.min.css?v=202601132030">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
@@ -109,6 +109,18 @@
       }]
     }
     </script>
+    <style>
+        /* Highlight for Son Dakika link */
+        nav a.nav-highlight {
+            color: #d32f2f;
+            font-weight: 700;
+        }
+
+        nav a.nav-highlight:hover {
+            color: #b71c1c;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
@@ -124,10 +136,18 @@
             </a>
             <nav>
                 <a href="/" rel="noopener noreferrer">Ana Sayfa</a>
-                <a href="/deprem-aninda.html" rel="noopener noreferrer">Deprem Anında</a>
-                <a href="/ilk-yardim-cantasi.html" rel="noopener noreferrer">İlk Yardım Çantası</a>
-                <a href="/ben-kimim.html" rel="noopener noreferrer">Ben Kimim</a>
-                <a href="/blog.html" rel="noopener noreferrer">Blog</a>
+                <a href="/son-dakika-deprem.html" rel="noopener noreferrer" class="nav-highlight nav-alert">Son Dakika <span class="alarm-dot" aria-hidden="true"></span></a>
+                <div class="nav-dropdown nav-dropdown-guides">
+                    <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                        Rehberler <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="/deprem-aninda.html" rel="noopener noreferrer">Deprem Anında</a>
+                        <a href="/ilk-yardim-cantasi.html" rel="noopener noreferrer">İlk Yardım Çantası</a>
+                        <a href="/ben-kimim.html" rel="noopener noreferrer">Ben Kimim</a>
+                        <a href="/blog.html" rel="noopener noreferrer">Blog</a>
+                    </div>
+                </div>
                 <div class="nav-dropdown">
                     <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
                         Şehir Depremleri <i class="fas fa-chevron-down"></i>
@@ -139,7 +159,7 @@
                         <a href="/deprem-elazig.html" rel="noopener noreferrer">Elazığ Depremi</a>
                         <a href="/deprem-bursa.html" rel="noopener noreferrer">Bursa Depremi</a>
                         <a href="/deprem-adana.html" rel="noopener noreferrer">Adana Depremi</a>
-                        <a href='/deprem-kahramanmaras.html' rel='noopener noreferrer'>Kahramanmaraş Depremi</a>
+                        <a href="/deprem-kahramanmaras.html" rel="noopener noreferrer">Kahramanmaraş Depremi</a>
                     </div>
                 </div>
             </nav>
@@ -216,6 +236,14 @@
 
                 <section class="city-context">
                     <h2>Ankara Fay Hatları ve Tarihsel Sarsıntılar</h2>
+                    <figure class="city-context__figure">
+                        <img src="images/ankara-risk-haritasi.png"
+                            alt="Ankara deprem risk haritası ve Kuzey Anadolu Fay Hattı" width="800" height="800"
+                            loading="lazy"
+                            style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <figcaption>Görsel 1: Ankara'nın sismik risk haritası ve ana fay hatlarına yakınlığı.
+                        </figcaption>
+                    </figure>
                     <p>İç Anadolu’nun görece sakin zemininde yer alan Ankara, Kuzey Anadolu ve Tuz Gölü fay zonlarının
                         kavşağındaki konumuyla orta büyüklükteki depremleri sıkça hissedebiliyor. Şereflikoçhisar, Bala
                         ve Elmadağ hattı, 2005 ve 2020 yıllarında yaşanan artçı dizilerle kent merkezini tedirgin
@@ -273,7 +301,8 @@
                 <div class="footer-logo">
                     <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem logosu" width="60" height="60">
                     <h3>Yakınımdaki Deprem</h3>
-                    <p>Yakınımdakideprem.com bağımsız, ücretsiz ve tek kişi tarafından geliştirilen bir projedir. Resmi kurumlarla bağlantılı
+                    <p>Yakınımdakideprem.com bağımsız, ücretsiz ve tek kişi tarafından geliştirilen bir projedir. Resmi
+                        kurumlarla bağlantılı
                         değildir.</p>
                 </div>
                 <div class="footer-links">
