@@ -15,7 +15,7 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-WQZS53QX');</script>
     <!-- End Google Tag Manager -->
-    <title>Son Depremler Listesi 2026 - Kandilli ve AFAD Son Dakika | Yakınımdaki Deprem</title>
+    <title>Son Depremler Listesi - Kandilli ve AFAD Son Dakika | Yakınımdaki Deprem</title>
     <meta name="description"
         content="Bugün olan son depremler listesi. Kandilli ve AFAD verileriyle anlık deprem takibi. İstanbul, İzmir, Ankara ve Türkiye geneli son dakika deprem haberleri.">
     <meta name="keywords"
@@ -38,7 +38,7 @@
     <meta name="twitter:image:alt" content="Son dakika deprem verilerini gösteren ekran">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/blog.css?v=202601132130">
-    <link rel="stylesheet" href="css/header.min.css?v=202601132030">
+    <link rel="stylesheet" href="css/header.min.css?v=202601132330">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
@@ -168,9 +168,8 @@
         <article class="blog-post">
             <header class="post-header">
                 <div class="post-meta">
-                    <span class="date"><i class="fas fa-bolt"></i> Anlık Güncelleniyor</span>
-                    <span class="read-time"><i class="fas fa-clock"></i> 2 dk bilgi</span>
-                    <span class="author"><i class="fas fa-satellite-dish"></i> yakinimdakideprem.com Veri Merkezi</span>
+                    <span class="date"><i class="fas fa-bolt"></i> Son güncelleme: <strong id="live-updated">-</strong></span>
+                    <span class="author"><i class="fas fa-satellite-dish"></i> Kaynak: Kandilli / AFAD</span>
                 </div>
                 <h2>Canlı deprem takibi ve az önce deprem oldu mu sorusunun cevabı burada.</h2>
             </header>
@@ -214,9 +213,9 @@
                             <small id="summary-last-time">-</small>
                         </div>
                         <div class="summary-card">
-                            <span class="summary-label">M4.0+ Depremler</span>
+                            <span class="summary-label">M4.0+ (7 gün)</span>
                             <strong id="summary-m4">-</strong>
-                            <small>Son 24 saat</small>
+                            <small>Son 7 gün</small>
                         </div>
                     </div>
                 </section>
@@ -340,9 +339,9 @@
         </div>
     </footer>
 
-    <script src="js/header.min.js?v=202601131955"></script>
+    <script src="js/header.min.js?v=202601132330"></script>
     <script src="js/toc.js?v=202512182020"></script>
-    <script src="js/live-quakes.js?v=202601132110"></script>
+    <script src="js/live-quakes.js?v=202601132330"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const refresh = (force = false) => {
@@ -351,7 +350,8 @@
                     statusSelector: '#just-now-info',
                     tableSelector: '#latest-quakes-table',
                     limit: 20,
-                    force
+                    force,
+                    useBadge: true
                 });
                 renderSonDakikaPanels({ force });
             };

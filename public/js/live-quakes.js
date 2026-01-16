@@ -93,7 +93,8 @@ async function renderGlobalQuakes({
   statusSelector,
   tableSelector,
   limit = 20,
-  force = false
+  force = false,
+  useBadge = false
 }) {
   try {
     const data = await QuakeAPI.fetchData(force);
@@ -117,15 +118,20 @@ async function renderGlobalQuakes({
     if (statusSelector) {
       const el = document.querySelector(statusSelector);
       if (el) {
-        const minutesAgo = Math.round(
-          (Date.now() - new Date(latest.time || latest.updated_at)) / 60000
+        const latestTime = getQuakeTime(latest);
+        const minutesAgo = Math.max(
+          0,
+          Math.round((Date.now() - latestTime.getTime()) / 60000)
         );
-        el.textContent =
-          minutesAgo < 5
-            ? `Evet. ${minutesAgo} dakika önce ${
-                latest.place || "bilinmeyen noktada"
-              } ${latest.magnitude?.toFixed?.(1)} büyüklüğünde deprem oldu.`
-            : "Son 5 dakika içinde deprem kaydı yok.";
+        if (minutesAgo < 5) {
+          el.textContent = `Evet. ${minutesAgo} dakika önce ${
+            latest.place || "bilinmeyen noktada"
+          } ${latest.magnitude?.toFixed?.(1)} büyüklüğünde deprem oldu.`;
+        } else {
+          const place = latest.place || latest.location || "bilinmeyen noktada";
+          const mag = latest.magnitude?.toFixed?.(1) ?? latest.magnitude;
+          el.textContent = `Son 5 dakika içinde deprem kaydı yok. Son deprem: ${mag} büyüklüğünde, ${place}.`;
+        }
       }
     }
 
@@ -134,7 +140,9 @@ async function renderGlobalQuakes({
       if (tbody) {
         tbody.innerHTML = data
           .slice(0, limit)
-          .map((quake) => formatQuakeRow(quake))
+          .map((quake) =>
+            useBadge ? formatQuakeRowWithBadge(quake) : formatQuakeRow(quake)
+          )
           .join("");
       }
     }
@@ -158,6 +166,7 @@ async function renderSonDakikaPanels({ force = false } = {}) {
     const summaryLast = document.getElementById("summary-last");
     const summaryLastTime = document.getElementById("summary-last-time");
     const summaryM4 = document.getElementById("summary-m4");
+    const summaryUpdated = document.getElementById("live-updated");
     const m4Table = document.getElementById("m4plus-table");
 
     if (
@@ -184,13 +193,16 @@ async function renderSonDakikaPanels({ force = false } = {}) {
     const last24 = sorted.filter(
       (quake) => now - getQuakeTime(quake).getTime() <= 24 * 60 * 60 * 1000
     );
+    const last7 = sorted.filter(
+      (quake) => now - getQuakeTime(quake).getTime() <= 7 * 24 * 60 * 60 * 1000
+    );
 
     if (summaryTotal) {
       summaryTotal.textContent = String(last24.length);
     }
 
     if (summaryM4) {
-      const m4count = last24.filter((q) => (getMagnitudeValue(q) ?? 0) >= 4)
+      const m4count = last7.filter((q) => (getMagnitudeValue(q) ?? 0) >= 4)
         .length;
       summaryM4.textContent = String(m4count);
     }
@@ -225,8 +237,12 @@ async function renderSonDakikaPanels({ force = false } = {}) {
       summaryLastTime.textContent = formatShortDate(getQuakeTime(latest));
     }
 
+    if (latest && summaryUpdated) {
+      summaryUpdated.textContent = formatShortDate(getQuakeTime(latest));
+    }
+
     if (m4Table) {
-      const m4list = sorted.filter((q) => (getMagnitudeValue(q) ?? 0) >= 4);
+      const m4list = last7.filter((q) => (getMagnitudeValue(q) ?? 0) >= 4);
       m4Table.innerHTML = m4list.length
         ? m4list.slice(0, 20).map((q) => formatQuakeRowWithBadge(q)).join("")
         : '<tr><td colspan="4">Son 7 gün içinde 4.0+ deprem kaydı yok.</td></tr>';

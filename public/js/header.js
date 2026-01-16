@@ -254,6 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupKeyboardShortcuts();
     handleResponsivePanels();
     setupMobileWelcomeNotice();
+    setupGeoAlert();
 
     window.addEventListener('resize', handleResize);
     document.addEventListener('click', handleDocumentClick);
@@ -656,6 +657,261 @@ function setupMobileWelcomeNotice() {
     } else if (menuModal) {
         showMenuModal();
     }
+}
+
+function setupGeoAlert() {
+    const storageKey = 'geo_alert_seen_v1';
+    if (!('geolocation' in navigator)) return;
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost') return;
+    try {
+        if (localStorage.getItem(storageKey)) {
+            return;
+        }
+    } catch (e) {}
+
+    const alert = document.createElement('div');
+    alert.id = 'geo-alert';
+    alert.innerHTML = `
+        <div class="geo-alert__content">
+            <div class="geo-alert__title">Yakınındaki depremi kontrol edelim mi?</div>
+            <div class="geo-alert__message">Konumunu paylaşman yeterli. Konumun sadece bu cihazda işlenir ve kaydedilmez.</div>
+            <div class="geo-alert__actions">
+                <button class="geo-btn geo-btn-primary" data-action="geo-allow">Konumumu Paylaş</button>
+                <button class="geo-btn geo-btn-ghost" data-action="geo-later">Şimdi Değil</button>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(alert);
+    adjustGeoAlertOffset(alert);
+
+    const allowBtn = alert.querySelector('[data-action="geo-allow"]');
+    const laterBtn = alert.querySelector('[data-action="geo-later"]');
+
+    const markSeen = () => {
+        try {
+            localStorage.setItem(storageKey, String(Date.now()));
+        } catch (e) {}
+    };
+
+    const removeAlert = () => {
+        if (alert && alert.parentNode) {
+            alert.parentNode.removeChild(alert);
+        }
+    };
+
+    if (laterBtn) {
+        laterBtn.addEventListener('click', () => {
+            markSeen();
+            removeAlert();
+        });
+    }
+
+    if (allowBtn) {
+        allowBtn.addEventListener('click', () => {
+            setGeoAlertState(alert, {
+                title: 'Konum alınıyor...',
+                message: 'Tarayıcı izni bekleniyor. Konum izni verirsen yakınındaki depremleri kontrol edeceğiz.',
+                actions: []
+            });
+
+            navigator.geolocation.getCurrentPosition(
+                (pos) => {
+                    markSeen();
+                    checkNearbyQuakes(alert, pos.coords.latitude, pos.coords.longitude);
+                },
+                () => {
+                    markSeen();
+                    setGeoAlertState(alert, {
+                        title: 'Konum alınamadı',
+                        message: 'Konum izni olmadan yakınındaki depremleri kontrol edemiyoruz. Toplanma alanlarını yine de sorgulayabilirsin.',
+                        actions: [
+                            {
+                                label: 'E-Devlet Toplanma Alanı',
+                                href: 'https://www.turkiye.gov.tr/afad-afet-ve-acil-durum-toplanma-alani-sorgulama',
+                                variant: 'link'
+                            },
+                            { label: 'Kapat', action: 'close' }
+                        ]
+                    });
+                },
+                { enableHighAccuracy: false, timeout: 8000, maximumAge: 300000 }
+            );
+        });
+    }
+}
+
+function adjustGeoAlertOffset(alert) {
+    if (!alert) return;
+    const cookieBanner = document.getElementById('cookie-consent');
+    if (cookieBanner) {
+        alert.style.bottom = window.innerWidth <= 600 ? '110px' : '90px';
+    }
+}
+
+function setGeoAlertState(alert, { title, message, actions }) {
+    if (!alert) return;
+    const content = alert.querySelector('.geo-alert__content');
+    if (!content) return;
+    content.innerHTML = `
+        <div class="geo-alert__title">${title}</div>
+        <div class="geo-alert__message">${message}</div>
+        <div class="geo-alert__actions"></div>
+    `;
+    const actionsContainer = content.querySelector('.geo-alert__actions');
+    if (!actionsContainer) return;
+    actions.forEach((action) => {
+        if (action.href) {
+            const link = document.createElement('a');
+            link.href = action.href;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.className = `geo-btn geo-btn-${action.variant || 'link'}`;
+            link.textContent = action.label;
+            actionsContainer.appendChild(link);
+            return;
+        }
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `geo-btn geo-btn-${action.variant || 'ghost'}`;
+        btn.textContent = action.label;
+        btn.addEventListener('click', () => {
+            if (action.action === 'close') {
+                if (alert.parentNode) {
+                    alert.parentNode.removeChild(alert);
+                }
+            }
+        });
+        actionsContainer.appendChild(btn);
+    });
+}
+
+function checkNearbyQuakes(alert, lat, lng) {
+    const NEARBY_RADIUS_KM = 120;
+    const EMERGENCY_MAGNITUDE = 4.0;
+    const EMERGENCY_MINUTES = 180;
+    const params = new URLSearchParams({
+        hours_back: 24,
+        min_magnitude: 1.5,
+        limit: 200
+    });
+
+    fetch(`/api/earthquakes?${params.toString()}`)
+        .then((res) => res.json())
+        .then((json) => {
+            const data = json.data || [];
+            if (!data.length) {
+                setGeoAlertState(alert, {
+                    title: 'Veri bulunamadı',
+                    message: 'Şu anda deprem verisi alınamıyor. Toplanma alanlarını e-Devlet üzerinden sorgulayabilirsin.',
+                    actions: [
+                        {
+                            label: 'E-Devlet Toplanma Alanı',
+                            href: 'https://www.turkiye.gov.tr/afad-afet-ve-acil-durum-toplanma-alani-sorgulama',
+                            variant: 'link'
+                        },
+                        { label: 'Kapat', action: 'close' }
+                    ]
+                });
+                return;
+            }
+
+            const enriched = data
+                .map((quake) => {
+                    const coords = quake.coordinates || {};
+                    const qLat = Number(coords.lat);
+                    const qLng = Number(coords.lng);
+                    if (!Number.isFinite(qLat) || !Number.isFinite(qLng)) return null;
+                    const distance = haversineKm(lat, lng, qLat, qLng);
+                    const time = new Date(quake.time || quake.updated_at || Date.now());
+                    return { quake, distance, time };
+                })
+                .filter(Boolean)
+                .sort((a, b) => a.distance - b.distance);
+
+            const closest = enriched[0];
+            const urgent = enriched.find((item) => {
+                const mag = Number(item.quake.magnitude || 0);
+                const minutesAgo = Math.round((Date.now() - item.time.getTime()) / 60000);
+                return (
+                    item.distance <= NEARBY_RADIUS_KM &&
+                    mag >= EMERGENCY_MAGNITUDE &&
+                    minutesAgo <= EMERGENCY_MINUTES
+                );
+            });
+
+            if (urgent) {
+                const mag = Number(urgent.quake.magnitude || 0).toFixed(1);
+                const place = urgent.quake.place || urgent.quake.location || 'Yakın konum';
+                const minutesAgo = Math.max(
+                    0,
+                    Math.round((Date.now() - urgent.time.getTime()) / 60000)
+                );
+                setGeoAlertState(alert, {
+                    title: 'Yakınında deprem oldu',
+                    message: `${mag} büyüklüğünde deprem ${place} bölgesinde, yaklaşık ${urgent.distance.toFixed(
+                        0
+                    )} km mesafede. ${minutesAgo} dakika önce kaydedildi.`,
+                    actions: [
+                        {
+                            label: 'Toplanma Alanlarını Aç',
+                            href: 'https://www.turkiye.gov.tr/afad-afet-ve-acil-durum-toplanma-alani-sorgulama',
+                            variant: 'primary'
+                        },
+                        { label: 'Kapat', action: 'close' }
+                    ]
+                });
+                return;
+            }
+
+            if (closest) {
+                const mag = Number(closest.quake.magnitude || 0).toFixed(1);
+                const place = closest.quake.place || closest.quake.location || 'Yakın konum';
+                setGeoAlertState(alert, {
+                    title: 'Yakınında acil deprem görünmüyor',
+                    message: `En yakın deprem ${mag} büyüklüğünde, ${place} bölgesinde (yaklaşık ${closest.distance.toFixed(
+                        0
+                    )} km). Yine de toplanma alanlarını kontrol edebilirsin.`,
+                    actions: [
+                        {
+                            label: 'E-Devlet Toplanma Alanı',
+                            href: 'https://www.turkiye.gov.tr/afad-afet-ve-acil-durum-toplanma-alani-sorgulama',
+                            variant: 'link'
+                        },
+                        { label: 'Kapat', action: 'close' }
+                    ]
+                });
+            }
+        })
+        .catch(() => {
+            setGeoAlertState(alert, {
+                title: 'Veri alınamadı',
+                message: 'Deprem verileri şu an yüklenemedi. Toplanma alanlarını e-Devlet üzerinden sorgulayabilirsin.',
+                actions: [
+                    {
+                        label: 'E-Devlet Toplanma Alanı',
+                        href: 'https://www.turkiye.gov.tr/afad-afet-ve-acil-durum-toplanma-alani-sorgulama',
+                        variant: 'link'
+                    },
+                    { label: 'Kapat', action: 'close' }
+                ]
+            });
+        });
+}
+
+function haversineKm(lat1, lon1, lat2, lon2) {
+    const toRad = (value) => (value * Math.PI) / 180;
+    const R = 6371;
+    const dLat = toRad(lat2 - lat1);
+    const dLon = toRad(lon2 - lon1);
+    const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(toRad(lat1)) *
+            Math.cos(toRad(lat2)) *
+            Math.sin(dLon / 2) *
+            Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c;
 }
 
 function setHeaderHeightVar() {
