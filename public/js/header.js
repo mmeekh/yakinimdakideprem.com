@@ -660,7 +660,7 @@ function setupMobileWelcomeNotice() {
 }
 
 function setupGeoAlert() {
-    const storageKey = 'geo_alert_seen_v1';
+    const storageKey = 'geo_alert_seen_v2';
     if (!('geolocation' in navigator)) return;
     if (location.protocol !== 'https:' && location.hostname !== 'localhost') return;
     try {
@@ -669,24 +669,12 @@ function setupGeoAlert() {
         }
     } catch (e) {}
 
-    const alert = document.createElement('div');
-    alert.id = 'geo-alert';
-    alert.innerHTML = `
-        <div class="geo-alert__content">
-            <div class="geo-alert__title">Yakınındaki depremi kontrol edelim mi?</div>
-            <div class="geo-alert__message">Konumunu paylaşman yeterli. Konumun sadece bu cihazda işlenir ve kaydedilmez.</div>
-            <div class="geo-alert__actions">
-                <button class="geo-btn geo-btn-primary" data-action="geo-allow">Konumumu Paylaş</button>
-                <button class="geo-btn geo-btn-ghost" data-action="geo-later">Şimdi Değil</button>
-            </div>
-        </div>
-    `;
-
-    document.body.appendChild(alert);
-    adjustGeoAlertOffset(alert);
-
-    const allowBtn = alert.querySelector('[data-action="geo-allow"]');
-    const laterBtn = alert.querySelector('[data-action="geo-later"]');
+    const shouldDelayGeoAlert = () => {
+        if (document.getElementById('cookie-consent')) return true;
+        if (document.body.classList.contains('welcome-visible')) return true;
+        if (document.body.classList.contains('nav-welcome-visible')) return true;
+        return Boolean(document.querySelector('.mobile-welcome-modal.is-visible'));
+    };
 
     const markSeen = () => {
         try {
@@ -694,21 +682,33 @@ function setupGeoAlert() {
         } catch (e) {}
     };
 
-    const removeAlert = () => {
-        if (alert && alert.parentNode) {
-            alert.parentNode.removeChild(alert);
-        }
-    };
+    const showAlert = () => {
+        const alert = document.createElement('div');
+        alert.id = 'geo-alert';
+        alert.innerHTML = `
+            <div class="geo-alert__content">
+                <div class="geo-alert__title">Yakınındaki depremi kontrol edelim mi?</div>
+                <div class="geo-alert__message">Konumunu paylaşman yeterli. Konumun sadece bu cihazda işlenir ve kaydedilmez.</div>
+                <div class="geo-alert__actions">
+                    <button class="geo-btn geo-btn-primary" data-action="geo-allow">Konumumu Paylaş</button>
+                    <button class="geo-btn geo-btn-ghost" data-action="geo-later">Şimdi Değil</button>
+                </div>
+            </div>
+        `;
 
-    if (laterBtn) {
-        laterBtn.addEventListener('click', () => {
-            markSeen();
-            removeAlert();
-        });
-    }
+        document.body.appendChild(alert);
+        adjustGeoAlertOffset(alert);
 
-    if (allowBtn) {
-        allowBtn.addEventListener('click', () => {
+        const allowBtn = alert.querySelector('[data-action="geo-allow"]');
+        const laterBtn = alert.querySelector('[data-action="geo-later"]');
+
+        const removeAlert = () => {
+            if (alert && alert.parentNode) {
+                alert.parentNode.removeChild(alert);
+            }
+        };
+
+        const requestLocation = () => {
             setGeoAlertState(alert, {
                 title: 'Konum alınıyor...',
                 message: 'Tarayıcı izni bekleniyor. Konum izni verirsen yakınındaki depremleri kontrol edeceğiz.',
@@ -720,25 +720,89 @@ function setupGeoAlert() {
                     markSeen();
                     checkNearbyQuakes(alert, pos.coords.latitude, pos.coords.longitude);
                 },
-                () => {
+                (error) => {
                     markSeen();
-                    setGeoAlertState(alert, {
-                        title: 'Konum alınamadı',
-                        message: 'Konum izni olmadan yakınındaki depremleri kontrol edemiyoruz. Toplanma alanlarını yine de sorgulayabilirsin.',
-                        actions: [
-                            {
-                                label: 'E-Devlet Toplanma Alanı',
-                                href: 'https://www.turkiye.gov.tr/afad-afet-ve-acil-durum-toplanma-alani-sorgulama',
-                                variant: 'link'
-                            },
-                            { label: 'Kapat', action: 'close' }
-                        ]
+                    const code = error && error.code;
+                    const isTimeout = code === 3;
+                    const isDenied = code === 1;
+                    const isUnavailable = code === 2;
+                    const title = isDenied
+                        ? 'Konum izni kapalı'
+                        : isUnavailable
+                            ? 'Konum bulunamadı'
+                            : isTimeout
+                                ? 'Konum zaman aşımına uğradı'
+                                : 'Konum alınamadı';
+                    const message = isDenied
+                        ? 'Tarayıcı konum izni kapalı olabilir. Adres çubuğundaki izinlerden konumu açıp tekrar deneyebilirsin.'
+                        : isUnavailable
+                            ? 'Konum servisleri kapalı veya GPS sinyali zayıf olabilir. Konum ayarlarını kontrol edip tekrar deneyebilirsin.'
+                            : isTimeout
+                                ? 'Konum bilgisi gecikti. Tekrar deneyebilir veya e-Devlet üzerinden toplanma alanlarını sorgulayabilirsin.'
+                                : 'Konum izni olmadan yakınındaki depremleri kontrol edemiyoruz. Toplanma alanlarını yine de sorgulayabilirsin.';
+                    const actions = [];
+                    if (isTimeout) {
+                        actions.push({
+                            label: 'Tekrar Dene',
+                            onClick: requestLocation,
+                            variant: 'primary'
+                        });
+                    }
+                    actions.push({
+                        label: 'E-Devlet Toplanma Alanı',
+                        href: 'https://www.turkiye.gov.tr/afad-afet-ve-acil-durum-toplanma-alani-sorgulama',
+                        variant: 'link'
                     });
+                    actions.push({ label: 'Kapat', action: 'close' });
+                    setGeoAlertState(alert, { title, message, actions });
                 },
-                { enableHighAccuracy: false, timeout: 8000, maximumAge: 300000 }
+                { enableHighAccuracy: true, timeout: 15000, maximumAge: 600000 }
             );
-        });
-    }
+        };
+
+        if (laterBtn) {
+            laterBtn.addEventListener('click', () => {
+                markSeen();
+                removeAlert();
+            });
+        }
+
+        if (allowBtn) {
+            allowBtn.addEventListener('click', requestLocation);
+        }
+
+        if (navigator.permissions && navigator.permissions.query) {
+            navigator.permissions
+                .query({ name: 'geolocation' })
+                .then((status) => {
+                    if (status.state === 'denied') {
+                        setGeoAlertState(alert, {
+                            title: 'Konum izni kapalı',
+                            message: 'Tarayıcı konum izni kapalı olabilir. Konumu açıp tekrar denemek için sayfayı yenileyebilirsin.',
+                            actions: [
+                                {
+                                    label: 'E-Devlet Toplanma Alanı',
+                                    href: 'https://www.turkiye.gov.tr/afad-afet-ve-acil-durum-toplanma-alani-sorgulama',
+                                    variant: 'link'
+                                },
+                                { label: 'Kapat', action: 'close' }
+                            ]
+                        });
+                    }
+                })
+                .catch(() => {});
+        }
+    };
+
+    const queueAlert = () => {
+        if (shouldDelayGeoAlert()) {
+            setTimeout(queueAlert, 800);
+            return;
+        }
+        showAlert();
+    };
+
+    queueAlert();
 }
 
 function adjustGeoAlertOffset(alert) {
@@ -776,6 +840,10 @@ function setGeoAlertState(alert, { title, message, actions }) {
         btn.className = `geo-btn geo-btn-${action.variant || 'ghost'}`;
         btn.textContent = action.label;
         btn.addEventListener('click', () => {
+            if (typeof action.onClick === 'function') {
+                action.onClick();
+                return;
+            }
             if (action.action === 'close') {
                 if (alert.parentNode) {
                     alert.parentNode.removeChild(alert);
