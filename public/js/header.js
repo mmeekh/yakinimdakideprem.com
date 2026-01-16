@@ -681,6 +681,15 @@ function setupMobileWelcomeNotice() {
 
 function setupGeoAlert() {
     if (!('geolocation' in navigator)) return;
+    const permissions =
+        document.permissionsPolicy || document.featurePolicy || null;
+    if (permissions && typeof permissions.allowsFeature === 'function') {
+        try {
+            if (!permissions.allowsFeature('geolocation')) {
+                return;
+            }
+        } catch (e) {}
+    }
     if (location.protocol !== 'https:' && location.hostname !== 'localhost') return;
     try {
         if (localStorage.getItem(GEO_ALERT_STORAGE_KEY)) {
