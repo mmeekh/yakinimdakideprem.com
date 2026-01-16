@@ -51,6 +51,15 @@ function denyAnalyticsConsent() {
   } catch(e) {}
 }
 
+const GEO_ALERT_STORAGE_KEY = 'geo_alert_seen_v2';
+const EDEVLET_TOPLANMA_URL = 'https://www.turkiye.gov.tr/afet-ve-acil-durum-yonetimi-acil-toplanma-alani-sorgulama';
+
+function markGeoAlertSeen() {
+  try {
+    localStorage.setItem(GEO_ALERT_STORAGE_KEY, String(Date.now()));
+  } catch (e) {}
+}
+
 let consentToastTimer = null;
 let consentToastCleanupTimer = null;
 
@@ -652,19 +661,29 @@ function setupMobileWelcomeNotice() {
     bindDismiss(welcomeModal, 'welcome-visible', menuModal ? showMenuModal : markSeen);
     bindDismiss(menuModal, 'nav-welcome-visible', markSeen);
 
-    if (welcomeModal) {
-        showModal(welcomeModal, 'welcome-visible');
-    } else if (menuModal) {
-        showMenuModal();
-    }
+    const shouldDelayWelcome = () => Boolean(document.getElementById('cookie-consent'));
+    const showInitialModal = () => {
+        if (welcomeModal) {
+            showModal(welcomeModal, 'welcome-visible');
+        } else if (menuModal) {
+            showMenuModal();
+        }
+    };
+    const queueWelcome = () => {
+        if (shouldDelayWelcome()) {
+            setTimeout(queueWelcome, 600);
+            return;
+        }
+        showInitialModal();
+    };
+    queueWelcome();
 }
 
 function setupGeoAlert() {
-    const storageKey = 'geo_alert_seen_v2';
     if (!('geolocation' in navigator)) return;
     if (location.protocol !== 'https:' && location.hostname !== 'localhost') return;
     try {
-        if (localStorage.getItem(storageKey)) {
+        if (localStorage.getItem(GEO_ALERT_STORAGE_KEY)) {
             return;
         }
     } catch (e) {}
@@ -674,12 +693,6 @@ function setupGeoAlert() {
         if (document.body.classList.contains('welcome-visible')) return true;
         if (document.body.classList.contains('nav-welcome-visible')) return true;
         return Boolean(document.querySelector('.mobile-welcome-modal.is-visible'));
-    };
-
-    const markSeen = () => {
-        try {
-            localStorage.setItem(storageKey, String(Date.now()));
-        } catch (e) {}
     };
 
     const showAlert = () => {
@@ -709,6 +722,7 @@ function setupGeoAlert() {
         };
 
         const requestLocation = () => {
+            markGeoAlertSeen();
             setGeoAlertState(alert, {
                 title: 'Konum alınıyor...',
                 message: 'Tarayıcı izni bekleniyor. Konum izni verirsen yakınındaki depremleri kontrol edeceğiz.',
@@ -717,80 +731,56 @@ function setupGeoAlert() {
 
             navigator.geolocation.getCurrentPosition(
                 (pos) => {
-                    markSeen();
                     checkNearbyQuakes(alert, pos.coords.latitude, pos.coords.longitude);
                 },
                 (error) => {
-                    markSeen();
                     const code = error && error.code;
                     const isTimeout = code === 3;
                     const isDenied = code === 1;
                     const isUnavailable = code === 2;
                     const title = isDenied
-                        ? 'Konum izni kapalı'
+                        ? 'Konum izni kapalı olabilir'
                         : isUnavailable
                             ? 'Konum bulunamadı'
                             : isTimeout
                                 ? 'Konum zaman aşımına uğradı'
                                 : 'Konum alınamadı';
                     const message = isDenied
-                        ? 'Tarayıcı konum izni kapalı olabilir. Adres çubuğundaki izinlerden konumu açıp tekrar deneyebilirsin.'
+                        ? 'Konum izni kapalı olabilir. Adres çubuğundaki izinlerden konumu açıp tekrar deneyebilirsin.'
                         : isUnavailable
                             ? 'Konum servisleri kapalı veya GPS sinyali zayıf olabilir. Konum ayarlarını kontrol edip tekrar deneyebilirsin.'
                             : isTimeout
                                 ? 'Konum bilgisi gecikti. Tekrar deneyebilir veya e-Devlet üzerinden toplanma alanlarını sorgulayabilirsin.'
                                 : 'Konum izni olmadan yakınındaki depremleri kontrol edemiyoruz. Toplanma alanlarını yine de sorgulayabilirsin.';
-                    const actions = [];
-                    if (isTimeout) {
-                        actions.push({
+                    const actions = [
+                        {
                             label: 'Tekrar Dene',
                             onClick: requestLocation,
                             variant: 'primary'
-                        });
-                    }
+                        }
+                    ];
                     actions.push({
                         label: 'E-Devlet Toplanma Alanı',
-                        href: 'https://www.turkiye.gov.tr/afad-afet-ve-acil-durum-toplanma-alani-sorgulama',
-                        variant: 'link'
+                        href: EDEVLET_TOPLANMA_URL,
+                        variant: 'link',
+                        markSeen: true
                     });
-                    actions.push({ label: 'Kapat', action: 'close' });
+                    actions.push({ label: 'Kapat', action: 'close', markSeen: true });
                     setGeoAlertState(alert, { title, message, actions });
                 },
-                { enableHighAccuracy: true, timeout: 15000, maximumAge: 600000 }
+                { enableHighAccuracy: true, timeout: 20000, maximumAge: 60000 }
             );
         };
 
         if (laterBtn) {
             laterBtn.addEventListener('click', () => {
-                markSeen();
+                markGeoAlertSeen();
                 removeAlert();
             });
         }
 
         if (allowBtn) {
             allowBtn.addEventListener('click', requestLocation);
-        }
-
-        if (navigator.permissions && navigator.permissions.query) {
-            navigator.permissions
-                .query({ name: 'geolocation' })
-                .then((status) => {
-                    if (status.state === 'denied') {
-                        setGeoAlertState(alert, {
-                            title: 'Konum izni kapalı',
-                            message: 'Tarayıcı konum izni kapalı olabilir. Konumu açıp tekrar denemek için sayfayı yenileyebilirsin.',
-                            actions: [
-                                {
-                                    label: 'E-Devlet Toplanma Alanı',
-                                    href: 'https://www.turkiye.gov.tr/afad-afet-ve-acil-durum-toplanma-alani-sorgulama',
-                                    variant: 'link'
-                                },
-                                { label: 'Kapat', action: 'close' }
-                            ]
-                        });
-                    }
-                })
-                .catch(() => {});
         }
     };
 
@@ -832,6 +822,11 @@ function setGeoAlertState(alert, { title, message, actions }) {
             link.rel = 'noopener noreferrer';
             link.className = `geo-btn geo-btn-${action.variant || 'link'}`;
             link.textContent = action.label;
+            if (action.markSeen) {
+                link.addEventListener('click', () => {
+                    markGeoAlertSeen();
+                });
+            }
             actionsContainer.appendChild(link);
             return;
         }
@@ -840,6 +835,9 @@ function setGeoAlertState(alert, { title, message, actions }) {
         btn.className = `geo-btn geo-btn-${action.variant || 'ghost'}`;
         btn.textContent = action.label;
         btn.addEventListener('click', () => {
+            if (action.markSeen) {
+                markGeoAlertSeen();
+            }
             if (typeof action.onClick === 'function') {
                 action.onClick();
                 return;
@@ -875,7 +873,7 @@ function checkNearbyQuakes(alert, lat, lng) {
                     actions: [
                         {
                             label: 'E-Devlet Toplanma Alanı',
-                            href: 'https://www.turkiye.gov.tr/afad-afet-ve-acil-durum-toplanma-alani-sorgulama',
+                            href: EDEVLET_TOPLANMA_URL,
                             variant: 'link'
                         },
                         { label: 'Kapat', action: 'close' }
@@ -923,7 +921,7 @@ function checkNearbyQuakes(alert, lat, lng) {
                     actions: [
                         {
                             label: 'Toplanma Alanlarını Aç',
-                            href: 'https://www.turkiye.gov.tr/afad-afet-ve-acil-durum-toplanma-alani-sorgulama',
+                            href: EDEVLET_TOPLANMA_URL,
                             variant: 'primary'
                         },
                         { label: 'Kapat', action: 'close' }
@@ -943,7 +941,7 @@ function checkNearbyQuakes(alert, lat, lng) {
                     actions: [
                         {
                             label: 'E-Devlet Toplanma Alanı',
-                            href: 'https://www.turkiye.gov.tr/afad-afet-ve-acil-durum-toplanma-alani-sorgulama',
+                            href: EDEVLET_TOPLANMA_URL,
                             variant: 'link'
                         },
                         { label: 'Kapat', action: 'close' }
@@ -958,7 +956,7 @@ function checkNearbyQuakes(alert, lat, lng) {
                 actions: [
                     {
                         label: 'E-Devlet Toplanma Alanı',
-                        href: 'https://www.turkiye.gov.tr/afad-afet-ve-acil-durum-toplanma-alani-sorgulama',
+                        href: EDEVLET_TOPLANMA_URL,
                         variant: 'link'
                     },
                     { label: 'Kapat', action: 'close' }
