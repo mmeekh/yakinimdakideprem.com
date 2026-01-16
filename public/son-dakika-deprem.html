@@ -37,7 +37,7 @@
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/blog-son-deprem-haberleri.webp">
     <meta name="twitter:image:alt" content="Son dakika deprem verilerini gösteren ekran">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/blog.css?v=202601101540">
+    <link rel="stylesheet" href="css/blog.css?v=202601132130">
     <link rel="stylesheet" href="css/header.min.css?v=202601132030">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
@@ -194,6 +194,55 @@
                     </div>
                 </section>
 
+                <section class="live-summary">
+                    <h2 id="son-24-saat">Son 24 Saat Özeti</h2>
+                    <p>Son 24 saat içinde kaydedilen depremleri hızlıca özetler. Veriler canlı olarak güncellenir.</p>
+                    <div class="summary-grid">
+                        <div class="summary-card">
+                            <span class="summary-label">Kayıt Sayısı</span>
+                            <strong id="summary-total">-</strong>
+                            <small>Son 24 saat</small>
+                        </div>
+                        <div class="summary-card">
+                            <span class="summary-label">En Büyük Deprem</span>
+                            <strong id="summary-strongest">-</strong>
+                            <small id="summary-strongest-place">-</small>
+                        </div>
+                        <div class="summary-card">
+                            <span class="summary-label">Son Deprem</span>
+                            <strong id="summary-last">-</strong>
+                            <small id="summary-last-time">-</small>
+                        </div>
+                        <div class="summary-card">
+                            <span class="summary-label">M4.0+ Depremler</span>
+                            <strong id="summary-m4">-</strong>
+                            <small>Son 24 saat</small>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 id="m4plus">4.0 ve Üzeri Depremler</h2>
+                    <p>Son 7 gün içinde 4.0 ve üzeri büyüklükte kaydedilen depremler listelenir.</p>
+                    <div class="table-wrapper">
+                        <table class="quake-table">
+                            <thead>
+                                <tr>
+                                    <th>Tarih/Saat</th>
+                                    <th>Büyüklük</th>
+                                    <th>Derinlik</th>
+                                    <th>Konum</th>
+                                </tr>
+                            </thead>
+                            <tbody id="m4plus-table">
+                                <tr>
+                                    <td colspan="4">Veriler yükleniyor...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
                 <section>
                     <h2 id="son-20-deprem">Son 20 Deprem Tablosu</h2>
                     <p>Tablodaki veriler API çağrısı ile her yenilemede güncellenir. Deprem verileri Kandilli
@@ -293,24 +342,24 @@
 
     <script src="js/header.min.js?v=202601131955"></script>
     <script src="js/toc.js?v=202512182020"></script>
-    <script src="js/live-quakes.js?v=202512182020"></script>
+    <script src="js/live-quakes.js?v=202601132110"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            renderGlobalQuakes({
-                highlightSelector: '#latest-quake',
-                statusSelector: '#just-now-info',
-                tableSelector: '#latest-quakes-table',
-                limit: 20
-            });
-
-            document.getElementById('refresh-live').addEventListener('click', () => {
+            const refresh = (force = false) => {
                 renderGlobalQuakes({
                     highlightSelector: '#latest-quake',
                     statusSelector: '#just-now-info',
                     tableSelector: '#latest-quakes-table',
                     limit: 20,
-                    force: true
+                    force
                 });
+                renderSonDakikaPanels({ force });
+            };
+
+            refresh();
+
+            document.getElementById('refresh-live').addEventListener('click', () => {
+                refresh(true);
             });
         });
     </script>

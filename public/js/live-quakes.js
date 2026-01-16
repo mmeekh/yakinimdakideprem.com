@@ -23,12 +23,57 @@ const QuakeAPI = {
   }
 };
 
+function getQuakeTime(quake) {
+  const raw = quake.time || quake.updated_at || quake.date;
+  const date = raw ? new Date(raw) : new Date();
+  return Number.isNaN(date.getTime()) ? new Date() : date;
+}
+
+function formatShortDate(date) {
+  return date.toLocaleString("tr-TR", {
+    day: "2-digit",
+    month: "short",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+}
+
+function getMagnitudeValue(quake) {
+  const value = Number(quake.magnitude);
+  return Number.isFinite(value) ? value : null;
+}
+
+function getMagnitudeColor(magnitude) {
+  if (magnitude >= 6) return "#b71c1c";
+  if (magnitude >= 5) return "#d32f2f";
+  if (magnitude >= 4) return "#f44336";
+  return "#f59e0b";
+}
+
 function formatQuakeRow(quake) {
-  const time = new Date(quake.time || quake.updated_at || Date.now());
+  const time = getQuakeTime(quake);
   return `
     <tr>
       <td>${time.toLocaleString("tr-TR")}</td>
       <td><strong>${quake.magnitude?.toFixed?.(1) ?? quake.magnitude}</strong></td>
+      <td>${quake.depth ? `${quake.depth} km` : "-"}</td>
+      <td>${quake.place || quake.location || "Bilinmeyen"}</td>
+    </tr>
+  `;
+}
+
+function formatQuakeRowWithBadge(quake) {
+  const time = getQuakeTime(quake);
+  const magnitude = getMagnitudeValue(quake);
+  const label = magnitude !== null ? magnitude.toFixed(1) : "-";
+  const badge = magnitude !== null
+    ? `<span class="magnitude-badge" style="background:${getMagnitudeColor(magnitude)}">${label}</span>`
+    : "-";
+
+  return `
+    <tr>
+      <td>${time.toLocaleString("tr-TR")}</td>
+      <td>${badge}</td>
       <td>${quake.depth ? `${quake.depth} km` : "-"}</td>
       <td>${quake.place || quake.location || "Bilinmeyen"}</td>
     </tr>
@@ -98,6 +143,99 @@ async function renderGlobalQuakes({
     const tbody = document.querySelector(tableSelector);
     if (tbody) {
       tbody.innerHTML =
+        '<tr><td colspan="4">Veri alınırken hata oluştu.</td></tr>';
+    }
+  }
+}
+
+async function renderSonDakikaPanels({ force = false } = {}) {
+  try {
+    const summaryTotal = document.getElementById("summary-total");
+    const summaryStrongest = document.getElementById("summary-strongest");
+    const summaryStrongestPlace = document.getElementById(
+      "summary-strongest-place"
+    );
+    const summaryLast = document.getElementById("summary-last");
+    const summaryLastTime = document.getElementById("summary-last-time");
+    const summaryM4 = document.getElementById("summary-m4");
+    const m4Table = document.getElementById("m4plus-table");
+
+    if (
+      !summaryTotal &&
+      !summaryStrongest &&
+      !summaryStrongestPlace &&
+      !summaryLast &&
+      !summaryLastTime &&
+      !summaryM4 &&
+      !m4Table
+    ) {
+      return;
+    }
+
+    const data = await QuakeAPI.fetchData(force);
+    if (!data.length) {
+      return;
+    }
+
+    const sorted = [...data].sort(
+      (a, b) => getQuakeTime(b) - getQuakeTime(a)
+    );
+    const now = Date.now();
+    const last24 = sorted.filter(
+      (quake) => now - getQuakeTime(quake).getTime() <= 24 * 60 * 60 * 1000
+    );
+
+    if (summaryTotal) {
+      summaryTotal.textContent = String(last24.length);
+    }
+
+    if (summaryM4) {
+      const m4count = last24.filter((q) => (getMagnitudeValue(q) ?? 0) >= 4)
+        .length;
+      summaryM4.textContent = String(m4count);
+    }
+
+    const strongest = last24.reduce((max, quake) => {
+      const value = getMagnitudeValue(quake) ?? -1;
+      const maxValue = getMagnitudeValue(max) ?? -1;
+      return value > maxValue ? quake : max;
+    }, last24[0] || sorted[0]);
+
+    if (strongest && summaryStrongest) {
+      const strongestValue = getMagnitudeValue(strongest);
+      summaryStrongest.textContent =
+        strongestValue !== null ? `${strongestValue.toFixed(1)} Mw` : "-";
+    }
+
+    if (strongest && summaryStrongestPlace) {
+      summaryStrongestPlace.textContent =
+        strongest.place || strongest.location || "Bilinmeyen lokasyon";
+    }
+
+    const latest = sorted[0];
+    if (latest && summaryLast) {
+      const latestValue = getMagnitudeValue(latest);
+      summaryLast.textContent =
+        latestValue !== null
+          ? `${latestValue.toFixed(1)} Mw ${latest.place || ""}`.trim()
+          : latest.place || "Son deprem";
+    }
+
+    if (latest && summaryLastTime) {
+      summaryLastTime.textContent = formatShortDate(getQuakeTime(latest));
+    }
+
+    if (m4Table) {
+      const m4list = sorted.filter((q) => (getMagnitudeValue(q) ?? 0) >= 4);
+      m4Table.innerHTML = m4list.length
+        ? m4list.slice(0, 20).map((q) => formatQuakeRowWithBadge(q)).join("")
+        : '<tr><td colspan="4">Son 7 gün içinde 4.0+ deprem kaydı yok.</td></tr>';
+    }
+  } catch (error) {
+    console.error(error);
+    const m4Table = document.getElementById("m4plus-table");
+    if (m4Table) {
+      m4Table.innerHTML =
         '<tr><td colspan="4">Veri alınırken hata oluştu.</td></tr>';
     }
   }

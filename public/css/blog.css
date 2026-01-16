@@ -150,6 +150,58 @@ body {
     color: #0f172a;
 }
 
+.live-summary {
+    margin-top: 32px;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.summary-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(211, 47, 47, 0.12);
+}
+
+.summary-label {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.summary-card strong {
+    display: block;
+    margin-top: 6px;
+    font-size: 22px;
+    color: var(--primary-color);
+}
+
+.summary-card small {
+    display: block;
+    margin-top: 4px;
+    color: #64748b;
+}
+
+.magnitude-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 56px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+}
+
 .quake-table {
     width: 100%;
     border-collapse: collapse;
