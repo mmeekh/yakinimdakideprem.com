@@ -58,13 +58,21 @@ body {
     color: white;
 }
 
-.blog-hero h1 {
+.blog-hero .hero-content h1 {
     font-size: 2.5rem;
     line-height: 1.2;
     margin-bottom: 15px;
     color: #ffffff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     font-weight: 700;
+}
+
+.blog-hero .hero-content {
+    color: #ffffff;
+}
+
+.blog-hero .meta {
+    color: #ffffff;
 }
 
 .blog-hero .meta {
@@ -201,8 +209,9 @@ body {
         min-height: 250px;
     }
 
-    .blog-hero h1 {
+    .blog-hero .hero-content h1 {
         font-size: 1.8rem;
+        color: #ffffff;
     }
 
     .blog-hero .meta {
