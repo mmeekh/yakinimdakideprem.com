@@ -1,5 +1,6 @@
 (() => {
   const MOBILE_BREAKPOINT = 900;
+  let popupAdjusting = false;
 
   function closeInfoPanel() {
     if (!document.body.classList.contains('info-menu-open')) return;
@@ -24,27 +25,81 @@
     window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
   }
 
+  function getMap() {
+    return window.AppState && window.AppState.map ? window.AppState.map : null;
+  }
+
+  function findNearestMarker(quake) {
+    const markers = Array.isArray(window.AppState?.markers) ? window.AppState.markers : [];
+    if (!markers.length) return null;
+    let bestMarker = null;
+    let bestScore = Infinity;
+    markers.forEach((marker) => {
+      const pos = marker.getLatLng ? marker.getLatLng() : null;
+      if (!pos) return;
+      const score = Math.abs(pos.lat - quake.coordinates.lat) + Math.abs(pos.lng - quake.coordinates.lng);
+      if (score < bestScore) {
+        bestScore = score;
+        bestMarker = marker;
+      }
+    });
+    return bestMarker;
+  }
+
+  function centerPopupInView(popup) {
+    const map = getMap();
+    if (!map || !popup || popupAdjusting) return;
+    const popupEl = popup.getElement ? popup.getElement() : null;
+    const mapEl = map.getContainer ? map.getContainer() : null;
+    if (!popupEl || !mapEl) return;
+    const popupRect = popupEl.getBoundingClientRect();
+    const mapRect = mapEl.getBoundingClientRect();
+    const deltaX = (popupRect.left + popupRect.width / 2) - (mapRect.left + mapRect.width / 2);
+    const deltaY = (popupRect.top + popupRect.height / 2) - (mapRect.top + mapRect.height / 2);
+    if (Math.abs(deltaX) < 1 && Math.abs(deltaY) < 1) return;
+    popupAdjusting = true;
+    map.panBy([-deltaX, -deltaY], { animate: true, duration: 0.25 });
+    setTimeout(() => {
+      popupAdjusting = false;
+    }, 300);
+  }
+
+  function attachPopupCentering() {
+    const map = getMap();
+    if (!map || map._popupCenteringAttached) return;
+    map._popupCenteringAttached = true;
+    map.on('popupopen', (event) => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          centerPopupInView(event.popup);
+        });
+      });
+    });
+  }
+
   function focusOnQuake(item) {
-    if (!window.AppState || !window.AppState.map) return;
+    if (typeof window.ensureMapReady === 'function') {
+      window.ensureMapReady();
+    }
+    const map = getMap();
+    if (!map) return;
     const quakeId = item.getAttribute('data-id');
     if (!quakeId) return;
     const quakes = Array.isArray(window.AppState.earthquakeData) ? window.AppState.earthquakeData : [];
     const quake = quakes.find((entry) => String(entry.id) === String(quakeId));
     if (!quake || !quake.coordinates) return;
-    window.AppState.map.setView([quake.coordinates.lat, quake.coordinates.lng], 8);
-    const markers = Array.isArray(window.AppState.markers) ? window.AppState.markers : [];
-    const marker = markers.find((entry) => {
-      const pos = entry.getLatLng ? entry.getLatLng() : null;
-      return pos
-        && Math.abs(pos.lat - quake.coordinates.lat) < 0.001
-        && Math.abs(pos.lng - quake.coordinates.lng) < 0.001;
-    });
+    map.setView([quake.coordinates.lat, quake.coordinates.lng], 8);
+    const marker = findNearestMarker(quake);
     if (marker && marker.openPopup) {
       marker.openPopup();
     }
     setTimeout(() => {
-      if (window.AppState && window.AppState.map && window.AppState.map.invalidateSize) {
-        window.AppState.map.invalidateSize();
+      if (map.invalidateSize) {
+        map.invalidateSize();
+      }
+      const activePopup = map._popup || null;
+      if (activePopup) {
+        centerPopupInView(activePopup);
       }
     }, 200);
   }
@@ -52,9 +107,23 @@
   document.addEventListener('click', (event) => {
     const item = event.target.closest ? event.target.closest('.earthquake-item') : null;
     if (!item) return;
-    if (window.innerWidth > MOBILE_BREAKPOINT) return;
-    closeInfoPanel();
-    scrollToMap();
-    focusOnQuake(item);
+    if (window.innerWidth <= MOBILE_BREAKPOINT) {
+      closeInfoPanel();
+      scrollToMap();
+    }
+    setTimeout(() => {
+      focusOnQuake(item);
+    }, 50);
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const waitForMap = () => {
+      if (getMap()) {
+        attachPopupCentering();
+        return;
+      }
+      setTimeout(waitForMap, 300);
+    };
+    waitForMap();
   });
 })();
