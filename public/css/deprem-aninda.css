@@ -49,6 +49,32 @@ body {
     opacity: 0.9;
 }
 
+/* Hero image */
+.hero-image-section {
+    margin-top: 30px;
+}
+
+.hero-figure {
+    margin: 0;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.hero-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-figure figcaption {
+    padding: 14px 18px;
+    font-size: 14px;
+    color: #555;
+    background: #fff;
+}
+
 /* Güvenlik Rehberleri */
 .safety-guides {
     display: grid;
