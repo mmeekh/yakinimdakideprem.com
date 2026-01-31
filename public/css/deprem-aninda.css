@@ -60,12 +60,14 @@ body {
     border-radius: 16px;
     box-shadow: var(--shadow);
     overflow: hidden;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-figure img {
     width: 100%;
-    height: auto;
-    max-height: 420px;
+    height: 360px;
     object-fit: cover;
     display: block;
 }
@@ -79,7 +81,13 @@ body {
 
 @media (max-width: 768px) {
     .hero-figure img {
-        max-height: 260px;
+        height: 220px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-figure img {
+        height: 420px;
     }
 }
 
