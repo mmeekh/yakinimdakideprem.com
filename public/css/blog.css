@@ -93,6 +93,10 @@ body {
     height: 250px;
 }
 
+.blog-list .blog-card:not(.featured) .blog-image {
+    height: 250px;
+}
+
 .blog-card.featured h2 {
     color: var(--primary-color);
     font-weight: 700;
