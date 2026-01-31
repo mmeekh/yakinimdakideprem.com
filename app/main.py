@@ -1,5 +1,6 @@
 import os
 from copy import deepcopy
+import html
 from datetime import datetime, timedelta
 from typing import Dict, Optional, List, Any
 
@@ -36,6 +37,11 @@ def format_time_ago(dt: datetime) -> str:
     if hours == 0:
         return f"{days} gün önce"
     return f"{days} gün {hours} saat önce"
+
+
+def sanitize_text(value: str) -> str:
+    """Escape text for safe HTML rendering in clients."""
+    return html.escape(value or "", quote=True)
 
 
 class EarthquakeCache:
@@ -120,6 +126,7 @@ async def fetch_kandilli_earthquakes(hours_back: int, min_magnitude: float) -> L
         city_name = closest_city.get("name") if isinstance(closest_city, dict) else None
 
         location = f"{title} ({city_name})" if city_name else title
+        location = sanitize_text(location)
 
         earthquakes.append(
             {
@@ -262,7 +269,7 @@ async def get_earthquakes(
             EarthquakeData(
                 id="sample1",
                 magnitude=4.2,
-                location="Ankara, Türkiye",
+                location=sanitize_text("Ankara, Türkiye"),
                 time=now - timedelta(hours=1),
                 time_ago=format_time_ago(now - timedelta(hours=1)),
                 coordinates={"lat": 39.92, "lng": 32.85},
@@ -272,7 +279,7 @@ async def get_earthquakes(
             EarthquakeData(
                 id="sample2",
                 magnitude=3.5,
-                location="İzmir, Türkiye",
+                location=sanitize_text("İzmir, Türkiye"),
                 time=now - timedelta(hours=2),
                 time_ago=format_time_ago(now - timedelta(hours=2)),
                 coordinates={"lat": 38.42, "lng": 27.14},
@@ -282,7 +289,7 @@ async def get_earthquakes(
             EarthquakeData(
                 id="sample3",
                 magnitude=5.1,
-                location="Kahramanmaraş, Türkiye",
+                location=sanitize_text("Kahramanmaraş, Türkiye"),
                 time=now - timedelta(hours=4),
                 time_ago=format_time_ago(now - timedelta(hours=4)),
                 coordinates={"lat": 37.58, "lng": 36.95},
