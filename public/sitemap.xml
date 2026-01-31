@@ -38,6 +38,10 @@
     <lastmod>2025-11-23</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/ankara-deprem-risk-haritasi-hero.webp</image:loc>
+      <image:caption>Ankara deprem risk haritası ve fay hatları</image:caption>
+    </image:image>
   </url>
 
   <url>
@@ -203,7 +207,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://yakinimdakideprem.com/images/blog-disaridaysaniz.webp</image:loc>
+      <image:loc>https://yakinimdakideprem.com/images/toplanma-alani-sorgulama.webp</image:loc>
       <image:caption>Deprem toplanma alanı sorgulama rehberi</image:caption>
     </image:image>
   </url>
@@ -215,7 +219,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://yakinimdakideprem.com/images/cokapantutun.webp</image:loc>
+      <image:loc>https://yakinimdakideprem.com/images/deprem-aninda-cok-kapan-tutun.webp</image:loc>
       <image:caption>Çök Kapan Tutun hayat kurtaran hareket</image:caption>
     </image:image>
   </url>

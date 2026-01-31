@@ -38,23 +38,36 @@
     <meta name="twitter:image:alt" content="Son dakika deprem verilerini gösteren ekran">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/blog.css?v=202601132130">
+    <link rel="stylesheet" href="css/filters.css?v=1">
     <link rel="stylesheet" href="css/header.min.css?v=202601132330">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <style>
-        /* Highlight for Son Dakika link */
-        nav a.nav-highlight {
-            color: #d32f2f;
-            font-weight: 700;
-        }
+    nav a.nav-alert .alarm-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #d32f2f;
+    border-radius: 50%;
+    margin-left: 5px;
+    animation: pulse-red 2s infinite;
+    }
 
-        nav a.nav-highlight:hover {
-            color: #b71c1c;
-            text-decoration: underline;
-        }
-    </style>
+    @keyframes pulse-red {
+    0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.7);
+    }
+    70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(211, 47, 47, 0);
+    }
+    100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(211, 47, 47, 0);
+    }
+    }
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -125,7 +138,8 @@
             </a>
             <nav>
                 <a href="/" rel="noopener noreferrer">Ana Sayfa</a>
-                <a href="/son-dakika-deprem.html" rel="noopener noreferrer" class="nav-highlight nav-alert active">Son Dakika <span class="alarm-dot" aria-hidden="true"></span></a>
+                <a href="/son-dakika-deprem.html" rel="noopener noreferrer" class="nav-highlight nav-alert active">Son
+                    Dakika <span class="alarm-dot" aria-hidden="true"></span></a>
                 <div class="nav-dropdown nav-dropdown-guides">
                     <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
                         Rehberler <i class="fas fa-chevron-down"></i>
@@ -155,6 +169,25 @@
         </div>
     </header>
 
+    <!-- Mobile Welcome Modal (Only Menu, since no map here) -->
+    <div id="mobile-menu-modal" class="mobile-welcome-modal" aria-hidden="true">
+        <div class="mobile-welcome-modal__backdrop"></div>
+        <div class="mobile-welcome-modal__card" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title"
+            aria-describedby="mobile-menu-desc">
+            <span class="mobile-welcome-modal__eyebrow">Menü</span>
+            <h2 id="mobile-menu-title" class="mobile-welcome-modal__title">Diğer sayfalara geçin</h2>
+            <p id="mobile-menu-desc" class="mobile-welcome-modal__message">
+                Sağ üstteki menüden aşağıdaki bölümlere hızlıca gidebilirsiniz:
+            </p>
+            <ul class="mobile-welcome-list">
+                <li>Harita & Ana Sayfa</li>
+                <li>Rehberler ve Blog Yazıları</li>
+                <li>Şehir Depremleri (İstanbul, İzmir vb.)</li>
+            </ul>
+            <button type="button" class="mobile-welcome-modal__cta" data-action="dismiss">Tamam</button>
+        </div>
+    </div>
+
     <header class="page-header">
         <div class="container">
             <h1>Son Depremler Listesi</h1>
@@ -168,7 +201,8 @@
         <article class="blog-post">
             <header class="post-header">
                 <div class="post-meta">
-                    <span class="date"><i class="fas fa-bolt"></i> Son güncelleme: <strong id="live-updated">-</strong></span>
+                    <span class="date"><i class="fas fa-bolt"></i> Son güncelleme: <strong
+                            id="live-updated">-</strong></span>
                     <span class="author"><i class="fas fa-satellite-dish"></i> Kaynak: Kandilli / AFAD</span>
                 </div>
                 <h2>Canlı deprem takibi ve az önce deprem oldu mu sorusunun cevabı burada.</h2>
@@ -247,6 +281,22 @@
                     <p>Tablodaki veriler API çağrısı ile her yenilemede güncellenir. Deprem verileri Kandilli
                         Rasathanesi
                         kaynaklıdır; resmi duyurular için AFAD kaynakları takip edilmelidir.</p>
+                    <div class="filter-container">
+                        <div class="filter-group">
+                            <label for="filter-city">Şehir Ara</label>
+                            <input type="text" id="filter-city" class="filter-input"
+                                placeholder="Şehir adı yazın... (örn: İstanbul)">
+                        </div>
+                        <div class="filter-group">
+                            <label for="filter-min-mag">En Düşük Büyüklük</label>
+                            <select id="filter-min-mag" class="filter-select">
+                                <option value="0">Tümü</option>
+                                <option value="2.0">2.0 ve üzeri</option>
+                                <option value="3.0">3.0 ve üzeri</option>
+                                <option value="4.0">4.0 ve üzeri</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="table-wrapper">
                         <table class="quake-table">
                             <thead>
@@ -341,7 +391,7 @@
 
     <script src="js/header.min.js?v=202601132730"></script>
     <script src="js/toc.js?v=202512182020"></script>
-    <script src="js/live-quakes.js?v=202601132330"></script>
+    <script src="js/live-quakes.js?v=202601311600"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const refresh = (force = false) => {
@@ -358,6 +408,16 @@
 
             refresh();
 
+            // Filtreleri kur
+            if (window.setupFilters) {
+                window.setupFilters();
+            }
+
+            // Auto-refresh every 60 seconds
+            setInterval(() => {
+                refresh(true);
+            }, 60000);
+
             document.getElementById('refresh-live').addEventListener('click', () => {
                 refresh(true);
             });
@@ -366,3 +426,38 @@
 </body>
 
 </html>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Az önce deprem oldu mu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, Türkiye'de her gün irili ufaklı yüzlerce sarsıntı kaydedilmektedir. Yakınımdaki Deprem sayfası üzerinden Kandilli Rasathanesi ve AFAD verileriyle son depremleri anlık olarak, saniye farkıyla takip edebilirsiniz."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Son depremleri nereden takip edebilirim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En güncel deprem verilerini Kandilli Rasathanesi ve AFAD'ın resmi kaynaklarından anlık olarak çeken 'Yakınımdaki Deprem Son Dakika' sayfasından takip edebilirsiniz."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Deprem verileri güvenilir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sitemizdeki tüm veriler, Türkiye'nin yetkili kurumları olan Boğaziçi Üniversitesi Kandilli Rasathanesi ve AFAD (Afet ve Acil Durum Yönetimi Başkanlığı) API servislerinden otomatik olarak çekilmektedir."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Hissedilen bir deprem olduğunda ne yapmalıyım?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sakin olun ve 'Çök-Kapan-Tutun' hareketini uygulayın. Sarsıntı geçene kadar güvenli bir yerde bekleyin, ardından merdivenleri kullanarak binayı terk edin ve en yakın toplanma alanına gidin. Asansör kullanmayın."
+        }
+      }]
+    }
+    </script>
