@@ -1,11 +1,13 @@
 import os
 from copy import deepcopy
 import html
+import hashlib
+import json
 from datetime import datetime, timedelta
 from typing import Dict, Optional, List, Any
 
 import httpx
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
@@ -44,6 +46,52 @@ def sanitize_text(value: str) -> str:
     return html.escape(value or "", quote=True)
 
 
+def normalize_etag_value(value: str) -> str:
+    if not value:
+        return ""
+    value = value.strip()
+    if value.startswith("W/"):
+        value = value[2:].strip()
+    return value.strip('"')
+
+
+def etag_matches(request: Request, etag: str) -> bool:
+    if not etag:
+        return False
+    header = request.headers.get("if-none-match")
+    if not header:
+        return False
+    candidates = [candidate.strip() for candidate in header.split(",")]
+    return any(normalize_etag_value(candidate) == etag for candidate in candidates)
+
+
+def format_etag(etag: str) -> str:
+    return f"\"{etag}\""
+
+
+def build_earthquake_etag(items: List[Any]) -> str:
+    parts: List[str] = []
+    for item in items or []:
+        if isinstance(item, dict):
+            item_id = item.get("id")
+            item_time = item.get("time")
+        else:
+            item_id = getattr(item, "id", None)
+            item_time = getattr(item, "time", None)
+        if isinstance(item_time, datetime):
+            time_value = item_time.isoformat()
+        else:
+            time_value = str(item_time or "")
+        parts.append(f"{item_id}-{time_value}")
+    fingerprint = "|".join(parts)
+    return hashlib.sha256(fingerprint.encode("utf-8")).hexdigest()
+
+
+def build_stats_etag(stats: Dict[str, Any]) -> str:
+    payload = json.dumps(stats, sort_keys=True, default=str)
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
 class EarthquakeCache:
     """Simple in-memory cache for earthquake responses."""
 
@@ -71,11 +119,129 @@ KANDILLI_CACHE_TTL = timedelta(seconds=20)
 _kandilli_cache_data: Optional[List[Dict[str, Any]]] = None
 _kandilli_cache_timestamp: Optional[datetime] = None
 
+KANDILLI_API_URL = os.getenv(
+    "KANDILLI_API_URL", "https://api.orhanaydogdu.com.tr/deprem/kandilli/live"
+)
+AFAD_API_URL = os.getenv(
+    "AFAD_API_URL", "https://api.orhanaydogdu.com.tr/deprem/afad/live"
+)
+DATA_SOURCES = [
+    ("Kandilli", KANDILLI_API_URL),
+    ("AFAD", AFAD_API_URL),
+]
+
+
+def parse_earthquake_time(raw_time: str) -> Optional[datetime]:
+    if not raw_time:
+        return None
+    raw_time = str(raw_time)
+    try:
+        parsed = datetime.fromisoformat(raw_time.replace("Z", "+00:00"))
+        if parsed.tzinfo:
+            return parsed.astimezone().replace(tzinfo=None)
+        return parsed
+    except ValueError:
+        pass
+    for fmt in ("%Y.%m.%d %H:%M:%S", "%Y-%m-%d %H:%M:%S", "%Y-%m-%dT%H:%M:%S"):
+        try:
+            return datetime.strptime(raw_time, fmt)
+        except ValueError:
+            continue
+    return None
+
+
+def extract_coordinates(item: Dict[str, Any]) -> Dict[str, float]:
+    coordinates = []
+    geojson = item.get("geojson")
+    if isinstance(geojson, dict):
+        coordinates = geojson.get("coordinates") or []
+    if not coordinates:
+        geometry = item.get("geometry")
+        if isinstance(geometry, dict):
+            coordinates = geometry.get("coordinates") or []
+    if not coordinates:
+        coords_raw = item.get("coordinates")
+        if isinstance(coords_raw, list):
+            coordinates = coords_raw
+
+    lat = None
+    lng = None
+    if len(coordinates) >= 2:
+        lng = coordinates[0]
+        lat = coordinates[1]
+
+    properties = item.get("properties") if isinstance(item.get("properties"), dict) else {}
+    if lat is None:
+        lat = item.get("lat") or item.get("latitude") or properties.get("lat") or properties.get("latitude")
+    if lng is None:
+        lng = item.get("lng") or item.get("longitude") or item.get("lon") or properties.get("lng") or properties.get("longitude") or properties.get("lon")
+
+    try:
+        lat = float(lat)
+    except (TypeError, ValueError):
+        lat = 0.0
+    try:
+        lng = float(lng)
+    except (TypeError, ValueError):
+        lng = 0.0
+
+    return {"lat": lat, "lng": lng}
+
+
+def extract_depth(item: Dict[str, Any]) -> float:
+    depth = item.get("depth")
+    properties = item.get("properties") if isinstance(item.get("properties"), dict) else {}
+    if depth is None and properties:
+        depth = properties.get("depth")
+    if depth is None:
+        geojson = item.get("geojson")
+        if isinstance(geojson, dict):
+            coords = geojson.get("coordinates") or []
+            if len(coords) >= 3:
+                depth = coords[2]
+        geometry = item.get("geometry")
+        if depth is None and isinstance(geometry, dict):
+            coords = geometry.get("coordinates") or []
+            if len(coords) >= 3:
+                depth = coords[2]
+    try:
+        return float(depth) if depth is not None else 0.0
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def extract_location(item: Dict[str, Any]) -> str:
+    properties = item.get("properties") if isinstance(item.get("properties"), dict) else {}
+    title = (
+        item.get("title")
+        or properties.get("title")
+        or item.get("location")
+        or properties.get("location")
+        or item.get("place")
+        or properties.get("place")
+        or item.get("region")
+        or properties.get("region")
+        or "Bilinmeyen Konum"
+    )
+    location_properties = item.get("location_properties") or properties.get("location_properties") or {}
+    closest_city = location_properties.get("closestCity", {}) if isinstance(location_properties, dict) else {}
+    city_name = closest_city.get("name") if isinstance(closest_city, dict) else None
+    if not city_name:
+        for key in ("city", "province", "il", "ilce", "district"):
+            if item.get(key):
+                city_name = item.get(key)
+                break
+        if not city_name and properties:
+            for key in ("city", "province", "il", "ilce", "district"):
+                if properties.get(key):
+                    city_name = properties.get(key)
+                    break
+    location = f"{title} ({city_name})" if city_name else title
+    return sanitize_text(location)
+
 
 async def fetch_kandilli_earthquakes(hours_back: int, min_magnitude: float) -> List[Dict[str, Any]]:
-    """Fetch earthquake data from Kandilli Observatory API."""
-    kandilli_url = "https://api.orhanaydogdu.com.tr/deprem/kandilli/live"
-
+    """Fetch earthquake data from configured sources with fallback."""
     global _kandilli_cache_data, _kandilli_cache_timestamp
     now = datetime.now()
 
@@ -86,67 +252,111 @@ async def fetch_kandilli_earthquakes(hours_back: int, min_magnitude: float) -> L
     ):
         return deepcopy(_kandilli_cache_data)
 
-    try:
-        async with httpx.AsyncClient(timeout=10.0) as client:
-            response = await client.get(kandilli_url)
-            response.raise_for_status()
-            payload = response.json()
-    except Exception as exc:  # pragma: no cover - network failure
-        print(f"Kandilli API Error: {exc}")
-        if _kandilli_cache_data:
-            return deepcopy(_kandilli_cache_data)
-        return []
+    cutoff_time = now - timedelta(hours=hours_back)
+    last_error: Optional[Exception] = None
 
-    earthquake_list = payload.get("result", payload if isinstance(payload, list) else [])
-    cutoff_time = datetime.now() - timedelta(hours=hours_back)
+    async with httpx.AsyncClient(timeout=10.0) as client:
+        for source_name, source_url in DATA_SOURCES:
+            if not source_url:
+                continue
+            try:
+                response = await client.get(source_url)
+                response.raise_for_status()
+                payload = response.json()
+            except Exception as exc:  # pragma: no cover - network failure
+                print(f"{source_name} API Error: {exc}")
+                last_error = exc
+                continue
 
-    earthquakes: List[Dict[str, Any]] = []
-    for item in earthquake_list:
-        raw_time = item.get("date") or item.get("date_time") or ""
-        earthquake_time: Optional[datetime] = None
+            if isinstance(payload, dict):
+                earthquake_list = payload.get("result") or payload.get("data") or payload.get("features") or []
+            elif isinstance(payload, list):
+                earthquake_list = payload
+            else:
+                earthquake_list = []
 
-        for fmt in ("%Y.%m.%d %H:%M:%S", "%Y-%m-%d %H:%M:%S"):
-            if earthquake_time is None:
-                try:
-                    earthquake_time = datetime.strptime(raw_time, fmt)
-                except ValueError:
+            earthquakes: List[Dict[str, Any]] = []
+            for item in earthquake_list:
+                properties = item.get("properties") if isinstance(item, dict) else {}
+                raw_time = (
+                    item.get("date")
+                    or item.get("date_time")
+                    or item.get("time")
+                    or item.get("datetime")
+                    or item.get("event_time")
+                    or properties.get("time")
+                    or properties.get("date")
+                    or ""
+                )
+
+                earthquake_time: Optional[datetime] = None
+                if isinstance(raw_time, (int, float)):
+                    timestamp = float(raw_time)
+                    if timestamp > 1_000_000_000_000:
+                        timestamp /= 1000.0
+                    earthquake_time = datetime.fromtimestamp(timestamp)
+                else:
+                    earthquake_time = parse_earthquake_time(raw_time)
+
+                if earthquake_time is None or earthquake_time < cutoff_time:
                     continue
 
-        if earthquake_time is None or earthquake_time < cutoff_time:
-            continue
-        if item.get("mag", 0) < min_magnitude:
-            continue
+                magnitude = (
+                    item.get("mag")
+                    or item.get("magnitude")
+                    or item.get("md")
+                    or item.get("ml")
+                    or item.get("mw")
+                    or (properties.get("mag") if isinstance(properties, dict) else None)
+                    or (properties.get("magnitude") if isinstance(properties, dict) else None)
+                )
+                try:
+                    magnitude = float(magnitude) if magnitude is not None else 0.0
+                except (TypeError, ValueError):
+                    magnitude = 0.0
+                if magnitude < min_magnitude:
+                    continue
 
-        geojson = item.get("geojson", {})
-        coordinates = geojson.get("coordinates", [0, 0, 0])
+                coordinates = extract_coordinates(item)
+                depth = extract_depth(item)
+                location = extract_location(item)
 
-        title = item.get("title", "Bilinmeyen Konum")
-        location_properties = item.get("location_properties", {})
-        closest_city = location_properties.get("closestCity", {}) if isinstance(location_properties, dict) else {}
-        city_name = closest_city.get("name") if isinstance(closest_city, dict) else None
+                quake_id = (
+                    item.get("earthquake_id")
+                    or item.get("id")
+                    or item.get("_id")
+                    or item.get("event_id")
+                    or (properties.get("id") if isinstance(properties, dict) else None)
+                )
+                if not quake_id:
+                    quake_id = (
+                        f"{source_name.lower()}-{earthquake_time.isoformat()}-"
+                        f"{coordinates['lat']:.3f}-{coordinates['lng']:.3f}-{magnitude:.1f}"
+                    )
 
-        location = f"{title} ({city_name})" if city_name else title
-        location = sanitize_text(location)
+                earthquakes.append(
+                    {
+                        "id": str(quake_id),
+                        "magnitude": magnitude,
+                        "location": location,
+                        "time": earthquake_time,
+                        "coordinates": coordinates,
+                        "depth": depth,
+                        "source": source_name,
+                    }
+                )
 
-        earthquakes.append(
-            {
-                "id": item.get("earthquake_id", ""),
-                "magnitude": float(item.get("mag", 0.0)),
-                "location": location,
-                "time": earthquake_time,
-                "coordinates": {
-                    "lat": coordinates[1] if len(coordinates) > 1 else 0.0,
-                    "lng": coordinates[0] if len(coordinates) > 0 else 0.0,
-                },
-                "depth": float(item.get("depth", 0.0)),
-                "source": "Kandilli",
-            }
-        )
+            if earthquakes:
+                earthquakes.sort(key=lambda eq: eq["time"], reverse=True)
+                _kandilli_cache_data = deepcopy(earthquakes)
+                _kandilli_cache_timestamp = datetime.now()
+                return earthquakes
 
-    earthquakes.sort(key=lambda eq: eq["time"], reverse=True)
-    _kandilli_cache_data = deepcopy(earthquakes)
-    _kandilli_cache_timestamp = datetime.now()
-    return earthquakes
+    if last_error:
+        print(f"All sources failed. Last error: {last_error}")
+    if _kandilli_cache_data:
+        return deepcopy(_kandilli_cache_data)
+    return []
 
 
 APP_NAME = os.getenv("APP_NAME", "yakınımdakideprem-api")
@@ -222,6 +432,8 @@ def echo(q: str = "hello") -> Dict[str, str]:
 
 @app.get("/api/earthquakes", response_model=EarthquakeResponse)
 async def get_earthquakes(
+    request: Request,
+    response: Response,
     hours_back: int = Query(24, ge=1, le=720, description="Son kaç saatlik veriler"),
     min_magnitude: float = Query(2.0, ge=0, le=10, description="Minimum büyüklük"),
     limit: int = Query(100, ge=1, le=2000, description="Maksimum sonuç sayısı"),
@@ -230,6 +442,15 @@ async def get_earthquakes(
     cached = earthquake_cache.get(cache_key)
     if cached:
         print(f"Cache hit for key: {cache_key}")
+        etag = build_earthquake_etag(cached.get("data", []))
+        cache_control = "public, max-age=10, stale-while-revalidate=20"
+        if etag_matches(request, etag):
+            return Response(
+                status_code=304,
+                headers={"ETag": format_etag(etag), "Cache-Control": cache_control},
+            )
+        response.headers["ETag"] = format_etag(etag)
+        response.headers["Cache-Control"] = cache_control
         return EarthquakeResponse(**cached)
 
     try:
@@ -260,6 +481,15 @@ async def get_earthquakes(
         earthquake_cache.set(cache_key, response_payload)
         print(f"Kandilli data cached with key: {cache_key}")
 
+        etag = build_earthquake_etag(response_payload.get("data", []))
+        cache_control = "public, max-age=10, stale-while-revalidate=20"
+        if etag_matches(request, etag):
+            return Response(
+                status_code=304,
+                headers={"ETag": format_etag(etag), "Cache-Control": cache_control},
+            )
+        response.headers["ETag"] = format_etag(etag)
+        response.headers["Cache-Control"] = cache_control
         return EarthquakeResponse(**response_payload)
 
     except Exception as exc:
@@ -298,6 +528,7 @@ async def get_earthquakes(
             ),
         ]
 
+        response.headers["Cache-Control"] = "no-store"
         return EarthquakeResponse(
             success=False,
             data=sample,
@@ -308,7 +539,7 @@ async def get_earthquakes(
 
 
 @app.get("/api/earthquakes/stats")
-async def get_earthquake_stats() -> Dict[str, Any]:
+async def get_earthquake_stats(request: Request, response: Response) -> Dict[str, Any]:
     try:
         earthquakes = await fetch_kandilli_earthquakes(24, 2.0)
         magnitudes = [eq["magnitude"] for eq in earthquakes if eq.get("magnitude")]
@@ -326,11 +557,21 @@ async def get_earthquake_stats() -> Dict[str, Any]:
             "last_update_ago": format_time_ago(now),
         }
 
+        etag = build_stats_etag(stats)
+        cache_control = "public, max-age=20, stale-while-revalidate=40"
+        if etag_matches(request, etag):
+            return Response(
+                status_code=304,
+                headers={"ETag": format_etag(etag), "Cache-Control": cache_control},
+            )
+        response.headers["ETag"] = format_etag(etag)
+        response.headers["Cache-Control"] = cache_control
         return {"success": True, "stats": stats}
 
     except Exception as exc:
         print(f"Kandilli stats error: {exc}")
         now = datetime.now()
+        response.headers["Cache-Control"] = "no-store"
         return {
             "success": False,
             "stats": {
