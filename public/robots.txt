@@ -3,4 +3,5 @@ Disallow: /api/
 Disallow: /docs
 Disallow: /redoc
 Disallow: /openapi.json
+Disallow: /*?q=
 Sitemap: https://yakinimdakideprem.com/sitemap.xml

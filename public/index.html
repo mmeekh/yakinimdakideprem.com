@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Anlık Deprem, Son Depremler ve Yakınımdaki Deprem - Canlı Harita</title>
+    <title>Canlı Deprem Haritası | Son Depremler ve Anlık Deprem Takibi</title>
     <meta name="description"
-        content="Anlık deprem haritası ve son depremler: Kandilli ve AFAD verileriyle Türkiye ve şehirlerde canlı deprem takibi.">
+        content="Canlı deprem haritası ve son depremler listesi. Kandilli ve AFAD verileriyle deprem mi oldu sorusuna anlık yanıt.">
     <meta name="keywords"
         content="anlık deprem, son depremler, deprem mi oldu, deprem son dakika, deprem haritası, canlı deprem, yakınımdaki deprem, AFAD son depremler, Kandilli son depremler, İstanbul deprem, İzmir deprem, Ankara deprem">
     <meta name="author" content="Emin Kılıç">
@@ -16,17 +16,17 @@
     <link rel="canonical" href="https://yakinimdakideprem.com/" />
     <meta property="og:locale" content="tr_TR">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Anlık Deprem ve Son Depremler - Yakınımdaki Deprem Haritası">
+    <meta property="og:title" content="Canlı Deprem Haritası | Son Depremler ve Anlık Deprem Takibi">
     <meta property="og:description"
-        content="Türkiye ve şehirlerdeki anlık deprem, deprem son dakika ve deprem mi oldu sorgularını AFAD-Kandilli verileriyle tek ekranda görün.">
+        content="Canlı deprem haritası ve son depremler listesi. Kandilli ve AFAD verileriyle deprem mi oldu sorusuna anlık yanıt.">
     <meta property="og:url" content="https://yakinimdakideprem.com/">
     <meta property="og:site_name" content="Yakınımdaki Deprem">
     <meta property="og:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.png">
     <meta property="og:image:alt" content="Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri görseli">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Anlık Deprem ve Son Depremler - Yakınımdaki Deprem Haritası">
+    <meta name="twitter:title" content="Canlı Deprem Haritası | Son Depremler ve Anlık Deprem Takibi">
     <meta name="twitter:description"
-        content="Anlık deprem haritası, deprem mi oldu ve deprem son dakika sorguları için AFAD/Kandilli verilerini tek ekranda sunuyoruz.">
+        content="Canlı deprem haritası ve son depremler listesi. Kandilli ve AFAD verileriyle deprem mi oldu sorusuna anlık yanıt.">
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.png">
     <meta name="twitter:image:alt" content="Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri görseli">
     <!-- Performance: Preconnect to external domains -->
@@ -76,9 +76,9 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Anlık Deprem ve Son Depremler - Yakınımdaki Deprem Haritası",
+      "name": "Canlı Deprem Haritası | Son Depremler ve Anlık Deprem Takibi",
       "url": "https://yakinimdakideprem.com/",
-      "description": "Anlık deprem haritası, deprem son dakika ve deprem mi oldu soruları için Kandilli Rasathanesi verilerini hızlıca sunar.",
+      "description": "Canlı deprem haritası ve son depremler listesi. Kandilli ve AFAD verileriyle deprem mi oldu sorusuna anlık yanıt.",
       "inLanguage": "tr-TR",
       "isPartOf": {
         "@type": "WebSite",
@@ -203,7 +203,7 @@
             </nav>
         </div>
     </header>
-    <div id="mobile-welcome-modal" class="mobile-welcome-modal" aria-hidden="true">
+    <div id="mobile-welcome-modal" class="mobile-welcome-modal" aria-hidden="true" hidden>
         <div class="mobile-welcome-modal__backdrop"></div>
         <div class="mobile-welcome-modal__card" role="dialog" aria-modal="true" aria-labelledby="mobile-welcome-title"
             aria-describedby="mobile-welcome-desc">
@@ -215,7 +215,7 @@
             <button type="button" class="mobile-welcome-modal__cta" data-action="dismiss">Tamam</button>
         </div>
     </div>
-    <div id="mobile-menu-modal" class="mobile-welcome-modal" aria-hidden="true">
+    <div id="mobile-menu-modal" class="mobile-welcome-modal" aria-hidden="true" hidden>
         <div class="mobile-welcome-modal__backdrop"></div>
         <div class="mobile-welcome-modal__card" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title"
             aria-describedby="mobile-menu-desc">
@@ -234,7 +234,7 @@
     </div>
     <!-- Harita ve Overlay Alanı -->
     <div class="map-wrapper">
-        <h1 class="map-h1">Anlık Deprem ve Son Depremler - Türkiye Deprem Haritası</h1>
+        <h1 class="map-h1">Canlı Deprem Haritası ve Son Depremler</h1>
         <div id="map"></div>
 
         <!-- Büyüklük Göstergesi -->
@@ -551,10 +551,10 @@
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="js/header.min.js?v=202601132730"></script>
+    <script src="js/header.min.js?v=202602011300"></script>
     <!-- Ana Script -->
-    <script src="js/script.min.js?v=202601131955"></script>
-    <script src="js/mobile-quake-focus.js?v=202601312030"></script>
+    <script src="js/script.min.js?v=202602011200"></script>
+    <script src="js/mobile-quake-focus.js?v=202602011200"></script>
     <!-- Türkiye Depremleri Script -->
     <script src="js/turkey-earthquakes.min.js?v=202601131900"></script>
     <!-- İstatistik Güncelleyici Script -->

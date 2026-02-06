@@ -5,6 +5,9 @@ yakinimdakideprem.com {
     tls internal
     encode zstd gzip
 
+    redir /index.html / permanent
+    redir /privacy-policy.html /gizlilik-politikasi.html permanent
+
     handle_path /api/* {
         reverse_proxy yakinimdakideprem-api:8000
     }
