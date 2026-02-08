@@ -236,6 +236,9 @@
     <div class="map-wrapper">
         <h1 class="map-h1">Canlı Deprem Haritası ve Son Depremler</h1>
         <div id="map"></div>
+        <noscript>
+            <p class="loading">Canlı deprem haritası için JavaScript gerekir. Son depremler için resmi kaynakları da kontrol edin.</p>
+        </noscript>
 
         <!-- Büyüklük Göstergesi -->
         <div class="magnitude-legend overlay">
@@ -298,7 +301,14 @@
                 </div>
             </div>
             <div class="earthquake-items" id="earthquake-items">
-                <div class="loading">Depremler yükleniyor...</div>
+                <div class="loading">Depremler yükleniyor. API erişilemezse AFAD ve Kandilli kaynaklarını kullanın.</div>
+                <noscript>
+                    <ul class="keyword-pills">
+                        <li><a href="https://deprem.afad.gov.tr/last-earthquakes.html" target="_blank" rel="noopener noreferrer">AFAD Son Depremler</a></li>
+                        <li><a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Kandilli Rasathanesi</a></li>
+                        <li><a href="/son-dakika-deprem.html" rel="noopener noreferrer">Son Dakika Deprem Sayfası</a></li>
+                    </ul>
+                </noscript>
             </div>
         </aside>
 

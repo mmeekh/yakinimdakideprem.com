@@ -26,6 +26,12 @@ docker compose up -d --build
 docker compose -f docker-compose.production.yml up -d --build
 ```
 
+## Sitemap maintenance
+Keep `public/sitemap.xml` `lastmod` values aligned with real file updates:
+```bash
+./scripts/update-sitemap-lastmod.sh
+```
+
 ## Erişim
 - Site: `https://yakinimdakideprem.com/`
 - API Docs: `/docs`

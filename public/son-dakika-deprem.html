@@ -40,34 +40,11 @@
     <link rel="stylesheet" href="css/blog.css?v=202601132130">
     <link rel="stylesheet" href="css/filters.css?v=1">
     <link rel="stylesheet" href="css/header.min.css?v=202601132330">
+    <link rel="stylesheet" href="css/son-dakika-alert.css?v=202602081420">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
-    nav a.nav-alert .alarm-dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background-color: #d32f2f;
-    border-radius: 50%;
-    margin-left: 5px;
-    animation: pulse-red 2s infinite;
-    }
-
-    @keyframes pulse-red {
-    0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.7);
-    }
-    70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 6px rgba(211, 47, 47, 0);
-    }
-    100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(211, 47, 47, 0);
-    }
-    }
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -170,7 +147,7 @@
     </header>
 
     <!-- Mobile Welcome Modal (Only Menu, since no map here) -->
-    <div id="mobile-menu-modal" class="mobile-welcome-modal" aria-hidden="true">
+    <div id="mobile-menu-modal" class="mobile-welcome-modal" aria-hidden="true" hidden>
         <div class="mobile-welcome-modal__backdrop"></div>
         <div class="mobile-welcome-modal__card" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title"
             aria-describedby="mobile-menu-desc">
@@ -209,6 +186,17 @@
             </header>
 
             <div class="post-content dynamic-quake-content">
+                <noscript>
+                    <div class="live-box">
+                        <h3>JavaScript Kapalı</h3>
+                        <p>Canlı deprem tablosu için JavaScript gerekir. Son depremleri aşağıdaki sayfalardan takip edebilirsiniz.</p>
+                        <ul>
+                            <li><a href="/">Anlık deprem haritası</a></li>
+                            <li><a href="https://deprem.afad.gov.tr/last-earthquakes.html" target="_blank" rel="noopener noreferrer">AFAD son depremler</a></li>
+                            <li><a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Kandilli Rasathanesi</a></li>
+                        </ul>
+                    </div>
+                </noscript>
                 <nav class="toc" aria-label="İçindekiler">
                     <strong>İçindekiler</strong>
                     <ul></ul>
@@ -269,7 +257,7 @@
                             </thead>
                             <tbody id="m4plus-table">
                                 <tr>
-                                    <td colspan="4">Veriler yükleniyor...</td>
+                                    <td colspan="4">Canlı veri yükleniyor. Alternatif kaynak: AFAD ve Kandilli resmi listeleri.</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -309,7 +297,7 @@
                             </thead>
                             <tbody id="latest-quakes-table">
                                 <tr>
-                                    <td colspan="4">Veriler yükleniyor...</td>
+                                    <td colspan="4">Canlı veri yükleniyor. API erişilemezse resmi kaynak bağlantılarını kullanın.</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -370,7 +358,7 @@
                     <div class="footer-column">
                         <h4>Yasal</h4>
                         <ul>
-                            <li><a href="/kullanim-sartlari.html" rel="noopener noreferrer">Kullanım Şartları</a></li>
+                            <li><a href="/kullanim-sartlari.html" rel="noopener noreferrer">Kullanım Şartları</a></li>
                             <li><a href="/gizlilik-politikasi.html" rel="noopener noreferrer">Gizlilik Politikası</a>
                             </li>
                             <li><a href="/cerez-politikasi.html" rel="noopener noreferrer">Çerez Politikası</a></li>
@@ -389,9 +377,9 @@
         </div>
     </footer>
 
-    <script src="js/header.min.js?v=202601132730"></script>
+    <script src="js/header.min.js?v=202602011300"></script>
     <script src="js/toc.js?v=202512182020"></script>
-    <script src="js/live-quakes.js?v=202601311600"></script>
+    <script src="js/live-quakes.js?v=202602081420"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const refresh = (force = false) => {
@@ -423,10 +411,7 @@
             });
         });
     </script>
-</body>
-
-</html>
-<script type="application/ld+json">
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -461,3 +446,6 @@
       }]
     }
     </script>
+</body>
+
+</html>

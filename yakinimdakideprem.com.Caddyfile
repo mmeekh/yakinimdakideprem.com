@@ -8,6 +8,9 @@ yakinimdakideprem.com {
     redir /index.html / permanent
     redir /privacy-policy.html /gizlilik-politikasi.html permanent
 
+    @search_query query q=*
+    header @search_query X-Robots-Tag "noindex, nofollow"
+
     handle_path /api/* {
         reverse_proxy yakinimdakideprem-api:8000
     }

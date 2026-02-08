@@ -74,6 +74,66 @@ function getMagnitudeColor(magnitude) {
   return "#43a047"; // Yeşil (Tehlikesiz)
 }
 
+const STATIC_FALLBACK_ROWS = [
+  {
+    date: "Canlı API geçici olarak erişilemedi",
+    magnitude: "-",
+    depth: "-",
+    place: "Resmi kaynakları kontrol edin: AFAD / Kandilli"
+  },
+  {
+    date: "AFAD Son Depremler",
+    magnitude: "-",
+    depth: "-",
+    place: "https://deprem.afad.gov.tr/last-earthquakes.html"
+  },
+  {
+    date: "Kandilli Rasathanesi",
+    magnitude: "-",
+    depth: "-",
+    place: "https://koeri.boun.edu.tr"
+  }
+];
+
+function renderStaticFallbackRows() {
+  return STATIC_FALLBACK_ROWS.map((row) => `
+    <tr class="quake-row quake-row-fallback">
+      <td>${row.date}</td>
+      <td>${row.magnitude}</td>
+      <td>${row.depth}</td>
+      <td>${row.place}</td>
+    </tr>
+  `).join("");
+}
+
+function renderStaticFallbackState({ tableSelector, statusSelector, highlightSelector }) {
+  if (tableSelector) {
+    const tbody = document.querySelector(tableSelector);
+    if (tbody) {
+      tbody.innerHTML = renderStaticFallbackRows();
+    }
+  }
+
+  if (statusSelector) {
+    const statusEl = document.querySelector(statusSelector);
+    if (statusEl) {
+      statusEl.textContent = "Canlı veri geçici olarak erişilemiyor. AFAD ve Kandilli bağlantılarını kullanabilirsiniz.";
+      statusEl.style.color = "#2c3e50";
+      statusEl.style.fontWeight = "600";
+    }
+  }
+
+  if (highlightSelector) {
+    const highlightEl = document.querySelector(highlightSelector);
+    if (highlightEl) {
+      highlightEl.innerHTML = `
+        <strong>Canlı veri geçici olarak erişilemiyor</strong>
+        <br><small>AFAD ve Kandilli kaynaklarını takip edin.</small>
+      `;
+    }
+  }
+}
+
 function formatQuakeRowWithBadge(quake) {
   const time = getQuakeTime(quake);
   const magnitude = getMagnitudeValue(quake);
@@ -128,6 +188,10 @@ async function renderGlobalQuakes({
 
   try {
     const data = await QuakeAPI.fetchData(force);
+    if (!Array.isArray(data) || data.length === 0) {
+      renderStaticFallbackState({ tableSelector, statusSelector, highlightSelector });
+      return;
+    }
 
     // Filtreleme
     const cityInput = document.getElementById('filter-city');
@@ -207,10 +271,7 @@ async function renderGlobalQuakes({
 
   } catch (error) {
     console.error("Render hatası:", error);
-    const tbody = document.querySelector(tableSelector);
-    if (tbody) {
-      tbody.innerHTML = '<tr><td colspan="4">Veri alınırken hata oluştu. Lütfen sayfayı yenileyin.</td></tr>';
-    }
+    renderStaticFallbackState({ tableSelector, statusSelector, highlightSelector });
   } finally {
     if (force && btn) {
       setTimeout(() => {
@@ -296,6 +357,16 @@ async function renderSonDakikaPanels({ force = false } = {}) {
 
   } catch (e) {
     console.error("Panel update error:", e);
+    if (summaryElements.total) summaryElements.total.textContent = "-";
+    if (summaryElements.strongest) summaryElements.strongest.textContent = "-";
+    if (summaryElements.strongestPlace) summaryElements.strongestPlace.textContent = "Canlı veri erişilemiyor";
+    if (summaryElements.last) summaryElements.last.textContent = "-";
+    if (summaryElements.lastTime) summaryElements.lastTime.textContent = "AFAD / Kandilli kaynaklarını kontrol edin";
+    if (summaryElements.m4) summaryElements.m4.textContent = "-";
+    if (summaryElements.updated) summaryElements.updated.textContent = "Canlı veri erişilemiyor";
+    if (summaryElements.m4Table) {
+      summaryElements.m4Table.innerHTML = renderStaticFallbackRows();
+    }
   }
 }
 
