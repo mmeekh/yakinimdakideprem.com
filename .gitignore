@@ -14,3 +14,7 @@ env.production
 
 # OS files
 .DS_Store
+
+# SEO raporlama - service account + raporlar
+secrets/
+reports/

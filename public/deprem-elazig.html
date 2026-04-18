@@ -21,17 +21,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:description" content="Elazığ ve çevresi için son deprem kayıtları, toplanma alanları ve hazırlık önerileri.">
     <meta property="og:url" content="https://yakinimdakideprem.com/deprem-elazig.html">
     <meta property="og:site_name" content="Yakınımdaki Deprem">
-    <meta property="og:image" content="https://yakinimdakideprem.com/images/blog-deprem-haritasi-rehberi.webp">
+    <meta property="og:image" content="https://yakinimdakideprem.com/images/elazig_risk.png">
     <meta property="og:image:alt" content="Doğu Anadolu fay hattı ve deprem haritası">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Elazığ Depremi - Doğu Anadolu Deprem Bilgileri">
     <meta name="twitter:description" content="Elazığ için son deprem verilerini takip edin, hazırlık önerilerini uygulayın.">
-    <meta name="twitter:image" content="https://yakinimdakideprem.com/images/blog-deprem-haritasi-rehberi.webp">
+    <meta name="twitter:image" content="https://yakinimdakideprem.com/images/elazig_risk.png">
     <meta name="twitter:image:alt" content="Doğu Anadolu fay hattı ve deprem haritası">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/blog.css?v=202601132130">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="css/blog.css?v=202604172101">
     <link rel="stylesheet" href="css/components.min.css?v=202601131900">
-    <link rel="stylesheet" href="css/header.min.css?v=202601132330">
+    <link rel="stylesheet" href="css/header.min.css?v=202604172101">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
@@ -66,9 +67,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "url": "https://yakinimdakideprem.com/deprem-elazig.html",
   "image": {
     "@type": "ImageObject",
-    "url": "https://yakinimdakideprem.com/images/blog-deprem-haritasi-rehberi.webp",
+    "url": "https://yakinimdakideprem.com/images/elazig_risk.png",
     "width": 1200,
-    "height": 630
+    "height": 1200
   },
   "datePublished": "2025-01-05T09:00:00+03:00",
   "dateModified": "2025-01-15T09:00:00+03:00",
@@ -102,6 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     </script>
     <link rel="stylesheet" href="css/footer.css?v=202512182020">
+    <link rel="stylesheet" href="css/city-search.css?v=202604180000">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -114,6 +116,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem logosu" width="60" height="60">
                 <span data-text="Yakınımdaki Deprem">Yakınımdaki Deprem</span>
             </a>
+            <!-- Şehir Arama Kutusu -->
+            <div id="city-search" class="city-search" role="search">
+                <div class="city-search__bar">
+                    <i class="fas fa-search city-search__icon" aria-hidden="true"></i>
+                    <label for="city-search-input" class="sr-only">Şehir ara</label>
+                    <input type="text" id="city-search-input"
+                        placeholder="Şehir Ara 🏙️"
+                        autocomplete="off"
+                        aria-autocomplete="list"
+                        aria-controls="city-search-results">
+                    <button type="button" id="city-search-clear" aria-label="Temizle" hidden>
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul id="city-search-results" class="city-search__results" role="listbox" hidden></ul>
+            </div>
             <nav>
                 <a href="/" rel="noopener noreferrer">Ana Sayfa</a>
                 <a href="/son-dakika-deprem.html" rel="noopener noreferrer" class="nav-highlight nav-alert">Son Dakika <span class="alarm-dot" aria-hidden="true"></span></a>
@@ -133,6 +151,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         Şehir Depremleri <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="dropdown-menu">
+                        <a href="/deprem-sehirleri.html" rel="noopener noreferrer"><strong>📍 Tüm 81 İl</strong></a>
                         <a href="/deprem-istanbul.html" rel="noopener noreferrer">İstanbul Depremi</a>
                         <a href="/deprem-izmir.html" rel="noopener noreferrer">İzmir Depremi</a>
                         <a href="/deprem-ankara.html" rel="noopener noreferrer">Ankara Depremi</a>
@@ -187,6 +206,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <section class="city-context">
                     <h2>Elazığ Fay Hattı Üzerinde Hazırlıklı Olmak</h2>
+                    <figure class="city-context__figure">
+                        <img src="images/elazig_risk.png" alt="Elazig deprem risk haritası ve fay hattı" loading="lazy" width="1024" height="1024" style="border-radius:12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <figcaption>Elazig Fay Hattı Bölgesi Sismik Aktivite ve Risk Haritası.</figcaption>
+                    </figure>
                     <p>Doğu Anadolu Fay Hattı’nın Sivrice segmenti, 2020 yılında 6.8 büyüklüğünde yaşanan depremle Elazığ’ın hem merkezini hem de çevre ilçelerini derinden etkiledi. Yıkımın büyük kısmı yetersiz betonarme birleşimler ve ağır çatı elemanları nedeniyle gerçekleştiği için, özellikle Maden, Kovancılar ve Palu’daki yapı stokunun periyodik mühendislik denetiminden geçirilmesi hayati önem taşıyor. Kentteki jeotermal kaynaklar ve su kanalları nedeniyle bazı mahallelerde zemin nem oranı yüksek; bu da yapı temellerinde oturmaya yol açabileceğinden drenaj sistemlerinin açık tutulması gerekiyor.</p>
                     <p>Elazığlılar için aile içi haberleşme planı hazırlarken, Harput Kalesi çevresindeki yüksek kotlu alanları alternatif buluşma noktaları olarak değerlendirmek güvenli olabilir. Kış aylarında yoğun kar alan ilçelerde soba ve tüp gibi yakıt kaynakları için karbonmonoksit dedektörü bulundurmak, artçı depremler sırasında kapalı alanlarda zehirlenme riskini azaltır. Ayrıca yerel arama kurtarma ekipleriyle dayanışma içinde kalmak ve mahalle bazlı acil durum WhatsApp gruplarını güncel tutmak, yardım çağrılarını koordine etmeyi kolaylaştıracaktır.</p>
                 </section>
@@ -264,10 +287,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </footer>
 
-    <script src="js/header.min.js?v=202601132730"></script>
+    <script src="js/header.min.js?v=202604173000"></script>
     <script src="js/toc.js?v=202512182020"></script>
-    <script src="js/city-keywords.js?v=202512182020"></script>
-    <script src="js/live-quakes.js?v=202601132330"></script>
+    <script src="js/city-keywords.js?v=202604172301"></script>
+    <script src="js/city-search.js?v=202604172400" defer></script>
+    <script src="js/live-quakes.js?v=202604172101"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             renderCityQuakes({
@@ -278,5 +302,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         });
     </script>
+<script src="js/city-search.js?v=202604172400"></script>
 </body>
 </html>

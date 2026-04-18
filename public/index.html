@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 
 <head>
@@ -6,34 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Canlı Deprem Haritası | Son Depremler ve Anlık Deprem Takibi</title>
+    <title>Yakınımdaki Deprem – Anlık Deprem Haritası Türkiye</title>
     <meta name="description"
-        content="Canlı deprem haritası ve son depremler listesi. Kandilli ve AFAD verileriyle deprem mi oldu sorusuna anlık yanıt.">
+        content="Anlık deprem haritası ve son depremler: Kandilli + AFAD ile 20 saniyede bir güncellenen canlı liste. 81 ilin deprem sayfası, bildirim ve şehir arama.">
     <meta name="keywords"
-        content="anlık deprem, son depremler, deprem mi oldu, deprem son dakika, deprem haritası, canlı deprem, yakınımdaki deprem, AFAD son depremler, Kandilli son depremler, İstanbul deprem, İzmir deprem, Ankara deprem">
+        content="anlık deprem, anlık deprem türkiye, son depremler, deprem mi oldu, deprem son dakika, canlı deprem, deprem haritası, yakınımdaki deprem, AFAD son depremler, Kandilli son depremler, İstanbul deprem, İzmir deprem, Ankara deprem, şehir deprem sayfaları">
     <meta name="author" content="Emin Kılıç">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://yakinimdakideprem.com/" />
     <meta property="og:locale" content="tr_TR">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Canlı Deprem Haritası | Son Depremler ve Anlık Deprem Takibi">
+    <meta property="og:title" content="Yakınımdaki Deprem – Anlık Deprem Haritası Türkiye">
     <meta property="og:description"
-        content="Canlı deprem haritası ve son depremler listesi. Kandilli ve AFAD verileriyle deprem mi oldu sorusuna anlık yanıt.">
+        content="Kandilli + AFAD ile 20 saniyede bir güncellenen canlı deprem haritası ve 81 il için deprem sayfaları.">
     <meta property="og:url" content="https://yakinimdakideprem.com/">
     <meta property="og:site_name" content="Yakınımdaki Deprem">
     <meta property="og:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.png">
     <meta property="og:image:alt" content="Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri görseli">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Canlı Deprem Haritası | Son Depremler ve Anlık Deprem Takibi">
+    <meta name="twitter:title" content="Yakınımdaki Deprem – Anlık Deprem Haritası Türkiye">
     <meta name="twitter:description"
-        content="Canlı deprem haritası ve son depremler listesi. Kandilli ve AFAD verileriyle deprem mi oldu sorusuna anlık yanıt.">
+        content="Canlı deprem haritası + 81 il deprem sayfaları. Kandilli + AFAD ile 20 sn'de bir güncelleme.">
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.png">
     <meta name="twitter:image:alt" content="Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri görseli">
     <!-- Performance: Preconnect to external domains -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://unpkg.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <!-- Critical resources preload -->
+    <link rel="preload" href="css/style.min.css?v=202604180000" as="style">
+    <link rel="preload" href="css/header.min.css?v=202604172101" as="style">
+    <link rel="preload" href="css/leaflet.min.css?v=202601131900" as="style">
+    <link rel="preload" href="icons/logo.png" as="image" type="image/png">
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -45,9 +50,10 @@
         })(window, document, 'script', 'dataLayer', 'GTM-WQZS53QX');</script>
     <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="css/leaflet.min.css?v=202601131900" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.min.css?v=202601131955">
-    <link rel="stylesheet" href="css/header.min.css?v=202601132330">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="css/style.min.css?v=202604180000">
+    <link rel="stylesheet" href="css/header.min.css?v=202604172101">
     <link rel="stylesheet" href="css/components.min.css?v=202601131900">
     <!-- Favicon Icons -->
     <link rel="shortcut icon" href="/icons/favicon-32x32.png" type="image/png">
@@ -63,6 +69,20 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
 
+    <!-- OneSignal Script -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function (OneSignal) {
+            await OneSignal.init({
+                appId: "08537e94-145d-4504-a752-a250dcb210e5",
+                safari_web_id: "web.onesignal.auto.13dd012d-81c7-44d8-8660-15690626d9c4",
+                notifyButton: {
+                    enable: true,
+                },
+            });
+        });
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J03Y3ZWDWD"></script>
     <script>
@@ -137,8 +157,8 @@
     }
     </script>
     <link rel="stylesheet" href="css/footer.css?v=202512182020">
+    <link rel="stylesheet" href="css/city-search.css?v=202604180000">
     <style>
-        /* Screen reader only class for SEO H1 */
         .sr-only {
             position: absolute;
             width: 1px;
@@ -150,17 +170,9 @@
             white-space: nowrap;
             border-width: 0;
         }
-
-        /* Highlight for Son Dakika link */
-        nav a.nav-highlight {
-            color: #d32f2f;
-            font-weight: 700;
-        }
-
-        nav a.nav-highlight:hover {
-            color: #b71c1c;
-            text-decoration: underline;
-        }
+        nav a.nav-highlight { color: #d32f2f; font-weight: 700; }
+        nav a.nav-highlight:hover { color: #b71c1c; text-decoration: underline; }
+        #push-modal.is-visible { display: flex !important; }
     </style>
 </head>
 
@@ -172,9 +184,28 @@
                 <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem logosu" width="60" height="60">
                 <span data-text="Yakınımdaki Deprem">Yakınımdaki Deprem</span>
             </a>
+            
+            <!-- Şehir Arama Kutusu -->
+            <div id="city-search" class="city-search" role="search">
+                <div class="city-search__bar">
+                    <i class="fas fa-search city-search__icon" aria-hidden="true"></i>
+                    <label for="city-search-input" class="sr-only">Şehir ara</label>
+                    <input type="text" id="city-search-input"
+                        placeholder="Şehir Ara 🏙️"
+                        autocomplete="off"
+                        aria-autocomplete="list"
+                        aria-controls="city-search-results">
+                    <button type="button" id="city-search-clear" aria-label="Temizle" hidden>
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul id="city-search-results" class="city-search__results" role="listbox" hidden></ul>
+            </div>
+
             <nav>
                 <a href="/" rel="noopener noreferrer" class="active">Ana Sayfa</a>
-                <a href="/son-dakika-deprem.html" rel="noopener noreferrer" class="nav-highlight nav-alert">Son Dakika <span class="alarm-dot" aria-hidden="true"></span></a>
+                <a href="/son-dakika-deprem.html" rel="noopener noreferrer" class="nav-highlight nav-alert">Son Dakika
+                    <span class="alarm-dot" aria-hidden="true"></span></a>
                 <div class="nav-dropdown nav-dropdown-guides">
                     <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
                         Rehberler <i class="fas fa-chevron-down"></i>
@@ -191,6 +222,7 @@
                         Şehir Depremleri <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="dropdown-menu">
+                        <a href="/deprem-sehirleri.html" rel="noopener noreferrer"><strong>📍 Tüm 81 İl</strong></a>
                         <a href="/deprem-istanbul.html" rel="noopener noreferrer">İstanbul Depremi</a>
                         <a href="/deprem-izmir.html" rel="noopener noreferrer">İzmir Depremi</a>
                         <a href="/deprem-ankara.html" rel="noopener noreferrer">Ankara Depremi</a>
@@ -234,10 +266,12 @@
     </div>
     <!-- Harita ve Overlay Alanı -->
     <div class="map-wrapper">
-        <h1 class="map-h1">Canlı Deprem Haritası ve Son Depremler</h1>
+        <h1 class="map-h1">Anlık Deprem Haritası Türkiye – Canlı Son Depremler</h1>
+
         <div id="map"></div>
         <noscript>
-            <p class="loading">Canlı deprem haritası için JavaScript gerekir. Son depremler için resmi kaynakları da kontrol edin.</p>
+            <p class="loading">Canlı deprem haritası için JavaScript gerekir. Son depremler için resmi kaynakları da
+                kontrol edin.</p>
         </noscript>
 
         <!-- Büyüklük Göstergesi -->
@@ -281,16 +315,17 @@
                 <i class="fas fa-map-marker-alt"></i>
                 Türkiye'ye Git
             </button>
-            <button id="night-mode-btn" class="night-mode-btn">
-                <i class="fas fa-moon"></i>
-                Gece Modu
-            </button>
         </div>
 
         <!-- Son Depremler Listesi -->
         <aside class="earthquake-list overlay" rel="noopener noreferrer">
             <div class="list-header">
                 <h2>Son Depremler</h2>
+                <button id="push-subscribe-btn" class="btn btn-sm"
+                    aria-label="Sadece 4.0 ve Üzeri Depremlerde Bildirim Al"
+                    style="margin: 0 10px; font-size: 0.8rem; padding: 4px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.9); border: 1px solid #d32f2f; color: #d32f2f; cursor: pointer; transition: all 0.2s;">
+                    <i class="fas fa-bell"></i> Sadece 4.0+ Bildirim Al
+                </button>
                 <div class="filter-controls">
                     <select id="magnitude-filter">
                         <option value="all">Tüm Büyüklükler</option>
@@ -301,16 +336,38 @@
                 </div>
             </div>
             <div class="earthquake-items" id="earthquake-items">
-                <div class="loading">Depremler yükleniyor. API erişilemezse AFAD ve Kandilli kaynaklarını kullanın.</div>
+                <div class="loading">Depremler yükleniyor. API erişilemezse AFAD ve Kandilli kaynaklarını kullanın.
+                </div>
                 <noscript>
                     <ul class="keyword-pills">
-                        <li><a href="https://deprem.afad.gov.tr/last-earthquakes.html" target="_blank" rel="noopener noreferrer">AFAD Son Depremler</a></li>
-                        <li><a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Kandilli Rasathanesi</a></li>
-                        <li><a href="/son-dakika-deprem.html" rel="noopener noreferrer">Son Dakika Deprem Sayfası</a></li>
+                        <li><a href="https://deprem.afad.gov.tr/last-earthquakes.html" target="_blank"
+                                rel="noopener noreferrer">AFAD Son Depremler</a></li>
+                        <li><a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Kandilli
+                                Rasathanesi</a></li>
+                        <li><a href="/son-dakika-deprem.html" rel="noopener noreferrer">Son Dakika Deprem Sayfası</a>
+                        </li>
                     </ul>
                 </noscript>
             </div>
         </aside>
+
+        <!-- Push Notification Modal -->
+        <div id="push-modal" class="mobile-welcome-modal" aria-hidden="true" hidden>
+            <div class="mobile-welcome-modal__backdrop"></div>
+            <div class="mobile-welcome-modal__card" role="dialog" aria-modal="true" aria-labelledby="push-modal-title">
+                <span class="mobile-welcome-modal__eyebrow">Bildirim Ayarları</span>
+                <h2 id="push-modal-title" class="mobile-welcome-modal__title">Deprem Bildirimleri</h2>
+                <p class="mobile-welcome-modal__message">
+                    Sadece 4.0 ve üzeri büyüklükteki önemli depremlerde tarayıcı bildirimi almak ister misiniz?
+                    (Düşük şiddetli sarsıntılarda rahatsız edilmezsiniz.)
+                </p>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                    <button type="button" class="mobile-welcome-modal__cta" id="push-accept-btn">Evet, İzin Ver</button>
+                    <button type="button" class="mobile-welcome-modal__cta" data-action="dismiss"
+                        style="background:#555;">Hayır, Teşekkürler</button>
+                </div>
+            </div>
+        </div>
 
         <!-- Güncelleme Bilgisi -->
         <div class="update-info overlay">
@@ -379,15 +436,30 @@
                 </div>
                 <div class="seo-sidebar">
                     <div class="quick-links-card">
-                        <h3>Önemli Bağlantılar</h3>
+                        <h3>Şehir Deprem Sayfaları</h3>
                         <ul>
                             <li><a href="/deprem-istanbul.html">İstanbul Son Depremler</a></li>
                             <li><a href="/deprem-izmir.html">İzmir Son Depremler</a></li>
                             <li><a href="/deprem-ankara.html">Ankara Son Depremler</a></li>
                             <li><a href="/deprem-bursa.html">Bursa Son Depremler</a></li>
-                            <li><a href="/deprem-adana.html">Adana Son Depremler</a></li>
+                            <li><a href="/deprem-kocaeli.html">Kocaeli Depremleri</a></li>
+                            <li><a href="/deprem-hatay.html">Hatay Depremleri</a></li>
                             <li><a href="/deprem-kahramanmaras.html">Kahramanmaraş Depremleri</a></li>
+                            <li><a href="/deprem-van.html">Van Depremleri</a></li>
+                            <li><a href="/deprem-mugla.html">Muğla Depremleri</a></li>
+                            <li><a href="/deprem-adana.html">Adana Son Depremler</a></li>
+                            <li><a href="/deprem-sehirleri.html"><strong>Tüm 81 İl →</strong></a></li>
+                        </ul>
+                    </div>
+                    <div class="quick-links-card" style="margin-top:20px;">
+                        <h3>Rehber ve Bilgi</h3>
+                        <ul>
                             <li><a href="/deprem-aninda.html">Deprem Anında Yapılacaklar</a></li>
+                            <li><a href="/ilk-yardim-cantasi.html">İlk Yardım Çantası</a></li>
+                            <li><a href="/blog-deprem-cantasi.html">Deprem Çantası Listesi</a></li>
+                            <li><a href="/blog-dask-nedir.html">DASK Nedir?</a></li>
+                            <li><a href="/blog-toplanma-alani-sorgulama.html">Toplanma Alanı Sorgulama</a></li>
+                            <li><a href="/turkiye-deprem-rehberi-fay-hatlari.html">Türkiye Fay Hatları</a></li>
                         </ul>
                     </div>
                 </div>
@@ -559,14 +631,70 @@
         </div>
     </footer>
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="js/header.min.js?v=202602011300"></script>
-    <!-- Ana Script -->
-    <script src="js/script.min.js?v=202602011200"></script>
-    <script src="js/mobile-quake-focus.js?v=202602011200"></script>
-    <!-- Türkiye Depremleri Script -->
-    <script src="js/turkey-earthquakes.min.js?v=202601131900"></script>
+    <!-- Push Notifications Interaction Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const pushBtn = document.getElementById('push-subscribe-btn');
+            const pushModal = document.getElementById('push-modal');
+            const acceptBtn = document.getElementById('push-accept-btn');
+
+            if (pushBtn && pushModal) {
+                // Check if already subscribed in localStorage
+                const isSubscribed = localStorage.getItem('push_notifications_enabled') === 'true';
+                if (isSubscribed) {
+                    pushBtn.innerHTML = '<i class="fas fa-check"></i> Bildirimler Açık';
+                    pushBtn.style.background = '#4caf50';
+                    pushBtn.style.color = '#fff';
+                    pushBtn.style.borderColor = '#4caf50';
+                    pushBtn.style.pointerEvents = 'none'; // Disable click
+                } else {
+                    pushBtn.addEventListener('click', () => {
+                        pushModal.hidden = false;
+                        pushModal.classList.add('is-visible');
+                        pushModal.setAttribute('aria-hidden', 'false');
+                    });
+                }
+
+                const dismissBtns = pushModal.querySelectorAll('[data-action="dismiss"]');
+                dismissBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        pushModal.hidden = true;
+                        pushModal.classList.remove('is-visible');
+                    });
+                });
+
+                acceptBtn.addEventListener('click', () => {
+                    if (window.OneSignalDeferred) {
+                        window.OneSignalDeferred.push(function (OneSignal) {
+                            OneSignal.Slidedown.promptPush();
+                        });
+                    }
+
+                    // Save to localStorage
+                    localStorage.setItem('push_notifications_enabled', 'true');
+
+                    pushModal.hidden = true;
+                    pushModal.classList.remove('is-visible');
+                    pushBtn.innerHTML = '<i class="fas fa-check"></i> Bildirimler Açık';
+                    pushBtn.style.background = '#4caf50';
+                    pushBtn.style.color = '#fff';
+                    pushBtn.style.borderColor = '#4caf50';
+                    pushBtn.style.pointerEvents = 'none'; // Disable future clicks
+                });
+            }
+        });
+    </script>
+    <!-- Leaflet JS deferred for LCP Optimization -->
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script defer src="js/header.min.js?v=202604173000"></script>
+    <!-- Ana Scriptler deferred -->
+    <script defer src="js/script.min.js?v=202604173000"></script>
+    <script defer src="js/mobile-quake-focus.js?v=202602011200"></script>
+    <!-- Türkiye Depremleri Script deferred -->
+    <script defer src="js/turkey-earthquakes.min.js?v=202601131900"></script>
+    <!-- Şehir Arama -->
+    <script defer src="js/city-keywords.js?v=202604172301"></script>
+    <script defer src="js/city-search.js?v=202604172400"></script>
     <!-- İstatistik Güncelleyici Script -->
 </body>
 

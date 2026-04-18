@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bina Risk Testi - Ön Deprem Riski Hesaplayıcı | Yakınımdaki Deprem</title>
+    <meta name="description"
+        content="Binanız depreme ne kadar dayanıklı? Yapım yılı, kat sayısı ve zemin bilgilerini girerek ön risk skorunuzu hesaplayın. Ücretsiz ve pratik deprem risk testi.">
+    <link rel="canonical" href="https://yakinimdakideprem.com/bina-risk-testi.html" />
+    <meta property="og:image" content="https://yakinimdakideprem.com/images/risk-hesaplayici.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="css/blog.css?v=202601132130">
+    <link rel="stylesheet" href="css/header.min.css?v=202601132330">
+    <style>
+        .calc-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .btn-calc {
+            background: #d32f2f;
+            color: white;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .btn-calc:hover {
+            background: #b71c1c;
+        }
+
+        #result-area {
+            display: none;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            transition: all 0.5s;
+        }
+
+        .social-share {
+            margin-top: 25px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .social-share button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+        }
+
+        .btn-twitter {
+            background: #1DA1F2;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body style="background:#f4f6f8;">
+    <header class="page-header" style="background: #282c34; color:white; padding: 40px 0; text-align:center;">
+        <div class="container">
+            <h1>Bina Ön Risk Skoru Hesaplayıcı</h1>
+            <p>Binanızın durumunu test edin, olası risk seviyesini görün.</p>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 40px 15px;">
+        <div style="text-align:center; margin-bottom: 20px;">
+            <img src="images/risk-hesaplayici.png" alt="Bina risk hesaplayıcı görsel"
+                style="max-width:300px; border-radius:12px;">
+        </div>
+
+        <div class="calc-wrapper">
+            <form id="riskForm">
+                <div class="form-group">
+                    <label>Binanın Yapım Yılı</label>
+                    <select id="year" required>
+                        <option value="">Seçiniz...</option>
+                        <option value="50">1999 Öncesi</option>
+                        <option value="30">1999 - 2007 Arası</option>
+                        <option value="15">2007 - 2018 Arası</option>
+                        <option value="5">2018 Sonrası</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Binanın Kat Sayısı</label>
+                    <select id="floors" required>
+                        <option value="">Seçiniz...</option>
+                        <option value="0">1-3 Kat</option>
+                        <option value="10">4-8 Kat</option>
+                        <option value="20">9 Kat ve Üzeri</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Zemin Durumu (Biliyorsanız)</label>
+                    <select id="ground" required>
+                        <option value="">Seçiniz...</option>
+                        <option value="0">Sağlam (Kayalık, Sert Zemin)</option>
+                        <option value="15">Bilinmiyor / Orta Zemin</option>
+                        <option value="30">Zayıf (Dolgu, Kumlu, Sulu Zemin)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-calc"><i class="fas fa-calculator"></i> Risk Skorunu Hesapla</button>
+            </form>
+
+            <div id="result-area">
+                <h3 style="margin-bottom:15px; color:#333;">Tahmini Risk Skorunuz</h3>
+                <div id="score-circle" class="score-circle">0</div>
+                <p id="score-text" style="margin-top: 15px; font-weight:bold; font-size:1.2rem;"></p>
+                <div class="social-share">
+                    <button class="btn-whatsapp" onclick="shareWhatsApp()"><i class="fab fa-whatsapp"></i> WhatsApp'ta
+                        Yolla</button>
+                    <button class="btn-twitter" onclick="shareTwitter()"><i class="fab fa-twitter"></i> X'te
+                        Paylaş</button>
+                </div>
+                <p class="disclaimer">Uyarı: Bu form sadece genel analiz içindir ve kesinlikle resmi bir mühendislik
+                    testinin yerine geçmez. Binanızın gerçek riskini öğrenmek için lisanslı uzmanlardan Karot testi
+                    almalısınız.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('riskForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const yearVal = parseInt(document.getElementById('year').value) || 0;
+            const floorVal = parseInt(document.getElementById('floors').value) || 0;
+            const groundVal = parseInt(document.getElementById('ground').value) || 0;
+
+            // max risk = 50 + 20 + 30 = 100
+            let totalRisk = yearVal + floorVal + groundVal;
+
+            const resultArea = document.getElementById('result-area');
+            const scoreCircle = document.getElementById('score-circle');
+            const scoreText = document.getElementById('score-text');
+
+            resultArea.style.display = 'block';
+            scoreCircle.innerText = totalRisk;
+            window.lastRiskScore = totalRisk; // for sharing
+
+            if (totalRisk >= 75) {
+                scoreCircle.style.background = '#d32f2f'; // Kırmızı
+                scoreText.innerText = "YÜKSEK RİSK: Binanızın acilen uzman bir ekip tarafından incelenmesi önerilir.";
+                scoreText.style.color = "#d32f2f";
+            } else if (totalRisk >= 40) {
+                scoreCircle.style.background = '#f57c00'; // Turuncu/Sarı
+                scoreText.innerText = "ORTA RİSK: Bölgenizdeki zemin ve bina durumuna bağlı olarak risk taşıyabilir.";
+                scoreText.style.color = "#f57c00";
+            } else {
+                scoreCircle.style.background = '#388e3c'; // Yeşil
+                scoreText.innerText = "DÜŞÜK RİSK: Verilere göre binanız güncel şartnamelerin standartlarına daha yakın.";
+                scoreText.style.color = "#388e3c";
+            }
+        });
+
+        function shareWhatsApp() {
+            const text = "Binamın Ön Risk Skoru: " + window.lastRiskScore + " / 100 çıktı! Sen de binanın deprem riskini ölçmek için bu testi çözebilirsin: https://yakinimdakideprem.com/bina-risk-testi.html";
+            window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(text), "_blank");
+        }
+
+        function shareTwitter() {
+            const text = "Binamın Ön Risk Skoru: " + window.lastRiskScore + " / 100 çıktı! Binanızın deprem riskini ölçmek için test edin! @depremyakinim";
+            window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(text) + "&url=https://yakinimdakideprem.com/bina-risk-testi.html", "_blank");
+        }
+    </script>
+<script src="js/city-search.js?v=202604172101"></script>
+</body>
+
+</html>

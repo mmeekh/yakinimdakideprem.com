@@ -21,17 +21,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:description" content="Kahramanmaraş ve çevresi için son depremleri tablo halinde görüntüleyin, AFAD toplanma alanı linkleri ve hazırlık rehberleriyle güncel kalın.">
     <meta property="og:url" content="https://yakinimdakideprem.com/deprem-kahramanmaras.html">
     <meta property="og:site_name" content="Yakınımdaki Deprem">
-    <meta property="og:image" content="https://yakinimdakideprem.com/images/blog-bina-icindeyseniz.webp">
+    <meta property="og:image" content="https://yakinimdakideprem.com/images/kahramanmaras_risk.png">
     <meta property="og:image:alt" content="Kahramanmaraş deprem bilgileri ve güvenli alan önerileri">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Kahramanmaraş Depremi - Anlık Bilgiler">
     <meta name="twitter:description" content="Son Kahramanmaraş depremleri, toplanma alanı bağlantıları ve hazırlık kontrolleri tek sayfada.">
-    <meta name="twitter:image" content="https://yakinimdakideprem.com/images/blog-bina-icindeyseniz.webp">
+    <meta name="twitter:image" content="https://yakinimdakideprem.com/images/kahramanmaras_risk.png">
     <meta name="twitter:image:alt" content="Kahramanmaraş deprem bilgileri ve güvenli alan önerileri">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/blog.css?v=202601132130">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="css/blog.css?v=202604172101">
     <link rel="stylesheet" href="css/components.min.css?v=202601131900">
-    <link rel="stylesheet" href="css/header.min.css?v=202601132330">
+    <link rel="stylesheet" href="css/header.min.css?v=202604172101">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
@@ -46,9 +47,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "inLanguage": "tr-TR",
   "image": {
     "@type": "ImageObject",
-    "url": "https://yakinimdakideprem.com/images/blog-bina-icindeyseniz.webp",
+    "url": "https://yakinimdakideprem.com/images/kahramanmaras_risk.png",
     "width": 1200,
-    "height": 630
+    "height": 1200
   },
   "author": {
     "@type": "Person",
@@ -102,6 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     </script>
     <link rel="stylesheet" href="css/footer.css?v=202512182020">
+    <link rel="stylesheet" href="css/city-search.css?v=202604180000">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -114,6 +116,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem logosu" width="60" height="60">
                 <span data-text="Yakınımdaki Deprem">Yakınımdaki Deprem</span>
             </a>
+            <!-- Şehir Arama Kutusu -->
+            <div id="city-search" class="city-search" role="search">
+                <div class="city-search__bar">
+                    <i class="fas fa-search city-search__icon" aria-hidden="true"></i>
+                    <label for="city-search-input" class="sr-only">Şehir ara</label>
+                    <input type="text" id="city-search-input"
+                        placeholder="Şehir Ara 🏙️"
+                        autocomplete="off"
+                        aria-autocomplete="list"
+                        aria-controls="city-search-results">
+                    <button type="button" id="city-search-clear" aria-label="Temizle" hidden>
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul id="city-search-results" class="city-search__results" role="listbox" hidden></ul>
+            </div>
             <nav>
                 <a href="/" rel="noopener noreferrer">Ana Sayfa</a>
                 <a href="/son-dakika-deprem.html" rel="noopener noreferrer" class="nav-highlight nav-alert">Son Dakika <span class="alarm-dot" aria-hidden="true"></span></a>
@@ -133,6 +151,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         Şehir Depremleri <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="dropdown-menu">
+                        <a href="/deprem-sehirleri.html" rel="noopener noreferrer"><strong>📍 Tüm 81 İl</strong></a>
                         <a href="/deprem-istanbul.html" rel="noopener noreferrer">İstanbul Depremi</a>
                         <a href="/deprem-izmir.html" rel="noopener noreferrer">İzmir Depremi</a>
                         <a href="/deprem-ankara.html" rel="noopener noreferrer">Ankara Depremi</a>
@@ -187,6 +206,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <section class="city-context">
                     <h2>Kahramanmaraş Fay Segmentleri ve Bölgesel Etkiler</h2>
+                    <figure class="city-context__figure">
+                        <img src="images/kahramanmaras_risk.png" alt="Kahramanmaras deprem risk haritası ve fay hattı" loading="lazy" width="1024" height="1024" style="border-radius:12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <figcaption>Kahramanmaras Fay Hattı Bölgesi Sismik Aktivite ve Risk Haritası.</figcaption>
+                    </figure>
                     <p>2023’te Pazarcık ve Elbistan merkezli olarak yaşanan ardışık depremler, Kahramanmaraş’ın Güneydoğu Anadolu, Akdeniz ve Doğu Anadolu geçişindeki konumunun neden kritik olduğunu gösterdi. Türkoğlu, Göksun ve Nurhak’ta uzanan segmentler, kırılma sırasında çevre illerde bile hissedilen şiddetli yer hareketleri üretebiliyor. Prefabrik konteyner kentlerde yaşayan binlerce kişi için düzenli zemin kontrolü yapmak, yağmur suyu drenajlarını temizlemek ve elektrik kablolarını kablo kanallarıyla izole etmek yaşamsal güvenlik sağlıyor.</p>
                     <p>Bölgede tarımla uğraşan aileler, sulama kanallarının ve baraj setlerinin deprem sonrası zarar görmesi ihtimaline karşı taşkın planları hazırlamalı. Kahramanmaraş Büyükşehir Belediyesi’nin yayımladığı mikrobölgeleme haritaları, hangi mahallelerde yumuşak zemin olduğunu ve hangi semtlerin sarsıntıyı büyüteceğini net biçimde ortaya koyuyor. Özellikle Onikişubat ve Dulkadiroğlu ilçelerinde yaşayanların, apartman yönetimleriyle acil durum iletişim zincirleri kurup jeneratör, uydu telefonu ve portatif aydınlatma gibi ekipmanları ortaklaşa edinmesi önerilir.</p>
                 </section>
@@ -262,10 +285,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </footer>
 
-    <script src="js/header.min.js?v=202601132730"></script>
+    <script src="js/header.min.js?v=202604173000"></script>
     <script src="js/toc.js?v=202512182020"></script>
-    <script src="js/city-keywords.js?v=202512182020"></script>
-    <script src="js/live-quakes.js?v=202601132330"></script>
+    <script src="js/city-keywords.js?v=202604172301"></script>
+    <script src="js/city-search.js?v=202604172400" defer></script>
+    <script src="js/live-quakes.js?v=202604172101"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             renderCityQuakes({
@@ -276,5 +300,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         });
     </script>
+<script src="js/city-search.js?v=202604172400"></script>
 </body>
 </html>

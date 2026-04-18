@@ -215,46 +215,26 @@
         gap: 8px;
     }
 
-    .mobile-legend-actions .turkey-btn,
-    .mobile-legend-actions .night-mode-btn {
+    .mobile-legend-actions .turkey-btn{
         width: 100%;
         margin-top: 0;
         padding: 8px 10px;
         font-size: 12px;
     }
 
-    .mobile-legend-actions .turkey-btn i,
-    .mobile-legend-actions .night-mode-btn i {
+    .mobile-legend-actions .turkey-btn i{
         font-size: 11px;
     }
 
-    .map-wrapper .magnitude-legend .turkey-btn,
-    .map-wrapper .magnitude-legend .night-mode-btn {
+    .map-wrapper .magnitude-legend .turkey-btn{
         flex: 1 1 calc(50% - 6px);
         margin-top: 4px;
         padding: 6px 8px;
         font-size: 11px;
     }
 
-    .map-wrapper .magnitude-legend .turkey-btn i,
-    .map-wrapper .magnitude-legend .night-mode-btn i {
+    .map-wrapper .magnitude-legend .turkey-btn i{
         font-size: 10px;
-    }
-
-    .night-mode .map-wrapper .magnitude-legend {
-        background: #2c3e50;
-        opacity: 0.75;
-        color: #ecf0f1;
-    }
-
-    .night-mode .map-wrapper .magnitude-legend .legend-title,
-    .night-mode .map-wrapper .magnitude-legend .legend-label,
-    .night-mode .map-wrapper .magnitude-legend .legend-short {
-        color: #ecf0f1;
-    }
-
-    .night-mode .map-wrapper .magnitude-legend .legend-items::-webkit-scrollbar-thumb {
-        background: rgba(236, 240, 241, 0.35);
     }
 
     .map-wrapper #map {
@@ -509,28 +489,6 @@ body.nav-welcome-visible #hidden-header .menu-toggle::before {
 .earthquake-popup__action-btn:hover {
     background: #b71c1c;
     transform: translateY(-1px);
-}
-
-/* Night mode: neutralize map invert for UI overlays and ensure contrast */
-.night-mode .map-wrapper .leaflet-popup,
-.night-mode .map-wrapper .leaflet-control {
-    filter: invert(1) hue-rotate(180deg) brightness(1) contrast(1);
-}
-.night-mode .leaflet-popup-content-wrapper,
-.night-mode .leaflet-popup-tip {
-    background: #0b1220; /* deep slate */
-    color: #e5e7eb; /* text-light */
-}
-.night-mode .leaflet-popup-content p { color: #e5e7eb; }
-.night-mode .leaflet-popup-content p strong { color: #f8fafc; }
-.night-mode .earthquake-popup__title { color: #fca5a5; }
-.night-mode .earthquake-popup__source { color: #cbd5e1; }
-.night-mode .earthquake-popup__action-btn {
-    background: #ef4444;
-    color: #ffffff;
-}
-.night-mode .earthquake-popup__action-btn:hover {
-    background: #dc2626;
 }
 
 /* Navbar ve harita arasÄ±ndaki boÅŸluklarÄ± sÄ±fÄ±rla */

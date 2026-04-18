@@ -28,9 +28,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/depremcantasi.webp">
     <meta name="twitter:image:alt" content="Ben Kimim - Yakınımdaki Deprem | Türk Milleti İçin Ücretsiz Deprem Bilgi Platformu görseli">
         <meta name="keywords" content="ben kimim, yakınımdaki deprem, deprem uzmanları, afet yönetimi, deprem güvenliği, ücretsiz deprem bilgisi, Türk milleti, deprem hazırlığı, güvenli yaşam">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="css/ben-kimim.css?v=202512182020">
-    <link rel="stylesheet" href="css/header.min.css?v=202601132330">
+    <link rel="stylesheet" href="css/header.min.css?v=202604172101">
     <!-- Three.js for flag animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <!-- Favicon Icons -->
@@ -88,6 +89,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     </script>
     <link rel="stylesheet" href="css/footer.css?v=202512182020">
+
+    <!-- Person schema (E-E-A-T) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Emin Kılıç",
+      "image": "https://yakinimdakideprem.com/images/emin-avatar.webp",
+      "url": "https://yakinimdakideprem.com/ben-kimim.html",
+      "sameAs": [
+        "https://www.linkedin.com/in/emin-k%C4%B1l%C4%B1%C3%A7-250b14210/",
+        "https://instagram.com/heremmkh"
+      ],
+      "jobTitle": "Kurucu & Geliştirici",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Yakınımdaki Deprem",
+        "url": "https://yakinimdakideprem.com"
+      }
+    }
+    </script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -101,6 +123,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem logosu" width="60" height="60">
                 <span data-text="Yakınımdaki Deprem">Yakınımdaki Deprem</span>
             </a>
+            <!-- Şehir Arama Kutusu -->
+            <div id="city-search" class="city-search" role="search">
+                <div class="city-search__bar">
+                    <i class="fas fa-search city-search__icon" aria-hidden="true"></i>
+                    <label for="city-search-input" class="sr-only">Şehir ara</label>
+                    <input type="text" id="city-search-input"
+                        placeholder="Şehir Ara 🏙️"
+                        autocomplete="off"
+                        aria-autocomplete="list"
+                        aria-controls="city-search-results">
+                    <button type="button" id="city-search-clear" aria-label="Temizle" hidden>
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul id="city-search-results" class="city-search__results" role="listbox" hidden></ul>
+            </div>
             <nav>
                 <a href="/" rel="noopener noreferrer">Ana Sayfa</a>
                 <a href="/son-dakika-deprem.html" rel="noopener noreferrer" class="nav-highlight nav-alert">Son Dakika <span class="alarm-dot" aria-hidden="true"></span></a>
@@ -155,6 +193,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="about-text">
                     <h2>Ben Kimim?</h2>
+
+                    <div class="profile-intro" style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+                        <img src="/images/emin-avatar.webp"
+                             alt="Emin Kılıç - Yakınımdaki Deprem kurucusu ve geliştiricisi"
+                             width="96" height="96"
+                             loading="lazy"
+                             style="width:96px;height:96px;border-radius:50%;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,0.15);border:3px solid #fff;">
+                        <div>
+                            <strong style="font-size:1.1rem;color:#1f2937;">Emin Kılıç</strong><br>
+                            <span style="color:#6b7280;font-size:0.9rem;">Kurucu &amp; Geliştirici</span><br>
+                            <a href="https://www.linkedin.com/in/emin-k%C4%B1l%C4%B1%C3%A7-250b14210/" target="_blank" rel="noopener noreferrer" style="color:#0a66c2;font-size:0.9rem;">
+                                <i class="fab fa-linkedin"></i> LinkedIn profilim
+                            </a>
+                        </div>
+                    </div>
+
                     <p><strong>Yakınımdaki Deprem</strong> platformunu, Türk milleti için tamamen <strong>ücretsiz</strong> ve <strong>reklamsız</strong> bir deprem bilgi kaynağı olarak geliştirdim. Amacım, deprem konusunda toplumsal bilinç oluşturmak ve afet anında hazırlıksız yakalanma riskini azaltmak.</p>
                     
                     <p>Canlı deprem verilerini <a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Kandilli Rasathanesi</a>
@@ -336,9 +390,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </footer>
-    <script src="js/header.min.js?v=202601132730"></script>
+    <script src="js/header.min.js?v=202604173000"></script>
     <script src="js/flag-animation.js?v=202512182020"></script>
     <script src="js/ben-kimim.js?v=202512182020"></script>
+<script src="js/city-search.js?v=202604172101"></script>
 </body>
 </html>
 

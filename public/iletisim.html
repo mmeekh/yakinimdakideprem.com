@@ -39,9 +39,10 @@
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/depremcantasi.webp">
     <meta name="twitter:image:alt" content="Yakınımdaki Deprem iletişim sayfası">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="css/blog.css?v=202601132130">
-    <link rel="stylesheet" href="css/header.min.css?v=202601132330">
+    <link rel="stylesheet" href="css/header.min.css?v=202604172101">
     <link rel="stylesheet" href="css/footer.css?v=202512182020">
 
     <!-- Favicon Icons -->
@@ -102,6 +103,22 @@
                 <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem logosu" width="60" height="60">
                 <span data-text="Yakınımdaki Deprem">Yakınımdaki Deprem</span>
             </a>
+            <!-- Şehir Arama Kutusu -->
+            <div id="city-search" class="city-search" role="search">
+                <div class="city-search__bar">
+                    <i class="fas fa-search city-search__icon" aria-hidden="true"></i>
+                    <label for="city-search-input" class="sr-only">Şehir ara</label>
+                    <input type="text" id="city-search-input"
+                        placeholder="Şehir Ara 🏙️"
+                        autocomplete="off"
+                        aria-autocomplete="list"
+                        aria-controls="city-search-results">
+                    <button type="button" id="city-search-clear" aria-label="Temizle" hidden>
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul id="city-search-results" class="city-search__results" role="listbox" hidden></ul>
+            </div>
             <nav>
                 <a href="/" rel="noopener noreferrer">Ana Sayfa</a>
                 <a href="/son-dakika-deprem.html" rel="noopener noreferrer" class="nav-highlight nav-alert">Son Dakika <span class="alarm-dot" aria-hidden="true"></span></a>
@@ -243,6 +260,7 @@
         </div>
     </footer>
 
-    <script src="js/header.min.js?v=202601132730"></script>
+    <script src="js/header.min.js?v=202604173000"></script>
+<script src="js/city-search.js?v=202604172101"></script>
 </body>
 </html>

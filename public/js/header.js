@@ -232,7 +232,6 @@ let infoContent = null;
 let legendElement = null;
 let listElement = null;
 let turkeyButton = null;
-let nightModeButton = null;
 let legendActionsContainer = null;
 let mapWrapper = null;
 let updateInfoElement = null;
@@ -253,7 +252,6 @@ document.addEventListener('DOMContentLoaded', () => {
     legendElement = document.querySelector('.magnitude-legend');
     listElement = document.querySelector('.earthquake-list');
     turkeyButton = document.getElementById('turkey-btn');
-    nightModeButton = document.getElementById('night-mode-btn');
     updateInfoElement = document.querySelector('.update-info');
 
     setupHeaderStructure();
@@ -587,14 +585,11 @@ function ensureLegendActionsContainer() {
 
 function moveLegendActionsToDropdown() {
     if (!infoContent) return;
-    if (!turkeyButton && !nightModeButton) return;
+    if (!turkeyButton) return;
     ensureLegendActionsContainer();
     if (!legendActionsContainer) return;
     if (turkeyButton && !legendActionsContainer.contains(turkeyButton)) {
         legendActionsContainer.appendChild(turkeyButton);
-    }
-    if (nightModeButton && !legendActionsContainer.contains(nightModeButton)) {
-        legendActionsContainer.appendChild(nightModeButton);
     }
 }
 
@@ -602,9 +597,6 @@ function restoreLegendActions() {
     if (!legendElement) return;
     if (turkeyButton && !legendElement.contains(turkeyButton)) {
         legendElement.appendChild(turkeyButton);
-    }
-    if (nightModeButton && !legendElement.contains(nightModeButton)) {
-        legendElement.appendChild(nightModeButton);
     }
 }
 
@@ -623,6 +615,7 @@ function setupMobileWelcomeNotice() {
     const showModal = (modal, bodyClass) => {
         if (!modal) return;
         document.body.classList.add(bodyClass);
+        modal.removeAttribute('hidden');
         modal.classList.add('is-visible');
         modal.setAttribute('aria-hidden', 'false');
     };
@@ -631,6 +624,7 @@ function setupMobileWelcomeNotice() {
         if (!modal) return;
         modal.classList.remove('is-visible');
         modal.setAttribute('aria-hidden', 'true');
+        modal.setAttribute('hidden', '');
         document.body.classList.remove(bodyClass);
     };
 

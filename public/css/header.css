@@ -16,7 +16,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px; /* varsayılan, ekstra alt boşluk yok */
+    padding: 15px 20px;
+    gap: 12px;
+    flex-wrap: nowrap;
 }
 
 .logo {
@@ -24,6 +26,7 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
+    flex-shrink: 0;
 }
 
 .logo img {
@@ -381,7 +384,8 @@
 .header-actions {
     display: none;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+    flex-shrink: 0;
 }
 
 .header-btn {
@@ -469,7 +473,8 @@ body.info-menu-open {
 
 @media (max-width: 900px) {
     #hidden-header .container {
-        gap: 12px;
+        gap: 8px;
+        padding: 10px 12px;
     }
 
     #hidden-header nav {
@@ -534,12 +539,43 @@ body.info-menu-open {
     }
 
     .logo img {
-        height: 46px;
-        width: 46px;
+        height: 42px;
+        width: 42px;
     }
 
     .logo span {
-        font-size: 18px;
+        display: none;
+    }
+
+    .header-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .header-btn i {
+        font-size: 16px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+    #hidden-header .container {
+        gap: 6px;
+        padding: 8px 8px;
+    }
+
+    .logo img {
+        height: 36px;
+        width: 36px;
+    }
+
+    .header-btn {
+        width: 34px;
+        height: 34px;
+    }
+
+    .header-btn i {
+        font-size: 14px;
     }
 }
 
@@ -548,6 +584,33 @@ body.nav-open .menu-toggle {
     background: rgba(255, 255, 255, 0.28);
     border-color: rgba(255, 255, 255, 0.45);
 }
+
+/* City Search (Header İçi) */
+.city-search { position: relative; flex: 1 1 0; min-width: 0; max-width: 480px; margin: 0 8px; }
+.city-search__bar { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.97); border: 1px solid #ffeba1; border-radius: 50px; padding: 8px 14px; box-shadow: 0 4px 12px rgba(15,23,42,0.1); backdrop-filter: blur(6px); transition: border-color .18s ease, box-shadow .18s ease; }
+.city-search__bar:focus-within { border-color: #d32f2f; box-shadow: 0 8px 24px rgba(211,47,47,0.18); }
+.city-search__icon { color: #d32f2f; font-size: 0.9rem; flex-shrink: 0; }
+#city-search-input { flex: 1; border: 0; outline: 0; background: transparent; font-size: 0.9rem; color: #1f2937; font-family: inherit; min-width: 0; }
+#city-search-input::placeholder { color: #9ca3af; }
+#city-search-clear { background: transparent; border: 0; color: #9ca3af; cursor: pointer; padding: 4px 6px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+#city-search-clear:hover { color: #d32f2f; background: rgba(211,47,47,0.08); }
+.city-search__results { position: absolute; top: 100%; left: 0; right: 0; list-style: none; margin: 8px 0 0; padding: 6px; background: rgba(255,255,255,0.98); border-radius: 16px; box-shadow: 0 18px 40px rgba(15,23,42,0.2); max-height: min(420px,60vh); overflow-y: auto; backdrop-filter: blur(6px); z-index: 2200; }
+.city-search__results li { list-style: none; }
+.city-search-item { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 14px; border-radius: 12px; text-decoration: none; color: #1f2937; transition: background .12s ease; }
+.city-search-item:hover, .city-search-item.is-active { background: #fef2f2; color: #b91c1c; }
+.city-search-city { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.city-search-city i { color: #d32f2f; font-size: 0.9rem; flex-shrink: 0; }
+.city-search-city span { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
+.city-search-city strong { font-size: 0.98rem; font-weight: 700; color: #111827; }
+.city-search-item:hover .city-search-city strong, .city-search-item.is-active .city-search-city strong { color: #b91c1c; }
+.city-search-city small { font-size: 0.75rem; color: #6b7280; margin-top: 2px; }
+.city-search-quake { display: flex; align-items: center; gap: 8px; font-size: 0.78rem; color: #6b7280; white-space: nowrap; flex-shrink: 0; }
+.city-search-mag { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; padding: 3px 8px; border-radius: 999px; color: #fff; font-weight: 700; font-size: 0.78rem; }
+.city-search-ago { color: #6b7280; }
+.city-search-quake--loading, .city-search-quake--none { font-style: italic; opacity: 0.75; }
+.city-search-empty { padding: 14px; text-align: center; color: #6b7280; font-size: 0.9rem; }
+@media(max-width:900px){.city-search{margin:0 4px}.city-search__bar{padding:7px 10px;gap:6px}#city-search-input{font-size:0.85rem}}
+
 /* Cookie Consent Banner */
 #cookie-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:var(--z-toast,1080);background:var(--bg-dark,#161616)!important;color:var(--text-white,#fff)!important;box-shadow:var(--shadow-lg,0 12px 32px rgba(0,0,0,0.22))!important;border-radius:var(--radius-lg,16px)!important;padding:var(--space-lg,16px)!important}
 #cookie-consent .cookie-consent__actions{display:flex;gap:var(--space-sm,8px);justify-content:flex-end;margin-top:var(--space-md,12px)}

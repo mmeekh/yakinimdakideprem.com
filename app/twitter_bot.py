@@ -652,13 +652,25 @@ def format_tweet(quake: Dict[str, Any]) -> str:
         city,
         tags,
     )
+    # UTM-etiketli link: ya sehre ozel sayfa ya ana harita
+    _slug_map = str.maketrans({
+        "ç": "c", "Ç": "c", "ğ": "g", "Ğ": "g", "ı": "i", "İ": "i",
+        "ö": "o", "Ö": "o", "ş": "s", "Ş": "s", "ü": "u", "Ü": "u",
+        "â": "a", "Â": "a", "î": "i", "Î": "i", "û": "u", "Û": "u",
+    })
+    if city:
+        slug = city.translate(_slug_map).lower().strip().replace(" ", "-")
+        link = f"https://yakinimdakideprem.com/deprem-{slug}.html?utm_source=twitter&utm_medium=social&utm_campaign=deprem-bot"
+    else:
+        link = "https://yakinimdakideprem.com/?utm_source=twitter&utm_medium=social&utm_campaign=deprem-bot"
+
     body = (
         "🚨 DEPREM UYARISI\n\n"
         f"📍 Yer: {location}\n"
         f"📉 Büyüklük: {mag}\n"
         f"⏱️ Tarih: {ts}\n"
         f"⬇️ Derinlik: {depth} km\n\n"
-        "Detaylar ve Harita: https://yakinimdakideprem.com\n\n"
+        f"Detaylar ve Harita: {link}\n\n"
     )
     if tags_section:
         body += tags_section

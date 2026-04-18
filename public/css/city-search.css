@@ -1,0 +1,267 @@
+/*
+ * Sehir arama kutusu - tum sayfalarda header'da gorunur.
+ * Yapi: <div id="city-search" class="city-search">...</div>
+ * #hidden-header .container icinde, logo ile nav arasinda yer alir.
+ */
+
+/* ----- Logo metni: sadece genis desktop'ta gorunur -----
+ * Mobile/tablet/dar desktop'ta gizleyip search'e yer acariz.
+ * !important header.min.css cascade'ini override etmek icin. */
+@media (max-width: 1100px) {
+    #hidden-header .logo span {
+        display: none !important;
+    }
+}
+
+/* Logo search'i ezmesin - kendisi kucuk kalsin */
+#hidden-header .logo {
+    flex-shrink: 0;
+}
+
+#hidden-header .city-search {
+    position: relative;
+    flex: 1 1 240px;
+    max-width: 380px;
+    min-width: 0;
+    margin: 0 16px;
+    z-index: 2100;
+}
+
+.city-search__bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    padding: 6px 14px;
+    transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.city-search__bar:focus-within {
+    background: #fff;
+    border-color: #d32f2f;
+    box-shadow: 0 8px 22px rgba(211, 47, 47, 0.25);
+}
+
+.city-search__icon {
+    color: #d32f2f;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.city-search input[type="text"] {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 0.92rem;
+    color: #1f2937;
+    font-family: inherit;
+    min-width: 0;
+    padding: 2px 0;
+}
+
+.city-search input[type="text"]::placeholder {
+    color: #9ca3af;
+}
+
+#city-search-clear {
+    background: transparent;
+    border: 0;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+#city-search-clear:hover {
+    color: #d32f2f;
+    background: rgba(211, 47, 47, 0.08);
+}
+
+.city-search__results {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    list-style: none;
+    margin: 0;
+    padding: 6px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 20px 44px rgba(15, 23, 42, 0.28);
+    max-height: min(440px, 70vh);
+    overflow-y: auto;
+    z-index: 2200;
+}
+
+.city-search__results li {
+    list-style: none;
+}
+
+.city-search-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #1f2937;
+    transition: background .12s ease;
+}
+
+.city-search-item:hover,
+.city-search-item.is-active {
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+.city-search-city {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.city-search-city i {
+    color: #d32f2f;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.city-search-city span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    min-width: 0;
+}
+
+.city-search-city strong {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.city-search-item:hover .city-search-city strong,
+.city-search-item.is-active .city-search-city strong {
+    color: #b91c1c;
+}
+
+.city-search-city small {
+    font-size: 0.72rem;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+.city-search-quake {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.76rem;
+    color: #6b7280;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.city-search-mag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+.city-search-quake--loading,
+.city-search-quake--none {
+    font-style: italic;
+    opacity: 0.75;
+}
+
+.city-search-empty {
+    padding: 14px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* ----- Mobil: kompakt header icinde, tek satir ----- */
+@media (max-width: 900px) {
+    #hidden-header .city-search {
+        flex: 1 1 0;
+        min-width: 0;
+        margin: 0 8px;
+        max-width: none;
+    }
+
+    .city-search__bar {
+        padding: 5px 10px;
+        gap: 6px;
+    }
+
+    .city-search__icon {
+        font-size: 0.85rem;
+    }
+
+    .city-search input[type="text"] {
+        font-size: 0.85rem;
+        padding: 1px 0;
+    }
+
+    /* Dropdown'u header'dan bagimsiz, tam ekran genisligine yay */
+    .city-search__results {
+        position: fixed;
+        top: var(--header-height, 72px);
+        left: 8px;
+        right: 8px;
+        max-height: calc(100vh - var(--header-height, 72px) - 24px);
+    }
+
+    .city-search-item {
+        padding: 9px 10px;
+    }
+
+    .city-search-quake {
+        font-size: 0.7rem;
+    }
+
+    .city-search-mag {
+        min-width: 28px;
+        font-size: 0.7rem;
+        padding: 2px 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    #hidden-header .city-search {
+        margin: 0 6px;
+    }
+
+    .city-search input[type="text"]::placeholder {
+        /* Dar ekranda yer kazanmak icin kisa placeholder */
+        font-size: 0.8rem;
+    }
+
+    .city-search-city small {
+        display: none; /* bolge bilgisi cok dar ekranda gizlensin */
+    }
+}
+
+@media (max-width: 380px) {
+    #hidden-header .city-search {
+        margin: 0 4px;
+    }
+
+    .city-search__bar {
+        padding: 4px 8px;
+    }
+}

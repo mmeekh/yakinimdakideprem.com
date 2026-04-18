@@ -15,16 +15,16 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-WQZS53QX');</script>
     <!-- End Google Tag Manager -->
-    <title>Son Depremler Listesi - Kandilli ve AFAD Son Dakika | Yakınımdaki Deprem</title>
+    <title>Deprem Mi Oldu? Az Önce Deprem – Son Dakika Canlı Liste</title>
     <meta name="description"
-        content="Bugün olan son depremler listesi. Kandilli ve AFAD verileriyle anlık deprem takibi. İstanbul, İzmir, Ankara ve Türkiye geneli son dakika deprem haberleri.">
+        content="Az önce deprem mi oldu? Kandilli + AFAD verileriyle son dakika deprem listesi. Bugün olan depremleri saniye saniye takip et. İstanbul, İzmir, Ankara ve Türkiye geneli.">
     <meta name="keywords"
-        content="son depremler, son dakika deprem, kandilli son depremler, afad son depremler, deprem mi oldu, yakınımdaki deprem, anlık deprem listesi">
+        content="deprem mi oldu, az önce deprem mi oldu, son dakika deprem, son depremler, bugün deprem oldu mu, kandilli son depremler, afad son depremler, anlık deprem listesi">
     <meta name="author" content="Emin Kılıç">
     <link rel="canonical" href="https://yakinimdakideprem.com/son-dakika-deprem.html" />
     <meta property="og:locale" content="tr_TR">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Son Depremler Listesi - Kandilli ve AFAD Anlık Veriler">
+    <meta property="og:title" content="Deprem Mi Oldu? Az Önce Deprem – Son Dakika Canlı Liste">
     <meta property="og:description"
         content="Türkiye'deki son depremleri saniye saniye takip edin. Kandilli Rasathanesi ve AFAD verileriyle oluşturulan güvenilir deprem listesi.">
     <meta property="og:url" content="https://yakinimdakideprem.com/son-dakika-deprem.html">
@@ -32,14 +32,15 @@
     <meta property="og:image" content="https://yakinimdakideprem.com/images/blog-son-deprem-haberleri.webp">
     <meta property="og:image:alt" content="Son dakika deprem verilerini gösteren ekran">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Son Depremler Listesi - Kandilli ve AFAD Anlık Veriler">
+    <meta name="twitter:title" content="Deprem Mi Oldu? Az Önce Deprem – Son Dakika">
     <meta name="twitter:description" content="Az önce deprem oldu mu sorusuna canlı verilerle yanıt veren hızlı sayfa.">
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/blog-son-deprem-haberleri.webp">
     <meta name="twitter:image:alt" content="Son dakika deprem verilerini gösteren ekran">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/blog.css?v=202601132130">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="css/blog.css?v=202604172101">
     <link rel="stylesheet" href="css/filters.css?v=1">
-    <link rel="stylesheet" href="css/header.min.css?v=202601132330">
+    <link rel="stylesheet" href="css/header.min.css?v=202604172101">
     <link rel="stylesheet" href="css/son-dakika-alert.css?v=202602081420">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
@@ -100,6 +101,7 @@
     }
     </script>
     <link rel="stylesheet" href="css/footer.css?v=202512182020">
+    <link rel="stylesheet" href="css/city-search.css?v=202604180000">
 </head>
 
 <body>
@@ -113,6 +115,22 @@
                 <img loading="lazy" src="icons/logo.png" alt="Yakınımdaki Deprem logosu" width="60" height="60">
                 <span data-text="Yakınımdaki Deprem">Yakınımdaki Deprem</span>
             </a>
+            <!-- Şehir Arama Kutusu -->
+            <div id="city-search" class="city-search" role="search">
+                <div class="city-search__bar">
+                    <i class="fas fa-search city-search__icon" aria-hidden="true"></i>
+                    <label for="city-search-input" class="sr-only">Şehir ara</label>
+                    <input type="text" id="city-search-input"
+                        placeholder="Şehir Ara 🏙️"
+                        autocomplete="off"
+                        aria-autocomplete="list"
+                        aria-controls="city-search-results">
+                    <button type="button" id="city-search-clear" aria-label="Temizle" hidden>
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul id="city-search-results" class="city-search__results" role="listbox" hidden></ul>
+            </div>
             <nav>
                 <a href="/" rel="noopener noreferrer">Ana Sayfa</a>
                 <a href="/son-dakika-deprem.html" rel="noopener noreferrer" class="nav-highlight nav-alert active">Son
@@ -133,6 +151,7 @@
                         Şehir Depremleri <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="dropdown-menu">
+                        <a href="/deprem-sehirleri.html" rel="noopener noreferrer"><strong>📍 Tüm 81 İl</strong></a>
                         <a href="/deprem-istanbul.html" rel="noopener noreferrer">İstanbul Depremi</a>
                         <a href="/deprem-izmir.html" rel="noopener noreferrer">İzmir Depremi</a>
                         <a href="/deprem-ankara.html" rel="noopener noreferrer">Ankara Depremi</a>
@@ -377,7 +396,7 @@
         </div>
     </footer>
 
-    <script src="js/header.min.js?v=202602011300"></script>
+    <script src="js/header.min.js?v=202604173000"></script>
     <script src="js/toc.js?v=202512182020"></script>
     <script src="js/live-quakes.js?v=202602081420"></script>
     <script>
@@ -446,6 +465,8 @@
       }]
     }
     </script>
+<script src="js/city-search.js?v=202604172400"></script>
+    <script src="js/city-keywords.js?v=202604172301" defer></script>
 </body>
 
 </html>

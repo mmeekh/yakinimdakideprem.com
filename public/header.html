@@ -1,7 +1,23 @@
 <header>
   <div class="container">
     <a href="/" class="logo"><img src="/images/logo-placeholder.svg" alt="Yakınımdaki Deprem" width="48" height="48"> Yakınımdaki Deprem</a>
-    <nav>
+            <!-- Şehir Arama Kutusu -->
+            <div id="city-search" class="city-search" role="search">
+                <div class="city-search__bar">
+                    <i class="fas fa-search city-search__icon" aria-hidden="true"></i>
+                    <label for="city-search-input" class="sr-only">Şehir ara</label>
+                    <input type="text" id="city-search-input"
+                        placeholder="Şehir Ara 🏙️"
+                        autocomplete="off"
+                        aria-autocomplete="list"
+                        aria-controls="city-search-results">
+                    <button type="button" id="city-search-clear" aria-label="Temizle" hidden>
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul id="city-search-results" class="city-search__results" role="listbox" hidden></ul>
+            </div>
+            <nav>
       <a href="/">Ana Sayfa</a> | <a href="/deprem-aninda.html">Deprem Anında</a> | <a href="/rehber-hazirlik.html">Rehber</a> | <a href="/blog.html">Blog</a>
                     <div class="nav-dropdown">
                     <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">

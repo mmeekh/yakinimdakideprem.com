@@ -492,23 +492,6 @@ function updateEarthquakeList() {
       </div>
     `)
     .join("");
-
-  // Add click events to list items
-  container.querySelectorAll(".earthquake-item").forEach((item) => {
-    item.addEventListener("click", function () {
-      const eqId = this.getAttribute("data-id");
-      const eq = AppState.earthquakeData.find(e => e.id === eqId);
-      if (eq && AppState.map) {
-        AppState.map.setView([eq.coordinates.lat, eq.coordinates.lng], 8);
-        // Find and open corresponding marker popup
-        const marker = AppState.markers.find(m => 
-          Math.abs(m.getLatLng().lat - eq.coordinates.lat) < 0.001 &&
-          Math.abs(m.getLatLng().lng - eq.coordinates.lng) < 0.001
-        );
-        if (marker) marker.openPopup();
-      }
-    });
-  });
 }
 
 // Update statistics
@@ -572,12 +555,6 @@ function setupEventListeners() {
   if (turkeyBtn) {
     turkeyBtn.addEventListener("click", goToTurkey);
   }
-
-  // Night mode button
-  const nightModeBtn = document.getElementById("night-mode-btn");
-  if (nightModeBtn) {
-    nightModeBtn.addEventListener("click", toggleNightMode);
-  }
 }
 
 // Handle refresh button click
@@ -621,53 +598,6 @@ function goToTurkey() {
       }, 150);
     }
     
-  }
-}
-
-// Toggle night mode
-function toggleNightMode() {
-  const body = document.body;
-  const nightModeBtn = document.getElementById("night-mode-btn");
-  const icon = nightModeBtn?.querySelector("i");
-  
-  // Toggle night mode class
-  body.classList.toggle("night-mode");
-  
-  // Update button state and icon
-  if (body.classList.contains("night-mode")) {
-    nightModeBtn.classList.add("active");
-    if (icon) {
-      icon.className = "fas fa-sun";
-    }
-    nightModeBtn.innerHTML = '<i class="fas fa-sun"></i> Gündüz Modu';
-    
-    // Apply dark filter to existing map
-    const mapElement = document.getElementById('map');
-    if (mapElement) {
-      mapElement.style.filter = 'invert(1) hue-rotate(180deg) brightness(0.8) contrast(1.2)';
-    }
-    
-  } else {
-    nightModeBtn.classList.remove("active");
-    if (icon) {
-      icon.className = "fas fa-moon";
-    }
-    nightModeBtn.innerHTML = '<i class="fas fa-moon"></i> Gece Modu';
-    
-    // Remove dark filter from map
-    const mapElement = document.getElementById('map');
-    if (mapElement) {
-      mapElement.style.filter = '';
-    }
-    
-  }
-  
-  // Buton animasyonu
-  if (nightModeBtn) {
-    nightModeBtn.style.transform = "scale(0.95)";
-    setTimeout(() => {
-      nightModeBtn.style.transform = "";
-    }, 150);
   }
 }
 

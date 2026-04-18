@@ -147,6 +147,7 @@ body {
 .table-wrapper {
     margin: 30px 0;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 12px;
     background: #fff;
@@ -209,7 +210,6 @@ body {
 .quake-table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 600px;
     font-size: 15px;
     color: #0f172a;
 }
@@ -238,6 +238,18 @@ body {
 .quake-table tbody tr:hover {
     background: #fff3e0;
     transition: background 0.2s ease;
+}
+
+/* Mobile: compact table rows */
+@media (max-width: 768px) {
+    .quake-table th,
+    .quake-table td {
+        padding: 8px 6px;
+        font-size: 13px;
+    }
+    .quake-table thead th {
+        font-size: 11px;
+    }
 }
 
 /* Blog Makalesi */

@@ -343,101 +343,6 @@ main {
     font-size: 11px;
 }
 
-/* Gece Modu Butonu */
-.night-mode-btn {
-    width: 100%;
-    margin-top: 10px;
-    padding: 8px 12px;
-    background: linear-gradient(135deg, #2c3e50, #34495e);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-}
-
-.night-mode-btn:hover {
-    background: linear-gradient(135deg, #34495e, #2c3e50);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.3);
-}
-
-.night-mode-btn.active {
-    background: linear-gradient(135deg, #f39c12, #e67e22);
-}
-
-.night-mode-btn.active:hover {
-    background: linear-gradient(135deg, #e67e22, #d35400);
-}
-
-.night-mode-btn i {
-    font-size: 11px;
-}
-
-/* Gece Modu Harita Stilleri */
-.night-mode .map-wrapper #map {
-    filter: invert(1) hue-rotate(180deg) brightness(0.8) contrast(1.2);
-}
-
-.night-mode .map-wrapper .earthquake-list {
-    background: #2c3e50;
-    color: #ecf0f1;
-}
-
-.night-mode .map-wrapper .earthquake-list .list-header {
-    border-bottom-color: #34495e;
-}
-
-.night-mode .map-wrapper .earthquake-list .list-header h2 {
-    color: #ecf0f1;
-}
-
-.night-mode .map-wrapper .earthquake-list .earthquake-item {
-    border-bottom-color: #34495e;
-}
-
-.night-mode .map-wrapper .earthquake-list .earthquake-item:hover {
-    background-color: #34495e;
-}
-
-.night-mode .map-wrapper .earthquake-list .earthquake-item .details h3 {
-    color: #ecf0f1;
-}
-
-.night-mode .map-wrapper .earthquake-list .earthquake-item .details .time,
-.night-mode .map-wrapper .earthquake-list .earthquake-item .details .depth {
-    color: #bdc3c7;
-}
-
-.night-mode .map-wrapper .magnitude-legend {
-    background: #2c3e50;
-    color: #ecf0f1;
-}
-
-.night-mode .map-wrapper .magnitude-legend .legend-title {
-    color: #ecf0f1;
-}
-
-.night-mode .map-wrapper .magnitude-legend .legend-item span {
-    color: #ecf0f1;
-}
-
-.night-mode .map-wrapper .update-info {
-    background: #2c3e50;
-    color: #ecf0f1;
-    opacity: 0.75; /* %10 daha şeffaf (0.85 -> 0.75) */
-}
-
-.night-mode .map-wrapper .update-info #last-update {
-    color: #bdc3c7;
-}
-
 /* Deprem Listesi */
 .list-header {
     display: flex;
@@ -577,7 +482,6 @@ main {
     color: white;
 }
 
-
 /* Son 5 Deprem Stilleri */
 .recent-earthquakes {
     margin-top: 15px;
@@ -670,7 +574,6 @@ main {
     font-size: 24px;
     color: #f44336;
 }
-
 
 /* Footer */
 footer {
@@ -825,8 +728,7 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
-    
-    
+
     .hero-content h1 {
         font-size: 32px;
     }
@@ -1154,18 +1056,3 @@ footer {
 .earthquake-popup__title { margin: 0 0 8px 0; color: #d32f2f; font-weight: 700; font-size: 16px; }
 .earthquake-popup__details p { margin: 6px 0; font-size: 14px; }
 .earthquake-popup__source { margin-top: 6px; font-size: 12px; color: #374151; }
-
-/* Night mode: neutralize map invert for UI overlays and ensure contrast */
-.night-mode .map-wrapper .leaflet-popup,
-.night-mode .map-wrapper .leaflet-control {
-    filter: invert(1) hue-rotate(180deg) brightness(1) contrast(1);
-}
-.night-mode .leaflet-popup-content-wrapper,
-.night-mode .leaflet-popup-tip {
-    background: #0b1220; /* deep slate */
-    color: #e5e7eb; /* text-light */
-}
-.night-mode .leaflet-popup-content p { color: #e5e7eb; }
-.night-mode .leaflet-popup-content p strong { color: #f8fafc; }
-.night-mode .earthquake-popup__title { color: #fca5a5; }
-.night-mode .earthquake-popup__source { color: #cbd5e1; }

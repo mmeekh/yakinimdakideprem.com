@@ -1,6 +1,6 @@
 (() => {
   const MOBILE_BREAKPOINT = 900;
-  let popupAdjusting = false;
+  let recentering = false;
 
   function closeInfoPanel() {
     if (!document.body.classList.contains('info-menu-open')) return;
@@ -29,6 +29,11 @@
     return window.AppState && window.AppState.map ? window.AppState.map : null;
   }
 
+  function getQuakeById(quakeId) {
+    const quakes = Array.isArray(window.AppState?.earthquakeData) ? window.AppState.earthquakeData : [];
+    return quakes.find((entry) => String(entry.id) === String(quakeId)) || null;
+  }
+
   function findNearestMarker(quake) {
     const markers = Array.isArray(window.AppState?.markers) ? window.AppState.markers : [];
     if (!markers.length) return null;
@@ -46,62 +51,67 @@
     return bestMarker;
   }
 
-  function centerPopupInView(popup) {
+  function openPopupWithoutAutoPan(marker) {
+    if (!marker || !marker.openPopup) return;
+    const popup = marker.getPopup ? marker.getPopup() : marker._popup;
+    let previousAutoPan = null;
+    if (popup && popup.options && typeof popup.options.autoPan === 'boolean') {
+      previousAutoPan = popup.options.autoPan;
+      popup.options.autoPan = false;
+    }
+    marker.openPopup();
+    if (popup && popup.options && previousAutoPan !== null) {
+      popup.options.autoPan = previousAutoPan;
+    }
+  }
+
+  function recenterMap(coords) {
     const map = getMap();
-    if (!map || !popup || popupAdjusting) return;
-    const popupEl = popup.getElement ? popup.getElement() : null;
-    const mapEl = map.getContainer ? map.getContainer() : null;
-    if (!popupEl || !mapEl) return;
-    const popupRect = popupEl.getBoundingClientRect();
-    const mapRect = mapEl.getBoundingClientRect();
-    const deltaX = (popupRect.left + popupRect.width / 2) - (mapRect.left + mapRect.width / 2);
-    const deltaY = (popupRect.top + popupRect.height / 2) - (mapRect.top + mapRect.height / 2);
-    if (Math.abs(deltaX) < 1 && Math.abs(deltaY) < 1) return;
-    popupAdjusting = true;
-    map.panBy([-deltaX, -deltaY], { animate: true, duration: 0.25 });
+    if (!map || !coords || recentering) return;
+    recentering = true;
+    try {
+      if (map.invalidateSize) {
+        map.invalidateSize();
+      }
+    } catch (e) {}
+    map.panTo([coords.lat, coords.lng], { animate: false });
     setTimeout(() => {
-      popupAdjusting = false;
-    }, 300);
+      recentering = false;
+    }, 80);
   }
 
-  function attachPopupCentering() {
-    const map = getMap();
-    if (!map || map._popupCenteringAttached) return;
-    map._popupCenteringAttached = true;
-    map.on('popupopen', (event) => {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          centerPopupInView(event.popup);
-        });
-      });
-    });
-  }
-
-  function focusOnQuake(item) {
+  function focusOnQuakeById(quakeId) {
+    if (!quakeId) return;
     if (typeof window.ensureMapReady === 'function') {
       window.ensureMapReady();
     }
     const map = getMap();
     if (!map) return;
-    const quakeId = item.getAttribute('data-id');
-    if (!quakeId) return;
-    const quakes = Array.isArray(window.AppState.earthquakeData) ? window.AppState.earthquakeData : [];
-    const quake = quakes.find((entry) => String(entry.id) === String(quakeId));
+    const quake = getQuakeById(quakeId);
     if (!quake || !quake.coordinates) return;
-    map.setView([quake.coordinates.lat, quake.coordinates.lng], 8);
-    const marker = findNearestMarker(quake);
-    if (marker && marker.openPopup) {
-      marker.openPopup();
-    }
-    setTimeout(() => {
-      if (map.invalidateSize) {
-        map.invalidateSize();
-      }
-      const activePopup = map._popup || null;
-      if (activePopup) {
-        centerPopupInView(activePopup);
-      }
-    }, 200);
+
+    const target = [quake.coordinates.lat, quake.coordinates.lng];
+    const targetZoom = 8;
+    let handled = false;
+
+    const finalize = () => {
+      if (handled) return;
+      handled = true;
+      const marker = findNearestMarker(quake);
+      openPopupWithoutAutoPan(marker);
+      requestAnimationFrame(() => {
+        recenterMap(quake.coordinates);
+      });
+    };
+
+    map.once('moveend', finalize);
+    map.setView(target, targetZoom, { animate: true, duration: 0.35 });
+    setTimeout(finalize, 500);
+  }
+
+  function focusOnQuake(item) {
+    const quakeId = item.getAttribute('data-id');
+    focusOnQuakeById(quakeId);
   }
 
   document.addEventListener('click', (event) => {
@@ -116,14 +126,5 @@
     }, 50);
   });
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const waitForMap = () => {
-      if (getMap()) {
-        attachPopupCentering();
-        return;
-      }
-      setTimeout(waitForMap, 300);
-    };
-    waitForMap();
-  });
+  window.focusEarthquakeById = focusOnQuakeById;
 })();
