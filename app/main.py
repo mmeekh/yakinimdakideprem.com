@@ -360,23 +360,43 @@ async def fetch_kandilli_earthquakes(hours_back: int, min_magnitude: float) -> L
 
 
 APP_NAME = os.getenv("APP_NAME", "yakınımdakideprem-api")
-APP_ENV = os.getenv("APP_ENV", "dev")
+APP_ENV = os.getenv("APP_ENV", os.getenv("ENVIRONMENT", "dev"))
 APP_VERSION = os.getenv("APP_VERSION", "0.1.0")
+IS_PRODUCTION = APP_ENV.lower() == "production"
 
 origins_env = os.getenv("CORS_ORIGINS", "")
 ALLOWED_ORIGINS = [origin.strip() for origin in origins_env.split(",") if origin.strip()]
 
-app = FastAPI(title=APP_NAME, version=APP_VERSION)
+# Production'da Swagger/OpenAPI dokumantasyonunu tamamen kapat (defense in depth)
+# Caddy seviyesinde de 404'leniyor ama FastAPI seviyesinde de devre disi birakalim.
+app_kwargs = {"title": APP_NAME, "version": APP_VERSION}
+if IS_PRODUCTION:
+    app_kwargs["docs_url"] = None
+    app_kwargs["redoc_url"] = None
+    app_kwargs["openapi_url"] = None
+
+app = FastAPI(**app_kwargs)
+
+# TrustedHost middleware - sadece beklenen host'lardan gelen istekleri kabul et
+allowed_hosts_env = os.getenv("ALLOWED_HOSTS", "")
+TRUSTED_HOSTS = [h.strip() for h in allowed_hosts_env.split(",") if h.strip()]
+if IS_PRODUCTION and TRUSTED_HOSTS:
+    from starlette.middleware.trustedhost import TrustedHostMiddleware
+    # Icinde wildcard ya da lokal-docker isim varsa ona da izin ver
+    hosts_with_wildcards = TRUSTED_HOSTS + ["yakinimdakideprem-api"]
+    app.add_middleware(TrustedHostMiddleware, allowed_hosts=hosts_with_wildcards)
 
 earthquake_cache = EarthquakeCache(cache_duration_seconds=20)
 
+# CORS - sadece acikca izin verilmis origin'lere
 if ALLOWED_ORIGINS:
     app.add_middleware(
         CORSMiddleware,
         allow_origins=ALLOWED_ORIGINS,
         allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
+        allow_methods=["GET", "HEAD", "OPTIONS"],  # API read-only
+        allow_headers=["Content-Type"],
+        max_age=3600,
     )
 
 

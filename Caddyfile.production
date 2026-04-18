@@ -1,55 +1,87 @@
-{
-    # Üretimde otomatik HTTPS açık (default)
-}
+# Production site config for root-caddy
+# /root/caddy/sites/yakinimdakideprem.com.Caddyfile
 
-# Apex domain (serves API + static from dedicated containers)
 yakinimdakideprem.com {
     tls internal
     encode zstd gzip
 
+    # ─── Guvenli redirect ve alias ───
     redir /index.html / permanent
     redir /privacy-policy.html /gizlilik-politikasi.html permanent
 
+    # Search query parametresi iceren URL'ler indexlenmeyecek
     @search_query query q=*
     header @search_query X-Robots-Tag "noindex, nofollow"
 
-    handle_path /api/* {
+    # ─── Hassas path'leri BLOKLA (404 dondur) ───
+    # API dokumantasyonu production'da public olmamali
+    @blocked_paths path /docs* /openapi.json /redoc* /openapi.yaml
+    respond @blocked_paths "Not Found" 404
+
+    # Dotfiles, git metadata, env dosyalari
+    @dotfiles {
+        path /.git* /.env* /.htaccess /.htpasswd /.ssh* /.DS_Store
+        path_regexp (^|/)\.[^/]+$
+    }
+    respond @dotfiles "Not Found" 404
+
+    # Yaygin tarayici/saldiri hedefleri
+    @scanner_targets path /wp-admin* /wp-login* /wp-content* /.well-known/security.txt /phpmyadmin* /admin* /administrator* /config* /backup* /db_backup*
+    respond @scanner_targets "Not Found" 404
+
+    # ─── API (FastAPI) ───
+    # NOT: handle (handle_path degil!) - FastAPI /api/... ile bekliyor
+    handle /api/* {
+        reverse_proxy yakinimdakideprem-api:8000 {
+            header_up X-Real-IP {remote_host}
+        }
+    }
+
+    handle /health {
         reverse_proxy yakinimdakideprem-api:8000
     }
 
-    handle_path /health {
+    handle /version {
         reverse_proxy yakinimdakideprem-api:8000
     }
 
-    handle_path /version {
-        reverse_proxy yakinimdakideprem-api:8000
-    }
-
-    handle_path /docs* {
-        reverse_proxy yakinimdakideprem-api:8000
-    }
-
-    handle_path /openapi.json {
-        reverse_proxy yakinimdakideprem-api:8000
-    }
-
-    handle_path /redoc* {
-        reverse_proxy yakinimdakideprem-api:8000
-    }
-
+    # ─── Statik dosyalar ───
     handle {
         reverse_proxy yakinimdakideprem-static:8081
     }
 
-    header {
-        X-Content-Type-Options "nosniff"
-        X-Frame-Options "DENY"
-        Referrer-Policy "strict-origin-when-cross-origin"
-        Permissions-Policy "geolocation=(), microphone=()"
-        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-        Content-Security-Policy "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com data:; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com https://cdnjs.cloudflare.com https://static.cloudflareinsights.com https://cdn.onesignal.com https://*.onesignal.com 'unsafe-inline'; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://unpkg.com https://static.cloudflareinsights.com https://cloudflareinsights.com https://onesignal.com https://*.onesignal.com;"
+    # ─── Request body limiti (10 MB max) ───
+    request_body {
+        max_size 10MB
     }
 
+    # ─── Guvenli HTTP response header'lari ───
+    header {
+        # Tarayicinin content-sniffing yapmasini engeller
+        X-Content-Type-Options "nosniff"
+        # Clickjacking koruma - siteye iframe'de embed izni yok
+        X-Frame-Options "DENY"
+        # Referrer leak'i sinirla
+        Referrer-Policy "strict-origin-when-cross-origin"
+        # Permissions Policy - gereksiz izinleri kapat
+        Permissions-Policy "accelerometer=(), autoplay=(), camera=(), clipboard-read=(), clipboard-write=(self), display-capture=(), encrypted-media=(), fullscreen=(self), geolocation=(self), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), speaker-selection=(), sync-xhr=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()"
+        # HTTPS zorunlu - 1 yil + alt domain + preload
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        # Content Security Policy - XSS ve kaynak whitelist
+        Content-Security-Policy "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; object-src 'none'; upgrade-insecure-requests; img-src 'self' data: blob: https://*.tile.openstreetmap.org https://tile.openstreetmap.org https://*.openstreetmap.de https://*.wikimedia.org https://yakinimdakideprem.com; font-src 'self' https://cdnjs.cloudflare.com data:; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com https://cdnjs.cloudflare.com https://static.cloudflareinsights.com https://cdn.onesignal.com https://*.onesignal.com 'unsafe-inline'; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://unpkg.com https://static.cloudflareinsights.com https://cloudflareinsights.com https://onesignal.com https://*.onesignal.com;"
+        # Cross-Origin policies
+        Cross-Origin-Opener-Policy "same-origin"
+        Cross-Origin-Resource-Policy "same-site"
+        # Eski Flash/Silverlight cross-domain policy - block
+        X-Permitted-Cross-Domain-Policies "none"
+        # XSS protection (eski tarayicilar icin)
+        X-XSS-Protection "1; mode=block"
+        # Server header'i bilgi sizdirmasin
+        -Server
+        -X-Powered-By
+    }
+
+    # ─── Cache politikalari ───
     @html path *.html
     header @html {
         Cache-Control "public, max-age=120"
@@ -60,13 +92,18 @@ yakinimdakideprem.com {
         Cache-Control "public, max-age=604800"
     }
 
-    @images path *.webp
+    @images path *.webp *.png *.jpg *.jpeg *.svg
     header @images {
-        Cache-Control "public, max-age=604800"
+        Cache-Control "public, max-age=2592000, immutable"
+    }
+
+    @fonts path *.woff *.woff2 *.ttf
+    header @fonts {
+        Cache-Control "public, max-age=31536000, immutable"
     }
 }
 
-# www domain -> canonical apex
+# www subdomain -> apex'e redirect
 www.yakinimdakideprem.com {
     tls internal
     redir https://yakinimdakideprem.com{uri} permanent
