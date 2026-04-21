@@ -21,13 +21,13 @@
         content="Kandilli + AFAD ile 20 saniyede bir güncellenen canlı deprem haritası ve 81 il için deprem sayfaları.">
     <meta property="og:url" content="https://yakinimdakideprem.com/">
     <meta property="og:site_name" content="Yakınımdaki Deprem">
-    <meta property="og:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.png">
+    <meta property="og:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.webp">
     <meta property="og:image:alt" content="Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri görseli">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Yakınımdaki Deprem – Anlık Deprem Haritası Türkiye">
     <meta name="twitter:description"
         content="Canlı deprem haritası + 81 il deprem sayfaları. Kandilli + AFAD ile 20 sn'de bir güncelleme.">
-    <meta name="twitter:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.png">
+    <meta name="twitter:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.webp">
     <meta name="twitter:image:alt" content="Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri görseli">
     <!-- Performance: Preconnect to external domains -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
@@ -35,8 +35,8 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
     <!-- Critical resources preload -->
-    <link rel="preload" href="css/style.min.css?v=202604180000" as="style">
-    <link rel="preload" href="css/header.min.css?v=202604172101" as="style">
+    <link rel="preload" href="css/style.min.css?v=202604202200" as="style">
+    <link rel="preload" href="css/header.min.css?v=202604202200" as="style">
     <link rel="preload" href="css/leaflet.min.css?v=202601131900" as="style">
     <link rel="preload" href="icons/logo.png" as="image" type="image/png">
     <!-- Google Tag Manager -->
@@ -52,8 +52,8 @@
     <link rel="stylesheet" href="css/leaflet.min.css?v=202601131900" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="css/style.min.css?v=202604180000">
-    <link rel="stylesheet" href="css/header.min.css?v=202604172101">
+    <link rel="stylesheet" href="css/style.min.css?v=202604202200">
+    <link rel="stylesheet" href="css/header.min.css?v=202604202200">
     <link rel="stylesheet" href="css/components.min.css?v=202601131900">
     <!-- Favicon Icons -->
     <link rel="shortcut icon" href="/icons/favicon-32x32.png" type="image/png">
@@ -157,7 +157,8 @@
     }
     </script>
     <link rel="stylesheet" href="css/footer.css?v=202512182020">
-    <link rel="stylesheet" href="css/city-search.css?v=202604180000">
+    <link rel="stylesheet" href="css/city-search.css?v=202604202200">
+    <link rel="stylesheet" href="css/geolocation.css?v=202604231700">
     <style>
         .sr-only {
             position: absolute;
@@ -174,6 +175,14 @@
         nav a.nav-highlight:hover { color: #b71c1c; text-decoration: underline; }
         #push-modal.is-visible { display: flex !important; }
     </style>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wdt4zn01kt");
+    </script>
 </head>
 
 <body>
@@ -207,7 +216,7 @@
                 <a href="/son-dakika-deprem.html" rel="noopener noreferrer" class="nav-highlight nav-alert">Son Dakika
                     <span class="alarm-dot" aria-hidden="true"></span></a>
                 <div class="nav-dropdown nav-dropdown-guides">
-                    <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                    <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Rehberler menüsünü aç">
                         Rehberler <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="dropdown-menu">
@@ -218,7 +227,7 @@
                     </div>
                 </div>
                 <div class="nav-dropdown">
-                    <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                    <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Şehir depremleri menüsünü aç">
                         Şehir Depremleri <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="dropdown-menu">
@@ -265,7 +274,7 @@
         </div>
     </div>
     <!-- Harita ve Overlay Alanı -->
-    <div class="map-wrapper">
+    <main id="main-content" class="map-wrapper" aria-label="Canlı deprem haritası ve son depremler">
         <h1 class="map-h1">Anlık Deprem Haritası Türkiye – Canlı Son Depremler</h1>
 
         <div id="map"></div>
@@ -311,9 +320,13 @@
                     <span class="legend-short">8</span>
                 </div>
             </div>
-            <button id="turkey-btn" class="turkey-btn">
+            <button id="turkey-btn" class="turkey-btn" aria-label="Haritayi Türkiye merkezine odakla">
                 <i class="fas fa-map-marker-alt"></i>
                 Türkiye'ye Git
+            </button>
+            <button id="my-location-btn" class="my-location-btn" aria-label="Konumumu haritada göster" type="button">
+                <i class="fas fa-location-arrow" aria-hidden="true"></i>
+                <span class="my-location-btn__label">Konumum</span>
             </button>
         </div>
 
@@ -372,11 +385,11 @@
         <!-- Güncelleme Bilgisi -->
         <div class="update-info overlay">
             <span id="last-update">Son güncelleme: Yükleniyor...</span>
-            <button id="refresh-btn" class="btn-refresh">
-                <i class="fas fa-sync-alt"></i>
+            <button id="refresh-btn" class="btn-refresh" aria-label="Deprem verilerini yenile">
+                <i class="fas fa-sync-alt" aria-hidden="true"></i>
             </button>
         </div>
-    </div>
+    </main>
 
     <!-- SEO Content Section -->
     <section class="seo-content section-padding">
@@ -396,7 +409,7 @@
                         yenileyin.</p>
 
                     <figure class="content-image">
-                        <img src="images/deprem-buyukluk-etkisi-infografik.png"
+                        <img src="images/deprem-buyukluk-etkisi-infografik.webp"
                             alt="Richter ölçeğine göre deprem büyüklükleri ve etkileri infografiği" width="800"
                             height="800" loading="lazy"
                             style="max-width: 100%; height: auto; margin: 2rem 0; border-radius: 8px;">
@@ -452,14 +465,20 @@
                         </ul>
                     </div>
                     <div class="quick-links-card" style="margin-top:20px;">
-                        <h3>Rehber ve Bilgi</h3>
+                        <h3>Güvenlik Rehberleri</h3>
                         <ul>
-                            <li><a href="/deprem-aninda.html">Deprem Anında Yapılacaklar</a></li>
+                            <li><a href="/deprem-aninda.html">Deprem Anında: Çök-Kapan-Tutun</a></li>
+                            <li><a href="/blog-deprem-oncesi-hazirlik.html">Deprem Öncesi Hazırlık</a></li>
+                            <li><a href="/blog-deprem-sonrasi-ilk-24-saat.html">Deprem Sonrası İlk 24 Saat</a></li>
+                            <li><a href="/blog-deprem-cantasi.html">Deprem Çantası Listesi 2026</a></li>
+                            <li><a href="/blog-bina-icindeyseniz.html">Bina İçindeyken</a></li>
+                            <li><a href="/blog-disaridaysaniz.html">Açık Alandayken</a></li>
+                            <li><a href="/blog-arac-kullanirken.html">Araç Kullanırken</a></li>
                             <li><a href="/ilk-yardim-cantasi.html">İlk Yardım Çantası</a></li>
-                            <li><a href="/blog-deprem-cantasi.html">Deprem Çantası Listesi</a></li>
-                            <li><a href="/blog-dask-nedir.html">DASK Nedir?</a></li>
+                            <li><a href="/blog-dask-nedir.html">DASK: Zorunlu Deprem Sigortası</a></li>
                             <li><a href="/blog-toplanma-alani-sorgulama.html">Toplanma Alanı Sorgulama</a></li>
                             <li><a href="/turkiye-deprem-rehberi-fay-hatlari.html">Türkiye Fay Hatları</a></li>
+                            <li><a href="/blog.html"><strong>→ Tüm Rehberler</strong></a></li>
                         </ul>
                     </div>
                 </div>
@@ -580,7 +599,7 @@
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4>Hızlı Linkler</h4>
+                        <h3>Hızlı Linkler</h3>
                         <ul>
                             <li><a href="/" rel="noopener noreferrer">Ana Sayfa</a></li>
                             <li><a href="/deprem-aninda.html" rel="noopener noreferrer">Deprem Anında</a></li>
@@ -590,7 +609,7 @@
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Kaynaklar</h4>
+                        <h3>Kaynaklar</h3>
                         <ul>
                             <li><a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a>
                             </li>
@@ -602,7 +621,7 @@
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>İletişim</h4>
+                        <h3>İletişim</h3>
                         <ul>
                             <li><a href="/iletisim.html" rel="noopener noreferrer">İletişim</a></li>
                             <li><a href="https://www.linkedin.com/in/emin-k%C4%B1l%C4%B1%C3%A7-250b14210/"
@@ -610,7 +629,7 @@
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Yasal</h4>
+                        <h3>Yasal</h3>
                         <ul>
                             <li><a href="/kullanim-sartlari.html" rel="noopener noreferrer">Kullanım Şartları</a></li>
                             <li><a href="/gizlilik-politikasi.html" rel="noopener noreferrer">Gizlilik Politikası</a>
@@ -686,15 +705,17 @@
     </script>
     <!-- Leaflet JS deferred for LCP Optimization -->
     <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script defer src="js/header.min.js?v=202604173000"></script>
+    <script defer src="js/header.min.js?v=202604190100"></script>
     <!-- Ana Scriptler deferred -->
-    <script defer src="js/script.min.js?v=202604173000"></script>
+    <script defer src="js/script.min.js?v=202604190100"></script>
     <script defer src="js/mobile-quake-focus.js?v=202602011200"></script>
     <!-- Türkiye Depremleri Script deferred -->
     <script defer src="js/turkey-earthquakes.min.js?v=202601131900"></script>
     <!-- Şehir Arama -->
-    <script defer src="js/city-keywords.js?v=202604172301"></script>
-    <script defer src="js/city-search.js?v=202604172400"></script>
+    <script defer src="js/city-keywords.js?v=202604202200"></script>
+    <script defer src="js/city-search.js?v=202604202200"></script>
+    <!-- Kullanıcı Konumu -->
+    <script defer src="js/geolocation.js?v=202604231700"></script>
     <!-- İstatistik Güncelleyici Script -->
 </body>
 

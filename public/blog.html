@@ -15,9 +15,9 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-WQZS53QX');</script>
     <!-- End Google Tag Manager -->
-    <title>Deprem Blogu - Güvenlik Rehberleri ve Hayat Kurtaran İpuçları | Yakınımdaki Deprem</title>
+    <title>Deprem Blogu – Güvenlik Rehberleri ve İpuçları</title>
     <meta name="description"
-        content="Deprem güvenlik rehberleri, deprem çantası ve hazırlık içerikleri. Hayat kurtaran ipuçları ve güncel bilgiler.">
+        content="Deprem güvenlik rehberleri: çanta listesi, bina içi/dışı tavsiyeler, DASK, toplanma alanı ve hayat kurtaran ipuçları. Tek sayfada tüm rehberler.">
     <meta name="keywords"
         content="deprem blog, deprem güvenlik rehberi, deprem çantası, deprem anında ne yapılmalı, deprem hazırlığı, afet güvenliği, Yakınımdaki Deprem, deprem, afet yönetimi, güvenli yaşam">
     <meta name="author" content="Emin Kılıç">
@@ -25,24 +25,49 @@
     <meta property="og:locale" content="tr_TR">
     <meta property="og:type" content="website">
     <meta property="og:title"
-        content="Deprem Blogu - Güvenlik Rehberleri ve Hayat Kurtaran İpuçları | Yakınımdaki Deprem">
+        content="Deprem Blogu – Güvenlik Rehberleri ve İpuçları">
     <meta property="og:description"
-        content="Yakınımdaki Deprem blogu: Deprem güvenlik rehberleri, deprem çantası hazırlama, deprem anında yapılması gerekenler ve hayat kurtaran ipuçları. Kendi notlarım ve güncel bilgiler.">
+        content="Deprem güvenlik rehberleri: çanta listesi, bina içi/dışı tavsiyeler, DASK, toplanma alanı ve hayat kurtaran ipuçları. Tek sayfada tüm rehberler.">
     <meta property="og:url" content="https://yakinimdakideprem.com/blog.html">
     <meta property="og:site_name" content="Yakınımdaki Deprem">
     <meta property="og:image" content="https://yakinimdakideprem.com/images/depremcantasi.webp">
     <meta property="og:image:alt" content="Deprem blogu ve deprem çantası görseli">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title"
-        content="Deprem Blogu - Güvenlik Rehberleri ve Hayat Kurtaran İpuçları | Yakınımdaki Deprem">
+        content="Deprem Blogu – Güvenlik Rehberleri ve İpuçları">
     <meta name="twitter:description"
-        content="Yakınımdaki Deprem blogu: Deprem güvenlik rehberleri, deprem çantası hazırlama, deprem anında yapılması gerekenler ve hayat kurtaran ipuçları. Kendi notlarım ve güncel bilgiler.">
+        content="Deprem güvenlik rehberleri: çanta listesi, bina içi/dışı tavsiyeler, DASK, toplanma alanı ve hayat kurtaran ipuçları. Tek sayfada tüm rehberler.">
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/depremcantasi.webp">
     <meta name="twitter:image:alt" content="Deprem blogu ve deprem çantası görseli">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="css/blog.css?v=202601312005">
-    <link rel="stylesheet" href="css/header.min.css?v=202604172101">
+    <link rel="stylesheet" href="css/blog.css?v=202604231200">
+    <style>
+        /* Blog Categories - Filter UI */
+        .blog-categories { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 24px 16px 16px; max-width: 1200px; margin: 0 auto; }
+        .cat-btn { background: #fff; border: 2px solid #e5e7eb; color: #333; padding: 10px 18px; border-radius: 999px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all .18s ease; font-family: inherit; display: inline-flex; align-items: center; gap: 6px; }
+        .cat-btn small { color: #888; font-weight: 500; }
+        .cat-btn:hover { border-color: var(--cat-color, #d32f2f); color: var(--cat-color, #d32f2f); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .cat-btn.is-active { background: var(--cat-color, #d32f2f); border-color: var(--cat-color, #d32f2f); color: #fff; }
+        .cat-btn.is-active small { color: rgba(255,255,255,0.9); }
+        .blog-section { padding: 24px 0 40px; border-bottom: 1px solid #f0f0f0; }
+        .blog-section:last-of-type { border-bottom: none; }
+        .cat-heading { font-size: 1.7rem; margin: 16px 0 4px; color: var(--cat-color, #d32f2f); font-weight: 700; }
+        .cat-description { color: #666; margin-bottom: 24px; font-size: 1rem; }
+        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        @media (max-width: 992px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 640px) { .blog-grid { grid-template-columns: 1fr; gap: 16px; } .cat-btn { padding: 8px 12px; font-size: 0.85rem; } .cat-heading { font-size: 1.3rem; } }
+        .blog-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit; transition: transform .2s, box-shadow .2s; display: flex; flex-direction: column; position: relative; }
+        .blog-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.12); }
+        .blog-card .blog-image { width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: #f5f5f5; }
+        .blog-card .blog-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+        .blog-card:hover .blog-image img { transform: scale(1.04); }
+        .blog-card h3 { font-size: 1.1rem; font-weight: 700; color: #1f2937; margin: 16px 16px 8px; line-height: 1.3; }
+        .blog-card p { font-size: 0.9rem; color: #555; line-height: 1.5; margin: 0 16px 16px; flex-grow: 1; }
+        .blog-card.featured h3 { color: #d32f2f; }
+        .blog-badge { position: absolute; top: 12px; right: 12px; color: #fff; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; z-index: 2; }
+    </style>
+    <link rel="stylesheet" href="css/header.min.css?v=202604202200">
     <!-- Favicon Icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
@@ -98,6 +123,228 @@
     }
     </script>
     <link rel="stylesheet" href="css/footer.css?v=202512182020">
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wdt4zn01kt");
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Deprem Blog Yazıları",
+  "description": "34 deprem güvenlik rehberi ve detaylı makale",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Deprem Çantası Listesi 2026",
+      "url": "https://yakinimdakideprem.com/blog-deprem-cantasi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Deprem Öncesi Hazırlık",
+      "url": "https://yakinimdakideprem.com/blog-deprem-oncesi-hazirlik.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Deprem Sonrası İlk 24 Saat",
+      "url": "https://yakinimdakideprem.com/blog-deprem-sonrasi-ilk-24-saat.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "DASK Nedir?",
+      "url": "https://yakinimdakideprem.com/blog-dask-nedir.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Deprem Güvenlik Bilgileri",
+      "url": "https://yakinimdakideprem.com/blog-deprem-guvenlik-bilgileri.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Deprem Haritası",
+      "url": "https://yakinimdakideprem.com/blog-deprem-haritasi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Bina İçindeyseniz",
+      "url": "https://yakinimdakideprem.com/blog-bina-icindeyseniz.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "Dışarıdaysanız",
+      "url": "https://yakinimdakideprem.com/blog-disaridaysaniz.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "Araç Kullanırken",
+      "url": "https://yakinimdakideprem.com/blog-arac-kullanirken.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "Toplanma Alanı Sorgulama",
+      "url": "https://yakinimdakideprem.com/blog-toplanma-alani-sorgulama.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "Son Deprem Haberleri",
+      "url": "https://yakinimdakideprem.com/blog-son-deprem-haberleri.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "Türkiye Fay Hatları Haritası 2026",
+      "url": "https://yakinimdakideprem.com/blog-turkiye-fay-hatlari-haritasi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "name": "Evim Depreme Dayanıklı mı? 7 Adım Test",
+      "url": "https://yakinimdakideprem.com/blog-evim-depreme-dayanikli-mi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "name": "İstanbul Beklenen Deprem Ne Zaman?",
+      "url": "https://yakinimdakideprem.com/blog-istanbul-beklenen-deprem.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "name": "Deprem Büyüklük Ölçekleri – Richter ve Mw",
+      "url": "https://yakinimdakideprem.com/blog-deprem-buyukluk-olcekleri.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "name": "Artçı Deprem Nedir? Ne Kadar Sürer?",
+      "url": "https://yakinimdakideprem.com/blog-artci-deprem-nedir.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "name": "Deprem Erken Uyarı Sistemi Nasıl Çalışır?",
+      "url": "https://yakinimdakideprem.com/blog-deprem-erken-uyari-sistemi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "name": "Mobilya Sabitleme – Depreme Karşı",
+      "url": "https://yakinimdakideprem.com/blog-mobilya-sabitleme-rehberi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "name": "Çocuklara Deprem Nasıl Anlatılır?",
+      "url": "https://yakinimdakideprem.com/blog-deprem-anketi-cocuklar.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "name": "Apartman Yöneticileri İçin Deprem",
+      "url": "https://yakinimdakideprem.com/blog-apartman-yoneticisi-deprem.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "name": "Evcil Hayvanlarla Deprem Planı",
+      "url": "https://yakinimdakideprem.com/blog-evcil-hayvanlarla-deprem.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "name": "Engelli Bireyler İçin Deprem Tahliyesi",
+      "url": "https://yakinimdakideprem.com/blog-engelli-bireyler-deprem.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "name": "Yaşlılar İçin Deprem Hazırlığı",
+      "url": "https://yakinimdakideprem.com/blog-yaslilar-icin-deprem.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "name": "İstanbul Deprem İlçeleri Haritası",
+      "url": "https://yakinimdakideprem.com/blog-istanbul-deprem-haritasi-ilceler.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "name": "İzmir Deprem Tarihi – 2020 Samos",
+      "url": "https://yakinimdakideprem.com/blog-izmir-deprem-tarihi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "name": "1999 Marmara Depremi – 25 Yıllık Dersler",
+      "url": "https://yakinimdakideprem.com/blog-marmara-depremi-1999-dersler.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "name": "Kahramanmaraş 6 Şubat Depremleri",
+      "url": "https://yakinimdakideprem.com/blog-kahramanmaras-6-subat-dersler.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "name": "Van Depremi 2011 – 15 Yıllık Dersler",
+      "url": "https://yakinimdakideprem.com/blog-van-depremi-2011-dersler.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 29,
+      "name": "Deprem ve Cep Telefonu İletişimi",
+      "url": "https://yakinimdakideprem.com/blog-deprem-cep-telefonu.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 30,
+      "name": "Deprem Sonrası Psikolojik Destek",
+      "url": "https://yakinimdakideprem.com/blog-deprem-sonrasi-psikolojik-destek.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 31,
+      "name": "TBDY 2019 – Yeni Deprem Yönetmeliği",
+      "url": "https://yakinimdakideprem.com/blog-tbdy-2019-nedir.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 32,
+      "name": "Yapı Denetim Raporu Nasıl Okunur?",
+      "url": "https://yakinimdakideprem.com/blog-yapi-denetim-raporu-okuma.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 33,
+      "name": "İşyerinde Deprem Tatbikatı Rehberi",
+      "url": "https://yakinimdakideprem.com/blog-zorunlu-deprem-tatbikati.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 34,
+      "name": "Kadınlar İçin Deprem Hazırlığı",
+      "url": "https://yakinimdakideprem.com/blog-kadinlar-icin-deprem.html"
+    }
+  ]
+}
+    </script>
 </head>
 
 <body>
@@ -163,147 +410,399 @@
     <header class="page-header">
         <div class="container">
             <h1>Deprem Blogu</h1>
-            <p>Deprem sırasında nasıl davranmalısınız?</p>
+            <p>34 detaylı rehber: deprem öncesi hazırlık, anında davranış, sonrası toparlanma, bilim ve şehir bazlı risk analizleri.</p>
         </div>
     </header>
 
     <main class="container">
-        <section class="blog-list">
-            <!-- En güncel blog yazısı (Cornerstone) -->
-            <a class="blog-card featured" href="/turkiye-deprem-rehberi-fay-hatlari.html" rel="noopener noreferrer">
-                <div class="blog-image">
-                    <img loading="lazy" src="images/blog-deprem-haritasi-rehberi.webp"
-                        alt="Türkiye Deprem Fay Hatları ve Tarihçe Rehberi" width="1200" height="675">
-                </div>
-                <h2>Türkiye Deprem Rehberi: Fay Hatları, Tarihçe ve Gerçekler</h2>
-                <p>Türkiye'nin deprem gerçeği üzerine en kapsamlı rehber: Kuzey (KAF) ve Doğu (DAF) Anadolu Fay Hatları,
-                    tarihsel büyük depremler ve bilmeniz gereken sismolojik gerçekler.</p>
-                <span class="blog-badge" style="background-color: #d32f2f;">ÖNERİLEN</span>
-            </a>
 
-            <!-- Diğer güncel blog yazıları -->
-            <a class="blog-card featured" href="/blog-son-deprem-haberleri.html" rel="noopener noreferrer">
-                <div class="blog-image">
-                    <img loading="lazy" src="images/blog-son-deprem-haberleri.webp"
-                        alt="Son deprem ve son dakika deprem haberleri rehberi" width="1200" height="675">
-                </div>
-                <h2>Son Deprem ve Son Dakika Deprem Haberleri</h2>
-                <p>AFAD ve Kandilli Rasathanesi kaynaklarını Türkiye genelindeki son depremleri takip ederken nasıl
-                    kullanabileceğinizi, otomatik uyarı sistemlerini ve mobil uygulamaları bu kaynaklarla nasıl
-                    birleştirebileceğinizi öğrenin.</p>
-                <span class="blog-badge">YENİ</span>
-            </a>
+        <!-- Kategori Filtresi -->
+        <nav class="blog-categories" aria-label="Blog kategorileri">
+            <button class="cat-btn is-active" data-cat="all" type="button">
+                <span class="cat-icon">📚</span> Tümü <small>(34)</small>
+            </button>
+            <button class="cat-btn" data-cat="hazirlik" type="button" style="--cat-color: #d32f2f;">
+                🎒 Hazırlık <small>(10)</small>
+            </button>
+            <button class="cat-btn" data-cat="sirasinda" type="button" style="--cat-color: #ff6b35;">
+                ⚡ Deprem Anında <small>(6)</small>
+            </button>
+            <button class="cat-btn" data-cat="sonrasi" type="button" style="--cat-color: #c62828;">
+                🆘 Deprem Sonrası <small>(4)</small>
+            </button>
+            <button class="cat-btn" data-cat="bilim" type="button" style="--cat-color: #1565c0;">
+                🧪 Bilim ve Teknik <small>(9)</small>
+            </button>
+            <button class="cat-btn" data-cat="sehir" type="button" style="--cat-color: #6a1b9a;">
+                🏙 Şehir ve Tarih <small>(6)</small>
+            </button>
+            <button class="cat-btn" data-cat="sigorta" type="button" style="--cat-color: #2e7d32;">
+                📰 Sigorta & Haberler <small>(2)</small>
+            </button>
+        </nav>
 
-            <a class="blog-card featured" href="/blog-deprem-guvenlik-bilgileri.html" rel="noopener noreferrer">
+        <!-- Kategori Bölümleri -->
+        <section class="blog-section" data-cat="hazirlik" aria-labelledby="cat-hazirlik-heading">
+            <h2 id="cat-hazirlik-heading" class="cat-heading" style="--cat-color: #d32f2f;">🎒 Hazırlık</h2>
+            <p class="cat-description">Deprem öncesi evde, işyerinde ve ailece hazırlık rehberleri</p>
+            <div class="blog-grid">
+            <a class="blog-card" href="/blog-deprem-oncesi-hazirlik.html" rel="noopener noreferrer">
                 <div class="blog-image">
-                    <img loading="lazy" src="images/blog-deprem-guvenlik-bilgileri.webp"
-                        alt="Deprem güvenlik bilgileri ve çök-kapan-tutun tekniği rehberi" width="1200" height="675">
+                    <img loading="lazy" src="images/blog-deprem-oncesi-hazirlik.webp" alt="Deprem Öncesi Hazırlık" width="1200" height="675">
                 </div>
-                <h2>Deprem Güvenlik Bilgileri: Hayat Kurtaran Önlemler</h2>
-                <p>Çök-Kapan-Tutun tekniğini, bina içi ve dışı güvenli hareket adımlarını, aile iletişim planını ve
-                    engelli bireyler ile evcil hayvanlar için özel önlemleri adım adım anlatan kapsamlı bir güvenlik
-                    rehberi.</p>
-                <span class="blog-badge">YENİ</span>
+                <h3>Deprem Öncesi Hazırlık</h3>
+                <p>Ev güvenliği, aile planı, acil iletişim ve tahliye rotası hazırlığı için kapsamlı rehber.</p>
+                
             </a>
-
-            <a class="blog-card featured" href="/blog-deprem-sonrasi-ilk-24-saat.html" rel="noopener noreferrer">
-                <div class="blog-image">
-                    <img loading="lazy" src="images/blog-deprem-sonrasi-ilk-24-saat.webp"
-                        alt="Deprem sonrası ilk 24 saatte yardım ekipleri ve gönüllüler" width="1200" height="675">
-                </div>
-                <h2>Deprem Sonrası İlk 24 Saat: İnteraktif Kriz Planı</h2>
-                <p>Artçı sarsıntılar devam ederken güvenlik kontrolü, mahalle dayanışması ve iletişim zinciri nasıl
-                    kurulur? İnteraktif görev listeleri ve zaman çizelgesiyle öğrenin.</p>
-                <span class="blog-badge">YENİ</span>
-            </a>
-
-            <a class="blog-card featured" href="/blog-deprem-haritasi.html" rel="noopener noreferrer">
-                <div class="blog-image">
-                    <img loading="lazy" src="images/blog-deprem-haritasi-rehberi.webp"
-                        alt="Türkiye deprem haritası üzerinde risk bölgelerini gösteren iller" width="1200"
-                        height="675">
-                </div>
-                <h2>Deprem Haritası: Risk Bölgeleri ve Güvenli Alanlar</h2>
-                <p>Türkiye'nin deprem kuşaklarını, aktif fay hatlarını, en riskli illeri ve AFAD toplanma alanı
-                    sorgulama servisini kullanarak güvenli toplanma alanlarını nasıl bulacağınızı keşfedin.</p>
-                <span class="blog-badge">YENİ</span>
-            </a>
-
-            <a class="blog-card featured" href="/blog-dask-nedir.html" rel="noopener noreferrer">
-                <div class="blog-image">
-                    <img loading="lazy" src="images/blog-deprem-oncesi-hazirlik.webp"
-                        alt="Deprem hazırlığı ve DASK sigortası hakkında bilgiler" width="1200" height="675">
-                </div>
-                <h2>DASK Nedir? Zorunlu Deprem Sigortası Rehberi</h2>
-                <p>Zorunlu Deprem Sigortası (DASK) ne işe yarar, neleri kapsar, 2025 yılı teminat limitleri nelerdir?
-                    Evinizi depreme karşı güvence altına alın.</p>
-                <span class="blog-badge">YENİ</span>
-            </a>
-
-            <a class="blog-card featured" href="/blog-toplanma-alani-sorgulama.html" rel="noopener noreferrer">
-                <div class="blog-image">
-                    <img loading="lazy" src="images/toplanma-alani-sorgulama.webp"
-                        alt="E-Devlet Deprem toplanma alanı sorgulama ekranı" width="1200" height="675">
-                </div>
-                <h2>Deprem Toplanma Alanı Sorgulama (E-Devlet)</h2>
-                <p>Olası bir deprem anında size en yakın güvenli toplanma alanı neresi? E-Devlet ve AFAD sistemleri
-                    üzerinden adım adım sorgulama rehberi.</p>
-                <span class="blog-badge">YENİ</span>
-            </a>
-
-            <!-- Diğer blog yazıları -->
-            <a class="blog-card featured" href="/blog-deprem-oncesi-hazirlik.html" rel="noopener noreferrer">
-                <div class="blog-image">
-                    <img loading="lazy" src="images/DOHR.webp" alt="Deprem öncesi hazırlık rehberi" width="1200"
-                        height="675">
-                </div>
-                <h2>Deprem Öncesi Hazırlık Rehberi</h2>
-                <p>Deprem öncesi hazırlık nasıl yapılır? Ev güvenliği, eşya sabitleme, aile planı ve deprem hazırlığı
-                    için kapsamlı bir rehber.</p>
-                <span class="blog-badge">YENİ</span>
-            </a>
-
             <a class="blog-card" href="/blog-deprem-cantasi.html" rel="noopener noreferrer">
                 <div class="blog-image">
-                    <img loading="lazy" src="images/depremcantasi.webp" alt="Deprem çantası hazırlama rehberi"
-                        width="1200" height="675">
+                    <img loading="lazy" src="images/depremcantasi.webp" alt="Deprem Çantası Listesi 2026" width="1200" height="675">
                 </div>
-                <h2>Deprem Çantası Hazırlama Rehberi</h2>
-                <p>Deprem çantası nasıl hazırlanır? İçinde neler olmalı? 2024 güncel deprem çantası listesi ve hayat
-                    kurtaran ipuçları.</p>
+                <h3>Deprem Çantası Listesi 2026</h3>
+                <p>72 saatlik yaşam seti: su, gıda, belge, ilaç ve ekipman listesi. Güncel 2026 rehberi.</p>
+                
             </a>
+            <a class="blog-card" href="/blog-mobilya-sabitleme-rehberi.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-mobilya-sabitleme-rehberi.webp" alt="Mobilya Sabitleme" width="1200" height="675">
+                </div>
+                <h3>Mobilya Sabitleme</h3>
+                <p>L-profil ile dolap, kitaplık, buzdolabı gibi ağır mobilyaları duvara sabitleme rehberi.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-apartman-yoneticisi-deprem.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-apartman-yoneticisi-deprem.webp" alt="Apartman Yöneticileri" width="1200" height="675">
+                </div>
+                <h3>Apartman Yöneticileri</h3>
+                <p>Kat malikleri, ortak alan tatbikatı ve site genelinde deprem hazırlığı için 10 adım.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-evcil-hayvanlarla-deprem.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-evcil-hayvanlarla-deprem.webp" alt="Evcil Hayvanlarla" width="1200" height="675">
+                </div>
+                <h3>Evcil Hayvanlarla</h3>
+                <p>Kedi, köpek, kuş için deprem çantası, taşıma kafesi ve tahliye planı.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-engelli-bireyler-deprem.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-engelli-bireyler-deprem.webp" alt="Engelli Bireyler" width="1200" height="675">
+                </div>
+                <h3>Engelli Bireyler</h3>
+                <p>Tekerlekli sandalye, görme/işitme engelli, hareket kısıtlı bireyler için özel rehber.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-yaslilar-icin-deprem.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-yaslilar-icin-deprem.webp" alt="Yaşlılar İçin" width="1200" height="675">
+                </div>
+                <h3>Yaşlılar İçin</h3>
+                <p>65 yaş üstü bireyler için ilaç yönetimi, evde güvenli düzenleme ve aile iletişimi.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-kadinlar-icin-deprem.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-kadinlar-icin-deprem.webp" alt="Kadınlar İçin" width="1200" height="675">
+                </div>
+                <h3>Kadınlar İçin</h3>
+                <p>Hamile, emzikli anne, bekar kadın ve özel ihtiyaçlar için deprem rehberi.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-zorunlu-deprem-tatbikati.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-zorunlu-deprem-tatbikati.webp" alt="İşyeri Tatbikatı" width="1200" height="675">
+                </div>
+                <h3>İşyeri Tatbikatı</h3>
+                <p>6331 sayılı kanun gereği zorunlu işyeri deprem tatbikatı nasıl yapılır?</p>
+                
+            </a>
+            <a class="blog-card" href="/ilk-yardim-cantasi.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/depremcantasi.webp" alt="İlk Yardım Çantası" width="1200" height="675">
+                </div>
+                <h3>İlk Yardım Çantası</h3>
+                <p>İlk yardım çantasında olması gereken temel malzemeler ve kullanım rehberi.</p>
+                
+            </a>
+            </div>
+        </section>
 
+        <section class="blog-section" data-cat="sirasinda" aria-labelledby="cat-sirasinda-heading">
+            <h2 id="cat-sirasinda-heading" class="cat-heading" style="--cat-color: #ff6b35;">⚡ Deprem Anında</h2>
+            <p class="cat-description">Sarsıntı süresince hayat kurtaran davranış rehberleri</p>
+            <div class="blog-grid">
+            <a class="blog-card" href="/deprem-aninda.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/cokapantutun.webp" alt="Çök-Kapan-Tutun" width="1200" height="675">
+                </div>
+                <h3>Çök-Kapan-Tutun</h3>
+                <p>Deprem anında uygulanması gereken hayat kurtaran üç adım. Adım adım rehber.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-deprem-guvenlik-bilgileri.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-deprem-guvenlik-bilgileri.webp" alt="Güvenlik Bilgileri" width="1200" height="675">
+                </div>
+                <h3>Güvenlik Bilgileri</h3>
+                <p>Deprem sırasında ve sonrasında güvenlik önlemleri ve yaygın hatalar.</p>
+                
+            </a>
             <a class="blog-card" href="/blog-bina-icindeyseniz.html" rel="noopener noreferrer">
                 <div class="blog-image">
-                    <img loading="lazy" src="images/blog-bina-icindeyseniz.webp"
-                        alt="Deprem anında bina içindeyseniz yapılması gerekenler" width="1200" height="675">
+                    <img loading="lazy" src="images/blog-bina-icindeyseniz.webp" alt="Bina İçindeyseniz" width="1200" height="675">
                 </div>
-                <h2>Bina İçindeyseniz</h2>
-                <p>Çök-Kapan-Tutun hareketini uygulayın, pencerelerden ve devrilebilecek eşyalardan uzak durun; bina içi
-                    güvenli noktaları öğrenin.</p>
+                <h3>Bina İçindeyseniz</h3>
+                <p>Ev, ofis veya okulda deprem başladığında çök-kapan-tutun uygulaması.</p>
+                
             </a>
-
             <a class="blog-card" href="/blog-disaridaysaniz.html" rel="noopener noreferrer">
                 <div class="blog-image">
-                    <img loading="lazy" src="images/blog-disaridaysaniz.webp"
-                        alt="Deprem anında dışarıdaysanız güvenli davranış rehberi" width="1200" height="675">
+                    <img loading="lazy" src="images/blog-disaridaysaniz.webp" alt="Dışarıdaysanız" width="1200" height="675">
                 </div>
-                <h2>Dışarıdaysanız</h2>
-                <p>Binalardan, ağaçlardan ve devrilebilecek cisimlerden uzak, mümkün olduğunca açık alanlara yönelin;
-                    kalabalıkta panik yönetimi için ipuçlarını keşfedin.</p>
+                <h3>Dışarıdaysanız</h3>
+                <p>Sokak, park, açık alanda deprem anında güvenli pozisyon ve önlemler.</p>
+                
             </a>
-
             <a class="blog-card" href="/blog-arac-kullanirken.html" rel="noopener noreferrer">
                 <div class="blog-image">
-                    <img loading="lazy" src="images/blog-arac-kullanirken.webp"
-                        alt="Deprem anında araç kullanırken alınacak önlemler" width="1200" height="675">
+                    <img loading="lazy" src="images/blog-arac-kullanirken.webp" alt="Araç Kullanırken" width="1200" height="675">
                 </div>
-                <h2>Araç Kullanırken</h2>
-                <p>Deprem sırasında araç kullanıyorsanız güvenli bir şekilde kenara çekin, köprü ve tünellerden uzak
-                    durun ve trafik güvenliğini koruyun.</p>
+                <h3>Araç Kullanırken</h3>
+                <p>Deprem sırasında araçtaysanız güvenli durma ve köprü/tünel kaçınma rehberi.</p>
+                
             </a>
+            <a class="blog-card" href="/blog-deprem-anketi-cocuklar.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-deprem-anketi-cocuklar.webp" alt="Çocuklara Deprem" width="1200" height="675">
+                </div>
+                <h3>Çocuklara Deprem</h3>
+                <p>3-5, 6-9, 10-14 yaş gruplarına göre deprem konusunu korkutmadan anlatma.</p>
+                
+            </a>
+            </div>
         </section>
+
+        <section class="blog-section" data-cat="sonrasi" aria-labelledby="cat-sonrasi-heading">
+            <h2 id="cat-sonrasi-heading" class="cat-heading" style="--cat-color: #c62828;">🆘 Deprem Sonrası</h2>
+            <p class="cat-description">Sarsıntı sonrası ilk saatler ve uzun vadeli iyileşme</p>
+            <div class="blog-grid">
+            <a class="blog-card" href="/blog-deprem-sonrasi-ilk-24-saat.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-deprem-sonrasi-ilk-24-saat.webp" alt="İlk 24 Saat" width="1200" height="675">
+                </div>
+                <h3>İlk 24 Saat</h3>
+                <p>Deprem sonrası en kritik 24 saatte yapılması gerekenler. Adım adım eylem planı.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-deprem-sonrasi-psikolojik-destek.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-deprem-sonrasi-psikolojik-destek.webp" alt="Psikolojik Destek & PTSD" width="1200" height="675">
+                </div>
+                <h3>Psikolojik Destek & PTSD</h3>
+                <p>Deprem sonrası travma, yetişkin ve çocuklarda PTSD ve destek önerileri.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-deprem-cep-telefonu.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-deprem-cep-telefonu.webp" alt="Cep Telefonu İletişimi" width="1200" height="675">
+                </div>
+                <h3>Cep Telefonu İletişimi</h3>
+                <p>Deprem sonrası SMS vs arama, baz istasyonu ve batarya ekonomisi.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-toplanma-alani-sorgulama.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/toplanma-alani-sorgulama.webp" alt="Toplanma Alanı Sorgulama" width="1200" height="675">
+                </div>
+                <h3>Toplanma Alanı Sorgulama</h3>
+                <p>Mahalle toplanma alanını e-Devlet'ten nasıl sorgularsınız?</p>
+                
+            </a>
+            </div>
+        </section>
+
+        <section class="blog-section" data-cat="bilim" aria-labelledby="cat-bilim-heading">
+            <h2 id="cat-bilim-heading" class="cat-heading" style="--cat-color: #1565c0;">🧪 Bilim ve Teknik</h2>
+            <p class="cat-description">Deprem bilimi, fay hatları, yönetmelikler ve yapı güvenliği</p>
+            <div class="blog-grid">
+            <a class="blog-card featured" href="/turkiye-deprem-rehberi-fay-hatlari.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-turkiye-fay-hatlari-haritasi.webp" alt="Türkiye Deprem Rehberi" width="1200" height="675">
+                </div>
+                <h3>Türkiye Deprem Rehberi</h3>
+                <p>Kapsamlı: KAF, DAF ve tarihsel büyük depremler. Bilmeniz gereken sismolojik gerçekler.</p>
+                <span class="blog-badge" style="background-color: #d32f2f;">ÖNERİLEN</span>
+            </a>
+            <a class="blog-card" href="/blog-turkiye-fay-hatlari-haritasi.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-turkiye-fay-hatlari-haritasi.webp" alt="Fay Hatları Haritası 2026" width="1200" height="675">
+                </div>
+                <h3>Fay Hatları Haritası 2026</h3>
+                <p>KAF, DAF, BAF: Türkiye'nin üç büyük fay hattı nerede? Bilimsel veriler.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-deprem-haritasi.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-deprem-haritasi-rehberi.webp" alt="Deprem Risk Haritası" width="1200" height="675">
+                </div>
+                <h3>Deprem Risk Haritası</h3>
+                <p>Türkiye'nin deprem risk bölgeleri ve güvenli alanlar rehberi.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-deprem-buyukluk-olcekleri.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-deprem-buyukluk-olcekleri.webp" alt="Büyüklük Ölçekleri" width="1200" height="675">
+                </div>
+                <h3>Büyüklük Ölçekleri</h3>
+                <p>Richter, Moment (Mw) ve MMI şiddet ölçeği farkları ve hasar tahminleri.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-artci-deprem-nedir.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-artci-deprem-nedir.webp" alt="Artçı Deprem Nedir?" width="1200" height="675">
+                </div>
+                <h3>Artçı Deprem Nedir?</h3>
+                <p>Ana depremden sonra gelen artçıların süresi, büyüklüğü ve güvenlik önerileri.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-deprem-erken-uyari-sistemi.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-deprem-erken-uyari-sistemi.webp" alt="Erken Uyarı Sistemi" width="1200" height="675">
+                </div>
+                <h3>Erken Uyarı Sistemi</h3>
+                <p>Deprem erken uyarı sistemleri: AFAD, JMA ve ShakeAlert karşılaştırması.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-tbdy-2019-nedir.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-tbdy-2019-nedir.webp" alt="TBDY 2019 Yönetmeliği" width="1200" height="675">
+                </div>
+                <h3>TBDY 2019 Yönetmeliği</h3>
+                <p>Türkiye Bina Deprem Yönetmeliği 2019 getirdikleri: performans tasarımı.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-yapi-denetim-raporu-okuma.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-yapi-denetim-raporu-okuma.webp" alt="Yapı Denetim Raporu" width="1200" height="675">
+                </div>
+                <h3>Yapı Denetim Raporu</h3>
+                <p>Binanızın denetim raporu hangi bölümleri içerir? Beton, donatı kontrolü.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-evim-depreme-dayanikli-mi.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-evim-depreme-dayanikli-mi.webp" alt="Evim Depreme Dayanıklı mı?" width="1200" height="675">
+                </div>
+                <h3>Evim Depreme Dayanıklı mı?</h3>
+                <p>7 adımlık pratik test: yapım yılı, kolon-duvar analizi.</p>
+                
+            </a>
+            </div>
+        </section>
+
+        <section class="blog-section" data-cat="sehir" aria-labelledby="cat-sehir-heading">
+            <h2 id="cat-sehir-heading" class="cat-heading" style="--cat-color: #6a1b9a;">🏙 Şehir ve Tarih</h2>
+            <p class="cat-description">Tarihsel depremler, şehir risk analizleri ve bölgesel rehberler</p>
+            <div class="blog-grid">
+            <a class="blog-card" href="/blog-istanbul-beklenen-deprem.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-istanbul-beklenen-deprem.webp" alt="İstanbul Beklenen Deprem" width="1200" height="675">
+                </div>
+                <h3>İstanbul Beklenen Deprem</h3>
+                <p>Marmara fay segmenti ve %64 olasılık: bilim insanlarının tahminleri.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-istanbul-deprem-haritasi-ilceler.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-istanbul-deprem-haritasi-ilceler.webp" alt="İstanbul İlçe Haritası" width="1200" height="675">
+                </div>
+                <h3>İstanbul İlçe Haritası</h3>
+                <p>39 İstanbul ilçesinin detaylı risk haritası. Zemin + yapı analizi.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-izmir-deprem-tarihi.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-izmir-deprem-tarihi.webp" alt="İzmir Deprem Tarihi" width="1200" height="675">
+                </div>
+                <h3>İzmir Deprem Tarihi</h3>
+                <p>2020 Samos-İzmir, 1928 İzmir ve tarihi Ege sarsıntıları.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-marmara-depremi-1999-dersler.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-marmara-depremi-1999-dersler.webp" alt="1999 Marmara Depremi" width="1200" height="675">
+                </div>
+                <h3>1999 Marmara Depremi</h3>
+                <p>17 Ağustos Gölcük depremi sonrası Türkiye'de değişen 10 şey.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-kahramanmaras-6-subat-dersler.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-kahramanmaras-6-subat-dersler.webp" alt="Kahramanmaraş 6 Şubat" width="1200" height="675">
+                </div>
+                <h3>Kahramanmaraş 6 Şubat</h3>
+                <p>2023 Pazarcık ve Elbistan depremlerinin yarattığı yıkım ve dersler.</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-van-depremi-2011-dersler.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-van-depremi-2011-dersler.webp" alt="Van Depremi 2011" width="1200" height="675">
+                </div>
+                <h3>Van Depremi 2011</h3>
+                <p>23 Ekim Van-Erciş Mw 7.2 depremi ve Bayram Oteli hatırası.</p>
+                
+            </a>
+            </div>
+        </section>
+
+        <section class="blog-section" data-cat="sigorta" aria-labelledby="cat-sigorta-heading">
+            <h2 id="cat-sigorta-heading" class="cat-heading" style="--cat-color: #2e7d32;">📰 Sigorta & Haberler</h2>
+            <p class="cat-description">DASK, konut sigortası ve son dakika deprem bilgileri</p>
+            <div class="blog-grid">
+            <a class="blog-card" href="/blog-dask-nedir.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-deprem-oncesi-hazirlik.webp" alt="DASK Nedir?" width="1200" height="675">
+                </div>
+                <h3>DASK Nedir?</h3>
+                <p>Zorunlu Deprem Sigortası 2026: neleri kapsar, fiyatı nasıl hesaplanır?</p>
+                
+            </a>
+            <a class="blog-card" href="/blog-son-deprem-haberleri.html" rel="noopener noreferrer">
+                <div class="blog-image">
+                    <img loading="lazy" src="images/blog-son-deprem-haberleri.webp" alt="Son Dakika Deprem" width="1200" height="675">
+                </div>
+                <h3>Son Dakika Deprem</h3>
+                <p>AFAD ve Kandilli kaynaklarını takip etme rehberi.</p>
+                
+            </a>
+            </div>
+        </section>
+
     </main>
+
+    <!-- Blog filtre JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const btns = document.querySelectorAll(".cat-btn");
+            const sections = document.querySelectorAll(".blog-section");
+            btns.forEach(btn => {
+                btn.addEventListener("click", function () {
+                    const cat = this.dataset.cat;
+                    btns.forEach(b => b.classList.remove("is-active"));
+                    this.classList.add("is-active");
+                    if (cat === "all") {
+                        sections.forEach(s => s.style.display = "");
+                    } else {
+                        sections.forEach(s => {
+                            s.style.display = s.dataset.cat === cat ? "" : "none";
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 
     <footer>
         <div class="container">
@@ -317,7 +816,7 @@
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4>Hızlı Linkler</h4>
+                        <h3>Hızlı Linkler</h3>
                         <ul>
                             <li><a href="/" rel="noopener noreferrer">Ana Sayfa</a></li>
                             <li><a href="/deprem-aninda.html" rel="noopener noreferrer">Deprem Anında</a></li>
@@ -327,7 +826,7 @@
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Kaynaklar</h4>
+                        <h3>Kaynaklar</h3>
                         <ul>
                             <li><a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a>
                             </li>
@@ -336,14 +835,14 @@
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>İletişim</h4>
+                        <h3>İletişim</h3>
                         <ul>
                             <li><a href="https://www.linkedin.com/in/emin-k%C4%B1l%C4%B1%C3%A7-250b14210/"
                                     target="_blank" rel="noopener noreferrer">LinkedIn Profilim</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Yasal</h4>
+                        <h3>Yasal</h3>
                         <ul>
                             <li><a href="/kullanim-sartlari.html" rel="noopener noreferrer">Kullanım Şartları</a></li>
                             <li><a href="/gizlilik-politikasi.html" rel="noopener noreferrer">Gizlilik Politikası</a>
@@ -364,7 +863,7 @@
         </div>
     </footer>
 
-    <script src="js/header.min.js?v=202604173000"></script>
+    <script src="js/header.min.js?v=202604190100"></script>
     <script src="js/toc.js?v=202512182020"></script>
     <script>
         // Blog sayfası için backend bağlantısını test et
@@ -407,7 +906,7 @@
             }
         }
     </script>
-<script src="js/city-search.js?v=202604172101"></script>
+<script src="js/city-search.js?v=202604202200"></script>
 </body>
 
 </html>

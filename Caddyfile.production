@@ -2,7 +2,7 @@
 # /root/caddy/sites/yakinimdakideprem.com.Caddyfile
 
 yakinimdakideprem.com {
-    tls internal
+    tls /etc/caddy/sites/yakinimdakideprem-origin.pem /etc/caddy/sites/yakinimdakideprem-origin.key
     encode zstd gzip
 
     # ─── Guvenli redirect ve alias ───
@@ -64,11 +64,11 @@ yakinimdakideprem.com {
         # Referrer leak'i sinirla
         Referrer-Policy "strict-origin-when-cross-origin"
         # Permissions Policy - gereksiz izinleri kapat
-        Permissions-Policy "accelerometer=(), autoplay=(), camera=(), clipboard-read=(), clipboard-write=(self), display-capture=(), encrypted-media=(), fullscreen=(self), geolocation=(self), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), speaker-selection=(), sync-xhr=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()"
+        Permissions-Policy "accelerometer=(), autoplay=(), camera=(), clipboard-read=(), clipboard-write=(self), display-capture=(), encrypted-media=(), fullscreen=(self), geolocation=(self), gyroscope=(), hid=(), idle-detection=(), interest-cohort=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), sync-xhr=(), usb=(), web-share=(), xr-spatial-tracking=()"
         # HTTPS zorunlu - 1 yil + alt domain + preload
         Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
         # Content Security Policy - XSS ve kaynak whitelist
-        Content-Security-Policy "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; object-src 'none'; upgrade-insecure-requests; img-src 'self' data: blob: https://*.tile.openstreetmap.org https://tile.openstreetmap.org https://*.openstreetmap.de https://*.wikimedia.org https://yakinimdakideprem.com; font-src 'self' https://cdnjs.cloudflare.com data:; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com https://cdnjs.cloudflare.com https://static.cloudflareinsights.com https://cdn.onesignal.com https://*.onesignal.com 'unsafe-inline'; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://unpkg.com https://static.cloudflareinsights.com https://cloudflareinsights.com https://onesignal.com https://*.onesignal.com;"
+        Content-Security-Policy "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://youtube.com; form-action 'self'; object-src 'none'; upgrade-insecure-requests; img-src 'self' data: blob: https://*.tile.openstreetmap.org https://tile.openstreetmap.org https://*.openstreetmap.de https://*.wikimedia.org https://yakinimdakideprem.com https://*.clarity.ms https://i.ytimg.com; font-src 'self' https://cdnjs.cloudflare.com data:; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com https://cdnjs.cloudflare.com https://static.cloudflareinsights.com https://cdn.onesignal.com https://*.onesignal.com https://www.clarity.ms https://*.clarity.ms 'unsafe-inline'; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://unpkg.com https://static.cloudflareinsights.com https://cloudflareinsights.com https://onesignal.com https://*.onesignal.com https://*.clarity.ms https://c.clarity.ms https://b.clarity.ms;"
         # Cross-Origin policies
         Cross-Origin-Opener-Policy "same-origin"
         Cross-Origin-Resource-Policy "same-site"
@@ -105,6 +105,6 @@ yakinimdakideprem.com {
 
 # www subdomain -> apex'e redirect
 www.yakinimdakideprem.com {
-    tls internal
+    tls /etc/caddy/sites/yakinimdakideprem-origin.pem /etc/caddy/sites/yakinimdakideprem-origin.key
     redir https://yakinimdakideprem.com{uri} permanent
 }
