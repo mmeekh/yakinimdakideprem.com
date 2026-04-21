@@ -1,0 +1,37 @@
+{
+  "requestsFinished": 100,
+  "requestsFailed": 1,
+  "requestsRetries": 0,
+  "requestsFailedPerMinute": 13,
+  "requestsFinishedPerMinute": 1312,
+  "requestMinDurationMillis": 41,
+  "requestMaxDurationMillis": 1018,
+  "requestTotalFailedDurationMillis": 262,
+  "requestTotalFinishedDurationMillis": 29236,
+  "crawlerStartedAt": "2026-04-21T13:25:40.664Z",
+  "crawlerFinishedAt": "2026-04-21T13:25:45.216Z",
+  "statsPersistedAt": "2026-04-21T13:25:45.216Z",
+  "crawlerRuntimeMillis": 4573,
+  "crawlerLastStartTimestamp": 1776777940643,
+  "requestRetryHistogram": [
+    101
+  ],
+  "statsId": 0,
+  "requestAvgFailedDurationMillis": 262,
+  "requestAvgFinishedDurationMillis": 292,
+  "requestTotalDurationMillis": 29498,
+  "requestsTotal": 101,
+  "requestsWithStatusCode": {},
+  "errors": {
+    "/usr/lib/node_modules/@houtini/seo-crawler-mcp/node_modules/@crawlee/http/internals/http-crawler.js:618:19": {
+      "missing error code": {
+        "Error": {
+          "Resource https://yakinimdakideprem.com/api/pdf/first-aid-checklist served Content-Type application/pdf, but only text/html, text/xml, application/xhtml+xml, application/xml, application/json are allowed. Skipping resource.": {
+            "count": 1
+          }
+        }
+      }
+    }
+  },
+  "retryErrors": {}
+}
