@@ -1,0 +1,142 @@
+/* ============================================================
+   city-ssr.css — Şehir sayfalarına SSR ile enjekte edilen blokların stilleri
+   ------------------------------------------------------------
+   • .ssr-freshness   → "🔴 Az önce X büyüklüğünde deprem" alarm bloğu
+   • .city-hero       → Wikipedia kapak görseli + attribution
+   • .about-city-quakes → 140-160 kelimelik passage + soru-H2
+   ============================================================ */
+
+/* ---------- Freshness alarm (üst banner) ---------- */
+.ssr-freshness {
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    border-left: 4px solid #d32f2f;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 12px 0 20px;
+    box-shadow: 0 2px 8px rgba(211, 47, 47, 0.08);
+}
+
+.ssr-freshness__alert {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #b91c1c;
+    line-height: 1.4;
+}
+
+.ssr-freshness__alert strong {
+    color: #7f1d1d;
+}
+
+.ssr-freshness__time {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.82rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* ---------- City hero figure ---------- */
+.city-hero {
+    margin: 16px 0 24px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    background: #f9fafb;
+}
+
+.city-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+
+.city-hero figcaption {
+    padding: 8px 14px;
+    background: #f9fafb;
+    color: #6b7280;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    border-top: 1px solid #f3f4f6;
+}
+
+.city-hero figcaption a {
+    color: #4b5563;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.city-hero figcaption a:hover {
+    color: #d32f2f;
+}
+
+/* ---------- Static passage ("Bu sayfa hakkında") ---------- */
+.about-city-quakes {
+    margin: 28px 0;
+    padding: 20px 22px;
+    background: #f9fafb;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.about-city-quakes h2 {
+    margin: 0 0 12px;
+    font-size: 1.35rem;
+    color: #111827;
+    line-height: 1.3;
+}
+
+.about-city-quakes h2:not(:first-child) {
+    margin-top: 24px;
+}
+
+.about-city-quakes p {
+    margin: 0;
+    color: #374151;
+    line-height: 1.65;
+    font-size: 0.96rem;
+}
+
+.about-city-quakes p + p {
+    margin-top: 14px;
+}
+
+.about-city-quakes a {
+    color: #d32f2f;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.about-city-quakes a:hover {
+    color: #7f1d1d;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+    .ssr-freshness {
+        padding: 12px 14px;
+    }
+
+    .ssr-freshness__alert {
+        font-size: 0.92rem;
+    }
+
+    .city-hero figcaption {
+        font-size: 0.72rem;
+        padding: 6px 12px;
+    }
+
+    .about-city-quakes {
+        padding: 16px;
+    }
+
+    .about-city-quakes h2 {
+        font-size: 1.18rem;
+    }
+
+    .about-city-quakes p {
+        font-size: 0.92rem;
+    }
+}

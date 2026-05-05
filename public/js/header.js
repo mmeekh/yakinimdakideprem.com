@@ -212,7 +212,7 @@ const HEADER_CONFIG = {
     SHOW_DELAY: 50
 };
 
-const MOBILE_BREAKPOINT = 900;
+const MOBILE_BREAKPOINT = 1024;
 
 // State management
 let lastScrollTop = 0;

@@ -27,13 +27,13 @@
         content="Adana, Ceyhan ve Çukurova bölgesi için canlı deprem tablosu, AFAD kaynakları ve hazırlık rehberi.">
     <meta property="og:url" content="https://yakinimdakideprem.com/deprem-adana.html">
     <meta property="og:site_name" content="Yakınımdaki Deprem">
-    <meta property="og:image" content="https://yakinimdakideprem.com/images/adana-deprem-risk-haritasi.webp">
+    <meta property="og:image" content="https://yakinimdakideprem.com/images/cities/adana-og.webp">
     <meta property="og:image:alt" content="Adana deprem risk haritası ve fay hatları">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Adana Depremi - Adana'da Son Depremler ve Risk Haritası">
     <meta name="twitter:description"
         content="Adana'da son deprem verilerini görüntüle, toplanma alanı bağlantılarını bul.">
-    <meta name="twitter:image" content="https://yakinimdakideprem.com/images/adana-deprem-risk-haritasi.webp">
+    <meta name="twitter:image" content="https://yakinimdakideprem.com/images/cities/adana-og.webp">
     <meta name="twitter:image:alt" content="Adana deprem risk haritası ve fay hatları">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
@@ -118,6 +118,7 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "wdt4zn01kt");
     </script>
+    <link rel="stylesheet" href="css/city-ssr.css?v=202605051900">
 </head>
 
 <body>
@@ -183,6 +184,9 @@
     <header class="page-header">
         <div class="container">
             <h1>Adana Depremi</h1>
+            <!-- SSR-FRESHNESS-START -->
+            <div class="ssr-freshness" aria-live="polite"></div>
+            <!-- SSR-FRESHNESS-END -->
             <p>Adana, Ceyhan ve Çukurova bölgesi için son deprem verileri ve hazırlık rehberi.</p>
         </div>
     </header>
@@ -289,6 +293,21 @@
                 </section>
             </div>
         </article>
+    <!-- SSR-PASSAGE-START -->
+        <section class="about-city-quakes" id="about-adana-quakes">
+            <h2>Adana Depremleri Hakkında</h2>
+            <!-- SSR-IMAGE-START -->
+            <figure class="city-hero">
+                <img src="/images/cities/adana.webp" alt="Adana şehrinden manzara — sismik aktivite haritası ile birlikte" loading="eager" width="800" height="450">
+                <figcaption>Adana şehir görseli — <a href="https://tr.wikipedia.org/wiki/Adana" target="_blank" rel="noopener noreferrer">Wikipedia: Adana</a> (CC-BY-SA / kamu malı)</figcaption>
+            </figure>
+            <!-- SSR-IMAGE-END -->
+            <p>Bu sayfa, AFAD (Afet ve Acil Durum Yönetimi Başkanlığı) ve Kandilli Rasathanesi'nin (Boğaziçi Üniversitesi) yayımladığı resmi deprem verilerini gerçek zamanlı olarak <strong>Adana ili ve çevresi</strong> için filtreler. Veriler her 20 saniyede bir API üzerinden güncellenir; büyüklük 1.0 ve üzeri tüm sarsıntılar otomatik listelenir. Doğu Anadolu Fay Hattı'nın güney uzantıları ve Kıbrıs Yayı etkisi altındadır. 6 Şubat 2023 Kahramanmaraş depremleri bölgenin tarihsel risklerini açıkça ortaya koydu. Sayfada listelenen her depremin büyüklüğü, derinliği, merkez üssü ve oluş zamanı gösterilir; harita üzerinde de işaretlenir.</p>
+
+            <h2>Adana'da Az Önce Deprem Mi Oldu?</h2>
+            <p>Eğer sarsıntı hissettiyseniz, bu sayfanın yukarısındaki "Son Depremler" listesine bakın. Liste her 20 saniyede bir yenilenir ve <strong>Adana</strong> bölgesindeki en yeni kayıt en üstte görünür. Verilerimiz Kandilli/AFAD'ın resmi API'lerinden alınır; gecikmesiz ve birebirdir. Resmi açıklama için <a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a> sayfasını da kontrol edebilirsiniz. Yakınımızda meydana gelen depremlerde <a href="/deprem-aninda.html">Çök-Kapan-Tutun</a> kuralını uygulayın.</p>
+        </section>
+        <!-- SSR-PASSAGE-END -->
     </main>
 
     <footer>

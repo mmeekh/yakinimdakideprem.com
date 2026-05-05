@@ -1,0 +1,488 @@
+{
+  "istanbul": {
+    "title": "İstanbul",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Bosphorus_Bridge_%28235499411%29.jpeg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/%C4%B0stanbul",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "ankara": {
+    "title": "Ankara",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Ankara_asv2021-10_img11_view_from_Atakule_mall.jpg/3840px-Ankara_asv2021-10_img11_view_from_Atakule_mall.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Ankara",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "izmir": {
+    "title": "İzmir",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/%C4%B0zmir_Clock_Tower%2C_December_2018.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/%C4%B0zmir",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "adana": {
+    "title": "Adana",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Varda_Demiryolu_Koprusu.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Adana",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "adiyaman": {
+    "title": "Adıyaman",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/AdiyamanUhrturm.jpg/3840px-AdiyamanUhrturm.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Ad%C4%B1yaman",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "afyonkarahisar": {
+    "title": "Afyonkarahisar",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Burgberg_Afyonkarahisar_02.jpg/3840px-Burgberg_Afyonkarahisar_02.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Afyonkarahisar",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "agri": {
+    "title": "Ağrı",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/00_3411_%C4%B0shak_Pa%C5%9Fa_Saray%C4%B1_-_Turkey.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/A%C4%9Fr%C4%B1",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "aksaray": {
+    "title": "Aksaray",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/I_Love_Aksaray_-_Aksaray_Meydan%C4%B1.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Aksaray",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "amasya": {
+    "title": "Amasya",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ye%C5%9Fil%C4%B1rmak2.jpg/3840px-Ye%C5%9Fil%C4%B1rmak2.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Amasya",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "antalya": {
+    "title": "Antalya",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Falezlerden_Antalya_Konyaalt%C4%B1_Plaj%C4%B1na_do%C4%9Fru_bir_g%C3%B6r%C3%BCn%C3%BCm.jpg/3840px-Falezlerden_Antalya_Konyaalt%C4%B1_Plaj%C4%B1na_do%C4%9Fru_bir_g%C3%B6r%C3%BCn%C3%BCm.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Antalya",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "ardahan": {
+    "title": "Ardahan",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Ardahan_districts.png",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Ardahan",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "artvin": {
+    "title": "Artvin",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A%C3%87%C3%9C_%C5%9Eehir_Yerle%C5%9Fkesi.jpg/3840px-A%C3%87%C3%9C_%C5%9Eehir_Yerle%C5%9Fkesi.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Artvin",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "aydin": {
+    "title": "Aydın",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/MonumentAyd%C4%B1n_%283%29.JPG",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Ayd%C4%B1n",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "balikesir": {
+    "title": "Balıkesir",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/%C5%9Eahinderesi_Canyon.jpg/3840px-%C5%9Eahinderesi_Canyon.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Bal%C4%B1kesir",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "bartin": {
+    "title": "Bartın",
+    "source_url": "https://upload.wikimedia.org/wikipedia/tr/1/13/Bartin_SehirMerkezi.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Bart%C4%B1n",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "batman": {
+    "title": "Batman",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Batman%28city%29.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Batman",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "bayburt": {
+    "title": "Bayburt",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Bayburt_Clock_Tower_%2816034875507%29.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Bayburt",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "bilecik": {
+    "title": "Bilecik",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Bilecik.jpg/3840px-Bilecik.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Bilecik",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "bingol": {
+    "title": "Bingöl",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Bingolcitycenter.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Bing%C3%B6l",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "bitlis": {
+    "title": "Bitlis",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Bitlis_view.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Bitlis",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "bolu": {
+    "title": "Bolu",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/TR_Bolu_asv2021-10_img23_Beyaz%C4%B1t_Mosque.jpg/3840px-TR_Bolu_asv2021-10_img23_Beyaz%C4%B1t_Mosque.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Bolu",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "burdur": {
+    "title": "Burdur",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Burdur_manzara_-_panoramio.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Burdur",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "bursa": {
+    "title": "Bursa",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Teleferik%2C_Uluda%C4%9F.jpg/3840px-Teleferik%2C_Uluda%C4%9F.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Bursa",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "canakkale": {
+    "title": "Çanakkale",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Havadan_cnk.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/%C3%87anakkale",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "cankiri": {
+    "title": "Çankırı",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/General_view_of_%C3%87ank%C4%B1r%C4%B1.jpeg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/%C3%87ank%C4%B1r%C4%B1",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "corum": {
+    "title": "Çorum",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/CorumMuseum1.jpg/3840px-CorumMuseum1.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/%C3%87orum",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "denizli": {
+    "title": "Denizli",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Pamukkale_Traventines%2C_Turkey.jpg/3840px-Pamukkale_Traventines%2C_Turkey.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Denizli",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "diyarbakir": {
+    "title": "Diyarbakır",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Landscape_Dyar_bakir.jpg/3840px-Landscape_Dyar_bakir.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Diyarbak%C4%B1r",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "duzce": {
+    "title": "Düzce",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/645x344-1573480687396.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/D%C3%BCzce",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "edirne": {
+    "title": "Edirne",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Selimiye_Mosque_and_The_Statue_of_Architect_Sinan_-_panoramio.jpg/3840px-Selimiye_Mosque_and_The_Statue_of_Architect_Sinan_-_panoramio.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Edirne",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "elazig": {
+    "title": "Elazığ",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Elazig_Izzetpascha-Moschee.jpg/3840px-Elazig_Izzetpascha-Moschee.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Elaz%C4%B1%C4%9F",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "erzincan": {
+    "title": "Erzincan",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Erzincanmerkezi.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Erzincan",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "erzurum": {
+    "title": "Erzurum",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Erzurum_Citadel_-_Erzurum_Kalesi_01.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Erzurum",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "eskisehir": {
+    "title": "Eskişehir",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Sazova_Park_2.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Eski%C5%9Fehir",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "gaziantep": {
+    "title": "Gaziantep",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Gaziantep_Archaeology_museum_Roman_Statues_Hall_4431.jpg/3840px-Gaziantep_Archaeology_museum_Roman_Statues_Hall_4431.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Gaziantep",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "giresun": {
+    "title": "Giresun",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Kapu_Mosque.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Giresun",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "gumushane": {
+    "title": "Gümüşhane",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/G%C3%BCm%C3%BC%C5%9Fhane_Genel.JPG",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/G%C3%BCm%C3%BC%C5%9Fhane",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "hakkari": {
+    "title": "Hakkâri",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Hakkari.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Hakk%C3%A2ri",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "hatay": {
+    "title": "Hatay",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Antakya_-_2011-04-10.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Hatay",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "igdir": {
+    "title": "Iğdır",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/I%C4%9Fd%C4%B1r_ve_A%C4%9Fr%C4%B1_Da%C4%9F%C4%B1.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/I%C4%9Fd%C4%B1r",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "isparta": {
+    "title": "Isparta",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/DaglardanIsparta.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Isparta",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "kahramanmaras": {
+    "title": "Kahramanmaraş",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Kahramanmara%C5%9F_city_center.jpg/3840px-Kahramanmara%C5%9F_city_center.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Kahramanmara%C5%9F",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "karabuk": {
+    "title": "Karabük",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Karab%C3%BCk_view_8028.jpg/3840px-Karab%C3%BCk_view_8028.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Karab%C3%BCk",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "karaman": {
+    "title": "Karaman",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Karaman_street_scene_4727.jpg/3840px-Karaman_street_scene_4727.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Karaman",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "kars": {
+    "title": "Kars",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Kars_collage_1.JPG",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Kars",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "kastamonu": {
+    "title": "Kastamonu",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Kaleden_Cumhuriyet_Meydan%C4%B1_ve_%C3%87evresi.JPG",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Kastamonu",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "kayseri": {
+    "title": "Kayseri",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Wild_horses1.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Kayseri",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "kilis": {
+    "title": "Kilis",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Kilis_city_center.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Kilis",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "kirikkale": {
+    "title": "Kırıkkale",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/76/K%C4%B1r%C4%B1kkale_1_%282013%29_-_panoramio.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/K%C4%B1r%C4%B1kkale",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "kirklareli": {
+    "title": "Kırklareli",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/K%C4%B1rklareli_5195.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/K%C4%B1rklareli",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "kirsehir": {
+    "title": "Kırşehir",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Kircenter.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/K%C4%B1r%C5%9Fehir",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "kocaeli": {
+    "title": "Kocaeli",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Eskihisarkale3k.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Kocaeli",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "konya": {
+    "title": "Konya",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Konya_21_%28cropped%29.JPG",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Konya",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "kutahya": {
+    "title": "Kütahya",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/K%C3%BCtahya_Portesi.png",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/K%C3%BCtahya",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "malatya": {
+    "title": "Malatya",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Malatya_Yeni_Cami_2076.jpg/3840px-Malatya_Yeni_Cami_2076.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Malatya",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "manisa": {
+    "title": "Manisa",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Manisa_location_districts.png",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Manisa",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "mardin": {
+    "title": "Mardin",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Mardin%2C_Mardin_Merkez-Mardin%2C_Turkey_-_panoramio_%281%29.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Mardin",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "mersin": {
+    "title": "Mersin",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Mersin_Halkevi.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Mersin",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "mugla": {
+    "title": "Muğla",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Mu%C4%9Fla_Province_montage555.png",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Mu%C4%9Fla",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "mus": {
+    "title": "Muş",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Mush_1213.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Mu%C5%9F",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "nevsehir": {
+    "title": "Nevşehir",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Nevsehirpanorama.jpg/3840px-Nevsehirpanorama.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Nev%C5%9Fehir",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "nigde": {
+    "title": "Niğde",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Nigde_Kale_1228.jpg/3840px-Nigde_Kale_1228.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Ni%C4%9Fde",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "osmaniye": {
+    "title": "Osmaniye",
+    "source_url": "https://upload.wikimedia.org/wikipedia/tr/f/fb/Osmaniyenin_genel_g%C3%B6r%C3%BCnt%C3%BCs%C3%BC.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Osmaniye",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "rize": {
+    "title": "Rize",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Rize%27den_bir_g%C3%B6r%C3%BCn%C3%BCm.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Rize",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "sakarya": {
+    "title": "Sakarya",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Hisar_Tepesi%2C_Tarakl%C4%B1.jpg/3840px-Hisar_Tepesi%2C_Tarakl%C4%B1.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Sakarya",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "samsun": {
+    "title": "Samsun",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Samsun_kolaj_%282018%2C_2%29.png",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Samsun",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "siirt": {
+    "title": "Siirt",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/City_center.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Siirt",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "sinop": {
+    "title": "Sinop",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Sinop_Overview_2009.JPG",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Sinop",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "sirnak": {
+    "title": "Şırnak",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/%C5%9E%C4%B1rnak_%C5%9Fehir_g%C3%B6r%C3%BCn%C3%BCm%C3%BC.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/%C5%9E%C4%B1rnak",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "sivas": {
+    "title": "Sivas",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sivas_Cumhuriyet_Meydan%C4%B1_in_2011_8145.jpg/3840px-Sivas_Cumhuriyet_Meydan%C4%B1_in_2011_8145.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Sivas",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "tekirdag": {
+    "title": "Tekirdağ",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Tekirda%C4%9F_Valilik.JPG",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Tekirda%C4%9F",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "trabzon": {
+    "title": "Trabzon",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Trabzon_Kalesi.jpeg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Trabzon",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "tunceli": {
+    "title": "Tunceli",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/D%C3%AArsim.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Tunceli",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "usak": {
+    "title": "Uşak",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Mendepazar%C4%B1.JPG",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/U%C5%9Fak",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "van": {
+    "title": "Van",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Ho%C5%9Fap_Kalesi_%28Van%2C_T%C3%BCrkiye%29.JPG",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Van",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "yalova": {
+    "title": "Yalova",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Departing_Yalova.JPG/3840px-Departing_Yalova.JPG",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Yalova",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "yozgat": {
+    "title": "Yozgat",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Ormanc%C4%B1lar%C4%B1n_Emekleri_Burada_-_panoramio.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Yozgat",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "zonguldak": {
+    "title": "Zonguldak",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Zonguldak_51.jpg/3840px-Zonguldak_51.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Zonguldak",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "ordu": {
+    "title": "Ordu (il)",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Ordu%2C_Turkey.JPG",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Ordu_(il)",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "tokat": {
+    "title": "Tokat (il)",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Latrans-Turkey_location_Tokat.svg/langtr-1920px-Latrans-Turkey_location_Tokat.svg.png",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/Tokat_(il)",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  },
+  "sanliurfa": {
+    "title": "Şanlıurfa",
+    "source_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Balikli_G%C3%B6l_03.jpg/3840px-Balikli_G%C3%B6l_03.jpg",
+    "wikipedia_url": "https://tr.wikipedia.org/wiki/%C5%9Eanl%C4%B1urfa",
+    "license": "Wikipedia/Wikimedia (CC-BY-SA veya kamu malı)"
+  }
+}

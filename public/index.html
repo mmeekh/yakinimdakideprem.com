@@ -8,7 +8,7 @@
 
     <title>Yakınımdaki Deprem – Anlık Deprem Haritası Türkiye</title>
     <meta name="description"
-        content="Anlık deprem haritası ve son depremler: Kandilli + AFAD ile 20 saniyede bir güncellenen canlı liste. 81 ilin deprem sayfası, bildirim ve şehir arama.">
+        content="Anlık deprem Türkiye haritası: Kandilli + AFAD ile 20 saniyede bir güncellenen canlı deprem listesi. 81 ilin anlık deprem sayfası, şehir arama ve bildirim.">
     <meta name="keywords"
         content="anlık deprem, anlık deprem türkiye, son depremler, deprem mi oldu, deprem son dakika, canlı deprem, deprem haritası, yakınımdaki deprem, AFAD son depremler, Kandilli son depremler, İstanbul deprem, İzmir deprem, Ankara deprem, şehir deprem sayfaları">
     <meta name="author" content="Emin Kılıç">
@@ -35,8 +35,8 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
     <!-- Critical resources preload -->
-    <link rel="preload" href="css/style.min.css?v=202604202200" as="style">
-    <link rel="preload" href="css/header.min.css?v=202604202200" as="style">
+    <link rel="preload" href="css/style.min.css?v=202605041700" as="style">
+    <link rel="preload" href="css/header.min.css?v=202605051900" as="style">
     <link rel="preload" href="css/leaflet.min.css?v=202601131900" as="style">
     <link rel="preload" href="icons/logo.png" as="image" type="image/png">
     <!-- Google Tag Manager -->
@@ -52,8 +52,8 @@
     <link rel="stylesheet" href="css/leaflet.min.css?v=202601131900" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="css/style.min.css?v=202604202200">
-    <link rel="stylesheet" href="css/header.min.css?v=202604202200">
+    <link rel="stylesheet" href="css/style.min.css?v=202605041700">
+    <link rel="stylesheet" href="css/header.min.css?v=202605051900">
     <link rel="stylesheet" href="css/components.min.css?v=202601131900">
     <!-- Favicon Icons -->
     <link rel="shortcut icon" href="/icons/favicon-32x32.png" type="image/png">
@@ -159,6 +159,8 @@
     <link rel="stylesheet" href="css/footer.css?v=202512182020">
     <link rel="stylesheet" href="css/city-search.css?v=202604202200">
     <link rel="stylesheet" href="css/geolocation.css?v=202604231700">
+    <!-- Anasayfa harita stilleri (sadece bu sayfada) -->
+    <link rel="stylesheet" href="css/home.css?v=202605051945">
     <style>
         .sr-only {
             position: absolute;
@@ -220,6 +222,7 @@
                         Rehberler <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="dropdown-menu">
+                        <a href="/deprem-nedir.html" rel="noopener noreferrer"><strong>Deprem Nedir?</strong></a>
                         <a href="/deprem-aninda.html" rel="noopener noreferrer">Deprem Anında</a>
                         <a href="/ilk-yardim-cantasi.html" rel="noopener noreferrer">İlk Yardım Çantası</a>
                         <a href="/ben-kimim.html" rel="noopener noreferrer">Ben Kimim</a>
@@ -244,6 +247,24 @@
             </nav>
         </div>
     </header>
+    <script>
+        // Header gerçek yüksekliğini ilk paint'ten ÖNCE set et —
+        // böylece map-wrapper.margin-top doğru değerle başlar, layout shift olmaz.
+        // ResizeObserver: font yüklenmesi, viewport değişimi vb. durumlarda da senkron tutar.
+        (function () {
+            var h = document.getElementById('hidden-header');
+            if (!h) return;
+            var setVar = function () {
+                document.documentElement.style.setProperty('--header-height', h.offsetHeight + 'px');
+            };
+            setVar();
+            if (typeof ResizeObserver !== 'undefined') {
+                new ResizeObserver(setVar).observe(h);
+            } else {
+                window.addEventListener('resize', setVar);
+            }
+        })();
+    </script>
     <div id="mobile-welcome-modal" class="mobile-welcome-modal" aria-hidden="true" hidden>
         <div class="mobile-welcome-modal__backdrop"></div>
         <div class="mobile-welcome-modal__card" role="dialog" aria-modal="true" aria-labelledby="mobile-welcome-title"
@@ -322,7 +343,7 @@
             </div>
             <button id="turkey-btn" class="turkey-btn" aria-label="Haritayi Türkiye merkezine odakla">
                 <i class="fas fa-map-marker-alt"></i>
-                Türkiye'ye Git
+                Türkiye
             </button>
             <button id="my-location-btn" class="my-location-btn" aria-label="Konumumu haritada göster" type="button">
                 <i class="fas fa-location-arrow" aria-hidden="true"></i>
@@ -391,6 +412,21 @@
         </div>
     </main>
 
+    <!-- SSR-FRESHNESS-START -->
+    <section class="ssr-homepage-freshness" aria-live="polite">
+        <div class="container">
+            <h2 class="hp-fresh__title">🔴 Türkiye'de Son 5 Önemli Deprem</h2>
+            <ul class="hp-fresh__list">
+                <li class="hp-fresh__item"><a href="/deprem-mugla.html"><strong>GIRIT ADASI ACIKLARI (AKDENIZ) (Muğla)</strong></a> — <span class="hp-fresh__mag">M3.9</span> <time datetime="2026-05-05T22:38:40+03:00">14 dakika önce</time> <span class="hp-fresh__depth">• 4.1 km</span></li>
+            </ul>
+            <p class="hp-fresh__updated">Son güncelleme: <time datetime="2026-05-05T22:53:30.592672+03:00">05.05.2026 22:53 TSİ</time></p>
+        </div>
+    </section>
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "LiveBlogPosting", "headline": "Türkiye Anlık Deprem Takibi — Canlı", "datePublished": "2026-05-05T22:38:40+03:00", "dateModified": "2026-05-05T22:53:30.592672+03:00", "coverageStartTime": "2026-05-05T22:38:40+03:00", "about": {"@type": "Place", "name": "Türkiye"}, "author": {"@type": "Organization", "name": "Yakınımdaki Deprem"}, "publisher": {"@type": "Organization", "name": "Yakınımdaki Deprem", "logo": {"@type": "ImageObject", "url": "https://yakinimdakideprem.com/icons/android-chrome-512x512.png"}}, "liveBlogUpdate": [{"@type": "BlogPosting", "headline": "GIRIT ADASI ACIKLARI (AKDENIZ) (Muğla) M3.9", "datePublished": "2026-05-05T22:38:40+03:00", "articleBody": "14 dakika önce, GIRIT ADASI ACIKLARI (AKDENIZ) (Muğla) bölgesinde 3.9 büyüklüğünde deprem kaydedildi. Derinlik: 4.1 km."}]}
+    </script>
+    <!-- SSR-FRESHNESS-END -->
+
     <!-- SEO Content Section -->
     <section class="seo-content section-padding">
         <div class="container">
@@ -417,10 +453,14 @@
                             potansiyeli.</figcaption>
                     </figure>
 
+                    <h3>Anlık Deprem Türkiye — Neden Biz?</h3>
+                    <p><strong>Anlık deprem</strong> takibi için <strong>Kandilli Rasathanesi + AFAD</strong> verilerini birleştiriyoruz. 20 saniyede bir güncellenen
+                        haritamız sayesinde "anlık deprem Türkiye" sorgusu için en hızlı kaynaksınız. Anlık deprem bilgisi, anlık deprem haritası ve
+                        şehir bazlı anlık deprem listesi tek ekranda.</p>
+
                     <h3>Son Depremler Nereden Takip Edilir?</h3>
                     <p>Deprem olduğu anda en doğru bilgiye ulaşmak hayati önem taşır. Sitemiz deprem verilerini
-                        <strong>Kandilli Rasathanesi</strong> kaynaklı API üzerinden sunar. Resmi doğrulama ve
-                        bilgilendirme için şu kaynakları takip edebilirsiniz:
+                        <strong>Kandilli Rasathanesi</strong> kaynaklı API üzerinden sunar. <a href="/son-dakika-deprem.html"><strong>Deprem mi oldu?</strong></a> sorusuna canlı verilerle yanıt veren sayfamızı da ziyaret edebilirsiniz.
                     </p>
                     <ul>
                         <li><strong>AFAD (Afet ve Acil Durum Yönetimi Başkanlığı):</strong> Türkiye'nin resmi afet
@@ -504,6 +544,12 @@
                         dakikalar içinde yenilenir.</p>
                 </div>
                 <div class="faq-item">
+                    <h3>Anlık deprem Türkiye haritası nasıl çalışır?</h3>
+                    <p>Anlık deprem haritamız Kandilli Rasathanesi ve AFAD verilerini 20 saniyede bir sorgular.
+                        Türkiye genelindeki anlık deprem aktivitesi büyüklük ve derinlikle birlikte haritada
+                        işaretlenir. <a href="/son-dakika-deprem.html">Son dakika deprem listesine</a> de bakabilirsiniz.</p>
+                </div>
+                <div class="faq-item">
                     <h3>Deprem haritası ne kadar güvenilir?</h3>
                     <p>Verilerimiz doğrudan AFAD ve Kandilli Rasathanesi API'lerinden anlık olarak çekilmektedir. Resmi
                         verilerle birebir aynıdır ve gecikmesiz yansıtılır.</p>
@@ -536,6 +582,13 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "İstanbul deprem, İzmir deprem ve Ankara deprem sorgularını 'Önemli Bağlantılar' kutusundaki hızlı linklerden ve ana haritadan kontrol edebilirsiniz. AFAD ve Kandilli verileri dakikalar içinde yenilenir."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Anlık deprem Türkiye haritası nasıl çalışır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Anlık deprem haritamız Kandilli Rasathanesi ve AFAD verilerini 20 saniyede bir sorgular. Türkiye genelindeki anlık deprem aktivitesi büyüklük ve derinlikle birlikte haritada işaretlenir."
             }
           }, {
             "@type": "Question",
@@ -705,9 +758,9 @@
     </script>
     <!-- Leaflet JS deferred for LCP Optimization -->
     <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script defer src="js/header.min.js?v=202604190100"></script>
+    <script defer src="js/header.min.js?v=202605041700"></script>
     <!-- Ana Scriptler deferred -->
-    <script defer src="js/script.min.js?v=202604190100"></script>
+    <script defer src="js/script.min.js?v=202605041815">
     <script defer src="js/mobile-quake-focus.js?v=202602011200"></script>
     <!-- Türkiye Depremleri Script deferred -->
     <script defer src="js/turkey-earthquakes.min.js?v=202601131900"></script>

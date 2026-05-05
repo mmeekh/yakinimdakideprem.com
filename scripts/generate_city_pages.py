@@ -514,7 +514,8 @@ TEMPLATE = """<!DOCTYPE html>
                 <section>
                     <h2>İlgili Sayfalar</h2>
                     <ul>
-                        <li><a href="/son-dakika-deprem.html" rel="noopener noreferrer">Son Dakika Deprem</a></li>
+                        <li><a href="/son-dakika-deprem.html" rel="noopener noreferrer">Deprem Mi Oldu? Anlık Takip</a></li>
+                        <li><a href="/" rel="noopener noreferrer">Anlık Deprem Haritası Türkiye</a></li>
                         <li><a href="/deprem-aninda.html" rel="noopener noreferrer">Deprem Anında Yapılacaklar</a></li>
                         <li><a href="/ilk-yardim-cantasi.html" rel="noopener noreferrer">İlk Yardım Çantası</a></li>
                         <li><a href="/turkiye-deprem-rehberi-fay-hatlari.html" rel="noopener noreferrer">Türkiye Fay Hatları Rehberi</a></li>
@@ -650,7 +651,7 @@ def build_schema(province: dict) -> tuple[str, str, str]:
             "creator": {"@type": "Person", "name": "Emin Kılıç", "url": "https://yakinimdakideprem.com/ben-kimim.html"},
         },
         "datePublished": "2026-04-17T09:00:00+03:00",
-        "dateModified": "2026-04-17T09:00:00+03:00",
+        "dateModified": "2026-04-27T09:00:00+03:00",
         "inLanguage": "tr-TR",
         "mainEntityOfPage": {
             "@type": "WebPage",

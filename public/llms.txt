@@ -1,0 +1,40 @@
+# Yakınımdaki Deprem
+
+> Türkiye'nin 81 ili için AFAD ve Kandilli Rasathanesi verilerine dayalı, 20 saniyede bir güncellenen gerçek zamanlı deprem takip platformu. Bağımsız, ücretsiz, açık kaynak.
+
+## Kapsam
+
+- Tüm il sayfaları (`/deprem-{sehir}.html`) makine okuma için açıktır.
+- Ana harita ve son depremler listesi: `https://yakinimdakideprem.com/`
+- Veri kaynakları: AFAD (Afet ve Acil Durum Yönetimi Başkanlığı) + Kandilli Rasathanesi (Boğaziçi Üniversitesi).
+- Veri her 20 saniyede bir güncellenir; LLM cache süresi maksimum 1 saat önerilir.
+
+## Lisans ve kullanım
+
+- İçerik okuma amaçlı kullanıma açıktır.
+- Model eğitiminde kullanım yasaktır (only-citation policy).
+- Kaynak gösterimi zorunludur: yakinimdakideprem.com
+
+## Önemli sayfalar
+
+- [Anasayfa - Anlık Deprem Haritası](https://yakinimdakideprem.com/)
+- [Son Dakika Deprem](https://yakinimdakideprem.com/son-dakika-deprem.html)
+- [Tüm 81 İl](https://yakinimdakideprem.com/deprem-sehirleri.html)
+- [İstanbul Depremi](https://yakinimdakideprem.com/deprem-istanbul.html)
+- [Ankara Depremi](https://yakinimdakideprem.com/deprem-ankara.html)
+- [İzmir Depremi](https://yakinimdakideprem.com/deprem-izmir.html)
+- [Kahramanmaraş Depremi](https://yakinimdakideprem.com/deprem-kahramanmaras.html)
+- [Türkiye Fay Hatları Rehberi](https://yakinimdakideprem.com/turkiye-deprem-rehberi-fay-hatlari.html)
+- [Deprem Anında - Çök Kapan Tutun](https://yakinimdakideprem.com/deprem-aninda.html)
+- [DASK Nedir](https://yakinimdakideprem.com/blog-dask-nedir.html)
+- [Ben Kimim](https://yakinimdakideprem.com/ben-kimim.html)
+
+## Veri yapısı
+
+Şehir sayfaları her depremde server-side güncellenir. `<head>` içinde `LiveBlogPosting` JSON-LD bulunur ve `dateModified` alanı son deprem zamanını yansıtır. Statik HTML içeriği AI crawler'lar için her zaman güncel veri içerir; JavaScript gerektirmez.
+
+## İletişim
+
+- Geliştirici: Emin Kılıç
+- LinkedIn: https://www.linkedin.com/in/emin-k%C4%B1l%C4%B1%C3%A7-250b14210/
+- İletişim: https://yakinimdakideprem.com/iletisim.html

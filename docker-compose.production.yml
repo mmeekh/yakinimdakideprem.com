@@ -36,6 +36,25 @@ services:
     networks:
       - web
 
+  freshness:
+    build: .
+    container_name: yakinimdakideprem-freshness
+    env_file: env.production
+    environment:
+      - FRESHNESS_API_URL=http://yakinimdakideprem-api:8000/api/earthquakes
+      - FRESHNESS_POLL_SECONDS=60
+      - FRESHNESS_MIN_MAGNITUDE=3.5
+    user: "0:0"      # public/ host'ta root sahipli; root olarak yazsın
+    depends_on:
+      - api
+    command: ["python", "scripts/city_freshness.py"]
+    volumes:
+      - ./public:/app/public        # writable: HTML, sitemap güncelleyecek
+      - ./scripts:/app/scripts:ro
+    restart: unless-stopped
+    networks:
+      - web
+
 networks:
   web:
     external: true

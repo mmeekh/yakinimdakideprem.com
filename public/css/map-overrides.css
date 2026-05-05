@@ -1,288 +1,12 @@
-/* ========================================
-   Yeni Harita YerleÅŸimi
-======================================== */
-:root {
-    --map-top-offset: calc(var(--header-height, 80px) + 12px);
-}
+/* map-overrides.css — DEPRECATED. Anasayfa harita stilleri home.css'e taşındı.
+   "Mobil hoş geldin modal" stilleri burada idi → home.css'e değil, ortak
+   dosyaya taşınmalı. Aşağıda yalnız modal'a ait kurallar bırakıldı. */
 
-.map-wrapper {
-    position: relative;
-    width: 100%;
-    margin-top: var(--map-top-offset);
-}
-
-.map-wrapper #map {
-    width: 100%;
-    height: calc((100vh - var(--map-top-offset)) * 1.1);
-}
-
-.map-wrapper .leaflet-top {
-    top: calc(var(--map-top-offset) + 8px);
-}
-
-.map-wrapper .earthquake-list {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    width: 276px; /* %8 azaltÄ±ldÄ± (300px -> 276px) */
-    max-height: calc(70% - 40px); /* Yükseklik %20 azaltıldı (90% -> 70%) */
-    overflow-y: auto;
-    background: white;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    z-index: 1000;
-    opacity: 0.75; /* %10 daha ÅŸeffaf (0.85 -> 0.75) */
-}
-
-.map-wrapper .magnitude-legend {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    background: white;
-    padding: 9px; /* %10 azaltÄ±ldÄ± (10px -> 9px) */
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    z-index: 1000;
-    opacity: 0.75; /* %10 daha ÅŸeffaf (0.85 -> 0.75) */
-}
-
-.map-wrapper .magnitude-legend .legend-short {
-    display: none;
-}
-
-.map-wrapper .update-info {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    padding: 8.1px 12.15px; /* %10 daha azaltÄ±ldÄ± (9px 13.5px -> 8.1px 12.15px) */
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8.1px; /* %10 daha azaltÄ±ldÄ± (9px -> 8.1px) */
-    box-shadow: var(--shadow);
-    z-index: 1000;
-    opacity: 0.75; /* %10 daha ÅŸeffaf (0.85 -> 0.75) */
-}
-
-@media (max-width: 768px) {
-    :root {
-        --map-top-offset: calc(var(--header-height, 88px) + 16px);
-    }
-
-    .map-h1 {
-        display: none;
-    }
-
-    .map-wrapper {
-        margin-top: var(--map-top-offset);
-    }
-
-    .map-wrapper .leaflet-top {
-        top: calc(var(--map-top-offset) + 10px);
-    }
-
-    .map-wrapper .earthquake-list {
-        width: 90%;
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-        bottom: 20px;
-        top: auto;
-        max-height: 36%; /* %10 azaltÄ±ldÄ± (40% -> 36%) */
-    }
-
-    .map-wrapper .magnitude-legend {
-        top: 94px;
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-        width: 70%;
-        max-width: 320px;
-        margin-right: 0;
-        padding: 6px 10px 8px;
-        display: flex !important;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 6px;
-        background: #ffffff;
-        z-index: 1200;
-        opacity: 0.75;
-        backdrop-filter: blur(6px);
-    }
-
-    .map-wrapper .magnitude-legend .legend-title {
-        display: none;
-    }
-
-    .map-wrapper .magnitude-legend .legend-items {
-        position: relative;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 4px;
-        align-items: start;
-        padding-top: 12px;
-        padding-bottom: 0;
-        margin-top: 0;
-        overflow: hidden;
-        scrollbar-width: none;
-        z-index: 1;
-    }
-
-    .map-wrapper .magnitude-legend .legend-items::-webkit-scrollbar {
-        display: none;
-    }
-
-    .map-wrapper .magnitude-legend .legend-items::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 10px;
-        border-radius: 999px;
-        background: linear-gradient(90deg, #4caf50 0%, #ffc107 20%, #ff9800 38%, #ff5722 52%, #f44336 70%, #d32f2f 85%, #7b1fa2 100%);
-        border: 1px solid rgba(0, 0, 0, 0.15);
-        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
-        z-index: 0;
-    }
-
-    .map-wrapper .magnitude-legend .legend-item {
-        display: none;
-        justify-content: center;
-        text-align: center;
-        gap: 0;
-        padding: 0;
-        position: relative;
-        z-index: 1;
-        color: #111827;
-    }
-
-    .map-wrapper .magnitude-legend .legend-item[data-short] {
-        display: flex;
-    }
-
-    .map-wrapper .magnitude-legend .color-box {
-        display: none;
-    }
-
-    .map-wrapper .magnitude-legend .legend-label {
-        display: none;
-    }
-
-    .map-wrapper .magnitude-legend .legend-short {
-        display: inline-block !important;
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 1;
-        color: #111827;
-    }
-
-    .map-wrapper .update-info {
-        padding: 6px 10px;
-        gap: 6px;
-        max-width: calc(100% - 24px);
-        flex-wrap: nowrap;
-    }
-
-    .map-wrapper .update-info #last-update {
-        font-size: 10px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        min-width: 0;
-        flex: 1 1 auto;
-    }
-
-    .map-wrapper .update-info .btn-refresh {
-        width: 28px;
-        height: 28px;
-        padding: 4px;
-        flex: 0 0 auto;
-    }
-
-    .map-wrapper .update-info .btn-refresh i {
-        font-size: 14px;
-    }
-
-    .mobile-legend-actions {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
-    }
-
-    .mobile-legend-actions .turkey-btn{
-        width: 100%;
-        margin-top: 0;
-        padding: 8px 10px;
-        font-size: 12px;
-    }
-
-    .mobile-legend-actions .turkey-btn i{
-        font-size: 11px;
-    }
-
-    .map-wrapper .magnitude-legend .turkey-btn{
-        flex: 1 1 calc(50% - 6px);
-        margin-top: 4px;
-        padding: 6px 8px;
-        font-size: 11px;
-    }
-
-    .map-wrapper .magnitude-legend .turkey-btn i{
-        font-size: 10px;
-    }
-
-    .map-wrapper #map {
-        height: calc(100vh - var(--map-top-offset));
-    }
-}
-
-/* Mobile info dropdown adjustments */
-.mobile-info-content .mobile-panel {
-    position: static;
-    width: 100%;
-    margin: 0;
-    box-shadow: none;
-    opacity: 1;
-}
-
-.mobile-info-content .magnitude-legend.mobile-panel {
-    margin-bottom: 16px;
-}
-
-.mobile-info-content .earthquake-list.mobile-panel {
-    max-height: none;
-    padding: 0;
-}
-
-.mobile-info-content .earthquake-list.mobile-panel .list-header {
-    padding: 16px;
-}
-
-.mobile-info-content .earthquake-list.mobile-panel .earthquake-items {
-    max-height: none;
-}
-
-.mobile-info-content .earthquake-list.mobile-panel .earthquake-item {
-    padding: 16px;
-}
-
-@media (max-width: 900px) {
-    .map-wrapper .earthquake-list {
-        display: none;
-    }
-}
-
-/* Mobile welcome notice */
+/* Mobile welcome modal (anasayfa hoş geldin pop-up'ı) */
 .mobile-welcome-modal {
     position: fixed;
     inset: 0;
-    z-index: calc(var(--z-header, 2000) + 200);
+    z-index: 2200;
     display: none;
     align-items: center;
     justify-content: center;
@@ -306,7 +30,7 @@
     width: 100%;
     max-width: 360px;
     background: linear-gradient(160deg, rgba(34, 34, 34, 0.98), rgba(20, 20, 20, 0.98));
-    color: #ffffff;
+    color: #fff;
     border-radius: 16px;
     padding: 20px 18px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
@@ -316,6 +40,11 @@
     transform: translateY(12px);
     opacity: 0;
     transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.mobile-welcome-modal.is-visible .mobile-welcome-modal__card {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .mobile-welcome-modal__eyebrow {
@@ -331,7 +60,7 @@
     margin: 0;
     font-size: 17px;
     font-weight: 700;
-    color: #ffffff;
+    color: #fff;
 }
 
 .mobile-welcome-modal__message {
@@ -350,10 +79,6 @@
     font-size: 13px;
 }
 
-.mobile-welcome-list li {
-    margin: 0;
-}
-
 .mobile-welcome-modal__cta {
     width: 100%;
     border: none;
@@ -362,7 +87,7 @@
     font-weight: 700;
     font-size: 14px;
     background: #d32f2f;
-    color: #ffffff;
+    color: #fff;
     cursor: pointer;
     margin-top: 6px;
 }
@@ -371,9 +96,10 @@
     background: #b71c1c;
 }
 
-.mobile-welcome-modal.is-visible .mobile-welcome-modal__card {
-    transform: translateY(0);
-    opacity: 1;
+@media (min-width: 1025px) {
+    .mobile-welcome-modal.is-visible {
+        display: none;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -383,43 +109,19 @@
     }
 }
 
-@media (min-width: 769px) {
-    .mobile-welcome-modal.is-visible {
-        display: none;
-    }
-}
-
-body.welcome-visible #hidden-header .info-toggle {
-    position: relative;
-    background: rgba(255, 255, 255, 0.6);
-    border-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4), 0 0 22px rgba(255, 255, 255, 0.75), 0 0 38px rgba(255, 255, 255, 0.45);
-}
-
-body.welcome-visible #hidden-header .info-toggle::after,
-body.welcome-visible #hidden-header .info-toggle::before {
-    content: "";
-    position: absolute;
-    inset: -6px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.95);
-    opacity: 0;
-    animation: info-toggle-pulse 1.8s ease-out infinite;
-}
-
-body.welcome-visible #hidden-header .info-toggle::before {
-    inset: -2px;
-    border-width: 1px;
-    animation-delay: 0.3s;
-}
-
+/* Info-toggle pulse animasyonu (header.js bunları kullanıyor) */
+body.welcome-visible #hidden-header .info-toggle,
 body.nav-welcome-visible #hidden-header .menu-toggle {
     position: relative;
     background: rgba(255, 255, 255, 0.6);
     border-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4), 0 0 22px rgba(255, 255, 255, 0.75), 0 0 38px rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4),
+                0 0 22px rgba(255, 255, 255, 0.75),
+                0 0 38px rgba(255, 255, 255, 0.45);
 }
 
+body.welcome-visible #hidden-header .info-toggle::after,
+body.welcome-visible #hidden-header .info-toggle::before,
 body.nav-welcome-visible #hidden-header .menu-toggle::after,
 body.nav-welcome-visible #hidden-header .menu-toggle::before {
     content: "";
@@ -431,6 +133,7 @@ body.nav-welcome-visible #hidden-header .menu-toggle::before {
     animation: info-toggle-pulse 1.8s ease-out infinite;
 }
 
+body.welcome-visible #hidden-header .info-toggle::before,
 body.nav-welcome-visible #hidden-header .menu-toggle::before {
     inset: -2px;
     border-width: 1px;
@@ -438,86 +141,7 @@ body.nav-welcome-visible #hidden-header .menu-toggle::before {
 }
 
 @keyframes info-toggle-pulse {
-    0% {
-        transform: scale(0.85);
-        opacity: 0.95;
-    }
-    70% {
-        transform: scale(1.35);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1.35);
-        opacity: 0;
-    }
-}
-
-/* Leaflet popup readability (normal mode) */
-.leaflet-popup-content-wrapper,
-.leaflet-popup-tip {
-    background: #ffffff;
-    color: #1f2937; /* slate-800 */
-}
-
-.leaflet-popup-content p { color: #1f2937; margin: 6px 0; }
-.leaflet-popup-content p strong { color: #111827; font-weight: 700; }
-
-/* Popup component classes (used by JS) */
-.earthquake-popup { text-align: left; min-width: 220px; font-family: 'Segoe UI', Tahoma, sans-serif; }
-.earthquake-popup__title { margin: 0 0 8px 0; color: #d32f2f; font-weight: 700; font-size: 16px; }
-.earthquake-popup__details p { margin: 6px 0; font-size: 14px; }
-.earthquake-popup__source { margin-top: 6px; font-size: 12px; color: #374151; }
-.earthquake-popup__actions {
-    margin-top: 10px;
-    display: flex;
-    gap: 8px;
-}
-.earthquake-popup__action-btn {
-    flex: 1;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px 10px;
-    border-radius: 999px;
-    background: #d32f2f;
-    color: #ffffff !important;
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.2s ease, transform 0.2s ease;
-}
-.earthquake-popup__action-btn:hover {
-    background: #b71c1c;
-    transform: translateY(-1px);
-}
-
-/* Navbar ve harita arasÄ±ndaki boÅŸluklarÄ± sÄ±fÄ±rla */
-header,
-nav {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    border-bottom: 0 !important;
-}
-
-main,
-#map,
-.map-container {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-/* Harita kï¿½ï¿½e yarï¿½ï¿½aplarï¿½ï¿½nï¿½ï¿½ kaldï¿½ï¿½r (tam kaplama) */
-.map-container,
-#map,
-.map-loading {
-    border-radius: 0 !important;
-}
-
-.earthquake-items {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.earthquake-items::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+    0%   { transform: scale(0.85); opacity: 0.95; }
+    70%  { transform: scale(1.35); opacity: 0; }
+    100% { transform: scale(1.35); opacity: 0; }
 }

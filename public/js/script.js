@@ -672,30 +672,10 @@ function updateTimeDisplays() {
   }
 }
 
-// Resize map container to proper width
+// Map sizing is handled entirely by CSS (home.css). This function
+// just notifies Leaflet to recompute its internal size after layout
+// changes (resize, orientation flip).
 function resizeMapContainer() {
-  const header = document.getElementById('hidden-header');
-  const mapWrapper = document.querySelector('.map-wrapper');
-  const mapEl = document.getElementById('map');
-  const headerHeight = header ? header.offsetHeight : 0;
-
-  if (mapWrapper) {
-    // Navbar ile harita arasındaki boşluğu kaldırmak için
-    // harita wrapper'ını yukarı sabitliyoruz.
-    mapWrapper.style.marginTop = '0px';
-  }
-
-  if (mapEl) {
-    let targetHeight = (window.innerHeight - headerHeight) * 0.9;
-
-    // Mobil cihazlarda harita yǬksekli�Yini %6 azalt
-    if (window.innerWidth <= 768) {
-      targetHeight *= 0.94;
-    }
-
-    mapEl.style.height = `${targetHeight}px`;
-  }
-
   if (AppState.map) {
     setTimeout(() => {
       AppState.map.invalidateSize();

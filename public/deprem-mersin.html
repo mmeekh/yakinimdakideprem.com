@@ -28,17 +28,17 @@
         content="Mersin ve Akdeniz Bölgesi için son deprem kayitlarini, fay hattı bilgisini ve hazırlık rehberlerini goruntuleyin.">
     <meta property="og:url" content="https://yakinimdakideprem.com/deprem-mersin.html">
     <meta property="og:site_name" content="Yakınımdaki Deprem">
-    <meta property="og:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.webp">
+    <meta property="og:image" content="https://yakinimdakideprem.com/images/cities/mersin-og.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mersin Depremi - Akdeniz Bölgesi Deprem Bilgileri">
     <meta name="twitter:description"
         content="Mersin için güncel deprem tablosu, toplanma alanları ve hazırlık ipuçları.">
-    <meta name="twitter:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.webp">
+    <meta name="twitter:image" content="https://yakinimdakideprem.com/images/cities/mersin-og.webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="css/blog.css?v=202604202200">
+    <link rel="stylesheet" href="css/blog.css?v=202601132130">
     <link rel="stylesheet" href="css/components.min.css?v=202601131900">
-    <link rel="stylesheet" href="css/header.min.css?v=202604202200">
+    <link rel="stylesheet" href="css/header.min.css?v=202604182300">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
@@ -87,7 +87,7 @@
     }
   },
   "datePublished": "2026-04-17T09:00:00+03:00",
-  "dateModified": "2026-04-17T09:00:00+03:00",
+  "dateModified": "2026-04-27T09:00:00+03:00",
   "inLanguage": "tr-TR",
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -113,7 +113,7 @@
 }
     </script>
     <link rel="stylesheet" href="css/footer.css?v=202512182020">
-    <link rel="stylesheet" href="css/city-search.css?v=202604202200">
+    <link rel="stylesheet" href="css/city-search.css?v=202604182300">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -185,6 +185,7 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "wdt4zn01kt");
     </script>
+    <link rel="stylesheet" href="css/city-ssr.css?v=202605051900">
 </head>
 
 <body>
@@ -252,6 +253,9 @@
     <header class="page-header">
         <div class="container">
             <h1>Mersin Depremi</h1>
+            <!-- SSR-FRESHNESS-START -->
+            <div class="ssr-freshness" aria-live="polite"></div>
+            <!-- SSR-FRESHNESS-END -->
             <p>Mersin ve Akdeniz Bölgesi için son deprem verileri, fay hattı bilgisi, toplanma alanları ve hazırlık önerileri.</p>
         </div>
     </header>
@@ -370,7 +374,8 @@
                 <section>
                     <h2>İlgili Sayfalar</h2>
                     <ul>
-                        <li><a href="/son-dakika-deprem.html" rel="noopener noreferrer">Son Dakika Deprem</a></li>
+                        <li><a href="/son-dakika-deprem.html" rel="noopener noreferrer">Deprem Mi Oldu? Anlık Takip</a></li>
+                        <li><a href="/" rel="noopener noreferrer">Anlık Deprem Haritası Türkiye</a></li>
                         <li><a href="/deprem-aninda.html" rel="noopener noreferrer">Deprem Anında Yapılacaklar</a></li>
                         <li><a href="/ilk-yardim-cantasi.html" rel="noopener noreferrer">İlk Yardım Çantası</a></li>
                         <li><a href="/turkiye-deprem-rehberi-fay-hatlari.html" rel="noopener noreferrer">Türkiye Fay Hatları Rehberi</a></li>
@@ -379,6 +384,21 @@
                 </section>
             </div>
         </article>
+    <!-- SSR-PASSAGE-START -->
+        <section class="about-city-quakes" id="about-mersin-quakes">
+            <h2>Mersin Depremleri Hakkında</h2>
+            <!-- SSR-IMAGE-START -->
+            <figure class="city-hero">
+                <img src="/images/cities/mersin.webp" alt="Mersin şehrinden manzara — sismik aktivite haritası ile birlikte" loading="eager" width="800" height="450">
+                <figcaption>Mersin şehir görseli — <a href="https://tr.wikipedia.org/wiki/Mersin" target="_blank" rel="noopener noreferrer">Wikipedia: Mersin</a> (CC-BY-SA / kamu malı)</figcaption>
+            </figure>
+            <!-- SSR-IMAGE-END -->
+            <p>Bu sayfa, AFAD (Afet ve Acil Durum Yönetimi Başkanlığı) ve Kandilli Rasathanesi'nin (Boğaziçi Üniversitesi) yayımladığı resmi deprem verilerini gerçek zamanlı olarak <strong>Mersin ili ve çevresi</strong> için filtreler. Veriler her 20 saniyede bir API üzerinden güncellenir; büyüklük 1.0 ve üzeri tüm sarsıntılar otomatik listelenir. Doğu Anadolu Fay Hattı'nın güney uzantıları ve Kıbrıs Yayı etkisi altındadır. 6 Şubat 2023 Kahramanmaraş depremleri bölgenin tarihsel risklerini açıkça ortaya koydu. Sayfada listelenen her depremin büyüklüğü, derinliği, merkez üssü ve oluş zamanı gösterilir; harita üzerinde de işaretlenir.</p>
+
+            <h2>Mersin'da Az Önce Deprem Mi Oldu?</h2>
+            <p>Eğer sarsıntı hissettiyseniz, bu sayfanın yukarısındaki "Son Depremler" listesine bakın. Liste her 20 saniyede bir yenilenir ve <strong>Mersin</strong> bölgesindeki en yeni kayıt en üstte görünür. Verilerimiz Kandilli/AFAD'ın resmi API'lerinden alınır; gecikmesiz ve birebirdir. Resmi açıklama için <a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a> sayfasını da kontrol edebilirsiniz. Yakınımızda meydana gelen depremlerde <a href="/deprem-aninda.html">Çök-Kapan-Tutun</a> kuralını uygulayın.</p>
+        </section>
+        <!-- SSR-PASSAGE-END -->
     </main>
 
     <footer>
@@ -433,8 +453,8 @@
 
     <script src="js/header.min.js?v=202604182300"></script>
     <script src="js/toc.js?v=202512182020"></script>
-    <script src="js/city-keywords.js?v=202604202200"></script>
-    <script src="js/city-search.js?v=202604202200" defer></script>
+    <script src="js/city-keywords.js?v=202604182300"></script>
+    <script src="js/city-search.js?v=202604182300" defer></script>
     <script src="js/live-quakes.js?v=202601132330"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {

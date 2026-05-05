@@ -20,9 +20,15 @@ logging.basicConfig(
 
 
 API_URL = os.getenv("EARTHQUAKE_API_URL", "http://localhost:8000/api/earthquakes")
-MIN_MAGNITUDE = float(os.getenv("TWITTER_MIN_MAGNITUDE", "4.0"))
+MIN_MAGNITUDE = float(os.getenv("TWITTER_MIN_MAGNITUDE", "5.0"))
 HISTORY_FILE = os.getenv("TWITTER_HISTORY_FILE", "posted_quakes.json")
 TWEET_TAGS = os.getenv("TWITTER_HASHTAGS", "#bugun #deprem #sondakika")
+
+# Bütçe koruması — günlük tweet limiti
+MAX_TWEETS_PER_DAY = int(os.getenv("TWITTER_MAX_TWEETS_PER_DAY", "10"))
+DAILY_COUNTER_FILE = os.getenv(
+    "TWITTER_DAILY_COUNTER_FILE", "/data/tweets_today.json"
+)
 MAP_SERVICE_URL = os.getenv(
     "TWITTER_MAP_URL", "https://staticmap.openstreetmap.de/staticmap.php"
 )
@@ -638,21 +644,57 @@ def build_quake_image(quake: Dict[str, Any]) -> Optional[str]:
     return output_path
 
 
+def magnitude_indicator(mag: float) -> str:
+    """Büyüklüğe göre görsel uyarı seviyesi."""
+    if mag >= 6.0:
+        return "🔴 BÜYÜK DEPREM"
+    if mag >= 5.0:
+        return "🟠 GÜÇLÜ DEPREM"
+    if mag >= 4.0:
+        return "🟡 DEPREM"
+    return "🟢 Hafif sarsıntı"
+
+
+def time_ago_short(time_str: str) -> str:
+    """'05.05.2026 20:19' → 'az önce' / 'X dk önce' / 'X sa önce'."""
+    try:
+        # Kandilli formatı
+        clean = str(time_str).replace(".", "-").strip()
+        dt = datetime.fromisoformat(clean)
+    except Exception:
+        return ""
+    delta = datetime.now() - dt
+    minutes = int(delta.total_seconds() // 60)
+    if minutes < 1:
+        return "az önce"
+    if minutes < 60:
+        return f"{minutes} dk önce"
+    hours = minutes // 60
+    if hours < 24:
+        return f"{hours} sa önce"
+    return f"{hours // 24} gün önce"
+
+
 def format_tweet(quake: Dict[str, Any]) -> str:
-    mag = quake.get("magnitude")
+    """
+    Engagement-optimize tweet:
+    - Şehir-ilk başlık (yerel arama / takip kazanır)
+    - Büyüklüğe göre görsel uyarı seviyesi (renkli emoji)
+    - "Az önce" / "5 dk önce" — taze hissi
+    - Yerel hashtag ön planda + canonical URL CTA
+    """
+    try:
+        mag = float(quake.get("magnitude", 0))
+    except Exception:
+        mag = 0.0
     location = quake.get("location", "Bilinmiyor")
     depth = quake.get("depth", "?")
-    ts = format_time(str(quake.get("time", "")))
+    raw_time = str(quake.get("time", ""))
+    ts_full = format_time(raw_time)
+    ts_short = time_ago_short(raw_time) or ts_full
     tags, city = build_tags_and_city(location)
-    tags_section = f"{' '.join(tags)}\n\n" if tags else ""
-    logging.debug(
-        "Tweet formatı: location=%s mag=%s city=%s tags=%s",
-        location,
-        mag,
-        city,
-        tags,
-    )
-    # UTM-etiketli link: ya sehre ozel sayfa ya ana harita
+
+    # Slug + UTM-etiketli link
     _slug_map = str.maketrans({
         "ç": "c", "Ç": "c", "ğ": "g", "Ğ": "g", "ı": "i", "İ": "i",
         "ö": "o", "Ö": "o", "ş": "s", "Ş": "s", "ü": "u", "Ü": "u",
@@ -660,25 +702,67 @@ def format_tweet(quake: Dict[str, Any]) -> str:
     })
     if city:
         slug = city.translate(_slug_map).lower().strip().replace(" ", "-")
-        link = f"https://yakinimdakideprem.com/deprem-{slug}.html?utm_source=twitter&utm_medium=social&utm_campaign=deprem-bot"
+        link = (
+            f"https://yakinimdakideprem.com/deprem-{slug}.html"
+            "?utm_source=twitter&utm_medium=social&utm_campaign=deprem-bot"
+        )
     else:
-        link = "https://yakinimdakideprem.com/?utm_source=twitter&utm_medium=social&utm_campaign=deprem-bot"
+        link = (
+            "https://yakinimdakideprem.com/"
+            "?utm_source=twitter&utm_medium=social&utm_campaign=deprem-bot"
+        )
 
-    body = (
-        "🚨 DEPREM UYARISI\n\n"
-        f"📍 Yer: {location}\n"
-        f"📉 Büyüklük: {mag}\n"
-        f"⏱️ Tarih: {ts}\n"
-        f"⬇️ Derinlik: {depth} km\n\n"
-        f"Detaylar ve Harita: {link}\n\n"
-    )
-    if tags_section:
-        body += tags_section
+    # Headline: şehir-ilk
+    headline = magnitude_indicator(mag)
     if city:
-        body += f"🙏 Geçmiş olsun {city}."
-    else:
-        body += "🙏 Geçmiş olsun."
-    return body
+        headline = f"{headline} — {city.upper()}"
+
+    body_lines = [
+        headline,
+        "",
+        f"📊 Büyüklük: {mag:.1f}",
+        f"📍 {location}",
+        f"🕒 {ts_short} • Derinlik: {depth} km",
+        "",
+        f"🗺 Canlı harita ➜ {link}",
+    ]
+
+    if tags:
+        body_lines.extend(["", " ".join(tags)])
+
+    # Yüksek büyüklükte ekstra çağrı (M4.0+)
+    if mag >= 4.0:
+        if city:
+            body_lines.append(f"\n🙏 Geçmiş olsun {city}.")
+        else:
+            body_lines.append("\n🙏 Geçmiş olsun.")
+
+    return "\n".join(body_lines)
+
+
+def _today_str() -> str:
+    return datetime.utcnow().strftime("%Y-%m-%d")
+
+
+def load_daily_counter() -> int:
+    """Bugün atılan tweet sayısı (dosya yoksa 0)."""
+    try:
+        with open(DAILY_COUNTER_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if data.get("date") == _today_str():
+            return int(data.get("count", 0))
+    except (FileNotFoundError, json.JSONDecodeError, ValueError, OSError):
+        pass
+    return 0
+
+
+def save_daily_counter(count: int) -> None:
+    try:
+        os.makedirs(os.path.dirname(DAILY_COUNTER_FILE), exist_ok=True)
+        with open(DAILY_COUNTER_FILE, "w", encoding="utf-8") as f:
+            json.dump({"date": _today_str(), "count": count}, f)
+    except OSError as e:
+        logging.warning("Daily counter kaydedilemedi: %s", e)
 
 
 def run_once() -> None:
@@ -698,12 +782,23 @@ def run_once() -> None:
         logging.info("Paylaşılacak deprem yok.")
         return
 
+    # ----- Bütçe koruması: günlük limit kontrolü -----
+    daily_count = load_daily_counter()
+    if daily_count >= MAX_TWEETS_PER_DAY:
+        logging.warning(
+            "Günlük tweet limiti doldu (%d/%d). Yarın saat 00:00'a kadar bekleniyor.",
+            daily_count, MAX_TWEETS_PER_DAY,
+        )
+        return
+
     posted = load_history()
     updated = set(posted)
     logging.info(
-        "Twitter bot çalışıyor. Min büyüklük=%.1f, geçmiş kayıt=%s",
+        "Twitter bot çalışıyor. Min büyüklük=%.1f, geçmiş kayıt=%s, bugün=%d/%d",
         MIN_MAGNITUDE,
         len(posted),
+        daily_count,
+        MAX_TWEETS_PER_DAY,
     )
 
     # Oldest first to preserve order
@@ -751,9 +846,32 @@ def run_once() -> None:
                 client.create_tweet(text=tweet_text)
             logging.info("Tweet atıldı: %s - %.1f", quake.get("location"), mag)
             updated.add(quake_id)
+            daily_count += 1
+            save_daily_counter(daily_count)
+
+            # Günlük limit doldu mu?
+            if daily_count >= MAX_TWEETS_PER_DAY:
+                logging.warning(
+                    "Günlük limit (%d) bu tweet ile doldu. Bu turdan çıkılıyor.",
+                    MAX_TWEETS_PER_DAY,
+                )
+                break
+
             time.sleep(2)
         except Exception as exc:
-            logging.error("Tweet hatası: %s", exc)
+            err_str = str(exc)
+            logging.error("Tweet hatası: %s", err_str)
+            # Bütçe / rate limit hatalarında turu hemen sonlandır.
+            # 402 = Payment Required (kredi bitti), 429 = Rate Limit
+            if "402" in err_str or "Payment" in err_str or "credits" in err_str.lower():
+                logging.error(
+                    "💳 Bütçe bitti (402). Bu tur sonlandırılıyor; yöneticinin "
+                    "Twitter Developer'da kredi yüklemesi gerekir."
+                )
+                break
+            if "429" in err_str or "rate limit" in err_str.lower():
+                logging.error("⏱️ Rate limit (429). Bu tur sonlandırılıyor.")
+                break
 
     if updated != posted:
         save_history(updated)
