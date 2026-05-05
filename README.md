@@ -4,6 +4,12 @@ A free, real-time earthquake tracker for Turkey — no ads, no sign-up, no paywa
 
 Live at **[yakinimdakideprem.com](https://yakinimdakideprem.com)**.
 
+<p align="center">
+  <a href="https://yakinimdakideprem.com">
+    <img src="docs/screenshot.webp" alt="Yakınımdaki Deprem — live earthquake map for Turkey" width="900">
+  </a>
+</p>
+
 ## What it does
 
 Yakınımdaki Deprem aggregates seismic data from official Turkish sources (Kandilli Observatory, AFAD) and presents it as a fast, mobile-friendly map and feed. It is built to be useful in the seconds and minutes after an earthquake, when people need clear information and not a marketing funnel.
