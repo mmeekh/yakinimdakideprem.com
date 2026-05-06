@@ -122,10 +122,19 @@ main.map-wrapper #map {
     z-index: 1;
 }
 
-/* Tablet ve mobilde harita tüm kalan alanı doldursun */
+/* Tablet ve mobilde harita 65vh ile sınırlandı — eskiden ekranı doldurup
+   altındaki "Son depremler" panelini görmek için scroll gerekiyordu. */
 @media (max-width: 1024px) {
     main.map-wrapper #map {
-        height: calc(100vh - var(--header-height) - var(--hm-gap));
+        height: 65vh;
+        min-height: 360px;
+    }
+}
+
+@media (max-width: 640px) {
+    main.map-wrapper #map {
+        height: 60vh;
+        min-height: 320px;
     }
 }
 
@@ -253,8 +262,8 @@ main.map-wrapper #map {
     right: 16px;
     transform: translateY(-50%);
     width: 240px;
-    /* Harita yüksekliğine sığar (desktop: %78 viewport) */
-    max-height: calc((100vh - var(--header-height)) * 0.78 - 40px);
+    /* Harita yüksekliğinin yaklaşık yarısı — gereksiz dikey alan kaplamasın. */
+    max-height: calc((100vh - var(--header-height)) * 0.4);
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
@@ -322,7 +331,8 @@ main.map-wrapper #map {
 
 .earthquake-list .earthquake-item {
     display: flex;
-    padding: 6px 12px;
+    align-items: center;
+    padding: 4px 10px;
     border-bottom: 1px solid #f0f0f0;
     cursor: pointer;
     transition: background 0.15s ease;
@@ -336,31 +346,41 @@ main.map-wrapper #map {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 34px;
-    height: 34px;
-    margin-right: 9px;
-    border-radius: 6px;
+    min-width: 28px;
+    height: 28px;
+    margin-right: 8px;
+    border-radius: 5px;
     color: #fff;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 12px;
+}
+
+.earthquake-list .details {
+    min-width: 0;
+    flex: 1;
 }
 
 .earthquake-list .details h3 {
-    font-size: 12.5px;
+    font-size: 12px;
     color: #1f2937;
-    margin: 0 0 2px;
-    line-height: 1.25;
+    margin: 0 0 1px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .earthquake-list .details .time {
-    font-size: 11px;
+    font-size: 10.5px;
     color: #666;
-    margin-bottom: 1px;
+    margin-bottom: 0;
+    line-height: 1.15;
 }
 
 .earthquake-list .details .depth {
-    font-size: 10.5px;
+    font-size: 10px;
     color: #888;
+    line-height: 1.15;
 }
 
 .earthquake-list .loading {
@@ -462,22 +482,23 @@ main.map-wrapper #map {
     }
 
     .map-wrapper .magnitude-legend {
-        top: auto;
-        bottom: 60px;
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-        width: auto;
-        max-width: 92%;
-        max-height: none;
-        overflow: visible;
-        padding: 8px 10px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 6px;
-        opacity: 0.95;
+        top: auto !important;
+        bottom: 16px !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        width: auto !important;
+        max-width: calc(100% - 24px) !important;
+        max-height: none !important;
+        overflow: visible !important;
+        padding: 12px 14px 10px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        gap: 8px !important;
+        opacity: 0.97 !important;
         backdrop-filter: blur(6px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18) !important;
     }
 
     .magnitude-legend .legend-title { display: none; }
@@ -486,9 +507,9 @@ main.map-wrapper #map {
         position: relative;
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 4px;
+        gap: 0;
         width: 100%;
-        padding-top: 12px;
+        padding-top: 22px;
     }
 
     .magnitude-legend .legend-items::before {
@@ -497,7 +518,7 @@ main.map-wrapper #map {
         top: 0;
         left: 0;
         right: 0;
-        height: 10px;
+        height: 16px;
         border-radius: 999px;
         background: linear-gradient(90deg,
             #4caf50 0%, #ffc107 20%, #ff9800 38%,
@@ -509,6 +530,7 @@ main.map-wrapper #map {
         display: none;
         justify-content: center;
         gap: 0;
+        padding: 2px 0;
     }
 
     .magnitude-legend .legend-item[data-short] {
@@ -522,9 +544,10 @@ main.map-wrapper #map {
 
     .magnitude-legend .legend-short {
         display: inline-block;
-        font-size: 12px;
-        font-weight: 600;
+        font-size: 14px;
+        font-weight: 700;
         color: #111827;
+        letter-spacing: 0.01em;
     }
 
     /* Türkiye + Konumum dropdown'a taşınıyor */

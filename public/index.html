@@ -160,7 +160,92 @@
     <link rel="stylesheet" href="css/city-search.css?v=202604202200">
     <link rel="stylesheet" href="css/geolocation.css?v=202604231700">
     <!-- Anasayfa harita stilleri (sadece bu sayfada) -->
-    <link rel="stylesheet" href="css/home.css?v=202605051945">
+    <link rel="stylesheet" href="css/home.css?v=202605061855">
+    <!-- Inline overrides: ensure compact desktop list + visible mobile legend regardless of CDN cache. -->
+    <style id="rg-inline-overrides">
+        @media (max-width: 1024px) {
+            main.map-wrapper #map { height: 60vh !important; min-height: 320px !important; }
+            .map-wrapper .magnitude-legend {
+                position: absolute !important;
+                top: 12px !important;
+                bottom: auto !important;
+                left: 50% !important;
+                right: auto !important;
+                transform: translateX(-50%) !important;
+                width: min(320px, calc(100% - 88px)) !important;  /* leave room for the header info-toggle on the right */
+                max-width: calc(100% - 88px) !important;
+                max-height: none !important;
+                overflow: visible !important;
+                padding: 10px 12px 8px !important;
+                display: flex !important;
+                flex-wrap: wrap !important;
+                align-items: center !important;
+                gap: 6px !important;
+                opacity: 0.96 !important;
+                box-shadow: 0 4px 14px rgba(0,0,0,0.16) !important;
+                background: #fff !important;
+                border-radius: 12px !important;
+                z-index: 900 !important;  /* below header (1100+) so info-toggle stays clickable */
+            }
+            .magnitude-legend .legend-title { display: none !important; }
+            .magnitude-legend .legend-items {
+                position: relative !important;
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                gap: 4px !important;
+                width: 100% !important;
+                padding-top: 22px !important;
+            }
+            .magnitude-legend .legend-items::before {
+                content: "" !important;
+                position: absolute !important;
+                top: 0 !important; left: 0 !important; right: 0 !important;
+                height: 16px !important;
+                border-radius: 999px !important;
+                background: linear-gradient(90deg,#4caf50 0%,#ffc107 20%,#ff9800 38%,#ff5722 52%,#f44336 70%,#d32f2f 85%,#7b1fa2 100%) !important;
+                border: 1px solid rgba(0,0,0,0.15) !important;
+            }
+            .magnitude-legend .legend-item { display: none !important; }
+            .magnitude-legend .legend-item[data-short] {
+                display: flex !important;
+                justify-content: center !important;
+                padding: 2px 0 !important;
+                flex: 1 1 0 !important;
+                min-width: 0 !important;
+            }
+            .magnitude-legend .color-box, .magnitude-legend .legend-label { display: none !important; }
+            .magnitude-legend .legend-short {
+                display: inline-block !important;
+                font-size: 14px !important;
+                font-weight: 700 !important;
+                color: #111827 !important;
+            }
+            /* Header info / menu toggle butonları her durumda erişilebilir kalsın
+               — legend ya da overlay onları gizlemesin. */
+            #hidden-header .info-toggle,
+            #hidden-header .menu-toggle,
+            .header-actions .info-toggle,
+            .header-actions .menu-toggle {
+                display: inline-flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+                z-index: 1200 !important;
+            }
+        }
+        @media (min-width: 1025px) {
+            .map-wrapper .earthquake-list {
+                max-height: calc((100vh - var(--header-height,64px)) * 0.4) !important;
+            }
+            .earthquake-list .earthquake-item { padding: 4px 10px !important; align-items: center !important; }
+            .earthquake-list .magnitude { min-width: 28px !important; height: 28px !important; font-size: 12px !important; margin-right: 8px !important; }
+            .earthquake-list .details h3 { font-size: 12px !important; line-height: 1.2 !important; white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; }
+            .earthquake-list .details .time { font-size: 10.5px !important; line-height: 1.15 !important; }
+            .earthquake-list .details .depth { font-size: 10px !important; line-height: 1.15 !important; }
+        }
+    </style>
     <style>
         .sr-only {
             position: absolute;
