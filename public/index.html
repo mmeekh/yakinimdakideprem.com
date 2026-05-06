@@ -172,20 +172,22 @@
                 left: 50% !important;
                 right: auto !important;
                 transform: translateX(-50%) !important;
-                width: min(320px, calc(100% - 88px)) !important;  /* leave room for the header info-toggle on the right */
+                width: min(220px, calc(100% - 88px)) !important;
                 max-width: calc(100% - 88px) !important;
                 max-height: none !important;
                 overflow: visible !important;
-                padding: 10px 12px 8px !important;
+                /* Compacted ~50% vs previous (5/8/3 padding, smaller bar). */
+                padding: 5px 8px 3px !important;
                 display: flex !important;
                 flex-wrap: wrap !important;
                 align-items: center !important;
-                gap: 6px !important;
-                opacity: 0.96 !important;
-                box-shadow: 0 4px 14px rgba(0,0,0,0.16) !important;
-                background: #fff !important;
-                border-radius: 12px !important;
-                z-index: 900 !important;  /* below header (1100+) so info-toggle stays clickable */
+                gap: 4px !important;
+                /* 30% more transparent: 0.96 -> 0.67 */
+                opacity: 0.67 !important;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.12) !important;
+                background: rgba(255,255,255,0.92) !important;
+                border-radius: 10px !important;
+                z-index: 900 !important;
             }
             .magnitude-legend .legend-title { display: none !important; }
             .magnitude-legend .legend-items {
@@ -194,18 +196,18 @@
                 flex-direction: row !important;
                 justify-content: space-between !important;
                 align-items: center !important;
-                gap: 4px !important;
+                gap: 2px !important;
                 width: 100% !important;
-                padding-top: 22px !important;
+                padding-top: 12px !important;  /* halved from 22px */
             }
             .magnitude-legend .legend-items::before {
                 content: "" !important;
                 position: absolute !important;
                 top: 0 !important; left: 0 !important; right: 0 !important;
-                height: 16px !important;
+                height: 8px !important;  /* halved from 16px */
                 border-radius: 999px !important;
                 background: linear-gradient(90deg,#4caf50 0%,#ffc107 20%,#ff9800 38%,#ff5722 52%,#f44336 70%,#d32f2f 85%,#7b1fa2 100%) !important;
-                border: 1px solid rgba(0,0,0,0.15) !important;
+                border: 1px solid rgba(0,0,0,0.12) !important;
             }
             .magnitude-legend .legend-item { display: none !important; }
             .magnitude-legend .legend-item[data-short] {
@@ -218,9 +220,10 @@
             .magnitude-legend .color-box, .magnitude-legend .legend-label { display: none !important; }
             .magnitude-legend .legend-short {
                 display: inline-block !important;
-                font-size: 14px !important;
+                font-size: 11px !important;  /* tightened */
                 font-weight: 700 !important;
                 color: #111827 !important;
+                line-height: 1 !important;
             }
             /* Header info / menu toggle butonları her durumda erişilebilir kalsın
                — legend ya da overlay onları gizlemesin. */
@@ -233,6 +236,51 @@
                 opacity: 1 !important;
                 pointer-events: auto !important;
                 z-index: 1200 !important;
+            }
+            /* Info-toggle dropdown içerik düzgün gösterilsin (taşınan earthquake-list) */
+            .mobile-info-content {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 12px !important;
+            }
+            .mobile-info-content .earthquake-list {
+                display: flex !important;
+                flex-direction: column !important;
+                position: static !important;
+                top: auto !important;
+                right: auto !important;
+                left: auto !important;
+                transform: none !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                max-height: 60vh !important;
+                opacity: 1 !important;
+                box-shadow: none !important;
+                background: #fff !important;
+                border-radius: 12px !important;
+                overflow: hidden !important;
+            }
+            .mobile-info-content .earthquake-list .earthquake-items {
+                display: block !important;
+                max-height: 50vh !important;
+                overflow-y: auto !important;
+            }
+            .mobile-info-content .earthquake-list .earthquake-item {
+                display: flex !important;
+                align-items: center !important;
+                padding: 6px 10px !important;
+                border-bottom: 1px solid #f0f0f0 !important;
+            }
+            .mobile-info-content .earthquake-list .magnitude {
+                min-width: 32px !important;
+                height: 32px !important;
+                margin-right: 10px !important;
+                font-size: 13px !important;
+            }
+            .mobile-legend-actions {
+                display: grid !important;
+                grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+                gap: 8px !important;
             }
         }
         @media (min-width: 1025px) {
