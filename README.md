@@ -4,11 +4,22 @@ A free, real-time earthquake tracker for Turkey — no ads, no sign-up, no paywa
 
 Live at **[yakinimdakideprem.com](https://yakinimdakideprem.com)**.
 
-<p align="center">
-  <a href="https://yakinimdakideprem.com">
-    <img src="docs/screenshot.webp" alt="Yakınımdaki Deprem — live earthquake map for Turkey" width="900">
-  </a>
-</p>
+<table align="center">
+  <tr>
+    <td align="center" width="70%">
+      <a href="https://yakinimdakideprem.com">
+        <img src="docs/screenshot.webp" alt="Yakınımdaki Deprem — desktop view, live earthquake map for Turkey">
+      </a>
+      <br><sub><b>Desktop</b> — live map and recent quakes feed</sub>
+    </td>
+    <td align="center" width="30%">
+      <a href="https://yakinimdakideprem.com">
+        <img src="docs/screenshot-mobile.webp" alt="Yakınımdaki Deprem — mobile view">
+      </a>
+      <br><sub><b>Mobile</b> — fast on a slow phone</sub>
+    </td>
+  </tr>
+</table>
 
 ## What it does
 
