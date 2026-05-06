@@ -6,17 +6,23 @@ Live at **[yakinimdakideprem.com](https://yakinimdakideprem.com)**.
 
 <table align="center">
   <tr>
-    <td align="center" width="70%">
+    <td align="center" width="55%">
       <a href="https://yakinimdakideprem.com">
         <img src="docs/screenshot.webp" alt="Yakınımdaki Deprem — desktop view, live earthquake map for Turkey">
       </a>
-      <br><sub><b>Desktop</b> — live map and recent quakes feed</sub>
+      <br><sub><b>Desktop</b> — live map, magnitude legend, compact recent-quakes panel</sub>
     </td>
-    <td align="center" width="30%">
+    <td align="center" width="22.5%">
       <a href="https://yakinimdakideprem.com">
-        <img src="docs/screenshot-mobile.webp" alt="Yakınımdaki Deprem — mobile view">
+        <img src="docs/screenshot-mobile.webp" alt="Yakınımdaki Deprem — mobile, compact horizontal legend">
       </a>
-      <br><sub><b>Mobile</b> — fast on a slow phone</sub>
+      <br><sub><b>Mobile</b> — translucent legend at top</sub>
+    </td>
+    <td align="center" width="22.5%">
+      <a href="https://yakinimdakideprem.com">
+        <img src="docs/screenshot-mobile-dropdown.webp" alt="Yakınımdaki Deprem — mobile info dropdown with Türkiye / Konumum CTAs">
+      </a>
+      <br><sub><b>Mobile · info panel</b> — Türkiye / Konumum + recent quakes</sub>
     </td>
   </tr>
 </table>

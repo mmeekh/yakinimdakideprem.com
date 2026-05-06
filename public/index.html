@@ -284,22 +284,27 @@
                 width: 100% !important;
                 margin-bottom: 4px !important;
             }
-            /* Türkiye + Konumum CTA butonları (info-toggle dropdown içinde) */
+            /* Türkiye + Konumum CTA butonları (info-toggle dropdown içinde) — 30% smaller */
             .mobile-legend-actions .turkey-btn,
             .mobile-legend-actions .my-location-btn {
                 display: flex !important;
                 align-items: center !important;
                 justify-content: center !important;
-                gap: 6px !important;
-                padding: 10px 12px !important;
+                gap: 5px !important;
+                padding: 7px 10px !important;
                 margin: 0 !important;
                 border: none !important;
-                border-radius: 10px !important;
-                font-size: 13px !important;
+                border-radius: 8px !important;
+                font-size: 11px !important;
                 font-weight: 700 !important;
                 color: #fff !important;
                 cursor: pointer !important;
-                box-shadow: 0 2px 6px rgba(0,0,0,0.12) !important;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+                line-height: 1 !important;
+            }
+            .mobile-legend-actions .turkey-btn i,
+            .mobile-legend-actions .my-location-btn i {
+                font-size: 11px !important;
             }
             .mobile-legend-actions .turkey-btn {
                 background: linear-gradient(135deg, #E30A17, #C41E3A) !important;
@@ -929,10 +934,30 @@
     <script defer src="js/geolocation.js?v=202604231700"></script>
     <!-- İstatistik Güncelleyici Script -->
 
-    <!-- Mobile dropdown fix: ensure both Türkiye and Konumum CTA buttons land
-         inside .mobile-legend-actions (header.js only moves the Türkiye one). -->
+    <!-- Mobile dropdown fix: re-parent both CTA buttons + auto-close the
+         info dropdown after the user actually triggers an action. -->
     <script>
     (function() {
+      var WIRED = new WeakSet();
+
+      function closeInfoDropdown() {
+        if (window.innerWidth > 1024) return;
+        document.body.classList.remove('info-menu-open');
+        var infoBtn = document.querySelector('.info-toggle');
+        if (infoBtn) infoBtn.setAttribute('aria-expanded', 'false');
+        var overlay = document.getElementById('mobile-overlay');
+        if (overlay) overlay.classList.remove('visible');
+      }
+
+      function wireAutoClose(btn) {
+        if (!btn || WIRED.has(btn)) return;
+        WIRED.add(btn);
+        // Run after the button's own click handler fires the map action.
+        btn.addEventListener('click', function() {
+          setTimeout(closeInfoDropdown, 50);
+        });
+      }
+
       function placeButtons() {
         if (window.innerWidth > 1024) return;
         var actions = document.querySelector('.mobile-info-content .mobile-legend-actions');
@@ -941,8 +966,10 @@
         if (!actions || !turkeyBtn || !myLocationBtn) return;
         if (turkeyBtn.parentElement !== actions) actions.appendChild(turkeyBtn);
         if (myLocationBtn.parentElement !== actions) actions.appendChild(myLocationBtn);
+        wireAutoClose(turkeyBtn);
+        wireAutoClose(myLocationBtn);
       }
-      // Run on load + whenever the info dropdown opens (body class flips).
+
       window.addEventListener('DOMContentLoaded', placeButtons);
       window.addEventListener('load', placeButtons);
       window.addEventListener('resize', placeButtons);
