@@ -2,20 +2,92 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://yakinimdakideprem.com/blog-e-devlet-deprem-riski-sorgulama.html</loc>
+    <loc>https://yakinimdakideprem.com/</loc>
     <image:image>
-      <image:loc>https://yakinimdakideprem.com/images/blog-e-devlet-deprem-riski-sorgulama.webp</image:loc>
-      <image:title>E-Devlet ile Deprem Riski Sorgulama 2026 — Adım Adım</image:title>
-      <image:caption>E-Devlet deprem riski sorgulama ekran görseli</image:caption>
+      <image:loc>https://yakinimdakideprem.com/images/og-yakinimdakideprem.webp</image:loc>
+      <image:title>Yakınımdaki Deprem – Anlık Deprem Haritası Türkiye</image:title>
+      <image:caption>Anlık deprem Türkiye haritası: Kandilli + AFAD ile 20 saniyede bir güncellenen canlı deprem listesi. 81 ilin anlık deprem sayfası, şehir arama ve bildirim.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
   <url>
-    <loc>https://yakinimdakideprem.com/blog-kentsel-donusum-vergisi-muafiyeti.html</loc>
+    <loc>https://yakinimdakideprem.com/blog.html</loc>
     <image:image>
-      <image:loc>https://yakinimdakideprem.com/images/blog-kentsel-donusum-vergisi-muafiyeti.webp</image:loc>
-      <image:title>Kentsel Dönüşümde Vergi Muafiyeti 2026 — Tam Rehber</image:title>
-      <image:caption>Kentsel dönüşüm vergi muafiyeti dokümanları</image:caption>
+      <image:loc>https://yakinimdakideprem.com/images/depremcantasi.webp</image:loc>
+      <image:title>Deprem Blogu — 58 Rehber | Yakınımdaki Deprem</image:title>
+      <image:caption>Türkiye\'nin 58 kapsamlı deprem rehberi: çanta, hazırlık, anında davranış, sonrası toparlanma, DASK, kentsel dönüşüm ve daha fazlası.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/son-dakika-deprem.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-son-deprem-haberleri.webp</image:loc>
+      <image:title>Deprem Mi Oldu? Az Önce Deprem – Son Dakika Canlı Liste</image:title>
+      <image:caption>Az önce deprem mi oldu? Kandilli + AFAD verileriyle son dakika deprem listesi. Bugün olan depremleri saniye saniye Türkiye genelinde takip et.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-aninda.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/deprem-aninda-cok-kapan-tutun.webp</image:loc>
+      <image:title>Deprem Anında Ne Yapmalı? Çök Kapan Tutun Rehberi</image:title>
+      <image:caption>Deprem anında bina içinde, dışarıda veya araçtayken uygulayacağınız çök-kapan-tutun adımları, tahliye planı ve iletişim önerileriyle güncel rehber.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/ilk-yardim-cantasi.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/depremcantasi.webp</image:loc>
+      <image:title>İlk Yardım Çantası 2026: Güncel Malzeme Listesi</image:title>
+      <image:caption>İlk yardım çantası için gerekli malzemeler, temel tıbbi ürünler ve düzenli kontrol ipuçları. Ev, araç ve iş yeri için pratik liste.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/ben-kimim.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/depremcantasi.webp</image:loc>
+      <image:title>Ben Kimim – Emin Kılıç | Yakınımdaki Deprem</image:title>
+      <image:caption>Yakınımdaki Deprem: Türk milleti için tamamen ücretsiz deprem bilgi platformu. Deprem güvenliği, afet hazırlığı ve hayat kurtaran rehberler sunuyoruz.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/turkiye-deprem-rehberi-fay-hatlari.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-haritasi-rehberi.webp</image:loc>
+      <image:title>Türkiye Deprem Rehberi: Fay Hatları ve Tarihçe</image:title>
+      <image:caption>Deprem nedir, nasıl oluşur? Türkiye'nin aktif fay hatları (KAF, DAF, BAF), büyük deprem tarihçesi ve deprem öncesi-sonrası yapılması gerekenler dev rehber.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-apartman-yoneticisi-deprem.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-apartman-yoneticisi-deprem.webp</image:loc>
+      <image:title>Apartman Yöneticileri İçin Deprem Hazırlık Rehberi</image:title>
+      <image:caption>Apartman yöneticisi olarak deprem öncesi ne yapmalısınız? Ortak alanlar, yangın güvenliği, kat malikleri iletişimi ve acil durum planı rehberi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-arac-kullanirken.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-arac-kullanirken.webp</image:loc>
+      <image:title>Deprem Anında Araç Kullanırken – Trafik Güvenliği</image:title>
+      <image:caption>Deprem anında araçta iken ne yapmalı? Güvenli durma, köprü/tünel kaçınma, kapıları kilitleme ve tahliye stratejileri. Sürücüler için deprem güvenlik rehberi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-artci-deprem-nedir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-artci-deprem-nedir.webp</image:loc>
+      <image:title>Artçı Deprem Nedir? Ne Kadar Sürer, Zararı Olur mu?</image:title>
+      <image:caption>Artçı deprem nedir, neden olur, ne kadar sürer? Ana depremden sonra gelen artçıların büyüklüğü, süresi ve güvenlik önerileri hakkında detaylı rehber.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -24,25 +96,34 @@
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/blog-bina-deprem-performans-raporu-nedir.webp</image:loc>
       <image:title>Bina Deprem Performans Raporu 2026 — Nedir, Nasıl Alınır?</image:title>
-      <image:caption>Bina deprem performans raporu mühendis incelemesi</image:caption>
+      <image:caption>Binanızın deprem performansını ölçen rapor: TBDY 2019 kapsamı, fiyatlandırma, yetkili mühendis seçimi ve sonuçların yorumlanması.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
   <url>
-    <loc>https://yakinimdakideprem.com/blog-kolon-kesme-cezasi-ve-hukuki-sorumluluk.html</loc>
+    <loc>https://yakinimdakideprem.com/blog-bina-icindeyseniz.html</loc>
     <image:image>
-      <image:loc>https://yakinimdakideprem.com/images/blog-kolon-kesme-cezasi-ve-hukuki-sorumluluk.webp</image:loc>
-      <image:title>Kolon Kesmenin Cezası 2026 — Hukuki Sorumluluk ve İhbar</image:title>
-      <image:caption>Apartmanda kesilmiş taşıyıcı kolon - hasar görseli</image:caption>
+      <image:loc>https://yakinimdakideprem.com/images/blog-bina-icindeyseniz.webp</image:loc>
+      <image:title>Deprem Anında Bina İçindeyseniz – Çök Kapan Tutun</image:title>
+      <image:caption>Deprem anında bina içindeyken hayat kurtaran çök-kapan-tutun hareketi, güvenli alanlar, asansör ve merdiven kullanımı hakkında adım adım rehber.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
   <url>
-    <loc>https://yakinimdakideprem.com/blog-deprem-sigortasi-prim-hesaplama.html</loc>
+    <loc>https://yakinimdakideprem.com/blog-dask-nedir.html</loc>
     <image:image>
-      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-sigortasi-prim-hesaplama.webp</image:loc>
-      <image:title>Deprem Sigortası Prim Hesaplama 2026 — Detaylı Rehber</image:title>
-      <image:caption>DASK prim hesaplama hesap makinesi ve dokümanlar</image:caption>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-oncesi-hazirlik.webp</image:loc>
+      <image:title>DASK Nedir? Zorunlu Deprem Sigortası Rehberi 2026</image:title>
+      <image:caption>DASK zorunlu deprem sigortası nedir, neleri kapsar, fiyatı nasıl hesaplanır? 2026 güncel DASK rehberi, başvuru ve teminat detayları.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-aninda-asansor.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-aninda-asansor.webp</image:loc>
+      <image:title>Deprem Anında Asansörde Ne Yapmalı? Her Katta Güvenlik</image:title>
+      <image:caption>Deprem sırasında asansörde kalırsanız ne yaparsınız? Asansör güvenliği, deprem modu ve kattan çıkış rehberi.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -51,7 +132,124 @@
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/blog-deprem-aninda-balkon-guvenli-mi.webp</image:loc>
       <image:title>Deprem Anında Balkon Güvenli Mi? — Bilimsel Cevap</image:title>
-      <image:caption>Apartman balkonu - deprem güvenliği değerlendirmesi</image:caption>
+      <image:caption>Deprem sırasında balkona çıkmak güvenli mi? Konsol balkonların yapısal davranışı, riskler, doğru tahliye stratejisi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-aninda-yatakta.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-aninda-yatakta.webp</image:loc>
+      <image:title>Deprem Anında Yataktaysanız Ne Yapmalısınız?</image:title>
+      <image:caption>Gece uyku sırasında deprem başlarsa ne yapmalı? Yatakta kalın mı, kalkın mı? Karanlıkta ve pijama ile tahliye rehberi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-anketi-cocuklar.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-anketi-cocuklar.webp</image:loc>
+      <image:title>Çocuklara Deprem Nasıl Anlatılır? Yaşlara Göre Rehber</image:title>
+      <image:caption>Çocuklara deprem konusunu anlatmak korkutmadan nasıl yapılır? 3-5, 6-9, 10-14 yaş gruplarına göre iletişim rehberi ve ebeveyn önerileri.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-buyukluk-olcekleri.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-buyukluk-olcekleri.webp</image:loc>
+      <image:title>Deprem Büyüklük Ölçekleri: Richter, Moment ve MMI Farkı</image:title>
+      <image:caption>Deprem büyüklük ölçekleri nelerdir? Richter ve Moment (Mw) büyüklüğü arasındaki fark, MMI şiddet ölçeği ve hasar tahminleri hakkında detaylı rehber.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-cantasi.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-cantasi.webp</image:loc>
+      <image:title>Deprem Çantası Listesi 2026 – Hayat Kurtaran Malzemeler</image:title>
+      <image:caption>Deprem çantasında olması gerekenler: 72 saatlik yaşam seti, yedek ilaç, su, belge kopyaları ve ekipman listesi. 2026 güncel deprem çantası rehberi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-cep-telefonu.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-cep-telefonu.webp</image:loc>
+      <image:title>Deprem ve Cep Telefonu: Doğrular ve Yanlışlar</image:title>
+      <image:caption>Deprem sırasında ve sonrasında cep telefonu nasıl kullanılır? SMS mi arama mı? Batarya ekonomisi, baz istasyonu çökmesi ve iletişim önerileri.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-cep-uygulamalari.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-cep-uygulamalari.webp</image:loc>
+      <image:title>Deprem İçin En İyi 5 Mobil Uygulama – Türkiye 2026</image:title>
+      <image:caption>Türkiye'de deprem takibi için en iyi Android ve iOS uygulamaları: AFAD Acil, Kandilli, erken uyarı ve anlık deprem uygulamaları karşılaştırması.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-erken-uyari-sistemi.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-erken-uyari-sistemi.webp</image:loc>
+      <image:title>Deprem Erken Uyarı Sistemi Nasıl Çalışır?</image:title>
+      <image:caption>Deprem erken uyarı sistemi nedir, nasıl çalışır, Türkiye'de var mı? AFAD, ShakeAlert ve Japon sistemlerinin karşılaştırması.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-guvenlik-bilgileri.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-guvenlik-bilgileri.webp</image:loc>
+      <image:title>Deprem Güvenlik Bilgileri – Hayat Kurtaran Önlemler</image:title>
+      <image:caption>Deprem sırasında ve sonrasında güvenlik önlemleri: çök-kapan-tutun, tahliye kuralları, binada sabitleme ve afet güvenliği rehberi tek sayfada.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-haritasi.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-haritasi-rehberi.webp</image:loc>
+      <image:title>Deprem Haritası – Türkiye Risk Bölgeleri ve Fay Hatları</image:title>
+      <image:caption>Türkiye deprem risk haritası, bölgesel risk seviyeleri, fay hatları (KAF, DAF, BAF) ve güvenli alanlar. Kendi bölgenizin risk profilini öğrenin.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-hasar-tazminat-sureci.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-hasar-tazminat-sureci.webp</image:loc>
+      <image:title>Deprem Hasarı Tazminat Süreci – DASK ve Konut Sigortasından Nasıl Alınır?</image:title>
+      <image:caption>Deprem sonrası DASK ve konut sigortası tazminatı nasıl alınır? Başvuru adımları, eksper süreci, itiraz hakkı ve ödeme takibi rehberi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-oncesi-bina-guclendir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-oncesi-bina-guclendir.webp</image:loc>
+      <image:title>Binanızı Depreme Karşı Güçlendirme – Yöntemler ve Maliyetler</image:title>
+      <image:caption>Ev veya apartman güçlendirme nedir, nasıl yapılır? Karbon fiber, epoksi enjeksiyon, çelik manşon yöntemleri ve 2026 maliyet rehberi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-oncesi-hazirlik.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-oncesi-hazirlik.webp</image:loc>
+      <image:title>Deprem Öncesi Hazırlık – Ev ve Aile Planı Rehberi</image:title>
+      <image:caption>Deprem öncesi ev güvenliği, mobilya sabitleme, aile tahliye planı, acil iletişim ve kaçış rotası nasıl hazırlanır? Adım adım hazırlık rehberi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-sigortasi-prim-hesaplama.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-sigortasi-prim-hesaplama.webp</image:loc>
+      <image:title>Deprem Sigortası Prim Hesaplama 2026 — Detaylı Rehber</image:title>
+      <image:caption>DASK ve ek deprem sigortası primi nasıl hesaplanır? Yapı türü, alan, deprem bölgesi etkisi. 2026 fiyat listeleri ve indirim fırsatları.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -60,16 +258,34 @@
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/blog-deprem-sonrasi-gida-saklama-ve-su-temini.webp</image:loc>
       <image:title>Deprem Sonrası Gıda Saklama ve Su Temini Rehberi 2026</image:title>
-      <image:caption>Deprem için gıda ve su stoğu</image:caption>
+      <image:caption>Deprem sonrası 7 günlük gıda stoğu, su sterilizasyonu, raf ömrü, özel diyetler. Acil durum beslenme planı tam rehber.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
   <url>
-    <loc>https://yakinimdakideprem.com/blog-eski-bina-deprem-yonetmeligi-uyum.html</loc>
+    <loc>https://yakinimdakideprem.com/blog-deprem-sonrasi-ilk-24-saat.html</loc>
     <image:image>
-      <image:loc>https://yakinimdakideprem.com/images/blog-eski-bina-deprem-yonetmeligi-uyum.webp</image:loc>
-      <image:title>Eski Binalar Deprem Yönetmeliğine Uyum Sağlamalı mı? 2026</image:title>
-      <image:caption>Eski apartman binası ve yeni yapı karşılaştırması</image:caption>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-sonrasi-ilk-24-saat.webp</image:loc>
+      <image:title>Deprem Sonrası İlk 24 Saat – Kurtarma Planı</image:title>
+      <image:caption>Deprem sonrası ilk 24 saatte yapılması gerekenler: güvenli tahliye, ilk yardım, iletişim, toplanma alanı ve artçılara karşı önlemler. Adım adım eylem planı.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-sonrasi-kiracilarin-haklari.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-sonrasi-kiracilarin-haklari.webp</image:loc>
+      <image:title>Deprem Sonrası Kiracıların Hakları – Hukuki Rehber 2026</image:title>
+      <image:caption>Deprem sonrası kiracılar kira öder mi? Tahliye zorla yapılabilir mi? Hasar tazminatı kime ödenir? 2026 güncel kira hukuku rehberi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-sonrasi-psikolojik-destek.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-sonrasi-psikolojik-destek.webp</image:loc>
+      <image:title>Deprem Sonrası Psikolojik Destek ve PTSD</image:title>
+      <image:caption>Deprem sonrası yetişkin ve çocuklarda travma belirtileri, PTSD nedir, ne zaman psikoloğa gidilir? Aile içi destek önerileri.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -78,7 +294,133 @@
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/blog-deprem-sonrasi-psikolojik-ilk-yardim.webp</image:loc>
       <image:title>Deprem Sonrası Psikolojik İlk Yardım (PİY) Rehberi 2026</image:title>
-      <image:caption>Deprem sonrası psikolojik destek görseli</image:caption>
+      <image:caption>Deprem travması nasıl atlatılır? DSÖ Psikolojik İlk Yardım modeli, çocuklarda ve yetişkinlerde uygulanması, profesyonel destek kaynakları.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-sonrasi-temiz-su-gida.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-sonrasi-temiz-su-gida.webp</image:loc>
+      <image:title>Deprem Sonrası Temiz Su ve Gıda Güvenliği</image:title>
+      <image:caption>Deprem sonrası su güvenli mi? Deprem sonrası ne yenmeli, su nasıl temizlenir? Şebeke suyu ve gıda güvenliği hakkında rehber.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-disaridaysaniz.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-disaridaysaniz.webp</image:loc>
+      <image:title>Deprem Anında Dışarıdaysanız – Açık Alan Güvenliği</image:title>
+      <image:caption>Deprem anında sokakta, parkta veya açık alanda ne yapmalı? Güvenli mesafe, düşen nesnelerden korunma ve tahliye rotaları hakkında detaylı rehber.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-e-devlet-deprem-riski-sorgulama.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-e-devlet-deprem-riski-sorgulama.webp</image:loc>
+      <image:title>E-Devlet ile Deprem Riski Sorgulama 2026 — Adım Adım</image:title>
+      <image:caption>E-devlet üzerinden binanızın deprem riskini, kentsel dönüşüm durumunu ve DASK poliçesini nasıl sorgulayacağınızın 2026 rehberi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-engelli-bireyler-deprem.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-engelli-bireyler-deprem.webp</image:loc>
+      <image:title>Engelli Bireyler İçin Deprem Tahliye Planı</image:title>
+      <image:caption>Tekerlekli sandalyeli, görme engelli, işitme engelli ve hareket kısıtlı bireyler için özel deprem hazırlık ve tahliye rehberi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-eski-bina-deprem-yonetmeligi-uyum.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-eski-bina-deprem-yonetmeligi-uyum.webp</image:loc>
+      <image:title>Eski Binalar Deprem Yönetmeliğine Uyum Sağlamalı mı? 2026</image:title>
+      <image:caption>1975-2019 arası deprem yönetmeliklerinin tarihi. Eski binaların TBDY 2019 ile karşılaştırılması, güçlendirme zorunluluğu ve risk değerlendirmesi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-evcil-hayvanlarla-deprem.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-evcil-hayvanlarla-deprem.webp</image:loc>
+      <image:title>Evcil Hayvanlarla Deprem Planı Nasıl Yapılır?</image:title>
+      <image:caption>Kedi, köpek, kuş ve diğer evcil hayvanlarınızla deprem hazırlığı. Taşıma çantası, yedek mama, kimlik künyesi ve tahliye önerileri.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-evim-depreme-dayanikli-mi.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-evim-depreme-dayanikli-mi.webp</image:loc>
+      <image:title>Evim Depreme Dayanıklı mı? 7 Adımlık Test</image:title>
+      <image:caption>Oturduğunuz evin deprem dayanıklılığını nasıl değerlendirirsiniz? Çatlaklar, kolon yapısı, yapım yılı ve daha fazlası için 7 adımlık kontrol listesi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-istanbul-beklenen-deprem.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-istanbul-beklenen-deprem.webp</image:loc>
+      <image:title>İstanbul Beklenen Deprem Ne Zaman? Bilim İnsanları Ne Diyor?</image:title>
+      <image:caption>İstanbul'da beklenen büyük deprem için bilim insanlarının tahminleri, olasılık hesapları ve hazırlık önerileri. 2019-2026 araştırmalarının özeti.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-istanbul-deprem-haritasi-ilceler.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-istanbul-deprem-haritasi-ilceler.webp</image:loc>
+      <image:title>İstanbul Deprem Haritası – Hangi İlçeler Riskli?</image:title>
+      <image:caption>İstanbul'un 39 ilçesinin deprem risk haritası: Avcılar'dan Şile'ye kadar hangi bölge yüksek, hangisi orta risk taşıyor? Zemin + yapı analizi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-izmir-deprem-tarihi.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-izmir-deprem-tarihi.webp</image:loc>
+      <image:title>İzmir Deprem Tarihi – 2020 Samos'tan Bugüne</image:title>
+      <image:caption>İzmir'de son 20 yılın önemli depremleri: 2020 Samos-İzmir, 1928 İzmir ve tarihi Ege sarsıntıları. Fay hattı + yapı + ders çıkarımları.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-kadinlar-icin-deprem.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-kadinlar-icin-deprem.webp</image:loc>
+      <image:title>Kadınlar İçin Deprem Hazırlığı ve Güvenlik</image:title>
+      <image:caption>Kadınlara özel deprem hazırlık rehberi: hamile ve emzikli anneler, bekar kadınlar için hijyen, güvenlik ve psikolojik destek önerileri.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-kahramanmaras-6-subat-dersler.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-kahramanmaras-6-subat-dersler.webp</image:loc>
+      <image:title>Kahramanmaraş 6 Şubat Depremleri – Dersler ve Sonuçlar</image:title>
+      <image:caption>6 Şubat 2023 Kahramanmaraş ikiz depremleri (Mw 7.8 + Mw 7.6) ne öğretti? 11 il, 50 bin kayıp ve yapı güvenliği dersleri.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-kentsel-donusum-vergisi-muafiyeti.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-kentsel-donusum-vergisi-muafiyeti.webp</image:loc>
+      <image:title>Kentsel Dönüşümde Vergi Muafiyeti 2026 — Tam Rehber</image:title>
+      <image:caption>6306 sayılı yasa kapsamında KDV, tapu harcı, gelir vergisi muafiyetleri. Kentsel dönüşümde hangi vergilerden muafsınız, 2026 güncel listesi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-kolon-kesme-cezasi-ve-hukuki-sorumluluk.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-kolon-kesme-cezasi-ve-hukuki-sorumluluk.webp</image:loc>
+      <image:title>Kolon Kesmenin Cezası 2026 — Hukuki Sorumluluk ve İhbar</image:title>
+      <image:caption>Apartmanda kolon kesmek suç mu? TCK ve İmar Kanunu açısından cezai yaptırımlar, ihbar süreci, deprem sonrası tazminat hakları.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -87,7 +429,1591 @@
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/blog-komsu-binasi-deprem-riski-sikayet.webp</image:loc>
       <image:title>Komşu Binasının Deprem Riski Varsa Ne Yapmalı? — İhbar Rehberi</image:title>
-      <image:caption>Tehlikeli bina ihbar süreci dokümanı</image:caption>
+      <image:caption>Komşu binası tehlikeli mi? Riskli yapı ihbarı nereye yapılır, süreç nasıl işler? Belediye, AFAD ve hukuki başvuru rehberi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-konut-sigortasi-vs-dask.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-konut-sigortasi-vs-dask.webp</image:loc>
+      <image:title>Konut Sigortası mı DASK mi? Fark ve Birlikte Almanın Önemi</image:title>
+      <image:caption>Konut sigortası ile DASK arasındaki fark nedir? Hangisi hangi hasarı karşılar? 2026 fiyat karşılaştırması ve birlikte alma rehberi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-marmara-depremi-1999-dersler.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-marmara-depremi-1999-dersler.webp</image:loc>
+      <image:title>Marmara Depremi 1999 – 25 Yılda Ne Değişti?</image:title>
+      <image:caption>17 Ağustos 1999 Gölcük depremi sonrası Türkiye'de deprem güvenliğinde değişen 10 şey: yapı yönetmeliği, DASK, AFAD, eğitim ve daha fazlası.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-mobilya-sabitleme-rehberi.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-mobilya-sabitleme-rehberi.webp</image:loc>
+      <image:title>Deprem İçin Mobilya Sabitleme – Adım Adım Rehber</image:title>
+      <image:caption>Depremde en büyük ölüm nedenlerinden biri devrilen mobilyadır. Dolap, kitaplık, buzdolabı gibi ağır mobilyaları duvara nasıl sabitlersiniz? Pratik rehber.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-okul-isyeri-deprem-guvenlik.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-okul-isyeri-deprem-guvenlik.webp</image:loc>
+      <image:title>Okul ve İşyerinde Deprem Güvenliği – Tahliye Planı Rehberi</image:title>
+      <image:caption>Okul, AVM, ofis, fabrika gibi çok kişili mekânlarda deprem sırasında güvenlik, tahliye ve toplanma planı hazırlama rehberi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-son-deprem-haberleri.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-son-deprem-haberleri.webp</image:loc>
+      <image:title>Son Dakika Deprem Haberleri – Bugünkü Son Depremler</image:title>
+      <image:caption>Bugün olan son depremler ve son dakika deprem haberleri. Kandilli + AFAD verileriyle anlık güncellenen deprem listesi ve bölge bazında takip.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-tbdy-2019-nedir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-tbdy-2019-nedir.webp</image:loc>
+      <image:title>TBDY 2019 Nedir? Deprem Yönetmeliği Değişiklikleri</image:title>
+      <image:caption>Türkiye Bina Deprem Yönetmeliği 2019 (TBDY) ne getirdi? 2007 yönetmeliği ile farkları, performans hedefleri ve yapı sahipleri için anlamı.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-toplanma-alani-sorgulama.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/toplanma-alani-sorgulama.webp</image:loc>
+      <image:title>Toplanma Alanı Sorgulama – E-Devlet Rehberi</image:title>
+      <image:caption>Mahallenizin deprem toplanma alanını e-Devlet üzerinden nasıl sorgularsınız? Adım adım e-Devlet toplanma alanı sorgulama rehberi ve alternatif yöntemler.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-turkiye-en-cok-deprem-iller.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-turkiye-en-cok-deprem-iller.webp</image:loc>
+      <image:title>Türkiye'de En Çok Deprem Olan Şehirler – 2026 İl Sıralaması</image:title>
+      <image:caption>Türkiye'de en fazla deprem olan şehirler hangileri? Erzincan, Van, Kocaeli... 50 yılın Kandilli ve AFAD verisine göre il bazlı deprem sıralaması ve risk analizi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-turkiye-fay-hatlari-haritasi.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-turkiye-fay-hatlari-haritasi.webp</image:loc>
+      <image:title>Türkiye Fay Hatları Haritası 2026 – KAF, DAF ve BAF</image:title>
+      <image:caption>Türkiye'nin üç büyük fay hattı (Kuzey, Doğu ve Batı Anadolu) nerede geçer? Hangi iller risk altında? 2026 güncel fay hattı haritası ve bilimsel veriler.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-van-depremi-2011-dersler.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-van-depremi-2011-dersler.webp</image:loc>
+      <image:title>Van Depremi 2011 – 15 Yıl Sonra Neler Öğrendik?</image:title>
+      <image:caption>23 Ekim 2011 Van-Erciş Mw 7.2 depremi: 600+ can kaybı, Bayram Oteli hatırası, Doğu Anadolu'da soğuk kış ve dersler.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-yapi-denetim-raporu-okuma.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-yapi-denetim-raporu-okuma.webp</image:loc>
+      <image:title>Yapı Denetim Raporu Nasıl Okunur?</image:title>
+      <image:caption>Binanızın yapı denetim raporu hangi bölümleri içerir? Beton sınıfı, donatı kontrolü, iskan ruhsatı okuma rehberi ve kritik göstergeler.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-yaslilar-icin-deprem.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-yaslilar-icin-deprem.webp</image:loc>
+      <image:title>Yaşlılar İçin Deprem Hazırlığı ve Güvenlik Rehberi</image:title>
+      <image:caption>65 yaş üstü bireylerin deprem hazırlığı: ilaç yönetimi, evde güvenli düzenleme, tahliye planı ve aile iletişimi için detaylı rehber.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-zemin-etudu-nedir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-zemin-etudu-nedir.webp</image:loc>
+      <image:title>Zemin Etüdü Nedir? Deprem ve Yapı Güvenliğindeki Önemi</image:title>
+      <image:caption>Zemin etüdü nedir, nasıl yapılır, raporu nasıl okunur? Depremde zeminin yapıyı nasıl etkilediği ve zemin analizi rehberi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-zorunlu-deprem-tatbikati.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-zorunlu-deprem-tatbikati.webp</image:loc>
+      <image:title>İşyerinde Deprem Tatbikatı Nasıl Yapılır?</image:title>
+      <image:caption>İşyerleri için zorunlu deprem tatbikatı düzenleme rehberi. 6331 sayılı kanun ne diyor? Tatbikat aşamaları, personel eğitimi ve belgeler.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-adana.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/adana.webp</image:loc>
+      <image:title>Adana şehri</image:title>
+      <image:caption>Adana ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-adana.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/adana-og.webp</image:loc>
+      <image:title>Adana deprem haritası</image:title>
+      <image:caption>Adana ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-adiyaman.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/adiyaman.webp</image:loc>
+      <image:title>Adıyaman şehri</image:title>
+      <image:caption>Adıyaman ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-adiyaman.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/adiyaman-og.webp</image:loc>
+      <image:title>Adıyaman deprem haritası</image:title>
+      <image:caption>Adıyaman ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-afyonkarahisar.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/afyonkarahisar.webp</image:loc>
+      <image:title>Afyonkarahisar şehri</image:title>
+      <image:caption>Afyonkarahisar ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-afyonkarahisar.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/afyonkarahisar-og.webp</image:loc>
+      <image:title>Afyonkarahisar deprem haritası</image:title>
+      <image:caption>Afyonkarahisar ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-agri.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/agri.webp</image:loc>
+      <image:title>Ağrı şehri</image:title>
+      <image:caption>Ağrı ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-agri.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/agri-og.webp</image:loc>
+      <image:title>Ağrı deprem haritası</image:title>
+      <image:caption>Ağrı ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-aksaray.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/aksaray.webp</image:loc>
+      <image:title>Aksaray şehri</image:title>
+      <image:caption>Aksaray ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-aksaray.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/aksaray-og.webp</image:loc>
+      <image:title>Aksaray deprem haritası</image:title>
+      <image:caption>Aksaray ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-amasya.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/amasya.webp</image:loc>
+      <image:title>Amasya şehri</image:title>
+      <image:caption>Amasya ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-amasya.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/amasya-og.webp</image:loc>
+      <image:title>Amasya deprem haritası</image:title>
+      <image:caption>Amasya ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-ankara.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/ankara.webp</image:loc>
+      <image:title>Ankara şehri</image:title>
+      <image:caption>Ankara ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-ankara.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/ankara-og.webp</image:loc>
+      <image:title>Ankara deprem haritası</image:title>
+      <image:caption>Ankara ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-antalya.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/antalya.webp</image:loc>
+      <image:title>Antalya şehri</image:title>
+      <image:caption>Antalya ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-antalya.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/antalya-og.webp</image:loc>
+      <image:title>Antalya deprem haritası</image:title>
+      <image:caption>Antalya ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-ardahan.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/ardahan.webp</image:loc>
+      <image:title>Ardahan şehri</image:title>
+      <image:caption>Ardahan ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-ardahan.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/ardahan-og.webp</image:loc>
+      <image:title>Ardahan deprem haritası</image:title>
+      <image:caption>Ardahan ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-artvin.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/artvin.webp</image:loc>
+      <image:title>Artvin şehri</image:title>
+      <image:caption>Artvin ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-artvin.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/artvin-og.webp</image:loc>
+      <image:title>Artvin deprem haritası</image:title>
+      <image:caption>Artvin ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-aydin.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/aydin.webp</image:loc>
+      <image:title>Aydın şehri</image:title>
+      <image:caption>Aydın ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-aydin.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/aydin-og.webp</image:loc>
+      <image:title>Aydın deprem haritası</image:title>
+      <image:caption>Aydın ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-balikesir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/balikesir.webp</image:loc>
+      <image:title>Balıkesir şehri</image:title>
+      <image:caption>Balıkesir ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-balikesir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/balikesir-og.webp</image:loc>
+      <image:title>Balıkesir deprem haritası</image:title>
+      <image:caption>Balıkesir ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bartin.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/bartin.webp</image:loc>
+      <image:title>Bartın şehri</image:title>
+      <image:caption>Bartın ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bartin.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/bartin-og.webp</image:loc>
+      <image:title>Bartın deprem haritası</image:title>
+      <image:caption>Bartın ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-batman.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/batman.webp</image:loc>
+      <image:title>Batman şehri</image:title>
+      <image:caption>Batman ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-batman.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/batman-og.webp</image:loc>
+      <image:title>Batman deprem haritası</image:title>
+      <image:caption>Batman ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bayburt.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/bayburt.webp</image:loc>
+      <image:title>Bayburt şehri</image:title>
+      <image:caption>Bayburt ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bayburt.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/bayburt-og.webp</image:loc>
+      <image:title>Bayburt deprem haritası</image:title>
+      <image:caption>Bayburt ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bilecik.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/bilecik.webp</image:loc>
+      <image:title>Bilecik şehri</image:title>
+      <image:caption>Bilecik ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bilecik.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/bilecik-og.webp</image:loc>
+      <image:title>Bilecik deprem haritası</image:title>
+      <image:caption>Bilecik ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bingol.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/bingol.webp</image:loc>
+      <image:title>Bingöl şehri</image:title>
+      <image:caption>Bingöl ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bingol.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/bingol-og.webp</image:loc>
+      <image:title>Bingöl deprem haritası</image:title>
+      <image:caption>Bingöl ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bitlis.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/bitlis.webp</image:loc>
+      <image:title>Bitlis şehri</image:title>
+      <image:caption>Bitlis ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bitlis.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/bitlis-og.webp</image:loc>
+      <image:title>Bitlis deprem haritası</image:title>
+      <image:caption>Bitlis ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bolu.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/bolu.webp</image:loc>
+      <image:title>Bolu şehri</image:title>
+      <image:caption>Bolu ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bolu.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/bolu-og.webp</image:loc>
+      <image:title>Bolu deprem haritası</image:title>
+      <image:caption>Bolu ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-burdur.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/burdur.webp</image:loc>
+      <image:title>Burdur şehri</image:title>
+      <image:caption>Burdur ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-burdur.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/burdur-og.webp</image:loc>
+      <image:title>Burdur deprem haritası</image:title>
+      <image:caption>Burdur ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bursa.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/bursa.webp</image:loc>
+      <image:title>Bursa şehri</image:title>
+      <image:caption>Bursa ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bursa.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/bursa-og.webp</image:loc>
+      <image:title>Bursa deprem haritası</image:title>
+      <image:caption>Bursa ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-canakkale.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/canakkale.webp</image:loc>
+      <image:title>Çanakkale şehri</image:title>
+      <image:caption>Çanakkale ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-canakkale.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/canakkale-og.webp</image:loc>
+      <image:title>Çanakkale deprem haritası</image:title>
+      <image:caption>Çanakkale ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-cankiri.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/cankiri.webp</image:loc>
+      <image:title>Çankırı şehri</image:title>
+      <image:caption>Çankırı ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-cankiri.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/cankiri-og.webp</image:loc>
+      <image:title>Çankırı deprem haritası</image:title>
+      <image:caption>Çankırı ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-corum.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/corum.webp</image:loc>
+      <image:title>Çorum şehri</image:title>
+      <image:caption>Çorum ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-corum.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/corum-og.webp</image:loc>
+      <image:title>Çorum deprem haritası</image:title>
+      <image:caption>Çorum ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-denizli.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/denizli.webp</image:loc>
+      <image:title>Denizli şehri</image:title>
+      <image:caption>Denizli ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-denizli.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/denizli-og.webp</image:loc>
+      <image:title>Denizli deprem haritası</image:title>
+      <image:caption>Denizli ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-diyarbakir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/diyarbakir.webp</image:loc>
+      <image:title>Diyarbakır şehri</image:title>
+      <image:caption>Diyarbakır ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-diyarbakir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/diyarbakir-og.webp</image:loc>
+      <image:title>Diyarbakır deprem haritası</image:title>
+      <image:caption>Diyarbakır ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-duzce.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/duzce.webp</image:loc>
+      <image:title>Düzce şehri</image:title>
+      <image:caption>Düzce ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-duzce.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/duzce-og.webp</image:loc>
+      <image:title>Düzce deprem haritası</image:title>
+      <image:caption>Düzce ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-edirne.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/edirne.webp</image:loc>
+      <image:title>Edirne şehri</image:title>
+      <image:caption>Edirne ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-edirne.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/edirne-og.webp</image:loc>
+      <image:title>Edirne deprem haritası</image:title>
+      <image:caption>Edirne ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-elazig.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/elazig.webp</image:loc>
+      <image:title>Elazığ şehri</image:title>
+      <image:caption>Elazığ ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-elazig.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/elazig-og.webp</image:loc>
+      <image:title>Elazığ deprem haritası</image:title>
+      <image:caption>Elazığ ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-erzincan.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/erzincan.webp</image:loc>
+      <image:title>Erzincan şehri</image:title>
+      <image:caption>Erzincan ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-erzincan.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/erzincan-og.webp</image:loc>
+      <image:title>Erzincan deprem haritası</image:title>
+      <image:caption>Erzincan ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-erzurum.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/erzurum.webp</image:loc>
+      <image:title>Erzurum şehri</image:title>
+      <image:caption>Erzurum ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-erzurum.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/erzurum-og.webp</image:loc>
+      <image:title>Erzurum deprem haritası</image:title>
+      <image:caption>Erzurum ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-eskisehir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/eskisehir.webp</image:loc>
+      <image:title>Eskişehir şehri</image:title>
+      <image:caption>Eskişehir ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-eskisehir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/eskisehir-og.webp</image:loc>
+      <image:title>Eskişehir deprem haritası</image:title>
+      <image:caption>Eskişehir ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-gaziantep.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/gaziantep.webp</image:loc>
+      <image:title>Gaziantep şehri</image:title>
+      <image:caption>Gaziantep ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-gaziantep.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/gaziantep-og.webp</image:loc>
+      <image:title>Gaziantep deprem haritası</image:title>
+      <image:caption>Gaziantep ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-giresun.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/giresun.webp</image:loc>
+      <image:title>Giresun şehri</image:title>
+      <image:caption>Giresun ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-giresun.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/giresun-og.webp</image:loc>
+      <image:title>Giresun deprem haritası</image:title>
+      <image:caption>Giresun ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-gumushane.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/gumushane.webp</image:loc>
+      <image:title>Gümüşhane şehri</image:title>
+      <image:caption>Gümüşhane ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-gumushane.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/gumushane-og.webp</image:loc>
+      <image:title>Gümüşhane deprem haritası</image:title>
+      <image:caption>Gümüşhane ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-hakkari.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/hakkari.webp</image:loc>
+      <image:title>Hakkari şehri</image:title>
+      <image:caption>Hakkari ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-hakkari.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/hakkari-og.webp</image:loc>
+      <image:title>Hakkari deprem haritası</image:title>
+      <image:caption>Hakkari ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-hatay.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/hatay.webp</image:loc>
+      <image:title>Hatay şehri</image:title>
+      <image:caption>Hatay ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-hatay.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/hatay-og.webp</image:loc>
+      <image:title>Hatay deprem haritası</image:title>
+      <image:caption>Hatay ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-igdir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/igdir.webp</image:loc>
+      <image:title>Iğdır şehri</image:title>
+      <image:caption>Iğdır ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-igdir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/igdir-og.webp</image:loc>
+      <image:title>Iğdır deprem haritası</image:title>
+      <image:caption>Iğdır ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-isparta.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/isparta.webp</image:loc>
+      <image:title>Isparta şehri</image:title>
+      <image:caption>Isparta ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-isparta.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/isparta-og.webp</image:loc>
+      <image:title>Isparta deprem haritası</image:title>
+      <image:caption>Isparta ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-istanbul.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/istanbul.webp</image:loc>
+      <image:title>İstanbul şehri</image:title>
+      <image:caption>İstanbul ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-istanbul.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/istanbul-og.webp</image:loc>
+      <image:title>İstanbul deprem haritası</image:title>
+      <image:caption>İstanbul ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-izmir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/izmir.webp</image:loc>
+      <image:title>İzmir şehri</image:title>
+      <image:caption>İzmir ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-izmir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/izmir-og.webp</image:loc>
+      <image:title>İzmir deprem haritası</image:title>
+      <image:caption>İzmir ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kahramanmaras.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kahramanmaras.webp</image:loc>
+      <image:title>Kahramanmaraş şehri</image:title>
+      <image:caption>Kahramanmaraş ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kahramanmaras.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kahramanmaras-og.webp</image:loc>
+      <image:title>Kahramanmaraş deprem haritası</image:title>
+      <image:caption>Kahramanmaraş ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-karabuk.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/karabuk.webp</image:loc>
+      <image:title>Karabük şehri</image:title>
+      <image:caption>Karabük ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-karabuk.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/karabuk-og.webp</image:loc>
+      <image:title>Karabük deprem haritası</image:title>
+      <image:caption>Karabük ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-karaman.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/karaman.webp</image:loc>
+      <image:title>Karaman şehri</image:title>
+      <image:caption>Karaman ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-karaman.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/karaman-og.webp</image:loc>
+      <image:title>Karaman deprem haritası</image:title>
+      <image:caption>Karaman ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kars.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kars.webp</image:loc>
+      <image:title>Kars şehri</image:title>
+      <image:caption>Kars ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kars.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kars-og.webp</image:loc>
+      <image:title>Kars deprem haritası</image:title>
+      <image:caption>Kars ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kastamonu.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kastamonu.webp</image:loc>
+      <image:title>Kastamonu şehri</image:title>
+      <image:caption>Kastamonu ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kastamonu.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kastamonu-og.webp</image:loc>
+      <image:title>Kastamonu deprem haritası</image:title>
+      <image:caption>Kastamonu ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kayseri.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kayseri.webp</image:loc>
+      <image:title>Kayseri şehri</image:title>
+      <image:caption>Kayseri ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kayseri.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kayseri-og.webp</image:loc>
+      <image:title>Kayseri deprem haritası</image:title>
+      <image:caption>Kayseri ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kilis.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kilis.webp</image:loc>
+      <image:title>Kilis şehri</image:title>
+      <image:caption>Kilis ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kilis.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kilis-og.webp</image:loc>
+      <image:title>Kilis deprem haritası</image:title>
+      <image:caption>Kilis ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kirikkale.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kirikkale.webp</image:loc>
+      <image:title>Kırıkkale şehri</image:title>
+      <image:caption>Kırıkkale ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kirikkale.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kirikkale-og.webp</image:loc>
+      <image:title>Kırıkkale deprem haritası</image:title>
+      <image:caption>Kırıkkale ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kirklareli.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kirklareli.webp</image:loc>
+      <image:title>Kırklareli şehri</image:title>
+      <image:caption>Kırklareli ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kirklareli.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kirklareli-og.webp</image:loc>
+      <image:title>Kırklareli deprem haritası</image:title>
+      <image:caption>Kırklareli ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kirsehir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kirsehir.webp</image:loc>
+      <image:title>Kırşehir şehri</image:title>
+      <image:caption>Kırşehir ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kirsehir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kirsehir-og.webp</image:loc>
+      <image:title>Kırşehir deprem haritası</image:title>
+      <image:caption>Kırşehir ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kocaeli.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kocaeli.webp</image:loc>
+      <image:title>Kocaeli şehri</image:title>
+      <image:caption>Kocaeli ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kocaeli.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kocaeli-og.webp</image:loc>
+      <image:title>Kocaeli deprem haritası</image:title>
+      <image:caption>Kocaeli ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-konya.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/konya.webp</image:loc>
+      <image:title>Konya şehri</image:title>
+      <image:caption>Konya ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-konya.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/konya-og.webp</image:loc>
+      <image:title>Konya deprem haritası</image:title>
+      <image:caption>Konya ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kutahya.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kutahya.webp</image:loc>
+      <image:title>Kütahya şehri</image:title>
+      <image:caption>Kütahya ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kutahya.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/kutahya-og.webp</image:loc>
+      <image:title>Kütahya deprem haritası</image:title>
+      <image:caption>Kütahya ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-malatya.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/malatya.webp</image:loc>
+      <image:title>Malatya şehri</image:title>
+      <image:caption>Malatya ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-malatya.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/malatya-og.webp</image:loc>
+      <image:title>Malatya deprem haritası</image:title>
+      <image:caption>Malatya ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-manisa.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/manisa.webp</image:loc>
+      <image:title>Manisa şehri</image:title>
+      <image:caption>Manisa ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-manisa.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/manisa-og.webp</image:loc>
+      <image:title>Manisa deprem haritası</image:title>
+      <image:caption>Manisa ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-mardin.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/mardin.webp</image:loc>
+      <image:title>Mardin şehri</image:title>
+      <image:caption>Mardin ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-mardin.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/mardin-og.webp</image:loc>
+      <image:title>Mardin deprem haritası</image:title>
+      <image:caption>Mardin ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-mersin.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/mersin.webp</image:loc>
+      <image:title>Mersin şehri</image:title>
+      <image:caption>Mersin ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-mersin.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/mersin-og.webp</image:loc>
+      <image:title>Mersin deprem haritası</image:title>
+      <image:caption>Mersin ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-mugla.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/mugla.webp</image:loc>
+      <image:title>Muğla şehri</image:title>
+      <image:caption>Muğla ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-mugla.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/mugla-og.webp</image:loc>
+      <image:title>Muğla deprem haritası</image:title>
+      <image:caption>Muğla ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-mus.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/mus.webp</image:loc>
+      <image:title>Muş şehri</image:title>
+      <image:caption>Muş ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-mus.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/mus-og.webp</image:loc>
+      <image:title>Muş deprem haritası</image:title>
+      <image:caption>Muş ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-nevsehir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/nevsehir.webp</image:loc>
+      <image:title>Nevşehir şehri</image:title>
+      <image:caption>Nevşehir ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-nevsehir.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/nevsehir-og.webp</image:loc>
+      <image:title>Nevşehir deprem haritası</image:title>
+      <image:caption>Nevşehir ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-nigde.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/nigde.webp</image:loc>
+      <image:title>Niğde şehri</image:title>
+      <image:caption>Niğde ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-nigde.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/nigde-og.webp</image:loc>
+      <image:title>Niğde deprem haritası</image:title>
+      <image:caption>Niğde ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-ordu.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/ordu.webp</image:loc>
+      <image:title>Ordu şehri</image:title>
+      <image:caption>Ordu ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-ordu.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/ordu-og.webp</image:loc>
+      <image:title>Ordu deprem haritası</image:title>
+      <image:caption>Ordu ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-osmaniye.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/osmaniye.webp</image:loc>
+      <image:title>Osmaniye şehri</image:title>
+      <image:caption>Osmaniye ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-osmaniye.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/osmaniye-og.webp</image:loc>
+      <image:title>Osmaniye deprem haritası</image:title>
+      <image:caption>Osmaniye ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-rize.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/rize.webp</image:loc>
+      <image:title>Rize şehri</image:title>
+      <image:caption>Rize ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-rize.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/rize-og.webp</image:loc>
+      <image:title>Rize deprem haritası</image:title>
+      <image:caption>Rize ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-sakarya.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/sakarya.webp</image:loc>
+      <image:title>Sakarya şehri</image:title>
+      <image:caption>Sakarya ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-sakarya.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/sakarya-og.webp</image:loc>
+      <image:title>Sakarya deprem haritası</image:title>
+      <image:caption>Sakarya ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-samsun.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/samsun.webp</image:loc>
+      <image:title>Samsun şehri</image:title>
+      <image:caption>Samsun ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-samsun.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/samsun-og.webp</image:loc>
+      <image:title>Samsun deprem haritası</image:title>
+      <image:caption>Samsun ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-sanliurfa.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/sanliurfa.webp</image:loc>
+      <image:title>Şanlıurfa şehri</image:title>
+      <image:caption>Şanlıurfa ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-sanliurfa.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/sanliurfa-og.webp</image:loc>
+      <image:title>Şanlıurfa deprem haritası</image:title>
+      <image:caption>Şanlıurfa ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-siirt.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/siirt.webp</image:loc>
+      <image:title>Siirt şehri</image:title>
+      <image:caption>Siirt ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-siirt.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/siirt-og.webp</image:loc>
+      <image:title>Siirt deprem haritası</image:title>
+      <image:caption>Siirt ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-sinop.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/sinop.webp</image:loc>
+      <image:title>Sinop şehri</image:title>
+      <image:caption>Sinop ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-sinop.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/sinop-og.webp</image:loc>
+      <image:title>Sinop deprem haritası</image:title>
+      <image:caption>Sinop ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-sirnak.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/sirnak.webp</image:loc>
+      <image:title>Şırnak şehri</image:title>
+      <image:caption>Şırnak ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-sirnak.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/sirnak-og.webp</image:loc>
+      <image:title>Şırnak deprem haritası</image:title>
+      <image:caption>Şırnak ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-sivas.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/sivas.webp</image:loc>
+      <image:title>Sivas şehri</image:title>
+      <image:caption>Sivas ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-sivas.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/sivas-og.webp</image:loc>
+      <image:title>Sivas deprem haritası</image:title>
+      <image:caption>Sivas ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-tekirdag.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/tekirdag.webp</image:loc>
+      <image:title>Tekirdağ şehri</image:title>
+      <image:caption>Tekirdağ ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-tekirdag.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/tekirdag-og.webp</image:loc>
+      <image:title>Tekirdağ deprem haritası</image:title>
+      <image:caption>Tekirdağ ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-tokat.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/tokat.webp</image:loc>
+      <image:title>Tokat şehri</image:title>
+      <image:caption>Tokat ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-tokat.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/tokat-og.webp</image:loc>
+      <image:title>Tokat deprem haritası</image:title>
+      <image:caption>Tokat ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-trabzon.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/trabzon.webp</image:loc>
+      <image:title>Trabzon şehri</image:title>
+      <image:caption>Trabzon ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-trabzon.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/trabzon-og.webp</image:loc>
+      <image:title>Trabzon deprem haritası</image:title>
+      <image:caption>Trabzon ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-tunceli.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/tunceli.webp</image:loc>
+      <image:title>Tunceli şehri</image:title>
+      <image:caption>Tunceli ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-tunceli.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/tunceli-og.webp</image:loc>
+      <image:title>Tunceli deprem haritası</image:title>
+      <image:caption>Tunceli ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-usak.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/usak.webp</image:loc>
+      <image:title>Uşak şehri</image:title>
+      <image:caption>Uşak ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-usak.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/usak-og.webp</image:loc>
+      <image:title>Uşak deprem haritası</image:title>
+      <image:caption>Uşak ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-van.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/van.webp</image:loc>
+      <image:title>Van şehri</image:title>
+      <image:caption>Van ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-van.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/van-og.webp</image:loc>
+      <image:title>Van deprem haritası</image:title>
+      <image:caption>Van ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-yalova.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/yalova.webp</image:loc>
+      <image:title>Yalova şehri</image:title>
+      <image:caption>Yalova ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-yalova.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/yalova-og.webp</image:loc>
+      <image:title>Yalova deprem haritası</image:title>
+      <image:caption>Yalova ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-yozgat.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/yozgat.webp</image:loc>
+      <image:title>Yozgat şehri</image:title>
+      <image:caption>Yozgat ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-yozgat.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/yozgat-og.webp</image:loc>
+      <image:title>Yozgat deprem haritası</image:title>
+      <image:caption>Yozgat ili anlık deprem ve risk haritası</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-zonguldak.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/zonguldak.webp</image:loc>
+      <image:title>Zonguldak şehri</image:title>
+      <image:caption>Zonguldak ili görüntüsü ve deprem aktivitesi</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-zonguldak.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/cities/zonguldak-og.webp</image:loc>
+      <image:title>Zonguldak deprem haritası</image:title>
+      <image:caption>Zonguldak ili anlık deprem ve risk haritası</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
