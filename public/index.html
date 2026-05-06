@@ -281,6 +281,31 @@
                 display: grid !important;
                 grid-template-columns: repeat(2, minmax(0,1fr)) !important;
                 gap: 8px !important;
+                width: 100% !important;
+                margin-bottom: 4px !important;
+            }
+            /* Türkiye + Konumum CTA butonları (info-toggle dropdown içinde) */
+            .mobile-legend-actions .turkey-btn,
+            .mobile-legend-actions .my-location-btn {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 6px !important;
+                padding: 10px 12px !important;
+                margin: 0 !important;
+                border: none !important;
+                border-radius: 10px !important;
+                font-size: 13px !important;
+                font-weight: 700 !important;
+                color: #fff !important;
+                cursor: pointer !important;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.12) !important;
+            }
+            .mobile-legend-actions .turkey-btn {
+                background: linear-gradient(135deg, #E30A17, #C41E3A) !important;
+            }
+            .mobile-legend-actions .my-location-btn {
+                background: linear-gradient(135deg, #4285f4, #1a73e8) !important;
             }
         }
         @media (min-width: 1025px) {
@@ -903,6 +928,28 @@
     <!-- Kullanıcı Konumu -->
     <script defer src="js/geolocation.js?v=202604231700"></script>
     <!-- İstatistik Güncelleyici Script -->
+
+    <!-- Mobile dropdown fix: ensure both Türkiye and Konumum CTA buttons land
+         inside .mobile-legend-actions (header.js only moves the Türkiye one). -->
+    <script>
+    (function() {
+      function placeButtons() {
+        if (window.innerWidth > 1024) return;
+        var actions = document.querySelector('.mobile-info-content .mobile-legend-actions');
+        var turkeyBtn = document.getElementById('turkey-btn');
+        var myLocationBtn = document.querySelector('.my-location-btn');
+        if (!actions || !turkeyBtn || !myLocationBtn) return;
+        if (turkeyBtn.parentElement !== actions) actions.appendChild(turkeyBtn);
+        if (myLocationBtn.parentElement !== actions) actions.appendChild(myLocationBtn);
+      }
+      // Run on load + whenever the info dropdown opens (body class flips).
+      window.addEventListener('DOMContentLoaded', placeButtons);
+      window.addEventListener('load', placeButtons);
+      window.addEventListener('resize', placeButtons);
+      var observer = new MutationObserver(placeButtons);
+      observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    })();
+    </script>
 </body>
 
 </html>
