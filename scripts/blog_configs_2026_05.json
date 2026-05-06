@@ -1,0 +1,745 @@
+[
+  {
+    "slug": "e-devlet-deprem-riski-sorgulama",
+    "title": "E-Devlet ile Deprem Riski Sorgulama 2026 — Adım Adım",
+    "meta_description": "E-devlet üzerinden binanızın deprem riskini, kentsel dönüşüm durumunu ve DASK poliçesini nasıl sorgulayacağınızın 2026 rehberi.",
+    "keywords": ["e-devlet deprem riski sorgulama", "binam depreme dayanıklı mı", "e-devlet bina deprem performansı", "deprem risk raporu online", "DASK e-devlet sorgulama"],
+    "category": "sigorta",
+    "image_alt": "E-Devlet deprem riski sorgulama ekran görseli",
+    "lead": "Yaşadığınız binanın deprem riski hakkında resmî verilere ulaşmak çoğu zaman karışık prosedürler içerir. E-devlet 2024'ten itibaren AFAD ve Çevre, Şehircilik ve İklim Değişikliği Bakanlığı verilerini birleştirerek vatandaşa adres bazlı sorgulama imkânı sunuyor. Bu rehberde 7 farklı sorgulamayı adım adım gösteriyoruz.",
+    "body_h2_blocks": [
+      ["E-Devlet Deprem Riski Sorgulama Nedir?", [
+        "E-devlet kapısı (turkiye.gov.tr) üzerinden ulaşılabilen deprem riski sorgulama hizmeti, vatandaşların kendi adres veya tapu bilgilerini girerek binanın resmi kayıtlardaki risk durumunu görmesini sağlayan ücretsiz bir devlet hizmetidir. AFAD'ın deprem tehlike haritası, Çevre ve Şehircilik Bakanlığı'nın riskli yapı tespit kayıtları ve DASK poliçe bilgileri tek noktadan sorgulanabilir.",
+        "Sorgulama, sadece 'tehlikeli' veya 'tehlikesiz' gibi ikili bir cevap vermez. Adresin bulunduğu yerin <strong>spektral ivme değeri</strong>, zemin sınıfı (ZA-ZF), <strong>en yakın aktif fay</strong> ve binanın yapı denetim kaydı gibi ayrıntılı veriler de gösterilir. Bu sayede ev satın almadan önce de kullanılabilen güçlü bir araç haline geldi."
+      ]],
+      ["Hangi Kurumlar E-Devlet'te Deprem Verisi Sunar?", [
+        "E-devlet üzerinden 4 farklı kurumun verisine ulaşılabilir: <strong>AFAD</strong> (Türkiye Deprem Tehlike Haritası), <strong>Çevre Şehircilik Bakanlığı</strong> (Riskli Yapı Tespit Kayıtları, Kentsel Dönüşüm), <strong>Tapu ve Kadastro</strong> (yapı sınıfı, ruhsat tarihi) ve <strong>DASK</strong> (zorunlu deprem sigortası).",
+        "Her kurumun farklı bir hizmet kodu vardır. AFAD verisine erişim için 'Deprem Tehlike Sorgulama', kentsel dönüşüm için 'Riskli Yapı Tespiti Sorgulama' aramaları kullanılır. Bu hizmetler 2023 sonrasında entegre edildi; öncesinde her kurumun ayrı sitesinden manuel sorgulama yapılması gerekiyordu."
+      ]],
+      ["Adım Adım: E-Devlet'te Bina Deprem Riski Sorgulama", [
+        "<strong>1. Adım:</strong> turkiye.gov.tr adresine gidin ve T.C. kimlik numaranız ile e-devlet şifrenizi girerek giriş yapın. Mobil imza, e-imza veya internet bankacılığıyla da giriş mümkündür.",
+        "<strong>2. Adım:</strong> Üst arama çubuğuna 'deprem riski' yazın. Açılan listeden 'AFAD - Bina Deprem Tehlike Sorgulama' hizmetini seçin.",
+        "<strong>3. Adım:</strong> Adres veya UAVT (Ulusal Adres Veri Tabanı) numarası girin. Apartman dairesi seviyesine kadar detay verebilirsiniz.",
+        "<strong>4. Adım:</strong> Açılan ekranda spektral ivme değeri (Ss, S1), zemin sınıfı, en yakın fay mesafesi, deprem tehlike değeri (PGA) görüntülenir. Bu değerler TBDY 2019 yönetmeliği esasları ile yorumlanır.",
+        "<strong>5. Adım:</strong> Sonucun çıktısını PDF olarak indirip arşivleyin. Konut alım-satım, kira sözleşmesi gibi işlemlerde resmi belge olarak kullanılabilir."
+      ]],
+      ["AFAD E-Devlet Entegrasyonu: Neler Görülebilir?", [
+        "AFAD'ın e-devlet entegrasyonunda sadece istatistiksel risk değil, son depremlerin <strong>oluş zamanı, büyüklüğü, derinliği ve merkez üssü</strong> bilgileri de yer alır. Adresinize 50 km yakınındaki son 30 günde gerçekleşmiş depremlerin listesi sunulur.",
+        "Ayrıca <strong>TDTH (Türkiye Deprem Tehlike Haritası)</strong> verisi adresin tam koordinatlarına özel olarak gösterilir. Bu harita 475 yıl içinde aşılma olasılığı %10 olan deprem büyüklüklerini hesaplar — bina tasarımında kullanılan resmi standarttır."
+      ]],
+      ["Kentsel Dönüşüm Risk Tespit Başvurusu E-Devlet'ten Yapılır mı?", [
+        "Evet. 6306 sayılı Afet Riski Altındaki Alanların Dönüştürülmesi Hakkında Kanun kapsamındaki riskli yapı tespit başvurusu artık tamamen e-devlet üzerinden yapılabilir. 'Riskli Yapı Tespit Başvurusu' hizmetini kullanın.",
+        "Başvuru için tapu ve apartman/site yöneticisinin onayı gerekir. Tespit ücreti yaklaşık 8.000-15.000 TL arasındadır (2026 fiyatlarıyla, bina büyüklüğüne göre değişir). Sonuç 30 gün içinde e-devlet hesabınıza düşer."
+      ]],
+      ["DASK Poliçe ve Hasar Sorgulama E-Devlet'te Nasıl Yapılır?", [
+        "DASK (Doğal Afet Sigortaları Kurumu) e-devlet entegrasyonu 2022'den beri aktif. 'DASK Poliçe Sorgulama' hizmetiyle binanızın aktif poliçesi olup olmadığını, prim tutarını ve teminat limitini görebilirsiniz.",
+        "Hasar başvurusu da e-devlet üzerinden başlatılabilir. 'DASK Hasar İhbar' hizmeti deprem sonrası ilk 30 gün içinde tamamlanmalıdır. Ekspertiz randevusu otomatik atanır."
+      ]],
+      ["Sonuçları Nasıl Yorumlamalısınız?", [
+        "<strong>Spektral ivme değeri (Ss):</strong> 1.0 g üstü çok yüksek risk, 0.5-1.0 g yüksek risk, 0.3-0.5 g orta risk, 0.3 altı düşük risk. Türkiye'nin büyük şehirlerinin çoğu (İstanbul, İzmir, Adana) yüksek risk grubundadır.",
+        "<strong>Zemin sınıfı:</strong> ZA en sağlam (kaya), ZF en zayıf (sıvılaşma riski olan alüvyon). ZD-ZF zeminlerdeki binalar deprem dalgalarını 2-4 kat büyütür. Eğer ZE/ZF zeminde yaşıyorsanız bina güçlendirme veya kentsel dönüşüm değerlendirilmelidir.",
+        "<strong>Riskli Yapı kaydı:</strong> 'Riskli' işareti varsa bina 6306 sayılı yasaya göre yıkılma kararı almıştır. 'Tespit edilmedi' ifadesi binanın güvenli olduğu anlamına gelmez — sadece henüz inceleme yapılmamış olabilir."
+      ]],
+      ["E-Devlet Sorgulama Sonrası Atılacak Adımlar", [
+        "Sorgulama sonucu yüksek risk gösteriyorsa şu adımları izleyin: (1) <a href=\"/blog-bina-deprem-performans-raporu-nedir.html\">Bina deprem performans raporu</a> aldırın. (2) Kentsel dönüşüm muhtemel ise <a href=\"/blog-kentsel-donusum-vergisi-muafiyeti.html\">vergi muafiyetlerini araştırın</a>. (3) DASK poliçenizi yenileyin, üst limitte sigorta yaptırın.",
+        "Düşük risk gösterse bile bina yaşı 25+ ise rehavet etmeyin. Türkiye'de yapı denetim 2001'de zorunlu hale geldi; öncesinde inşa edilen yapıların büyük çoğunluğunda denetim eksiktir. Yapı denetim raporu olmayan binalar için ek inceleme yaptırmak şart."
+      ]]
+    ],
+    "faqs": [
+      ["E-devletten deprem riski sorgulama ücretli mi?", "Hayır, AFAD entegrasyonlu temel sorgulama tamamen ücretsizdir. Yalnızca riskli yapı tespit başvurusu için yetkili kuruluşa ücret ödenir."],
+      ["E-devletten kira evimi sorgulayabilir miyim?", "Evet, kiracılar da yaşadıkları binanın adres veya UAVT numarasıyla deprem riski sorgulaması yapabilir. Ev sahibinin onayı gerekmez."],
+      ["E-devlet sonucu mahkemede delil olur mu?", "Evet, e-devletten alınan AFAD ve riskli yapı tespit raporları resmi belge niteliğindedir; mahkemede ve sigorta süreçlerinde geçerlidir."],
+      ["Bina deprem riski 'tespit edilmedi' yazıyorsa güvenli mi?", "Hayır, 'tespit edilmedi' ifadesi henüz inceleme yapılmadığı anlamına gelir. Güvenli olduğu garanti edilmez. Mutlaka bağımsız bir performans analizi yaptırın."],
+      ["DASK poliçesi olmayan binalar için sorgu yapılabilir mi?", "Evet, sorgu için DASK poliçesi gerekmez. Ancak DASK'sız yaşamak yasaldışıdır ve elektrik/su aboneliği başlatmada engel oluşturur."]
+    ],
+    "related": [
+      ["/blog-dask-nedir.html", "DASK Zorunlu Deprem Sigortası"],
+      ["/blog-kentsel-donusum-vergisi-muafiyeti.html", "Kentsel Dönüşümde Vergi Muafiyeti"],
+      ["/blog-bina-deprem-performans-raporu-nedir.html", "Bina Deprem Performans Raporu"],
+      ["/blog-tbdy-2019-nedir.html", "TBDY 2019 Yönetmeliği"],
+      ["/blog.html", "Tüm Deprem Rehberleri"]
+    ]
+  },
+  {
+    "slug": "kentsel-donusum-vergisi-muafiyeti",
+    "title": "Kentsel Dönüşümde Vergi Muafiyeti 2026 — Tam Rehber",
+    "meta_description": "6306 sayılı yasa kapsamında KDV, tapu harcı, gelir vergisi muafiyetleri. Kentsel dönüşümde hangi vergilerden muafsınız, 2026 güncel listesi.",
+    "keywords": ["kentsel dönüşüm vergisi muafiyeti", "kentsel dönüşüm harç muafiyeti", "kentsel dönüşüm KDV istisnası", "deprem dönüşüm vergisi 2026", "riskli bina vergi avantajı"],
+    "category": "sigorta",
+    "image_alt": "Kentsel dönüşüm vergi muafiyeti dokümanları",
+    "lead": "6306 sayılı Afet Riski Altındaki Alanların Dönüştürülmesi Hakkında Kanun, riskli binaların yenilenmesini teşvik etmek için geniş vergi muafiyetleri sunar. Çoğu ev sahibi bu hakların hepsinden yararlanmadığı için yüz binlerce TL kaybeder. Bu rehberde 8 farklı vergi avantajı detaylandırılıyor.",
+    "body_h2_blocks": [
+      ["Kentsel Dönüşüm Sürecinde Hangi Vergiler Muaf Tutulur?", [
+        "6306 sayılı yasanın 7. maddesi, riskli yapı kapsamına giren binaların dönüşüm sürecinde aşağıdaki vergi ve harçlardan muaf olduğunu hükmediyor: KDV (yapı satışı ve kira yardımı dahil), tapu harcı, noter ücreti, gelir vergisi (kira yardımı), damga vergisi, belediye harçları, emlak vergisi (3 yıl).",
+        "Önemli detay: muafiyetlerin hepsi otomatik değil. <strong>Riskli yapı tespit raporu</strong> alınmış olması ve dönüşüm anlaşmasının resmi olarak imzalanmış olması şarttır. Yetersiz belgelendirme nedeniyle her yıl binlerce kişi bu haklarını kullanamadan kalır."
+      ]],
+      ["KDV Muafiyeti: Kimler Yararlanabilir?", [
+        "Riskli binanın yıkılıp yeniden yapılması sürecinde alınan yeni dairenin KDV'si %0'dır. Standart konut satışında %1-20 arası değişen KDV bu binalarda alınmaz. Tasarruf: 1 milyon TL'lik bir konutta 100.000-200.000 TL arasında KDV avantajı.",
+        "Hak sahibi: orijinal binadaki dairenin tapu sahibi. Kiracılar bu muafiyetten yararlanamaz. Eğer arsa payı dağılımı yeniden yapıldıysa (örn. 1 daireden 2 daireye düştüyse), muafiyet sadece eski daire değerine kadar geçerli — fazlası için normal KDV ödenir."
+      ]],
+      ["Tapu Harcı ve Noter Ücreti İstisnaları", [
+        "Tapu devir işlemlerinde alıcı ve satıcıdan toplam %4 oranında harç alınır (2026 itibarıyla). Kentsel dönüşüm kapsamındaki tapu işlemlerinde bu harç tamamen muaf. 1 milyon TL'lik daire için 40.000 TL tasarruf.",
+        "Noter ücreti, müteahhit ile yapılan dönüşüm sözleşmesinde de muaf. Standart ücreti 5.000-15.000 TL arasıdır. Ek olarak <strong>arsa pay sözleşmesi</strong>, <strong>yıkım izni</strong> gibi tüm noter işlemleri ücretsizdir."
+      ]],
+      ["Kira Yardımı Vergi Muafiyeti Var mı?", [
+        "Devlet, dönüşüm süresince hak sahibine aylık kira yardımı verir (2026'da büyük şehirlerde aylık 6.500-10.000 TL). Bu kira yardımı <strong>gelir vergisinden tamamen muaftır</strong>. Yıllık beyan zorunluluğu yoktur.",
+        "Ayrıca aldığınız kira yardımı, sosyal yardım programlarından (örn. AGİ) yararlanmanızı engellemez. Kira ödemediğiniz halde yardım almak yasal — devletin amacı dönüşümü hızlandırmak."
+      ]],
+      ["Gelir Vergisi ve Kentsel Dönüşüm Kazançları", [
+        "Eğer yıkılan binada birden fazla daireniz vardı ve dönüşüm sonrası bunları sattınız: 5 yıl tutma şartı kentsel dönüşüm dairelerinde aranmaz. Erken satışta gelir vergisi muafiyeti uygulanır. Standart konut için 5 yıl içinde satışta %30 gelir vergisi alınır.",
+        "Müteahhit ile yapılan kat karşılığı sözleşmede aldığınız fazla daireler için de aynı muafiyet geçerli. Kazanç 'değer artışı' olarak tanımlanmaz, 'mülkiyet değişimi' sayılır."
+      ]],
+      ["Muafiyetten Yararlanmak İçin Gerekli Belgeler", [
+        "<strong>1.</strong> Riskli yapı tespit raporu (yetkili kuruluştan, en az 30 günlük). <strong>2.</strong> Dönüşüm sözleşmesi (müteahhit veya bakanlık ile). <strong>3.</strong> Tapu fotokopisi. <strong>4.</strong> Hak sahibi listesi (bina paydaşları). <strong>5.</strong> Belediye yıkım izni.",
+        "Bu belgelerin hepsi noterden tasdikli kopyalarıyla başvurularda kullanılır. Eksik belge ile yapılan başvurularda muafiyet reddedilir; sonradan geriye dönük talep mümkün olabilir ama 2 yılı geçince hak düşer."
+      ]],
+      ["Başvuru Süreci: Belediye mi, Bakanlık mı?", [
+        "İki paralel başvuru yolu var: (1) <strong>Belediye yolu:</strong> Bina paydaşlarının 2/3'ü kabul ederse belediye dönüşümü organize eder. Hızlı ama paydaş kavgası riski. (2) <strong>Bakanlık yolu:</strong> Çevre Şehircilik Bakanlığı'na başvuru. Daha yavaş ama paydaş zorlama imkanı var.",
+        "Vergi muafiyetleri her iki yolda da geçerli. Vergi dairesine başvuru için 'Riskli Yapı Tespit Belgesi' yeterlidir. Belediye dosyaları otomatik olarak vergi dairesine bildirilir."
+      ]],
+      ["2026 Yılı İtibarıyla Değişen Düzenlemeler", [
+        "Şubat 2025'te 6306 sayılı yasaya yapılan eklemelerle muafiyet süreleri uzatıldı. Eski yasada emlak vergisi muafiyeti 2 yıldı, şimdi 3 yıl. Kira yardımı süresi 18 aydan 24 aya çıkarıldı.",
+        "Ayrıca yeni eklenen madde ile, dönüşüm sonrası yapılan yeni binanın <strong>5 yıl boyunca emlak vergisi %50 indirimli</strong> uygulanıyor. Bu, deprem güvenliği yüksek yeni yapıyı teşvik eden ek avantaj."
+      ]],
+      ["Sık Yapılan Hatalar ve Kaçırılan Muafiyetler", [
+        "<strong>Hata 1:</strong> Müteahhit faturalarında KDV gösterilmesi. Hak sahibi farkına varmadan KDV ödüyor olabilir. Mutlaka 'KDV muafiyetli' fatura talep edin.",
+        "<strong>Hata 2:</strong> Tapu harcının ödendiğini düşünüp talep etmemek. Tapuda harç gözükmese bile resmi belgeyle iade alınabilir.",
+        "<strong>Hata 3:</strong> Yeni dairenin tapuya geçişinde damga vergisi ödenmesi. Bu da muafiyet kapsamında — geri alınmalı."
+      ]]
+    ],
+    "faqs": [
+      ["Riskli yapı raporu olmayan binam dönüşüm vergi muafiyetinden faydalanır mı?", "Hayır, muafiyetlerin tamamı 'riskli yapı tespit raporu' belgesine bağlıdır. Önce rapor alınmalı, ardından muafiyet işlemleri başlatılmalıdır."],
+      ["Kentsel dönüşüm sözleşmesi imzaladım, muafiyetler ne zaman başlar?", "Muafiyetler resmi sözleşme tarihinden itibaren işler. Geriye dönük olarak inşaat öncesi dönem için muafiyet uygulanmaz."],
+      ["Kiracıyım, kentsel dönüşümde kira yardımı alabilir miyim?", "Evet, kiracılar 18 ay süreyle kira yardımı alır (vergi muafiyetli). Ev sahibinden bağımsız olarak başvurulabilir."],
+      ["Bakanlık dönüşümünde KDV muafiyeti otomatik mi?", "Otomatik değil; vergi dairesine 'Riskli Yapı Tespit Belgesi' ile başvuru yapılması gerekir. Aksi halde KDV alınır."],
+      ["Aldığım dönüşüm dairesini hemen satarsam vergi var mı?", "Hayır, kentsel dönüşüm kapsamındaki daireler için 5 yıl bekleme şartı uygulanmaz. Erken satışta gelir vergisi alınmaz."]
+    ],
+    "related": [
+      ["/blog-dask-nedir.html", "DASK Zorunlu Deprem Sigortası"],
+      ["/blog-e-devlet-deprem-riski-sorgulama.html", "E-Devlet Deprem Riski Sorgulama"],
+      ["/blog-deprem-oncesi-bina-guclendir.html", "Bina Güçlendirme"],
+      ["/blog-deprem-hasar-tazminat-sureci.html", "Deprem Hasar Tazminatı"],
+      ["/blog.html", "Tüm Deprem Rehberleri"]
+    ]
+  },
+  {
+    "slug": "bina-deprem-performans-raporu-nedir",
+    "title": "Bina Deprem Performans Raporu 2026 — Nedir, Nasıl Alınır?",
+    "meta_description": "Binanızın deprem performansını ölçen rapor: TBDY 2019 kapsamı, fiyatlandırma, yetkili mühendis seçimi ve sonuçların yorumlanması.",
+    "keywords": ["bina deprem performans raporu", "deprem performans analizi", "bina güçlendirme raporu", "TBDY 2018 performans değerlendirme", "deprem performans testi yaptırma"],
+    "category": "bilim",
+    "image_alt": "Bina deprem performans raporu mühendis incelemesi",
+    "lead": "Bina deprem performans raporu, mühendisin yapıyı detaylı inceleyerek deprem dayanımını ölçtüğü resmi belgedir. TBDY 2019 yönetmeliğinde performans seviyeleri tanımlandı; bu rapor olmadan güçlendirme yatırımı yapmak yanlıştır. 2026'da neler değişti?",
+    "body_h2_blocks": [
+      ["Deprem Performans Raporu Nedir?", [
+        "Bina deprem performans raporu, yetkili inşaat mühendisinin <strong>doğrusal elastik analiz</strong> veya <strong>doğrusal olmayan analiz</strong> yöntemleriyle binanın deprem davranışını sayısal olarak değerlendirdiği teknik dokümandır. TBDY 2019 yönetmeliğinde tanımlanan 4 performans seviyesinden hangisini sağladığı belirlenir.",
+        "Rapor 60-150 sayfa arasındadır. İçeriğinde: bina geometri ve yapı sistemi tanımı, malzeme dayanımı testleri, donatı tespit raporu, modal analiz, statik itme analizi (pushover), zaman tanım alanı analizi (gerekiyorsa), performans değerlendirmesi ve sonuç önerileri yer alır."
+      ]],
+      ["Hangi Binalara Zorunlu Tutulmaktadır?", [
+        "TBDY 2019'a göre şu binalar için performans raporu zorunludur: (1) Yapı yaşı 25 yıldan fazla olan ve risk grubunda yer alan binalar. (2) Belediye veya AFAD tarafından 'inceleme' notu konulan binalar. (3) Deprem sonrası yapılan hasar değerlendirmelerinde 'orta veya ağır hasarlı' kategorisindekiler. (4) Kentsel dönüşüm başvurusu yapılan tüm binalar.",
+        "Zorunlu olmasa da gönüllü performans raporu son yıllarda artıyor. Bina sahipleri özellikle satış öncesi veya kapsamlı tadilat öncesi rapor aldırıyor. Sigorta şirketleri de bu raporu olan binalara prim indirimi uygular."
+      ]],
+      ["Doğrusal Elastik Yöntem ile Doğrusal Olmayan Yöntem Farkı", [
+        "<strong>Doğrusal Elastik (Lineer) Yöntem:</strong> Bina malzemesinin tamamen elastik kaldığı varsayılır. Daha basit, daha hızlı, maliyeti düşük (15.000-30.000 TL). Düşük katlı binalar (1-7 kat) için yeterli. Bina hasar görmediği zaman sınırında performans öngörür.",
+        "<strong>Doğrusal Olmayan (Pushover/Time History):</strong> Malzemenin akma sınırını aştıktan sonraki davranışı modellenir. Daha gerçekçi sonuç verir. 8+ katlı binalar, kompleks geometri, perde duvarlı sistemler için zorunlu. Maliyeti 50.000-150.000 TL."
+      ]],
+      ["Raporu Kim Hazırlayabilir? Uzman Mühendis Gereksinimleri", [
+        "Rapor hazırlayacak mühendisin: <strong>(1)</strong> İnşaat Mühendisleri Odası kayıtlı, <strong>(2)</strong> Yapı denetim sertifikası sahip, <strong>(3)</strong> Performans değerlendirmesi konusunda en az 5 yıl deneyim, <strong>(4)</strong> SAP2000, ETABS, Probina gibi profesyonel yazılım sertifikası olmalıdır.",
+        "Bireysel mühendis tutmak yerine <strong>yetkili yapı denetim firması</strong> ile çalışmak güvenli. Firma sicili Çevre Şehircilik Bakanlığı sitesinden sorgulanabilir. Sicili düşük firmadan alınan rapor mahkemede zayıf delildir."
+      ]],
+      ["Rapor İçin Gerekli Belgeler ve Süreç", [
+        "<strong>Hazırlık aşaması:</strong> Bina ruhsat ve ruhsat eki projeleri (statik proje), yapı denetim raporu, tadilat ruhsatları, daha önceki hasar tespit kayıtları, kat malikleri kararı (toplu binalar için).",
+        "<strong>Saha çalışması:</strong> Mühendis 1-3 gün boyunca binayı detaylı inceler. Beton dayanımı testleri (sklerometre + karot), donatı taraması (radar), zemin etüdü (gerekirse). Bu adım rapor maliyetinin %30-50'sidir.",
+        "<strong>Analiz ve raporlama:</strong> 3-6 hafta süren bilgisayar modellemesi. Tamamlandıktan sonra resmi imzalı belge teslimi."
+      ]],
+      ["Maliyet: Deprem Performans Analizi Ne Kadar Tutar?", [
+        "2026 fiyatlarıyla ortalama maliyetler (m² başına):",
+        "<strong>1-3 katlı yapı:</strong> 25-40 TL/m² (toplam 5.000-12.000 TL).",
+        "<strong>4-7 katlı bina:</strong> 30-60 TL/m² (toplam 15.000-50.000 TL).",
+        "<strong>8+ katlı yüksek yapı:</strong> 50-120 TL/m² (toplam 50.000-300.000 TL).",
+        "Kat maliklerinin paylaşması nedeniyle daire başına maliyet düşer. 12 daireli orta büyüklükte bir bina için daire başı 2.000-5.000 TL."
+      ]],
+      ["Rapor Sonuçlarını Nasıl Okumalısınız?", [
+        "Rapor sonuç kısmında 4 olası performans seviyesinden biri belirlenir: <strong>KS (Kullanım Sürekliliği):</strong> Deprem sonrası bina hemen kullanılabilir. <strong>HS (Hasar Sınırlı):</strong> Hafif hasar, onarılabilir. <strong>GÖ (Göçmenin Önlenmesi):</strong> Bina ayakta kalır ama ağır hasarlı. <strong>GH (Göçme):</strong> Yıkılma tehlikesi var.",
+        "TBDY 2019'da konutlar için minimum hedef: 'Tasarım Depremi Altında HS, En Büyük Deprem Altında GÖ'. Eğer raporunuz bu hedefi karşılamıyorsa <strong>güçlendirme zorunludur</strong>."
+      ]],
+      ["Performans Yetersizse Sonraki Adım: Güçlendirme mi, Yıkım mı?", [
+        "Performans seviyesi GH ise yıkım+yeniden yapım daha ekonomik. Performans seviyesi GÖ ise güçlendirme tercih edilebilir.",
+        "<strong>Güçlendirme yöntemleri:</strong> CFRP (karbon fiber) sargılar, çelik mantolama, betonarme perde ekleme, viskoz sönümleyiciler. <a href=\"/blog-deprem-oncesi-bina-guclendir.html\">Detaylı güçlendirme rehberi</a>'ne bakın.",
+        "Maliyet karşılaştırması: 8 katlı 24 daireli bina için yıkım+yeniden yapım ~12-18 milyon TL, güçlendirme ~3-6 milyon TL. Ama güçlendirme sonrası %100 güvenlik garanti edilemez."
+      ]],
+      ["TBDY 2019 Kapsamında Performans Seviyeleri", [
+        "TBDY 2019, binaların önem sınıfına göre farklı performans hedefleri belirler. Konutlar 'I=1.0' (normal), okullar/hastaneler 'I=1.5' (özel önemli), itfaiye/iletişim binaları 'I=1.5' kategorisindedir. Önem sınıfı arttıkça hedef performans seviyesi sıkılaşır.",
+        "<a href=\"/blog-tbdy-2019-nedir.html\">TBDY 2019'un detayları</a> için ilgili rehberi inceleyin. Performans bazlı tasarım Türkiye'de 2018'den itibaren zorunlu — öncesinde inşa edilen binalar bu standart altındadır."
+      ]]
+    ],
+    "faqs": [
+      ["Performans raporu kaç yıl geçerli?", "TBDY 2019'a göre rapor 10 yıl geçerlidir. Ancak büyük tadilat, ek kat veya deprem sonrası yenilenmesi gerekir."],
+      ["Apartmandaki tüm daireleri tek rapor mu kapsar?", "Evet, performans raporu binanın tamamını kapsar. Daire bazında ayrı rapor yapılmaz; bina yapısal sistemi bütündür."],
+      ["Rapor olumsuz çıkarsa müteahhit sorumlu mu?", "Bina yaşı 10 yıl altındaysa ve TBDY uygulanmadığı tespit edilirse müteahhit hukuki olarak sorumludur. 10 yıl sonrası garantisi düşer."],
+      ["Devlet performans raporu için destek veriyor mu?", "Bazı belediyeler kentsel dönüşüm kapsamında ücretsiz veya indirimli rapor sunar. Çevre Şehircilik Bakanlığı'nın 6306 sayılı yasa kapsamında destekleri mevcut."],
+      ["Performans raporu olmadan güçlendirme yapılabilir mi?", "Hayır, güçlendirme öncesi mutlaka performans raporu alınmalıdır. Aksi halde güçlendirme tasarımı yanlış yapılabilir, bütçe boşa gidebilir."]
+    ],
+    "related": [
+      ["/blog-tbdy-2019-nedir.html", "TBDY 2019 Yönetmeliği"],
+      ["/blog-deprem-oncesi-bina-guclendir.html", "Bina Güçlendirme Yöntemleri"],
+      ["/blog-zemin-etudu-nedir.html", "Zemin Etüdü Nedir"],
+      ["/blog-evim-depreme-dayanikli-mi.html", "Evim Depreme Dayanıklı Mı"],
+      ["/blog.html", "Tüm Deprem Rehberleri"]
+    ]
+  },
+  {
+    "slug": "kolon-kesme-cezasi-ve-hukuki-sorumluluk",
+    "title": "Kolon Kesmenin Cezası 2026 — Hukuki Sorumluluk ve İhbar",
+    "meta_description": "Apartmanda kolon kesmek suç mu? TCK ve İmar Kanunu açısından cezai yaptırımlar, ihbar süreci, deprem sonrası tazminat hakları.",
+    "keywords": ["kolon kesme cezası", "kolon kesmek yasal mı", "taşıyıcı kolon kesme hapis cezası", "apartmanda kolon kesen komşu", "kolon kesme ihbar nereye yapılır"],
+    "category": "sigorta",
+    "image_alt": "Apartmanda kesilmiş taşıyıcı kolon - hasar görseli",
+    "lead": "Türkiye'deki büyük deprem kayıplarının önemli nedenlerinden biri, sahiplerin veya kiracıların izinsiz olarak <strong>taşıyıcı kolonları kesmesi veya zayıflatmasıdır</strong>. Bu eylem 2018'den itibaren ağır cezalara bağlandı; hapis, para cezası ve tazminat sorumluluğu söz konusu. Komşu binasında bu durumu fark ettiğinizde ne yapacağınızı bilmeniz gerekir.",
+    "body_h2_blocks": [
+      ["Kolon Kesmek Neden Bu Kadar Tehlikeli?", [
+        "Bir betonarme bina, kolonlar üzerinde durur. Kolonlar kesildiğinde veya zayıflatıldığında bina deprem yüklerini taşıyamaz. Kahramanmaraş depreminde yıkılan binaların %38'inde mağaza ve restoranların kolon kesim yaptığı tespit edildi (KAÇKM raporu, Mart 2024).",
+        "<strong>Yumuşak kat sendromu:</strong> Zemin katta dükkan açmak için kolonların kesilmesi, üst katların ağırlığını taşıma kapasitesini kaybetmesine yol açar. Sarsıntı sırasında yumuşak katın çökmesiyle bina pancake (krep) olur — herkes ölür."
+      ]],
+      ["Türk Ceza Kanunu'na Göre Kolon Kesmenin Cezası", [
+        "TCK 184. madde 'İmar Kirliliği' suçu kapsamında kolon kesme: <strong>1 yıldan 5 yıla hapis cezası</strong>. Eğer eylem deprem sonrası ölüme neden olursa: <strong>TCK 85. madde 'Taksirle Öldürme'</strong> hükümleri devreye girer; 2 yıldan 6 yıla hapis cezası.",
+        "Kasıtlı kolon kesimi (binayı yıkmak amacıyla) <strong>TCK 152. madde 'Mala Zarar Verme'</strong> suçu kapsamına girer ve daha ağır cezalandırılır: 4 aydan 3 yıla kadar hapis veya adli para cezası."
+      ]],
+      ["İmar Kirliliği Suçu Kapsamında Değerlendirme", [
+        "İmar Kanunu (3194 sayılı) 32. ve 42. maddeleri ruhsatsız tadilatı yasaklar. Kolon kesimi otomatik olarak ruhsatsız tadilattır. Cezai yaptırımlar: <strong>Yapının yıkım kararı</strong> (zorunlu), idari para cezası 50.000-300.000 TL arası (2026 değeri).",
+        "Sadece kolonu kesen kişi değil, bu kolonun üzerine inşaat yapan müteahhit veya bina sahibi de sorumludur. Kollektif suç kapsamına girer."
+      ]],
+      ["Kat Mülkiyeti Kanunu Açısından Taşıyıcı Unsurlar", [
+        "Kat Mülkiyeti Kanunu 19. madde: 'Ana yapının taşıyıcı unsurlarına müdahale eden kat maliki, oluşan zararları tazmin etmek zorundadır.' Bu zarar: bina değer kaybı + güçlendirme maliyeti + komşuların kira kaybı + manevi tazminat.",
+        "Apartmanda kolon kesen daireden alınabilecek tazminat tipik olarak 500.000-3 milyon TL arasındadır. Ev sahipleri toplu olarak dava açabilir."
+      ]],
+      ["Apartmanda Kolon Kesen Komşuya Ne Yapılabilir?", [
+        "<strong>Adım 1:</strong> Apartman yöneticisini bilgilendirin. Olağan kat malikleri kurulu kararıyla durum tespit ettirilir.",
+        "<strong>Adım 2:</strong> İhtarname gönderin (noterden). Komşuya kolonun yeniden inşası ve hasarın onarılması için süre verin (genelde 30 gün).",
+        "<strong>Adım 3:</strong> Süre dolduğunda <a href=\"/blog-deprem-hasar-tazminat-sureci.html\">tazminat davası açın</a>. Aynı zamanda Cumhuriyet Savcılığı'na suç duyurusunda bulunun.",
+        "<strong>Adım 4:</strong> Belediye Yapı Denetim Müdürlüğü'ne ihbar — bina için yıkım/güçlendirme kararı alabilir."
+      ]],
+      ["Belediyeye veya Yapı Denetim Kuruluşuna İhbar Süreci", [
+        "İhbar yöntemleri: <strong>(1)</strong> Belediye Yapı Denetim Müdürlüğü'ne yazılı dilekçe veya CIMER üzerinden online. <strong>(2)</strong> AFAD acil hattı (122) — özellikle deprem sonrası dönemde. <strong>(3)</strong> Çevre Şehircilik Bakanlığı'nın e-bilgilendirme sistemi.",
+        "İhbarcının kimliği gizli tutulur. İncelenen yapıda gerçekten kolon kesimi tespit edilirse, <strong>72 saat içinde yıkım/mühürleme kararı</strong> çıkar."
+      ]],
+      ["Mülk Sahibinin ve Müteahhitin Sorumluluğu", [
+        "Kolon kesimini yapan kiracı ise: kiracı + mülk sahibi müteselsil sorumludur. Mülk sahibi 'haberim yoktu' savunmasıyla sorumluluktan kurtulamaz; bina denetim sorumluluğu sahibe aittir.",
+        "Müteahhit kolonu izinsiz kestiyse: Yapı Denetim Yasası kapsamında ağır yaptırım. Müteahhit listeden silinir, 5 yıl iş alamaz, geçmiş işlerinin de yeniden incelenmesi başlatılır."
+      ]],
+      ["Deprem Sonrası Kolon Kesimi Nedeniyle Tazminat Davaları", [
+        "Kahramanmaraş depremi sonrası açılan davalarda, kolon kesimi nedeniyle hayatını kaybedenlerin ailelerine 8.5 milyon TL'ye varan tazminatlar ödendi. Manevi tazminat + maddi tazminat + cenaze masrafları kapsama girer.",
+        "Tazminat sigortadan değil suçluların kişisel mal varlığından alınır. Kolon kesen kişinin malları haczedilebilir. Bu nedenle DASK + ek deprem sigortası önemlidir — sigortacı geri dönüş hakkıyla suçlu kişiyi takip edebilir."
+      ]],
+      ["Kolon Hasarını Tespit Ettirme: Uzman İncelemesi", [
+        "Kolon kesimi şüphesinde uzman incelemesi: <strong>(1)</strong> Görsel inceleme (gözle veya endoskop). <strong>(2)</strong> Ultrasonik ölçüm — kolonda boşluk veya kesim tespiti. <strong>(3)</strong> Termal kamera — beton kalitesi farkları. <strong>(4)</strong> Karot örneği — laboratuvarda dayanım testi.",
+        "Tespit edilen hasar resmi rapora geçince hukuki süreç başlar. Bilirkişi raporu mahkemede esas delildir."
+      ]]
+    ],
+    "faqs": [
+      ["Kolonun bir kısmını kesip yerine kiriş koymak yasal mı?", "Hayır, taşıyıcı kolona herhangi bir müdahale (kısmi kesim, açıklığı genişletme, kiriş ekleme) statik mühendis onayı ve belediye ruhsatı olmadan suçtur."],
+      ["Kolon kestim, mı haberim yok dersem ceza var mı?", "'Kötü niyet' kanıtlanmasa bile İmar Kirliliği suçu kapsamına girer. Niyet aranmaksızın 1 yıldan 5 yıla hapis cezası uygulanır."],
+      ["Komşum yıllar önce kolon kesmiş, hala dava açılır mı?", "İmar Kirliliği suçunda zamanaşımı 8 yıldır. Kolonun durumu hala mevcutsa zamanaşımı işlemez (devam eden suç). Tazminat davası 10 yıl sürer."],
+      ["Apartman yöneticisi olarak kolon kesimi tespit edersem yükümlülüğüm var mı?", "Evet, KMK 35. madde gereği yöneticilerin durumu kat maliklerine bildirme ve hukuki süreci başlatma zorunluluğu vardır. Aksi halde yönetici sorumlu olur."],
+      ["Suç duyurusu kimi sorumlu kılar?", "Kolon kesen kişi (uygulayıcı), tadilat ruhsatı vermeyen ama izin veren mülk sahibi, ve denetlemekle görevli yapı denetim firması müteselsil sorumludur."]
+    ],
+    "related": [
+      ["/blog-bina-deprem-performans-raporu-nedir.html", "Bina Performans Raporu"],
+      ["/blog-tbdy-2019-nedir.html", "TBDY 2019 Yönetmeliği"],
+      ["/blog-deprem-hasar-tazminat-sureci.html", "Hasar Tazminatı"],
+      ["/blog-deprem-oncesi-bina-guclendir.html", "Bina Güçlendirme"],
+      ["/blog.html", "Tüm Deprem Rehberleri"]
+    ]
+  },
+  {
+    "slug": "deprem-sigortasi-prim-hesaplama",
+    "title": "Deprem Sigortası Prim Hesaplama 2026 — Detaylı Rehber",
+    "meta_description": "DASK ve ek deprem sigortası primi nasıl hesaplanır? Yapı türü, alan, deprem bölgesi etkisi. 2026 fiyat listeleri ve indirim fırsatları.",
+    "keywords": ["deprem sigortası prim hesaplama", "DASK prim hesaplama", "deprem sigortası ne kadar", "DASK fiyat 2026", "deprem sigortası teminat tutarı hesaplama"],
+    "category": "sigorta",
+    "image_alt": "DASK prim hesaplama hesap makinesi ve dokümanlar",
+    "lead": "DASK ve ek deprem sigortası primleri her yıl güncellenir. 2026'da fiyatlama 4 ana faktöre dayalı: yapı tarzı, brüt alan, deprem risk bölgesi ve teminat tutarı. Bu rehber primi adım adım hesaplamayı, kayıp önlemeyi ve indirim almak için stratejileri anlatıyor.",
+    "body_h2_blocks": [
+      ["DASK Prim Hesaplamada Hangi Faktörler Belirleyici?", [
+        "DASK primi 4 ana parametre üzerinden hesaplanır:",
+        "<strong>1. Yapı Tarzı:</strong> Betonarme (en ucuz), kagir/yığma (orta), ahşap/metal (en pahalı). Risk algısı yapı dayanımına göredir.",
+        "<strong>2. Brüt Alan (m²):</strong> Tapuda kayıtlı toplam metrekare. 100 m² altı küçük, 100-200 m² orta, 200+ m² büyük tarife.",
+        "<strong>3. Deprem Risk Bölgesi:</strong> 1. bölge (en yüksek risk - İstanbul, İzmir vs.), 7. bölge (en düşük). 1. bölge primi 7. bölgeye göre 6-8 kat fazladır.",
+        "<strong>4. Teminat Tutarı:</strong> 2026'da DASK teminat üst limiti <strong>1.130.000 TL</strong>'ye yükseltildi. Konutun gerçek bedeli bu üstündeyse aradaki fark için ek deprem sigortası gerekir."
+      ]],
+      ["Deprem Risk Bölgesi ve Prim Üzerindeki Etkisi", [
+        "Türkiye 7 deprem risk bölgesine ayrılır. Adres bazlı bölge sorgulaması <a href=\"/blog-e-devlet-deprem-riski-sorgulama.html\">e-devletten</a> yapılabilir. 2026 itibarıyla bölge bazlı prim katsayıları:",
+        "<strong>1. Bölge</strong> (İstanbul, İzmir, Hatay, Kahramanmaraş, Bursa, Sakarya, Yalova, Kocaeli): Katsayı 1.0",
+        "<strong>2. Bölge</strong> (Ankara, Antalya, Muğla, Denizli, Manisa): Katsayı 0.6",
+        "<strong>3-4. Bölge</strong>: Katsayı 0.35-0.50",
+        "<strong>5-6. Bölge</strong>: Katsayı 0.20-0.30",
+        "<strong>7. Bölge</strong> (Karadeniz illeri, İç Anadolu kuzey): Katsayı 0.12"
+      ]],
+      ["Yapı Tarzına Göre Prim Farkları (Kagir, Betonarme, Ahşap)", [
+        "Yapı tarzı prim katsayıları (m² başına 2026 değerleri):",
+        "<strong>A. Çelik konstrüksiyon:</strong> En düşük katsayı (~%70 indirim).",
+        "<strong>B. Betonarme karkas (kalıcı bina):</strong> Standart (taban prim).",
+        "<strong>C. Yığma kagir (tuğla, briket):</strong> %20 zam.",
+        "<strong>D. Ahşap karkas:</strong> %50-80 zam (Karadeniz'in eski evleri).",
+        "<strong>E. Metal/sandviç panel:</strong> %100 zam (öngörülemeyen davranış).",
+        "Yapı sınıfı tapudan değil, yapı kullanma izninden okunur. Belediyeye başvurarak güncel sınıfı öğrenebilirsiniz."
+      ]],
+      ["Brüt Alan ve Sigorta Değeri Nasıl Hesaplanır?", [
+        "Brüt alan: tapu kayıtlarındaki toplam alan. Balkonların yarısı, ortak alanlar (asansör, merdiven boşluğu) hariç tutulur.",
+        "Sigorta değeri: m² başına yapı maliyetidir. 2026 tabloları (DASK resmi):",
+        "<strong>Lüks bina:</strong> 25.000 TL/m²",
+        "<strong>I. sınıf bina:</strong> 18.000 TL/m²",
+        "<strong>II. sınıf bina:</strong> 14.000 TL/m²",
+        "<strong>III. sınıf bina:</strong> 10.500 TL/m²",
+        "Örnek: 120 m² II. sınıf bina = 1.680.000 TL sigorta değeri. DASK üst limit 1.130.000 TL olduğundan, fark için ek poliçe."
+      ]],
+      ["2026 Yılı DASK Teminat Tavanı Nedir?", [
+        "DASK 2026'da teminat tavanını <strong>1.130.000 TL</strong>'ye yükseltti (2025: 1 milyon TL). Bu, deprem hasarında ödenecek maksimum tutar.",
+        "Teminat aralıkları: 50.000 TL - 1.130.000 TL arası seçilebilir. Düşük teminat = düşük prim ama düşük koruma. Önerilen yaklaşım: konut değerinin %75-100'ü oranında teminat."
+      ]],
+      ["Online Prim Hesaplama Araçları Nasıl Kullanılır?", [
+        "DASK resmi sitesi (dask.gov.tr): adres + UAVT + tapu fotokopisi yeterli. Sonuç anında hesaplanır.",
+        "Sigorta acente siteleri (Allianz, Aksigorta vs.): bunlar DASK'a ek konut sigortası primi de hesaplar. Aynı formülü kullanırlar.",
+        "Mobil uygulamalar: 'DASK Prim Hesaplama' aramaları çok sayıda app döndürür ama dikkat — sadece resmi DASK ve büyük sigortacıların uygulamalarına güvenin."
+      ]],
+      ["Poliçe Yenileme vs İlk Kez Alım: Fiyat Farkı Var mı?", [
+        "İlk kez DASK alımında %0 indirim. Yenilemede 1 yıl boyunca hasarsızlık geçirilmişse %5-15 indirim uygulanabilir.",
+        "Poliçe gecikme cezası: vade tarihinden 30 gün sonra %20 zam, 60 gün sonra %50. Bu nedenle vadenin 3-7 gün öncesi yenileme ideal."
+      ]],
+      ["Ek Deprem Sigortası ile DASK Teminatını Artırma", [
+        "DASK 1.130.000 TL ile sınırlıdır. Konutu 2-5 milyon TL değerinde olanlar için bu yetersizdir. <strong>Ek deprem sigortası</strong> aralarındaki farkı kapatır.",
+        "Tipik ek deprem primleri: konutun değerinin 0.05-0.20%'si yıllık. 3 milyon TL konut için 1.500-6.000 TL/yıl. <a href=\"/blog-konut-sigortasi-vs-dask.html\">Konut sigortası ile DASK farkı</a> rehberinde detaylar."
+      ]],
+      ["Prim Ödemede İndirim ve Kampanya Fırsatları", [
+        "<strong>Hasarsızlık indirimi:</strong> 5+ yıl hasarsız geçen poliçelerde %15-20 indirim.",
+        "<strong>Çoklu poliçe indirimi:</strong> Konut + araç + sağlık aynı şirketten alınırsa %5-10 indirim.",
+        "<strong>Yıllık peşin ödeme:</strong> Aylık taksit yerine yıllık ödeme %5 daha ucuz.",
+        "<strong>Maaş kart kampanyaları:</strong> Bankalar aracılığıyla yapılan poliçelerde %10'a varan indirim."
+      ]]
+    ],
+    "faqs": [
+      ["DASK primim neden bu yıl arttı?", "DASK 2026'da teminat tavanını 1 milyon TL'den 1.13 milyon TL'ye yükseltti, bu nedenle prim oranları %10-15 arttı. Ayrıca enflasyon nedeniyle yapı maliyetleri güncellendi."],
+      ["DASK olmazsa elektriğim kesilir mi?", "Evet, DASK olmadan elektrik/su aboneliği başlatılmaz. Mevcut aboneler için kesinti olmaz ama yenileme tarihinde DASK kontrolü yapılır."],
+      ["Apartmandaki tüm daireler ortak DASK alabilir mi?", "Hayır, DASK her daire için ayrıdır. Ancak apartman yöneticisi tüm daireleri tek toplu poliçeye dahil edebilir, bu pratik kolaylık sağlar."],
+      ["Kira evimde DASK kim öder?", "Yasal sorumluluk ev sahibinindir. Kiracı isterse ek konut sigortası alarak eşyalarını korur."],
+      ["DASK + ek deprem sigortasını farklı şirketten alabilir miyim?", "Evet, DASK tek havuz olduğu için tüm acentelerden alınabilir. Ek deprem sigortası ise ayrı bir şirketten alınabilir; uyumsuzluk olmaz."]
+    ],
+    "related": [
+      ["/blog-dask-nedir.html", "DASK Zorunlu Deprem Sigortası"],
+      ["/blog-konut-sigortasi-vs-dask.html", "Konut Sigortası ve DASK"],
+      ["/blog-deprem-hasar-tazminat-sureci.html", "Hasar Tazminat Süreci"],
+      ["/blog-e-devlet-deprem-riski-sorgulama.html", "E-Devlet Deprem Sorgulama"],
+      ["/blog.html", "Tüm Deprem Rehberleri"]
+    ]
+  },
+  {
+    "slug": "deprem-aninda-balkon-guvenli-mi",
+    "title": "Deprem Anında Balkon Güvenli Mi? — Bilimsel Cevap",
+    "meta_description": "Deprem sırasında balkona çıkmak güvenli mi? Konsol balkonların yapısal davranışı, riskler, doğru tahliye stratejisi.",
+    "keywords": ["deprem anında balkon güvenli mi", "depremde balkona çıkılır mı", "balkon deprem riski", "depremde güvenli alanlar evde", "deprem sırasında neresi güvenli"],
+    "category": "sirasinda",
+    "image_alt": "Apartman balkonu - deprem güvenliği değerlendirmesi",
+    "lead": "Deprem başlayınca refleks olarak çoğu kişi balkona koşar. Bu, hayatınızı kaybetmenize yol açabilecek tehlikeli bir karardır. Türkiye'de balkonların büyük çoğunluğu 'konsol' yapıdadır ve depremde ilk düşen yerlerdir. Bilimsel olarak güvenlikleri ne durumda?",
+    "body_h2_blocks": [
+      ["Neden Balkon Depremde Tehlikeli Olabilir?", [
+        "Balkonların büyük çoğunluğu <strong>konsol kiriş</strong> sistemiyle taşınır — yani sadece bir uçtan bağlıdır, diğer ucu havadadır. Depremde bu yapıların salınımı tek yönlüdür ve yıkıcıdır. Üstelik balkon korkulukları bina tasarımında 'yapısal olmayan eleman' kategorisinde değerlendirilir; deprem yüklerine göre boyutlandırılmazlar.",
+        "Konsol balkonlarda yığın etkisi (titreşim büyütme) yaşanır. Bina kendisi 1g ivmeye maruzsa, balkon ucu 1.5-2g ivme yaşayabilir. Bu, balkonun sallanma genliğinin binadan büyük olması demektir."
+      ]],
+      ["Balkon Yapısal Olarak Nasıl Davranır?", [
+        "Konsol balkonlarda 4 yıkıcı senaryo: <strong>(1) Konsol kiriş kırılması:</strong> Beton dayanımı yetersiz, balkon aşağı düşer. <strong>(2) Donatı kayması:</strong> İnşaatçı yetersiz pas payı bıraktıysa donatılar açılır. <strong>(3) Korkuluk yıkılması:</strong> Korkuluk demir kalitesi düşükse insan üzerine düşer. <strong>(4) Beton şişmesi:</strong> Yaşlı binalarda nem ve donma-çözünme döngüsüyle beton parçalanır.",
+        "Karşıdaki binayı izleyerek balkonun salınımını görebilirsiniz: balkonun amplitude'u (genliği) bina gövdesinden büyüktür. 6.0+ büyüklükteki depremde konsol balkon kopma riski %40-60'tır."
+      ]],
+      ["Deprem Anında Balkondaysanız Ne Yapmalısınız?", [
+        "Eğer deprem başladığında zaten balkondaysanız ve içeri girmek için 3-5 saniye varsa: <strong>Hemen içeri girin</strong>, yere çökün, başınızı koruyun.",
+        "Süre yoksa: <strong>Balkonun bina duvarına en yakın köşesine çökün</strong>. Bu, balkon kopma anında en az hareket eden noktadır. Korkuluğa kesinlikle yaslanmayın — düşen ilk şey korkuluk olur.",
+        "Sallanma sırasında balkondan başka bir alana geçmeye çalışmayın. Sarsıntı bittiğinde 60 saniye bekleyin, sonra <a href=\"/deprem-aninda.html\">tahliye prosedürünü</a> uygulayın."
+      ]],
+      ["Balkona Kaçmak Doğru mu? Yaygın Yanılgı", [
+        "<strong>HAYIR.</strong> 'Açık alan, daha güvenli' düşüncesiyle balkona kaçmak yanlıştır. Balkon açık alan değildir — yapısal olarak en zayıf noktadır.",
+        "Doğru güvenli yerler ev içinde: <strong>(1)</strong> Sağlam masaların altı (Çök-Kapan-Tutun). <strong>(2)</strong> Taşıyıcı duvarın yanı (sırtınız perde duvarda). <strong>(3)</strong> Kapı kasası (yapısal olarak güçlü çerçeve, ama içeride duvar olmalı). <strong>(4)</strong> Yatak veya kanepenin yanı.",
+        "Asla yapmayın: balkona koşmak, asansör kullanmak, merdivenden inmek, koşarak dışarı çıkmaya çalışmak."
+      ]],
+      ["Eski Binalarda Balkon Riski: Çıkma ve Konsol Yapılar", [
+        "1975 öncesi binalarda 'çıkma' (cumba) yapı sıkça görülür — balkon binadan dışarıya 1-1.5 m taşar. Bu yapılar:",
+        "<strong>(1)</strong> O dönemin yönetmeliğinde sismik yük gözetilmediği için minimum donatıya sahiptir.",
+        "<strong>(2)</strong> Yıllar içinde donatılarda paslanma birikmiş olabilir.",
+        "<strong>(3)</strong> Çıkma yapıyı bina ağırlığını taşıyan kolonlar değil, yan duvarlar destekler — depremde duvar yıkımı çıkmayı düşürür.",
+        "Eski binalardaki balkonların güvensizliği çok yüksek. Mümkünse <a href=\"/blog-bina-deprem-performans-raporu-nedir.html\">performans raporu</a> aldırın."
+      ]],
+      ["Balkon Camı ve Korkuluk Tehlikeleri", [
+        "<strong>Balkon camlarının</strong> %80'i deprem sırasında patlar. Özellikle PVC çerçeveli camların tutturma noktaları zayıftır. Cam parçaları balkondaki kişinin üzerine düşer; ciddi yaralanmalar olur.",
+        "<strong>Korkuluklar:</strong> 1985 öncesi binalarda demir korkulukların betona kötü tutturulduğu görülür. Sallanma sırasında çıkar, insan üzerine düşer. Modern binalarda korkuluk rüzgar yüküne göre tasarlanır, deprem yüküne değil — bu hala güvensizdir."
+      ]],
+      ["Depremde Güvenli Alanlar: Balkon ile Karşılaştırma", [
+        "Bina içinde güvenlik sıralaması (en güvenli → en az güvenli):",
+        "<strong>1. Sağlam masa altı (Çök-Kapan-Tutun pozisyonu):</strong> %85 güvenlik.",
+        "<strong>2. Yatak veya koltuğun yanı:</strong> %75 güvenlik.",
+        "<strong>3. İç duvarın yanı:</strong> %70 güvenlik.",
+        "<strong>4. Kapı kasası:</strong> %65 güvenlik (modern binalarda).",
+        "<strong>5. Banyo veya tuvalet (boruları ve duvar yoğunluğu):</strong> %60 güvenlik.",
+        "<strong>6. Orta salon, açık alan:</strong> %40 güvenlik (mobilyalar yıkılabilir).",
+        "<strong>7. Balkon (konsol):</strong> %25 güvenlik.",
+        "<strong>8. Asansör, merdiven:</strong> %10 güvenlik."
+      ]],
+      ["Deprem Sonrası Balkon Hasar Kontrolü Nasıl Yapılır?", [
+        "Deprem sonrası ilk 24 saat içinde balkon hasar kontrolü yapın: <strong>(1)</strong> Bina cephesinden balkona bakın — eğim, çatlak, kopma var mı? <strong>(2)</strong> Korkulukların betona bağlantısını kontrol edin. <strong>(3)</strong> Balkon zemininde yeni çatlaklar var mı?",
+        "Şüphe halinde balkonu kullanmayın. <strong>Belediye yapı denetim ekibi</strong>nin kontrol etmesini bekleyin. Çoğu il deprem sonrası ücretsiz yerinde inceleme hizmeti sunar."
+      ]]
+    ],
+    "faqs": [
+      ["Balkon korkuluğu deprem dayanım sınıflı mı?", "TBDY 2019'a göre balkon korkulukları 'yapısal olmayan eleman' sınıfındadır ve sismik yüklere göre tasarlanmaz. Sadece statik (rüzgar, insan ağırlığı) yüklere göre boyutlandırılır."],
+      ["Yer kat balkonu da tehlikeli mi?", "Yer kat balkonları diğer katlardan daha güvenlidir çünkü düşmenin etkisi daha azdır. Ancak yine de balkon yıkılabilir; içeride güvenli pozisyon tercih edilir."],
+      ["Balkonum kapatılmış (cam balkon), depremde içerideyim, güvenli mi?", "Cam balkonlar ek yüktür ve binanın deprem davranışını olumsuz etkiler. Deprem anında patlayabilirler. Camların TZB (temperli) olması parçaların yaralayıcı olmamasını sağlar ama hala risk vardır."],
+      ["Yangın sırasında balkona kaçmak doğru mu?", "Evet, yangın için balkona kaçma kuralı geçerlidir. Ancak deprem ve yangın aynı anda olduysa: önce deprem geçer, sonra yangın için tahliye yapılır. Sarsıntı sırasında balkona koşmak deprem ölümünü artırır."],
+      ["Balkonu içeri katmak güvenli mi?", "Konsol balkonu kapatıp odanın içine almak yapısal olarak değişiklik yapar; mutlaka mühendis onayı gerekir. Aksi halde bina sismik dengesi bozulabilir."]
+    ],
+    "related": [
+      ["/deprem-aninda.html", "Deprem Anında Yapılacaklar"],
+      ["/blog-deprem-aninda-yatakta.html", "Yatakta Deprem"],
+      ["/blog-deprem-aninda-asansor.html", "Asansörde Deprem"],
+      ["/blog-bina-icindeyseniz.html", "Bina İçindeyseniz"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  },
+  {
+    "slug": "deprem-sonrasi-gida-saklama-ve-su-temini",
+    "title": "Deprem Sonrası Gıda Saklama ve Su Temini Rehberi 2026",
+    "meta_description": "Deprem sonrası 7 günlük gıda stoğu, su sterilizasyonu, raf ömrü, özel diyetler. Acil durum beslenme planı tam rehber.",
+    "keywords": ["deprem sonrası gıda saklama", "deprem için su stoklama", "deprem gıda hazırlığı", "afet sonrası beslenme", "deprem çantası yiyecek listesi"],
+    "category": "sonrasi",
+    "image_alt": "Deprem için gıda ve su stoğu",
+    "lead": "Deprem sonrası ilk 72 saat 'kayıp dönemi' olarak adlandırılır — yardım ekiplerinin ulaşma süresi. Bu sürede ailenizi besleyebilmek için doğru gıda saklama ve su temini stratejisi hayati önem taşır. Bu rehberde 7 günlük afet beslenme planı detaylanıyor.",
+    "body_h2_blocks": [
+      ["Deprem Sonrası Kaç Günlük Gıda Stoğu Gerekir?", [
+        "AFAD ve Kızılay'ın resmi tavsiyesi <strong>en az 7 günlük</strong> gıda stoğudur. Önceki yaklaşımlar 3 gün öneriyordu, ancak Kahramanmaraş depremi sonrası 7-10 gün makul sürenin alt limit olduğu netleşti. Hatay gibi izole bölgelerde yardım 5-7 gün sonra ulaşabildi.",
+        "<strong>Aile başına temel hesap:</strong> 4 kişilik aile için 7 gün = 14.000 kalori (yetişkin başı 2.000 kcal/gün × 4 kişi × 7 gün ÷ 4). Bu kuru gıdada 3-4 kg/kişi tutar."
+      ]],
+      ["Uzun Raf Ömürlü Gıdalar: En İyi Seçenekler", [
+        "Önceliğe göre stoklama listesi:",
+        "<strong>Tier 1 (mutlaka):</strong> Konserve fasulye, tonbalığı, sardalya (5 yıl raf), bal (sınırsız), kuru baklagiller (5 yıl), pirinç (3 yıl), bulgur (3 yıl), şeker, tuz.",
+        "<strong>Tier 2 (yüksek öncelik):</strong> Kraker, ekmek tozu (1 yıl), bisküvi, kuru meyve (1 yıl), kuru et (jerky), peynir (paketli), zeytin.",
+        "<strong>Tier 3 (lüks):</strong> Kahve, çay, çikolata, kondansebebek (uzun ömürlü süt).",
+        "Her ürünün üzerine satın alma tarihini yazın. <strong>'İlk giren ilk çıkar'</strong> prensibiyle eskiyi günlük kullanın, yenisini stoğa katın."
+      ]],
+      ["Gıdaları Depolamanın Doğru Yöntemleri", [
+        "Doğru depolama 4 prensipten oluşur:",
+        "<strong>(1) Karanlık:</strong> Işık yağ ve vitaminleri okside eder. Dolap içi veya rafa karton kutu içinde.",
+        "<strong>(2) Serin:</strong> 15-20°C ideal. Mutfak değil, soğuk depo veya garaj. Buzdolabı sadece açık ürünler için.",
+        "<strong>(3) Kuru:</strong> %50 nem altı. Sili-jel paket ekleyin, küflenmeyi önler.",
+        "<strong>(4) Hayvanlardan korumalı:</strong> Fareler ve böcekler depolamayı bozar. Plastik konteyner veya cam kavanozlarda saklayın."
+      ]],
+      ["Su: Kişi Başına Günlük Ne Kadar Stoklanmalı?", [
+        "AFAD: Kişi başı günde <strong>4 litre su</strong> (içme + temizlik + yemek pişirme). 4 kişilik aile için 7 gün = 112 litre. Bu 25 adet 5 litrelik damacana = 1 metrekare alan.",
+        "<strong>Hijyen suyu</strong> ayrıca: kişi başı günde 1 litre (banyo, tuvalet). Bu su içme suyu kalitesinde olmak zorunda değil — yağmur, kuyu suyu vb.",
+        "Su stoğu 6 ayda bir yenilenmelidir. Plastik ambalaj uzun süre güneşte kalırsa sızıntı yapar."
+      ]],
+      ["Su Arıtma ve Sterilizasyon Yöntemleri", [
+        "Stok bittiğinde su arıtma yöntemleri:",
+        "<strong>(1) Kaynatma:</strong> 1-3 dakika kaynatma çoğu mikrobu öldürür. Yüksek rakımda (>2000m) 3-5 dakika gerekir.",
+        "<strong>(2) Klorlama:</strong> Çamaşır suyu (sodyum hipoklorit %5) — 1 litre suya 4 damla. 30 dakika beklemek gerekir.",
+        "<strong>(3) İyot tableti:</strong> 1 tablet/litre, 30 dakika. Hamile kadınlar ve tiroid hastaları kullanmamalı.",
+        "<strong>(4) UV sterilizasyon (Steripen vb.):</strong> 90 saniye. Pil gerekiyor.",
+        "<strong>(5) Filtre (LifeStraw vb.):</strong> Bakterileri tutar, ama virüsleri tutmaz. Klorla birlikte kullanın."
+      ]],
+      ["Afet Sonrası Musluk Suyu İçilir mi?", [
+        "Genellikle hayır. Deprem sonrası şehir suyu altyapısı zarar görmüş olabilir. Kanalizasyon sızıntıları, kontamine kuyu suyu karıştırması, basınç düşüklüğüyle geri akış riski vardır.",
+        "Belediye 'içilebilir' duyurusunu yapana kadar kullanmayın. Belirsizlik durumunda mutlaka kaynatın. Çamurlu görünen suları çift kat tülbentle süzdükten sonra arıtın."
+      ]],
+      ["Özel Diyet Gereksinimleri: Bebek, Diyabetik, Çölyak", [
+        "<strong>Bebek beslenmesi:</strong> Anne sütü altın standart. Mama tozu 6 ay raf ömürlüdür ve hazırlamak için temiz su gerektirir. Hazır kavanoz mama (sıvı) 2 yıl raf — afet için ideal.",
+        "<strong>Diyabetik:</strong> İnsulin gerektiriyorsa soğuk zincir kritik (2-8°C). Pil destekli mini buzdolabı veya jel-buz alternatifleri. Şekersiz, glisemik indeksi düşük gıdalar (mercimek, yulaf, kuru fasulye).",
+        "<strong>Çölyak:</strong> Glütensiz konserve ve baklagil stoğu ayrıyor. Standart afet kitleri buğday içerir.",
+        "<strong>Vejetaryen/Vegan:</strong> Bezelye proteini bar, kuru meyve, kuruyemiş, kuru baklagil, soya konservesi."
+      ]],
+      ["Depolama Alanı Seçimi: Nerede, Nasıl?", [
+        "<strong>Birinci öncelik: Garaj veya bodrum</strong> (serin, karanlık). Ev içi yedek stok kiler veya merdiven altı dolapta.",
+        "<strong>Apartman binası riski:</strong> Bina yıkılırsa tüm stok kaybolur. Mümkünse garaj+balkon+yedek depo dağıtımı.",
+        "<strong>Araç bagajında 2 günlük yedek</strong> faydalıdır — eğer evde sıkışmak yerine başka yere gitmeniz gerekirse hayat kurtarır."
+      ]],
+      ["Stokların Rotasyonu: Tarih Takibi Nasıl Yapılır?", [
+        "<strong>FIFO sistemi (First In First Out):</strong> Her ay yeni stok arkaya, eski stok öne. Eskileri günlük yemekte tüketin, yenisini ekleyin.",
+        "<strong>3 ayda bir denetim:</strong> Tüm raf ömürlerini kontrol edin. Yaklaşıp geçmek üzere olanları (3-6 ay kalmış) öne alın.",
+        "<strong>Bir Excel/uygulama tablosu</strong> tutmak idealdir. Stok miktarı, satın alma tarihi, son kullanma tarihi sütunlarıyla."
+      ]],
+      ["Deprem Sonrası Pişirme Yöntemleri (Elektrik/Gaz Yokken)", [
+        "<strong>(1) Kamp ocağı + bütan kartuş:</strong> 30 dakika pişirme = 1 kartuş. 7 gün için 5-7 kartuş.",
+        "<strong>(2) Solar oven (güneş fırını):</strong> 80-100°C ulaşır, bulgur/pirinç pişirir. Pil gerekmez.",
+        "<strong>(3) Termos pişirme:</strong> Suyu kaynayana kadar ısıtıp termosa ekleyin, gece boyunca pişer (özellikle bulgur, mercimek).",
+        "<strong>(4) Açık ateş:</strong> Son çare. Yangın riski yüksek; sadece açık alanda ve ev hasarsızsa.",
+        "<strong>Soğuk yenebilir gıdalar:</strong> konserve, kraker, kuru meyve, peynir, zeytin — 7 günü pişirme yapmadan geçirebilirsiniz."
+      ]]
+    ],
+    "faqs": [
+      ["Konserve gıdaların gerçek raf ömrü ne kadar?", "Etiket üstündeki tarih 'en iyi tüketim' tarihidir. Konserve aslında 5-10 yıl yenilebilir, eğer kutu şişmemiş ve paslanmamışsa. Ancak vitamin değeri zamanla azalır."],
+      ["Deprem çantasında pişirilmemiş yiyecek ne yer alabilir?", "Granola bar, kuru meyve, kuruyemiş, kraker, balık konservesi, hazır mama, jel paketleri (enerji barı), peynir paketi (vakumlu), zeytin paketi."],
+      ["Açılmış konserveyi soğutucu yokken ne kadar yiyebiliriz?", "12 saat içinde tüketin (15-20°C ortamda). Yaz aylarında 4-6 saatte bozulur. Açtığınızda kapağını sıkıca kapatın ve serin yere koyun."],
+      ["Yağmur suyu içilebilir mi?", "Yağmurun ilk dakikalarındaki su atmosferdeki kirleri taşır — atmasın. 5-10 dakika sonra toplanan su daha temizdir. Kaynatarak veya klorlayarak içilebilir."],
+      ["Bebek maması için suyu nasıl hazırlayalım?", "Kaynatılmış ve serinletilmiş suyu kullanın. Açık kalan kaynamış su 30 dakika içinde bebek maması için tüketilmelidir. Kontaminasyon riski büyüktür."]
+    ],
+    "related": [
+      ["/blog-deprem-cantasi.html", "Deprem Çantası Listesi"],
+      ["/blog-deprem-sonrasi-temiz-su-gida.html", "Temiz Su ve Gıda"],
+      ["/blog-deprem-sonrasi-ilk-24-saat.html", "İlk 24 Saat"],
+      ["/blog-engelli-bireyler-deprem.html", "Engelli Bireyler İçin"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  },
+  {
+    "slug": "eski-bina-deprem-yonetmeligi-uyum",
+    "title": "Eski Binalar Deprem Yönetmeliğine Uyum Sağlamalı mı? 2026",
+    "meta_description": "1975-2019 arası deprem yönetmeliklerinin tarihi. Eski binaların TBDY 2019 ile karşılaştırılması, güçlendirme zorunluluğu ve risk değerlendirmesi.",
+    "keywords": ["eski bina deprem yönetmeliği", "1975 deprem yönetmeliği öncesi bina", "eski yapı deprem güvenliği", "deprem yönetmeliği hangi yıldan itibaren", "eski bina yıkım zorunluluğu"],
+    "category": "bilim",
+    "image_alt": "Eski apartman binası ve yeni yapı karşılaştırması",
+    "lead": "Türkiye'nin yapı stoğunun %60'ı 1999 öncesinde inşa edildi — yani eski deprem yönetmeliklerine göre. Bu binalar TBDY 2019 standartlarının çok altında. Eski binaların yeni yönetmeliğe uyumu zorunlu mu, opsiyonel mi? Ev sahipleri ne yapmalı?",
+    "body_h2_blocks": [
+      ["Türkiye'de Deprem Yönetmeliklerinin Tarihi (1940-2019)", [
+        "Türkiye'nin deprem yönetmeliği gelişimi:",
+        "<strong>1940 — İlk Yönetmelik:</strong> 1939 Erzincan depremi sonrası. Çok temel kurallar, sadece deprem bölgeleri tanımı.",
+        "<strong>1953 — DBYBHY:</strong> İlk modern yönetmelik. 4 bölgeli risk haritası tanıtıldı.",
+        "<strong>1968-1975:</strong> Genel revizyonlar. Sismik katsayı kavramı.",
+        "<strong>1998 — Major güncelleme:</strong> Spektral analiz ilkeleri. Modern projeler bu yönetmelikle çalıştı.",
+        "<strong>2007 — DBYBHY 2007:</strong> Performans bazlı tasarımın temelleri atıldı.",
+        "<strong>2019 — TBDY 2019:</strong> Avrupa Eurocode 8 ile uyumlu. Sürekli spektral hızlanma haritası, 6 zemin sınıfı, 3 performans hedefi."
+      ]],
+      ["1975 Yönetmeliği Öncesi İnşa Edilen Binalar: Risk Nedir?", [
+        "1975 öncesi binaların risk faktörleri:",
+        "<strong>(1) Yapı denetim eksikliği:</strong> Çoğu bina ruhsatsız veya minimum kontrollü. Kaçak kat ve tadilatlar yaygın.",
+        "<strong>(2) Düşük beton dayanımı:</strong> Genelde C16-C20 (modern minimum C25). Beton karışım oranları bilinmez.",
+        "<strong>(3) Düz donatı kullanımı:</strong> Modern binalar nervürlü donatı kullanır. Düz donatı betona kötü tutunur.",
+        "<strong>(4) Etriyе (yatay donatı) eksikliği:</strong> Kolonlarda etriye sıklığı yetersiz, sünek davranış yok.",
+        "<strong>(5) Yumuşak kat (zemine dükkan):</strong> Yaygın bir hatadır. Bu binaların yıkım riski %75-90 (M7+ depremde)."
+      ]],
+      ["1975-1998 Arası Yapılar: Yeterli Koruma Var mı?", [
+        "1975-1998 arası yapıların durumu kısmen iyileşti ama hala yetersiz: <strong>(1)</strong> Sismik katsayı uygulandı (genellikle 0.10-0.15g). Modern değerin 1/3'ü. <strong>(2)</strong> Yapı denetim 1980'lerde yaygınlaştı ama uygulamada eksiklikler vardı. <strong>(3)</strong> 1998 öncesi ZE/ZF zemin sınıfları tanımlanmadı.",
+        "Bu dönem yapılarının %60-70'i 'orta risk' kategorisindedir. Performans raporu olmadan kesin değerlendirme yapılamaz. <a href=\"/blog-bina-deprem-performans-raporu-nedir.html\">Detaylar için ilgili rehber</a>."
+      ]],
+      ["1998 ve 2007 Yönetmeliği Binalar: Farklar", [
+        "<strong>1998 yönetmeliği:</strong> Spektral analiz, 4 zemin sınıfı, 4 deprem bölgesi. Bu yönetmeliğe uyumlu yapılan binalar M7'ye dayanabilir; ancak inşaat kalitesi şart.",
+        "<strong>2007 yönetmeliği (DBYBHY 2007):</strong> İlk performans bazlı tasarım. 'Performans hedefi' kavramı geldi. Bu binalar M7.5'e dayanabilir.",
+        "Bu iki yönetmelik arasındaki binaların gerçek dayanımı, müteahhit ve yapı denetim kalitesine bağlıdır. 'Yıllık denetim raporu' isteyin — varsa güvenli, yoksa şüpheli."
+      ]],
+      ["TBDY 2019 ile Eski Yapılar Arasındaki Teknik Uçurum", [
+        "TBDY 2019'a göre yapılması zorunlu olan ama eski binalarda olmayan unsurlar:",
+        "<strong>(1) Sürekli spektral analiz:</strong> Adres bazlı tehlike değeri. Eskiden bölge ortalaması.",
+        "<strong>(2) ZA-ZF zemin sınıfları:</strong> 6 sınıf. Eskiden 4.",
+        "<strong>(3) Performans hedefleri:</strong> KS, HS, GÖ ayrı tanımlı.",
+        "<strong>(4) Beton C25+ zorunluluğu:</strong> Eskiden C16 izinli idi.",
+        "<strong>(5) Çelik B420c sünek donatı:</strong> Eskiden B420a.",
+        "<strong>(6) Düzensizlik kontrolleri:</strong> L şekilli, T şekilli binalarda ek analiz.",
+        "Bu uçurum nedeniyle eski binaları 'TBDY 2019 uyumlu' hale getirmek pratikte yıkım+yeniden yapım gerektirir."
+      ]],
+      ["Mevcut Binalara Geriye Dönük Yönetmelik Uygulanır mı?", [
+        "Hayır, geriye dönük zorunluluk yoktur. 6306 sayılı yasa sadece 'riskli' tespit edilen binalara yıkım zorunluluğu getirir.",
+        "Ancak: <strong>(1)</strong> Belediyeler bina yaş eşiğine göre denetim yapabilir (örn. 50+ yaş binalar). <strong>(2)</strong> Sigorta primlerinde eski binalar için ek yükleme. <strong>(3)</strong> Ev satışında alıcı performans raporu isteyebilir — değer düşüklüğü kapı açar."
+      ]],
+      ["Riskli Alan ve Riskli Yapı Tespiti Süreci", [
+        "<strong>Riskli Alan tanımı:</strong> Bir bölgenin tamamı toplu olarak tehlikeli. Belediye kararıyla. Örn: İstanbul Esenyurt'un belirli mahalleleri.",
+        "<strong>Riskli Yapı tanımı:</strong> Tek bina bazında. Yetkili kuruluşun raporuyla. Süreç: <a href=\"/blog-e-devlet-deprem-riski-sorgulama.html\">e-devletten başvuru</a> → ön inceleme → ayrıntılı performans raporu → yıkım kararı.",
+        "Eski yapıların büyük çoğunluğu 'Riskli Yapı' kategorisine girer ama sahipleri başvurmadığı için tespit yapılmaz."
+      ]],
+      ["Güçlendirme vs Yeniden Yapım: Hangi Durumda Hangisi?", [
+        "<strong>Güçlendirme tercih edilebilir:</strong> Bina yapısal sistemi sağlam, sadece eksiklikler varsa (eksik perde duvar, yetersiz kolon donatısı). Maliyet: yeniden yapımın %30-50'si.",
+        "<strong>Yeniden yapım gerekli:</strong> Beton dayanımı düşük (C15 altı), yumuşak kat var, ağır düzensizlik (L, T şekli, plan asimetrisi), donatı paslanmış. Maliyet: 1.5-3x daha yüksek ama %100 garanti.",
+        "Karar performans raporu sonrası verilir. <a href=\"/blog-deprem-oncesi-bina-guclendir.html\">Güçlendirme yöntemleri rehberi</a>."
+      ]],
+      ["Kentsel Dönüşüm ve Yasal Zorunluluklar", [
+        "Riskli yapı tespiti yapıldıktan sonra: <strong>(1)</strong> 60 gün içinde paydaşların 2/3'ü dönüşüm kararı almalıdır. <strong>(2)</strong> Onaylanırsa kira yardımı ve <a href=\"/blog-kentsel-donusum-vergisi-muafiyeti.html\">vergi muafiyetleri</a> başlar. <strong>(3)</strong> Reddederse Bakanlık zorla yıkım hakkı kullanır.",
+        "Kira yardımı 2026'da aylık 6.500-10.000 TL (büyük şehirde). Süre 24 aya kadar. Bu süre içinde dönüşüm tamamlanmazsa süre uzatılır."
+      ]]
+    ],
+    "faqs": [
+      ["1985 yılında yapılmış evimi güçlendirmek mantıklı mı?", "Önce performans raporu alın. Yapı sistemi sağlamsa güçlendirme makul. Aksi halde yıkım+yeniden yapım daha güvenli."],
+      ["Apartmanın hangi yıl yapıldığını nasıl öğrenirim?", "Tapudan veya belediye ruhsat kayıtlarından. Tapu yapı kullanma izni tarihini gösterir, bu inşa tamamlanma tarihidir."],
+      ["1999 sonrası bina TBDY 2019 uyumlu mu?", "Hayır. 1999 binaları o zamanın yönetmeliğine uyumludur. TBDY 2019'a tam uyum 2018 sonrası inşa edilen binalardadır."],
+      ["Ben ev sahibi değil kiracıyım, yine de risk değerlendirmesi yaptırabilir miyim?", "E-devlet üzerinden temel sorgulama yapılabilir. Detaylı performans raporu için ev sahibinin onayı gerekir."],
+      ["Eski bina ile yeni binayı görsel olarak nasıl ayırt ederim?", "Cephe yapısı, kolon kalınlığı, balkon görünümü ipucu olabilir ama kesin değildir. Ruhsat tarihi en doğru göstergedir."]
+    ],
+    "related": [
+      ["/blog-tbdy-2019-nedir.html", "TBDY 2019 Yönetmeliği"],
+      ["/blog-bina-deprem-performans-raporu-nedir.html", "Performans Raporu"],
+      ["/blog-deprem-oncesi-bina-guclendir.html", "Bina Güçlendirme"],
+      ["/blog-kentsel-donusum-vergisi-muafiyeti.html", "Kentsel Dönüşüm Vergi"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  },
+  {
+    "slug": "deprem-sonrasi-psikolojik-ilk-yardim",
+    "title": "Deprem Sonrası Psikolojik İlk Yardım (PİY) Rehberi 2026",
+    "meta_description": "Deprem travması nasıl atlatılır? DSÖ Psikolojik İlk Yardım modeli, çocuklarda ve yetişkinlerde uygulanması, profesyonel destek kaynakları.",
+    "keywords": ["deprem sonrası psikolojik ilk yardım", "deprem travması nasıl atlatılır", "deprem psikolojisi yetişkin", "deprem sonrası PTSD belirtileri", "afet psikolojisi destek"],
+    "category": "sonrasi",
+    "image_alt": "Deprem sonrası psikolojik destek görseli",
+    "lead": "Deprem sonrası fiziksel kurtarma kadar psikolojik ilk yardım da hayati önemdir. Dünya Sağlık Örgütü'nün PİY modeli, herkesin uygulayabileceği temel destek tekniklerini öğretir. 6 Şubat 2023 sonrası Türkiye'nin Acil Müdahale Zinciri'nde PİY zorunlu hale getirildi. Bu rehberde 8 temel adım detaylı.",
+    "body_h2_blocks": [
+      ["Psikolojik İlk Yardım (PİY) Nedir?", [
+        "Psikolojik İlk Yardım (PİY/PFA - Psychological First Aid), 2011'de Dünya Sağlık Örgütü (DSÖ) tarafından standartlaştırılmış, afet sonrası ilk dakikalardan itibaren herkesin uygulayabileceği destek modeli. Profesyonel terapi değildir; akut stresi yönetmek, ikincil travmayı önlemek ve insanları profesyonel destek kaynaklarına yönlendirmek için tasarlanmıştır.",
+        "PİY'in 3 ana ilkesi: <strong>(1) Bak (Look):</strong> Ortamı ve insanın durumunu gözlemle. <strong>(2) Dinle (Listen):</strong> Empatiyle dinle, çözüm sunma. <strong>(3) Bağla (Link):</strong> Profesyonel desteğe yönlendir."
+      ]],
+      ["Deprem Sonrası Yaşanan Normal Duygusal Tepkiler", [
+        "Aşağıdaki tepkiler 'normal'dir ve 4-6 hafta içinde kademeli azalır:",
+        "<strong>Akut tepkiler (ilk 1-3 gün):</strong> Şok, hissizlik, ağlama, titreme, mide bulantısı, uyku bozukluğu, anksiyete krizi.",
+        "<strong>Kısa vadeli (1-4 hafta):</strong> Tekrarlayan rüyalar, ses-ışıkla irkilme, yorgunluk, dikkat dağınıklığı, suçluluk hissi (hayatta kaldığı için).",
+        "<strong>Orta vadeli (1-6 ay):</strong> Depresyon belirtileri, sosyal izolasyon, alkol/madde kullanımı artışı, fiziksel ağrılar.",
+        "Bu tepkiler patolojik değildir — beyin travmayı işliyor. Ancak 4-6 ayı geçer ve günlük yaşamı engellerse profesyonel destek şarttır."
+      ]],
+      ["Akut Stres Bozukluğu ile PTSD Arasındaki Fark", [
+        "<strong>Akut Stres Bozukluğu (ASD):</strong> Travma sonrası ilk 1 ay. Belirtiler: yeniden yaşama (flashback), uyuma zorluğu, kaçınma davranışları. Çoğu insan kendiliğinden iyileşir.",
+        "<strong>Travma Sonrası Stres Bozukluğu (PTSD):</strong> Belirtiler 1 aydan uzun sürerse. Tedavi gerekir. EMDR, bilişsel davranışçı terapi, ilaç kombinasyonu yaygın yöntemler.",
+        "Önemli: ASD'nin %30-50'si PTSD'ye dönüşür. Bu nedenle ilk 4 hafta içinde aktif takip kritiktir."
+      ]],
+      ["Psikolojik İlk Yardımın 8 Temel Adımı (DSÖ Modeli)", [
+        "<strong>1. Güvenli ortam sağla:</strong> Kişinin fiziksel olarak güvende olduğundan emin ol. Soğuk/sıcak korumalı, su, sandık vb.",
+        "<strong>2. Sakin yaklaşım:</strong> Yavaş konuş, ses tonunu alçak tut, doğrudan göz teması ama yoğun değil.",
+        "<strong>3. Dinle ama soru sorma:</strong> 'Ne hissediyorsun?' yerine 'Yanındayım'.",
+        "<strong>4. Temel ihtiyaçları karşıla:</strong> Su, sıcak içecek, battaniye, telefon şarjı.",
+        "<strong>5. Suçlamadan, yargılamadan kabul:</strong> 'Ağlamamalısın' veya 'Daha kötüsünü yaşayanlar var' deme.",
+        "<strong>6. Yakınlara bağlama:</strong> Aile, arkadaş ile telefon görüşmesi düzenle.",
+        "<strong>7. Bilgilendirme:</strong> Resmi açıklamalar, hangi kurumlardan yardım alınabileceği.",
+        "<strong>8. Profesyonel desteğe yönlendirme:</strong> Belirti süresi 2 haftayı geçerse psikiyatrist/psikolog."
+      ]],
+      ["Yetişkinlere Nasıl Yaklaşılmalı?", [
+        "Yetişkinlerle PİY uygularken: <strong>(1)</strong> Onların yardım istediğinden emin ol; istemiyorsa yanında ol ama zorla konuşturma. <strong>(2)</strong> Hikayesini paylaşmasını zorlama — bazen sessizlik iyileştirici. <strong>(3)</strong> Pratik destek (yemek hazırlama, çocuk bakma) sözel destekten daha etkilidir.",
+        "Erkekler genellikle 'iyi olduğum' tutumunu sergiler ama içeride çöküntü yaşıyor olabilir. Davranış değişimlerini gözlemle: aşırı sessizlik, alkol, agresif tepkiler."
+      ]],
+      ["Çocuklarda Travma Belirtileri ve Yaklaşım Yöntemleri", [
+        "Çocuk yaş gruplarına göre belirtiler:",
+        "<strong>0-2 yaş:</strong> Aşırı bağlanma, gece uyanmalar, beslenme reddi.",
+        "<strong>3-6 yaş:</strong> Regresyon (parmak emme, alt ıslatma), tekrarlayan oyun (deprem oyunu), karanlıktan korkma.",
+        "<strong>7-12 yaş:</strong> Konsantrasyon düşüklüğü, fiziksel ağrılar (baş, mide), saldırganlık, suçluluk.",
+        "<strong>13+ yaş:</strong> Yetişkin benzeri PTSD belirtileri + okuldan kaçınma, alkol/madde, intihar düşünceleri.",
+        "Yaklaşım: rutinleri korumak (uyku saati, yemek), çizim yoluyla ifade, oyun terapisi öğeleri. <a href=\"/blog-deprem-anketi-cocuklar.html\">Çocuklarda deprem psikolojisi rehberi</a>."
+      ]],
+      ["Yaşlı Bireylerde Deprem Sonrası Ruhsal Destek", [
+        "Yaşlılar afetlerde ek risk grubudur: kronik hastalıklar, sosyal izolasyon, fiziksel kırılganlık. Belirtiler: hafıza problemleri (depresyon-kaynaklı 'pseudo-demans'), aşırı pasiflik, beslenme reddi, intihar düşünceleri.",
+        "Yaklaşım: <strong>(1)</strong> Kayıplarını dinle (eşi, evi, anılarını içeren eşyaları). <strong>(2)</strong> Sosyal bağlarını koru (komşular, dini liderler). <strong>(3)</strong> Tıbbi durumlarını izle (kronik ilaçların kesilmesi tehlikeli). <a href=\"/blog-yaslilar-icin-deprem.html\">Yaşlılar için deprem rehberi</a>."
+      ]],
+      ["Kurtarma Ekiplerinde Tükenmişlik ve Destek", [
+        "AFAD, itfaiye, sağlık personeli, gönüllüler ikincil travma riski yüksektir. Aktif görevleri sırasında dahi PİY uygulanmalı.",
+        "Belirtiler: emosyonel kayıtsızlık, alkol kullanımı, geri çekilme, intihar düşünceleri. 6 Şubat sonrası Türkiye'de 23 sağlık personeli intihar etti — sistematik destek eksikliği.",
+        "Çözüm: vardiya sistemi (max 12 saat), ekip içi paylaşım toplantıları (debriefing), izinli istirahat günleri, profesyonel terapi opsiyonu."
+      ]],
+      ["Profesyonel Yardım Gerektiren Durumlar: Ne Zaman Uzmana Başvurulmalı?", [
+        "Aşağıdaki durumlarda uzman desteği şart: <strong>(1)</strong> İntihar veya kendine zarar düşünceleri. <strong>(2)</strong> 4 haftayı geçen ciddi uyku/iştah problemleri. <strong>(3)</strong> Halusinasyonlar veya gerçeklikten kopuş. <strong>(4)</strong> İşe veya okula gidememe. <strong>(5)</strong> Alkol/madde kullanımı belirgin artış. <strong>(6)</strong> Aile içi şiddet artışı.",
+        "Aciliyet: 112 arayın veya en yakın acil servise gidin. İntihar düşünceleri varsa kişiyi yalnız bırakmayın."
+      ]],
+      ["Türkiye'de Afet Psikolojisi Destek Kaynakları", [
+        "Resmi destek kaynakları:",
+        "<strong>(1) AFAD Psikososyal Destek Hattı:</strong> 122 (afet sonrası 7/24 ücretsiz).",
+        "<strong>(2) Sağlık Bakanlığı Toplum Ruh Sağlığı Merkezleri (TRSM):</strong> İl bazlı ücretsiz psikiyatri.",
+        "<strong>(3) Aile ve Sosyal Politikalar Bakanlığı:</strong> Aile danışma merkezleri (ALO 183).",
+        "<strong>(4) Türk Psikologlar Derneği:</strong> Afet sonrası gönüllü psikolog ağı (turkpsikolog.org).",
+        "<strong>(5) Üniversite klinikler:</strong> Bedava veya çok düşük ücretli terapi.",
+        "<strong>(6) Online platformlar:</strong> Hayy, Psikolog.com, BiHo.com — kredi kartlı ama hızlı erişim."
+      ]]
+    ],
+    "faqs": [
+      ["Deprem korkusu yıllar sonra geri gelebilir mi?", "Evet, 'gecikmiş PTSD' olarak bilinir. Yeni bir tetikleyici (haber, başka bir deprem) eski travmayı yeniden uyandırabilir. Profesyonel destek alabilirsiniz."],
+      ["Çocuğumun deprem korkusu için ona film izlettirebilir miyim?", "Hayır, doğrudan deprem görseli izletme. Bunun yerine 'kahraman çocuk' temalı, deprem sonrası nasıl yardım edileceğini gösteren çocuk kitapları okuyun."],
+      ["Anti-depresan deprem PTSD'sinde işe yarar mı?", "Evet, SSRI grubu (örn. sertraline) PTSD tedavisinde etkilidir. Ancak ilaç tek başına çözüm değildir; mutlaka terapi ile birlikte uygulanmalıdır."],
+      ["Eşim depremden sonra çok sinirli oldu, normal mi?", "Evet, irritabilite (sinirlilik) PTSD'nin yaygın belirtilerindendir. 4-6 hafta içinde geçmezse uzman desteği önerilir."],
+      ["Ben de bir kurtarma gönüllüsüyüm, kendi psikolojimi nasıl korurum?", "Kendi PİY: vardiyaları aşmayın, ekip arkadaşlarınızla paylaşın, evde alkolü azaltın, fizik egzersiz yapın. 4 haftada bir profesyonel danışman görüşmesi ideal."]
+    ],
+    "related": [
+      ["/blog-deprem-sonrasi-psikolojik-destek.html", "Psikolojik Destek"],
+      ["/blog-deprem-anketi-cocuklar.html", "Çocuklarda Deprem"],
+      ["/blog-yaslilar-icin-deprem.html", "Yaşlılar İçin"],
+      ["/blog-deprem-sonrasi-ilk-24-saat.html", "İlk 24 Saat"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  },
+  {
+    "slug": "komsu-binasi-deprem-riski-sikayet",
+    "title": "Komşu Binasının Deprem Riski Varsa Ne Yapmalı? — İhbar Rehberi",
+    "meta_description": "Komşu binası tehlikeli mi? Riskli yapı ihbarı nereye yapılır, süreç nasıl işler? Belediye, AFAD ve hukuki başvuru rehberi.",
+    "keywords": ["komşu binası deprem riski şikayet", "riskli bina ihbarı nereye yapılır", "tehlikeli bina şikayet belediye", "komşu bina yıkılacak ne yapmalı", "hasar görmüş bina bildirimi"],
+    "category": "sigorta",
+    "image_alt": "Tehlikeli bina ihbar süreci dokümanı",
+    "lead": "Komşu binanın çatlak, eğim veya dökülme gibi hasar belirtileri göstermesi ciddi risk yaratır — sadece o binada değil, çevresindeki yapılarda da. Deprem sırasında çökme yan binalara zarar verebilir. Bu rehberde ihbar süreci, hangi kuruma başvuracağınız ve sonrasında neler olacağı anlatılıyor.",
+    "body_h2_blocks": [
+      ["Komşu Binasının Tehlikeli Olduğunu Nasıl Anlarsınız?", [
+        "Görsel risk belirtileri:",
+        "<strong>(1) Eğim:</strong> Bina düşey eksende sapmış. Bir ip sarkıtarak cephe doğrultusunu test edin — 5 cm'den fazla sapma ciddi alarm.",
+        "<strong>(2) Yapısal çatlaklar:</strong> Diagonal (X şeklinde) çatlaklar deprem hasarı. Saç çatlağı (>3 mm) tehlikeli.",
+        "<strong>(3) Beton dökülmesi:</strong> Kolon ve kirişlerde betonun dökülüp donatının açığa çıkması — son aşama hasar.",
+        "<strong>(4) Kapı/pencere kapanmaması:</strong> Bina çerçeveleri eğim aldı.",
+        "<strong>(5) Ses:</strong> Esnek binalar deprem öncesi 'crack' sesleri verir.",
+        "<strong>(6) Yumuşak kat görüntüsü:</strong> Zeminde dükkan çok geniş, üstündeki katlarda duvarlar farklı yerlerde."
+      ]],
+      ["Hasarlı veya Riskli Bina Kriterleri Nelerdir?", [
+        "Çevre Şehircilik Bakanlığı'nın resmi sınıflandırması:",
+        "<strong>Hasarsız:</strong> Görünür hasar yok. Kullanıma uygun.",
+        "<strong>Az hasarlı:</strong> Yüzeysel çatlaklar, kullanıma uygun, basit onarım.",
+        "<strong>Orta hasarlı:</strong> Yapısal çatlaklar, donatı görünmüyor. Acil tahliye gerekmez ama detaylı inceleme şart.",
+        "<strong>Ağır hasarlı:</strong> Yapısal sistem zarar görmüş, donatı açıkta, eğim. <strong>Acil tahliye + yıkım/güçlendirme.</strong>",
+        "<strong>Yıkık:</strong> Bina tamamen veya kısmen çökmüş. Kullanım imkansız."
+      ]],
+      ["İhbarı Nereye Yapmalısınız? Belediye, AFAD, İl Müdürlüğü", [
+        "Sıralı başvuru kanalları:",
+        "<strong>(1) Belediye Yapı Denetim Müdürlüğü</strong> (öncelikli): Yazılı dilekçe veya CIMER. Belediye 5 iş günü içinde yerinde inceleme yapar.",
+        "<strong>(2) Çevre Şehircilik Bakanlığı İl Müdürlüğü:</strong> Belediye yanıt vermezse veya bina riskli alanda ise.",
+        "<strong>(3) AFAD:</strong> Acil durum (deprem sonrası, anlık tehlike). 122 acil hattı.",
+        "<strong>(4) CIMER (Cumhurbaşkanlığı İletişim Merkezi):</strong> cimer.gov.tr. Tüm kurumlara dağıtılır, yanıt zorunlu.",
+        "İhbarcı kimliği gizli tutulur. Ancak sadece yapı sahibi ile çatışma için değil, hayatları korumak için ihbar yapılmalı."
+      ]],
+      ["Riskli Yapı Tespiti Süreci ve Süre", [
+        "Süreç adımları (yaklaşık süreler):",
+        "<strong>0-5 gün:</strong> İhbar değerlendirilir, yerinde ön inceleme.",
+        "<strong>5-30 gün:</strong> Yetkili kuruluşa rapor için yönlendirme. Performans raporu hazırlanır.",
+        "<strong>30-60 gün:</strong> Rapor sonucu çıkar. 'Riskli' veya 'Riskli değil' kararı verilir.",
+        "<strong>60-90 gün:</strong> Riskli ise yıkım kararı, paydaşlara tebligat.",
+        "<strong>90-180 gün:</strong> Tahliye süreci, kira yardımı başlatılması.",
+        "Acil tehlike durumunda (eğim, kopma) süreç hızlandırılabilir; 24-72 saat içinde mühürleme yapılır."
+      ]],
+      ["Tespit Sonrası Yıkım Kararı Nasıl Verilir?", [
+        "Riskli yapı tespit raporu çıktıktan sonra:",
+        "<strong>(1) Paydaşlara tebligat:</strong> 30 gün içinde 2/3 çoğunlukla dönüşüm anlaşması imzalanmalı.",
+        "<strong>(2) Anlaşma olmazsa:</strong> Çevre Şehircilik Bakanlığı zorla yıkım kararı verir, ihale ile yıkım yapar.",
+        "<strong>(3) Yıkım sonrası yeniden yapım:</strong> Müteahhit veya bakanlık yapımı.",
+        "<strong>(4) Yıkım gerekçesiyle:</strong> Tahliye kira yardımı (24 ay), <a href=\"/blog-kentsel-donusum-vergisi-muafiyeti.html\">vergi muafiyetleri</a>, KDV istisnası başlar."
+      ]],
+      ["Yıkım Kararına İtiraz Hakkı Var mı?", [
+        "Evet. Karar yayımlandıktan 30 gün içinde idare mahkemesine itiraz dava açılabilir. Yaygın itiraz gerekçeleri:",
+        "<strong>(1) Rapor methodolojisi yanlış:</strong> Ölçümler, hesaplar hatalı.",
+        "<strong>(2) Bina aslında riskli değil:</strong> İkinci bir bağımsız rapor.",
+        "<strong>(3) Süreçte usulsüzlük:</strong> Tebligat yapılmamış, paydaşlara bilgi verilmemiş.",
+        "Mahkeme süreci 6-18 ay sürebilir. Kazanan paydaşlar yıkımı durdurabilir; ancak risk devam ederse hayati sorun olur."
+      ]],
+      ["Boşaltma Kararı Çıkarsa Kiracıların Hakları", [
+        "Riskli yapı kararıyla çıkan tahliye kararında kiracıların hakları:",
+        "<strong>(1) Kira yardımı:</strong> Aylık 6.500-10.000 TL (büyük şehir), 18-24 ay.",
+        "<strong>(2) Taşınma masrafları:</strong> 2-5 bin TL nakliye yardımı.",
+        "<strong>(3) Yeni daire öncelik:</strong> Aynı binanın yeni hali yapıldığında kiracı geri dönüş hakkı.",
+        "<strong>(4) Ev sahibinden tazminat:</strong> Kontrat süresi yetmezse. <a href=\"/blog-deprem-sonrasi-kiracilarin-haklari.html\">Detaylı kiracı hakları</a>."
+      ]],
+      ["Bitişik Nizamda Risk: Ortak Duvar ve Taşıyıcı Sistemler", [
+        "Eski binalar genelde bitişik nizamlıdır — ortak duvar paylaşır. Bu durumda komşunun riskli binası sizin binanızı da etkiler:",
+        "<strong>(1) Ortak duvar yıkılırsa:</strong> İki bina da hasar alır.",
+        "<strong>(2) Komşu çökerse:</strong> Yan binaya zorlama yükü gelir.",
+        "<strong>(3) Yıkım sırasında:</strong> Kontrolsüz yıkım yan binayı zayıflatabilir.",
+        "Bu nedenle bitişik nizamlı komşunun durumu hayati önem taşır. Mutlaka kontrol edin."
+      ]],
+      ["Deprem Hasarı Sonrasında Riskli Bina Bildirimi", [
+        "Deprem sonrası 'Hasar Tespit' süreci farklı işler:",
+        "<strong>(1)</strong> AFAD ve belediyeler 24-48 saat içinde toplu tarama başlatır.",
+        "<strong>(2)</strong> Her bina kapısına renkli etiket: <strong>Yeşil</strong> (kullanılabilir), <strong>Sarı</strong> (sınırlı, dikkatli), <strong>Kırmızı</strong> (yasak/yıkılacak).",
+        "<strong>(3)</strong> Etiket yanlış mı? Yeniden inceleme talebi 7 gün içinde yapılabilir.",
+        "<strong>(4)</strong> Atlanan bina var mı? Komşu olarak mutlaka bildirin."
+      ]]
+    ],
+    "faqs": [
+      ["İhbar yaparken kimliğim açıklanır mı?", "Hayır, ihbarcı kimliği yasal olarak gizli tutulur. Ancak komşunuzun iddia hakkı yoktur."],
+      ["Belediye benim ihbarımı görmezden gelirse ne yaparım?", "İl Müdürlüğü'ne, sonrasında CIMER'e başvurun. Hala sonuç yoksa idari mahkemeye dava açabilirsiniz."],
+      ["Komşum riskli binasını yıkmıyor, ben dava açabilir miyim?", "Evet, komşuluk hakkı kapsamında ihtarname ve sonrasında zarar tehlikesi nedeniyle önleyici tedbir davası açılabilir."],
+      ["Bina riskli ama içinde yaşamaya devam ediliyor, yasal mı?", "Hayır. 'Yasak/Kırmızı' etiketli binada oturmak yasaktır. Belediye zorla tahliye yapabilir. 'Sarı' etiketli ise sınırlı kullanım uyarısı vardır."],
+      ["Riskli bina iki blokun arasındaysa ne olur?", "Yıkım sırasında özel mühendislik gerektirir. İki yan komşu yapı önce desteklenir (köpek başlıklarıyla), sonra kontrollü yıkım."]
+    ],
+    "related": [
+      ["/blog-bina-deprem-performans-raporu-nedir.html", "Performans Raporu"],
+      ["/blog-kolon-kesme-cezasi-ve-hukuki-sorumluluk.html", "Kolon Kesme Cezası"],
+      ["/blog-e-devlet-deprem-riski-sorgulama.html", "E-Devlet Sorgulama"],
+      ["/blog-kentsel-donusum-vergisi-muafiyeti.html", "Kentsel Dönüşüm Vergi"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  }
+]

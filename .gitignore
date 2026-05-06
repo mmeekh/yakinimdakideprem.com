@@ -18,3 +18,7 @@ env.production
 # SEO raporlama - service account + raporlar
 secrets/
 reports/
+
+# IndexNow key file (regenerated per env)
+public/*.txt
+!public/robots.txt
