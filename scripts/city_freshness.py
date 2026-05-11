@@ -207,11 +207,19 @@ def update_city_page(slug: str, city_name: str, quake: dict) -> bool:
         flags=re.DOTALL,
     )
 
-    # Update <title> for freshness signal
+    # Title freshness: SADECE M4.0+ depremlerde dinamik title. Aksi halde
+    # standart CTR-optimize başlık. Bu, küçük (M1-2) depremlerin SERP'te
+    # sayfa başlığını kötüleştirmesini önler.
     mag = float(quake.get("magnitude", 0) or 0)
-    new_title = (
-        f"{city_name} Deprem {mag:.1f} - Az Önce | Anlık Deprem | Yakınımdaki Deprem"
-    )
+    if mag >= 4.0:
+        new_title = (
+            f"🔴 {city_name}'da Az Önce {mag:.1f} Deprem | Anlık Deprem Takibi"
+        )
+    else:
+        # Standart CTR-optimize başlık
+        new_title = (
+            f"Anlık Deprem {city_name} 🔴 Canlı Harita ve Son Depremler"
+        )
     new_html = re.sub(
         r"<title>[^<]+</title>",
         f"<title>{new_title}</title>",
