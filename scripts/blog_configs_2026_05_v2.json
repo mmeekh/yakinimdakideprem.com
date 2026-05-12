@@ -1,0 +1,847 @@
+[
+  {
+    "slug": "canli-sismik-harita-turkiye",
+    "title": "Canlı Sismik Harita Türkiye 2026 — Anlık Aktivite Takibi",
+    "meta_description": "Canlı sismik harita: Türkiye'nin anlık sismik aktivitesini AFAD + Kandilli verisiyle 20 saniyede güncellenen interaktif haritada takip edin. Büyüklük, derinlik, fay hatları.",
+    "keywords": ["sismik harita canlı", "anlık sismik aktivite", "sismik harita türkiye", "canlı sismik takip", "sismograf canlı"],
+    "category": "bilim",
+    "image_alt": "Türkiye canlı sismik harita ve aktivite göstergesi",
+    "lead": "Sismik harita, yer kabuğundaki anlık sarsıntıları görsel olarak gösteren bilimsel bir araçtır. Türkiye'nin 81 ilinin tamamı için canlı sismik aktiviteyi gerçek zamanlı izleyebileceğiniz bu sayfa, AFAD ve Kandilli verilerini birleştiren tek harita platformudur.",
+    "body_h2_blocks": [
+      ["Sismik Harita Nedir?", [
+        "Sismik harita, bir bölgedeki <strong>sismik aktiviteyi</strong> (yer hareketlerini) coğrafi düzlemde gösteren özel bir haritadır. Standart bir deprem haritasından farklı olarak, sismik haritalar yalnızca olmuş depremleri değil, aynı zamanda <strong>fay hatları, sismik dalga yayılımı ve aktif risk bölgelerini</strong> de gösterir.",
+        "Modern dijital sismik haritalar 20 saniyede bir güncellenir; sismograf istasyonlarından gelen veriler bilgisayar tarafından işlenip haritaya işaretlenir. Türkiye'de bu işi <strong>AFAD (Afet ve Acil Durum Yönetimi)</strong> ve <strong>Boğaziçi Üniversitesi Kandilli Rasathanesi</strong> yapar."
+      ]],
+      ["Canlı Sismik Harita Nasıl Çalışır?", [
+        "Yer kabuğunda hareket olduğunda, <strong>sismograflar</strong> P-dalgası ve S-dalgasını algılar. En az 3 farklı istasyonun verisi (triangulasyon yöntemiyle) işlenerek depremin merkez üssü, derinliği ve büyüklüğü hesaplanır. Bu işlem 10-30 saniye sürer.",
+        "Yakınımdaki Deprem platformunda <strong>20 saniyede bir API sorgusu</strong> yapılır. Yeni bir deprem tespit edildiğinde haritada renkli daire olarak görünür: yeşil (M0-2.9), sarı (M3-3.9), turuncu (M4-4.9), kırmızı (M5-6.9), mor (M7+)."
+      ]],
+      ["Sismik Haritada Hangi Bilgiler Görülür?", [
+        "İyi bir canlı sismik haritada şu bilgiler bulunmalıdır:",
+        "<strong>(1) Büyüklük (Magnitude):</strong> Richter veya moment büyüklüğü skalasında değer.",
+        "<strong>(2) Derinlik (Depth):</strong> Yüzeyden kaç kilometre derinde — sığ depremler (0-30 km) daha yıkıcı.",
+        "<strong>(3) Merkez üssü (Epicenter):</strong> Yatay koordinatlar — il ve ilçe bazlı.",
+        "<strong>(4) Zaman:</strong> Tam saat ve 'az önce' tarzı zaman damgası.",
+        "<strong>(5) Fay hatları:</strong> KAF, DAF, BAF gibi büyük tektonik kırıklar.",
+        "<strong>(6) Tarihsel aktivite:</strong> Son 24 saat / 7 gün filtreleri.",
+        "Yakınımdaki Deprem haritası bu özelliklerin hepsini barındırır."
+      ]],
+      ["Türkiye'de Sismik Aktivite Neden Bu Kadar Yoğun?", [
+        "Türkiye, dünyanın en aktif sismik bölgelerinden biri olan <strong>Akdeniz-Alp-Himalaya deprem kuşağı</strong>nda yer alır. Anadolu plakası kuzeyden Avrasya, güneyden Afrika ve Arabistan plakaları tarafından sıkıştırılır.",
+        "Bu basınç üç büyük fay hattını besler: <strong>Kuzey Anadolu Fay Hattı (KAF)</strong>, <strong>Doğu Anadolu Fay Hattı (DAF)</strong> ve <strong>Batı Anadolu Fay Hattı (BAF)</strong>. Yıllık ortalama 25.000+ deprem kaydedilir; bunların 100-150'si M4.0 üstüdür."
+      ]],
+      ["Yakınımdaki Deprem Sismik Haritası Nasıl Kullanılır?", [
+        "Anasayfamızdaki canlı harita varsayılan olarak Türkiye'yi gösterir. Üç ana etkileşim:",
+        "<strong>(1) Yakınlaştır/Uzaklaştır:</strong> Fare tekerleği veya mobilde iki parmak.",
+        "<strong>(2) Konum filtresi:</strong> 'Konumum' butonuyla bulunduğunuz noktadaki son depremleri görün.",
+        "<strong>(3) Şehir araması:</strong> Üstteki kutuya il/ilçe yazın — ör. 'İstanbul' veya 'Marmara'.",
+        "Sağ paneldeki liste haritayla senkrondur; bir depreme tıklayınca harita oraya zoom yapar. Mobil cihazda 'katmanlar' butonu liste/legend'i açar."
+      ]],
+      ["Sismik Harita ile Deprem Haritası Farkı", [
+        "<strong>Deprem haritası</strong> sadece olmuş depremleri gösterir — geçmiş veri arşividir. <strong>Sismik harita</strong> ise canlı veri akışı + fay hatları + risk değerlendirmesi sunar. Sismik harita 'gelecek' odaklıdır, deprem haritası 'geçmiş' odaklıdır.",
+        "Profesyonel sismologlar her iki haritayı birlikte kullanır. Yakınımdaki Deprem platformu her iki katmanı da içerir — varsayılan görünüm canlı, filtre ile geçmiş veriye geçebilirsiniz."
+      ]],
+      ["Sismik Aktivite Bildirimleri Nasıl Alınır?", [
+        "<strong>(1) Browser push notification:</strong> Anasayfada 'Sadece 4.0+ Bildirim Al' düğmesine basın — sadece önemli depremlerde tarayıcı bildirimi alırsınız.",
+        "<strong>(2) Twitter takip:</strong> @depremyakinim hesabımız M5.0+ depremlerde otomatik tweet atar.",
+        "<strong>(3) Konum-bazlı uyarı:</strong> 'Konumum' butonuyla yaklaşan deprem riskinin sözel uyarısını alırsınız (test aşaması)."
+      ]],
+      ["AFAD ve Kandilli Sismik Verisi Hakkında", [
+        "<strong>AFAD</strong> — Türkiye genelinde 1041 sismograf istasyonu, otomatik veri işleme, hız ve doğruluk önceliği. <strong>Kandilli</strong> — 220 istasyon, manuel doğrulama, akademik araştırma odaklı.",
+        "Her iki kurumun verisi genelde uyumludur ama küçük büyüklük farkları olabilir (örn. M3.4 AFAD, M3.6 Kandilli). Bu fark <strong>magnitüd hesaplama yöntemleri</strong>nden kaynaklanır — AFAD genelde ML (yerel büyüklük), Kandilli MW (moment büyüklüğü) kullanır."
+      ]],
+      ["Sismik Haritada Renkler Ne Anlama Gelir?", [
+        "Uluslararası standartlaşmış renk kodlaması:",
+        "<strong>Yeşil (M0-2.9):</strong> Hissedilmeyen mikro depremler. Günlük ortalama 50-100 adet.",
+        "<strong>Sarı (M3-3.9):</strong> Bazı kişilerin hissedebileceği hafif depremler. Günlük 5-10 adet.",
+        "<strong>Turuncu (M4-4.9):</strong> Belirgin hissedilen, eşya kıpırdamasına yol açabilen. Aylık 15-30 adet.",
+        "<strong>Kırmızı (M5-6.9):</strong> Hafif hasar potansiyeli. Yıllık 10-50 adet (Türkiye).",
+        "<strong>Mor/Koyu kırmızı (M7+):</strong> Yıkıcı. Yıllık 0-2 adet ortalama.",
+        "Bu sınıflandırma <a href=\"/blog-deprem-buyukluk-olcekleri.html\">deprem büyüklük ölçekleri</a> rehberinde detaylanır."
+      ]],
+      ["Mobil Cihazda Canlı Sismik Harita Performansı", [
+        "Yakınımdaki Deprem haritası tamamen mobil-optimize edilmiştir. Veri çekimi sırasında 50-100 KB trafik tüketir; 4G/5G bağlantılarda 2 saniyede yüklenir.",
+        "Pil tasarrufu için 'arka planda güncelleme' kapalıdır — uygulama açıkken her 20 saniyede bir veri çekilir. Bildirim aboneliği aktifse, uygulama kapalı olsa da OneSignal üzerinden bildirim alabilirsiniz."
+      ]]
+    ],
+    "faqs": [
+      ["Canlı sismik harita ne kadar hızlı güncellenir?", "Yakınımdaki Deprem haritası 20 saniyede bir API sorgusu yapar. Bir deprem olduktan sonra veri 30-90 saniye içinde haritada görünür. Bu, kaynak kurumların (AFAD/Kandilli) işleme süresinden kaynaklanır."],
+      ["Sismik harita doğru mu, AFAD'tan farklı sonuç mu veriyor?", "Verilerimiz AFAD ve Kandilli'nin resmi API'lerinden alınır; birebir aynıdır. Küçük farklar (M3.4 vs M3.6) iki kurum arasında olabilir; biz Kandilli'yi varsayılan kabul ederiz."],
+      ["Sismik haritada hangi sembol ne anlama gelir?", "Renkli daireler depremleri gösterir; daire büyüklüğü magnitüde göre değişir. Sarı çizgiler aktif fay hatlarıdır. Mavi nokta sizin konumunuzdur (izin verilmişse)."],
+      ["Sismik harita çevrimdışı çalışır mı?", "Hayır, canlı veri için internet bağlantısı gereklidir. Ancak son 24 saatteki veri tarayıcı önbelleğinde tutulur; kısa bağlantı kopukluğunda eski veri görüntülenebilir."],
+      ["Türkiye dışındaki depremler haritada görünür mü?", "Hayır, harita Türkiye sınırlarına odaklıdır. Komşu ülkelerde (Yunanistan, Suriye) Türkiye'yi etkileyen depremler görünür ama detaylı dünya kapsamı yoktur. Dünya geneli için <a href=\"/blog-dunya-deprem-haritasi-canli.html\">dünya deprem haritası</a>'na bakın."]
+    ],
+    "related": [
+      ["/blog-canli-fay-hatti-haritasi.html", "Canlı Fay Hattı Haritası"],
+      ["/blog-deprem-buyukluk-olcekleri.html", "Deprem Büyüklük Ölçekleri"],
+      ["/blog-deprem-erken-uyari-sistemi.html", "Deprem Erken Uyarı Sistemi"],
+      ["/blog-afad-kandilli-deprem-karsilastirma.html", "AFAD Kandilli Karşılaştırması"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  },
+  {
+    "slug": "yakinimda-deprem-konum-sorgulama",
+    "title": "Yakınımda Deprem Oldu Mu? Konum Bazlı Sorgulama 2026",
+    "meta_description": "Yakınımda deprem oldu mu? Konum bilginizle anlık deprem sorgulama, yakın depremler listesi, mesafe hesaplama ve bildirim ayarları rehberi.",
+    "keywords": ["yakınımda deprem", "yakın depremler", "yakınımda deprem oldu mu", "konum bazlı deprem", "anlık deprem konumum"],
+    "category": "bilim",
+    "image_alt": "Yakınımda deprem sorgulama harita ve konum işareti",
+    "lead": "Sarsıntı hissettiğinizde ilk merak ettiğiniz şey: 'Yakınımda mı oldu, ne kadar büyüktü?' Bu rehber konum bilginizi kullanarak anlık deprem sorgulamayı, mesafe hesaplamayı ve yakın depremleri takip etmenin tüm yollarını anlatıyor.",
+    "body_h2_blocks": [
+      ["Yakınımda Deprem Oldu Mu? — Hızlı Yanıt", [
+        "Şu an sarsıntı hissettiyseniz veya az önce hissettiyseniz, yakınınızda büyük olasılıkla 3.0+ büyüklüğünde bir deprem olmuştur. Yakınımdaki Deprem anasayfasında otomatik konum tespiti yaparak size en yakın 5 depremi listeleyebiliriz. <a href=\"/\">Anasayfaya gidip 'Konumum' butonuna basın.</a>",
+        "İçinde bulunduğunuz dakikada Türkiye genelinde hangi depremlerin olduğunu görmek için <a href=\"/son-dakika-deprem.html\">Son Dakika Deprem</a> sayfasını da kullanabilirsiniz. Bu sayfa M2.5+ tüm depremleri zaman sırasıyla listeler."
+      ]],
+      ["Konum İzni Vermenin Avantajları", [
+        "Tarayıcınız size konum izni isteyebilir. İzin verirseniz:",
+        "<strong>(1)</strong> Harita otomatik bulunduğunuz noktaya yakınlaşır.",
+        "<strong>(2)</strong> Sadece 100 km yarıçapındaki depremler vurgulanır.",
+        "<strong>(3)</strong> Her depremin mesafesi km cinsinden gösterilir ('15 km kuzey', 'Marmara Denizi 38 km').",
+        "<strong>(4)</strong> Yakın bir M4.0+ deprem olduğunda otomatik uyarı alırsınız.",
+        "Konum bilginiz sadece tarayıcınızda işlenir, sunucumuza gönderilmez ve kaydedilmez."
+      ]],
+      ["Konum İzni Çalışmıyor — Ne Yapmalı?", [
+        "Olası nedenler ve çözümleri:",
+        "<strong>(1) HTTPS olmayan sayfa:</strong> Konum API'si yalnızca güvenli bağlantılarda çalışır. Yakınımdaki Deprem zaten HTTPS — sorun değildir.",
+        "<strong>(2) Tarayıcı izni reddedildi:</strong> Adres çubuğundaki kilit simgesine tıklayın → 'Konum' → 'İzin ver'.",
+        "<strong>(3) GPS kapalı (mobil):</strong> Telefon ayarlarından 'Konum servisleri'ni açın.",
+        "<strong>(4) VPN/Proxy kullanıyorsanız:</strong> Konum yanlış tespit edilebilir; manuel şehir araması yapın.",
+        "Konum çalışmazsa şehir arama kutusunu kullanın — 81 ilden birini seçerek o ile özel sayfaya gidersiniz."
+      ]],
+      ["Yakın Depremler Listesi Nasıl Oluşturulur?", [
+        "Sistemimiz konum bilginiz alındıktan sonra:",
+        "<strong>(1) Haversine formülü</strong> ile her depremin mesafesini hesaplar (km cinsinden).",
+        "<strong>(2) Son 24 saat içindeki</strong> M2.5+ tüm depremleri filtreler.",
+        "<strong>(3) Mesafeye göre sıralar</strong> — en yakın en üstte.",
+        "<strong>(4) Görsel olarak vurgular</strong> — 100 km içindeki depremler parlak renkli, dışındakiler soluk.",
+        "Bu hesaplama saniyenin altında tamamlanır. Performans için sadece son 7 günün verisi cache'lenir."
+      ]],
+      ["Mesafeye Göre Tehlike Sınıflandırması", [
+        "Bir depremin sizi etkileme potansiyeli mesafeye + büyüklüğe bağlıdır. Genel kural:",
+        "<strong>0-10 km:</strong> Çok güçlü hissedilir, M3.5+ ise eşyalar düşebilir.",
+        "<strong>10-30 km:</strong> Belirgin hissedilir, M4.0+ ise dikkat etmeli.",
+        "<strong>30-100 km:</strong> Hafif hissedilir veya hiç hissedilmez. M5.0+ ise ihmal edilmemeli.",
+        "<strong>100-300 km:</strong> Yalnızca M6.0+ depremler hissedilir, bina hasarı sınırlı.",
+        "<strong>300+ km:</strong> Yıkıcı için M7+ gerekir, M8+ olağanüstü uzaktan da hissedilir."
+      ]],
+      ["Konuma Göre Otomatik Bildirim Alma", [
+        "Anasayfadaki 'Sadece 4.0+ Bildirim Al' düğmesi tarayıcı push bildirimi ekler. Konum bilginiz varsa bildirimler <strong>yakınınızdaki M4.0+ depremlerde</strong> öncelikli gelir.",
+        "Sistem her 1 dakikada bir kontrol eder. Tarayıcınız kapalı olsa bile bildirim alırsınız (Android'de). iOS'ta sınırlamalar vardır — uygulamanın açık olması gerekir."
+      ]],
+      ["Yakınımdaki Deprem Push Bildirimi Nasıl Açılır?", [
+        "<strong>Adım 1:</strong> Anasayfadaki kırmızı 'Sadece 4.0+ Bildirim Al' düğmesine tıklayın.",
+        "<strong>Adım 2:</strong> Tarayıcı 'Bildirim göstermek istiyor' diye sorar — 'İzin ver'.",
+        "<strong>Adım 3:</strong> Sistem konum izni de ister — onaylayın (sadece coğrafi bölgeniz için bildirim).",
+        "<strong>Adım 4:</strong> 'Bildirimler Açık' yeşil onay görürsünüz.",
+        "İptal etmek için: tarayıcı ayarlarından site izinlerini sıfırlayın."
+      ]],
+      ["Yakındaki Tarihi Depremler — Bölge Geçmişi Önemli Mi?", [
+        "Bulunduğunuz bölgenin son 100 yıllık deprem geçmişi, gelecek riskinin önemli bir göstergesidir. <a href=\"/blog-turkiye-en-cok-deprem-iller.html\">Türkiye'nin en çok deprem olan illeri</a> rehberinde bölgesel risk haritası bulabilirsiniz.",
+        "Şehir sayfalarımızda her ilin <strong>fay hattı bilgisi + tarihsel olaylar</strong> yer alır. Örnek: <a href=\"/deprem-istanbul.html\">İstanbul</a>, <a href=\"/deprem-izmir.html\">İzmir</a>, <a href=\"/deprem-hatay.html\">Hatay</a>."
+      ]],
+      ["Yakınımda Çok Deprem Oluyor — Endişeli Olmalı Mıyım?", [
+        "Türkiye'de günde ortalama 70-100 mikro deprem (M0-2.9) kaydedilir. Mikro depremler hissedilmez ama AFAD haritasında görünür. Bu normal; aktif fay hatları sürekli enerjisini boşaltır.",
+        "Endişe duyacağınız durumlar: <strong>(1)</strong> Aynı bölgede saatte 5+ M3.0+ deprem (deprem fırtınası). <strong>(2)</strong> Daha önce sessiz olan bölgede aniden aktivite artışı. <strong>(3)</strong> Sığ (5 km altı) ve M4.0+ depremler. Bu durumlarda AFAD genelde resmi bildirim yapar."
+      ]]
+    ],
+    "faqs": [
+      ["Konumumu paylaşmazsam yakın depremleri görebilir miyim?", "Evet, manuel şehir araması yaparak ilinize özel sayfaya gidebilirsiniz. Konum izni isteğe bağlıdır."],
+      ["Yakınımdaki deprem ne kadar yakın sayılır?", "Genelde 50 km'ye kadar 'yakın' kabul edilir. 50-100 km 'orta mesafe', 100 km üzeri 'uzak' sınıfına girer. Hissetme açısından büyüklük belirleyicidir."],
+      ["Yurt dışındayken Türkiye'deki yakın depremleri görebilir miyim?", "Evet, sayfa açıldığı sürece veri alır. Konum izni vermezseniz Türkiye geneli için varsayılan görünüm gelir."],
+      ["Yakınımdaki deprem ne kadar sonra haritada görünür?", "Olaydan 30-90 saniye sonra. AFAD/Kandilli verisi işleme zamanı dahil."],
+      ["Konum hassasiyetim ne kadar?", "Tarayıcı GPS'i 5-50 metre arası hassasiyetle çalışır. WiFi tabanlı konum (kapalı mekanlarda) 50-500 metre olabilir. Deprem analizi için bu hassasiyet fazlasıyla yeterlidir."]
+    ],
+    "related": [
+      ["/blog-canli-sismik-harita-turkiye.html", "Canlı Sismik Harita"],
+      ["/blog-az-once-deprem-mi-oldu.html", "Az Önce Deprem Mi Oldu"],
+      ["/deprem-aninda.html", "Deprem Anında Yapılacaklar"],
+      ["/blog-deprem-cep-uygulamalari.html", "Deprem Cep Uygulamaları"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  },
+  {
+    "slug": "deprem-haritasi-nasil-okunur",
+    "title": "Deprem Haritası Nasıl Okunur? Türkiye Kapsamlı Rehber 2026",
+    "meta_description": "Deprem haritası okuma rehberi: renk kodları, fay hatları, derinlik göstergeleri, magnitüd skalası ve coğrafi koordinat sistemi. Adım adım örneklerle.",
+    "keywords": ["deprem haritası", "deprem haritası okuma", "deprem haritası nedir", "afad deprem haritası", "kandilli deprem haritası"],
+    "category": "bilim",
+    "image_alt": "Türkiye deprem haritası okuma kılavuzu - renk kodları",
+    "lead": "Deprem haritası, sismik aktiviteyi görsel olarak ifade eden bilimsel bir araçtır. Doğru okumayı bilmek, riski değerlendirmek ve haber kaynaklarındaki verileri anlamak için kritiktir. Bu rehber temel okuma teknikleri ile başlayıp ileri seviye yorumlara kadar ilerliyor.",
+    "body_h2_blocks": [
+      ["Deprem Haritası Nedir?", [
+        "Deprem haritası, belirli bir zaman aralığında olmuş depremleri coğrafi koordinatlar üzerinde gösteren özel haritalardır. İki ana tür vardır:",
+        "<strong>(1) Statik deprem haritaları:</strong> Yıllar üstü tarihsel verileri gösterir. AFAD'ın 'Türkiye Deprem Tehlike Haritası' bu kategoridir — 475 yıl içinde olabilecek en büyük depremleri tahminler.",
+        "<strong>(2) Canlı deprem haritaları:</strong> Anlık verileri gösterir, sürekli güncellenir. Yakınımdaki Deprem ve AFAD'ın canlı sayfası bu kategorideydedir."
+      ]],
+      ["Deprem Haritasındaki Renk Kodları", [
+        "Uluslararası kabul görmüş magnitüd-renk eşleşmesi:",
+        "<strong>🟢 Yeşil (0-2.9):</strong> Mikro depremler. Cihazlarla algılanır, insan hissetmez.",
+        "<strong>🟡 Sarı (3.0-3.9):</strong> Hafif depremler. Asma lambalar sallanır, bazı kişiler hisseder.",
+        "<strong>🟠 Turuncu (4.0-4.9):</strong> Orta büyüklük. Yataktaki kişi uyanır, mobilyalar kıpırdar.",
+        "<strong>🔴 Kırmızı (5.0-5.9):</strong> Belirgin. Eski binalarda hasar başlayabilir.",
+        "<strong>🟥 Koyu kırmızı (6.0-6.9):</strong> Güçlü. Standart binaların bazılarında hasar.",
+        "<strong>🟪 Mor (7.0-7.9):</strong> Yıkıcı. Geniş alanda hasar.",
+        "<strong>⬛ Siyah (8.0+):</strong> Büyük felaket. Yüzyılda bir yaşanan tip."
+      ]],
+      ["Daire Boyutu Ne Anlama Gelir?", [
+        "Çoğu haritada deprem işaretinin daire boyutu da magnitüde göre değişir — yani küçük yeşil daireler M2.5, büyük kırmızı daireler M5+ depremi gösterir. Bu görsel hiyerarşi, küçük depremlerin haritayı kaplayıp önemli olayları gizlemesini önler.",
+        "Yakınımdaki Deprem haritasında daire boyutu logaritmik ölçektedir: M5 deprem M4 depremin 4 katı boyuttadır (M5 = 10 kat daha fazla enerji)."
+      ]],
+      ["Derinlik Bilgisi Neden Önemli?", [
+        "Bir deprem 10 km veya 80 km derinlikte olabilir. Aynı büyüklükte olsa bile sığ depremler çok daha yıkıcıdır çünkü enerji yüzeye yakındır.",
+        "<strong>Sığ (0-30 km):</strong> Yüksek hasar potansiyeli. Türkiye'deki çoğu yıkıcı deprem bu kategorideydedir (1999 Marmara: 17 km, 2023 Kahramanmaraş: 8 km).",
+        "<strong>Orta (30-70 km):</strong> Daha az hasar, ama geniş alanda hissedilebilir.",
+        "<strong>Derin (70+ km):</strong> Genelde okyanus altlarında. Hasar düşük ama tsunami riski olabilir.",
+        "Yakınımdaki Deprem haritasında derinlik küçük yazılı sayı olarak görünür ('8.5 km'). Kandilli verisi km cinsindendir."
+      ]],
+      ["Fay Hatlarını Haritada Okumak", [
+        "Türkiye'nin 3 büyük fay sistemi haritada genelde sarı/turuncu çizgilerle gösterilir:",
+        "<strong>(1) KAF (Kuzey Anadolu Fayı):</strong> Doğu'dan başlar (Erzurum-Ağrı), Marmara'ya uzanır. 1500 km. En aktif fay.",
+        "<strong>(2) DAF (Doğu Anadolu Fayı):</strong> Kahramanmaraş'tan Hatay'a kadar. 700 km. 2023 yıkıcı depremlerin kaynağı.",
+        "<strong>(3) BAF (Batı Anadolu Fayı):</strong> Ege bölgesindeki normal faylar. 700 km. İzmir-Aydın hattı.",
+        "Detaylı fay haritası için <a href=\"/turkiye-deprem-rehberi-fay-hatlari.html\">Türkiye fay hatları rehberi</a>'ne bakın."
+      ]],
+      ["AFAD Deprem Haritası ile Kandilli Karşılaştırması", [
+        "<strong>AFAD haritası:</strong> Otomatik veri, hızlı güncelleme (1-3 dk), 1041 istasyon. Bazen önce AFAD bildirir.",
+        "<strong>Kandilli haritası:</strong> Manuel doğrulama, daha doğru büyüklük (2-10 dk gecikme), 220 istasyon. Tarihsel araştırma için referans.",
+        "Yakınımdaki Deprem her iki kaynağı birleştirir, çakışan verileri tek harita üzerinde gösterir. <a href=\"/blog-afad-kandilli-deprem-karsilastirma.html\">Detaylı karşılaştırma rehberi</a>'ne bakın."
+      ]],
+      ["Magnitüd Ölçeklerini Anlama: Richter mi Moment mi?", [
+        "Eski tüm depremler Richter ölçeği (ML) ile rapor edilirdi. Modern depremlerde Moment büyüklüğü (MW) tercih edilir çünkü daha doğrudur.",
+        "<strong>ML (Local Magnitude):</strong> 1935'te Charles Richter tarafından geliştirildi. 0-6.5 arası iyi çalışır. AFAD küçük depremlerde ML kullanır.",
+        "<strong>MW (Moment Magnitude):</strong> 1979'da Hanks-Kanamori tarafından. Tüm büyüklüklerde çalışır. M6.0+ depremlerde standart.",
+        "İki ölçek arası fark genelde 0.1-0.3 birim. Yakınımdaki Deprem M değerini olduğu gibi gösterir, kaynak bilgisini popüpta belirtir.",
+        "Daha fazlası: <a href=\"/blog-deprem-buyukluk-olcekleri.html\">deprem büyüklük ölçekleri</a>."
+      ]],
+      ["Haritadaki Zaman Damgalarını Yorumlamak", [
+        "Çoğu modern harita iki zaman gösterir:",
+        "<strong>(1) Tam zaman:</strong> '05.05.2026 21:34:12 TSİ' formatında, oluş anı.",
+        "<strong>(2) Göreceli zaman:</strong> 'az önce', '5 dk önce', '2 sa önce' — kullanıcı dostu.",
+        "Yakınımdaki Deprem'de tam zaman popüpta, göreceli zaman listede gösterilir. UTC zaman değil <strong>TSİ (Türkiye Saati)</strong> kullanılır."
+      ]],
+      ["Tarihsel Filtreleme: Son 24 Saat, 7 Gün, 30 Gün", [
+        "Harita üzerinde tarihsel filtreler önemlidir:",
+        "<strong>Son 24 saat:</strong> Acil durum izleme için. Aktif fay aktivitesini görür.",
+        "<strong>Son 7 gün:</strong> Trend analizi. Aynı bölgede tekrarlayan aktivite var mı?",
+        "<strong>Son 30 gün:</strong> Aylık özet. Mevsimsel veya planet hizalama kontrolü için akademik kullanım.",
+        "<strong>Tüm zamanlar:</strong> Tarihsel risk haritası. Yatırım kararları için."
+      ]],
+      ["Mobil Cihazda Deprem Haritası Okumak", [
+        "Mobil ekranda haritada bazı zorluklar vardır:",
+        "<strong>(1)</strong> Daireler birbirine yakın olduğunda örtüşür — yakınlaştırın.",
+        "<strong>(2)</strong> Renk körlüğü filtresi tarayıcıda açıksa renkler bozulabilir — sistem ayarından kapatın.",
+        "<strong>(3)</strong> Düşük ışıkta kırmızı tonlar belirsizleşir — gece modunu kapatın.",
+        "Yakınımdaki Deprem mobil haritasında daire boyutu otomatik olarak ekran piksel yoğunluğuna göre ayarlanır."
+      ]]
+    ],
+    "faqs": [
+      ["Deprem haritası canlı veri mi gösterir?", "Bağlıdır. Yakınımdaki Deprem ve AFAD canlı haritaları 20 saniyede bir güncellenir. 'Tehlike haritası' tarzında haritalar statiktir."],
+      ["Hangi deprem haritası en güvenilir?", "AFAD ve Kandilli resmi kaynaklardır. Yakınımdaki Deprem her iki kaynağı birleştiren bağımsız platform — birebir aynı veri."],
+      ["Deprem haritası akıllı telefon uygulaması var mı?", "Yakınımdaki Deprem mobil web optimize çalışır, uygulama gerektirmez. AFAD'ın da resmi 'AFAD Deprem' uygulaması mevcut."],
+      ["Eski depremleri haritada görebilir miyim?", "Yakınımdaki Deprem'de varsayılan 7 günlük veri vardır. Arşiv için AFAD veya Kandilli Rasathanesi web sitelerine bakabilirsiniz."],
+      ["Haritada gözükmeyen küçük deprem oldu mu?", "M2.0 altı mikro depremler haritada gösterilmez (önemsiz veri kalabalığı önlemek için). AFAD'ın resmi listesinde tümü vardır."]
+    ],
+    "related": [
+      ["/blog-canli-sismik-harita-turkiye.html", "Canlı Sismik Harita"],
+      ["/blog-deprem-buyukluk-olcekleri.html", "Deprem Büyüklük Ölçekleri"],
+      ["/blog-afad-kandilli-deprem-karsilastirma.html", "AFAD Kandilli Karşılaştırması"],
+      ["/turkiye-deprem-rehberi-fay-hatlari.html", "Türkiye Fay Hatları"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  },
+  {
+    "slug": "canli-fay-hatti-haritasi",
+    "title": "Canlı Fay Hattı Haritası Türkiye 2026 — KAF, DAF, BAF",
+    "meta_description": "Canlı fay hattı haritası: Türkiye'nin 3 büyük fayı (KAF, DAF, BAF) ve son hareketleri. AFAD verisiyle aktif fay aktivitesi, segment riskleri.",
+    "keywords": ["canlı fay hattı", "fay hattı canlı", "türkiye fay hattı haritası", "aktif fay hatları", "kuzey anadolu fay hattı canlı"],
+    "category": "bilim",
+    "image_alt": "Türkiye fay hattı haritası — KAF DAF BAF aktif faylar",
+    "lead": "Türkiye'nin sismik kaderini belirleyen üç büyük fay hattı KAF, DAF ve BAF, dünyanın en aktif tektonik yapılarındandır. Bu sayfa fay hatlarının anlık aktivitesini, segment risklerini ve tarihsel olayları detaylı analiz ediyor.",
+    "body_h2_blocks": [
+      ["Fay Hattı Nedir?", [
+        "Fay hattı, yer kabuğundaki <strong>iki tektonik plaka veya kırık yüzey</strong>in birbirine göre hareket ettiği uzun ve düzleme yakın çatlaktır. Türkiye, Anadolu plakası ile Avrasya, Afrika ve Arabistan plakaları arasındaki sıkışmanın merkezindedir. Bu sıkışma fay hatlarında enerji birikimine yol açar; enerji eşik aşıldığında deprem olarak boşalır.",
+        "Faylar üç ana tipte sınıflandırılır:",
+        "<strong>(1) Doğrultu atımlı:</strong> Plakalar yatay olarak kayar (KAF, DAF örneği).",
+        "<strong>(2) Normal:</strong> Bir plaka düşer, diğeri yükselir (BAF).",
+        "<strong>(3) Bindirme:</strong> Bir plaka diğerinin üstüne biner (Toros dağları örnekleri)."
+      ]],
+      ["Kuzey Anadolu Fay Hattı (KAF) — Sağ Yanal Doğrultu Atımlı", [
+        "KAF, Türkiye'nin en aktif fay sistemi olup <strong>1500 km uzunluğunda</strong>, doğuda Karlıova'dan başlayıp batıda Saroz Körfezi'ne uzanır. Yıllık ortalama 18-25 mm hız ile kayar — bu, Anadolu plakasının batıya hareketini açıklar.",
+        "Tarihsel olaylar: 1939 Erzincan (M7.8), 1942-1944 Kuzey Anadolu seri depremleri, 1992 Erzincan (M6.8), 1999 Gölcük (M7.6) ve Düzce (M7.2). KAF'ın <strong>Marmara segmenti</strong> son büyük olaydan beri 27 yıl boyunca aktivite göstermedi — bu durum Marmara depremi tehdidini doğrudan oluşturur."
+      ]],
+      ["Doğu Anadolu Fay Hattı (DAF) — 2023'ün Yıkıcı Aktörü", [
+        "DAF <strong>700 km uzunluğunda</strong>, Karlıova'dan başlayıp Hatay'da Ölü Deniz Fayı ile birleşir. KAF gibi sol yanal doğrultu atımlı bir faydır. Tarihsel olarak KAF'tan daha sessizdi ama bu '<strong>seismik açlığın</strong>' bedeli ağır oldu.",
+        "<strong>6 Şubat 2023:</strong> DAF'ın Pazarcık ve Elbistan segmentlerinde dakikalar arayla M7.7 ve M7.6 olmak üzere iki büyük deprem oldu. 50.000+ can kaybı, 13 il etkilendi. Bu, modern tarih boyunca DAF'ın en yıkıcı eylemiydi.",
+        "Detaylı analiz: <a href=\"/blog-kahramanmaras-6-subat-dersler.html\">6 Şubat dersler rehberi</a>."
+      ]],
+      ["Batı Anadolu Fay Hattı (BAF) — Ege Genişlemesi", [
+        "BAF aslında tek bir fay değil, <strong>kuzey-güney yönlü normal fayların oluşturduğu sistem</strong>dir. Ege bölgesi yılda 30-40 mm genişler — bu, dünyada en hızlı kıtasal genişleme alanlarından biridir.",
+        "Önemli BAF olayları: 1939 Dikili-Bergama (M6.7), 1953 Yenice-Gönen (M7.2), 2020 Samos-İzmir (M6.9). Eğri yapısı nedeniyle BAF'ta tek seferlik M7+ deprem nadirdir, ama M5-7 düzenli oluşur."
+      ]],
+      ["Anlık Fay Aktivitesi Nasıl İzlenir?", [
+        "Yakınımdaki Deprem haritasında fay hatları <strong>sarı/kırmızı renkli çizgilerle</strong> gösterilir. Bir fayda son 7 gün içinde oluşan tüm depremler bu çizgi yakınında kümelenmiş halde görünür.",
+        "Aktivite yoğunluğunu yorumlamak için:",
+        "<strong>(1)</strong> Aynı fay segmentinde art arda M3+ depremler = enerji boşalıyor.",
+        "<strong>(2)</strong> Önceden sessiz segmentte ani aktivite = uyarı işareti.",
+        "<strong>(3)</strong> Mikro depremlerin azalması = 'seismik boşluk' = büyük depreme yol açabilir."
+      ]],
+      ["Marmara Depremi Senaryosu — Beklenen Olay", [
+        "Bilim insanları KAF'ın Marmara segmentinde önümüzdeki <strong>30 yıl içinde M7+ deprem olasılığını %62-65</strong> olarak tahmin ediyor. Bu, dünyada en yüksek deprem olasılığına sahip metropoliten alanlardan biri.",
+        "Beklenen senaryo: M7.0-7.6 büyüklüğünde, sığ (10-15 km), Marmara Denizi içinde merkez üssü. İstanbul'un Avrupa ve Asya yakası eş anlı etkilenir. <a href=\"/blog-istanbul-beklenen-deprem.html\">İstanbul'da beklenen deprem rehberi</a> detaylı analiz içerir."
+      ]],
+      ["Fay Segmenti Riski Nasıl Hesaplanır?", [
+        "Sismologlar her fay segmentine bir <strong>'risk skoru'</strong> verir. Bu skor şunlara dayanır:",
+        "<strong>(1) Son büyük olaydan beri geçen süre:</strong> KAF Marmara segmenti 27 yıl beklemede — yüksek risk.",
+        "<strong>(2) Birikmiş enerji:</strong> Plaka hareket hızı × geçen süre = enerji.",
+        "<strong>(3) Çevresel stres transferi:</strong> Komşu segmentlerdeki son depremler stresi yeni segmente aktarmış olabilir.",
+        "<strong>(4) Geleneksel tekrarlanma aralığı:</strong> Tarihsel kayıtlardan ortalama süre.",
+        "Yakınımdaki Deprem'de bu risk hesaplaması <strong>her şehir sayfasının başında</strong> görsel olarak gösterilir."
+      ]],
+      ["Aktif Fay Bölgesinde Yaşıyorum — Ne Yapmalı?", [
+        "Aktif fay yakınında (10 km içinde) yaşıyorsanız, ek önlemler şarttır:",
+        "<strong>(1)</strong> Bina yaşı 25+ ise <a href=\"/blog-bina-deprem-performans-raporu-nedir.html\">performans raporu</a> aldırın.",
+        "<strong>(2)</strong> Kentsel dönüşüm uygunluğu için <a href=\"/blog-e-devlet-deprem-riski-sorgulama.html\">e-devlet sorgulama</a> yapın.",
+        "<strong>(3)</strong> Toplanma alanlarını öğrenin — <a href=\"/blog-toplanma-alani-sorgulama.html\">toplanma alanı sorgulama</a>.",
+        "<strong>(4)</strong> Deprem çantanızı hazırlayın — <a href=\"/blog-deprem-cantasi.html\">deprem çantası listesi</a>."
+      ]],
+      ["Fay Aktivitesi ve Hayvan Davranışı — Bilim Ne Diyor?", [
+        "'Hayvanlar depremi hisseder' efsanesi yaygındır. Bilimsel olarak: bazı hayvanlar (köpekler, sürüngenler) küçük P-dalgalarını insan kulağından önce algılayabilir. Bu birkaç saniye sürer.",
+        "Ancak '<strong>hayvanların günler önce uyarı verdiği</strong>' iddiası bilimsel olarak doğrulanmamıştır. Resmi deprem tahmini hala mümkün değildir — sadece olasılık değerlendirmesi yapılabilir."
+      ]]
+    ],
+    "faqs": [
+      ["Fay hattı kaç metre yakınında bina yapılması yasak?", "TBDY 2019'a göre 'aktif fay zonu' içinde ana taşıyıcı yapıların inşası özel mühendislik gerektirir. Çoğu bölgede fay zonundan 30-100 m uzaklık zorunludur."],
+      ["Türkiye'de kaç aktif fay vardır?", "AFAD kayıtlarına göre 480+ aktif fay segmenti vardır. Bunların 20'si büyük ölçekli (M7+ kapasitesi olan)."],
+      ["Fay hatları kayar mı, sabit mi?", "Çoğu fay 'kilitli' durumdadır — yıllar boyu sessizdir. Birden bire kayar (deprem olur). Bazı küçük faylar 'sürünme' (creep) ile sürekli yavaş kayar."],
+      ["Marmara depremi ne zaman olacak?", "Bilim insanları kesin tarih veremez. 'Önümüzdeki 30 yıl içinde %62-65 olasılıkla M7+' olduğu belirtiliyor. Hazırlık zorunludur."],
+      ["Fay hattı görünür mü?", "Bazı faylar yüzeyde görülebilir (örn. KAF'ın bazı segmentleri). Çoğu fay yerin altındadır ama yüzeyde çatlak veya çukur izi bırakabilir."]
+    ],
+    "related": [
+      ["/turkiye-deprem-rehberi-fay-hatlari.html", "Türkiye Fay Hatları Detay"],
+      ["/blog-istanbul-beklenen-deprem.html", "İstanbul Beklenen Deprem"],
+      ["/blog-marmara-depremi-1999-dersler.html", "1999 Marmara Dersleri"],
+      ["/blog-kahramanmaras-6-subat-dersler.html", "6 Şubat 2023 Dersleri"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  },
+  {
+    "slug": "afad-kandilli-deprem-karsilastirma",
+    "title": "AFAD ve Kandilli Karşılaştırması 2026 — Hangi Veri Doğru?",
+    "meta_description": "AFAD vs Kandilli deprem verisi karşılaştırması: hız, doğruluk, magnitüd farkları, istasyon sayıları. Hangi kaynak hangi durumda kullanılmalı?",
+    "keywords": ["afad kandilli karşılaştırma", "afad deprem haritası canlı", "kandilli son depremler", "afad son depremler harita", "deprem verisi hangi kaynak"],
+    "category": "bilim",
+    "image_alt": "AFAD ve Kandilli Rasathanesi karşılaştırma görseli",
+    "lead": "Türkiye'de iki büyük resmi deprem veri kaynağı vardır: AFAD ve Kandilli Rasathanesi. Hangisi daha hızlı? Hangisi daha doğru? Bu rehber iki kurumun teknik altyapısını, magnitüd hesaplama yöntemlerini ve veri kullanım senaryolarını karşılaştırıyor.",
+    "body_h2_blocks": [
+      ["AFAD ve Kandilli — Temel Tanımlar", [
+        "<strong>AFAD (Afet ve Acil Durum Yönetimi Başkanlığı):</strong> 2009'da kurulan, İçişleri Bakanlığı'na bağlı resmi devlet kurumu. Görev: afet yönetimi, deprem izleme, acil müdahale.",
+        "<strong>Kandilli Rasathanesi (KOERI):</strong> 1868'de İstanbul Beylerbeyi'nde kurulmuş, Boğaziçi Üniversitesi'ne bağlı bilimsel araştırma merkezi. Türkiye'nin en eski sismolojik gözlem merkezidir.",
+        "İki kurum farklı misyonlara sahiptir: AFAD pratik/yönetimsel, Kandilli akademik/araştırma. Veri yayımlamada ikisi de uzmandır ama yaklaşımları farklıdır."
+      ]],
+      ["İstasyon Sayısı ve Coğrafi Kapsam", [
+        "<strong>AFAD:</strong> 1041 sismograf istasyonu (2026 verisi). Tüm 81 il kapsam altında, bazı illerde 30+ istasyon (İstanbul, İzmir, Hatay).",
+        "<strong>Kandilli:</strong> 220 istasyon. Marmara bölgesi yoğun, Doğu Anadolu ve Karadeniz'de daha seyrek.",
+        "AFAD'ın daha geniş ağı, küçük depremlerin tespitinde avantaj sağlar (M2.0 altı). Kandilli daha yoğun olduğu bölgelerde (Marmara) daha hassas çalışır."
+      ]],
+      ["Veri Hızı — Hangisi Önce Bildirir?", [
+        "Genelde AFAD birkaç saniye önce bildirim yapar:",
+        "<strong>AFAD ortalama:</strong> Olaydan 30-90 saniye sonra resmi bildirim.",
+        "<strong>Kandilli ortalama:</strong> Olaydan 60-180 saniye sonra resmi bildirim.",
+        "Fark, otomatik veri işleme vs manuel doğrulama yaklaşımından gelir. AFAD otomatik algoritmalar, Kandilli analist onayı kullanır. <strong>Hız: AFAD. Doğruluk: Kandilli (özellikle büyüklük).</strong>"
+      ]],
+      ["Magnitüd Hesaplama Yöntemleri", [
+        "İki kurum farklı yöntemler kullanır:",
+        "<strong>AFAD:</strong> Çoğunlukla <strong>ML (Local Magnitude / Richter)</strong>. Hızlı hesaplanır. M5.0+ depremlerde MW'ye geçer.",
+        "<strong>Kandilli:</strong> Genelde <strong>MW (Moment Magnitude)</strong>. Daha doğru, özellikle büyük depremlerde.",
+        "Aynı deprem için: AFAD ML=4.2, Kandilli MW=4.4 görmek normaldir. 0.1-0.3 fark hesaplama farkıdır, gerçek farklılık değildir.",
+        "Detaylı: <a href=\"/blog-deprem-buyukluk-olcekleri.html\">deprem büyüklük ölçekleri</a>."
+      ]],
+      ["Veri Yayımlama Kanalları", [
+        "<strong>AFAD:</strong>",
+        "<strong>(1)</strong> Web: deprem.afad.gov.tr (resmi)",
+        "<strong>(2)</strong> Mobil uygulama: AFAD Deprem",
+        "<strong>(3)</strong> API: deprem.afad.gov.tr/apiv2 (geliştiriciler için)",
+        "<strong>(4)</strong> SMS/Push: kayıtlı kullanıcılara",
+        "<strong>Kandilli:</strong>",
+        "<strong>(1)</strong> Web: koeri.boun.edu.tr",
+        "<strong>(2)</strong> RSS/JSON: bazı veriler",
+        "<strong>(3)</strong> Sosyal medya: aktif Twitter hesabı",
+        "Yakınımdaki Deprem her iki kaynağı çeker; veriler çakıştığında Kandilli'yi varsayılan, AFAD'ı doğrulayıcı kabul eder."
+      ]],
+      ["Hangi Veri Hangi Durumda Tercih Edilmeli?", [
+        "<strong>Acil durum (sarsıntı hissetme):</strong> AFAD (daha hızlı). <a href=\"/son-dakika-deprem.html\">Son dakika sayfamız</a> her iki kaynağı birleştirir.",
+        "<strong>Sigorta + hukuki süreçler:</strong> Resmi AFAD raporu kabul edilir.",
+        "<strong>Akademik araştırma:</strong> Kandilli (revize edilmiş, doğrulanmış veri).",
+        "<strong>Bilim haberleri:</strong> Kandilli (basın bültenleri kalıcı arşivde).",
+        "<strong>Tarihsel veri (10+ yıl):</strong> Kandilli arşivi daha kapsamlı."
+      ]],
+      ["Veriler Çelişirse Ne Yapmalı?", [
+        "Aynı deprem için iki kurum farklı büyüklük gösteriyorsa:",
+        "<strong>(1)</strong> İlk dakikalarda AFAD genelde ML, Kandilli MW kullanır — 0.1-0.3 fark normaldir.",
+        "<strong>(2)</strong> Saatler/günler sonra her iki kurum 'final' magnitüd yayınlar — bu çok yakın olur.",
+        "<strong>(3)</strong> 24 saat sonra hala fark varsa Kandilli MW genelde daha doğrudur.",
+        "Yakınımdaki Deprem otomatik olarak en son güncel veriyi gösterir; popüpta hangi kaynaktan geldiğini belirtir."
+      ]],
+      ["Deprem Erken Uyarı Sistemi (EEW) — AFAD vs Kandilli", [
+        "<strong>AFAD EEW sistemi:</strong> 2019'da başlatıldı. P-dalgası tespit edip S-dalgası gelmeden 5-30 saniye önce uyarı verir. Çoğu sismograf istasyonu bu sistemi destekler.",
+        "<strong>Kandilli EEW:</strong> Boğaziçi Üniversitesi'nin pilot projesi olarak Marmara bölgesinde test ediliyor. Henüz halka açık değil.",
+        "Akıllı telefonlarda <strong>'AFAD Deprem' uygulaması</strong> EEW bildirimini destekler. Yakınımdaki Deprem henüz EEW entegrasyonu yapmadı (planlanıyor)."
+      ]],
+      ["API ve Geliştirici Erişimi", [
+        "<strong>AFAD API:</strong> Ücretsiz, rate limit yok, JSON format. Endpoint: deprem.afad.gov.tr/apiv2/event/filter",
+        "<strong>Kandilli:</strong> Resmi API yok, bağımsız scraper'lar var (örn. github.com/orhanayd/kandilli-rasathanesi-api).",
+        "Yakınımdaki Deprem her iki kaynağı çeker. <a href=\"/api.html\">Kendi API'mız</a> AFAD+Kandilli birleşik veriyi açık olarak sunar — ücretsizdir."
+      ]]
+    ],
+    "faqs": [
+      ["AFAD ve Kandilli aynı deprem için farklı büyüklük gösterirse hangisi doğru?", "Hesaplama yöntemi farkıdır. Saatler sonra her iki kurum benzer 'final' büyüklüğe ulaşır. Akademik amaçlar için Kandilli, pratik için AFAD genelde tercih edilir."],
+      ["AFAD deprem haritası nereden açılır?", "deprem.afad.gov.tr resmi sayfadır. Yakınımdaki Deprem anasayfası AFAD verisini Kandilli ile birleştirip tek harita olarak sunar."],
+      ["Kandilli son depremler listesini nereden takip ederim?", "koeri.boun.edu.tr/scripts/lst0.asp adresi resmi listedir. Yakınımdaki Deprem'in son depremler paneli aynı veriyi gösterir."],
+      ["AFAD ve Kandilli için tek tek uygulama indirmek gerekir mi?", "Hayır. Yakınımdaki Deprem her iki kaynağı birleştirir, tek mobil web çözümü sunar. AFAD'ın kendi uygulaması da bağımsız olarak indirilebilir."],
+      ["AFAD bildirimi geç geldi, Kandilli erken — neden?", "Her iki kurumun bildirim sistemi farklıdır. AFAD push notification, Kandilli ise web/Twitter ağırlıklı. Yakınımdaki Deprem bildirimleri her iki kaynak için de eş anlı tetikler."]
+    ],
+    "related": [
+      ["/blog-deprem-buyukluk-olcekleri.html", "Deprem Büyüklük Ölçekleri"],
+      ["/blog-deprem-erken-uyari-sistemi.html", "Deprem Erken Uyarı"],
+      ["/blog-deprem-cep-uygulamalari.html", "Deprem Cep Uygulamaları"],
+      ["/api.html", "Yakınımdaki Deprem API"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  },
+  {
+    "slug": "az-once-deprem-mi-oldu",
+    "title": "Az Önce Deprem Mi Oldu? Türkiye 2026 Hızlı Sorgulama",
+    "meta_description": "Az önce deprem mi oldu? Sarsıntı hissettiniz mi? AFAD ve Kandilli verisiyle 30 saniyede yanıt. Konum bazlı en son depremler, kontrol yöntemleri.",
+    "keywords": ["az önce deprem mi oldu", "az önce deprem", "deprem mi oldu", "anlık deprem nerede oldu", "az önce deprem nereden bakılır"],
+    "category": "sirasinda",
+    "image_alt": "Az önce deprem mi oldu - sorgulama ve kontrol yöntemleri",
+    "lead": "Sarsıntı hissettiniz mi? Az önce deprem oldu mu emin değil misiniz? Bu rehber 30 saniyede yanıt almanın 5 farklı yolunu, doğrulama yöntemlerini ve panik halinde yapılacakları içeriyor.",
+    "body_h2_blocks": [
+      ["Az Önce Deprem Mi Oldu — Hızlı Kontrol", [
+        "Eğer şu an sarsıntı hissettiyseniz veya az önce hissettiyseniz, en hızlı kontrol yöntemleri:",
+        "<strong>(1) Yakınımdaki Deprem anasayfası</strong> — anasayfada en son depremler 5-15 saniye gecikmeyle görünür. Sağ paneldeki ilk öğe en yeni olandır.",
+        "<strong>(2) <a href=\"/son-dakika-deprem.html\">Son Dakika Deprem</a> sayfası</strong> — sadece son 6 saati listeler, zaman damgaları net.",
+        "<strong>(3) AFAD acil hatırlatma uygulaması</strong> — bildirim açıksa push gelir.",
+        "<strong>(4) Sosyal medya</strong> — Twitter'da <code>'deprem'</code> aratın, Türkçe tweet'ler 30-60 saniye içinde başlar.",
+        "<strong>(5) Komşu/aile</strong> — yan apartmandakilere sorun, onlar da hissettiyse büyük olasılıkla deprem oldu."
+      ]],
+      ["Sarsıntı Hissetmek vs Hayal Etmek — Nasıl Ayırt Edilir?", [
+        "Bazen hassasiyetten veya yorgunluktan sahte sarsıntı hissi olabilir. Gerçek deprem belirtileri:",
+        "<strong>(1) Asma lambaların sallanması:</strong> Mutlak güvenilir gösterge.",
+        "<strong>(2) Su yüzeyinin titreşmesi:</strong> Bardakta su veya akvaryumda dalga.",
+        "<strong>(3) Eşyaların kıpırdaması:</strong> Çerçeveler, kitaplar.",
+        "<strong>(4) 'Trenin geçiyor' gibi gürültü:</strong> P-dalgasının sesi.",
+        "<strong>(5) Aile üyelerinin de hissetmesi:</strong> Bireysel değilse gerçek.",
+        "Hayali sarsıntı genelde 1-2 saniye sürer, gerçek deprem en az 5-30 saniye sürer."
+      ]],
+      ["Konumuma Göre Yakın Depremler Nasıl Görülür?", [
+        "<strong>Adım 1:</strong> Anasayfada 'Konumum' düğmesine basın.",
+        "<strong>Adım 2:</strong> Tarayıcı izin ister — 'İzin ver'.",
+        "<strong>Adım 3:</strong> Harita otomatik bulunduğunuz noktaya zoom yapar.",
+        "<strong>Adım 4:</strong> En yakın 5 deprem otomatik vurgulanır — mesafeleri km cinsinden gösterilir.",
+        "Konum izni vermek istemiyorsanız: <a href=\"/blog-yakinimda-deprem-konum-sorgulama.html\">manuel şehir araması</a> yöntemini kullanın."
+      ]],
+      ["Şehir Bazlı Hızlı Sorgulama", [
+        "Sarsıntıyı hissettiğiniz şehir biliyorsanız, direkt o ilin sayfasına gidebilirsiniz:",
+        "<strong>İstanbul:</strong> <a href=\"/deprem-istanbul.html\">/deprem-istanbul.html</a>",
+        "<strong>İzmir:</strong> <a href=\"/deprem-izmir.html\">/deprem-izmir.html</a>",
+        "<strong>Ankara:</strong> <a href=\"/deprem-ankara.html\">/deprem-ankara.html</a>",
+        "<strong>Hatay:</strong> <a href=\"/deprem-hatay.html\">/deprem-hatay.html</a>",
+        "<strong>Kahramanmaraş:</strong> <a href=\"/deprem-kahramanmaras.html\">/deprem-kahramanmaras.html</a>",
+        "Diğer 76 il için <a href=\"/deprem-sehirleri.html\">tüm şehirler sayfası</a>'ndan ulaşabilirsiniz."
+      ]],
+      ["Sarsıntı Hissettim Ama Listede Yok — Neden?", [
+        "Birkaç olasılık:",
+        "<strong>(1) Veri henüz gelmedi (30-90 saniye gecikme):</strong> Yenileyip 1 dakika sonra tekrar bakın.",
+        "<strong>(2) Mikro deprem (M2.0 altı):</strong> Bunlar haritada gösterilmez ama AFAD'ın resmi listesinde olabilir.",
+        "<strong>(3) Yapay titreşim:</strong> İnşaat çalışması, geçen kamyon, rüzgar (özellikle yüksek katlarda).",
+        "<strong>(4) İlişkili olmayan başka olay:</strong> Heyelan, çökme, patlama.",
+        "Şüphedeyseniz 5 dakika bekleyin; eğer hiç deprem listede görünmediyse büyük olasılıkla başka bir sebepten."
+      ]],
+      ["Az Önceki Deprem Ne Kadar Büyüktü?", [
+        "Yakınımdaki Deprem listesinde büyüklük renkli olarak gösterilir:",
+        "<strong>Yeşil sayı:</strong> M2.0-2.9 (mikro, hissedilmez)",
+        "<strong>Sarı sayı:</strong> M3.0-3.9 (hafif, bazıları hisseder)",
+        "<strong>Turuncu sayı:</strong> M4.0-4.9 (belirgin, çoğu hisseder)",
+        "<strong>Kırmızı sayı:</strong> M5.0+ (güçlü)",
+        "Renkli sayının yanında 'derinlik' (km cinsinden) de gösterilir. Sığ depremler (derinlik <10 km) aynı büyüklükte olsa bile çok daha güçlü hissedilir."
+      ]],
+      ["Deprem Sonrası İlk 5 Dakikada Ne Yapmalı?", [
+        "Sarsıntı bittikten hemen sonra:",
+        "<strong>(1) Sakin kalın:</strong> Panik, artçı depremde yaralanmaya yol açar.",
+        "<strong>(2) Gaz ve elektriği kontrol edin:</strong> Sızıntı varsa hemen kapatın.",
+        "<strong>(3) Aileyi sayın:</strong> Herkes güvende mi?",
+        "<strong>(4) Komşulara seslenin:</strong> Yardım gerek mi?",
+        "<strong>(5) Resmi açıklamayı bekleyin:</strong> AFAD bildirim göndertecek.",
+        "Detaylı rehber: <a href=\"/blog-deprem-sonrasi-ilk-24-saat.html\">Deprem sonrası ilk 24 saat</a>."
+      ]],
+      ["Artçı Deprem Olur Mu, Beklemeli Miyim?", [
+        "Bir M4.0+ deprem olduktan sonra <strong>artçı depremler</strong> beklenir — aynı bölgede daha küçük (genelde 1 büyüklük altta) sarsıntılar. Artçı sayısı:",
+        "<strong>Ana deprem M5.0:</strong> 5-20 artçı, M0.5 altında.",
+        "<strong>Ana deprem M6.0:</strong> 50-200 artçı, en büyük artçı yaklaşık M5.0.",
+        "<strong>Ana deprem M7.0+:</strong> 500-2000 artçı, ilk 24-72 saatte yoğun.",
+        "Artçılar genelde günler-haftalar sürer; ana depremden sonraki 24 saat en kritiktir."
+      ]]
+    ],
+    "faqs": [
+      ["Az önce deprem oldu mu, anlık bakacağım siteyi söyler misiniz?", "Yakınımdaki Deprem anasayfası en hızlısıdır. AFAD'ın resmi sayfası deprem.afad.gov.tr ve Kandilli'nin koeri.boun.edu.tr da kullanılabilir."],
+      ["Sarsıntı hissettim ama internet yavaş — hızlı bilgi nereden?", "Twitter'da 'deprem' ve şehir adı (ör. 'istanbul deprem') aratın. AFAD'ın resmi Twitter hesabı (@AFADBaskanlik) anında tweet atar."],
+      ["Push bildirim açtım ama gelmedi, neden?", "Tarayıcı izinleri sıfırlanmış olabilir. Yakınımdaki Deprem anasayfasında 'Sadece 4.0+ Bildirim Al' düğmesine tekrar tıklayın. M4.0 altı depremlerde bildirim gelmez."],
+      ["Sarsıntı hissetmedim ama haritada deprem var — gerçek mi?", "Evet, küçük depremler (M2.0-3.5) sadece sismograflarda görülür, insan hissetmez. Mikro depremler günde 70-100 adet olur, normaldir."],
+      ["İki deprem peş peşe oldu — sebep nedir?", "Genelde ana deprem + artçı deprem kombinasyonudur. Ana deprem fay segmentinde enerji boşaltır, artçı stres yeniden dağıtır. Nadiren iki bağımsız deprem olabilir."]
+    ],
+    "related": [
+      ["/son-dakika-deprem.html", "Son Dakika Deprem"],
+      ["/blog-yakinimda-deprem-konum-sorgulama.html", "Yakınımda Deprem Sorgulama"],
+      ["/deprem-aninda.html", "Deprem Anında Yapılacaklar"],
+      ["/blog-deprem-sonrasi-ilk-24-saat.html", "Deprem Sonrası İlk 24 Saat"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  },
+  {
+    "slug": "aktif-deprem-haritasi-son-24-saat",
+    "title": "Aktif Deprem Haritası 2026 — Son 24 Saatte Türkiye'de Ne Oldu?",
+    "meta_description": "Aktif deprem haritası: son 24 saatte Türkiye'de gerçekleşen tüm depremlerin canlı haritası. Magnitüd, derinlik, fay aktivitesi ve günlük özet.",
+    "keywords": ["aktif deprem haritası", "son 24 saat deprem", "bugün deprem oldu mu", "günlük deprem haritası", "türkiye günlük deprem"],
+    "category": "bilim",
+    "image_alt": "Türkiye son 24 saat aktif deprem haritası",
+    "lead": "Türkiye'de günlük ortalama 70-100 deprem olur — ama hepsi haberlerde yer almaz. Aktif deprem haritası bu sayfada son 24 saatlik tüm sismik aktiviteyi göstererek size günlük bir özet sunar. Hangi bölgeler aktif? Bugün hissedilecek bir deprem oldu mu?",
+    "body_h2_blocks": [
+      ["Aktif Deprem Haritası Nedir?", [
+        "Aktif deprem haritası, geleneksel deprem haritalarından farklı olarak <strong>sadece son 24 saatlik veriyi</strong> gösterir. Eski depremler haritada gösterilmez, bu sayede 'şu anda nerede aktif?' sorusuna net yanıt verir.",
+        "Yakınımdaki Deprem anasayfası varsayılan olarak son 7 günü gösterir. <strong>'24 saat filtresi'</strong> aktif olduğunda harita temizlenir, sadece son gün depremleri görünür."
+      ]],
+      ["Son 24 Saatte Türkiye İstatistikleri", [
+        "Günlük ortalamalar (2025-2026 verisi):",
+        "<strong>Toplam deprem sayısı:</strong> 70-120 (M1.0+)",
+        "<strong>M2.0+ deprem:</strong> 30-50",
+        "<strong>M3.0+ deprem:</strong> 5-15",
+        "<strong>M4.0+ deprem:</strong> 0-3",
+        "<strong>M5.0+ deprem:</strong> 0-1 (yaklaşık 2-3 günde bir)",
+        "Hatay-Kahramanmaraş bölgesi 2023 sonrası artçı aktivitesi nedeniyle ortalama günlük 20-30 deprem yaşıyor — bu durum 2026 sonuna kadar sürebilir."
+      ]],
+      ["Hangi Bölgeler Bugün Aktif?", [
+        "Aktif deprem haritasında en sık görülen bölgeler (genel pattern):",
+        "<strong>(1) Doğu Anadolu Fay Hattı bölgesi:</strong> Kahramanmaraş, Adıyaman, Malatya, Elazığ, Hatay. Günlük 15-25 deprem.",
+        "<strong>(2) Marmara güney kıyısı (KAF):</strong> Sakarya, Düzce, Kocaeli, Yalova. Günlük 5-10 deprem.",
+        "<strong>(3) Ege bölgesi (BAF):</strong> İzmir, Aydın, Muğla, Manisa, Balıkesir. Günlük 5-15 deprem.",
+        "<strong>(4) Akdeniz açıkları (Kıbrıs yayı):</strong> Antalya, Muğla açıkları. Günlük 3-8 deprem (denizde).",
+        "<strong>(5) Van bölgesi:</strong> Van Gölü çevresi. Günlük 1-5 deprem."
+      ]],
+      ["Bugün Hissedilen Deprem Var Mı?", [
+        "Sarsıntı hissetmek için genelde <strong>M3.5+</strong> deprem gerekir (sığ olması durumunda). Aktif deprem haritasında M3.5+ olanları görmek için magnitüd filtresini kullanın.",
+        "Türkiye'de günde ortalama <strong>5-10 hissedilen deprem</strong> olur. Bunların çoğu küçük şehirlerde veya kırsalda gerçekleşir, büyük şehirlerde yaşıyorsanız sadece 1-2 gün hisseder olursunuz.",
+        "Bugün özelinde sarsıntı duyduysanız <a href=\"/blog-az-once-deprem-mi-oldu.html\">Az önce deprem mi oldu rehberi</a>'ne bakın."
+      ]],
+      ["24 Saatlik Trend Analizi", [
+        "Aktif deprem haritasını <strong>trend analizi</strong> için de kullanabilirsiniz:",
+        "<strong>(1) Bir bölgede sürekli artış:</strong> Fay segmenti aktif, enerji boşalıyor. Bu olumlu (büyük tek deprem riski azalır).",
+        "<strong>(2) Sessiz dönem ardından ani aktivite:</strong> Uyarı işareti, büyük depreme yol açabilir.",
+        "<strong>(3) Kümeleşmiş aktivite:</strong> Aynı 50 km içinde birden fazla deprem — 'deprem fırtınası' olabilir.",
+        "<strong>(4) Geniş alanda dağınık:</strong> Normal arka plan aktivitesi, endişe gerektirmez."
+      ]],
+      ["Günlük Deprem Bildirimini Almak", [
+        "Yakınımdaki Deprem'in <strong>günlük özet bildirimi</strong> (planlanan özellik): her sabah 09:00'da önceki günün özetini push notification ile alırsınız.",
+        "Anında bildirim için: Anasayfa'da 'Sadece 4.0+ Bildirim Al' aktif edin. M4.0+ deprem olduğunda dakikalar içinde uyarı alırsınız.",
+        "Email bildirimi henüz desteklenmiyor — RSS feed kullanabilirsiniz (api.html sayfasında detay)."
+      ]],
+      ["Geçen Hafta vs Bu Hafta Karşılaştırma", [
+        "Aktif haritada haftalık karşılaştırma için:",
+        "<strong>(1) 7 gün filtresine geçin:</strong> Harita 7 günlük veri gösterir.",
+        "<strong>(2) Önceki haftayla karşılaştırın:</strong> Geliştirme aşamasında 'X hafta önce' filtresi.",
+        "<strong>(3) Bölge analizi:</strong> Şehir sayfalarımız haftalık özet sunar (örn. <a href=\"/deprem-istanbul.html\">İstanbul</a>).",
+        "<strong>(4) Manuel takip:</strong> AFAD'ın istatistik sayfası aylık karşılaştırma yapar — deprem.afad.gov.tr/istatistikler"
+      ]],
+      ["Aktif Deprem Haritası Nasıl Yorumlanmalı?", [
+        "Yorumlamada üç temel kural:",
+        "<strong>(1) Sayı değil, yer önemli:</strong> 50 mikro deprem (M2.0) küçük bir alanda > 5 büyük deprem (M5.0+) dağınık. İlki uyarı sinyali olabilir, ikincisi normal.",
+        "<strong>(2) Derinlik önemli:</strong> Sığ + büyük deprem = yüksek hasar. Derin (>70 km) + büyük = az hasar.",
+        "<strong>(3) Tarihsel context:</strong> Bir bölge tarihsel olarak aktif mi? <a href=\"/blog-turkiye-en-cok-deprem-iller.html\">Türkiye en deprem aktif iller</a> rehberine bakın."
+      ]],
+      ["AFAD Aktif Deprem Sayfasıyla Karşılaştırma", [
+        "AFAD'ın resmi aktif deprem sayfası (deprem.afad.gov.tr/anlik-veriler):",
+        "<strong>+:</strong> Resmi, güvenilir, kapsamlı tarihsel arşiv.",
+        "<strong>−:</strong> Mobil uyumsuz, yavaş yüklenme, sade arayüz.",
+        "Yakınımdaki Deprem:",
+        "<strong>+:</strong> Modern mobil-optimize arayüz, konum bazlı, anlık güncellemeler, Kandilli + AFAD birleşik veri.",
+        "<strong>−:</strong> Bağımsız platform, resmi belgeler için AFAD'ı kullanın."
+      ]]
+    ],
+    "faqs": [
+      ["Bugün Türkiye'de kaç deprem oldu?", "Genelde 70-120 (M1.0+). Yakınımdaki Deprem anasayfasında '24 saat' filtresini açın, sayfa size sayı + dağılım gösterir."],
+      ["En son hangi depremler oldu listeyebilir misiniz?", "Anasayfanın sağ paneli son 50 depremi gösterir. Daha eski veriler için <a href=\"/son-dakika-deprem.html\">son dakika sayfası</a>'na bakın."],
+      ["Aktif deprem haritasıyla normal deprem haritası farkı?", "Aktif harita sadece son 24 saati gösterir, normal harita 7 gün veya daha fazlasını içerir. Aktif harita 'şu anki durum' için, normal harita 'trend analizi' için kullanılır."],
+      ["Bugün benim şehrim için kaç deprem oldu?", "Şehir sayfanızda 'Son Depremler' paneli günlük tüm depremleri gösterir. Örn: <a href=\"/deprem-istanbul.html\">İstanbul</a>, <a href=\"/deprem-izmir.html\">İzmir</a>, <a href=\"/deprem-ankara.html\">Ankara</a>."],
+      ["Aktif deprem haritası tablet/iPad'de daha mı iyi görünür?", "Evet, geniş ekranda harita + liste yan yana görüntülenebilir. Mobil cihazda alta veya dropdown'a düşer."]
+    ],
+    "related": [
+      ["/blog-canli-sismik-harita-turkiye.html", "Canlı Sismik Harita"],
+      ["/blog-az-once-deprem-mi-oldu.html", "Az Önce Deprem"],
+      ["/blog-haritali-son-depremler.html", "Haritalı Son Depremler"],
+      ["/blog-turkiye-en-cok-deprem-iller.html", "En Aktif İller"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  },
+  {
+    "slug": "haritali-son-depremler",
+    "title": "Haritalı Son Depremler 2026 — Türkiye Canlı Liste + Görsel",
+    "meta_description": "Haritalı son depremler: AFAD + Kandilli verisiyle son depremleri hem listede hem haritada görüntüleyen kapsamlı canlı takip platformu.",
+    "keywords": ["haritalı son depremler", "son depremler harita", "haritali son depremler", "deprem liste harita", "görsel deprem takibi"],
+    "category": "bilim",
+    "image_alt": "Türkiye haritalı son depremler liste ve harita kombinasyonu",
+    "lead": "Haritalı son depremler bir sayfada hem listeyi hem coğrafi görsel olarak depremleri sunar. Yakınımdaki Deprem bu deneyimi 20 saniyede güncellenen interaktif arayüzle veriyor — liste tıklanınca harita zoom yapar, harita tıklanınca liste vurgular.",
+    "body_h2_blocks": [
+      ["Haritalı Son Depremler Sayfası Nedir?", [
+        "Haritalı son depremler sayfası iki temel komponentten oluşur: <strong>(1) Sol/üst panelde interaktif harita</strong> ve <strong>(2) Sağ/alt panelde kronolojik liste</strong>. İki panel senkron çalışır — listede bir depreme tıklarsanız harita o noktaya zoom yapar, haritada bir daireye tıklarsanız listede vurgu görünür.",
+        "Yakınımdaki Deprem anasayfası bu yapıyı standart olarak sunar. Mobil cihazlarda otomatik olarak alt-üst düzene geçer."
+      ]],
+      ["Liste ve Harita Senkronizasyonu", [
+        "Sayfa yüklendiğinde harita Türkiye'yi gösterir, liste en son 50 depremi içerir. Senkronizasyon:",
+        "<strong>(1) Liste → Harita:</strong> Depreme tıklayınca harita o noktaya pan + zoom yapar. Animasyonlu geçiş.",
+        "<strong>(2) Harita → Liste:</strong> Daireye tıklayınca popup açılır + liste o öğeyi vurgular.",
+        "<strong>(3) Filtre:</strong> Üstteki magnitüd filtresi her iki paneli aynı anda etkiler.",
+        "<strong>(4) Otomatik güncelleme:</strong> Yeni deprem geldiğinde liste başında belirir, haritada flaş animasyonu olur."
+      ]],
+      ["Listede Hangi Bilgiler Görülür?", [
+        "Her deprem öğesi için:",
+        "<strong>Solda:</strong> Büyüklük rozeti (renkli, magnitüde göre).",
+        "<strong>Sağda:</strong> Yer adı, oluş zamanı ('az önce', '5 dk önce'), derinlik (km).",
+        "Tıklanınca açılan detay: Tam koordinatlar, kaynak (AFAD/Kandilli), tam tarih, sırasıyla artçı/öncü deprem bağlantıları.",
+        "Mobil cihazda liste tüm ekrana yayılabilir — magnitüd filtresi sayfanın üstüne yapışır."
+      ]],
+      ["Haritada Görsel Sembolizm", [
+        "Haritada her deprem renkli daire olarak görünür:",
+        "<strong>Renk:</strong> Magnitüde göre (yeşil → mor).",
+        "<strong>Boyut:</strong> Logaritmik magnitüd ölçeği — M5 daire M4'tan 4 kat büyük.",
+        "<strong>Şeffaflık:</strong> Yeni deprem opak, eski deprem yarı şeffaf (24+ saat sonrası).",
+        "<strong>Animasyon:</strong> Son 30 dakikadaki depremler hafif yanıp söner.",
+        "Haritada ayrıca <strong>fay hatları</strong> (sarı çizgi), <strong>sınırlar</strong> (gri) ve <strong>şehir adları</strong> (siyah etiket) görünür."
+      ]],
+      ["Mobil ve Desktop Deneyimi", [
+        "<strong>Desktop (≥1024px ekran):</strong> Harita solda %75 alan, liste sağda %25. Yan yana panel.",
+        "<strong>Tablet (768-1023px):</strong> Liste açılır panel olarak — 'Listeyi Göster' butonuyla aç/kapat.",
+        "<strong>Mobil (≤767px):</strong> Harita ekranın üstte, liste alt yarıda. 'Liste' / 'Harita' tab'leri ile yer değiştirilebilir.",
+        "Tüm sürümlerde performans <strong>60 FPS animasyon</strong> hedefler. Düşük güçlü cihazlarda fay hattı katmanı otomatik kapanabilir."
+      ]],
+      ["Filtreleme: Magnitüde, Zaman, Bölge", [
+        "Üç filtre kombinasyonu:",
+        "<strong>(1) Magnitüd filtresi:</strong> Slider veya buton — 'Tümü', '3.0+', '4.0+', '5.0+'. Mikro depremler genellikle gizli.",
+        "<strong>(2) Zaman filtresi:</strong> 'Son 1 saat', '24 saat', '7 gün', '30 gün'.",
+        "<strong>(3) Bölge filtresi:</strong> Şehir araması veya haritada bölge seçme — kutu çizerek o alandaki depremleri filtrele.",
+        "Filtreler URL parametresi olarak korunur — paylaşabilirsiniz: <code>yakinimdakideprem.com/?mag=4&hours=24</code>"
+      ]],
+      ["Listede Görülen 'Az Önce' Damgası", [
+        "Zaman göstergesi otomatik olarak güncellenir:",
+        "<strong>< 60 saniye:</strong> 'az önce'",
+        "<strong>1-59 dakika:</strong> 'X dakika önce'",
+        "<strong>1-23 saat:</strong> 'X saat önce'",
+        "<strong>1-6 gün:</strong> 'X gün önce'",
+        "<strong>1+ hafta:</strong> tam tarih (örn. '05.05.2026 21:34')",
+        "Bu yaklaşım, kullanıcının zihinsel olarak 'ne kadar yeni' anlaması için kolaylık sağlar."
+      ]],
+      ["İhraç ve Veri Paylaşımı", [
+        "Listede 'İhraç' butonu (geliştirme aşaması) verileri farklı formatlarda dışa aktarmaya imkan verecek:",
+        "<strong>JSON:</strong> Geliştirici dostu, API entegrasyonu için.",
+        "<strong>CSV:</strong> Excel/Sheets'te analiz için.",
+        "<strong>RSS:</strong> Feed reader veya IFTTT için.",
+        "<strong>iCal:</strong> Önemli depremleri takvim olarak.",
+        "Yakınımdaki Deprem API'sı zaten açık — <a href=\"/api.html\">api dokümantasyonu</a>."
+      ]],
+      ["Sayfayı Sık Kullanılanlara Ekleme", [
+        "Sarsıntı sırasında hızlı erişim için sayfayı sık kullanılanlara ekleyin:",
+        "<strong>Chrome:</strong> Ctrl+D (Cmd+D Mac) → Sık kullanılanlar çubuğuna kaydet.",
+        "<strong>Safari (iOS):</strong> Paylaş simgesine bas → 'Ana Ekrana Ekle'. PWA gibi açılır.",
+        "<strong>Firefox:</strong> Adres çubuğundaki yıldıza tıklayın.",
+        "<strong>Tarayıcı başlangıç sayfası yapın:</strong> Sabah ilk açtığınızda son depremler görünür."
+      ]]
+    ],
+    "faqs": [
+      ["Haritalı son depremler sayfası ücretsiz mi?", "Evet, tamamen ücretsiz. Reklam yok. Bağımsız ve açık kaynak bir projedir."],
+      ["Harita yüklenmiyor — ne yapmalı?", "Tarayıcı önbelleğini temizleyin (Ctrl+Shift+R) ve internet bağlantınızı kontrol edin. JavaScript kapalıysa açın. Leaflet kütüphanesi CDN'den yükleniyor; engelliyorsanız beyaz kalır."],
+      ["Listede neden bazen aynı yer iki kez görünür?", "Aynı deprem farklı sistemler tarafından farklı zamanlarda kayıt edilebilir. Sistemimiz bunları otomatik birleştirir ama bazen 1-2 saniye aralıkla farklı kayıt görünebilir."],
+      ["Eski depremleri haritada görmek için ne yapmalıyım?", "Zaman filtresinden '30 gün'ü seçin veya '7 gün'. Daha eski veriler için AFAD'ın resmi arşivi (deprem.afad.gov.tr) detaylıdır."],
+      ["Sayfa otomatik güncelleniyor mu yoksa yenilemek mi gerekiyor?", "Otomatik 20 saniyede bir güncellenir. Manuel yenileme gereksiz; ekranı açık tutmanız yeterli."]
+    ],
+    "related": [
+      ["/blog-canli-sismik-harita-turkiye.html", "Canlı Sismik Harita"],
+      ["/blog-aktif-deprem-haritasi-son-24-saat.html", "Aktif Deprem Haritası"],
+      ["/blog-az-once-deprem-mi-oldu.html", "Az Önce Deprem"],
+      ["/son-dakika-deprem.html", "Son Dakika Deprem"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  },
+  {
+    "slug": "dunya-deprem-haritasi-canli",
+    "title": "Dünya Deprem Haritası Canlı 2026 — Türkiye ile Karşılaştırma",
+    "meta_description": "Dünya deprem haritası canlı: küresel sismik aktivite, USGS verisi, dünyanın en aktif fay sistemleri ve Türkiye'nin küresel risk sıralamasındaki yeri.",
+    "keywords": ["dünya deprem haritası canlı", "dünya canlı deprem", "küresel deprem haritası", "usgs deprem haritası", "dünya sismik aktivite"],
+    "category": "bilim",
+    "image_alt": "Dünya canlı deprem haritası - küresel sismik aktivite",
+    "lead": "Dünyada her gün binlerce deprem olur. Bu sayfa küresel sismik aktiviteyi, en aktif tektonik bölgeleri ve Türkiye'nin dünya sıralamasındaki yerini analiz ediyor. Türkiye, dünyanın en yüksek deprem riski olan 10 ülkesinden biridir.",
+    "body_h2_blocks": [
+      ["Dünya Deprem Haritası Nedir?", [
+        "Dünya deprem haritası, küresel sismik aktiviteyi gösteren bir veri görselleştirme aracıdır. En yetkili kaynak <strong>USGS (United States Geological Survey)</strong>'in canlı dünya haritasıdır — earthquake.usgs.gov adresinden erişilebilir.",
+        "USGS verisi M4.5+ tüm depremleri içerir, M2.5 üstü ABD'ye yakın olanları da gösterir. Yakınımdaki Deprem'in odağı Türkiye olduğu için biz USGS verisini entegre etmiyoruz — komşu ülkeler (Yunanistan, Suriye) sadece Türkiye'yi etkileyen depremlerde gösterilir."
+      ]],
+      ["Dünyanın En Aktif Sismik Bölgeleri", [
+        "Küresel sismik aktivitenin %90'ı 3 büyük sistemde gerçekleşir:",
+        "<strong>(1) Pasifik Ateş Çemberi:</strong> Pasifik Okyanusu'nun çevresi. Japonya, Endonezya, Filipinler, Şili, Kaliforniya. Dünyanın en aktif bölgesi.",
+        "<strong>(2) Akdeniz-Alp-Himalaya Kuşağı:</strong> Türkiye, İran, Pakistan, Hindistan, Çin. Türkiye bu kuşağın orta noktasındadır.",
+        "<strong>(3) Mid-Atlantic Sırtı:</strong> Atlas Okyanusu ortasında. İzlanda, Azor Adaları. Volkanik aktivite ile birlikte.",
+        "Türkiye'nin Akdeniz kuşağındaki konumu, ülkemizi dünyada en yüksek riskli 10 ülke arasına yerleştirir."
+      ]],
+      ["Dünyada Günlük Deprem Sayısı", [
+        "USGS yıllık istatistikleri:",
+        "<strong>M2+ deprem:</strong> 8,000+ adet/gün (toplam yıllık ~3 milyon).",
+        "<strong>M4+ deprem:</strong> 30-40 adet/gün.",
+        "<strong>M5+ deprem:</strong> 4-5 adet/gün (yıllık ~1500).",
+        "<strong>M6+ deprem:</strong> Aylık 10-12 adet (yıllık ~150).",
+        "<strong>M7+ deprem:</strong> Yıllık 15-20 adet.",
+        "<strong>M8+ deprem:</strong> Yıllık 1-2 adet (büyük ölçekli)."
+      ]],
+      ["Türkiye'nin Dünya Sıralamasındaki Yeri", [
+        "Yıllık M5+ deprem sayısı ülke sıralaması (2020-2025 ortalaması):",
+        "<strong>1. Endonezya:</strong> 200-300 deprem/yıl",
+        "<strong>2. Japonya:</strong> 150-250 deprem/yıl",
+        "<strong>3. Filipinler:</strong> 80-150 deprem/yıl",
+        "<strong>4. Şili:</strong> 60-120 deprem/yıl",
+        "<strong>5. Türkiye:</strong> <strong>40-100 deprem/yıl</strong>",
+        "<strong>6. İran:</strong> 30-80 deprem/yıl",
+        "<strong>7. Meksika:</strong> 30-60 deprem/yıl",
+        "Türkiye dünya genelinde 5. sıradadır. Kayıp/can açısından ise (2000-2026) 2. sırada — Endonezya'dan sonra."
+      ]],
+      ["Büyük Tarihsel Depremler — Dünya Genelinde", [
+        "Modern tarih boyunca en yıkıcı olaylar:",
+        "<strong>1556 Şensi, Çin (M8.0):</strong> 830.000 ölü. Tarih boyunca en yıkıcı.",
+        "<strong>1755 Lizbon (M8.5):</strong> 50.000+ ölü. Tsunami nedeniyle.",
+        "<strong>1976 Tangshan, Çin (M7.6):</strong> 240.000-650.000 ölü.",
+        "<strong>2004 Sumatra (M9.1):</strong> 230.000 ölü. Hint Okyanusu tsunamisi.",
+        "<strong>2010 Haiti (M7.0):</strong> 230.000 ölü.",
+        "<strong>2023 Kahramanmaraş (M7.8+M7.5):</strong> 50.000+ ölü. Modern Türk tarihinin en büyük afeti."
+      ]],
+      ["Tsunami Riski ve Deprem", [
+        "Sığ + okyanus altı + M7.5+ depremler tsunami üretebilir. Türkiye'nin tsunami riski:",
+        "<strong>Akdeniz:</strong> Kıbrıs Yayı yakınında M7.5+ deprem teorik olarak Antalya, Mersin'i etkileyebilir.",
+        "<strong>Marmara:</strong> İç deniz olduğu için büyük tsunami zor; ama yerel mini tsunami olabilir (1999'da gözlendi).",
+        "<strong>Karadeniz:</strong> Anadolu kıyısı için risk düşük.",
+        "Pasifik veya Hint Okyanusu'ndaki büyük olaylar Türkiye'yi doğrudan etkilemez."
+      ]],
+      ["USGS Canlı Verisi Nereden Bakılır?", [
+        "USGS'in resmi sayfaları:",
+        "<strong>Ana harita:</strong> earthquake.usgs.gov/earthquakes/map (etkileşimli)",
+        "<strong>Liste:</strong> earthquake.usgs.gov/earthquakes/search (filtre ile)",
+        "<strong>API:</strong> earthquake.usgs.gov/fdsnws/event/1/ (geliştiriciler için)",
+        "<strong>RSS feed:</strong> Çeşitli filtreleme seviyelerinde, ücretsiz",
+        "Yakınımdaki Deprem'in API'si Türkiye'ye odaklıdır, dünya için USGS API'sını kullanın."
+      ]],
+      ["Türkiye Açısından Dünya Depremleri Önemli Mi?", [
+        "Dünyadaki büyük depremler bilim insanları için kritiktir çünkü:",
+        "<strong>(1) Plaka modelleri:</strong> Büyük depremler tektonik teorinin doğrulanmasında kullanılır.",
+        "<strong>(2) Tsunami uyarı sistemleri:</strong> Komşu ülkelerdeki olaylar bizim sistemlerimizi test eder.",
+        "<strong>(3) İnşaat standartları:</strong> Japonya'daki yenilikler Türkiye'ye uyarlanır (örn. TBDY 2019).",
+        "<strong>(4) Afet yönetimi:</strong> Diğer ülkelerin müdahale stratejileri öğretici."
+      ]],
+      ["Küresel Erken Uyarı Sistemleri", [
+        "Dünya çapında deprem erken uyarı sistemleri:",
+        "<strong>Japonya - JMA:</strong> 2007'den beri. M5+ depremlerde 10-30 sn önce uyarı. Trenler otomatik durur.",
+        "<strong>Meksika - SASMEX:</strong> 1993'ten beri. Pasifik kıyısı için.",
+        "<strong>Tayvan - CWB:</strong> Pasifik Ateş Çemberi için optimize.",
+        "<strong>ABD - ShakeAlert:</strong> Batı Sahili. 2018'de kamuya açıldı.",
+        "<strong>Türkiye - AFAD:</strong> 2019'da pilot. Bazı bölgelerde aktif, yaygınlaştırma çalışıyor."
+      ]]
+    ],
+    "faqs": [
+      ["Dünya deprem haritasını Türkçe görmek mümkün mü?", "USGS sadece İngilizce yayın yapar. Yakınımdaki Deprem Türkiye'ye odaklıdır. Dünya için Türkçe alternatif: AFAD'ın 'Dünya Depremleri' sekmesi (sınırlı veri)."],
+      ["Türkiye dünyada kaçıncı sırada deprem aktivitesinde?", "Yıllık M5+ deprem sayısında 5. (Endonezya, Japonya, Filipinler, Şili'den sonra). Kayıp açısından modern tarihte 2. (Endonezya'dan sonra)."],
+      ["Dünyanın en büyük depremi ne kadardı?", "1960 Şili Valdivia depremi M9.5 ile tüm zamanların kayıtlı en büyük olayıdır. 1700'lerden beri olası olarak benzer 4-5 büyük olay olduğu tahmin ediliyor."],
+      ["Tsunami her depremde olur mu?", "Hayır. Tsunami için: (1) Deniz altı deprem, (2) Sığ (40 km altı), (3) Genelde M7.5+ büyüklük gerekir. Kara depremlerinde tsunami olmaz."],
+      ["Dünyada deprem sayısı artıyor mu?", "Hayır. Tarihsel veriler artan deprem sayısı göstermez. Algılama teknolojisi geliştiği için daha çok mikro deprem kaydediliyor — ama büyük deprem sayısı sabit."]
+    ],
+    "related": [
+      ["/blog-canli-sismik-harita-turkiye.html", "Canlı Sismik Harita Türkiye"],
+      ["/blog-turkiye-en-cok-deprem-iller.html", "Türkiye En Aktif İller"],
+      ["/blog-deprem-erken-uyari-sistemi.html", "Erken Uyarı Sistemi"],
+      ["/blog-kahramanmaras-6-subat-dersler.html", "6 Şubat Dersler"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  },
+  {
+    "slug": "bugun-deprem-oldu-mu-turkiye",
+    "title": "Bugün Deprem Oldu Mu Türkiye? 2026 Anlık Günlük Rapor",
+    "meta_description": "Bugün Türkiye'de deprem oldu mu? AFAD + Kandilli verisiyle günlük tüm depremler, hissedilen olaylar, bölge özetleri ve haftalık karşılaştırma.",
+    "keywords": ["bugün deprem oldu mu", "bugün türkiye deprem", "bugün hangi şehirde deprem oldu", "bu sabah deprem", "günlük deprem listesi türkiye"],
+    "category": "bilim",
+    "image_alt": "Türkiye bugün deprem günlük rapor ve harita",
+    "lead": "Bugün deprem oldu mu, hangi şehirde, ne kadar büyüklükte? Bu sayfa Türkiye'nin günlük deprem aktivitesini gerçek zamanlı özetler. Her saat güncellenen rapor, bölgesel dağılım ve önceki gün karşılaştırması ile.",
+    "body_h2_blocks": [
+      ["Bugün Deprem Oldu Mu? — Anlık Yanıt", [
+        "Evet, Türkiye'de günde ortalama 70-100 deprem olur — bu yazıyı okurken de olasılıkla bir tane gerçekleşmektedir. Çoğu mikro depremlerdir (M1.0-2.9) ve hissedilmez. Bunların listesini görmek için Yakınımdaki Deprem anasayfasına bakın.",
+        "Eğer 'hissedilen' depremi soruyorsanız (M3.5+), günde ortalama <strong>5-10 adet</strong> olur. Bu sayfa son 24 saatin canlı raporunu sunar."
+      ]],
+      ["Bugün Hangi Şehirde Deprem Oldu?", [
+        "Son 24 saatin coğrafi dağılımı:",
+        "<strong>En sık aktif bölgeler:</strong> Hatay, Kahramanmaraş, Adıyaman, Malatya (2023 artçıları). Günlük 15-25 deprem.",
+        "<strong>Marmara güney:</strong> Sakarya, Düzce, Kocaeli, Yalova (KAF). Günlük 5-10.",
+        "<strong>Ege:</strong> İzmir, Aydın, Muğla, Manisa (BAF). Günlük 5-15.",
+        "<strong>İç Anadolu:</strong> Kayseri, Niğde, Aksaray. Günlük 0-3.",
+        "<strong>Karadeniz:</strong> Trabzon, Ordu, Samsun. Günlük 0-2.",
+        "Şehir-bazlı detay için il sayfalarımıza gidin: <a href=\"/deprem-istanbul.html\">İstanbul</a>, <a href=\"/deprem-izmir.html\">İzmir</a>, <a href=\"/deprem-ankara.html\">Ankara</a>, ve <a href=\"/deprem-sehirleri.html\">81 il listesi</a>."
+      ]],
+      ["Bu Sabah Deprem Oldu Mu?", [
+        "Sabah saatlerinde deprem olma olasılığı diğer saatlerden farklı değildir — depremler günün her saatinde aynı oranda gerçekleşir. Yine de bazı insanlar sabah ilk uyandıklarında veya çocukları okula yollarken endişe duyar.",
+        "Sabah 05:00-09:00 arası tarihsel ortalama: günlük toplam depremin yaklaşık 1/6'sı (sayısal olarak ~12-15 deprem). Hissedilen sayısı ortalama 1-2.",
+        "Bu sabahki depremleri görmek için anasayfada 'Zaman filtresi' kullanın — 'Son 6 saat' seçin."
+      ]],
+      ["Bugünkü En Büyük Deprem Hangisi?", [
+        "Türkiye'de günlük en büyük depremin büyüklüğü çoğunlukla M3.5-4.5 aralığındadır. M5.0+ deprem her 2-3 günde bir olur. M6.0+ ayda 1, M7.0+ yılda 0-2 (genel ortalama).",
+        "Anasayfanın <strong>magnitüd filtresinden '4.0+' veya '5.0+' seçerseniz</strong> sadece önemli depremler kalır — günün en büyüğü kolayca görülür."
+      ]],
+      ["Önceki Güne Göre Trend", [
+        "Bugünkü deprem aktivitesini geçmişle karşılaştırmak için:",
+        "<strong>(1)</strong> Anasayfa'nın istatistik panelinde günlük sayım gösterilir.",
+        "<strong>(2)</strong> Bölgesel kıyaslama için şehir sayfalarına gidin.",
+        "<strong>(3)</strong> Haftalık trend için AFAD'ın 'İstatistikler' sayfasını ziyaret edin.",
+        "Genel kural: günlük rakam ortalamadan %200+ sapma gösteriyorsa dikkatli olun — özel bir olay (deprem fırtınası veya ana deprem) olabilir."
+      ]],
+      ["Hissedilen Deprem Hangileri?", [
+        "Hissedilebilirlik magnitüd + derinlik + mesafeye bağlıdır. Genel kural:",
+        "<strong>M3.5+ sığ (10 km altı):</strong> 10-30 km içinde hissedilir.",
+        "<strong>M4.5+ sığ:</strong> 50-100 km hissedilir.",
+        "<strong>M5.5+ sığ:</strong> 200+ km, geniş alanda hissedilir.",
+        "<strong>M6.0+ derinlik 30 km:</strong> 300-500 km hissedilir.",
+        "Yakınımdaki Deprem mobil uygulamada bildirim açtığınızda hissedilen depremlerin tahmini etki alanı haritada işaretlenir."
+      ]],
+      ["Bugün Türkiye'de Tsunami Riski Var Mı?", [
+        "Yıllık ortalama: Türkiye sahillerinde tsunami uyarısı 0-1 kez verilir. Çoğunlukla küçük seviyede (10-30 cm dalga yüksekliği) ve gerçekleşmez.",
+        "Bugün için tsunami riski: ana etkisi olan M7.5+ + sığ + deniz altı depremi gereklidir. Bu kombinasyon yılda 0-1 kez olur. Anasayfada böyle bir deprem olursa otomatik uyarı düzenlenir.",
+        "Sahillerde yaşıyorsanız: <a href=\"/blog-tsunami-belirtileri.html\">tsunami belirtileri</a> rehberine bakın (mevcut değilse <a href=\"/blog-deprem-aninda.html\">deprem anında yapılacaklar</a>)."
+      ]],
+      ["Bugünkü Aktiviteye Göre Bir Hareket Gerekiyor Mu?", [
+        "Normal koşullarda (günlük 70-100 deprem) hiçbir özel hareket gerekmez. Endişe verici durumlar:",
+        "<strong>(1) Aynı bölgede saatlik 5+ M3.0+ deprem:</strong> Deprem fırtınası. AFAD bilgilendirir.",
+        "<strong>(2) M5.0+ büyük olay:</strong> Bina kontrolü, gaz/elektrik check.",
+        "<strong>(3) Sahildeysiniz + M7.5+ olay:</strong> Tsunami uyarısı dinleyin.",
+        "Hiçbir olağanüstü durum yoksa: deprem çantanızın hazır olduğunu kontrol etmek, plansız bir hareket olabilir. <a href=\"/blog-deprem-cantasi.html\">Deprem çantası listesi</a>."
+      ]],
+      ["Yarın da Aynı Olur Mu? Tahmin Mümkün Mü?", [
+        "Hayır, bilimsel olarak <strong>deprem tahmin etmek mümkün değildir</strong>. Yarın hangi büyüklükte, nerede deprem olacağı bilinemez.",
+        "Sadece <strong>olasılık değerlendirmesi</strong> yapılabilir: belirli bir bölgede önümüzdeki X yıl içinde M7+ olma yüzdesi. Örn. İstanbul Marmara segmenti: 30 yıl içinde %62-65.",
+        "Sosyal medyada 'şu tarihte deprem olacak' iddiaları her zaman <strong>asılsızdır</strong>. Türk Deprem Vakfı, AFAD ve Kandilli resmi açıklamalarına güvenin."
+      ]]
+    ],
+    "faqs": [
+      ["Bugün Türkiye'de kaç deprem oldu?", "Genelde 70-120 (M1.0+). Sayfa açıldığında anlık sayım görünür. Magnitüd filtresiyle 'önemli' depremleri (M3.0+) ayrı sayabilirsiniz."],
+      ["Bu gece deprem olur mu?", "Gece-gündüz fark yok — deprem rastgele zamanlardır. Hissedilen deprem olasılığı her 2-3 saatte bir 1 vardır (ortalamada)."],
+      ["Bugün hangi şehirde en çok deprem oldu?", "Genelde Hatay-Kahramanmaraş bölgesi (2023 artçıları nedeniyle). Aktif bölge: günlük 15-25 deprem."],
+      ["Yıldız sayısına göre bugün hissedilen var mı?", "'Yıldız' veya 'şiddet' (intensity) Mercalli ölçeğindedir, deprem haritasında genelde gösterilmez. Magnitüd (M) ve derinlik birlikte hissedilirlik tahmini yapar."],
+      ["Bugün hiç deprem olmadı mı?", "Türkiye'de '0 deprem' olan gün yoktur. En düşük günler bile 50-80 deprem var (çoğu M2.0 altı). 'Hissedilen deprem olmadı' olabilir."]
+    ],
+    "related": [
+      ["/blog-aktif-deprem-haritasi-son-24-saat.html", "Aktif Deprem Haritası"],
+      ["/blog-az-once-deprem-mi-oldu.html", "Az Önce Deprem Mi Oldu"],
+      ["/blog-canli-sismik-harita-turkiye.html", "Canlı Sismik Harita"],
+      ["/blog-turkiye-en-cok-deprem-iller.html", "En Aktif İller"],
+      ["/blog.html", "Tüm Rehberler"]
+    ]
+  }
+]

@@ -5,8 +5,8 @@
     <loc>https://yakinimdakideprem.com/</loc>
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/og-yakinimdakideprem.webp</image:loc>
-      <image:title>Yakınımdaki Deprem – Anlık Deprem Haritası Türkiye</image:title>
-      <image:caption>Anlık deprem Türkiye haritası: Kandilli + AFAD ile 20 saniyede bir güncellenen canlı deprem listesi. 81 ilin anlık deprem sayfası, şehir arama ve bildirim.</image:caption>
+      <image:title>Anlık Deprem Türkiye 🔴 Canlı Harita | Son Depremler AFAD + Kandilli</image:title>
+      <image:caption>Anlık deprem Türkiye 🔴 AFAD + Kandilli verisiyle 20 saniyede güncellenen canlı deprem haritası. 81 il için son depremler, yakınımdaki sarsıntı, deprem mi oldu sorgusu — tek ekranda.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -14,8 +14,8 @@
     <loc>https://yakinimdakideprem.com/blog.html</loc>
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/depremcantasi.webp</image:loc>
-      <image:title>Deprem Blogu — 58 Rehber | Yakınımdaki Deprem</image:title>
-      <image:caption>Türkiye\'nin 58 kapsamlı deprem rehberi: çanta, hazırlık, anında davranış, sonrası toparlanma, DASK, kentsel dönüşüm ve daha fazlası.</image:caption>
+      <image:title>Deprem Blogu — 65 Rehber | Yakınımdaki Deprem</image:title>
+      <image:caption>Türkiye\'nin 65 kapsamlı deprem rehberi: çanta, hazırlık, anında davranış, sonrası toparlanma, DASK, kentsel dönüşüm ve daha fazlası.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -23,8 +23,8 @@
     <loc>https://yakinimdakideprem.com/son-dakika-deprem.html</loc>
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/blog-son-deprem-haberleri.webp</image:loc>
-      <image:title>Deprem Mi Oldu? Az Önce Deprem – Son Dakika Canlı Liste</image:title>
-      <image:caption>Az önce deprem mi oldu? Kandilli + AFAD verileriyle son dakika deprem listesi. Bugün olan depremleri saniye saniye Türkiye genelinde takip et.</image:caption>
+      <image:title>🔴 Son Dakika Deprem Türkiye - Az Önce Deprem Mi Oldu? | Canlı Liste</image:title>
+      <image:caption>Son dakika deprem Türkiye 🔴 Az önce deprem mi oldu? AFAD + Kandilli verisiyle 20 saniyede güncellenen canlı son depremler listesi. Tüm illeri kapsayan anlık takip.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -65,6 +65,24 @@
     </image:image>
   </url>
   <url>
+    <loc>https://yakinimdakideprem.com/blog-afad-kandilli-deprem-karsilastirma.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-afad-kandilli-deprem-karsilastirma.webp</image:loc>
+      <image:title>AFAD ve Kandilli Karşılaştırması 2026 — Hangi Veri Doğru?</image:title>
+      <image:caption>AFAD vs Kandilli deprem verisi karşılaştırması: hız, doğruluk, magnitüd farkları, istasyon sayıları. Hangi kaynak hangi durumda kullanılmalı?</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-aktif-deprem-haritasi-son-24-saat.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-aktif-deprem-haritasi-son-24-saat.webp</image:loc>
+      <image:title>Aktif Deprem Haritası 2026 — Son 24 Saatte Türkiye'de Ne Oldu?</image:title>
+      <image:caption>Aktif deprem haritası: son 24 saatte Türkiye'de gerçekleşen tüm depremlerin canlı haritası. Magnitüd, derinlik, fay aktivitesi ve günlük özet.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
     <loc>https://yakinimdakideprem.com/blog-apartman-yoneticisi-deprem.html</loc>
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/blog-apartman-yoneticisi-deprem.webp</image:loc>
@@ -92,11 +110,20 @@
     </image:image>
   </url>
   <url>
+    <loc>https://yakinimdakideprem.com/blog-az-once-deprem-mi-oldu.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-az-once-deprem-mi-oldu.webp</image:loc>
+      <image:title>Az Önce Deprem Mi Oldu? Türkiye 2026 Hızlı Sorgulama</image:title>
+      <image:caption>Az önce deprem mi oldu? Sarsıntı hissettiniz mi? AFAD ve Kandilli verisiyle 30 saniyede yanıt. Konum bazlı en son depremler, kontrol yöntemleri.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
     <loc>https://yakinimdakideprem.com/blog-bina-deprem-performans-raporu-nedir.html</loc>
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/blog-bina-deprem-performans-raporu-nedir.webp</image:loc>
-      <image:title>Bina Deprem Performans Raporu 2026 — Nedir, Nasıl Alınır?</image:title>
-      <image:caption>Binanızın deprem performansını ölçen rapor: TBDY 2019 kapsamı, fiyatlandırma, yetkili mühendis seçimi ve sonuçların yorumlanması.</image:caption>
+      <image:title>Bina Deprem Performans Raporu 2026 — Fiyat, Süreç, TBDY 2019</image:title>
+      <image:caption>Bina deprem performans raporu nedir, nasıl alınır, fiyatı ne kadar? TBDY 2019 kapsamında zorunlu sürecin tam rehberi. Mühendis seçimi, doğrusal/lineer yöntem farkları.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -110,11 +137,38 @@
     </image:image>
   </url>
   <url>
+    <loc>https://yakinimdakideprem.com/blog-bugun-deprem-oldu-mu-turkiye.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-bugun-deprem-oldu-mu-turkiye.webp</image:loc>
+      <image:title>Bugün Deprem Oldu Mu Türkiye? 2026 Anlık Günlük Rapor</image:title>
+      <image:caption>Bugün Türkiye'de deprem oldu mu? AFAD + Kandilli verisiyle günlük tüm depremler, hissedilen olaylar, bölge özetleri ve haftalık karşılaştırma.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-canli-fay-hatti-haritasi.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-canli-fay-hatti-haritasi.webp</image:loc>
+      <image:title>Canlı Fay Hattı Haritası Türkiye 2026 — KAF, DAF, BAF</image:title>
+      <image:caption>Canlı fay hattı haritası: Türkiye'nin 3 büyük fayı (KAF, DAF, BAF) ve son hareketleri. AFAD verisiyle aktif fay aktivitesi, segment riskleri.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-canli-sismik-harita-turkiye.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-canli-sismik-harita-turkiye.webp</image:loc>
+      <image:title>Canlı Sismik Harita Türkiye 2026 — Anlık Aktivite Takibi</image:title>
+      <image:caption>Canlı sismik harita: Türkiye'nin anlık sismik aktivitesini AFAD + Kandilli verisiyle 20 saniyede güncellenen interaktif haritada takip edin. Büyüklük, derinlik, fay hatları.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
     <loc>https://yakinimdakideprem.com/blog-dask-nedir.html</loc>
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/blog-deprem-oncesi-hazirlik.webp</image:loc>
-      <image:title>DASK Nedir? Zorunlu Deprem Sigortası Rehberi 2026</image:title>
-      <image:caption>DASK zorunlu deprem sigortası nedir, neleri kapsar, fiyatı nasıl hesaplanır? 2026 güncel DASK rehberi, başvuru ve teminat detayları.</image:caption>
+      <image:title>DASK Nedir? Zorunlu Deprem Sigortası 2026 — Fiyat ve Kapsam</image:title>
+      <image:caption>DASK (Doğal Afet Sigortaları Kurumu) nedir, neleri kapsar, 2026 prim fiyatları, nasıl alınır? Zorunlu deprem sigortası tam rehber.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -209,6 +263,15 @@
     </image:image>
   </url>
   <url>
+    <loc>https://yakinimdakideprem.com/blog-deprem-haritasi-nasil-okunur.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-deprem-haritasi-nasil-okunur.webp</image:loc>
+      <image:title>Deprem Haritası Nasıl Okunur? Türkiye Kapsamlı Rehber 2026</image:title>
+      <image:caption>Deprem haritası okuma rehberi: renk kodları, fay hatları, derinlik göstergeleri, magnitüd skalası ve coğrafi koordinat sistemi. Adım adım örneklerle.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
     <loc>https://yakinimdakideprem.com/blog-deprem-haritasi.html</loc>
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/blog-deprem-haritasi-rehberi.webp</image:loc>
@@ -275,8 +338,8 @@
     <loc>https://yakinimdakideprem.com/blog-deprem-sonrasi-kiracilarin-haklari.html</loc>
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/blog-deprem-sonrasi-kiracilarin-haklari.webp</image:loc>
-      <image:title>Deprem Sonrası Kiracıların Hakları – Hukuki Rehber 2026</image:title>
-      <image:caption>Deprem sonrası kiracılar kira öder mi? Tahliye zorla yapılabilir mi? Hasar tazminatı kime ödenir? 2026 güncel kira hukuku rehberi.</image:caption>
+      <image:title>Deprem Sonrası Kiracı Hakları 2026 — Kira, Tahliye, Tazminat</image:title>
+      <image:caption>Deprem hasarı sonrası kiracı hakları: kira ödeme zorunluluğu var mı, tahliye süresi ne kadar, depozito ve tazminat süreci. Yasal dayanaklarıyla 2026 rehberi.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -313,6 +376,15 @@
       <image:loc>https://yakinimdakideprem.com/images/blog-disaridaysaniz.webp</image:loc>
       <image:title>Deprem Anında Dışarıdaysanız – Açık Alan Güvenliği</image:title>
       <image:caption>Deprem anında sokakta, parkta veya açık alanda ne yapmalı? Güvenli mesafe, düşen nesnelerden korunma ve tahliye rotaları hakkında detaylı rehber.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-dunya-deprem-haritasi-canli.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-dunya-deprem-haritasi-canli.webp</image:loc>
+      <image:title>Dünya Deprem Haritası Canlı 2026 — Türkiye ile Karşılaştırma</image:title>
+      <image:caption>Dünya deprem haritası canlı: küresel sismik aktivite, USGS verisi, dünyanın en aktif fay sistemleri ve Türkiye'nin küresel risk sıralamasındaki yeri.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -358,6 +430,15 @@
       <image:loc>https://yakinimdakideprem.com/images/blog-evim-depreme-dayanikli-mi.webp</image:loc>
       <image:title>Evim Depreme Dayanıklı mı? 7 Adımlık Test</image:title>
       <image:caption>Oturduğunuz evin deprem dayanıklılığını nasıl değerlendirirsiniz? Çatlaklar, kolon yapısı, yapım yılı ve daha fazlası için 7 adımlık kontrol listesi.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-haritali-son-depremler.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-haritali-son-depremler.webp</image:loc>
+      <image:title>Haritalı Son Depremler 2026 — Türkiye Canlı Liste + Görsel</image:title>
+      <image:caption>Haritalı son depremler: AFAD + Kandilli verisiyle son depremleri hem listede hem haritada görüntüleyen kapsamlı canlı takip platformu.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -446,8 +527,8 @@
     <loc>https://yakinimdakideprem.com/blog-marmara-depremi-1999-dersler.html</loc>
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/blog-marmara-depremi-1999-dersler.webp</image:loc>
-      <image:title>Marmara Depremi 1999 – 25 Yılda Ne Değişti?</image:title>
-      <image:caption>17 Ağustos 1999 Gölcük depremi sonrası Türkiye'de deprem güvenliğinde değişen 10 şey: yapı yönetmeliği, DASK, AFAD, eğitim ve daha fazlası.</image:caption>
+      <image:title>1999 Marmara Depremi'nden 8 Hayati Ders — Bugün Hala Geçerli</image:title>
+      <image:caption>17 Ağustos 1999 Marmara depremi: 17.480 can kaybı, KAF aktivitesi, yapı denetim çıkışı. 26 yıl sonra hala uygulanan ve uyarmamız gereken dersler.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -491,8 +572,8 @@
     <loc>https://yakinimdakideprem.com/blog-toplanma-alani-sorgulama.html</loc>
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/toplanma-alani-sorgulama.webp</image:loc>
-      <image:title>Toplanma Alanı Sorgulama – E-Devlet Rehberi</image:title>
-      <image:caption>Mahallenizin deprem toplanma alanını e-Devlet üzerinden nasıl sorgularsınız? Adım adım e-Devlet toplanma alanı sorgulama rehberi ve alternatif yöntemler.</image:caption>
+      <image:title>📍 Toplanma Alanı Sorgulama 2026 — E-Devlet, AFAD, Belediye</image:title>
+      <image:caption>Yakınımdaki toplanma alanı nerede? E-devlet ve AFAD üzerinden 81 il için resmi toplanma alanlarını sorgulama rehberi. Adres bazlı arama ve harita.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -500,8 +581,8 @@
     <loc>https://yakinimdakideprem.com/blog-turkiye-en-cok-deprem-iller.html</loc>
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/blog-turkiye-en-cok-deprem-iller.webp</image:loc>
-      <image:title>Türkiye'de En Çok Deprem Olan Şehirler – 2026 İl Sıralaması</image:title>
-      <image:caption>Türkiye'de en fazla deprem olan şehirler hangileri? Erzincan, Van, Kocaeli... 50 yılın Kandilli ve AFAD verisine göre il bazlı deprem sıralaması ve risk analizi.</image:caption>
+      <image:title>Türkiye'de En Çok Deprem Olan İller 2026 — Risk Sıralaması</image:title>
+      <image:caption>Türkiye'nin en deprem riskli 20 ili: İstanbul, İzmir, Hatay, Kahramanmaraş... AFAD verileriyle sayısal risk haritası, KAF/DAF fay hatları ve son depremler.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -520,6 +601,15 @@
       <image:loc>https://yakinimdakideprem.com/images/blog-van-depremi-2011-dersler.webp</image:loc>
       <image:title>Van Depremi 2011 – 15 Yıl Sonra Neler Öğrendik?</image:title>
       <image:caption>23 Ekim 2011 Van-Erciş Mw 7.2 depremi: 600+ can kaybı, Bayram Oteli hatırası, Doğu Anadolu'da soğuk kış ve dersler.</image:caption>
+      <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-yakinimda-deprem-konum-sorgulama.html</loc>
+    <image:image>
+      <image:loc>https://yakinimdakideprem.com/images/blog-yakinimda-deprem-konum-sorgulama.webp</image:loc>
+      <image:title>Yakınımda Deprem Oldu Mu? Konum Bazlı Sorgulama 2026</image:title>
+      <image:caption>Yakınımda deprem oldu mu? Konum bilginizle anlık deprem sorgulama, yakın depremler listesi, mesafe hesaplama ve bildirim ayarları rehberi.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
