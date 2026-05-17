@@ -401,3 +401,45 @@ body {
         font-size: 0.78rem;
     }
 }
+
+/* ============================================================
+   YMYL Disclaimer Box (hayat kurtaran içerikler için)
+   ============================================================ */
+.ymyl-disclaimer {
+    margin: 20px 0;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #fffbeb, #fef3c7);
+    border-left: 4px solid #f59e0b;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.ymyl-disclaimer__title {
+    margin: 0 0 8px;
+    font-weight: 700;
+    color: #92400e;
+    font-size: 1rem;
+}
+
+.ymyl-disclaimer p {
+    margin: 0;
+    color: #78350f;
+    line-height: 1.55;
+}
+
+.ymyl-disclaimer a {
+    color: #b45309;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.ymyl-disclaimer a:hover {
+    color: #78350f;
+}
+
+@media (max-width: 640px) {
+    .ymyl-disclaimer {
+        padding: 14px 16px;
+        font-size: 0.9rem;
+    }
+}

@@ -611,3 +611,27 @@ main.map-wrapper #map {
         top: 60px;
     }
 }
+
+/* ============================================================
+   Touch target accessibility (≥44px Google önerisi)
+   ============================================================ */
+.earthquake-list .magnitude {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.earthquake-list .earthquake-item {
+    min-height: 48px;
+    padding: 8px 12px;
+}
+
+.cat-btn,
+.page-btn {
+    min-height: 44px;
+}
+
+.btn-refresh,
+.update-info .btn-refresh {
+    min-width: 36px;
+    min-height: 36px;
+}

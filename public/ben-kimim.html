@@ -95,16 +95,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {
       "@context": "https://schema.org",
       "@type": "Person",
+      "@id": "https://yakinimdakideprem.com/ben-kimim.html#person",
       "name": "Emin Kılıç",
-      "image": "https://yakinimdakideprem.com/images/emin-avatar.webp",
+      "givenName": "Emin",
+      "familyName": "Kılıç",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://yakinimdakideprem.com/images/emin-avatar.webp",
+        "width": 256,
+        "height": 256
+      },
       "url": "https://yakinimdakideprem.com/ben-kimim.html",
       "sameAs": [
-        "https://www.linkedin.com/in/emin-k%C4%B1l%C4%B1%C3%A7-250b14210/",
-        "https://instagram.com/heremmkh"
+        "https://www.linkedin.com/in/emin-kılıç-250b14210/",
+        "https://instagram.com/heremmkh",
+        "https://github.com/mmeekh"
       ],
-      "jobTitle": "Kurucu & Geliştirici",
+      "jobTitle": "Kurucu & Yazılım Geliştirici",
+      "description": "Yakınımdaki Deprem platformunun kurucusu. Türkiye'deki anlık deprem verilerinin AFAD ve Kandilli Rasathanesi resmi kaynaklarından çekilerek vatandaşa ücretsiz sunulması için bağımsız bir afet bilgilendirme platformu geliştirdi. Deprem güvenliği, yapı yönetmeliği, DASK, kentsel dönüşüm ve afet hazırlığı konularında 65'in üzerinde rehber yazısı ve 81 il için ayrı içerik üretti.",
+      "nationality": {"@type": "Country", "name": "Türkiye"},
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Yazılım Mühendisliği"
+      },
+      "knowsAbout": [
+        "Deprem güvenliği",
+        "Türkiye Bina Deprem Yönetmeliği (TBDY 2019)",
+        "AFAD ve Kandilli Rasathanesi veri kaynakları",
+        "Afet hazırlığı ve müdahale",
+        "DASK (Zorunlu Deprem Sigortası)",
+        "Kentsel dönüşüm yasal süreçleri",
+        "Sismograf verisi yorumlama",
+        "Kuzey Anadolu Fay Hattı (KAF)",
+        "Doğu Anadolu Fay Hattı (DAF)",
+        "Marmara depremi senaryosu",
+        "Yapı denetimi ve bina performans raporu",
+        "API entegrasyonu ve web geliştirme"
+      ],
+      "knowsLanguage": [
+        {"@type": "Language", "name": "Türkçe", "alternateName": "tr"},
+        {"@type": "Language", "name": "İngilizce", "alternateName": "en"}
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Sertifika",
+          "name": "Yazılım Mühendisliği — Profesyonel Geliştirici"
+        }
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Yakınımdaki Deprem",
+        "@id": "https://yakinimdakideprem.com/#organization"
+      },
       "worksFor": {
         "@type": "Organization",
+        "@id": "https://yakinimdakideprem.com/#organization",
         "name": "Yakınımdaki Deprem",
         "url": "https://yakinimdakideprem.com"
       }
@@ -201,20 +247,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="about-text">
                     <h2>Ben Kimim?</h2>
-                    <p><strong>Yakınımdaki Deprem</strong> platformunu, Türk milleti için tamamen <strong>ücretsiz</strong> ve <strong>reklamsız</strong> bir deprem bilgi kaynağı olarak geliştirdim. Amacım, deprem konusunda toplumsal bilinç oluşturmak ve afet anında hazırlıksız yakalanma riskini azaltmak.</p>
-                    
-                    <p>Canlı deprem verilerini <a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer">Kandilli Rasathanesi</a>
-                        kaynaklı API üzerinden alıyor; doğrulama ve resmi duyurular için
-                        <a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a> kaynaklarını
-                        takip ediyorum.</p>
-                    
-                    <p>Bu platformu, kâr amacı gütmeden, tamamen toplumsal fayda sağlamak için hayata geçirdim. Türk milleti için ücretsiz hizmet vermek benim en büyük motivasyon kaynağım.</p>
-                    
+                    <p>Merhaba, ben <strong>Emin Kılıç</strong>. <strong>Yakınımdaki Deprem</strong> (<a href="https://yakinimdakideprem.com/">yakinimdakideprem.com</a>) platformunun kurucusu ve tek geliştiricisiyim. Yazılım mühendisliği geçmişimi, Türkiye'nin sismik gerçekleriyle birleştirerek, vatandaşların depremi anlık takip edebileceği, hazırlık yapabileceği ve risk altındaki bölgelerini görebileceği <strong>tamamen ücretsiz, reklamsız ve bağımsız</strong> bir platform inşa ettim.</p>
+
+                    <h3>Neden Bu Platformu Geliştirdim?</h3>
+                    <p>Türkiye'de yaşayan herkes gibi ben de <strong>6 Şubat 2023 Kahramanmaraş depremlerinde</strong> derinden sarsıldım. 50.000'i aşan can kaybı, milyonlarca insanın evsiz kalması — bunların büyük bir kısmı <strong>bilgi eksikliği</strong>, <strong>yetersiz hazırlık</strong> ve <strong>kontrol edilmemiş yapı stoğundan</strong> kaynaklanıyordu. O dönemde resmi kanallar (AFAD, Kandilli) anlık veri yayımlıyordu ama bu verilere ulaşmak teknik bilgi gerektiriyordu. Sıradan bir vatandaşın "evimin altındaki fay aktif mi?", "kentsel dönüşüm vergi muafiyeti nasıl alınır?", "az önce hissettiğim sarsıntı gerçekten deprem miydi?" gibi soruları için tek noktadan, sade ve doğru cevap bulabileceği bir kaynak yoktu.</p>
+
+                    <p>İşte tam bu boşluğu doldurmak için Yakınımdaki Deprem'i kurdum. Amacım çok net: <strong>bilim, açık veri ve teknolojiyi birleştirerek, deprem konusunda toplumsal farkındalığı artırmak ve hayat kurtarmak.</strong></p>
+
+                    <h3>Hangi Konularda Yazıyorum?</h3>
+                    <p>Platformumda 65'ten fazla rehber yazısı, 81 il için ayrı sayfa ve anlık güncellenen veri akışı bulunuyor. Yazdığım ve yazmaya devam ettiğim ana konular:</p>
+                    <ul>
+                        <li><strong>Deprem güvenliği:</strong> Çök-Kapan-Tutun, deprem çantası, hazırlık adımları</li>
+                        <li><strong>Yapı yönetmeliği:</strong> TBDY 2019, yapı denetim, performans raporu</li>
+                        <li><strong>Hukuki süreçler:</strong> DASK, kentsel dönüşüm vergi muafiyeti, kolon kesme cezası, kiracı hakları</li>
+                        <li><strong>Tarihsel olaylar:</strong> 1999 Marmara, 2011 Van, 2023 Kahramanmaraş depremlerinden çıkarılması gereken dersler</li>
+                        <li><strong>Bilim ve teknik:</strong> Fay hatları (KAF, DAF, BAF), magnitüd ölçekleri, sismograf verisi yorumlama</li>
+                        <li><strong>Şehir bazlı risk:</strong> Her ilin kendi fay hattı, tarihsel deprem geçmişi ve hazırlık önerileri</li>
+                    </ul>
+
+                    <h3>Verilerimi Nereden Alıyorum?</h3>
+                    <p>Yakınımdaki Deprem <strong>resmi ve doğrulanabilir kaynakları</strong> kullanır:</p>
+                    <ul>
+                        <li><a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer"><strong>AFAD (Afet ve Acil Durum Yönetimi Başkanlığı)</strong></a> — Türkiye'nin resmi afet kurumu, 1041 sismograf istasyonu</li>
+                        <li><a href="https://koeri.boun.edu.tr" target="_blank" rel="noopener noreferrer"><strong>Kandilli Rasathanesi (Boğaziçi Üniversitesi)</strong></a> — Türkiye'nin en eski deprem gözlem merkezi, 1868'den beri aktif</li>
+                    </ul>
+                    <p>Her iki kaynağın API verilerini 20 saniyede bir çekiyor ve birleştiriyorum. Veri bütünlüğü açısından çakışma olduğunda Kandilli (manuel doğrulamalı) önceliklidir; hız açısından AFAD (otomatik) önce bildirir. <a href="/blog-afad-kandilli-deprem-karsilastirma.html">İki kaynak arasındaki farkların detaylı analizi</a> için ilgili rehberi inceleyebilirsiniz.</p>
+
+                    <h3>Bağımsız ve Şeffaf</h3>
+                    <p>Platform <strong>tamamen kâr amacı gütmeyen</strong> bir girişimdir:</p>
+                    <ul>
+                        <li>✓ Hiçbir resmi kurumla ticari/hukuki bağı yoktur</li>
+                        <li>✓ Reklam göstermez, satış ortaklığı yoktur</li>
+                        <li>✓ Kullanıcı verisi satılmaz (sadece Google Analytics anonim trafik istatistikleri)</li>
+                        <li>✓ Açık kaynaklıdır — <a href="https://github.com/mmeekh/yakinimdakideprem.com" target="_blank" rel="noopener noreferrer">GitHub'da</a> tüm kodu inceleyebilirsiniz</li>
+                        <li>✓ Tek geliştirici tarafından (ben) sürdürülür; sunucu maliyetleri kişisel bütçemden karşılanır</li>
+                    </ul>
+
+                    <h3>Uzmanlık Sınırlarım — Şeffaflık Notu</h3>
+                    <p>Yazılım mühendisiyim, sismolog veya inşaat mühendisi değilim. Sitedeki bilimsel ve teknik içerikler <strong>AFAD, Kandilli Rasathanesi, TBDY 2019, JICA raporları ve bilimsel makalelerden</strong> doğrudan derlenir; benim kişisel uzmanlık iddiamla değil. Hayati öneme sahip kararlar için (bina güçlendirme, hukuki süreçler, tıbbi acil durum) <strong>her zaman ilgili konunun profesyonel uzmanına başvurun.</strong> Site sadece bilinçlendirme ve bilgilendirme amaçlıdır; teknik veya yasal danışmanlık değildir.</p>
+
+                    <h3>İletişim</h3>
+                    <p>Geri bildirim, hata bildirimi, içerik önerisi veya işbirliği için bana ulaşmaktan çekinmeyin:</p>
+
                     <div class="about-quote">
                         <i class="fas fa-quote-left"></i>
-                        <p>Hayatta en hakiki mürşit ilimdir.</p>
+                        <p>Hayatta en hakiki mürşit ilimdir, fendir. — Mustafa Kemal Atatürk</p>
                     </div>
-                    
+
                     <!-- İletişim -->
                     <div class="about-contact">
                         <div class="contact-item">
@@ -226,8 +305,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                      style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
                             </div>
                             <div class="contact-text">
-                                <h3>LinkedIn</h3>
-                                <p><a href="https://www.linkedin.com/in/emin-k%C4%B1l%C4%B1%C3%A7-250b14210/" target="_blank" rel="noopener noreferrer">Emin Kılıç</a></p>
+                                <h3>LinkedIn & GitHub</h3>
+                                <p>
+                                    <a href="https://www.linkedin.com/in/emin-k%C4%B1l%C4%B1%C3%A7-250b14210/" target="_blank" rel="noopener noreferrer">LinkedIn Profilim</a> ·
+                                    <a href="https://github.com/mmeekh/yakinimdakideprem.com" target="_blank" rel="noopener noreferrer">GitHub Reposu</a>
+                                </p>
                             </div>
                         </div>
                     </div>

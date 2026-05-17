@@ -218,7 +218,33 @@ def build_ssr_block(slug: str, city_name: str, quake: dict) -> str:
     )
 
 
-def update_city_page(slug: str, city_name: str, quake: dict) -> bool:
+def build_quake_table_rows(quakes_for_city: list) -> str:
+    """Şehir tbody'sine yerleştirilecek son 5 deprem HTML satırı."""
+    if not quakes_for_city:
+        return '<tr><td colspan="4">Bu şehir için kayıtlı son deprem bulunamadı.</td></tr>'
+
+    rows = []
+    for q in quakes_for_city[:5]:
+        mag = float(q.get("magnitude", 0) or 0)
+        place = q.get("location") or q.get("place") or "Bilinmiyor"
+        depth = q.get("depth", "?")
+        try:
+            depth_str = f"{float(depth):.1f} km"
+        except (TypeError, ValueError):
+            depth_str = "—"
+        qtime = parse_quake_time(q.get("time", ""))
+        time_str = qtime.strftime("%d.%m.%Y %H:%M")
+        rows.append(
+            f'<tr><td>{time_str}</td>'
+            f'<td><strong>M{mag:.1f}</strong></td>'
+            f'<td>{depth_str}</td>'
+            f'<td>{place}</td></tr>'
+        )
+    return "\n                                ".join(rows)
+
+
+def update_city_page(slug: str, city_name: str, quake: dict,
+                       quakes_for_city: list = None) -> bool:
     page = PUBLIC / f"deprem-{slug}.html"
     if not page.exists():
         return False
@@ -237,6 +263,19 @@ def update_city_page(slug: str, city_name: str, quake: dict) -> bool:
         count=1,
         flags=re.DOTALL,
     )
+
+    # SSR quake table: AI crawler'lar için tbody içine son 5 deprem inject et.
+    # JS yine renderCityQuakes ile dinamik update yapar; bu sadece initial render.
+    if quakes_for_city:
+        rows_html = build_quake_table_rows(quakes_for_city)
+        new_html = re.sub(
+            r'(<tbody id="' + re.escape(slug) + r'-quakes">)\s*'
+            r'(?:<tr><td colspan="4">[^<]+</td></tr>|.*?)\s*(</tbody>)',
+            rf'\1\n                                {rows_html}\n                            \2',
+            new_html,
+            count=1,
+            flags=re.DOTALL,
+        )
 
     # Title freshness: SADECE M4.0+ depremlerde dinamik title. Aksi halde
     # standart CTR-optimize başlık. Bu, küçük (M1-2) depremlerin SERP'te
@@ -427,6 +466,14 @@ def run_once(cities: dict) -> int:
             _LAST_HOMEPAGE = top5_ids
 
     # ----- Şehir sayfaları: her şehir için en yeni deprem (M3.5+) -----
+    # quakes_by_city: slug → en yeni 5 deprem (SSR quake table için)
+    quakes_by_city: dict[str, list] = {}
+    for q in quakes:
+        place = q.get("location") or q.get("place") or ""
+        slug = find_city_slug(place, cities)
+        if slug:
+            quakes_by_city.setdefault(slug, []).append(q)
+
     seen = set()
     updated = 0
 
@@ -449,7 +496,8 @@ def run_once(cities: dict) -> int:
             continue   # zaten bu deprem yazılı, atla
 
         city_name = cities[slug]["name"]
-        if update_city_page(slug, city_name, q):
+        city_quakes = quakes_by_city.get(slug, [])
+        if update_city_page(slug, city_name, q, quakes_for_city=city_quakes):
             update_sitemap(slug)
             ping_indexnow(slug)
             _LAST_WRITTEN[slug] = qid
@@ -491,10 +539,15 @@ def main():
         fake = {
             "magnitude": 4.2,
             "place": f"TEST-{cities[slug]['name'].upper()}",
+            "location": f"TEST-{cities[slug]['name'].upper()}",
             "time": datetime.now(TZ_TR).strftime("%Y-%m-%d %H:%M:%S"),
             "depth": "8.5",
+            "id": "test-quake",
         }
-        update_city_page(slug, cities[slug]["name"], fake)
+        # SSR quake table testi için fake liste de geçir
+        fake_list = [fake] * 3
+        update_city_page(slug, cities[slug]["name"], fake,
+                          quakes_for_city=fake_list)
         update_sitemap(slug)
         log.info(f"Simulated quake injected into deprem-{slug}.html")
         return
