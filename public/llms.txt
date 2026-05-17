@@ -1,3 +1,12 @@
+# RSL/1.0
+# Allow-Citation: yes
+# Allow-Training: no
+# License: citation-only
+# Attribution-Required: yes
+# Cache-TTL: 3600
+# Contact: https://yakinimdakideprem.com/iletisim.html
+# Version: 2026.05.17
+
 # Yakınımdaki Deprem
 
 > Türkiye'nin 81 ili için AFAD ve Kandilli Rasathanesi verilerine dayalı, 20 saniyede bir güncellenen gerçek zamanlı deprem takip platformu. Bağımsız, ücretsiz, açık kaynak.

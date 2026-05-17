@@ -133,36 +133,67 @@ def humanize_minutes_ago(dt: datetime) -> str:
 def build_ssr_block(slug: str, city_name: str, quake: dict) -> str:
     mag = float(quake.get("magnitude", 0) or 0)
     place = quake.get("location") or quake.get("place") or "Bilinmeyen"
-    depth = quake.get("depth", "") or ""
+    # Derinlik fallback: boş/None değer "km" göstermesin
+    depth_raw = quake.get("depth", "")
+    if depth_raw in (None, "", 0, "0"):
+        depth_display = "Bilinmiyor"
+        depth_text = ""   # passage'da göstermez
+    else:
+        try:
+            depth_display = f"{float(depth_raw):.1f} km"
+            depth_text = f" Derinlik: {depth_display}."
+        except (TypeError, ValueError):
+            depth_display = str(depth_raw)
+            depth_text = f" Derinlik: {depth_display}."
+
     qtime = parse_quake_time(quake.get("time", ""))
     iso = qtime.isoformat()
+    iso_now = datetime.now(TZ_TR).isoformat()
     pretty = qtime.strftime("%d %B %Y, %H:%M") + " TSİ"
     ago = humanize_minutes_ago(qtime)
+
+    canonical = f"https://yakinimdakideprem.com/deprem-{slug}.html"
+    # liveBlogUpdate item için kalıcı anchor URL
+    update_anchor = f"{canonical}#update-{qtime.strftime('%Y%m%dT%H%M%S')}"
 
     schema = {
         "@context": "https://schema.org",
         "@type": "LiveBlogPosting",
+        "@id": f"{canonical}#liveblog",
         "headline": f"{city_name} Deprem Takibi — Canlı",
         "datePublished": iso,
-        "dateModified": datetime.now(TZ_TR).isoformat(),
+        "dateModified": iso_now,
         "coverageStartTime": iso,
-        "about": {"@type": "Place", "name": city_name},
-        "author": {"@type": "Organization", "name": "Yakınımdaki Deprem"},
+        "url": canonical,
+        "image": f"https://yakinimdakideprem.com/images/cities/{slug}-og.webp",
+        "about": {"@type": "Place", "name": city_name, "addressCountry": "TR"},
+        "author": {
+            "@type": "Person",
+            "name": "Emin Kılıç",
+            "url": "https://yakinimdakideprem.com/ben-kimim.html",
+            "@id": "https://yakinimdakideprem.com/ben-kimim.html#person",
+        },
         "publisher": {
             "@type": "Organization",
             "name": "Yakınımdaki Deprem",
+            "@id": "https://yakinimdakideprem.com/#organization",
             "logo": {
                 "@type": "ImageObject",
                 "url": "https://yakinimdakideprem.com/icons/android-chrome-512x512.png",
+                "width": 512,
+                "height": 512,
             },
         },
         "liveBlogUpdate": [{
             "@type": "BlogPosting",
+            "@id": update_anchor,
+            "url": update_anchor,
             "headline": f"{city_name} {mag:.1f} büyüklüğünde deprem",
             "datePublished": iso,
-            "articleBody": f"{ago}, {place} bölgesinde "
-                           f"{mag:.1f} büyüklüğünde deprem kaydedildi. "
-                           f"Derinlik: {depth} km.",
+            "articleBody": (
+                f"{ago}, {place} bölgesinde {mag:.1f} büyüklüğünde deprem "
+                f"kaydedildi.{depth_text}".strip()
+            ),
         }],
     }
 
@@ -174,7 +205,7 @@ def build_ssr_block(slug: str, city_name: str, quake: dict) -> str:
         f'🔴 <strong>{ago}:</strong> '
         f'<span itemprop="name">{city_name} {mag:.1f} büyüklüğünde deprem</span> — '
         f'<span itemprop="location">{place}</span>'
-        f'{f" • Derinlik: {depth} km" if depth else ""}.'
+        f'{f" • Derinlik: {depth_display}" if depth_text else ""}.'
         f'</p>\n'
         f'                <time class="ssr-freshness__time" '
         f'itemprop="startDate" datetime="{iso}">'
