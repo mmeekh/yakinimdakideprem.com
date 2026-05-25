@@ -13,7 +13,11 @@ from __future__ import annotations
 
 import argparse
 import json
+from datetime import datetime
 from pathlib import Path
+
+# Build-time tarih (her sayfa üretiminde güncel)
+BUILD_DATE_ISO = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+03:00")
 
 PUBLIC_DIR = Path(__file__).resolve().parent.parent / "public"
 
@@ -23,101 +27,101 @@ REGIONS = {
     "marmara": {
         "title": "Marmara Bölgesi",
         "fault_summary": (
-            "Kuzey Anadolu Fay Hattı'nın (KAF) Marmara Denizi altindan gecen kolu, "
-            "bölgenin en önemli sismik kaynagidir. 1999 Golcuk ve Duzce depremleri bu hattin "
-            "ne kadar aktif oldugunu gostermistir. Marmara illeri olası büyük Istanbul depremi "
-            "senaryosunda dogrudan etkilenir."
+            "Kuzey Anadolu Fay Hattı'nın (KAF) Marmara Denizi altından geçen kolu, "
+            "bölgenin en önemli sismik kaynağıdır. 1999 Gölcük ve Düzce depremleri bu hattın "
+            "ne kadar aktif olduğunu göstermiştir. Marmara illeri olası büyük İstanbul depremi "
+            "senaryosunda doğrudan etkilenir."
         ),
         "risk_level": "Çok yüksek",
         "common_tips": [
-            "Eski yapı stoku yogun oldugundan, bulundugunuz binanin kentsel donusum kapsamina girip girmedigini sorgulayın.",
-            "Deniz kiyisindaki ilçelerde tsunami tahliye rotalarini öğrenin ve yüksek kotlu toplanma alanlarını not edin.",
-            "Deprem çantanızda yedek sarj cihazi, dudukl ve 72 saatlik su bulundurun.",
+            "Eski yapı stoku yoğun olduğundan, bulunduğunuz binanın kentsel dönüşüm kapsamına girip girmediğini sorgulayın.",
+            "Deniz kıyısındaki ilçelerde tsunami tahliye rotalarını öğrenin ve yüksek kotlu toplanma alanlarını not edin.",
+            "Deprem çantanızda yedek şarj cihazı, düdük ve 72 saatlik su bulundurun.",
         ],
     },
     "ege": {
         "title": "Ege Bölgesi",
         "fault_summary": (
-            "Ege Bölgesi, kuzey-guney yonlu normal faylar ve Ege Denizi'nin genislemesiyle "
-            "sekillenir. 2020 Samos-Izmir depremi, bölgenin büyük yikimlara açık oldugunu hatirlatti. "
-            "Denizli, Mugla ve Aydin hattinda da tarihsel kayitlarda önemli sarsintilar vardir."
+            "Ege Bölgesi, kuzey-güney yönlü normal faylar ve Ege Denizi'nin genişlemesiyle "
+            "şekillenir. 2020 Samos-İzmir depremi, bölgenin büyük yıkımlara açık olduğunu hatırlattı. "
+            "Denizli, Muğla ve Aydın hattında da tarihsel kayıtlarda önemli sarsıntılar vardır."
         ),
         "risk_level": "Yüksek",
         "common_tips": [
-            "Zemin sivilasmasi riski bulunan kiyi kesimlerinde jeoteknik raporlari inceletin.",
-            "Turistik yogunlugun yüksek olduğu mevsimlerde otel ve pansiyonlarin tahliye planina ulasin.",
-            "Tarim iscilerinin sigindigi barakalarda, hafif celik profil destekli iyilestirmeler yapin.",
+            "Zemin sıvılaşması riski bulunan kıyı kesimlerinde jeoteknik raporları inceletin.",
+            "Turistik yoğunluğun yüksek olduğu mevsimlerde otel ve pansiyonların tahliye planına ulaşın.",
+            "Tarım işçilerinin sığındığı barakalarda, hafif çelik profil destekli iyileştirmeler yapın.",
         ],
     },
     "akdeniz": {
         "title": "Akdeniz Bölgesi",
         "fault_summary": (
-            "Akdeniz bölgesi, Doğu Anadolu Fay Hattı'nın guney uzantıları ile Kibris Yayi'nin "
-            "etkisi altindadir. Fethiye-Burdur hattı ile Çukurova ovasi özellikle dikkat gerektirir. "
-            "6 Subat 2023 Kahramanmaras depremleri bölgenin risklerini acikca ortaya koydu."
+            "Akdeniz bölgesi, Doğu Anadolu Fay Hattı'nın güney uzantıları ile Kıbrıs Yayı'nın "
+            "etkisi altındadır. Fethiye-Burdur hattı ile Çukurova ovası özellikle dikkat gerektirir. "
+            "6 Şubat 2023 Kahramanmaraş depremleri bölgenin risklerini açıkça ortaya koydu."
         ),
         "risk_level": "Yüksek",
         "common_tips": [
-            "Sera ve tarim yapilarinda hafif catilar kullanin, agir betonarme cikintilarin dusmesini engelleyin.",
-            "Tsunami uyari sistemleri konusunda AFAD ve belediye anonslarini takip edin.",
-            "Turistik tesislerde cok dilli tahliye yonlendirmeleri talep edin.",
+            "Sera ve tarım yapılarında hafif çatılar kullanın, ağır betonarme çıkıntıların düşmesini engelleyin.",
+            "Tsunami uyarı sistemleri konusunda AFAD ve belediye anonslarını takip edin.",
+            "Turistik tesislerde çok dilli tahliye yönlendirmeleri talep edin.",
         ],
     },
     "icanadolu": {
         "title": "İç Anadolu Bölgesi",
         "fault_summary": (
-            "İç Anadolu, Tuz Golu Fay Zonu ve Kuzey Anadolu Fay Hattı'nın guney kollari arasinda "
-            "kalan, gorece sakin fakat orta buyuklukte depremlere açık bir bolgedir. Konya Ovasi'nin "
-            "kuzeyindeki fay sistemleri ile Yozgat-Sivas hattinda zaman zaman orta şiddetli sarsintilar olur."
+            "İç Anadolu, Tuz Gölü Fay Zonu ve Kuzey Anadolu Fay Hattı'nın güney kolları arasında "
+            "kalan, görece sakin fakat orta büyüklükte depremlere açık bir bölgedir. Konya Ovası'nın "
+            "kuzeyindeki fay sistemleri ile Yozgat-Sivas hattında zaman zaman orta şiddetli sarsıntılar olur."
         ),
         "risk_level": "Orta",
         "common_tips": [
-            "Kirsal mahallelerde kerpic ve yığma yapıları guclendirmek için yerel belediyelerden rehber isteyin.",
-            "Kis aylarinda soğuk sebebiyle tahliye suresini uzatacak battaniye, termal eldiven bulundurun.",
-            "Tarim makinelerinin park yerini, acil durumda toplanma alanina erisimi engellemeyecek sekilde duzenleyin.",
+            "Kırsal mahallelerde kerpiç ve yığma yapıları güçlendirmek için yerel belediyelerden rehber isteyin.",
+            "Kış aylarında soğuk sebebiyle tahliye süresini uzatacak battaniye, termal eldiven bulundurun.",
+            "Tarım makinelerinin park yerini, acil durumda toplanma alanına erişimi engellemeyecek şekilde düzenleyin.",
         ],
     },
     "karadeniz": {
         "title": "Karadeniz Bölgesi",
         "fault_summary": (
-            "Karadeniz bölgesi, Kuzey Anadolu Fay Hattı'nın kuzey kollari ve kiyi dogrultulu "
-            "tali faylarin etkisi altindadir. 1939 Erzincan, 1942 Niksar-Erbaa ve 1943 Ladik "
-            "depremleri, hattin batı Karadeniz'e doğru uzanan aktivitesine ornektir."
+            "Karadeniz bölgesi, Kuzey Anadolu Fay Hattı'nın kuzey kolları ve kıyı doğrultulu "
+            "tali fayların etkisi altındadır. 1939 Erzincan, 1942 Niksar-Erbaa ve 1943 Ladik "
+            "depremleri, hattın batı Karadeniz'e doğru uzanan aktivitesine örnektir."
         ),
         "risk_level": "Orta-Yüksek",
         "common_tips": [
-            "Egim dik vadi yerlesimlerinde heyelan ve kaya dusmesi riskini deprem sonrasi degerlendirmek için plan yapin.",
-            "Cay, findik ve tutun isletmelerinde raflarin yüksek koteden montajindan kacinin.",
-            "Kirsal yaylalarda jeneratorlu iletisim noktalarini muhtarlıkla birlikte belirleyin.",
+            "Eğim dik vadi yerleşimlerinde heyelan ve kaya düşmesi riskini deprem sonrası değerlendirmek için plan yapın.",
+            "Çay, fındık ve tütün işletmelerinde rafların yüksek koteden montajından kaçının.",
+            "Kırsal yaylalarda jeneratörlü iletişim noktalarını muhtarlıkla birlikte belirleyin.",
         ],
     },
     "doguanadolu": {
         "title": "Doğu Anadolu Bölgesi",
         "fault_summary": (
             "Doğu Anadolu Fay Hattı (DAF) boyunca uzanan bölge, Türkiye'nin en aktif sismik "
-            "kusaklarindan biridir. 1939 Erzincan, 2003 Bingol, 2011 Van ve 2020 Elazig-Sivrice "
-            "depremleri bölgenin tarihini sekillendirdi. Yüksek rakim ve sert kış sartlari "
-            "tahliye surecini zorlastirir."
+            "kuşaklarından biridir. 1939 Erzincan, 2003 Bingöl, 2011 Van ve 2020 Elazığ-Sivrice "
+            "depremleri bölgenin tarihini şekillendirdi. Yüksek rakım ve sert kış şartları "
+            "tahliye sürecini zorlaştırır."
         ),
         "risk_level": "Çok yüksek",
         "common_tips": [
-            "Kis sartlarinda uzun süreli tahliye için termal yelek, kuru gida ve kar kurekleri hazir bulundurun.",
-            "Kirsal köylerde yığma ve taş yapıları takviye etmek için Il AFAD birimlerinden destek isteyin.",
-            "Hidroelektrik ve baraj alanlarindaki yerleşim yerlerinde tahliye rotalari önceden belirlensin.",
+            "Kış şartlarında uzun süreli tahliye için termal yelek, kuru gıda ve kar kürekleri hazır bulundurun.",
+            "Kırsal köylerde yığma ve taş yapıları takviye etmek için İl AFAD birimlerinden destek isteyin.",
+            "Hidroelektrik ve baraj alanlarındaki yerleşim yerlerinde tahliye rotaları önceden belirlensin.",
         ],
     },
     "guneydoguanadolu": {
         "title": "Güneydoğu Anadolu Bölgesi",
         "fault_summary": (
-            "Güneydoğu Anadolu, Doğu Anadolu Fay Hattı'nın Antakya-Kahramanmaras-Adiyaman-Golbasi "
-            "hattindaki guney kollariyla yüksek risk altindadir. 6 Subat 2023 depremleri bolgedeki "
-            "sehirlerde geniş yikima neden oldu ve yeni yapılaşma standartlarini zorunlu kildi."
+            "Güneydoğu Anadolu, Doğu Anadolu Fay Hattı'nın Antakya-Kahramanmaraş-Adıyaman-Gölbaşı "
+            "hattındaki güney kollarıyla yüksek risk altındadır. 6 Şubat 2023 depremleri bölgedeki "
+            "şehirlerde geniş yıkıma neden oldu ve yeni yapılaşma standartlarını zorunlu kıldı."
         ),
         "risk_level": "Çok yüksek",
         "common_tips": [
-            "2023 sonrasi yapılan denetimlerde kirmizi veya sari etiket alan binalardan uzak durun.",
-            "Konteyner kent ve gecici barinma alanlarinin tahliye egitimlerine katılın.",
-            "Bolgedeki tarihi yapilar için Vakiflar Genel Mudurlugu sismik raporlarini inceleyin.",
+            "2023 sonrası yapılan denetimlerde kırmızı veya sarı etiket alan binalardan uzak durun.",
+            "Konteyner kent ve geçici barınma alanlarının tahliye eğitimlerine katılın.",
+            "Bölgedeki tarihi yapılar için Vakıflar Genel Müdürlüğü sismik raporlarını inceleyin.",
         ],
     },
 }
@@ -147,11 +151,11 @@ PROVINCES = [
     {"slug": "elazig", "name": "Elazig", "region": "doguanadolu", "keywords": ["elazig", "karakocan", "palu", "sivrice", "keban", "pertek", "maden", "kovancilar"], "fault": "Doğu Anadolu Fay Hattı üzerinde 2020 Sivrice (Mw 6.8) depreminin merkezi.", "lat": 38.6810, "lon": 39.2264, "exists": True},
     {"slug": "erzincan", "name": "Erzincan", "region": "doguanadolu", "keywords": ["erzincan", "tercan", "cayirli", "uzumlu", "kemaliye", "refahiye"], "fault": "Kuzey Anadolu Fay Hattı'nın en tehlikeli segmentlerinden biri. 1939 depremi 30 binin üzerinde can kaybina neden oldu.", "lat": 39.7500, "lon": 39.5000},
     {"slug": "erzurum", "name": "Erzurum", "region": "doguanadolu", "keywords": ["erzurum", "pasinler", "aziziye", "oltu", "horasan", "narman", "tortum", "ispir"], "fault": "Kuzey Anadolu Fay Hattı'nın Erzurum segmenti ve Tortum civarindaki yerel faylar etkilidir.", "lat": 39.9055, "lon": 41.2658},
-    {"slug": "hakkari", "name": "Hakkari", "region": "doguanadolu", "keywords": ["hakkari", "yuksekova", "semdinli", "cukurca"], "fault": "Bitlis-Zagros Bindirme Kusagi üzerinde bulunan, yerel aktiviteye açık bir bolgedir.", "lat": 37.5744, "lon": 43.7408},
-    {"slug": "igdir", "name": "Igdir", "region": "doguanadolu", "keywords": ["igdir", "aralik", "tuzluca", "karakoyunlu"], "fault": "Doğu Anadolu Yüksek Platosu'nda, Agri Dağı'na yakın konumu nedeniyle tektonik aktiviteye açık.", "lat": 39.9237, "lon": 44.0450},
+    {"slug": "hakkari", "name": "Hakkari", "region": "doguanadolu", "keywords": ["hakkari", "yuksekova", "semdinli", "cukurca"], "fault": "Bitlis-Zagros Bindirme Kusagi üzerinde bulunan, yerel aktiviteye açık bir bölgedir.", "lat": 37.5744, "lon": 43.7408},
+    {"slug": "igdir", "name": "Igdir", "region": "doguanadolu", "keywords": ["igdir", "aralik", "tuzluca", "karakoyunlu"], "fault": "Doğu Anadolu Yüksek Platosu'nda, Ağrı Dağı'na yakın konumu nedeniyle tektonik aktiviteye açık.", "lat": 39.9237, "lon": 44.0450},
     {"slug": "kars", "name": "Kars", "region": "doguanadolu", "keywords": ["kars", "sarikamis", "kagizman", "digor", "selim", "susuz", "arpacay"], "fault": "Kuzeydogu Anadolu Fay Zonu ve Kagizman faylari etkisi altindadir.", "lat": 40.6013, "lon": 43.0975},
     {"slug": "malatya", "name": "Malatya", "region": "doguanadolu", "keywords": ["malatya", "battalgazi", "yesilyurt", "dogansehir", "puturge", "akcadag", "hekimhan"], "fault": "Doğu Anadolu Fay Hattı'nın Puturge-Dogansehir segmenti; 2023 depremlerinde büyük hasar aldi.", "lat": 38.3552, "lon": 38.3095},
-    {"slug": "mus", "name": "Mus", "region": "doguanadolu", "keywords": ["mus", "bulanik", "malazgirt", "varto", "korkut", "haskoy"], "fault": "Varto Fayi ve Mus havzasinin kuzey kenari yerel sismik aktivite uretir.", "lat": 38.7432, "lon": 41.5060},
+    {"slug": "mus", "name": "Mus", "region": "doguanadolu", "keywords": ["mus", "bulanik", "malazgirt", "varto", "korkut", "haskoy"], "fault": "Varto Fayi ve Muş havzasinin kuzey kenari yerel sismik aktivite uretir.", "lat": 38.7432, "lon": 41.5060},
     {"slug": "tunceli", "name": "Tunceli", "region": "doguanadolu", "keywords": ["tunceli", "pertek", "mazgirt", "ovacik", "cemisgezek", "pulumur", "hozat", "nazimiye"], "fault": "Kuzey Anadolu ve Doğu Anadolu fay hatlarinin birlesimine yakın, orta-yuksek aktivite bölgesi.", "lat": 39.1079, "lon": 39.5401},
     {"slug": "van", "name": "Van", "region": "doguanadolu", "keywords": ["van", "ercis", "edremit", "ipekyolu", "tusba", "ozalp", "muradiye", "baskale"], "fault": "2011 Van (Mw 7.2) ve Ercis depremlerinin merkezi; Van Golu'nun dogusundaki faylar aktiftir.", "lat": 38.4942, "lon": 43.3833},
 
@@ -161,35 +165,35 @@ PROVINCES = [
     {"slug": "balikesir", "name": "Balikesir", "region": "marmara", "keywords": ["balikesir", "bandirma", "edremit", "erdek", "ayvalik", "gonen", "sindirgi", "bigadic", "havran"], "fault": "Kuzey Anadolu Fay Hattı'nın guney kollari ve Edremit korfezindeki normal faylar etkilidir.", "lat": 39.6484, "lon": 27.8826},
     {"slug": "canakkale", "name": "Canakkale", "region": "marmara", "keywords": ["canakkale", "biga", "bayramic", "ezine", "gelibolu", "ayvacik", "yenice", "lapseki"], "fault": "Kuzey Anadolu Fay Hattı'nın Saros korfezi kolu ve Yenice-Gonen Fayi aktiftir.", "lat": 40.1553, "lon": 26.4142},
     {"slug": "denizli", "name": "Denizli", "region": "ege", "keywords": ["denizli", "pamukkale", "saraykoy", "buldan", "acipayam", "tavas", "honaz", "civril"], "fault": "Denizli Grabeni ve Büyük Menderes Grabeni bölgenin sismik karakterini belirler.", "lat": 37.7765, "lon": 29.0864},
-    {"slug": "izmir", "name": "Izmir", "region": "ege", "keywords": ["izmir", "seferihisar", "foca", "cesme", "urla", "torbali", "gaziemir", "bayindir", "bornova", "karsiyaka", "menderes"], "fault": "Gulbahce, Tuzla ve Izmir korfezi faylari aktiftir; 2020 Samos-Izmir depremi hafizalarda.", "lat": 38.4237, "lon": 27.1428, "exists": True},
-    {"slug": "kutahya", "name": "Kutahya", "region": "ege", "keywords": ["kutahya", "tavsanli", "gediz", "simav", "emet", "hisarcik", "domanic"], "fault": "Simav Fayi ve Kutahya Grabeni zaman zaman orta şiddetli depremler uretir.", "lat": 39.4167, "lon": 29.9833},
+    {"slug": "izmir", "name": "Izmir", "region": "ege", "keywords": ["izmir", "seferihisar", "foca", "cesme", "urla", "torbali", "gaziemir", "bayindir", "bornova", "karsiyaka", "menderes"], "fault": "Gulbahce, Tuzla ve İzmir korfezi faylari aktiftir; 2020 Samos-Izmir depremi hafizalarda.", "lat": 38.4237, "lon": 27.1428, "exists": True},
+    {"slug": "kutahya", "name": "Kutahya", "region": "ege", "keywords": ["kutahya", "tavsanli", "gediz", "simav", "emet", "hisarcik", "domanic"], "fault": "Simav Fayi ve Kütahya Grabeni zaman zaman orta şiddetli depremler uretir.", "lat": 39.4167, "lon": 29.9833},
     {"slug": "manisa", "name": "Manisa", "region": "ege", "keywords": ["manisa", "akhisar", "salihli", "turgutlu", "saruhanli", "soma", "demirci", "kula", "golmarmara"], "fault": "Gediz Grabeni ve normal faylar; 1969 Alasehir ile 2020 Akhisar depremleri bölge hafizasinda.", "lat": 38.6191, "lon": 27.4289},
     {"slug": "mugla", "name": "Mugla", "region": "ege", "keywords": ["mugla", "bodrum", "marmaris", "fethiye", "milas", "dalaman", "koycegiz", "datca", "ula", "seydikemer"], "fault": "Fethiye-Burdur Fay Zonu ve Ege'nin normal fay sistemleri etkindir; 2017 Bodrum-Kos depremi yasandi.", "lat": 37.2153, "lon": 28.3636},
     {"slug": "usak", "name": "Usak", "region": "ege", "keywords": ["usak", "banaz", "esme", "sivasli", "karahalli", "ulubey"], "fault": "Simav ve Gediz Grabenleri'nin doğu ucuna yakindir.", "lat": 38.6823, "lon": 29.4082},
 
     # --- Güneydoğu Anadolu ---
     {"slug": "adiyaman", "name": "Adiyaman", "region": "guneydoguanadolu", "keywords": ["adiyaman", "kahta", "besni", "gerger", "golbasi", "samsat", "sincik"], "fault": "Doğu Anadolu Fay Hattı'nın Golbasi-Celikhan kolu aktiftir; 2023 depremlerinde büyük hasar aldi.", "lat": 37.7648, "lon": 38.2786},
-    {"slug": "batman", "name": "Batman", "region": "guneydoguanadolu", "keywords": ["batman", "kozluk", "sason", "besiri", "hasankeyf", "gercus"], "fault": "Bitlis-Zagros Bindirme Kusagi'nin guneyinde bulunan, orta riskli bir bolgedir.", "lat": 37.8812, "lon": 41.1351},
+    {"slug": "batman", "name": "Batman", "region": "guneydoguanadolu", "keywords": ["batman", "kozluk", "sason", "besiri", "hasankeyf", "gercus"], "fault": "Bitlis-Zagros Bindirme Kusagi'nin guneyinde bulunan, orta riskli bir bölgedir.", "lat": 37.8812, "lon": 41.1351},
     {"slug": "diyarbakir", "name": "Diyarbakir", "region": "guneydoguanadolu", "keywords": ["diyarbakir", "bismil", "cermik", "cinar", "ergani", "silvan", "kulp", "hazro"], "fault": "Bitlis Bindirme Kusagi ve Doğu Anadolu Fay Hattı'nın guney kollari etkisi altindadir.", "lat": 37.9144, "lon": 40.2306},
     {"slug": "gaziantep", "name": "Gaziantep", "region": "guneydoguanadolu", "keywords": ["gaziantep", "antep", "nizip", "islahiye", "nurdagi", "sahinbey", "sehitkamil", "oguzeli"], "fault": "Doğu Anadolu Fay Hattı'nın Islahiye-Nurdagi segmenti aktiftir; 2023 depremlerinden dogrudan etkilendi.", "lat": 37.0660, "lon": 37.3833},
-    {"slug": "kilis", "name": "Kilis", "region": "guneydoguanadolu", "keywords": ["kilis", "elbeyli", "musabeyli", "polateli"], "fault": "DAF'in guney ucundaki tali faylarin etkisi altinda, sınır hattı boyunca yerel sarsintilar yasar.", "lat": 36.7184, "lon": 37.1212},
-    {"slug": "mardin", "name": "Mardin", "region": "guneydoguanadolu", "keywords": ["mardin", "kiziltepe", "midyat", "nusaybin", "derik", "savur", "mazidagi"], "fault": "Bitlis-Zagros Bindirme Kusagi'nin guney eteklerinde, gorece orta riskli bolgededir.", "lat": 37.3120, "lon": 40.7350},
+    {"slug": "kilis", "name": "Kilis", "region": "guneydoguanadolu", "keywords": ["kilis", "elbeyli", "musabeyli", "polateli"], "fault": "DAF'in guney ucundaki tali faylarin etkisi altinda, sınır hattı boyunca yerel sarsıntılar yasar.", "lat": 36.7184, "lon": 37.1212},
+    {"slug": "mardin", "name": "Mardin", "region": "guneydoguanadolu", "keywords": ["mardin", "kiziltepe", "midyat", "nusaybin", "derik", "savur", "mazidagi"], "fault": "Bitlis-Zagros Bindirme Kusagi'nin guney eteklerinde, görece orta riskli bolgededir.", "lat": 37.3120, "lon": 40.7350},
     {"slug": "sanliurfa", "name": "Sanliurfa", "region": "guneydoguanadolu", "keywords": ["sanliurfa", "urfa", "siverek", "birecik", "viransehir", "suruc", "harran", "akcakale", "bozova"], "fault": "DAF'in guney kollari ile Karacadağ volkanik yapisinin civarindaki faylar etkilidir.", "lat": 37.1591, "lon": 38.7969},
     {"slug": "siirt", "name": "Siirt", "region": "guneydoguanadolu", "keywords": ["siirt", "pervari", "eruh", "kurtalan", "baykan", "sirvan", "tillo"], "fault": "Bitlis-Zagros Bindirme Kusagi bölgede orta seviyede risk yaratir.", "lat": 37.9333, "lon": 41.9500},
     {"slug": "sirnak", "name": "Sirnak", "region": "guneydoguanadolu", "keywords": ["sirnak", "cizre", "silopi", "idil", "uludere", "beytussebap", "guclukonak"], "fault": "Bitlis-Zagros Bindirme Kusagi ve Iran sinirindaki aktif faylar etkilidir.", "lat": 37.4187, "lon": 42.4918},
 
     # --- İç Anadolu ---
-    {"slug": "aksaray", "name": "Aksaray", "region": "icanadolu", "keywords": ["aksaray", "ortakoy", "eskil", "guzelyurt", "gulagac", "sariyahsi"], "fault": "Tuz Golu Fay Zonu ve Hasandag volkanik kompleksinin civarindaki faylar bolgeyi etkiler.", "lat": 38.3687, "lon": 34.0370},
+    {"slug": "aksaray", "name": "Aksaray", "region": "icanadolu", "keywords": ["aksaray", "ortakoy", "eskil", "guzelyurt", "gulagac", "sariyahsi"], "fault": "Tuz Golu Fay Zonu ve Hasandag volkanik kompleksinin civarindaki faylar bölgeyi etkiler.", "lat": 38.3687, "lon": 34.0370},
     {"slug": "ankara", "name": "Ankara", "region": "icanadolu", "keywords": ["ankara", "kirikkale", "polatli", "cankiri", "beypazari", "kizilcahamam", "cubuk", "etimesgut", "sincan", "golbasi", "kahramankazan", "elmadag"], "fault": "Ezinepazari-Sungurlu Fayi, Tuz Golu Fay Zonu ve Kuzey Anadolu Fay Hattı'nın guney uzantıları etkilidir.", "lat": 39.9334, "lon": 32.8597, "exists": True},
     {"slug": "cankiri", "name": "Cankiri", "region": "icanadolu", "keywords": ["cankiri", "cerkes", "ilgaz", "korgun", "sabanozu", "atkaracalar", "kizilirmak", "yapraklik"], "fault": "Kuzey Anadolu Fay Hattı'nın Cerkes-Kursunlu segmentine yakın konumdadir.", "lat": 40.6013, "lon": 33.6134},
-    {"slug": "eskisehir", "name": "Eskisehir", "region": "icanadolu", "keywords": ["eskisehir", "odunpazari", "tepebasi", "sivrihisar", "mahmudiye", "cifteler", "alpu", "beylikova", "inonu"], "fault": "Eskisehir Fay Zonu ve Inonu-Dodurga fay sistemi orta riskli aktiviteye sahiptir.", "lat": 39.7767, "lon": 30.5206},
+    {"slug": "eskisehir", "name": "Eskisehir", "region": "icanadolu", "keywords": ["eskisehir", "odunpazari", "tepebasi", "sivrihisar", "mahmudiye", "cifteler", "alpu", "beylikova", "inonu"], "fault": "Eskişehir Fay Zonu ve Inonu-Dodurga fay sistemi orta riskli aktiviteye sahiptir.", "lat": 39.7767, "lon": 30.5206},
     {"slug": "karaman", "name": "Karaman", "region": "icanadolu", "keywords": ["karaman", "ermenek", "ayranci", "kazimkarabekir", "sariveliler", "basyayla"], "fault": "Ecemis Fay Zonu'nun kuzey ucunda, orta seviyede risk altindadir.", "lat": 37.1759, "lon": 33.2287},
     {"slug": "kayseri", "name": "Kayseri", "region": "icanadolu", "keywords": ["kayseri", "bunyan", "develi", "incesu", "melikgazi", "kocasinan", "pinarbasi", "sarioglan", "yahyali", "yesilhisar", "tomarza"], "fault": "Ecemis Fay Zonu ve Erciyes volkanik kompleksinin civarindaki faylar etkilidir.", "lat": 38.7312, "lon": 35.4787},
-    {"slug": "kirikkale", "name": "Kirikkale", "region": "icanadolu", "keywords": ["kirikkale", "keskin", "delice", "sulakyurt", "baliseyh", "karakecili", "yahsihan"], "fault": "Kuzey Anadolu Fay Hattı'nın Kirikkale-Delice kolu yakınında, orta risk bolgesindedir.", "lat": 39.8468, "lon": 33.5153},
-    {"slug": "kirsehir", "name": "Kirsehir", "region": "icanadolu", "keywords": ["kirsehir", "kaman", "mucur", "akpinar", "akcakent", "cicekdagi", "boztepe"], "fault": "Kirsehir Masifi üzerinde yer alir; yerel faylar orta seviyede sarsinti uretir.", "lat": 39.1425, "lon": 34.1709},
+    {"slug": "kirikkale", "name": "Kirikkale", "region": "icanadolu", "keywords": ["kirikkale", "keskin", "delice", "sulakyurt", "baliseyh", "karakecili", "yahsihan"], "fault": "Kuzey Anadolu Fay Hattı'nın Kırıkkale-Delice kolu yakınında, orta risk bolgesindedir.", "lat": 39.8468, "lon": 33.5153},
+    {"slug": "kirsehir", "name": "Kirsehir", "region": "icanadolu", "keywords": ["kirsehir", "kaman", "mucur", "akpinar", "akcakent", "cicekdagi", "boztepe"], "fault": "Kırşehir Masifi üzerinde yer alir; yerel faylar orta seviyede sarsıntı uretir.", "lat": 39.1425, "lon": 34.1709},
     {"slug": "konya", "name": "Konya", "region": "icanadolu", "keywords": ["konya", "aksehir", "beysehir", "cumra", "eregli", "ilgin", "karatay", "meram", "seydisehir", "selcuklu", "kulu", "bozkir"], "fault": "Aksehir-Afyon Grabeni ve Beysehir Golu fay zonu bölgede etkindir.", "lat": 37.8714, "lon": 32.4846},
     {"slug": "nevsehir", "name": "Nevsehir", "region": "icanadolu", "keywords": ["nevsehir", "urgup", "avanos", "derinkuyu", "kozakli", "acigol", "hacibektas", "gulsehir"], "fault": "Kapadokya volkanik platosunun civarindaki faylar ve Tuz Golu Fay Zonu etkilidir.", "lat": 38.6939, "lon": 34.6857},
-    {"slug": "nigde", "name": "Nigde", "region": "icanadolu", "keywords": ["nigde", "bor", "camardi", "ulukisla", "altunhisar", "ciftlik"], "fault": "Ecemis Fay Zonu ve Nigde masifinin kuzey kenari etkilidir.", "lat": 37.9667, "lon": 34.6833},
+    {"slug": "nigde", "name": "Nigde", "region": "icanadolu", "keywords": ["nigde", "bor", "camardi", "ulukisla", "altunhisar", "ciftlik"], "fault": "Ecemis Fay Zonu ve Niğde masifinin kuzey kenari etkilidir.", "lat": 37.9667, "lon": 34.6833},
     {"slug": "sivas", "name": "Sivas", "region": "icanadolu", "keywords": ["sivas", "kangal", "divrigi", "susehri", "zara", "gurun", "hafik", "yildizeli", "imranli"], "fault": "Kuzey Anadolu Fay Hattı'nın Susehri-Koyulhisar kolu Sivas'in kuzeyinde aktiftir.", "lat": 39.7477, "lon": 37.0179},
     {"slug": "yozgat", "name": "Yozgat", "region": "icanadolu", "keywords": ["yozgat", "sorgun", "akdagmadeni", "bogazliyan", "sarikaya", "yerkoy", "cekerek", "kadisehri"], "fault": "Ezinepazari-Sungurlu Fayi ve Kuzey Anadolu Fay Hattı'nın guney kollari etkisindedir.", "lat": 39.8181, "lon": 34.8147},
 
@@ -198,15 +202,15 @@ PROVINCES = [
     {"slug": "artvin", "name": "Artvin", "region": "karadeniz", "keywords": ["artvin", "hopa", "arhavi", "borcka", "savsat", "ardanuc", "yusufeli", "kemalpasa"], "fault": "Doğu Karadeniz Daglari civarindaki yerel faylar orta risk uretir.", "lat": 41.1828, "lon": 41.8183},
     {"slug": "bartin", "name": "Bartin", "region": "karadeniz", "keywords": ["bartin", "amasra", "ulus", "kurucasile"], "fault": "Kuzey Anadolu Fay Hattı'nın kuzey kollari ve kiyi heyelan riskleri dikkate alinmalidir.", "lat": 41.6344, "lon": 32.3375},
     {"slug": "bayburt", "name": "Bayburt", "region": "karadeniz", "keywords": ["bayburt", "aydintepe", "demirozu"], "fault": "Kuzey Anadolu Fay Hattı'nın Refahiye-Erzincan kolu yakinindadir.", "lat": 40.2552, "lon": 40.2249},
-    {"slug": "bolu", "name": "Bolu", "region": "karadeniz", "keywords": ["bolu", "mudurnu", "gerede", "goynuk", "mengen", "seben", "yenicaga", "dortdivan"], "fault": "1944 Bolu-Gerede ve 1999 Duzce depremlerinin ucgeni. Kuzey Anadolu Fay Hattı merkez üzerinden gecer.", "lat": 40.7398, "lon": 31.6110},
+    {"slug": "bolu", "name": "Bolu", "region": "karadeniz", "keywords": ["bolu", "mudurnu", "gerede", "goynuk", "mengen", "seben", "yenicaga", "dortdivan"], "fault": "1944 Bolu-Gerede ve 1999 Düzce depremlerinin ucgeni. Kuzey Anadolu Fay Hattı merkez üzerinden gecer.", "lat": 40.7398, "lon": 31.6110},
     {"slug": "corum", "name": "Corum", "region": "karadeniz", "keywords": ["corum", "osmancik", "iskilip", "sungurlu", "alaca", "bayat", "mecitozu", "ortakoy corum"], "fault": "Kuzey Anadolu Fay Hattı'nın Sungurlu-Osmancik kolu aktiftir.", "lat": 40.5506, "lon": 34.9556},
-    {"slug": "duzce", "name": "Duzce", "region": "karadeniz", "keywords": ["duzce", "akcakoca", "kaynasli", "yigilca", "golyaka", "cumayeri", "cilimli"], "fault": "1999 Mw 7.2 Duzce depreminin merkezi; Kuzey Anadolu Fay Hattı burada ciftlesir.", "lat": 40.8438, "lon": 31.1565},
+    {"slug": "duzce", "name": "Duzce", "region": "karadeniz", "keywords": ["duzce", "akcakoca", "kaynasli", "yigilca", "golyaka", "cumayeri", "cilimli"], "fault": "1999 Mw 7.2 Düzce depreminin merkezi; Kuzey Anadolu Fay Hattı burada ciftlesir.", "lat": 40.8438, "lon": 31.1565},
     {"slug": "giresun", "name": "Giresun", "region": "karadeniz", "keywords": ["giresun", "bulancak", "espiye", "tirebolu", "gorele", "dereli", "sebinkarahisar", "alucra"], "fault": "Kuzey Anadolu Fay Hattı'nın Kuzey kollari ve kiyi heyelan faylari etkilidir.", "lat": 40.9128, "lon": 38.3895},
     {"slug": "gumushane", "name": "Gumushane", "region": "karadeniz", "keywords": ["gumushane", "kelkit", "siran", "kose", "torul", "kurtun"], "fault": "Kuzey Anadolu Fay Hattı'nın Kelkit vadisindeki segmenti etkilidir.", "lat": 40.4609, "lon": 39.4814},
     {"slug": "karabuk", "name": "Karabuk", "region": "karadeniz", "keywords": ["karabuk", "safranbolu", "eskipazar", "ovacik karabuk", "eflani", "yenice karabuk"], "fault": "Kuzey Anadolu Fay Hattı'nın Eskipazar segmenti yakinindadir.", "lat": 41.2061, "lon": 32.6204},
     {"slug": "kastamonu", "name": "Kastamonu", "region": "karadeniz", "keywords": ["kastamonu", "tosya", "taskopru", "cide", "inebolu", "bozkurt", "arac", "abana", "devrekani"], "fault": "Kuzey Anadolu Fay Hattı'nın Tosya segmenti; heyelan ve deprem etkilesimi yuksektir.", "lat": 41.3887, "lon": 33.7827},
     {"slug": "ordu", "name": "Ordu", "region": "karadeniz", "keywords": ["ordu", "unye", "fatsa", "perşembe", "korgan", "kumru", "mesudiye", "ulubey ordu", "aybasti"], "fault": "Kuzey Anadolu Fay Hattı'nın kuzey kiyi kolu etkilidir.", "lat": 40.9839, "lon": 37.8764},
-    {"slug": "rize", "name": "Rize", "region": "karadeniz", "keywords": ["rize", "ardesen", "cayeli", "pazar", "findikli", "ikizdere", "camlihemsin", "guneysu"], "fault": "Doğu Karadeniz'in yerel faylari ve heyelan kaynakli sarsintilar etkilidir.", "lat": 41.0201, "lon": 40.5234},
+    {"slug": "rize", "name": "Rize", "region": "karadeniz", "keywords": ["rize", "ardesen", "cayeli", "pazar", "findikli", "ikizdere", "camlihemsin", "guneysu"], "fault": "Doğu Karadeniz'in yerel faylari ve heyelan kaynakli sarsıntılar etkilidir.", "lat": 41.0201, "lon": 40.5234},
     {"slug": "samsun", "name": "Samsun", "region": "karadeniz", "keywords": ["samsun", "bafra", "carsamba", "vezirkopru", "havza", "terme", "ladik", "19 mayis", "ayvacik samsun", "alacam"], "fault": "Kuzey Anadolu Fay Hattı'nın Ladik-Havza segmenti etkilidir.", "lat": 41.2867, "lon": 36.3300},
     {"slug": "sinop", "name": "Sinop", "region": "karadeniz", "keywords": ["sinop", "boyabat", "gerze", "ayancik", "turkeli", "dikmen", "erfelek", "duragan", "saraydüzü"], "fault": "Kuzey Anadolu Fay Hattı'nın Boyabat-Duragan kolu aktiftir.", "lat": 42.0265, "lon": 35.1550},
     {"slug": "tokat", "name": "Tokat", "region": "karadeniz", "keywords": ["tokat", "niksar", "erbaa", "turhal", "zile", "resadiye", "almus", "artova"], "fault": "1942 ve 1943 Niksar-Erbaa depremlerinin hatirlattigi Kuzey Anadolu Fay Hattı aktiftir.", "lat": 40.3167, "lon": 36.5500},
@@ -217,12 +221,12 @@ PROVINCES = [
     {"slug": "bilecik", "name": "Bilecik", "region": "marmara", "keywords": ["bilecik", "bozuyuk", "sogut", "golpazari", "osmaneli", "pazaryeri", "inhisar", "yenipazar bilecik"], "fault": "Kuzey Anadolu Fay Hattı'nın Geyve-Bozuyuk kolu etkilidir.", "lat": 40.1456, "lon": 29.9793},
     {"slug": "bursa", "name": "Bursa", "region": "marmara", "keywords": ["bursa", "gemlik", "mudanya", "inegol", "orhangazi", "iznik", "yenisehir", "karacabey", "mustafakemalpasa", "osmangazi", "nilufer", "yildirim"], "fault": "Gemlik Fayi ve Yenisehir Fay Zonu ile Kuzey Anadolu Fay Hattı'nın guney kollari etkilidir.", "lat": 40.1826, "lon": 29.0665, "exists": True},
     {"slug": "edirne", "name": "Edirne", "region": "marmara", "keywords": ["edirne", "kesan", "uzunkopru", "ipsala", "havsa", "enez", "lalapasa", "suloglu", "meric"], "fault": "Kuzey Anadolu Fay Hattı'nın Saros kolu ve Ganos Fayi etkisindedir.", "lat": 41.6771, "lon": 26.5557},
-    {"slug": "istanbul", "name": "Istanbul", "region": "marmara", "keywords": ["istanbul", "marmara", "marmara denizi", "silivri", "adalar", "yalova", "kocaeli", "cinarcik", "bogaz", "besiktas", "kadikoy", "bakirkoy", "avcilar", "tuzla", "sariyer"], "fault": "Kuzey Anadolu Fay Hattı'nın Marmara Denizi altindaki kolu, olası büyük Istanbul depremi senaryosunun kaynagidir.", "lat": 41.0082, "lon": 28.9784, "exists": True},
+    {"slug": "istanbul", "name": "Istanbul", "region": "marmara", "keywords": ["istanbul", "marmara", "marmara denizi", "silivri", "adalar", "yalova", "kocaeli", "cinarcik", "bogaz", "besiktas", "kadikoy", "bakirkoy", "avcilar", "tuzla", "sariyer"], "fault": "Kuzey Anadolu Fay Hattı'nın Marmara Denizi altindaki kolu, olası büyük İstanbul depremi senaryosunun kaynagidir.", "lat": 41.0082, "lon": 28.9784, "exists": True},
     {"slug": "kirklareli", "name": "Kirklareli", "region": "marmara", "keywords": ["kirklareli", "luleburgaz", "babaeski", "pinarhisar", "vize", "demirkoy", "pehlivankoy", "kofcaz"], "fault": "Kuzey Anadolu Fay Hattı'nın Saros ve Istranca kollari civarindadir.", "lat": 41.7351, "lon": 27.2246},
     {"slug": "kocaeli", "name": "Kocaeli", "region": "marmara", "keywords": ["kocaeli", "izmit", "gebze", "derince", "korfez", "golcuk", "karamursel", "dilovasi", "kandira", "basiskele", "darica", "cayirova"], "fault": "1999 Mw 7.6 Izmit depreminin merkezi; Kuzey Anadolu Fay Hattı'nın Marmara kolu uzerindedir.", "lat": 40.8533, "lon": 29.8815},
     {"slug": "sakarya", "name": "Sakarya", "region": "marmara", "keywords": ["sakarya", "adapazari", "akyazi", "hendek", "karasu", "geyve", "pamukova", "sapanca", "ferizli", "karapurcek", "kaynarca"], "fault": "Kuzey Anadolu Fay Hattı'nın Sapanca-Akyazi kolu aktiftir; 1999'da büyük hasar aldi.", "lat": 40.7889, "lon": 30.4060},
     {"slug": "tekirdag", "name": "Tekirdag", "region": "marmara", "keywords": ["tekirdag", "corlu", "cerkezkoy", "malkara", "saray", "muratli", "hayrabolu", "kapakli", "suleymanpasa", "marmara ereglisi"], "fault": "Kuzey Anadolu Fay Hattı'nın Marmara-Saros kolu ve Ganos Fayi kiyi boyunca aktif.", "lat": 40.9780, "lon": 27.5110},
-    {"slug": "yalova", "name": "Yalova", "region": "marmara", "keywords": ["yalova", "cinarcik", "termal", "altinova", "armutlu", "cifltikkoy"], "fault": "Kuzey Anadolu Fay Hattı'nın Marmara Denizi ici kolu Yalova'yi dogrudan etkiler; 1999 depreminde cok agir hasar aldi.", "lat": 40.6500, "lon": 29.2667},
+    {"slug": "yalova", "name": "Yalova", "region": "marmara", "keywords": ["yalova", "cinarcik", "termal", "altinova", "armutlu", "cifltikkoy"], "fault": "Kuzey Anadolu Fay Hattı'nın Marmara Denizi ici kolu Yalova'yi dogrudan etkiler; 1999 depreminde çök agir hasar aldi.", "lat": 40.6500, "lon": 29.2667},
 ]
 
 
@@ -651,7 +655,7 @@ def build_schema(province: dict) -> tuple[str, str, str]:
             "creator": {"@type": "Person", "name": "Emin Kılıç", "url": "https://yakinimdakideprem.com/ben-kimim.html"},
         },
         "datePublished": "2026-04-17T09:00:00+03:00",
-        "dateModified": "2026-04-27T09:00:00+03:00",
+        "dateModified": BUILD_DATE_ISO,
         "inLanguage": "tr-TR",
         "mainEntityOfPage": {
             "@type": "WebPage",

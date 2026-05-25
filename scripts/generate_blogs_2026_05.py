@@ -10,6 +10,7 @@ Her blog config:
 """
 from __future__ import annotations
 
+import argparse
 import json
 from datetime import date
 from pathlib import Path
@@ -240,19 +241,38 @@ def build_html(cfg: dict) -> str:
 """)
 
 
-def main(blogs: list[dict]):
-    written = []
+def main(blogs: list[dict], force: bool = False, dry_run: bool = False):
+    written: list[str] = []
+    skipped: list[str] = []
     for cfg in blogs:
         out = PUBLIC / f"blog-{cfg['slug']}.html"
+        if out.exists() and not force:
+            print(f"  [atlandi] {out.name} (mevcut, --force ile uzerine yaz)")
+            skipped.append(out.name)
+            continue
+        if dry_run:
+            print(f"  [dry-run] would write {out}")
+            written.append(out.name)
+            continue
         out.write_text(build_html(cfg), encoding="utf-8")
         written.append(out.name)
-    print(f"Wrote {len(written)} blog HTML files:")
+    print(f"\n{'Would write' if dry_run else 'Wrote'} {len(written)} blog HTML files, skipped {len(skipped)}:")
     for w in written:
-        print(f"  • {w}")
+        prefix = "would-write" if dry_run else "wrote"
+        print(f"  • [{prefix}] {w}")
 
 
 if __name__ == "__main__":
-    import sys
-    config_file = sys.argv[1] if len(sys.argv) > 1 else "scripts/blog_configs_2026_05.json"
-    blogs = json.loads(Path(config_file).read_text(encoding="utf-8"))
-    main(blogs)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "config_file",
+        nargs="?",
+        default="scripts/blog_configs_2026_05.json",
+        help="JSON config dosyasi (varsayilan: scripts/blog_configs_2026_05.json)",
+    )
+    parser.add_argument("--force", action="store_true", help="Mevcut dosyalari da yeniden yaz")
+    parser.add_argument("--dry-run", action="store_true", help="Sadece listele, yazma")
+    args = parser.parse_args()
+
+    blogs = json.loads(Path(args.config_file).read_text(encoding="utf-8"))
+    main(blogs, force=args.force, dry_run=args.dry_run)

@@ -17,11 +17,11 @@ PUBLIC = Path(__file__).resolve().parent.parent / "public"
 # ASCII Turkce -> UTF-8 Turkce kelime donusumleri.
 # ONEMLI: Bu liste KELIME bazli replace icin - word-boundary ile uygulanir.
 # Case-sensitive; farkli yazim bicimleri icin ayri girdiler var.
+# Self-mapping (key == value) girdileri yoktur; her giris bir donusum yapar.
 WORD_MAP = {
     # Marka / site
     "Yakinimdaki": "Yakınımdaki",
     "yakinimdaki": "yakınımdaki",
-    "YAKINIMDAKI": "YAKINIMDAKI",  # uppercase zaten gecerli
 
     # Bolge / genel
     "Sehir": "Şehir",
@@ -33,23 +33,73 @@ WORD_MAP = {
     "Sehirlerin": "Şehirlerin",
     "sehirlerin": "şehirlerin",
 
+    # Bolge (bölge) - yeni eklenenler
+    "bolge": "bölge",
+    "Bolge": "Bölge",
+    "bolgedir": "bölgedir",
+    "Bolgedir": "Bölgedir",
+    "bolgede": "bölgede",
+    "Bolgede": "Bölgede",
+    "bolgedeki": "bölgedeki",
+    "Bolgedeki": "Bölgedeki",
+    "bolgenin": "bölgenin",
+    "Bolgenin": "Bölgenin",
+    "bolgeyi": "bölgeyi",
+    "Bolgeyi": "Bölgeyi",
+    "bolgesi": "bölgesi",
+    "Bolgesi": "Bölgesi",
+    "bolgesinde": "bölgesinde",
+    "Bolgesinde": "Bölgesinde",
+    "bolgesindeki": "bölgesindeki",
+    "Bolgesindeki": "Bölgesindeki",
+    "bolgeler": "bölgeler",
+    "Bolgeler": "Bölgeler",
+    "bolgelerde": "bölgelerde",
+    "bolgelerdeki": "bölgelerdeki",
+
     # Fay hattı
     "Hatti": "Hattı",
     "hatti": "hattı",
+    "Hattin": "Hattın",
+    "hattin": "hattın",
+    "Hattinda": "Hattında",
+    "hattinda": "hattında",
+    "Hattindaki": "Hattındaki",
+    "hattindaki": "hattındaki",
     "Hatlari": "Hatları",
     "hatlari": "hatları",
     "Hattinin": "Hattının",
     "hattinin": "hattının",
-    "Hattindaki": "Hattındaki",
+
+    # Gorece
+    "gorece": "görece",
+    "Gorece": "Görece",
+
+    # Sarsinti
+    "sarsinti": "sarsıntı",
+    "Sarsinti": "Sarsıntı",
+    "sarsintilar": "sarsıntılar",
+    "Sarsintilar": "Sarsıntılar",
+    "sarsintisi": "sarsıntısı",
+    "Sarsintisi": "Sarsıntısı",
+    "sarsintilari": "sarsıntıları",
+    "Sarsintilari": "Sarsıntıları",
+
+    # Buyukluk
+    "buyukluk": "büyüklük",
+    "Buyukluk": "Büyüklük",
+    "buyuklukte": "büyüklükte",
+    "Buyuklukte": "Büyüklükte",
+    "buyuklugu": "büyüklüğü",
+    "Buyuklugu": "Büyüklüğü",
+    "buyuklugundeki": "büyüklüğündeki",
+    "buyugu": "büyüğü",
 
     # Buyuk / kucuk harf duyarli bolge adlari
     "Dogu": "Doğu",
     "dogu": "doğu",
     "Bati": "Batı",
     "bati": "batı",
-    "Anadolu'da": "Anadolu'da",
-    "Anadolu'nun": "Anadolu'nun",
-    "Anadolu'ya": "Anadolu'ya",
 
     # Risk / hazirlik
     "yukleniyor": "yükleniyor",
@@ -57,17 +107,9 @@ WORD_MAP = {
     "olusur": "oluşur",
     "olustu": "oluştu",
     "oldugu": "olduğu",
-    "olan": "olan",  # zaten dogru (no change, keep for idempotency check)
     "olasi": "olası",
-    "buyukluk": "büyüklük",
-    "Buyukluk": "Büyüklük",
-    "buyuklugu": "büyüklüğü",
-    "buyuklugundeki": "büyüklüğündeki",
-    "buyugu": "büyüğü",
     "kucuk": "küçük",
     "kucuklugunde": "küçüklüğünde",
-    "derinlik": "derinlik",  # zaten dogru
-    "Derinlik": "Derinlik",  # zaten dogru
     "yakin": "yakın",
     "Yakin": "Yakın",
     "yakininda": "yakınında",
@@ -79,7 +121,6 @@ WORD_MAP = {
     "gecmek": "geçmek",
     "gectigi": "geçtiği",
     "gecti": "geçti",
-    "gorusm": "görüşm",  # "gorusme" stem
     "gorunen": "görünen",
     "gorur": "görür",
     "gorurum": "görürüm",
@@ -87,8 +128,6 @@ WORD_MAP = {
     "gosterir": "gösterir",
     "gosteren": "gösteren",
     "gostergeler": "göstergeler",
-    "gosterir.": "gösterir.",
-    "goster": "göster",  # stem
     "gore": "göre",
     "Gore": "Göre",
     "uzerine": "üzerine",
@@ -96,7 +135,6 @@ WORD_MAP = {
     "Uzerinde": "Üzerinde",
     "uzerindeki": "üzerindeki",
     "uzerinden": "üzerinden",
-    "uzanan": "uzanan",  # zaten
     "uzantisi": "uzantısı",
     "uzantilari": "uzantıları",
 
@@ -109,8 +147,6 @@ WORD_MAP = {
     "Ipuclari": "İpuçları",
     "aciklama": "açıklama",
     "aciklamalar": "açıklamalar",
-    "acil": "acil",  # zaten
-    "Acil": "Acil",
 
     # cevre / icin
     "cevresinde": "çevresinde",
@@ -140,12 +176,7 @@ WORD_MAP = {
     "guvenli": "güvenli",
     "Guvenli": "Güvenli",
     "gunluk": "günlük",
-    "gun": "gün",
-    "Gun": "Gün",  # baslangicta ama "Gun" tek basina nadirdir
-    "gece": "gece",  # zaten
     "gundelik": "gündelik",
-    "Sondakika": "Sondakika",  # zaten
-    "son": "son",  # zaten
 
     # Icindekiler / navigasyon
     "Icindekiler": "İçindekiler",
@@ -156,8 +187,6 @@ WORD_MAP = {
     "cok": "çök",  # tehlikeli - "cok" kelimesi "çok" mudur "çök" mu? Bagjlama bakar.
     "Cokapan": "Çökapan",
     "cokapan": "çökapan",
-    "Kapan": "Kapan",  # zaten
-    "Tutun": "Tutun",  # zaten
 
     # Diger
     "Turk": "Türk",
@@ -173,13 +202,11 @@ WORD_MAP = {
     "afsin": "afşin",
     "Goksun": "Göksun",
     "goksun": "göksun",
-    "goster": "göster",
 
     # Il adlari (tekrar icin)
     "Kahramanmaras": "Kahramanmaraş",
     "kahramanmaras": "kahramanmaraş",
     "Istanbul": "İstanbul",
-    "istanbul": "istanbul",  # keep as-is in URLs; word boundary gerekli
     "Izmir": "İzmir",
     "Agri": "Ağrı",
     "Cankiri": "Çankırı",
@@ -233,12 +260,6 @@ WORD_MAP = {
     "Adiyaman": "Adıyaman",
     "adiyaman": "adıyaman",
 
-    # Diger parcali kelimeler
-    "Hafifletici": "Hafifletici",  # zaten
-    "Koru": "Koru",  # zaten
-    "koruyun": "koruyun",  # zaten
-    "Koruyun": "Koruyun",
-
     # Sec / bicim / ogren / vb
     "secerek": "seçerek",
     "sec": "seç",
@@ -249,8 +270,7 @@ WORD_MAP = {
     "Sure": "Süre",
     "surekli": "sürekli",
 
-    # "devrilm" vb icin
-    "devrilme": "devrilme",  # zaten
+    # oneri
     "oneri": "öneri",
     "Oneri": "Öneri",
     "onerisi": "önerisi",
@@ -261,10 +281,6 @@ WORD_MAP = {
     "degerlendir": "değerlendir",
     "degisim": "değişim",
     "degisik": "değişik",
-    "detay": "detay",  # zaten
-    "Detay": "Detay",
-    "sergilemektedir": "sergilemektedir",
-    "sendeleme": "sendeleme",
     "yerlesim": "yerleşim",
     "yerlesimleri": "yerleşimleri",
     "yerlesik": "yerleşik",
@@ -290,67 +306,38 @@ WORD_MAP = {
     # Dogru / birlikte vb
     "dogru": "doğru",
     "Dogru": "Doğru",
-    "birlikte": "birlikte",  # zaten
     "asagidaki": "aşağıdaki",
     "Asagidaki": "Aşağıdaki",
-
-    # Aktif vb
-    "tektonik": "tektonik",  # zaten
-    "Tektonik": "Tektonik",
-
-    # Bilgi
-    "bilgisi": "bilgisi",  # zaten
-    "bilgi": "bilgi",  # zaten
-
-    # Verim
-    "resmi": "resmi",  # zaten
-    "Resmi": "Resmi",
-
-    # Afad / Kandilli zaten ascii ok
 }
 
 
-# Ozel regex yaklasim: "cok" -> "çok" yaklasimini bagjlama gore yap
-# "cok" cogunlukla "çok" demek (adverb) - surekli kullanimi kontrol
-# Fakat "Cok, Kapan, Tutun" -> "Çök, Kapan, Tutun"
-# Bu yuzden word-based basit mapping iyi isler.
+# Pre-compiled regex (perf): tek bir alternation, en uzun key once.
+# Word-boundary ile yan-kelime kirilmasi onlenir; ASCII Turkce karakter takip eden
+# durumlarda da match etmez.
+_SORTED_KEYS = sorted(WORD_MAP.keys(), key=len, reverse=True)
+_PATTERN = re.compile(
+    r'(?<![A-Za-zÇĞİÖŞÜçğıöşü0-9\-/])(' +
+    '|'.join(re.escape(k) for k in _SORTED_KEYS) +
+    r')(?![A-Za-zÇĞİÖŞÜçğıöşü0-9])'
+)
 
 
 def apply_replacements(content: str) -> tuple[str, int]:
-    """Metin icinde WORD_MAP'i uygular. Word-boundary sinirina dikkat eder."""
+    """Tek regex pass ile WORD_MAP'i uygular. Word-boundary sinirina dikkat eder."""
     changes = 0
-    # En uzun keyleri once islemek icin sort (so that "Hattindaki" before "Hatti")
-    keys = sorted(WORD_MAP.keys(), key=lambda k: -len(k))
-    for key in keys:
-        val = WORD_MAP[key]
-        if key == val:
-            continue
-        # URL icinde (href="/deprem-izmir.html" gibi) DOKUNMAMAK icin
-        # "izmir" ve "istanbul" gibi slug-gerekli kelimeleri ozel isleriz.
-        # Genel durum: ASCII alfanumerik sonrasinda/oncesinde olmayan yerlerde degistir.
-        # Yani (?<![A-Za-z0-9\-_/])KEY(?![A-Za-z0-9_])
-        # Ama url icinde /deprem-izmir.html olursa "izmir" kismini yakalamak istemeyiz.
-        # Cozum: URL pattern olanlari once maskele, sonra replace, sonra geri ac.
 
-        # Ilk pass: URL'lerde kullanilan slug'lari koru
-        # /deprem-XXX.html seklindeki pattern'in icini dokunmadan birak.
-        # Genel regex ile yap:
-        pattern = re.compile(rf"(?<![A-Za-zÇĞİÖŞÜçğıöşü0-9\-/]){re.escape(key)}(?![A-Za-zÇĞİÖŞÜçğıöşü0-9])")
+    def repl(m: re.Match) -> str:
+        nonlocal changes
+        changes += 1
+        return WORD_MAP[m.group(1)]
 
-        def replacer(m):
-            nonlocal changes
-            changes += 1
-            return val
-
-        content = pattern.sub(replacer, content)
-    return content, changes
+    new_content = _PATTERN.sub(repl, content)
+    return new_content, changes
 
 
 def process(path: Path, dry_run: bool = False) -> dict:
     orig = path.read_text(encoding="utf-8")
     # URL/attribute icindeki slug'lari korumak icin ask-protect:
-    # data-text, alt, title, content (meta), > <text ... orderinge gore isleriz.
-    # Basit yaklasim: URL (/deprem-xxx.html) ve canonical url'leri maskele
     protected = []
 
     def mask(m):
@@ -360,7 +347,7 @@ def process(path: Path, dry_run: bool = False) -> dict:
 
     # 1. href/src URL leri koru
     masked = re.sub(r'(href|src|content|url)="[^"]*"', mask, orig)
-    # 2. JSON-LD block'lari koru (tamamen) - basit yaklasim: application/ld+json scriptlerini koru
+    # 2. JSON-LD block'lari koru (tamamen)
     masked = re.sub(
         r'<script type="application/ld\+json">.*?</script>',
         mask,
@@ -375,18 +362,13 @@ def process(path: Path, dry_run: bool = False) -> dict:
     for i, segment in enumerate(protected):
         updated = updated.replace(f"__PROTECTED_{i}__", segment)
 
-    # JSON-LD ve meta icindeki text'leri DE bir sonraki passta duzelt
-    # (sadece content="..." icindeki gercek cumleleri, URL'leri degil)
     # Meta description / title / keywords'lerdeki ASCII Turkceyi duzelt
-    # Bu nispeten dar scope, dikkatli yapmak lazim.
-
     def fix_meta_content(match):
         attr = match.group(1)
         val = match.group(2)
         # URL ise dokunma
         if val.startswith("http") or val.startswith("/") or re.match(r"^[a-z0-9._\-]+$", val):
             return match.group(0)
-        # Aksi halde uygula
         fixed, _ = apply_replacements(val)
         return f'{attr}="{fixed}"'
 
@@ -411,23 +393,24 @@ def process(path: Path, dry_run: bool = False) -> dict:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("files", nargs="*", help="Belirli dosyalar (verilmezse tum deprem-*.html)")
     args = ap.parse_args()
 
-    # Hedefler: generator ciktisi 74 sehir sayfasi (istanbul/izmir/ankara/bursa/adana/elazig/kahramanmaras hariç zaten Turkce)
-    # + deprem-sehirleri.html
     SPECIAL_SLUGS = {
         "istanbul", "izmir", "ankara", "bursa", "adana", "elazig", "kahramanmaras"
     }
-    targets = []
-    for p in sorted(PUBLIC.glob("deprem-*.html")):
-        # deprem-aninda.html statik rehber - Turkce zaten OK, atla
-        if p.name == "deprem-aninda.html":
-            continue
-        slug = p.stem.replace("deprem-", "")
-        if slug in SPECIAL_SLUGS:
-            continue  # bunlar zaten Turkce, dokunma
-        targets.append(p)
-    targets.append(PUBLIC / "deprem-sehirleri.html")
+    targets: list[Path] = []
+    if args.files:
+        targets = [Path(f) for f in args.files]
+    else:
+        for p in sorted(PUBLIC.glob("deprem-*.html")):
+            if p.name == "deprem-aninda.html":
+                continue
+            slug = p.stem.replace("deprem-", "")
+            if slug in SPECIAL_SLUGS:
+                continue
+            targets.append(p)
+        targets.append(PUBLIC / "deprem-sehirleri.html")
 
     total = 0
     changed = 0

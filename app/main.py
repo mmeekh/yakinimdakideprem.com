@@ -393,7 +393,7 @@ if ALLOWED_ORIGINS:
     app.add_middleware(
         CORSMiddleware,
         allow_origins=ALLOWED_ORIGINS,
-        allow_credentials=True,
+        allow_credentials=False,  # API read-only, cookie/credential gerekmiyor
         allow_methods=["GET", "HEAD", "OPTIONS"],  # API read-only
         allow_headers=["Content-Type"],
         max_age=3600,

@@ -25,6 +25,15 @@ yakinimdakideprem.com {
     }
     respond @dotfiles "Not Found" 404
 
+    # Defense-in-depth: secrets/ ve .env* explicit block (static mount /srv:ro olsa da)
+    @secrets_paths path /secrets/* /secrets /.env*
+    respond @secrets_paths "Not Found" 404
+
+    # Partial fragment'lar (header/footer): dogrudan istek edilirse 404 don.
+    # Bu dosyalar template/partial olarak duzenlenir, public URL'leri yoktur.
+    @partials path /header.html /footer.html
+    respond @partials "Not Found" 404
+
     # Yaygin tarayici/saldiri hedefleri
     @scanner_targets path /wp-admin* /wp-login* /wp-content* /.well-known/security.txt /phpmyadmin* /admin* /administrator* /config* /backup* /db_backup*
     respond @scanner_targets "Not Found" 404

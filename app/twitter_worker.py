@@ -2,7 +2,7 @@ import os
 import time
 import logging
 
-from twitter_bot import run_once
+from .twitter_bot import run_once
 
 
 POLL_INTERVAL = int(float(os.getenv("TWITTER_POLL_INTERVAL", "300")))
