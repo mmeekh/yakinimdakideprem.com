@@ -35,6 +35,22 @@
         content="Anlık deprem İzmir: AFAD + Kandilli verisiyle İzmir ili ve çevresinde son depremler. Ege bölgesi için 20 saniyede güncellenen canlı harita ve sarsıntı listesi.">
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/cities/izmir-og.webp">
     <meta name="twitter:image:alt" content="İzmir deprem tablosu ve açık alan güvenliği">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "İzmir Deprem Veri Seti",
+      "description": "İzmir ve çevresindeki M2.0+ deprem agregasyonu, AFAD + Kandilli kaynaklı",
+      "url": "https://yakinimdakideprem.com/deprem-izmir.html",
+      "spatialCoverage": { "@type": "Place", "name": "İzmir, Türkiye" },
+      "temporalCoverage": "2024-01-01/..",
+      "isBasedOn": [
+        { "@type": "Dataset", "url": "https://www.afad.gov.tr" },
+        { "@type": "Dataset", "url": "https://www.koeri.boun.edu.tr" }
+      ],
+      "creator": { "@type": "Person", "@id": "https://yakinimdakideprem.com/yazar/emin-kilic#person" }
+    }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="css/blog.css?v=202604202200">
@@ -201,6 +217,10 @@
     <header class="page-header">
         <div class="container">
             <h1>İzmir Depremi</h1>
+            <div class="answer-block">
+              <strong>İzmir'de deprem riski ve fay hattı:</strong> İzmir, Batı Anadolu fay sistemleri (Gediz, Tuzla, Seferihisar fayları) üzerinde yer alır. 30 Ekim 2020 M6.6 Sisam depremi 117 cana mal oldu, Bayraklı'da apartman çökmeleri yaşandı. AFAD'a göre 1. derece deprem bölgesi; sıvılaşma riski Bornova ve Bayraklı düzlüğünde yüksektir.
+            </div>
+            <!-- Veri kaynakları: AFAD diri fay haritası 2020, Kandilli historical catalog -->
             <!-- SSR-FRESHNESS-START -->
             <div class="ssr-freshness" itemscope itemtype="https://schema.org/Event" aria-live="polite">
                 <p class="ssr-freshness__alert">🔴 <strong>9 dakika önce:</strong> <span itemprop="name">İzmir 3.5 büyüklüğünde deprem</span> — <span itemprop="location">EGE DENIZI (Yunanistan)</span> • Derinlik: 5.0 km.</p>
@@ -378,6 +398,61 @@
             <p>Eğer sarsıntı hissettiyseniz, bu sayfanın yukarısındaki "Son Depremler" listesine bakın. Liste her 20 saniyede bir yenilenir ve <strong>İzmir</strong> bölgesindeki en yeni kayıt en üstte görünür. Verilerimiz Kandilli/AFAD'ın resmi API'lerinden alınır; gecikmesiz ve birebirdir. Resmi açıklama için <a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a> sayfasını da kontrol edebilirsiniz. Yakınımızda meydana gelen depremlerde <a href="/deprem-aninda.html">Çök-Kapan-Tutun</a> kuralını uygulayın.</p>
         </section>
         <!-- SSR-PASSAGE-END -->
+
+        <section class="city-deep-content" id="detayli-bilgi">
+            <h2>İzmir Deprem Risk Analizi: Detaylı Rehber</h2>
+
+            <h3>İzmir Fay Hatları ve Tektonik Yapı</h3>
+            <p>İzmir ve çevresi, Batı Anadolu genişleme tektoniğinin (extensional tectonics) en aktif bölgelerinden biridir. Ege plakasının güneybatıya doğru hareketi sonucunda oluşan normal faylar (normal faulting), bölgenin tektonik karakterini belirler. AFAD Diri Fay Haritası (2020) verilerine göre İzmir'i etkileyen ana fay sistemleri arasında Gediz Grabeni'nin batı uzantısı, kuzey-güney yönlü Tuzla Fayı, doğu-batı uzanımlı Seferihisar Fayı, İzmir Fayı (Bornova-Karşıyaka hattını etkileyen) ve İzmir Körfezi içindeki denizaltı segmentleri yer alır. Bu yapıların büyük bölümü kısa kollu fakat yüzeye yakın olmaları nedeniyle yıkıcı sarsıntı üretme kapasitesine sahiptir.</p>
+            <p>Bölgedeki tektonik aktivite, Anadolu plakasının batıya hareketi ile Afrika plakasının Helen Yayı boyunca dalmasının birleşik etkisinden kaynaklanır. Bu durum İzmir Körfezi ve Ege adaları arasında sık ve orta büyüklükte (M5.5–M7) deprem aktivitesine yol açar. 30 Ekim 2020'de meydana gelen Sisam (Samos) depremi (Mw 6.6 — AFAD, Mw 7.0 — USGS) bu rejimin güncel örneğidir. Deprem sırasında ölçülen yüksek yer ivmeleri ve İzmir Körfezi'nde gözlenen yerel tsunami dalgaları, bölgenin denizaltı fay aktivitesine de duyarlı olduğunu göstermiştir.</p>
+            <p>Tarihsel olarak İzmir, 1688 ve 1778 büyük depremlerinden bu yana çok sayıda M5+ sarsıntı yaşamıştır. 20. yüzyıl boyunca 1928 Torbalı, 1949 Karaburun, 1953 Karaburun ve 1992 Doğanbey depremleri bölgenin sismik aktivitesinin sürekli olduğunu göstermektedir. Kandilli Rasathanesi Tarihi Deprem Kataloğu, İzmir Körfezi ve çevresinin son 100 yılda Türkiye ortalamasının üzerinde sismik enerji boşalttığını belgelemektedir.</p>
+
+            <h3>İzmir İlçeleri Risk Sıralaması</h3>
+            <p>İzmir'in risk profili, faya uzaklık kadar zemin yapısıyla da şekillenir. Körfez kıyısındaki alüvyon ve dolgu zeminler sismik dalgayı belirgin biçimde büyütür (site amplification). 2020 Sisam depreminde Bayraklı ilçesindeki yıkılan yapıların büyük bölümünün kalın alüvyon zemin üzerinde yer alması bunun somut göstergesidir. Aşağıdaki sıralama AFAD risk haritası ve İzmir Büyükşehir Belediyesi mikrobölgeleme çalışmalarına dayalı genel bir özettir; mahalle düzeyinde değerlendirme için yerel raporlara başvurmak gerekir.</p>
+            <ul>
+                <li><strong>Yüksek risk:</strong> Bayraklı, Bornova (alüvyon zemin ve eski yapı stoku), Konak (Tarihi merkez), Karşıyaka sahil hattı, Çiğli, Karabağlar, Seferihisar (fay üzeri)</li>
+                <li><strong>Orta risk:</strong> Buca, Gaziemir, Balçova, Narlıdere, Menderes, Urla, Foça, Aliağa, Torbalı</li>
+                <li><strong>Görece düşük risk:</strong> Çeşme yüksek kesimleri, Karaburun, Kemalpaşa'nın iç kesimleri, Bornova'nın eteklerdeki taban kayasına yakın bölgeleri</li>
+            </ul>
+
+            <h3>İzmir'da Son 100 Yılın Önemli Depremleri</h3>
+            <p>İzmir ve yakın çevresini etkileyen M5+ depremler, bölgenin normal fay sistemleri boyunca dağılmıştır. Aşağıdaki tablo USGS Earthquake Catalog, Kandilli Rasathanesi tarihi kataloğu ve AFAD kayıtlarından derlenmiştir.</p>
+            <table>
+                <thead><tr><th>Tarih</th><th>Büyüklük</th><th>Merkez Üssü</th><th>Hasar</th></tr></thead>
+                <tbody>
+                    <tr><td>31 Mart 1928</td><td>M6.2</td><td>Torbalı (İzmir)</td><td>Köylerde yaygın yıkım, can kaybı</td></tr>
+                    <tr><td>23 Temmuz 1949</td><td>M6.6</td><td>Karaburun açıkları</td><td>Karaburun ve Sakız Adası'nda hasar</td></tr>
+                    <tr><td>6 Kasım 1992</td><td>M6.0</td><td>Doğanbey (Seferihisar)</td><td>Seferihisar ve çevresinde yapı hasarı</td></tr>
+                    <tr><td>30 Ekim 2020</td><td>M6.6 (AFAD) / M7.0 (USGS)</td><td>Sisam Adası kuzeyi, Ege Denizi</td><td>117 can kaybı, 1.034 yaralı; Bayraklı'da çok sayıda bina yıkımı; 700+ ağır hasarlı yapı (kaynak: AFAD)</td></tr>
+                </tbody>
+            </table>
+
+            <h3>İzmir'da Bina Stoku ve Risk</h3>
+            <p>İzmir, Türkiye'nin üçüncü büyük şehri olarak yoğun bir bina stokuna sahiptir. TÜİK bina sayım verilerine göre kentin yapı stokunun önemli bir bölümü 2000 öncesi inşa edilmiş olup, özellikle Konak, Karşıyaka, Bornova ve Bayraklı gibi eski yerleşim ilçelerinde 1970'ler ve 1980'lerden kalma yapı oranı yüksektir. 1999 Marmara depremi sonrası Deprem Bölgelerinde Yapılacak Binalar Hakkında Yönetmelik (2007) ve sonrasında 2018'de güncellenen Türkiye Bina Deprem Yönetmeliği (TBDY-2018) ile yapı denetim standartları sıkılaştırılmıştır.</p>
+            <p>2020 Sisam depremi sonrası İzmir Büyükşehir Belediyesi ve Çevre, Şehircilik ve İklim Değişikliği Bakanlığı kapsamlı bir kentsel dönüşüm programı başlatmıştır. Bayraklı, Karşıyaka, Çiğli ve Konak ilçelerinde riskli yapı tespit çalışmaları sürmektedir. Bina sahiplerinin yapı kimlik bilgisi (YKB) sorgulaması ve isteğe bağlı performans analizi yaptırması önerilen adımlardır. Spesifik dönüşüm oranları için ilçe belediyelerinin güncel raporlarına bakılmalıdır; bu sayfada genel eğilim aktarılmakta, hane bazlı oran verilmemektedir.</p>
+
+            <h3>İzmir İçin Deprem Hazırlığı</h3>
+            <p>İzmir'de deprem hazırlığı hem hane bazlı önlemleri hem de alüvyon zemin ve kıyı tsunamı riskine yönelik ek tedbirleri kapsar. Her ailenin önceden belirlenmiş bir toplanma noktası ve şehir dışı bir iletişim referansı belirlemesi önerilir. Yüksek dolapların duvara sabitlenmesi, cam yüzeylerin film ile güçlendirilmesi, doğal gaz vanasının nasıl kapatılacağının her hane üyesi tarafından bilinmesi temel adımlardır. Kıyı ilçelerinde (Çeşme, Foça, Karaburun, Seferihisar, Urla, Karşıyaka, Konak) tsunami uyarı sistemleri ve yüksek noktalara tahliye rotaları önceden öğrenilmelidir.</p>
+            <p>Resmi toplanma alanlarını öğrenmek için e-Devlet üzerinden AFAD Toplanma Alanı Sorgulama hizmeti kullanılmalıdır. İzmir İl AFAD Müdürlüğü'nün güncel duyuruları için <a href="https://izmir.afad.gov.tr" target="_blank" rel="noopener noreferrer">izmir.afad.gov.tr</a> sayfası takip edilebilir. Zorunlu Deprem Sigortası (DASK) yaptırılması yasal bir yükümlülüktür. Yüksek katlı yapılarda yaşayanlar için yangın merdivenlerinin tatbikatı ve asansörün hiçbir koşulda deprem sırasında kullanılmaması kritik önlemlerdir.</p>
+
+            <h3>Sıkça Sorulan Sorular</h3>
+            <details>
+                <summary>İzmir'da en son deprem ne zaman oldu?</summary>
+                <p>Bu sayfanın üst kısmında yer alan canlı listeden son depremleri takip edebilirsiniz. Sayfa 20 saniyede bir AFAD ve Kandilli verisiyle güncellenir.</p>
+            </details>
+            <details>
+                <summary>İzmir'da büyük deprem bekleniyor mu?</summary>
+                <p>İzmir Körfezi ve çevresi normal fay rejimi nedeniyle sürekli orta büyüklükte (M5–M6) deprem üretmektedir. AFAD ve akademik kurumlar bölgenin sismik tehlikesinin yüksek olduğunu vurgulamaktadır; ancak belirli bir tarih veya büyüklük tahmini bilimsel olarak mümkün değildir. Önemli olan tahmin değil, hazırlıktır.</p>
+            </details>
+            <details>
+                <summary>İzmir'da hangi ilçeler en riskli?</summary>
+                <p>Alüvyon zemin, fay yakınlığı ve eski bina stoku nedeniyle Bayraklı, Bornova, Konak ve Karşıyaka en yüksek risk grubunda yer alır. Seferihisar ve Çiğli de fay yakınlığı nedeniyle dikkat edilmesi gereken bölgelerdir.</p>
+            </details>
+        </section>
+
+        <aside class="data-sources">
+            <p><strong>Veri kaynakları:</strong> AFAD Diri Fay Haritası 2020, Kandilli Rasathanesi Tarihi Deprem Kataloğu, USGS Earthquake Catalog, TÜİK Bina Sayım Verisi, T.C. AFAD Risk Haritası. Bu sayfadaki bilgiler bilgilendirme amaçlıdır, profesyonel jeofizik veya yapı mühendisliği danışmanlığının yerini tutmaz.</p>
+        </aside>
     </main>
 
     <footer>

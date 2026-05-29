@@ -184,6 +184,10 @@
     <header class="page-header">
         <div class="container">
             <h1>Bursa Depremi</h1>
+            <div class="answer-block">
+              <strong>Bursa deprem risk değerlendirmesi:</strong> Bursa, Kuzey Anadolu Fay Hattı'nın güney kolu olan Bursa fayı (Uludağ kuzey eteği) üzerinde yer alır. 1. derece deprem bölgesi; tarihsel olarak 1855 (M7.1) ve 1944 (M7.2) yıkıcı depremler yaşadı. AFAD risk haritasında Yıldırım, Osmangazi ve Nilüfer ilçeleri kritik fay bölgesinde.
+            </div>
+            <!-- Veri kaynakları: AFAD diri fay haritası 2020, Kandilli historical catalog -->
             <!-- SSR-FRESHNESS-START -->
             <div class="ssr-freshness" aria-live="polite"></div>
             <!-- SSR-FRESHNESS-END -->
@@ -307,6 +311,61 @@
             <p>Eğer sarsıntı hissettiyseniz, bu sayfanın yukarısındaki "Son Depremler" listesine bakın. Liste her 20 saniyede bir yenilenir ve <strong>Bursa</strong> bölgesindeki en yeni kayıt en üstte görünür. Verilerimiz Kandilli/AFAD'ın resmi API'lerinden alınır; gecikmesiz ve birebirdir. Resmi açıklama için <a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a> sayfasını da kontrol edebilirsiniz. Yakınımızda meydana gelen depremlerde <a href="/deprem-aninda.html">Çök-Kapan-Tutun</a> kuralını uygulayın.</p>
         </section>
         <!-- SSR-PASSAGE-END -->
+
+        <section class="city-deep-content" id="detayli-bilgi">
+            <h2>Bursa Deprem Risk Analizi: Detaylı Rehber</h2>
+
+            <h3>Bursa Fay Hatları ve Tektonik Yapı</h3>
+            <p>Bursa ve çevresi, Kuzey Anadolu Fay Hattı'nın (KAFH) güney kolu üzerinde yer alan kritik bir sismik bölgedir. AFAD Diri Fay Haritası (2020) verilerine göre Bursa'nın tektonik yapısını belirleyen ana unsurlar; Bursa Fayı (KAFH'nin güney kolu), Uludağ kuzey eteklerini etkileyen sıyrılma yapıları, Yenişehir ve İznik Gölü güneyinden geçen segmentlerdir. KAFH'nin güney kolu Mudanya'dan başlayarak Gemlik, Orhangazi ve Yenişehir üzerinden Bilecik'e doğru uzanır; bu hat sağ yanal doğrultu atımlı (right-lateral strike-slip) karakterdedir.</p>
+            <p>KAFH'nin kuzey kolu Marmara Denizi içinden geçerken, güney kolu Bursa şehir merkezinin kuzey eteklerinden geçer. Bu coğrafi konum, Bursa'yı hem kuzey kol kaynaklı uzak depremlerden hem de güney kol kaynaklı yakın depremlerden etkilenebilir kılar. Anadolu plakasının batıya doğru yıllık 2-2.5 cm hareketi, bu fay sistemlerinde stres birikmesine neden olur. Kandilli Rasathanesi Tarihi Deprem Kataloğu, bölgenin son 200 yılda birkaç yıkıcı deprem yaşadığını belgelemektedir.</p>
+            <p>Tarihsel olarak Bursa'yı en çok etkileyen olaylar 1855 Hudavendigar (Bursa) depremi (yaklaşık M7.1–7.5) ve 5 Şubat 1855'teki büyük artçı ile 11 Nisan 1855 (M7.0) ikincil sarsıntısıdır. 20. yüzyılda 1944 Bursa-İnegöl depremi ve KAFH güney kolu üzerindeki çeşitli orta büyüklükte (M5-M6) depremler kaydedilmiştir. AFAD'ın güncel risk haritası, Bursa'yı Türkiye'nin yüksek deprem riskli illeri arasında göstermektedir.</p>
+
+            <h3>Bursa İlçeleri Risk Sıralaması</h3>
+            <p>Bursa'nın risk profili faya yakınlık, zemin yapısı ve bina stokuyla birlikte değerlendirilir. Bursa Ovası'nın geniş alüvyon zemin yapısı (özellikle Yıldırım, Osmangazi ve Nilüfer'in ova tabanındaki bölgeleri) sismik dalgayı büyütür. Uludağ eteklerine doğru kayalık zeminler görece daha güvenli değerlendirilir. Aşağıdaki sıralama AFAD risk haritası ve Bursa Büyükşehir Belediyesi mikrobölgeleme raporlarına dayalı genel bir özettir.</p>
+            <ul>
+                <li><strong>Yüksek risk:</strong> Yıldırım (eski yapı stoku ve ova zemini), Osmangazi (fay yakını ve tarihi yapı yoğunluğu), Mudanya (KAFH güney kolu üzeri), Gemlik, Orhangazi (fay segmenti üzeri), İznik</li>
+                <li><strong>Orta risk:</strong> Nilüfer ova kesimi, Kestel, Gürsu, İnegöl, Yenişehir, Karacabey</li>
+                <li><strong>Görece düşük risk:</strong> Nilüfer'in Uludağ eteklerine yakın yüksek kesimleri, Büyükorhan, Harmancık, Keles dağlık bölgeleri</li>
+            </ul>
+
+            <h3>Bursa'da Son 100 Yılın Önemli Depremleri</h3>
+            <p>Bursa ve yakın çevresini etkileyen M5+ depremler, KAFH güney kolu ve çevresindeki yapılar boyunca dağılmıştır. Aşağıdaki tablo USGS Earthquake Catalog, Kandilli Rasathanesi tarihi kataloğu ve AFAD kayıtlarından derlenmiştir. 1855 Hudavendigar depremi son 100 yılın dışında kalmakla birlikte bölgenin tarihi sismik kapasitesini göstermesi açısından önemlidir.</p>
+            <table>
+                <thead><tr><th>Tarih</th><th>Büyüklük</th><th>Merkez Üssü</th><th>Hasar</th></tr></thead>
+                <tbody>
+                    <tr><td>1 Şubat 1944</td><td>M6.4</td><td>Bursa-İnegöl bölgesi</td><td>İnegöl ve çevre köylerde yapı hasarı, can kaybı</td></tr>
+                    <tr><td>18 Eylül 1963</td><td>M6.3</td><td>Marmara (Çınarcık) — Bursa kuzey kıyısına etki</td><td>Mudanya ve Gemlik'te hissedilir hasar</td></tr>
+                    <tr><td>17 Ağustos 1999</td><td>M7.6</td><td>İzmit Körfezi</td><td>Bursa'da panik, sınırlı yapısal hasar (KAFH kuzey kolu kaynaklı)</td></tr>
+                    <tr><td>24 Ekim 2006</td><td>M5.2</td><td>Gemlik Körfezi</td><td>Bursa genelinde hissedildi, hafif hasar</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Bursa'da Bina Stoku ve Risk</h3>
+            <p>Bursa, hızlı sanayileşme ve göç nedeniyle yoğun bir yapı stokuna sahiptir. TÜİK bina sayım verilerine göre özellikle Yıldırım ilçesinin eski mahalleleri (Hocataşkın, Mevlana, Ertuğrulgazi gibi) ve Osmangazi'nin tarihi merkez çevresi 2000 öncesi yapı oranı yüksek bölgelerdir. 1999 Marmara depremi sonrası yürürlüğe giren Deprem Bölgelerinde Yapılacak Binalar Hakkında Yönetmelik (2007) ve 2018'de güncellenen Türkiye Bina Deprem Yönetmeliği (TBDY-2018) ile yapı denetim standartları sıkılaştırılmıştır.</p>
+            <p>Bursa Büyükşehir Belediyesi ve Çevre, Şehircilik ve İklim Değişikliği Bakanlığı, başta Yıldırım ve Osmangazi olmak üzere kentsel dönüşüm projeleri yürütmektedir. Bina sahiplerinin yapı kimlik bilgisi (YKB) sorgulaması ve isteğe bağlı performans analizi yaptırması önerilir. Sanayi tesislerinin yoğun olduğu Nilüfer ve Demirtaşpaşa bölgelerinde endüstriyel yapı denetimi de önemli bir başlıktır. Spesifik dönüşüm oranları için ilçe belediyelerinin güncel raporlarına bakılmalıdır.</p>
+
+            <h3>Bursa İçin Deprem Hazırlığı</h3>
+            <p>Bursa'da deprem hazırlığı hane bazlı önlemlerin yanı sıra mahalle ölçeğinde planlamayı gerektirir. Her ailenin önceden belirlenmiş bir toplanma noktası ve şehir dışı bir iletişim referansı belirlemesi önerilir. Yüksek dolapların duvara sabitlenmesi, cam yüzeylerin film ile güçlendirilmesi, doğal gaz vanasının nasıl kapatılacağının her hane üyesi tarafından bilinmesi temel adımlardır. Bursa'nın sanayi bölgelerine yakın yaşayanlar, deprem sonrası endüstriyel risk (gaz kaçağı, kimyasal sızıntı) konusunda da bilinçli olmalıdır.</p>
+            <p>Resmi toplanma alanlarını öğrenmek için e-Devlet üzerinden AFAD Toplanma Alanı Sorgulama hizmeti kullanılmalıdır. Bursa İl AFAD Müdürlüğü'nün güncel duyuruları için <a href="https://bursa.afad.gov.tr" target="_blank" rel="noopener noreferrer">bursa.afad.gov.tr</a> sayfası takip edilebilir. Zorunlu Deprem Sigortası (DASK) yaptırılması yasal bir yükümlülüktür; konutun büyüklüğüne göre prim hesaplanır ve poliçe yıllık olarak yenilenir. Yüksek katlı yapılarda yaşayanlar için yangın merdivenlerinin tatbikatı ve asansörün hiçbir koşulda deprem sırasında kullanılmaması kritik önlemlerdir.</p>
+
+            <h3>Sıkça Sorulan Sorular</h3>
+            <details>
+                <summary>Bursa'da en son deprem ne zaman oldu?</summary>
+                <p>Bu sayfanın üst kısmında yer alan canlı listeden son depremleri takip edebilirsiniz. Sayfa 20 saniyede bir AFAD ve Kandilli verisiyle güncellenir.</p>
+            </details>
+            <details>
+                <summary>Bursa'da büyük deprem bekleniyor mu?</summary>
+                <p>Bursa, KAFH'nin güney kolu üzerinde yer alır ve 1855 Hudavendigar depreminden bu yana büyük bir deprem üretmemiştir. Akademik çalışmalar bölgenin sismik tehlikesinin yüksek olduğunu vurgulamaktadır; ancak belirli bir tarih veya büyüklük tahmini bilimsel olarak mümkün değildir. Önemli olan tahmin değil, hazırlıktır.</p>
+            </details>
+            <details>
+                <summary>Bursa'da hangi ilçeler en riskli?</summary>
+                <p>Fay yakınlığı, alüvyon zemin ve eski bina stoku nedeniyle Yıldırım, Osmangazi, Mudanya, Gemlik ve Orhangazi en yüksek risk grubunda yer alır. Nilüfer'in ova kesimi ve İnegöl orta risk grubundadır.</p>
+            </details>
+        </section>
+
+        <aside class="data-sources">
+            <p><strong>Veri kaynakları:</strong> AFAD Diri Fay Haritası 2020, Kandilli Rasathanesi Tarihi Deprem Kataloğu, USGS Earthquake Catalog, TÜİK Bina Sayım Verisi, T.C. AFAD Risk Haritası. Bu sayfadaki bilgiler bilgilendirme amaçlıdır, profesyonel jeofizik veya yapı mühendisliği danışmanlığının yerini tutmaz.</p>
+        </aside>
     </main>
 
     <footer>

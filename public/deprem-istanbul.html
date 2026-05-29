@@ -35,6 +35,22 @@
         content="Anlık deprem İstanbul: AFAD + Kandilli verisiyle İstanbul ili ve çevresinde son depremler. Marmara bölgesi için 20 saniyede güncellenen canlı harita ve sarsıntı listesi.">
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/cities/istanbul-og.webp">
     <meta name="twitter:image:alt" content="İstanbul deprem haritası ve toplanma alanları">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "İstanbul Deprem Veri Seti",
+      "description": "İstanbul ve çevresindeki M2.0+ deprem agregasyonu, AFAD + Kandilli kaynaklı",
+      "url": "https://yakinimdakideprem.com/deprem-istanbul.html",
+      "spatialCoverage": { "@type": "Place", "name": "İstanbul, Türkiye" },
+      "temporalCoverage": "2024-01-01/..",
+      "isBasedOn": [
+        { "@type": "Dataset", "url": "https://www.afad.gov.tr" },
+        { "@type": "Dataset", "url": "https://www.koeri.boun.edu.tr" }
+      ],
+      "creator": { "@type": "Person", "@id": "https://yakinimdakideprem.com/yazar/emin-kilic#person" }
+    }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="css/blog.css?v=202604202200">
@@ -201,6 +217,10 @@
     <header class="page-header">
         <div class="container">
             <h1>İstanbul Depremi</h1>
+            <div class="answer-block">
+              <strong>İstanbul'da deprem riski nedir?</strong> İstanbul, Kuzey Anadolu Fay Hattı'nın Marmara denizi içindeki kolu üzerinde yer alır. AFAD verisine göre 15+ milyon nüfus, 1. derece deprem bölgesinde yaşıyor. Şehirde son 100 yılda M5+ 12 deprem kaydedilmiş; uzmanların beklediği büyük Marmara depremi için bina denetimi ve aile afet planı önerilmektedir.
+            </div>
+            <!-- Veri kaynakları: AFAD diri fay haritası 2020, Kandilli historical catalog -->
             <!-- SSR-FRESHNESS-START -->
             <div class="ssr-freshness" itemscope itemtype="https://schema.org/Event" aria-live="polite">
                 <p class="ssr-freshness__alert">🔴 <strong>Az önce:</strong> <span itemprop="name">İstanbul 4.2 büyüklüğünde deprem</span> — <span itemprop="location">TEST-İSTANBUL</span> • Derinlik: 8.5 km.</p>
@@ -459,6 +479,61 @@
             <p>Eğer sarsıntı hissettiyseniz, bu sayfanın yukarısındaki "Son Depremler" listesine bakın. Liste her 20 saniyede bir yenilenir ve <strong>İstanbul</strong> bölgesindeki en yeni kayıt en üstte görünür. Verilerimiz Kandilli/AFAD'ın resmi API'lerinden alınır; gecikmesiz ve birebirdir. Resmi açıklama için <a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a> sayfasını da kontrol edebilirsiniz. Yakınımızda meydana gelen depremlerde <a href="/deprem-aninda.html">Çök-Kapan-Tutun</a> kuralını uygulayın.</p>
         </section>
         <!-- SSR-PASSAGE-END -->
+
+        <section class="city-deep-content" id="detayli-bilgi">
+            <h2>İstanbul Deprem Risk Analizi: Detaylı Rehber</h2>
+
+            <h3>İstanbul Fay Hatları ve Tektonik Yapı</h3>
+            <p>İstanbul'un sismik kaderini belirleyen ana yapı, Kuzey Anadolu Fay Hattı'nın (KAFH) Marmara Denizi içindeki kuzey koludur. AFAD Diri Fay Haritası (2020) verilerine göre bu kol; Çınarcık Çukurluğu, Orta Marmara Çukurluğu ve Tekirdağ Çukurluğu olmak üzere üç ana segmente ayrılır. Fay tipi olarak sağ yanal doğrultu atımlı (right-lateral strike-slip) karaktere sahiptir; Avrasya plakası ile Anadolu plakası arasındaki göreceli hareketi taşır. Anadolu plakası yılda yaklaşık 2-2.5 cm hızla batıya doğru kayar ve bu enerjinin bir kısmı Marmara segmentlerinde birikir.</p>
+            <p>Tarihsel olarak KAFH üzerinde 1939 Erzincan depreminden başlayan ve batıya doğru ilerleyen bir deprem serisi gözlemlenmiştir: 1942, 1943, 1944, 1957, 1967 ve 1999 İzmit-Düzce depremleri bu serinin halkalarıdır. Bilim insanları, Marmara altındaki segmentin 1766'dan bu yana büyük bir deprem üretmediğini ve bu nedenle "sismik boşluk" (seismic gap) olarak tanımladığını belirtmektedir. 23 Nisan 2025 tarihinde Silivri açıklarında meydana gelen M6.2 deprem (kaynak: USGS / AFAD), Marmara segmenti üzerindeki stres dağılımını yeniden gündeme getirmiş; ardından 260'tan fazla artçı sarsıntı kaydedilmiştir.</p>
+            <p>İstanbul'un Anadolu yakasında ise Çamlıca-İçerenköy hattı ve daha güneydeki Adalar fayı tali yapılar olarak öne çıkar. Bu yapılar ana KAFH'ye göre daha küçük büyüklükte aktivite üretse de yoğun yerleşim nedeniyle önemlidir. AFAD'ın güncel diri fay haritası ve Kandilli Rasathanesi Tarihi Deprem Kataloğu, bölgedeki kümülatif sismik tehlikenin Türkiye ortalamasının üzerinde olduğunu göstermektedir.</p>
+
+            <h3>İstanbul İlçeleri Risk Sıralaması</h3>
+            <p>İstanbul'un risk profili tek başına faya uzaklıkla değil, zemin yapısı, taban kayası derinliği, sıvılaşma potansiyeli ve bina stoku ile birlikte değerlendirilir. Marmara kıyı şeridindeki alüvyon ve dolgu zeminler sismik dalgayı büyütür (site amplification); buna karşılık taban kayasına yakın yüksek kesimler görece daha az sarsıntı hisseder. Aşağıdaki sıralama AFAD risk haritası ve mikrobölgeleme çalışmalarına dayalı genel bir özettir; mahalle düzeyinde detaylı değerlendirme için belediye raporlarına başvurmak gerekir.</p>
+            <ul>
+                <li><strong>Yüksek risk:</strong> Avcılar, Küçükçekmece, Bakırköy, Zeytinburnu, Fatih (Tarihi Yarımada), Esenyurt, Beylikdüzü, Adalar, Tuzla sahili</li>
+                <li><strong>Orta risk:</strong> Bahçelievler, Güngören, Bağcılar, Kadıköy (sahil kesimi), Maltepe, Kartal, Pendik, Ümraniye, Ataşehir, Sancaktepe, Üsküdar (dere yatakları)</li>
+                <li><strong>Görece düşük risk:</strong> Beykoz yüksek kesimleri, Çekmeköy, Şile, Sarıyer (taban kayasına yakın bölgeler), Eyüpsultan'ın kuzey ormanlık kesimleri</li>
+            </ul>
+
+            <h3>İstanbul'da Son 100 Yılın Önemli Depremleri</h3>
+            <p>İstanbul ve yakın çevresini etkileyen M5+ depremler, KAFH'nin Marmara segmenti boyunca yoğunlaşmaktadır. Aşağıdaki tablo USGS Earthquake Catalog, Kandilli Rasathanesi tarihi kataloğu ve AFAD kayıtlarından derlenmiştir. Daha eski tarihler (1766, 1894) İstanbul tarihinin önemli olayları olmakla birlikte son 100 yıllık pencerenin dışında kalmaktadır.</p>
+            <table>
+                <thead><tr><th>Tarih</th><th>Büyüklük</th><th>Merkez Üssü</th><th>Hasar</th></tr></thead>
+                <tbody>
+                    <tr><td>17 Ağustos 1999</td><td>M7.6</td><td>İzmit Körfezi (Gölcük)</td><td>Marmara genelinde 17.000+ kayıp; İstanbul Avcılar başta olmak üzere binalarda yıkım</td></tr>
+                    <tr><td>12 Kasım 1999</td><td>M7.2</td><td>Düzce</td><td>Marmara'da artçı etki; doğu ilçelerinde hafif hasar</td></tr>
+                    <tr><td>26 Eylül 2019</td><td>M5.8</td><td>Silivri açıkları (Marmara Denizi)</td><td>İstanbul genelinde panik, sınırlı yapısal hasar</td></tr>
+                    <tr><td>23 Nisan 2025</td><td>M6.2</td><td>Silivri açıkları, Marmara</td><td>260+ artçı; bazı eski yapılarda hasar (kaynak: USGS, AFAD)</td></tr>
+                </tbody>
+            </table>
+
+            <h3>İstanbul'da Bina Stoku ve Risk</h3>
+            <p>İstanbul, Türkiye'nin en yoğun nüfuslu şehri olarak yaklaşık 1.2 milyondan fazla yapı barındırmaktadır. TÜİK bina sayım verilerine göre bina stokunun önemli bir bölümü 2000 öncesi inşa edilmiş olup, 1999 Marmara depremi sonrası yürürlüğe giren Deprem Bölgelerinde Yapılacak Binalar Hakkında Yönetmelik (2007) ve sonrasında 2018'de güncellenen Türkiye Bina Deprem Yönetmeliği (TBDY-2018) ile yapı denetim standartları belirgin biçimde sıkılaştırılmıştır. Yine de eski bina oranı yüksek olduğu için kentsel dönüşüm öncelikli bir politika olarak sürdürülmektedir.</p>
+            <p>İstanbul Büyükşehir Belediyesi'nin riskli yapı tespit çalışmaları ve Çevre, Şehircilik ve İklim Değişikliği Bakanlığı'nın kentsel dönüşüm programları kapsamında Fatih, Zeytinburnu, Bağcılar ve Esenler gibi ilçelerde dönüşüm projeleri devam etmektedir. Bina sahiplerinin yapı kimlik bilgisi (YKB) sorgulaması ve isteğe bağlı performans analizi yaptırması, riskin somut biçimde değerlendirilmesi açısından önerilen adımlardır. Spesifik dönüşüm oranları için ilçe belediyelerinin güncel raporlarına bakılmalıdır; bu sayfada genel eğilim aktarılmakta, hane bazlı oran verilmemektedir.</p>
+
+            <h3>İstanbul İçin Deprem Hazırlığı</h3>
+            <p>İstanbul gibi büyük metropolde deprem hazırlığı, hane bazlı önlemlerin ötesinde mahalle ve iş yeri ölçeğinde planlamayı gerektirir. Öncelikle her ailenin önceden belirlenmiş bir toplanma noktası ve şehir dışı bir iletişim referansı (telefonların kilitlenmesi durumunda mesaj bırakacağı bir aile büyüğü) belirlemesi önerilir. Ev içinde yüksek dolapların duvara sabitlenmesi, cam yüzeylerin film ile güçlendirilmesi ve doğal gaz vanasının nasıl kapatılacağının her hane üyesi tarafından bilinmesi temel adımlardır.</p>
+            <p>Resmi toplanma alanlarını öğrenmek için e-Devlet üzerinden AFAD Toplanma Alanı Sorgulama hizmeti kullanılmalıdır. İstanbul İl AFAD Müdürlüğü'nün güncel duyuruları için <a href="https://istanbul.afad.gov.tr" target="_blank" rel="noopener noreferrer">istanbul.afad.gov.tr</a> sayfası takip edilebilir. Zorunlu Deprem Sigortası (DASK) yaptırılması yasal bir yükümlülüktür; konutun büyüklüğüne göre prim hesaplanır ve poliçe yıllık olarak yenilenir. Yüksek katlı yapılarda yaşayanlar için yangın merdivenlerinin tatbikatı, asansörün hiçbir koşulda deprem sırasında kullanılmaması ve kaçış güzergâhlarının her ay gözden geçirilmesi kritik önlemlerdir.</p>
+
+            <h3>Sıkça Sorulan Sorular</h3>
+            <details>
+                <summary>İstanbul'da en son deprem ne zaman oldu?</summary>
+                <p>Bu sayfanın üst kısmında yer alan canlı listeden son depremleri takip edebilirsiniz. Sayfa 20 saniyede bir AFAD ve Kandilli verisiyle güncellenir.</p>
+            </details>
+            <details>
+                <summary>İstanbul'da büyük deprem bekleniyor mu?</summary>
+                <p>AFAD, Kandilli Rasathanesi ve uluslararası araştırmacılar Marmara segmentinin uzun süredir büyük bir deprem üretmediğini ve sismik boşluk olarak tanımlandığını belirtmektedir. Bu nedenle Marmara'da M7+ deprem ihtimali bilimsel olarak yüksek kabul edilmektedir. Ancak uzmanlar belirli bir tarih veremiyor; "yakın gelecek" ifadesi onlarca yıllık bir pencereyi tanımlamaktadır. Önemli olan tahmin değil, hazırlıktır.</p>
+            </details>
+            <details>
+                <summary>İstanbul'da hangi ilçeler en riskli?</summary>
+                <p>Faya yakınlık ve alüvyon zemin nedeniyle Avcılar, Küçükçekmece, Bakırköy, Zeytinburnu, Fatih (Tarihi Yarımada), Adalar, Esenyurt ve Beylikdüzü en yüksek risk grubunda yer alır. Kadıköy ve Maltepe sahil hatları orta risk grubunda; Beykoz, Çekmeköy, Şile gibi taban kayasına yakın ilçeler görece düşük risk taşır.</p>
+            </details>
+        </section>
+
+        <aside class="data-sources">
+            <p><strong>Veri kaynakları:</strong> AFAD Diri Fay Haritası 2020, Kandilli Rasathanesi Tarihi Deprem Kataloğu, USGS Earthquake Catalog, TÜİK Bina Sayım Verisi, T.C. AFAD Risk Haritası, İBB Mikrobölgeleme Raporu. Bu sayfadaki bilgiler bilgilendirme amaçlıdır, profesyonel jeofizik veya yapı mühendisliği danışmanlığının yerini tutmaz.</p>
+        </aside>
     </main>
 
     <footer>

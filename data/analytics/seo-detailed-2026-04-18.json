@@ -1,0 +1,8408 @@
+{
+  "gsc": {
+    "daily": [
+      {
+        "keys": [
+          "2026-01-17"
+        ],
+        "clicks": 8,
+        "impressions": 448,
+        "ctr": 0.017857142857142856,
+        "position": 9.426339285714286
+      },
+      {
+        "keys": [
+          "2026-01-18"
+        ],
+        "clicks": 1,
+        "impressions": 291,
+        "ctr": 0.003436426116838488,
+        "position": 8.852233676975946
+      },
+      {
+        "keys": [
+          "2026-01-19"
+        ],
+        "clicks": 2,
+        "impressions": 233,
+        "ctr": 0.008583690987124463,
+        "position": 8.776824034334764
+      },
+      {
+        "keys": [
+          "2026-01-20"
+        ],
+        "clicks": 4,
+        "impressions": 317,
+        "ctr": 0.012618296529968454,
+        "position": 8.49211356466877
+      },
+      {
+        "keys": [
+          "2026-01-21"
+        ],
+        "clicks": 11,
+        "impressions": 1695,
+        "ctr": 0.006489675516224189,
+        "position": 7.586430678466077
+      },
+      {
+        "keys": [
+          "2026-01-22"
+        ],
+        "clicks": 3,
+        "impressions": 365,
+        "ctr": 0.00821917808219178,
+        "position": 9.021917808219179
+      },
+      {
+        "keys": [
+          "2026-01-23"
+        ],
+        "clicks": 31,
+        "impressions": 2780,
+        "ctr": 0.011151079136690648,
+        "position": 7.335251798561151
+      },
+      {
+        "keys": [
+          "2026-01-24"
+        ],
+        "clicks": 8,
+        "impressions": 583,
+        "ctr": 0.0137221269296741,
+        "position": 8.569468267581474
+      },
+      {
+        "keys": [
+          "2026-01-25"
+        ],
+        "clicks": 3,
+        "impressions": 1003,
+        "ctr": 0.0029910269192422734,
+        "position": 7.971086739780658
+      },
+      {
+        "keys": [
+          "2026-01-26"
+        ],
+        "clicks": 4,
+        "impressions": 452,
+        "ctr": 0.008849557522123894,
+        "position": 8.369469026548671
+      },
+      {
+        "keys": [
+          "2026-01-27"
+        ],
+        "clicks": 10,
+        "impressions": 863,
+        "ctr": 0.011587485515643106,
+        "position": 8.130938586326767
+      },
+      {
+        "keys": [
+          "2026-01-28"
+        ],
+        "clicks": 7,
+        "impressions": 447,
+        "ctr": 0.015659955257270694,
+        "position": 9.232662192393736
+      },
+      {
+        "keys": [
+          "2026-01-29"
+        ],
+        "clicks": 78,
+        "impressions": 6982,
+        "ctr": 0.011171584073331424,
+        "position": 6.8709538814093385
+      },
+      {
+        "keys": [
+          "2026-01-30"
+        ],
+        "clicks": 13,
+        "impressions": 1352,
+        "ctr": 0.009615384615384616,
+        "position": 6.985207100591716
+      },
+      {
+        "keys": [
+          "2026-01-31"
+        ],
+        "clicks": 1,
+        "impressions": 328,
+        "ctr": 0.003048780487804878,
+        "position": 9.597560975609756
+      },
+      {
+        "keys": [
+          "2026-02-01"
+        ],
+        "clicks": 1,
+        "impressions": 322,
+        "ctr": 0.003105590062111801,
+        "position": 11.683229813664596
+      },
+      {
+        "keys": [
+          "2026-02-02"
+        ],
+        "clicks": 2,
+        "impressions": 322,
+        "ctr": 0.006211180124223602,
+        "position": 10.406832298136646
+      },
+      {
+        "keys": [
+          "2026-02-03"
+        ],
+        "clicks": 1,
+        "impressions": 347,
+        "ctr": 0.002881844380403458,
+        "position": 8.838616714697405
+      },
+      {
+        "keys": [
+          "2026-02-04"
+        ],
+        "clicks": 1,
+        "impressions": 239,
+        "ctr": 0.0041841004184100415,
+        "position": 10.338912133891213
+      },
+      {
+        "keys": [
+          "2026-02-05"
+        ],
+        "clicks": 0,
+        "impressions": 279,
+        "ctr": 0,
+        "position": 10.767025089605735
+      },
+      {
+        "keys": [
+          "2026-02-06"
+        ],
+        "clicks": 1,
+        "impressions": 609,
+        "ctr": 0.0016420361247947454,
+        "position": 10.09031198686371
+      },
+      {
+        "keys": [
+          "2026-02-07"
+        ],
+        "clicks": 1,
+        "impressions": 297,
+        "ctr": 0.003367003367003367,
+        "position": 10.151515151515152
+      },
+      {
+        "keys": [
+          "2026-02-08"
+        ],
+        "clicks": 3,
+        "impressions": 350,
+        "ctr": 0.008571428571428572,
+        "position": 10.717142857142857
+      },
+      {
+        "keys": [
+          "2026-02-09"
+        ],
+        "clicks": 3,
+        "impressions": 254,
+        "ctr": 0.011811023622047244,
+        "position": 10.89763779527559
+      },
+      {
+        "keys": [
+          "2026-02-10"
+        ],
+        "clicks": 11,
+        "impressions": 732,
+        "ctr": 0.015027322404371584,
+        "position": 7.700819672131147
+      },
+      {
+        "keys": [
+          "2026-02-11"
+        ],
+        "clicks": 5,
+        "impressions": 326,
+        "ctr": 0.015337423312883436,
+        "position": 9.644171779141104
+      },
+      {
+        "keys": [
+          "2026-02-12"
+        ],
+        "clicks": 2,
+        "impressions": 423,
+        "ctr": 0.004728132387706856,
+        "position": 9.522458628841608
+      },
+      {
+        "keys": [
+          "2026-02-13"
+        ],
+        "clicks": 3,
+        "impressions": 444,
+        "ctr": 0.006756756756756757,
+        "position": 9.387387387387387
+      },
+      {
+        "keys": [
+          "2026-02-14"
+        ],
+        "clicks": 21,
+        "impressions": 1293,
+        "ctr": 0.016241299303944315,
+        "position": 9.17092034029389
+      },
+      {
+        "keys": [
+          "2026-02-15"
+        ],
+        "clicks": 14,
+        "impressions": 980,
+        "ctr": 0.014285714285714285,
+        "position": 9.311224489795919
+      },
+      {
+        "keys": [
+          "2026-02-16"
+        ],
+        "clicks": 8,
+        "impressions": 847,
+        "ctr": 0.009445100354191263,
+        "position": 8.717827626918536
+      },
+      {
+        "keys": [
+          "2026-02-17"
+        ],
+        "clicks": 20,
+        "impressions": 1085,
+        "ctr": 0.018433179723502304,
+        "position": 8.334562211981567
+      },
+      {
+        "keys": [
+          "2026-02-18"
+        ],
+        "clicks": 2,
+        "impressions": 742,
+        "ctr": 0.0026954177897574125,
+        "position": 9.381401617250674
+      },
+      {
+        "keys": [
+          "2026-02-19"
+        ],
+        "clicks": 18,
+        "impressions": 976,
+        "ctr": 0.018442622950819672,
+        "position": 9.198770491803279
+      },
+      {
+        "keys": [
+          "2026-02-20"
+        ],
+        "clicks": 4,
+        "impressions": 394,
+        "ctr": 0.01015228426395939,
+        "position": 10.205583756345177
+      },
+      {
+        "keys": [
+          "2026-02-21"
+        ],
+        "clicks": 0,
+        "impressions": 281,
+        "ctr": 0,
+        "position": 10.427046263345195
+      },
+      {
+        "keys": [
+          "2026-02-22"
+        ],
+        "clicks": 4,
+        "impressions": 263,
+        "ctr": 0.015209125475285171,
+        "position": 10.384030418250951
+      },
+      {
+        "keys": [
+          "2026-02-23"
+        ],
+        "clicks": 7,
+        "impressions": 307,
+        "ctr": 0.02280130293159609,
+        "position": 9.514657980456025
+      },
+      {
+        "keys": [
+          "2026-02-24"
+        ],
+        "clicks": 5,
+        "impressions": 281,
+        "ctr": 0.017793594306049824,
+        "position": 10.11032028469751
+      },
+      {
+        "keys": [
+          "2026-02-25"
+        ],
+        "clicks": 1,
+        "impressions": 299,
+        "ctr": 0.0033444816053511705,
+        "position": 11.755852842809364
+      },
+      {
+        "keys": [
+          "2026-02-26"
+        ],
+        "clicks": 49,
+        "impressions": 4445,
+        "ctr": 0.011023622047244094,
+        "position": 7.9160854893138355
+      },
+      {
+        "keys": [
+          "2026-02-27"
+        ],
+        "clicks": 3,
+        "impressions": 787,
+        "ctr": 0.0038119440914866584,
+        "position": 9.128335451080051
+      },
+      {
+        "keys": [
+          "2026-02-28"
+        ],
+        "clicks": 4,
+        "impressions": 633,
+        "ctr": 0.00631911532385466,
+        "position": 8.783570300157978
+      },
+      {
+        "keys": [
+          "2026-03-01"
+        ],
+        "clicks": 11,
+        "impressions": 653,
+        "ctr": 0.016845329249617153,
+        "position": 8.447166921898928
+      },
+      {
+        "keys": [
+          "2026-03-02"
+        ],
+        "clicks": 12,
+        "impressions": 1014,
+        "ctr": 0.011834319526627219,
+        "position": 8.806706114398423
+      },
+      {
+        "keys": [
+          "2026-03-03"
+        ],
+        "clicks": 13,
+        "impressions": 625,
+        "ctr": 0.0208,
+        "position": 7.7312
+      },
+      {
+        "keys": [
+          "2026-03-04"
+        ],
+        "clicks": 12,
+        "impressions": 693,
+        "ctr": 0.017316017316017316,
+        "position": 7.5353535353535355
+      },
+      {
+        "keys": [
+          "2026-03-05"
+        ],
+        "clicks": 5,
+        "impressions": 417,
+        "ctr": 0.011990407673860911,
+        "position": 8.805755395683454
+      },
+      {
+        "keys": [
+          "2026-03-06"
+        ],
+        "clicks": 2,
+        "impressions": 438,
+        "ctr": 0.0045662100456621,
+        "position": 9.883561643835616
+      },
+      {
+        "keys": [
+          "2026-03-07"
+        ],
+        "clicks": 2,
+        "impressions": 413,
+        "ctr": 0.004842615012106538,
+        "position": 9.169491525423728
+      },
+      {
+        "keys": [
+          "2026-03-08"
+        ],
+        "clicks": 17,
+        "impressions": 3410,
+        "ctr": 0.00498533724340176,
+        "position": 9.45425219941349
+      },
+      {
+        "keys": [
+          "2026-03-09"
+        ],
+        "clicks": 13,
+        "impressions": 3931,
+        "ctr": 0.003307046553039939,
+        "position": 10.436530145001273
+      },
+      {
+        "keys": [
+          "2026-03-10"
+        ],
+        "clicks": 8,
+        "impressions": 735,
+        "ctr": 0.010884353741496598,
+        "position": 10.140136054421768
+      },
+      {
+        "keys": [
+          "2026-03-11"
+        ],
+        "clicks": 1,
+        "impressions": 494,
+        "ctr": 0.0020242914979757085,
+        "position": 9.257085020242915
+      },
+      {
+        "keys": [
+          "2026-03-12"
+        ],
+        "clicks": 455,
+        "impressions": 53836,
+        "ctr": 0.008451593729103202,
+        "position": 7.783713500260049
+      },
+      {
+        "keys": [
+          "2026-03-13"
+        ],
+        "clicks": 17,
+        "impressions": 3212,
+        "ctr": 0.005292652552926526,
+        "position": 8.584682440846825
+      },
+      {
+        "keys": [
+          "2026-03-14"
+        ],
+        "clicks": 3,
+        "impressions": 1380,
+        "ctr": 0.002173913043478261,
+        "position": 8.839130434782609
+      },
+      {
+        "keys": [
+          "2026-03-15"
+        ],
+        "clicks": 9,
+        "impressions": 2971,
+        "ctr": 0.0030292830696735107,
+        "position": 8.232581622349377
+      },
+      {
+        "keys": [
+          "2026-03-16"
+        ],
+        "clicks": 2,
+        "impressions": 981,
+        "ctr": 0.0020387359836901123,
+        "position": 9.023445463812436
+      },
+      {
+        "keys": [
+          "2026-03-17"
+        ],
+        "clicks": 4,
+        "impressions": 564,
+        "ctr": 0.0070921985815602835,
+        "position": 10.180851063829786
+      },
+      {
+        "keys": [
+          "2026-03-18"
+        ],
+        "clicks": 2,
+        "impressions": 298,
+        "ctr": 0.006711409395973154,
+        "position": 10.835570469798657
+      },
+      {
+        "keys": [
+          "2026-03-19"
+        ],
+        "clicks": 3,
+        "impressions": 217,
+        "ctr": 0.013824884792626729,
+        "position": 10.47004608294931
+      },
+      {
+        "keys": [
+          "2026-03-20"
+        ],
+        "clicks": 3,
+        "impressions": 334,
+        "ctr": 0.008982035928143712,
+        "position": 9.544910179640718
+      },
+      {
+        "keys": [
+          "2026-03-21"
+        ],
+        "clicks": 3,
+        "impressions": 349,
+        "ctr": 0.008595988538681949,
+        "position": 9.501432664756447
+      },
+      {
+        "keys": [
+          "2026-03-22"
+        ],
+        "clicks": 1,
+        "impressions": 422,
+        "ctr": 0.002369668246445498,
+        "position": 8.874407582938389
+      },
+      {
+        "keys": [
+          "2026-03-23"
+        ],
+        "clicks": 0,
+        "impressions": 324,
+        "ctr": 0,
+        "position": 9.29320987654321
+      },
+      {
+        "keys": [
+          "2026-03-24"
+        ],
+        "clicks": 2,
+        "impressions": 252,
+        "ctr": 0.007936507936507936,
+        "position": 9.503968253968255
+      },
+      {
+        "keys": [
+          "2026-03-25"
+        ],
+        "clicks": 10,
+        "impressions": 672,
+        "ctr": 0.01488095238095238,
+        "position": 8.543154761904763
+      },
+      {
+        "keys": [
+          "2026-03-26"
+        ],
+        "clicks": 4,
+        "impressions": 409,
+        "ctr": 0.009779951100244499,
+        "position": 10.34474327628362
+      },
+      {
+        "keys": [
+          "2026-03-27"
+        ],
+        "clicks": 3,
+        "impressions": 239,
+        "ctr": 0.012552301255230125,
+        "position": 9.263598326359833
+      },
+      {
+        "keys": [
+          "2026-03-28"
+        ],
+        "clicks": 1,
+        "impressions": 209,
+        "ctr": 0.004784688995215311,
+        "position": 11.564593301435407
+      },
+      {
+        "keys": [
+          "2026-03-29"
+        ],
+        "clicks": 1,
+        "impressions": 241,
+        "ctr": 0.004149377593360996,
+        "position": 10.946058091286307
+      },
+      {
+        "keys": [
+          "2026-03-30"
+        ],
+        "clicks": 0,
+        "impressions": 178,
+        "ctr": 0,
+        "position": 10.4438202247191
+      },
+      {
+        "keys": [
+          "2026-03-31"
+        ],
+        "clicks": 1,
+        "impressions": 213,
+        "ctr": 0.004694835680751174,
+        "position": 11.511737089201878
+      },
+      {
+        "keys": [
+          "2026-04-01"
+        ],
+        "clicks": 3,
+        "impressions": 382,
+        "ctr": 0.007853403141361256,
+        "position": 10.267015706806284
+      },
+      {
+        "keys": [
+          "2026-04-02"
+        ],
+        "clicks": 3,
+        "impressions": 390,
+        "ctr": 0.007692307692307693,
+        "position": 10.402564102564103
+      },
+      {
+        "keys": [
+          "2026-04-03"
+        ],
+        "clicks": 32,
+        "impressions": 4673,
+        "ctr": 0.006847849347314359,
+        "position": 7.914615878450674
+      },
+      {
+        "keys": [
+          "2026-04-04"
+        ],
+        "clicks": 6,
+        "impressions": 891,
+        "ctr": 0.006734006734006734,
+        "position": 9.236812570145904
+      },
+      {
+        "keys": [
+          "2026-04-05"
+        ],
+        "clicks": 4,
+        "impressions": 535,
+        "ctr": 0.007476635514018692,
+        "position": 9.2
+      },
+      {
+        "keys": [
+          "2026-04-06"
+        ],
+        "clicks": 1,
+        "impressions": 298,
+        "ctr": 0.003355704697986577,
+        "position": 9.5
+      },
+      {
+        "keys": [
+          "2026-04-07"
+        ],
+        "clicks": 2,
+        "impressions": 319,
+        "ctr": 0.006269592476489028,
+        "position": 9.366771159874608
+      },
+      {
+        "keys": [
+          "2026-04-08"
+        ],
+        "clicks": 3,
+        "impressions": 528,
+        "ctr": 0.005681818181818182,
+        "position": 9.371212121212121
+      },
+      {
+        "keys": [
+          "2026-04-09"
+        ],
+        "clicks": 2,
+        "impressions": 290,
+        "ctr": 0.006896551724137931,
+        "position": 9.124137931034483
+      },
+      {
+        "keys": [
+          "2026-04-10"
+        ],
+        "clicks": 5,
+        "impressions": 285,
+        "ctr": 0.017543859649122806,
+        "position": 9.936842105263159
+      },
+      {
+        "keys": [
+          "2026-04-11"
+        ],
+        "clicks": 11,
+        "impressions": 924,
+        "ctr": 0.011904761904761904,
+        "position": 9.75
+      },
+      {
+        "keys": [
+          "2026-04-12"
+        ],
+        "clicks": 4,
+        "impressions": 1061,
+        "ctr": 0.003770028275212064,
+        "position": 8.041470311027332
+      },
+      {
+        "keys": [
+          "2026-04-13"
+        ],
+        "clicks": 3,
+        "impressions": 590,
+        "ctr": 0.005084745762711864,
+        "position": 9.115254237288136
+      },
+      {
+        "keys": [
+          "2026-04-14"
+        ],
+        "clicks": 7,
+        "impressions": 519,
+        "ctr": 0.01348747591522158,
+        "position": 8.826589595375722
+      },
+      {
+        "keys": [
+          "2026-04-15"
+        ],
+        "clicks": 8,
+        "impressions": 214,
+        "ctr": 0.037383177570093455,
+        "position": 10.121495327102803
+      },
+      {
+        "keys": [
+          "2026-04-16"
+        ],
+        "clicks": 4,
+        "impressions": 226,
+        "ctr": 0.017699115044247787,
+        "position": 9.778761061946902
+      }
+    ],
+    "query": [
+      {
+        "keys": [
+          "yakınımdaki deprem"
+        ],
+        "clicks": 682,
+        "impressions": 96081,
+        "ctr": 0.007098177579334104,
+        "position": 7.667509705352775
+      },
+      {
+        "keys": [
+          "anlık deprem"
+        ],
+        "clicks": 103,
+        "impressions": 10895,
+        "ctr": 0.00945387792565397,
+        "position": 9.604130335016063
+      },
+      {
+        "keys": [
+          "canlı deprem haritası"
+        ],
+        "clicks": 28,
+        "impressions": 3160,
+        "ctr": 0.008860759493670886,
+        "position": 8.99240506329114
+      },
+      {
+        "keys": [
+          "sismik harita canlı"
+        ],
+        "clicks": 25,
+        "impressions": 240,
+        "ctr": 0.10416666666666667,
+        "position": 9.854166666666666
+      },
+      {
+        "keys": [
+          "deprem haritası canlı"
+        ],
+        "clicks": 21,
+        "impressions": 979,
+        "ctr": 0.021450459652706845,
+        "position": 10.083758937691522
+      },
+      {
+        "keys": [
+          "anlık deprem türkiye"
+        ],
+        "clicks": 14,
+        "impressions": 883,
+        "ctr": 0.015855039637599093,
+        "position": 10.133635334088336
+      },
+      {
+        "keys": [
+          "canlı deprem"
+        ],
+        "clicks": 13,
+        "impressions": 1403,
+        "ctr": 0.009265858873841768,
+        "position": 10.143977191732002
+      },
+      {
+        "keys": [
+          "yakınımdaki depremler"
+        ],
+        "clicks": 12,
+        "impressions": 294,
+        "ctr": 0.04081632653061224,
+        "position": 8.823129251700681
+      },
+      {
+        "keys": [
+          "deprem haritası"
+        ],
+        "clicks": 10,
+        "impressions": 125,
+        "ctr": 0.08,
+        "position": 32.936
+      },
+      {
+        "keys": [
+          "yakinimdaki deprem"
+        ],
+        "clicks": 8,
+        "impressions": 319,
+        "ctr": 0.025078369905956112,
+        "position": 6.028213166144201
+      },
+      {
+        "keys": [
+          "canlı deprem takibi"
+        ],
+        "clicks": 7,
+        "impressions": 196,
+        "ctr": 0.03571428571428571,
+        "position": 8.959183673469388
+      },
+      {
+        "keys": [
+          "deprem"
+        ],
+        "clicks": 7,
+        "impressions": 31,
+        "ctr": 0.22580645161290322,
+        "position": 16.774193548387096
+      },
+      {
+        "keys": [
+          "anlık deprem haritası"
+        ],
+        "clicks": 6,
+        "impressions": 419,
+        "ctr": 0.014319809069212411,
+        "position": 10.47255369928401
+      },
+      {
+        "keys": [
+          "son depremler"
+        ],
+        "clicks": 5,
+        "impressions": 20,
+        "ctr": 0.25,
+        "position": 14.3
+      },
+      {
+        "keys": [
+          "yakınımda deprem"
+        ],
+        "clicks": 5,
+        "impressions": 301,
+        "ctr": 0.016611295681063124,
+        "position": 8.215946843853821
+      },
+      {
+        "keys": [
+          "afad deprem haritası canlı"
+        ],
+        "clicks": 4,
+        "impressions": 20,
+        "ctr": 0.2,
+        "position": 19.6
+      },
+      {
+        "keys": [
+          "anlik deprem"
+        ],
+        "clicks": 4,
+        "impressions": 624,
+        "ctr": 0.00641025641025641,
+        "position": 11.596153846153847
+      },
+      {
+        "keys": [
+          "anlık deprem bilgisi"
+        ],
+        "clicks": 4,
+        "impressions": 441,
+        "ctr": 0.009070294784580499,
+        "position": 9.841269841269842
+      },
+      {
+        "keys": [
+          "deprem anlik"
+        ],
+        "clicks": 4,
+        "impressions": 365,
+        "ctr": 0.010958904109589041,
+        "position": 9.663013698630136
+      },
+      {
+        "keys": [
+          "deprem anlık"
+        ],
+        "clicks": 4,
+        "impressions": 865,
+        "ctr": 0.004624277456647399,
+        "position": 11.623121387283238
+      },
+      {
+        "keys": [
+          "deprem canlı harita"
+        ],
+        "clicks": 4,
+        "impressions": 196,
+        "ctr": 0.02040816326530612,
+        "position": 9.127551020408163
+      },
+      {
+        "keys": [
+          "yakındaki depremler"
+        ],
+        "clicks": 4,
+        "impressions": 546,
+        "ctr": 0.007326007326007326,
+        "position": 8.873626373626372
+      },
+      {
+        "keys": [
+          "canlı depremler"
+        ],
+        "clicks": 3,
+        "impressions": 89,
+        "ctr": 0.033707865168539325,
+        "position": 9.820224719101123
+      },
+      {
+        "keys": [
+          "deprem anlık takip"
+        ],
+        "clicks": 3,
+        "impressions": 74,
+        "ctr": 0.04054054054054054,
+        "position": 11.432432432432432
+      },
+      {
+        "keys": [
+          "deprem canlı"
+        ],
+        "clicks": 3,
+        "impressions": 633,
+        "ctr": 0.004739336492890996,
+        "position": 12.139020537124802
+      },
+      {
+        "keys": [
+          "deprem takibi"
+        ],
+        "clicks": 3,
+        "impressions": 79,
+        "ctr": 0.0379746835443038,
+        "position": 9.151898734177216
+      },
+      {
+        "keys": [
+          "dünya deprem haritası canlı"
+        ],
+        "clicks": 3,
+        "impressions": 15,
+        "ctr": 0.2,
+        "position": 40.13333333333333
+      },
+      {
+        "keys": [
+          "son dakika deprem haritası"
+        ],
+        "clicks": 3,
+        "impressions": 298,
+        "ctr": 0.010067114093959731,
+        "position": 7.134228187919463
+      },
+      {
+        "keys": [
+          "yakındaki deprem"
+        ],
+        "clicks": 3,
+        "impressions": 176,
+        "ctr": 0.017045454545454544,
+        "position": 7.920454545454546
+      },
+      {
+        "keys": [
+          "anlık depreö"
+        ],
+        "clicks": 2,
+        "impressions": 9,
+        "ctr": 0.2222222222222222,
+        "position": 9.11111111111111
+      },
+      {
+        "keys": [
+          "canlı deprem haritası türkiye"
+        ],
+        "clicks": 2,
+        "impressions": 137,
+        "ctr": 0.014598540145985401,
+        "position": 10.547445255474452
+      },
+      {
+        "keys": [
+          "fay hattı canlı"
+        ],
+        "clicks": 2,
+        "impressions": 23,
+        "ctr": 0.08695652173913043,
+        "position": 11.826086956521738
+      },
+      {
+        "keys": [
+          "son dakika deprem harita"
+        ],
+        "clicks": 2,
+        "impressions": 96,
+        "ctr": 0.020833333333333332,
+        "position": 9.489583333333334
+      },
+      {
+        "keys": [
+          "son deprem"
+        ],
+        "clicks": 2,
+        "impressions": 3,
+        "ctr": 0.6666666666666666,
+        "position": 14
+      },
+      {
+        "keys": [
+          "türkiye deprem haritası canlı"
+        ],
+        "clicks": 2,
+        "impressions": 127,
+        "ctr": 0.015748031496062992,
+        "position": 11.023622047244094
+      },
+      {
+        "keys": [
+          "afad canlı deprem haritası"
+        ],
+        "clicks": 1,
+        "impressions": 8,
+        "ctr": 0.125,
+        "position": 11.375
+      },
+      {
+        "keys": [
+          "anlik deprem durumu"
+        ],
+        "clicks": 1,
+        "impressions": 10,
+        "ctr": 0.1,
+        "position": 10.3
+      },
+      {
+        "keys": [
+          "anlık deprem bilgileri"
+        ],
+        "clicks": 1,
+        "impressions": 20,
+        "ctr": 0.05,
+        "position": 9.75
+      },
+      {
+        "keys": [
+          "anlık değrem"
+        ],
+        "clicks": 1,
+        "impressions": 30,
+        "ctr": 0.03333333333333333,
+        "position": 9.133333333333333
+      },
+      {
+        "keys": [
+          "anlıkdeprem"
+        ],
+        "clicks": 1,
+        "impressions": 90,
+        "ctr": 0.011111111111111112,
+        "position": 6.111111111111111
+      },
+      {
+        "keys": [
+          "ayamama deresi"
+        ],
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 11.5
+      },
+      {
+        "keys": [
+          "canli deprem"
+        ],
+        "clicks": 1,
+        "impressions": 184,
+        "ctr": 0.005434782608695652,
+        "position": 11.434782608695652
+      },
+      {
+        "keys": [
+          "canli deprem haritasi"
+        ],
+        "clicks": 1,
+        "impressions": 43,
+        "ctr": 0.023255813953488372,
+        "position": 12.44186046511628
+      },
+      {
+        "keys": [
+          "canlı deprem izleme"
+        ],
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 0.14285714285714285,
+        "position": 14.285714285714286
+      },
+      {
+        "keys": [
+          "canlı deprem son dakika"
+        ],
+        "clicks": 1,
+        "impressions": 63,
+        "ctr": 0.015873015873015872,
+        "position": 9.587301587301587
+      },
+      {
+        "keys": [
+          "deprem anlık harita"
+        ],
+        "clicks": 1,
+        "impressions": 14,
+        "ctr": 0.07142857142857142,
+        "position": 17.357142857142858
+      },
+      {
+        "keys": [
+          "deprem canli"
+        ],
+        "clicks": 1,
+        "impressions": 82,
+        "ctr": 0.012195121951219513,
+        "position": 10.365853658536585
+      },
+      {
+        "keys": [
+          "deprem canlı takip"
+        ],
+        "clicks": 1,
+        "impressions": 15,
+        "ctr": 0.06666666666666667,
+        "position": 10.933333333333334
+      },
+      {
+        "keys": [
+          "deprem son dakika canlı"
+        ],
+        "clicks": 1,
+        "impressions": 22,
+        "ctr": 0.045454545454545456,
+        "position": 10
+      },
+      {
+        "keys": [
+          "deprem takip"
+        ],
+        "clicks": 1,
+        "impressions": 364,
+        "ctr": 0.0027472527472527475,
+        "position": 11.115384615384615
+      },
+      {
+        "keys": [
+          "deprem takip canlı"
+        ],
+        "clicks": 1,
+        "impressions": 6,
+        "ctr": 0.16666666666666666,
+        "position": 22.5
+      },
+      {
+        "keys": [
+          "deprem takip haritası"
+        ],
+        "clicks": 1,
+        "impressions": 32,
+        "ctr": 0.03125,
+        "position": 10.28125
+      },
+      {
+        "keys": [
+          "deprem yakınımda"
+        ],
+        "clicks": 1,
+        "impressions": 69,
+        "ctr": 0.014492753623188406,
+        "position": 7.811594202898551
+      },
+      {
+        "keys": [
+          "en son deprem"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 12
+      },
+      {
+        "keys": [
+          "sismograf"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 8
+      },
+      {
+        "keys": [
+          "son depremler canlı harita"
+        ],
+        "clicks": 1,
+        "impressions": 14,
+        "ctr": 0.07142857142857142,
+        "position": 17.571428571428573
+      },
+      {
+        "keys": [
+          "son depremler harita"
+        ],
+        "clicks": 1,
+        "impressions": 297,
+        "ctr": 0.003367003367003367,
+        "position": 12.771043771043772
+      },
+      {
+        "keys": [
+          "türkiye anlık deprem"
+        ],
+        "clicks": 1,
+        "impressions": 124,
+        "ctr": 0.008064516129032258,
+        "position": 10.806451612903226
+      },
+      {
+        "keys": [
+          "yakın depremler"
+        ],
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 0.14285714285714285,
+        "position": 13.285714285714286
+      },
+      {
+        "keys": [
+          "yakınlarda deprem"
+        ],
+        "clicks": 1,
+        "impressions": 66,
+        "ctr": 0.015151515151515152,
+        "position": 9.212121212121213
+      },
+      {
+        "keys": [
+          "2020 elazığ depremi fay hattı"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "keys": [
+          "ablık deprem"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11.666666666666666
+      },
+      {
+        "keys": [
+          "afad anlık deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 15.5
+      },
+      {
+        "keys": [
+          "afad çök kapan tutun deprem anında ne yapmalı"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "keys": [
+          "afad çök kapan tutun resmi sayfa"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "afad deprem canlı harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "afad son depremler api"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "keys": [
+          "afad son depremler harita"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 10.090909090909092
+      },
+      {
+        "keys": [
+          "aktif deprem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "aktif deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 40.333333333333336
+      },
+      {
+        "keys": [
+          "ankara deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "anlik deprem takibi"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 17.857142857142858
+      },
+      {
+        "keys": [
+          "anlik depremler"
+        ],
+        "clicks": 0,
+        "impressions": 47,
+        "ctr": 0,
+        "position": 10.617021276595745
+      },
+      {
+        "keys": [
+          "anlik.deprem"
+        ],
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 10.26086956521739
+      },
+      {
+        "keys": [
+          "anlık debrem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "anlık depre"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 9.9375
+      },
+      {
+        "keys": [
+          "anlık deprem canlı"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "keys": [
+          "anlık deprem göstergesi"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "anlık deprem haritası türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 29,
+        "ctr": 0,
+        "position": 11.827586206896552
+      },
+      {
+        "keys": [
+          "anlık deprem istanbul"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 7.066666666666666
+      },
+      {
+        "keys": [
+          "anlık deprem izleme"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 29.5
+      },
+      {
+        "keys": [
+          "anlık deprem izmir"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "anlık deprem nerede oldu"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "anlık deprem takibi"
+        ],
+        "clicks": 0,
+        "impressions": 111,
+        "ctr": 0,
+        "position": 13.243243243243244
+      },
+      {
+        "keys": [
+          "anlık deprem takip"
+        ],
+        "clicks": 0,
+        "impressions": 48,
+        "ctr": 0,
+        "position": 9.083333333333334
+      },
+      {
+        "keys": [
+          "anlık deprem çizelgesi"
+        ],
+        "clicks": 0,
+        "impressions": 45,
+        "ctr": 0,
+        "position": 15.955555555555556
+      },
+      {
+        "keys": [
+          "anlık depremler"
+        ],
+        "clicks": 0,
+        "impressions": 97,
+        "ctr": 0,
+        "position": 18.371134020618555
+      },
+      {
+        "keys": [
+          "anlık depremler türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 13.333333333333334
+      },
+      {
+        "keys": [
+          "anlık deprwm"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "keys": [
+          "anlık türkiye deprem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "anında deprem"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 9.25
+      },
+      {
+        "keys": [
+          "artçı deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 53
+      },
+      {
+        "keys": [
+          "az önce deprem nereden bakılır"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 21.666666666666668
+      },
+      {
+        "keys": [
+          "az önce deprem nereden bakılır?"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 30
+      },
+      {
+        "keys": [
+          "az önceki deprem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "boun deprem harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 46
+      },
+      {
+        "keys": [
+          "bugün deprem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "canli deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 12.848484848484848
+      },
+      {
+        "keys": [
+          "canlı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "canlı deprem harit"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "canlı deprem takip"
+        ],
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 9.434782608695652
+      },
+      {
+        "keys": [
+          "canlı deprem verileri"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 31.5
+      },
+      {
+        "keys": [
+          "canlı fay hattı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 33
+      },
+      {
+        "keys": [
+          "dask nedir neleri kapsar"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "keys": [
+          "dask neleri kapsar"
+        ],
+        "clicks": 0,
+        "impressions": 36,
+        "ctr": 0,
+        "position": 73.44444444444444
+      },
+      {
+        "keys": [
+          "dask neyi karşılar"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 72
+      },
+      {
+        "keys": [
+          "dask poliçesi neleri kapsar"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 49
+      },
+      {
+        "keys": [
+          "deprem - bugün"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "deprem ablık"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "keys": [
+          "deprem analiz haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 50
+      },
+      {
+        "keys": [
+          "deprem analizi"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 72.83333333333333
+      },
+      {
+        "keys": [
+          "deprem anlik turkiye"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "deprem anlık türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 11.285714285714286
+      },
+      {
+        "keys": [
+          "deprem api"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 8.857142857142858
+      },
+      {
+        "keys": [
+          "deprem ağı son dakika"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "deprem bilgisi"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "deprem büyüklükleri"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 7.5
+      },
+      {
+        "keys": [
+          "deprem canlı haritası"
+        ],
+        "clicks": 0,
+        "impressions": 21,
+        "ctr": 0,
+        "position": 16.904761904761905
+      },
+      {
+        "keys": [
+          "deprem durumu"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 9.75
+      },
+      {
+        "keys": [
+          "deprem dünya haritası"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 48.333333333333336
+      },
+      {
+        "keys": [
+          "deprem grafiği"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "deprem hareketleri canlı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "deprem harita"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 23.214285714285715
+      },
+      {
+        "keys": [
+          "deprem harita türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "keys": [
+          "deprem haritadı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 30
+      },
+      {
+        "keys": [
+          "deprem haritasi"
+        ],
+        "clicks": 0,
+        "impressions": 39,
+        "ctr": 0,
+        "position": 34.05128205128205
+      },
+      {
+        "keys": [
+          "deprem haritasi canli"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 19.583333333333332
+      },
+      {
+        "keys": [
+          "deprem haritası anlık"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 9.833333333333334
+      },
+      {
+        "keys": [
+          "deprem haritası canlı türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "keys": [
+          "deprem haritası güncel"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 25.75
+      },
+      {
+        "keys": [
+          "deprem haritası son dakika"
+        ],
+        "clicks": 0,
+        "impressions": 45,
+        "ctr": 0,
+        "position": 10.533333333333333
+      },
+      {
+        "keys": [
+          "deprem haritası türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 46
+      },
+      {
+        "keys": [
+          "deprem haritası türkiye canlı"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 15.3125
+      },
+      {
+        "keys": [
+          "deprem izleme"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "deprem izleme haritası"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 24.5
+      },
+      {
+        "keys": [
+          "deprem kandilli harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "keys": [
+          "deprem koeri"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "deprem kıraathanesi"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "deprem live"
+        ],
+        "clicks": 0,
+        "impressions": 27,
+        "ctr": 0,
+        "position": 16.333333333333336
+      },
+      {
+        "keys": [
+          "deprem map"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 26.2
+      },
+      {
+        "keys": [
+          "deprem nereden bakılır"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 46.42857142857143
+      },
+      {
+        "keys": [
+          "deprem noktası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 33
+      },
+      {
+        "keys": [
+          "deprem online harita"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 35.5
+      },
+      {
+        "keys": [
+          "deprem rasathanesi harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "keys": [
+          "deprem sayfası"
+        ],
+        "clicks": 0,
+        "impressions": 21,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "deprem sismik hareketleri"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 32
+      },
+      {
+        "keys": [
+          "deprem sismik haritası"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "keys": [
+          "deprem sitesi"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 32.8
+      },
+      {
+        "keys": [
+          "deprem son dakika"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "keys": [
+          "deprem son dakika harita"
+        ],
+        "clicks": 0,
+        "impressions": 114,
+        "ctr": 0,
+        "position": 9.833333333333334
+      },
+      {
+        "keys": [
+          "deprem son dakika haritası"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 20
+      },
+      {
+        "keys": [
+          "deprem son dakika türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "deprem sorgulama"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 17.5
+      },
+      {
+        "keys": [
+          "deprem takip etme"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "keys": [
+          "deprem türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "keys": [
+          "deprem türkiye canli"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "deprem veri"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 65.33333333333333
+      },
+      {
+        "keys": [
+          "deprem verileri"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 45.57142857142857
+      },
+      {
+        "keys": [
+          "deprem verisi indirme"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 22
+      },
+      {
+        "keys": [
+          "deprem çizelgesi"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 47
+      },
+      {
+        "keys": [
+          "deprem ölçer"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 36
+      },
+      {
+        "keys": [
+          "deprem ölçüm"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 36
+      },
+      {
+        "keys": [
+          "deprem ölçümleri"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 54.25
+      },
+      {
+        "keys": [
+          "deprem şuan"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 8.777777777777779
+      },
+      {
+        "keys": [
+          "deprem.com"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "depremin haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 18
+      },
+      {
+        "keys": [
+          "depremler"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "keys": [
+          "depremler acil durum kaynakları"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "depremtakip.com"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 7.8125
+      },
+      {
+        "keys": [
+          "değrem anlık"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "dünya deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 67
+      },
+      {
+        "keys": [
+          "dünya depremleri anlık"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 75.2
+      },
+      {
+        "keys": [
+          "dünya son depremler"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "dünyada anlık depremler"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "keys": [
+          "dünyadaki depremler anlık"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "keys": [
+          "elazig depremi fay hattı"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11.666666666666666
+      },
+      {
+        "keys": [
+          "elazığ anlık deprem"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "elazığ deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "elazığ deprem riski"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 48
+      },
+      {
+        "keys": [
+          "elazığ depremi fay hattı"
+        ],
+        "clicks": 0,
+        "impressions": 38,
+        "ctr": 0,
+        "position": 13.526315789473685
+      },
+      {
+        "keys": [
+          "elazığ depremi hangi fay hattı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "elazığ depremi hangi fay hattı üzerinde"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "elazığ fay hattı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 80
+      },
+      {
+        "keys": [
+          "elazığ fay hattı haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "en son depremler"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "fay hattı haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "fay hattı haritası canlı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "gerçek fay hattı görüntüsü"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "google deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 36.5
+      },
+      {
+        "keys": [
+          "güncel deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 14.090909090909092
+      },
+      {
+        "keys": [
+          "harita deprem"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 22.666666666666668
+      },
+      {
+        "keys": [
+          "harita üzerinde deprem"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 23.75
+      },
+      {
+        "keys": [
+          "harita üzerinde son depremler"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 35.5
+      },
+      {
+        "keys": [
+          "haritada deprem bölgeleri"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 72.5
+      },
+      {
+        "keys": [
+          "haritalı deprem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "keys": [
+          "haritalı depremler"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 25
+      },
+      {
+        "keys": [
+          "haritalı son depremler"
+        ],
+        "clicks": 0,
+        "impressions": 36,
+        "ctr": 0,
+        "position": 24.63888888888889
+      },
+      {
+        "keys": [
+          "haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "ilk yardım çantası nasıl yapılır"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "istanbul deprem"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      }
+    ],
+    "page": [
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/"
+        ],
+        "clicks": 1086,
+        "impressions": 127666,
+        "ctr": 0.00850657183588426,
+        "position": 8.288792630770917
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html"
+        ],
+        "clicks": 7,
+        "impressions": 776,
+        "ctr": 0.00902061855670103,
+        "position": 10.699742268041238
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-istanbul.html"
+        ],
+        "clicks": 3,
+        "impressions": 98,
+        "ctr": 0.030612244897959183,
+        "position": 8.255102040816325
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/embed.html"
+        ],
+        "clicks": 1,
+        "impressions": 18,
+        "ctr": 0.05555555555555555,
+        "position": 6.111111111111111
+      },
+      {
+        "keys": [
+          "http://yakinimdakideprem.com/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/blog-arac-kullanirken.html"
+        ],
+        "clicks": 0,
+        "impressions": 28,
+        "ctr": 0,
+        "position": 6.678571428571429
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/blog-dask-nedir.html"
+        ],
+        "clicks": 0,
+        "impressions": 42,
+        "ctr": 0,
+        "position": 67.83333333333333
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/blog-deprem-cantasi.html"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 3.875
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/blog-deprem-guvenlik-bilgileri.html"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 8.2
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/blog-deprem-sonrasi-ilk-24-saat.html"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 6.142857142857143
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/cerez-politikasi.html"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 6.8
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-aninda.html"
+        ],
+        "clicks": 0,
+        "impressions": 110,
+        "ctr": 0,
+        "position": 7.4363636363636365
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-elazig.html"
+        ],
+        "clicks": 0,
+        "impressions": 96,
+        "ctr": 0,
+        "position": 13.114583333333334
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/ilk-yardim-cantasi.html"
+        ],
+        "clicks": 0,
+        "impressions": 104,
+        "ctr": 0,
+        "position": 9.317307692307692
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/images/cokapantutun.webp"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/son-dakika-deprem.html"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 7.454545454545454
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/sorumluluk-reddi.html"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/widget-son-depremler.html"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 30
+      }
+    ],
+    "country": [
+      {
+        "keys": [
+          "tur"
+        ],
+        "clicks": 1054,
+        "impressions": 124688,
+        "ctr": 0.008453098934941615,
+        "position": 8.302033876555884
+      },
+      {
+        "keys": [
+          "deu"
+        ],
+        "clicks": 8,
+        "impressions": 550,
+        "ctr": 0.014545454545454545,
+        "position": 10.06
+      },
+      {
+        "keys": [
+          "ita"
+        ],
+        "clicks": 5,
+        "impressions": 283,
+        "ctr": 0.0176678445229682,
+        "position": 8.607773851590107
+      },
+      {
+        "keys": [
+          "bgr"
+        ],
+        "clicks": 4,
+        "impressions": 110,
+        "ctr": 0.03636363636363636,
+        "position": 8.7
+      },
+      {
+        "keys": [
+          "mkd"
+        ],
+        "clicks": 3,
+        "impressions": 109,
+        "ctr": 0.027522935779816515,
+        "position": 6.394495412844036
+      },
+      {
+        "keys": [
+          "nld"
+        ],
+        "clicks": 3,
+        "impressions": 162,
+        "ctr": 0.018518518518518517,
+        "position": 9.580246913580247
+      },
+      {
+        "keys": [
+          "aze"
+        ],
+        "clicks": 2,
+        "impressions": 207,
+        "ctr": 0.00966183574879227,
+        "position": 9.628019323671497
+      },
+      {
+        "keys": [
+          "xkk"
+        ],
+        "clicks": 2,
+        "impressions": 349,
+        "ctr": 0.0057306590257879654,
+        "position": 5.693409742120344
+      },
+      {
+        "keys": [
+          "afg"
+        ],
+        "clicks": 1,
+        "impressions": 41,
+        "ctr": 0.024390243902439025,
+        "position": 7.073170731707317
+      },
+      {
+        "keys": [
+          "bel"
+        ],
+        "clicks": 1,
+        "impressions": 19,
+        "ctr": 0.05263157894736842,
+        "position": 8.842105263157894
+      },
+      {
+        "keys": [
+          "cyp"
+        ],
+        "clicks": 1,
+        "impressions": 165,
+        "ctr": 0.006060606060606061,
+        "position": 10.775757575757575
+      },
+      {
+        "keys": [
+          "egy"
+        ],
+        "clicks": 1,
+        "impressions": 11,
+        "ctr": 0.09090909090909091,
+        "position": 15.636363636363637
+      },
+      {
+        "keys": [
+          "grc"
+        ],
+        "clicks": 1,
+        "impressions": 232,
+        "ctr": 0.004310344827586207,
+        "position": 7.939655172413793
+      },
+      {
+        "keys": [
+          "irn"
+        ],
+        "clicks": 1,
+        "impressions": 12,
+        "ctr": 0.08333333333333333,
+        "position": 10
+      },
+      {
+        "keys": [
+          "kaz"
+        ],
+        "clicks": 1,
+        "impressions": 193,
+        "ctr": 0.0051813471502590676,
+        "position": 5.150259067357513
+      },
+      {
+        "keys": [
+          "per"
+        ],
+        "clicks": 1,
+        "impressions": 9,
+        "ctr": 0.1111111111111111,
+        "position": 6.777777777777778
+      },
+      {
+        "keys": [
+          "sau"
+        ],
+        "clicks": 1,
+        "impressions": 38,
+        "ctr": 0.02631578947368421,
+        "position": 9.868421052631579
+      },
+      {
+        "keys": [
+          "swe"
+        ],
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 0.14285714285714285,
+        "position": 11
+      },
+      {
+        "keys": [
+          "syr"
+        ],
+        "clicks": 1,
+        "impressions": 52,
+        "ctr": 0.019230769230769232,
+        "position": 9.288461538461538
+      },
+      {
+        "keys": [
+          "tkm"
+        ],
+        "clicks": 1,
+        "impressions": 21,
+        "ctr": 0.047619047619047616,
+        "position": 7.333333333333333
+      },
+      {
+        "keys": [
+          "usa"
+        ],
+        "clicks": 1,
+        "impressions": 716,
+        "ctr": 0.0013966480446927375,
+        "position": 9.1731843575419
+      },
+      {
+        "keys": [
+          "uzb"
+        ],
+        "clicks": 1,
+        "impressions": 55,
+        "ctr": 0.01818181818181818,
+        "position": 6.909090909090909
+      },
+      {
+        "keys": [
+          "zzz"
+        ],
+        "clicks": 1,
+        "impressions": 11,
+        "ctr": 0.09090909090909091,
+        "position": 8.727272727272727
+      },
+      {
+        "keys": [
+          "alb"
+        ],
+        "clicks": 0,
+        "impressions": 51,
+        "ctr": 0,
+        "position": 6.078431372549019
+      },
+      {
+        "keys": [
+          "are"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 9.222222222222221
+      },
+      {
+        "keys": [
+          "arg"
+        ],
+        "clicks": 0,
+        "impressions": 18,
+        "ctr": 0,
+        "position": 20.77777777777778
+      },
+      {
+        "keys": [
+          "arm"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "aus"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 7.8
+      },
+      {
+        "keys": [
+          "aut"
+        ],
+        "clicks": 0,
+        "impressions": 69,
+        "ctr": 0,
+        "position": 10.63768115942029
+      },
+      {
+        "keys": [
+          "bgd"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 8.545454545454547
+      },
+      {
+        "keys": [
+          "bhr"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "bih"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "blr"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 8.666666666666668
+      },
+      {
+        "keys": [
+          "bra"
+        ],
+        "clicks": 0,
+        "impressions": 43,
+        "ctr": 0,
+        "position": 7.744186046511628
+      },
+      {
+        "keys": [
+          "can"
+        ],
+        "clicks": 0,
+        "impressions": 49,
+        "ctr": 0,
+        "position": 7.73469387755102
+      },
+      {
+        "keys": [
+          "che"
+        ],
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 10.727272727272727
+      },
+      {
+        "keys": [
+          "chl"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "chn"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 8.6
+      },
+      {
+        "keys": [
+          "col"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 14.8
+      },
+      {
+        "keys": [
+          "cri"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "keys": [
+          "cub"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "cze"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10.333333333333334
+      },
+      {
+        "keys": [
+          "dnk"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 7.666666666666667
+      },
+      {
+        "keys": [
+          "dom"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "keys": [
+          "dza"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 13.4
+      },
+      {
+        "keys": [
+          "ecu"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 9.75
+      },
+      {
+        "keys": [
+          "esp"
+        ],
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 11.636363636363637
+      },
+      {
+        "keys": [
+          "est"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "eth"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 20.25
+      },
+      {
+        "keys": [
+          "fin"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 7.75
+      },
+      {
+        "keys": [
+          "fra"
+        ],
+        "clicks": 0,
+        "impressions": 73,
+        "ctr": 0,
+        "position": 10.219178082191782
+      },
+      {
+        "keys": [
+          "gbr"
+        ],
+        "clicks": 0,
+        "impressions": 85,
+        "ctr": 0,
+        "position": 11.75294117647059
+      },
+      {
+        "keys": [
+          "geo"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 7.933333333333334
+      },
+      {
+        "keys": [
+          "guy"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "keys": [
+          "hkg"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 6.75
+      },
+      {
+        "keys": [
+          "hrv"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 13.5
+      },
+      {
+        "keys": [
+          "hun"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "idn"
+        ],
+        "clicks": 0,
+        "impressions": 21,
+        "ctr": 0,
+        "position": 23.666666666666668
+      },
+      {
+        "keys": [
+          "ind"
+        ],
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 24.09090909090909
+      },
+      {
+        "keys": [
+          "irl"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "keys": [
+          "irq"
+        ],
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 8.529411764705882
+      },
+      {
+        "keys": [
+          "isr"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 38
+      },
+      {
+        "keys": [
+          "jam"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "keys": [
+          "jor"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "jpn"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 10.6
+      },
+      {
+        "keys": [
+          "ken"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "kgz"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 7.111111111111111
+      },
+      {
+        "keys": [
+          "kor"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5.25
+      },
+      {
+        "keys": [
+          "kwt"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "lbn"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "lbr"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "keys": [
+          "lby"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 7.2
+      },
+      {
+        "keys": [
+          "lka"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "ltu"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "lux"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7.5
+      },
+      {
+        "keys": [
+          "lva"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "mac"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "mar"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 8.333333333333332
+      },
+      {
+        "keys": [
+          "mda"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "mdv"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "mex"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 9.666666666666666
+      },
+      {
+        "keys": [
+          "mlt"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 8.6
+      },
+      {
+        "keys": [
+          "mmr"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "mne"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 5.333333333333333
+      },
+      {
+        "keys": [
+          "mrt"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "mys"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "keys": [
+          "nga"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "nor"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 9.4
+      },
+      {
+        "keys": [
+          "npl"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "keys": [
+          "omn"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "pak"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 7.25
+      },
+      {
+        "keys": [
+          "pan"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "phl"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 17.2
+      },
+      {
+        "keys": [
+          "pol"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 9.4
+      },
+      {
+        "keys": [
+          "pri"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "prt"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 8.75
+      },
+      {
+        "keys": [
+          "pry"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "pse"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 13.5
+      },
+      {
+        "keys": [
+          "qat"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 7.416666666666667
+      },
+      {
+        "keys": [
+          "rou"
+        ],
+        "clicks": 0,
+        "impressions": 25,
+        "ctr": 0,
+        "position": 7.72
+      },
+      {
+        "keys": [
+          "rus"
+        ],
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 8.210526315789473
+      },
+      {
+        "keys": [
+          "sdn"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "sgp"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 7.833333333333333
+      },
+      {
+        "keys": [
+          "slv"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "som"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "keys": [
+          "srb"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8.333333333333332
+      },
+      {
+        "keys": [
+          "svk"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "syc"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "tha"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "tjk"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 5.888888888888889
+      },
+      {
+        "keys": [
+          "tto"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "tun"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "tza"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "ukr"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 7.642857142857143
+      },
+      {
+        "keys": [
+          "ury"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8.333333333333332
+      },
+      {
+        "keys": [
+          "ven"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "vnm"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 15.727272727272727
+      },
+      {
+        "keys": [
+          "zaf"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      }
+    ],
+    "device": [
+      {
+        "keys": [
+          "MOBILE"
+        ],
+        "clicks": 1013,
+        "impressions": 118673,
+        "ctr": 0.00853606127762844,
+        "position": 8.115401144320948
+      },
+      {
+        "keys": [
+          "DESKTOP"
+        ],
+        "clicks": 76,
+        "impressions": 8131,
+        "ctr": 0.009346943795351125,
+        "position": 11.447915385561432
+      },
+      {
+        "keys": [
+          "TABLET"
+        ],
+        "clicks": 7,
+        "impressions": 2141,
+        "ctr": 0.003269500233535731,
+        "position": 8.100887435777674
+      }
+    ],
+    "page_query": [
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "yakınımdaki deprem"
+        ],
+        "clicks": 682,
+        "impressions": 96080,
+        "ctr": 0.007098251457119067,
+        "position": 7.666965029142381
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem"
+        ],
+        "clicks": 103,
+        "impressions": 10895,
+        "ctr": 0.00945387792565397,
+        "position": 9.604130335016063
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canlı deprem haritası"
+        ],
+        "clicks": 28,
+        "impressions": 3160,
+        "ctr": 0.008860759493670886,
+        "position": 8.99240506329114
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "sismik harita canlı"
+        ],
+        "clicks": 25,
+        "impressions": 240,
+        "ctr": 0.10416666666666667,
+        "position": 9.854166666666666
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem haritası canlı"
+        ],
+        "clicks": 21,
+        "impressions": 979,
+        "ctr": 0.021450459652706845,
+        "position": 10.083758937691522
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem türkiye"
+        ],
+        "clicks": 14,
+        "impressions": 883,
+        "ctr": 0.015855039637599093,
+        "position": 10.133635334088336
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canlı deprem"
+        ],
+        "clicks": 13,
+        "impressions": 1403,
+        "ctr": 0.009265858873841768,
+        "position": 10.143977191732002
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "yakınımdaki depremler"
+        ],
+        "clicks": 12,
+        "impressions": 294,
+        "ctr": 0.04081632653061224,
+        "position": 8.823129251700681
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem haritası"
+        ],
+        "clicks": 10,
+        "impressions": 125,
+        "ctr": 0.08,
+        "position": 32.936
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "yakinimdaki deprem"
+        ],
+        "clicks": 8,
+        "impressions": 319,
+        "ctr": 0.025078369905956112,
+        "position": 6.028213166144201
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canlı deprem takibi"
+        ],
+        "clicks": 7,
+        "impressions": 196,
+        "ctr": 0.03571428571428571,
+        "position": 8.959183673469388
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem"
+        ],
+        "clicks": 7,
+        "impressions": 31,
+        "ctr": 0.22580645161290322,
+        "position": 16.774193548387096
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem haritası"
+        ],
+        "clicks": 6,
+        "impressions": 419,
+        "ctr": 0.014319809069212411,
+        "position": 10.47255369928401
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son depremler"
+        ],
+        "clicks": 5,
+        "impressions": 20,
+        "ctr": 0.25,
+        "position": 14.3
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "yakınımda deprem"
+        ],
+        "clicks": 5,
+        "impressions": 301,
+        "ctr": 0.016611295681063124,
+        "position": 8.215946843853821
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "afad deprem haritası canlı"
+        ],
+        "clicks": 4,
+        "impressions": 20,
+        "ctr": 0.2,
+        "position": 19.6
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlik deprem"
+        ],
+        "clicks": 4,
+        "impressions": 624,
+        "ctr": 0.00641025641025641,
+        "position": 11.596153846153847
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem bilgisi"
+        ],
+        "clicks": 4,
+        "impressions": 441,
+        "ctr": 0.009070294784580499,
+        "position": 9.841269841269842
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem anlik"
+        ],
+        "clicks": 4,
+        "impressions": 365,
+        "ctr": 0.010958904109589041,
+        "position": 9.663013698630136
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem anlık"
+        ],
+        "clicks": 4,
+        "impressions": 865,
+        "ctr": 0.004624277456647399,
+        "position": 11.623121387283238
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem canlı harita"
+        ],
+        "clicks": 4,
+        "impressions": 196,
+        "ctr": 0.02040816326530612,
+        "position": 9.127551020408163
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "yakındaki depremler"
+        ],
+        "clicks": 4,
+        "impressions": 546,
+        "ctr": 0.007326007326007326,
+        "position": 8.873626373626372
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canlı depremler"
+        ],
+        "clicks": 3,
+        "impressions": 89,
+        "ctr": 0.033707865168539325,
+        "position": 9.820224719101123
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem anlık takip"
+        ],
+        "clicks": 3,
+        "impressions": 74,
+        "ctr": 0.04054054054054054,
+        "position": 11.432432432432432
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem canlı"
+        ],
+        "clicks": 3,
+        "impressions": 633,
+        "ctr": 0.004739336492890996,
+        "position": 12.139020537124802
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem takibi"
+        ],
+        "clicks": 3,
+        "impressions": 79,
+        "ctr": 0.0379746835443038,
+        "position": 9.151898734177216
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "dünya deprem haritası canlı"
+        ],
+        "clicks": 3,
+        "impressions": 15,
+        "ctr": 0.2,
+        "position": 40.13333333333333
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son dakika deprem haritası"
+        ],
+        "clicks": 3,
+        "impressions": 298,
+        "ctr": 0.010067114093959731,
+        "position": 7.134228187919463
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "yakındaki deprem"
+        ],
+        "clicks": 3,
+        "impressions": 176,
+        "ctr": 0.017045454545454544,
+        "position": 7.920454545454546
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık depreö"
+        ],
+        "clicks": 2,
+        "impressions": 9,
+        "ctr": 0.2222222222222222,
+        "position": 9.11111111111111
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canlı deprem haritası türkiye"
+        ],
+        "clicks": 2,
+        "impressions": 137,
+        "ctr": 0.014598540145985401,
+        "position": 10.547445255474452
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "fay hattı canlı"
+        ],
+        "clicks": 2,
+        "impressions": 23,
+        "ctr": 0.08695652173913043,
+        "position": 11.826086956521738
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son dakika deprem harita"
+        ],
+        "clicks": 2,
+        "impressions": 96,
+        "ctr": 0.020833333333333332,
+        "position": 9.489583333333334
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son deprem"
+        ],
+        "clicks": 2,
+        "impressions": 3,
+        "ctr": 0.6666666666666666,
+        "position": 14
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "türkiye deprem haritası canlı"
+        ],
+        "clicks": 2,
+        "impressions": 127,
+        "ctr": 0.015748031496062992,
+        "position": 11.023622047244094
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "afad canlı deprem haritası"
+        ],
+        "clicks": 1,
+        "impressions": 8,
+        "ctr": 0.125,
+        "position": 11.375
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlik deprem durumu"
+        ],
+        "clicks": 1,
+        "impressions": 10,
+        "ctr": 0.1,
+        "position": 10.3
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem bilgileri"
+        ],
+        "clicks": 1,
+        "impressions": 20,
+        "ctr": 0.05,
+        "position": 9.75
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık değrem"
+        ],
+        "clicks": 1,
+        "impressions": 30,
+        "ctr": 0.03333333333333333,
+        "position": 9.133333333333333
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlıkdeprem"
+        ],
+        "clicks": 1,
+        "impressions": 90,
+        "ctr": 0.011111111111111112,
+        "position": 6.111111111111111
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canli deprem"
+        ],
+        "clicks": 1,
+        "impressions": 184,
+        "ctr": 0.005434782608695652,
+        "position": 11.434782608695652
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canli deprem haritasi"
+        ],
+        "clicks": 1,
+        "impressions": 43,
+        "ctr": 0.023255813953488372,
+        "position": 12.44186046511628
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canlı deprem izleme"
+        ],
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 0.14285714285714285,
+        "position": 14.285714285714286
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canlı deprem son dakika"
+        ],
+        "clicks": 1,
+        "impressions": 63,
+        "ctr": 0.015873015873015872,
+        "position": 9.587301587301587
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem anlık harita"
+        ],
+        "clicks": 1,
+        "impressions": 14,
+        "ctr": 0.07142857142857142,
+        "position": 17.357142857142858
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem canli"
+        ],
+        "clicks": 1,
+        "impressions": 82,
+        "ctr": 0.012195121951219513,
+        "position": 10.365853658536585
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem canlı takip"
+        ],
+        "clicks": 1,
+        "impressions": 15,
+        "ctr": 0.06666666666666667,
+        "position": 10.933333333333334
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem son dakika canlı"
+        ],
+        "clicks": 1,
+        "impressions": 22,
+        "ctr": 0.045454545454545456,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem takip"
+        ],
+        "clicks": 1,
+        "impressions": 364,
+        "ctr": 0.0027472527472527475,
+        "position": 11.115384615384615
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem takip canlı"
+        ],
+        "clicks": 1,
+        "impressions": 6,
+        "ctr": 0.16666666666666666,
+        "position": 22.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem takip haritası"
+        ],
+        "clicks": 1,
+        "impressions": 32,
+        "ctr": 0.03125,
+        "position": 10.28125
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem yakınımda"
+        ],
+        "clicks": 1,
+        "impressions": 69,
+        "ctr": 0.014492753623188406,
+        "position": 7.811594202898551
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "en son deprem"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 12
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "sismograf"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 8
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son depremler canlı harita"
+        ],
+        "clicks": 1,
+        "impressions": 14,
+        "ctr": 0.07142857142857142,
+        "position": 17.571428571428573
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son depremler harita"
+        ],
+        "clicks": 1,
+        "impressions": 297,
+        "ctr": 0.003367003367003367,
+        "position": 12.771043771043772
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "türkiye anlık deprem"
+        ],
+        "clicks": 1,
+        "impressions": 124,
+        "ctr": 0.008064516129032258,
+        "position": 10.806451612903226
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "yakın depremler"
+        ],
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": 0.14285714285714285,
+        "position": 13.285714285714286
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "yakınlarda deprem"
+        ],
+        "clicks": 1,
+        "impressions": 66,
+        "ctr": 0.015151515151515152,
+        "position": 9.212121212121213
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-istanbul.html",
+          "ayamama deresi"
+        ],
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 11.5
+      },
+      {
+        "keys": [
+          "http://yakinimdakideprem.com/",
+          "kandilli"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "ablık deprem"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11.666666666666666
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "afad anlık deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 15.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "afad deprem canlı harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "afad son depremler harita"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 10.090909090909092
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "aktif deprem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "aktif deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 40.333333333333336
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "ankara deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlik deprem takibi"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 17.857142857142858
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlik depremler"
+        ],
+        "clicks": 0,
+        "impressions": 47,
+        "ctr": 0,
+        "position": 10.617021276595745
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlik.deprem"
+        ],
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 10.26086956521739
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık debrem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık depre"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 9.9375
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem canlı"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem göstergesi"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem haritası türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 29,
+        "ctr": 0,
+        "position": 11.827586206896552
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem istanbul"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 7.066666666666666
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem izleme"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 29.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem izmir"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem nerede oldu"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem takibi"
+        ],
+        "clicks": 0,
+        "impressions": 111,
+        "ctr": 0,
+        "position": 13.243243243243244
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem takip"
+        ],
+        "clicks": 0,
+        "impressions": 48,
+        "ctr": 0,
+        "position": 9.083333333333334
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprem çizelgesi"
+        ],
+        "clicks": 0,
+        "impressions": 45,
+        "ctr": 0,
+        "position": 15.955555555555556
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık depremler"
+        ],
+        "clicks": 0,
+        "impressions": 97,
+        "ctr": 0,
+        "position": 18.371134020618555
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık depremler türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 13.333333333333334
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık deprwm"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anlık türkiye deprem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "anında deprem"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 9.25
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "artçı deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 53
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "az önce deprem nereden bakılır"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 21.666666666666668
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "az önce deprem nereden bakılır?"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 30
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "az önceki deprem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "bugün deprem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canli deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 12.848484848484848
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canlı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canlı deprem harit"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canlı deprem takip"
+        ],
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 9.434782608695652
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canlı deprem verileri"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "canlı fay hattı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 33
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem - bugün"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem ablık"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem analiz haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 50
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem anlik turkiye"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem anlık türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 11.285714285714286
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem ağı son dakika"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem bilgisi"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem büyüklükleri"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 7.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem canlı haritası"
+        ],
+        "clicks": 0,
+        "impressions": 21,
+        "ctr": 0,
+        "position": 16.904761904761905
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem durumu"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 9.75
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem dünya haritası"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 48.333333333333336
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem grafiği"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem hareketleri canlı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem harita"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 23.214285714285715
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem harita türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem haritadı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 30
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem haritasi"
+        ],
+        "clicks": 0,
+        "impressions": 39,
+        "ctr": 0,
+        "position": 34.05128205128205
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem haritasi canli"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 19.583333333333332
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem haritası anlık"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 9.833333333333334
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem haritası canlı türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem haritası güncel"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 25.75
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem haritası son dakika"
+        ],
+        "clicks": 0,
+        "impressions": 45,
+        "ctr": 0,
+        "position": 10.533333333333333
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem haritası türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 46
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem haritası türkiye canlı"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 15.3125
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem izleme"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem izleme haritası"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 24.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem kandilli harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem kıraathanesi"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem live"
+        ],
+        "clicks": 0,
+        "impressions": 27,
+        "ctr": 0,
+        "position": 16.333333333333336
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem map"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 26.2
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem nereden bakılır"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 32.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem noktası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 33
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem online harita"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 35.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem rasathanesi harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem sayfası"
+        ],
+        "clicks": 0,
+        "impressions": 21,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem sismik hareketleri"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 32
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem sismik haritası"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem sitesi"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 32.8
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem son dakika"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem son dakika harita"
+        ],
+        "clicks": 0,
+        "impressions": 114,
+        "ctr": 0,
+        "position": 9.833333333333334
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem son dakika haritası"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 20
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem son dakika türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem sorgulama"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 17.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem takip etme"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem türkiye canli"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem çizelgesi"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 47
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem şuan"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 8.777777777777779
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "deprem.com"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "depremin haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 18
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "depremler"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "depremler acil durum kaynakları"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 20
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "depremtakip.com"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 7.8125
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "değrem anlık"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "dünya deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 67
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "dünya depremleri anlık"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 75.2
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "dünya son depremler"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "dünyada anlık depremler"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "dünyadaki depremler anlık"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "en son depremler"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "fay hattı haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "fay hattı haritası canlı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "gerçek fay hattı görüntüsü"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "google deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 36.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "güncel deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 14.090909090909092
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "harita deprem"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 22.666666666666668
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "harita üzerinde deprem"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 23.75
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "harita üzerinde son depremler"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 35.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "haritada deprem bölgeleri"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 72.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "haritalı deprem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "haritalı depremler"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 25
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "haritalı son depremler"
+        ],
+        "clicks": 0,
+        "impressions": 36,
+        "ctr": 0,
+        "position": 24.63888888888889
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "istanbul deprem haritası canlı"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "izmir deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 80
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "izmir deprem çizelgesi"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 76
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "kandilli"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "kandilli canlı deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "kandilli deprem harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "kandilli rasathanesi canlı deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 6.333333333333333
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "kandilli rasathanesi canlı harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "kandilli rasathanesi harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "kandilli rasathanesi son depremler haritası"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 32.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "online deprem"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 44.666666666666664
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "online deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 71
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "saatlik deprem"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 9.875
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "sismik deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 39
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "sismik harita"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 31.571428571428573
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "sismograf canlı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 66
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son dakika canlı deprem"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 12.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son dakika deprem"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 27.714285714285715
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son dakika deprem bölgesi"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son dakika deprem canlı"
+        ],
+        "clicks": 0,
+        "impressions": 143,
+        "ctr": 0,
+        "position": 10.6993006993007
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son dakika deprem haritalı"
+        ],
+        "clicks": 0,
+        "impressions": 72,
+        "ctr": 0,
+        "position": 9.847222222222221
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son deprem harita"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 27,
+        "ctr": 0,
+        "position": 24.555555555555557
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son deprem türkiye canlı"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son depremler canlı"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 11.333333333333334
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son depremler harita üzerinde"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 55.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son depremler haritalı"
+        ],
+        "clicks": 0,
+        "impressions": 25,
+        "ctr": 0,
+        "position": 10.56
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son depremler haritası"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 23.4375
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "son depremlr"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "sondakika deprem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "türkiye anlık deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 12.4
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "türkiye canlı deprem"
+        ],
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 10.818181818181818
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "türkiye canlı deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 132,
+        "ctr": 0,
+        "position": 10.265151515151516
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "türkiye deprem anlık"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 8.75
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "türkiye deprem canlı"
+        ],
+        "clicks": 0,
+        "impressions": 42,
+        "ctr": 0,
+        "position": 10.452380952380953
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "türkiye deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "yakınımdaki"
+        ],
+        "clicks": 0,
+        "impressions": 27,
+        "ctr": 0,
+        "position": 6.555555555555555
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "yakınımdaki deprem son dakika"
+        ],
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 9.318181818181818
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "yakınımdaki deprem türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 57,
+        "ctr": 0,
+        "position": 8.75438596491228
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "çök kapan tutun görseli"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 71
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/",
+          "şu anda nerede deprem oluyor"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 97
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/blog-dask-nedir.html",
+          "dask nedir neleri kapsar"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/blog-dask-nedir.html",
+          "dask neleri kapsar"
+        ],
+        "clicks": 0,
+        "impressions": 36,
+        "ctr": 0,
+        "position": 73.44444444444444
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/blog-dask-nedir.html",
+          "dask neyi karşılar"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 72
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/blog-dask-nedir.html",
+          "dask poliçesi neleri kapsar"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 49
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-aninda.html",
+          "afad çök kapan tutun deprem anında ne yapmalı"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-aninda.html",
+          "afad çök kapan tutun resmi sayfa"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-elazig.html",
+          "2020 elazığ depremi fay hattı"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-elazig.html",
+          "elazig depremi fay hattı"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11.666666666666666
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-elazig.html",
+          "elazığ anlık deprem"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-elazig.html",
+          "elazığ deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-elazig.html",
+          "elazığ deprem riski"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 48
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-elazig.html",
+          "elazığ depremi fay hattı"
+        ],
+        "clicks": 0,
+        "impressions": 38,
+        "ctr": 0,
+        "position": 13.526315789473685
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-elazig.html",
+          "elazığ depremi hangi fay hattı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-elazig.html",
+          "elazığ depremi hangi fay hattı üzerinde"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-elazig.html",
+          "elazığ fay hattı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 80
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-elazig.html",
+          "elazığ fay hattı haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-istanbul.html",
+          "istanbul deprem"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/deprem-istanbul.html",
+          "istanbul deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 53
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/ilk-yardim-cantasi.html",
+          "ilk yardım çantası nasıl yapılır"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "afad son depremler api"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "boun deprem harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 46
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "canlı deprem verileri"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 52
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "deprem analizi"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 72.83333333333333
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "deprem api"
+        ],
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 8.857142857142858
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "deprem koeri"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "deprem nereden bakılır"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 65
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "deprem veri"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 65.33333333333333
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "deprem verileri"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 45.57142857142857
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "deprem verisi indirme"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 22
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "deprem ölçer"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 36
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "deprem ölçüm"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 36
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "deprem ölçümleri"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 54.25
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "depremler acil durum kaynakları"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 14.4
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "kandilli api"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10.333333333333334
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "kandilli rasathanesi api"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 11.25
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "kandilli rasathanesi deprem verileri api"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "kaoeri"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 32.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "koeri"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 30.5
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "koeri deprem"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 19.727272727272727
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "koeri ne demek"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "koeri.boun.edu.tr son depremler"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 29
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "rasathane deprem verileri"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 59
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/veri-kaynaklari.html",
+          "yakınımdaki deprem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "keys": [
+          "https://yakinimdakideprem.com/widget-son-depremler.html",
+          "yakınımdaki deprem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 30
+      }
+    ],
+    "last7": [
+      {
+        "keys": [
+          "yakınımdaki deprem"
+        ],
+        "clicks": 7,
+        "impressions": 2047,
+        "ctr": 0.003419638495359062,
+        "position": 7.541768441621886
+      },
+      {
+        "keys": [
+          "sismik harita canlı"
+        ],
+        "clicks": 6,
+        "impressions": 15,
+        "ctr": 0.4,
+        "position": 10.4
+      },
+      {
+        "keys": [
+          "anlık deprem"
+        ],
+        "clicks": 3,
+        "impressions": 577,
+        "ctr": 0.005199306759098787,
+        "position": 11.564991334488735
+      },
+      {
+        "keys": [
+          "deprem"
+        ],
+        "clicks": 3,
+        "impressions": 6,
+        "ctr": 0.5,
+        "position": 11.833333333333334
+      },
+      {
+        "keys": [
+          "canlı deprem"
+        ],
+        "clicks": 1,
+        "impressions": 70,
+        "ctr": 0.014285714285714285,
+        "position": 10.985714285714286
+      },
+      {
+        "keys": [
+          "canlı deprem takibi"
+        ],
+        "clicks": 1,
+        "impressions": 18,
+        "ctr": 0.05555555555555555,
+        "position": 10
+      },
+      {
+        "keys": [
+          "deprem canlı harita"
+        ],
+        "clicks": 1,
+        "impressions": 5,
+        "ctr": 0.2,
+        "position": 9
+      },
+      {
+        "keys": [
+          "deprem haritası"
+        ],
+        "clicks": 1,
+        "impressions": 8,
+        "ctr": 0.125,
+        "position": 28.25
+      },
+      {
+        "keys": [
+          "deprem haritası canlı"
+        ],
+        "clicks": 1,
+        "impressions": 35,
+        "ctr": 0.02857142857142857,
+        "position": 10.285714285714286
+      },
+      {
+        "keys": [
+          "fay hattı canlı"
+        ],
+        "clicks": 1,
+        "impressions": 5,
+        "ctr": 0.2,
+        "position": 14.4
+      },
+      {
+        "keys": [
+          "son depremler"
+        ],
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 0.3333333333333333,
+        "position": 13
+      },
+      {
+        "keys": [
+          "yakinimdaki deprem"
+        ],
+        "clicks": 1,
+        "impressions": 15,
+        "ctr": 0.06666666666666667,
+        "position": 6
+      },
+      {
+        "keys": [
+          "yakın depremler"
+        ],
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 5
+      },
+      {
+        "keys": [
+          "yakınımdaki depremler"
+        ],
+        "clicks": 1,
+        "impressions": 27,
+        "ctr": 0.037037037037037035,
+        "position": 8.777777777777779
+      },
+      {
+        "keys": [
+          "afad son depremler api"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 21
+      },
+      {
+        "keys": [
+          "anlik deprem"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 13.2
+      },
+      {
+        "keys": [
+          "anlik deprem durumu"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "anlik deprem takibi"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "keys": [
+          "anlik depremler"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "anlik.deprem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "anlık deprem bilgileri"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "anlık deprem bilgisi"
+        ],
+        "clicks": 0,
+        "impressions": 38,
+        "ctr": 0,
+        "position": 11.026315789473685
+      },
+      {
+        "keys": [
+          "anlık deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10.333333333333334
+      },
+      {
+        "keys": [
+          "anlık deprem haritası türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "anlık deprem izleme"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "keys": [
+          "anlık deprem nerede oldu"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "anlık deprem takibi"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 9.142857142857142
+      },
+      {
+        "keys": [
+          "anlık deprem takip"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 9.6
+      },
+      {
+        "keys": [
+          "anlık deprem türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 73,
+        "ctr": 0,
+        "position": 10.63013698630137
+      },
+      {
+        "keys": [
+          "anlık deprem çizelgesi"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 26
+      },
+      {
+        "keys": [
+          "anlık depremler"
+        ],
+        "clicks": 0,
+        "impressions": 31,
+        "ctr": 0,
+        "position": 11.064516129032258
+      },
+      {
+        "keys": [
+          "anlık depreö"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "anlık deprwm"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "anlık değrem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "anlıkdeprem"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "keys": [
+          "ayamama deresi"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "keys": [
+          "canli deprem"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "canli deprem haritasi"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 37
+      },
+      {
+        "keys": [
+          "canlı deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 73,
+        "ctr": 0,
+        "position": 8.095890410958905
+      },
+      {
+        "keys": [
+          "canlı deprem son dakika"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 8.85
+      },
+      {
+        "keys": [
+          "canlı depremler"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 10.2
+      },
+      {
+        "keys": [
+          "deprem - bugün"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "deprem anlik"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 11.3
+      },
+      {
+        "keys": [
+          "deprem anlık"
+        ],
+        "clicks": 0,
+        "impressions": 42,
+        "ctr": 0,
+        "position": 11.928571428571429
+      },
+      {
+        "keys": [
+          "deprem anlık harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 18
+      },
+      {
+        "keys": [
+          "deprem anlık takip"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 12.2
+      },
+      {
+        "keys": [
+          "deprem anlık türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "deprem canli"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "deprem canlı"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 15.75
+      },
+      {
+        "keys": [
+          "deprem canlı haritası"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "deprem canlı takip"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "deprem harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "deprem haritasi"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 32
+      },
+      {
+        "keys": [
+          "deprem haritası güncel"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 23.5
+      },
+      {
+        "keys": [
+          "deprem haritası son dakika"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 9.692307692307692
+      },
+      {
+        "keys": [
+          "deprem koeri"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "deprem live"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 55
+      },
+      {
+        "keys": [
+          "deprem map"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 25
+      },
+      {
+        "keys": [
+          "deprem sismik hareketleri"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 32
+      },
+      {
+        "keys": [
+          "deprem son dakika canlı"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 10.23076923076923
+      },
+      {
+        "keys": [
+          "deprem son dakika harita"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "deprem takibi"
+        ],
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0,
+        "position": 8.5625
+      },
+      {
+        "keys": [
+          "deprem takip"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 25.5
+      },
+      {
+        "keys": [
+          "deprem.com"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "depremtakip.com"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "elazığ fay hattı haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "google deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 21
+      },
+      {
+        "keys": [
+          "haritalı son depremler"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 20
+      },
+      {
+        "keys": [
+          "kandilli rasathanesi api"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "koeri"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 27.666666666666668
+      },
+      {
+        "keys": [
+          "koeri deprem"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "koeri ne demek"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "saatlik deprem"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 9.875
+      },
+      {
+        "keys": [
+          "sismik harita"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 21
+      },
+      {
+        "keys": [
+          "son dakika deprem canlı"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "keys": [
+          "son dakika deprem harita"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 9.2
+      },
+      {
+        "keys": [
+          "son dakika deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 9.6
+      },
+      {
+        "keys": [
+          "son deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "son depremler harita"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 15.75
+      },
+      {
+        "keys": [
+          "son depremlr"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "türkiye anlık deprem"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 11.375
+      },
+      {
+        "keys": [
+          "türkiye canlı deprem"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "türkiye deprem canlı"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "türkiye deprem haritası canlı"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "keys": [
+          "yakındaki deprem"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 7.384615384615385
+      },
+      {
+        "keys": [
+          "yakındaki depremler"
+        ],
+        "clicks": 0,
+        "impressions": 48,
+        "ctr": 0,
+        "position": 8.916666666666668
+      },
+      {
+        "keys": [
+          "yakınlarda deprem"
+        ],
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "yakınımda deprem"
+        ],
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 8.515151515151516
+      },
+      {
+        "keys": [
+          "yakınımdaki"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 7.923076923076923
+      },
+      {
+        "keys": [
+          "yakınımdaki deprem son dakika"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "yakınımdaki deprem türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 9.5
+      }
+    ],
+    "last30": [
+      {
+        "keys": [
+          "yakınımdaki deprem"
+        ],
+        "clicks": 55,
+        "impressions": 11063,
+        "ctr": 0.0049715267106571455,
+        "position": 7.947753773840731
+      },
+      {
+        "keys": [
+          "sismik harita canlı"
+        ],
+        "clicks": 14,
+        "impressions": 71,
+        "ctr": 0.19718309859154928,
+        "position": 9.647887323943662
+      },
+      {
+        "keys": [
+          "anlık deprem"
+        ],
+        "clicks": 5,
+        "impressions": 1275,
+        "ctr": 0.00392156862745098,
+        "position": 11.502745098039215
+      },
+      {
+        "keys": [
+          "anlık deprem türkiye"
+        ],
+        "clicks": 5,
+        "impressions": 307,
+        "ctr": 0.016286644951140065,
+        "position": 10.49185667752443
+      },
+      {
+        "keys": [
+          "canlı deprem"
+        ],
+        "clicks": 5,
+        "impressions": 343,
+        "ctr": 0.014577259475218658,
+        "position": 10.682215743440233
+      },
+      {
+        "keys": [
+          "deprem"
+        ],
+        "clicks": 5,
+        "impressions": 22,
+        "ctr": 0.22727272727272727,
+        "position": 15.227272727272727
+      },
+      {
+        "keys": [
+          "son depremler"
+        ],
+        "clicks": 3,
+        "impressions": 12,
+        "ctr": 0.25,
+        "position": 13.583333333333334
+      },
+      {
+        "keys": [
+          "deprem anlık"
+        ],
+        "clicks": 2,
+        "impressions": 82,
+        "ctr": 0.024390243902439025,
+        "position": 13.085365853658537
+      },
+      {
+        "keys": [
+          "deprem canlı harita"
+        ],
+        "clicks": 2,
+        "impressions": 18,
+        "ctr": 0.1111111111111111,
+        "position": 9.833333333333334
+      },
+      {
+        "keys": [
+          "deprem haritası"
+        ],
+        "clicks": 2,
+        "impressions": 34,
+        "ctr": 0.058823529411764705,
+        "position": 28.58823529411765
+      },
+      {
+        "keys": [
+          "deprem haritası canlı"
+        ],
+        "clicks": 2,
+        "impressions": 126,
+        "ctr": 0.015873015873015872,
+        "position": 10.444444444444445
+      },
+      {
+        "keys": [
+          "yakınımda deprem"
+        ],
+        "clicks": 2,
+        "impressions": 91,
+        "ctr": 0.02197802197802198,
+        "position": 8.527472527472527
+      },
+      {
+        "keys": [
+          "yakınımdaki depremler"
+        ],
+        "clicks": 2,
+        "impressions": 101,
+        "ctr": 0.019801980198019802,
+        "position": 9.217821782178218
+      },
+      {
+        "keys": [
+          "anlık deprem bilgisi"
+        ],
+        "clicks": 1,
+        "impressions": 100,
+        "ctr": 0.01,
+        "position": 10.63
+      },
+      {
+        "keys": [
+          "ayamama deresi"
+        ],
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 11.5
+      },
+      {
+        "keys": [
+          "canlı deprem haritası"
+        ],
+        "clicks": 1,
+        "impressions": 173,
+        "ctr": 0.005780346820809248,
+        "position": 10.046242774566474
+      },
+      {
+        "keys": [
+          "canlı deprem son dakika"
+        ],
+        "clicks": 1,
+        "impressions": 29,
+        "ctr": 0.034482758620689655,
+        "position": 8.862068965517242
+      },
+      {
+        "keys": [
+          "canlı deprem takibi"
+        ],
+        "clicks": 1,
+        "impressions": 66,
+        "ctr": 0.015151515151515152,
+        "position": 9.545454545454545
+      },
+      {
+        "keys": [
+          "canlı depremler"
+        ],
+        "clicks": 1,
+        "impressions": 14,
+        "ctr": 0.07142857142857142,
+        "position": 10.785714285714286
+      },
+      {
+        "keys": [
+          "dünya deprem haritası canlı"
+        ],
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 36.75
+      },
+      {
+        "keys": [
+          "fay hattı canlı"
+        ],
+        "clicks": 1,
+        "impressions": 8,
+        "ctr": 0.125,
+        "position": 13.25
+      },
+      {
+        "keys": [
+          "sismograf"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 8
+      },
+      {
+        "keys": [
+          "yakinimdaki deprem"
+        ],
+        "clicks": 1,
+        "impressions": 91,
+        "ctr": 0.01098901098901099,
+        "position": 6.604395604395604
+      },
+      {
+        "keys": [
+          "yakın depremler"
+        ],
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 0.3333333333333333,
+        "position": 6.333333333333333
+      },
+      {
+        "keys": [
+          "afad deprem haritası canlı"
+        ],
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "afad son depremler api"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 21
+      },
+      {
+        "keys": [
+          "afad son depremler harita"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "aktif deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 43
+      },
+      {
+        "keys": [
+          "anlik deprem"
+        ],
+        "clicks": 0,
+        "impressions": 58,
+        "ctr": 0,
+        "position": 15.258620689655173
+      },
+      {
+        "keys": [
+          "anlik deprem durumu"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "anlik deprem takibi"
+        ],
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 17.857142857142858
+      },
+      {
+        "keys": [
+          "anlik depremler"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "anlik.deprem"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "anlık deprem bilgileri"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "anlık deprem göstergesi"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "anlık deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 14.692307692307692
+      },
+      {
+        "keys": [
+          "anlık deprem haritası türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "anlık deprem izleme"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "keys": [
+          "anlık deprem nerede oldu"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "anlık deprem takibi"
+        ],
+        "clicks": 0,
+        "impressions": 25,
+        "ctr": 0,
+        "position": 10.12
+      },
+      {
+        "keys": [
+          "anlık deprem takip"
+        ],
+        "clicks": 0,
+        "impressions": 26,
+        "ctr": 0,
+        "position": 9.076923076923077
+      },
+      {
+        "keys": [
+          "anlık deprem çizelgesi"
+        ],
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 18.083333333333332
+      },
+      {
+        "keys": [
+          "anlık depremler"
+        ],
+        "clicks": 0,
+        "impressions": 39,
+        "ctr": 0,
+        "position": 14.564102564102564
+      },
+      {
+        "keys": [
+          "anlık depreö"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "anlık deprwm"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "anlık değrem"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "anlıkdeprem"
+        ],
+        "clicks": 0,
+        "impressions": 18,
+        "ctr": 0,
+        "position": 8.61111111111111
+      },
+      {
+        "keys": [
+          "anında deprem"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "keys": [
+          "az önce deprem nereden bakılır"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 26
+      },
+      {
+        "keys": [
+          "canli deprem"
+        ],
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 15.823529411764707
+      },
+      {
+        "keys": [
+          "canli deprem haritasi"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 40
+      },
+      {
+        "keys": [
+          "canli deprem haritası"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 27.5
+      },
+      {
+        "keys": [
+          "canlı deprem haritası türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 23.25
+      },
+      {
+        "keys": [
+          "canlı deprem izleme"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "keys": [
+          "canlı deprem takip"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "keys": [
+          "dask nedir neleri kapsar"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 60
+      },
+      {
+        "keys": [
+          "dask neleri kapsar"
+        ],
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 65.63636363636364
+      },
+      {
+        "keys": [
+          "deprem - bugün"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "keys": [
+          "deprem analizi"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 72.6
+      },
+      {
+        "keys": [
+          "deprem anlik"
+        ],
+        "clicks": 0,
+        "impressions": 40,
+        "ctr": 0,
+        "position": 11.05
+      },
+      {
+        "keys": [
+          "deprem anlık harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 18
+      },
+      {
+        "keys": [
+          "deprem anlık takip"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 12.6
+      },
+      {
+        "keys": [
+          "deprem anlık türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 11.6
+      },
+      {
+        "keys": [
+          "deprem api"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "keys": [
+          "deprem büyüklükleri"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 7.5
+      },
+      {
+        "keys": [
+          "deprem canli"
+        ],
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 9.1
+      },
+      {
+        "keys": [
+          "deprem canlı"
+        ],
+        "clicks": 0,
+        "impressions": 65,
+        "ctr": 0,
+        "position": 15.584615384615384
+      },
+      {
+        "keys": [
+          "deprem canlı haritası"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 25.5
+      },
+      {
+        "keys": [
+          "deprem canlı takip"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 13.5
+      },
+      {
+        "keys": [
+          "deprem durumu"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "deprem harita"
+        ],
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 18.166666666666668
+      },
+      {
+        "keys": [
+          "deprem haritasi"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 29.375
+      },
+      {
+        "keys": [
+          "deprem haritasi canli"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11.5
+      },
+      {
+        "keys": [
+          "deprem haritası canlı türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "keys": [
+          "deprem haritası güncel"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 23.5
+      },
+      {
+        "keys": [
+          "deprem haritası son dakika"
+        ],
+        "clicks": 0,
+        "impressions": 38,
+        "ctr": 0,
+        "position": 9.394736842105264
+      },
+      {
+        "keys": [
+          "deprem haritası türkiye canlı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "keys": [
+          "deprem izleme"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "keys": [
+          "deprem koeri"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "keys": [
+          "deprem live"
+        ],
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 27.2
+      },
+      {
+        "keys": [
+          "deprem map"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 25
+      },
+      {
+        "keys": [
+          "deprem online harita"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 51
+      },
+      {
+        "keys": [
+          "deprem sayfası"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "keys": [
+          "deprem sismik hareketleri"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 32
+      },
+      {
+        "keys": [
+          "deprem son dakika"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 15
+      },
+      {
+        "keys": [
+          "deprem son dakika canlı"
+        ],
+        "clicks": 0,
+        "impressions": 21,
+        "ctr": 0,
+        "position": 10.142857142857142
+      },
+      {
+        "keys": [
+          "deprem son dakika harita"
+        ],
+        "clicks": 0,
+        "impressions": 51,
+        "ctr": 0,
+        "position": 9.549019607843137
+      },
+      {
+        "keys": [
+          "deprem son dakika haritası"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 24.5
+      },
+      {
+        "keys": [
+          "deprem son dakika türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "deprem sorgulama"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "keys": [
+          "deprem takibi"
+        ],
+        "clicks": 0,
+        "impressions": 40,
+        "ctr": 0,
+        "position": 8.575
+      },
+      {
+        "keys": [
+          "deprem takip"
+        ],
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 19.11764705882353
+      },
+      {
+        "keys": [
+          "deprem takip canlı"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "keys": [
+          "deprem takip haritası"
+        ],
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 13.125
+      },
+      {
+        "keys": [
+          "deprem türkiye"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "keys": [
+          "deprem verileri"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 32
+      },
+      {
+        "keys": [
+          "deprem ölçer"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 36
+      },
+      {
+        "keys": [
+          "deprem ölçümleri"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 54
+      },
+      {
+        "keys": [
+          "deprem şuan"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "keys": [
+          "deprem.com"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      }
+    ],
+    "sitemap_status": [
+      {
+        "path": "https://yakinimdakideprem.com/sitemap.xml",
+        "lastSubmitted": "2026-04-18T11:13:08.218Z",
+        "isPending": false,
+        "isSitemapsIndex": false,
+        "type": "sitemap",
+        "lastDownloaded": "2026-04-18T11:13:09.462Z",
+        "warnings": "0",
+        "errors": "0",
+        "contents": [
+          {
+            "type": "web",
+            "submitted": "110",
+            "indexed": "0"
+          },
+          {
+            "type": "image",
+            "submitted": "15",
+            "indexed": "0"
+          }
+        ]
+      }
+    ]
+  },
+  "ga4": {
+    "pages": [
+      {
+        "page": "/",
+        "users": 338,
+        "views": 522,
+        "avg_dur_s": 91.3,
+        "bounce": 48.2,
+        "engage": 51.8
+      },
+      {
+        "page": "/deprem-aninda.html",
+        "users": 36,
+        "views": 41,
+        "avg_dur_s": 95.4,
+        "bounce": 28.6,
+        "engage": 71.4
+      },
+      {
+        "page": "/ben-kimim.html",
+        "users": 9,
+        "views": 16,
+        "avg_dur_s": 32.3,
+        "bounce": 35.7,
+        "engage": 64.3
+      },
+      {
+        "page": "/blog.html",
+        "users": 6,
+        "views": 11,
+        "avg_dur_s": 73.0,
+        "bounce": 20.0,
+        "engage": 80.0
+      },
+      {
+        "page": "/ilk-yardim-cantasi.html",
+        "users": 5,
+        "views": 6,
+        "avg_dur_s": 28.3,
+        "bounce": 28.6,
+        "engage": 71.4
+      },
+      {
+        "page": "/blog-bina-icindeyseniz.html",
+        "users": 2,
+        "views": 2,
+        "avg_dur_s": 34.7,
+        "bounce": 0.0,
+        "engage": 100.0
+      },
+      {
+        "page": "/blog-disaridaysaniz.html",
+        "users": 2,
+        "views": 1,
+        "avg_dur_s": 6.6,
+        "bounce": 0.0,
+        "engage": 100.0
+      },
+      {
+        "page": "/veri-kaynaklari.html",
+        "users": 2,
+        "views": 2,
+        "avg_dur_s": 22.5,
+        "bounce": 50.0,
+        "engage": 50.0
+      },
+      {
+        "page": "/blog-arac-kullanirken.html",
+        "users": 1,
+        "views": 1,
+        "avg_dur_s": 2.8,
+        "bounce": 0.0,
+        "engage": 100.0
+      },
+      {
+        "page": "/blog-deprem-guvenlik-bilgileri.html",
+        "users": 1,
+        "views": 1,
+        "avg_dur_s": 0.0,
+        "bounce": 100.0,
+        "engage": 0.0
+      },
+      {
+        "page": "/cerez-politikasi.html",
+        "users": 1,
+        "views": 1,
+        "avg_dur_s": 114.0,
+        "bounce": 0.0,
+        "engage": 100.0
+      },
+      {
+        "page": "/iletisim.html",
+        "users": 1,
+        "views": 0,
+        "avg_dur_s": 8.4,
+        "bounce": 0.0,
+        "engage": 100.0
+      },
+      {
+        "page": "/kullanim-sartlari.html",
+        "users": 1,
+        "views": 1,
+        "avg_dur_s": 1.0,
+        "bounce": 0.0,
+        "engage": 100.0
+      },
+      {
+        "page": "/sorumluluk-reddi.html",
+        "users": 1,
+        "views": 1,
+        "avg_dur_s": 46.1,
+        "bounce": 0.0,
+        "engage": 100.0
+      }
+    ],
+    "channels": [
+      {
+        "channel": "Organic Search",
+        "users": 238,
+        "sessions": 297,
+        "avg_dur_s": 106.9,
+        "bounce": 32.7
+      },
+      {
+        "channel": "Unassigned",
+        "users": 75,
+        "sessions": 87,
+        "avg_dur_s": 75.5,
+        "bounce": 98.9
+      },
+      {
+        "channel": "Direct",
+        "users": 35,
+        "sessions": 46,
+        "avg_dur_s": 106.9,
+        "bounce": 65.2
+      },
+      {
+        "channel": "Organic Social",
+        "users": 5,
+        "sessions": 31,
+        "avg_dur_s": 107.6,
+        "bounce": 45.2
+      },
+      {
+        "channel": "Referral",
+        "users": 1,
+        "sessions": 1,
+        "avg_dur_s": 11.1,
+        "bounce": 0.0
+      }
+    ],
+    "device": [
+      {
+        "device": "mobile",
+        "users": 311,
+        "sessions": 378,
+        "avg_dur_s": 60.6,
+        "bounce": 47.6
+      },
+      {
+        "device": "desktop",
+        "users": 38,
+        "sessions": 90,
+        "avg_dur_s": 262.7,
+        "bounce": 50.0
+      },
+      {
+        "device": "tablet",
+        "users": 1,
+        "sessions": 1,
+        "avg_dur_s": 36.0,
+        "bounce": 0.0
+      }
+    ],
+    "country": [
+      {
+        "country": "Türkiye",
+        "users": 330
+      },
+      {
+        "country": "United States",
+        "users": 7
+      },
+      {
+        "country": "China",
+        "users": 3
+      },
+      {
+        "country": "Egypt",
+        "users": 1
+      },
+      {
+        "country": "France",
+        "users": 1
+      },
+      {
+        "country": "Germany",
+        "users": 1
+      },
+      {
+        "country": "Italy",
+        "users": 1
+      },
+      {
+        "country": "Mexico",
+        "users": 1
+      },
+      {
+        "country": "Pakistan",
+        "users": 1
+      }
+    ]
+  }
+}

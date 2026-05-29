@@ -252,6 +252,10 @@
     <header class="page-header">
         <div class="container">
             <h1>Kocaeli Depremi</h1>
+            <div class="answer-block">
+              <strong>Kocaeli'nde deprem riski:</strong> Kocaeli, 17 Ağustos 1999 M7.4 Gölcük depreminin merkezindedir. Kuzey Anadolu Fay Hattı'nın Sapanca-İzmit-Karamürsel segmenti şehri boydan boya keser. AFAD'a göre 1. derece bölge; 1999 depreminden sonra Marmara koluna baskı arttı, sırasıyla doğudan batıya kırılma eğilimi sürmektedir.
+            </div>
+            <!-- Veri kaynakları: AFAD diri fay haritası 2020, Kandilli historical catalog -->
             <!-- SSR-FRESHNESS-START -->
             <div class="ssr-freshness" aria-live="polite"></div>
             <!-- SSR-FRESHNESS-END -->
@@ -400,6 +404,61 @@
             <p>Eğer sarsıntı hissettiyseniz, bu sayfanın yukarısındaki "Son Depremler" listesine bakın. Liste her 20 saniyede bir yenilenir ve <strong>Kocaeli</strong> bölgesindeki en yeni kayıt en üstte görünür. Verilerimiz Kandilli/AFAD'ın resmi API'lerinden alınır; gecikmesiz ve birebirdir. Resmi açıklama için <a href="https://deprem.afad.gov.tr" target="_blank" rel="noopener noreferrer">AFAD</a> sayfasını da kontrol edebilirsiniz. Yakınımızda meydana gelen depremlerde <a href="/deprem-aninda.html">Çök-Kapan-Tutun</a> kuralını uygulayın.</p>
         </section>
         <!-- SSR-PASSAGE-END -->
+
+        <section class="city-deep-content" id="detayli-bilgi">
+            <h2>Kocaeli Deprem Risk Analizi: Detaylı Rehber</h2>
+
+            <h3>Kocaeli Fay Hatları ve Tektonik Yapı</h3>
+            <p>Kocaeli, Türkiye'nin en aktif ve en ölümcül fay sistemi olan Kuzey Anadolu Fay Hattı'nın (KAFH) tam üzerinde yer alır. AFAD Diri Fay Haritası (2020) verilerine göre KAFH'nin Sapanca-İzmit-Karamürsel segmenti Kocaeli ilinin güneyinden geçer ve İzmit Körfezi içinde devam eder. Fay tipi olarak sağ yanal doğrultu atımlı (right-lateral strike-slip) karakterdedir; Avrasya plakası ile Anadolu plakası arasındaki göreceli hareketi taşır ve Anadolu plakası yılda yaklaşık 2-2.5 cm hızla batıya doğru kayar.</p>
+            <p>KAFH boyunca 1939 Erzincan depreminden başlayan ve batıya doğru ilerleyen tarihsel deprem serisi (1942 Niksar, 1943 Tosya, 1944 Bolu-Gerede, 1957 Abant, 1967 Mudurnu, 1999 İzmit-Düzce), Anadolu plakasındaki gerilmenin sistematik olarak batıya transfer edildiğini gösterir. 17 Ağustos 1999 Gölcük depremi (Mw 7.4 — Kandilli, Mw 7.6 — USGS), bu serinin en yıkıcı halkalarından biridir. Aynı yıl 12 Kasım 1999'da meydana gelen Düzce depremi (Mw 7.2), KAFH üzerindeki stresin doğuya doğru tetiklendiğini göstermiştir.</p>
+            <p>İzmit Körfezi'nin denizaltı kısmındaki segmentler de Kocaeli için kritik risk taşır. Kandilli Rasathanesi Tarihi Deprem Kataloğu, KAFH'nin Marmara batı segmentinin halen büyük bir deprem üretmediğini ve "sismik boşluk" (seismic gap) olarak tanımlandığını belirtir. Bu durum Kocaeli'nin batı ilçelerini (Gebze, Dilovası, Çayırova) etkileyebilecek olası bir Marmara depremi için de dikkat çekici bir göstergedir.</p>
+
+            <h3>Kocaeli İlçeleri Risk Sıralaması</h3>
+            <p>Kocaeli'nin risk profili, faya yakınlık ve zemin yapısıyla doğrudan bağlantılıdır. İzmit Körfezi kıyısındaki alüvyon zeminler sismik dalgayı büyütür ve 1999 depreminde Gölcük, Derince ve İzmit merkez yıkımı bunun somut örneğidir. Aşağıdaki sıralama AFAD risk haritası ve Kocaeli Büyükşehir Belediyesi mikrobölgeleme çalışmalarına dayalı genel bir özettir.</p>
+            <ul>
+                <li><strong>Yüksek risk:</strong> İzmit (fay üzeri ve alüvyon), Gölcük (1999 epicenter), Derince, Körfez, Karamürsel (fay hattı boyunca), Gebze (Marmara segmenti yakını)</li>
+                <li><strong>Orta risk:</strong> Başiskele, Kartepe, Çayırova, Darıca, Dilovası, Kandıra sahili</li>
+                <li><strong>Görece düşük risk:</strong> Kandıra'nın iç kesimleri, Kartepe'nin yüksek dağlık bölgeleri</li>
+            </ul>
+
+            <h3>Kocaeli'da Son 100 Yılın Önemli Depremleri</h3>
+            <p>Kocaeli, KAFH üzerindeki konumu nedeniyle son yüzyılın en yıkıcı depremlerine sahne olmuştur. Aşağıdaki tablo USGS Earthquake Catalog, Kandilli Rasathanesi tarihi kataloğu ve AFAD kayıtlarından derlenmiştir.</p>
+            <table>
+                <thead><tr><th>Tarih</th><th>Büyüklük</th><th>Merkez Üssü</th><th>Hasar</th></tr></thead>
+                <tbody>
+                    <tr><td>17 Ağustos 1999</td><td>M7.4 (Kandilli) / M7.6 (USGS)</td><td>Gölcük (Kocaeli)</td><td>Resmi 17.480 ölü (Kocaeli'de 9.477), 23.781 yaralı; 285.211 ev ve 42.902 işyeri hasarlı (kaynak: AFAD/Meclis Raporu)</td></tr>
+                    <tr><td>13 Eylül 1999</td><td>M5.8</td><td>İzmit Körfezi (artçı)</td><td>Hasarlı yapılarda ek yıkım</td></tr>
+                    <tr><td>11 Kasım 1999</td><td>M5.7</td><td>Kocaeli güneyi</td><td>Artçı serinin sürmesi</td></tr>
+                    <tr><td>12 Kasım 1999</td><td>M7.2</td><td>Düzce (Kocaeli'ye etki)</td><td>Doğu Kocaeli ilçelerinde ek hasar</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Kocaeli'da Bina Stoku ve Risk</h3>
+            <p>Kocaeli, 1999 Marmara depreminin epicenter ili olması nedeniyle Türkiye'de yapı stoku en köklü biçimde yenilenen illerden biridir. TÜYAP verileri ve TÜİK bina sayım istatistiklerine göre 1999 sonrası yapılan binaların oranı Kocaeli genelinde yüksektir; özellikle Gölcük, İzmit merkez ve Derince'de 1999 yıkımı sonrası yapılan yeni inşaatlar TBDY-2007 ve sonrasında 2018'de güncellenen TBDY-2018 yönetmelikleri kapsamında değerlendirilmiştir.</p>
+            <p>Buna karşılık 1999 öncesi inşa edilen ve yıkılmayan ancak yapısal hasar gören bazı binalar hâlâ kullanımdadır. Kocaeli Büyükşehir Belediyesi ve Çevre, Şehircilik ve İklim Değişikliği Bakanlığı kentsel dönüşüm programları kapsamında riskli yapı tespit çalışmaları sürmektedir. Sanayi tesislerinin yoğun olduğu Dilovası, Gebze ve Körfez ilçelerinde endüstriyel yapı denetimi ve TÜPRAŞ gibi büyük tesislerin deprem direnci ayrı bir başlık olarak değerlendirilir. Bina sahiplerinin yapı kimlik bilgisi (YKB) sorgulaması ve isteğe bağlı performans analizi yaptırması önerilir.</p>
+
+            <h3>Kocaeli İçin Deprem Hazırlığı</h3>
+            <p>Kocaeli'de deprem hazırlığı hem hane bazlı önlemleri hem de bölgesel endüstriyel risklere yönelik ek tedbirleri kapsar. Her ailenin önceden belirlenmiş bir toplanma noktası ve şehir dışı bir iletişim referansı belirlemesi önerilir. Yüksek dolapların duvara sabitlenmesi, cam yüzeylerin film ile güçlendirilmesi, doğal gaz vanasının nasıl kapatılacağının her hane üyesi tarafından bilinmesi temel adımlardır. Sanayi tesislerine yakın yaşayanlar deprem sonrası endüstriyel risk (gaz kaçağı, kimyasal sızıntı, yangın) konusunda da bilgili olmalıdır.</p>
+            <p>Resmi toplanma alanlarını öğrenmek için e-Devlet üzerinden AFAD Toplanma Alanı Sorgulama hizmeti kullanılmalıdır. Kocaeli İl AFAD Müdürlüğü'nün güncel duyuruları için <a href="https://kocaeli.afad.gov.tr" target="_blank" rel="noopener noreferrer">kocaeli.afad.gov.tr</a> sayfası takip edilebilir. Zorunlu Deprem Sigortası (DASK) yaptırılması yasal bir yükümlülüktür; konutun büyüklüğüne göre prim hesaplanır ve poliçe yıllık olarak yenilenir.</p>
+
+            <h3>Sıkça Sorulan Sorular</h3>
+            <details>
+                <summary>Kocaeli'da en son deprem ne zaman oldu?</summary>
+                <p>Bu sayfanın üst kısmında yer alan canlı listeden son depremleri takip edebilirsiniz. Sayfa 20 saniyede bir AFAD ve Kandilli verisiyle güncellenir.</p>
+            </details>
+            <details>
+                <summary>Kocaeli'da büyük deprem bekleniyor mu?</summary>
+                <p>KAFH'nin İzmit-Sapanca segmenti 1999 depremiyle önemli ölçüde enerjisini boşalttı; ancak Marmara batı segmenti (Gebze yakını) hâlâ sismik boşluk olarak tanımlanmaktadır. Bu nedenle Kocaeli'nin batı ilçelerini etkileyebilecek bir Marmara depremi ihtimali bilim insanları tarafından yüksek kabul edilir. Belirli bir tarih veya büyüklük tahmini yapılamaz; önemli olan hazırlıktır.</p>
+            </details>
+            <details>
+                <summary>Kocaeli'da hangi ilçeler en riskli?</summary>
+                <p>Fay yakınlığı ve alüvyon zemin nedeniyle İzmit, Gölcük, Derince, Körfez ve Karamürsel en yüksek risk grubunda yer alır. Gebze ve Dilovası, Marmara segmentine yakınlık ve endüstriyel yoğunluk nedeniyle dikkat edilmesi gereken bölgelerdir.</p>
+            </details>
+        </section>
+
+        <aside class="data-sources">
+            <p><strong>Veri kaynakları:</strong> AFAD Diri Fay Haritası 2020, Kandilli Rasathanesi Tarihi Deprem Kataloğu, USGS Earthquake Catalog, TÜİK Bina Sayım Verisi, T.C. AFAD Risk Haritası, TBMM 1999 Depremi Araştırma Komisyonu Raporu. Bu sayfadaki bilgiler bilgilendirme amaçlıdır, profesyonel jeofizik veya yapı mühendisliği danışmanlığının yerini tutmaz.</p>
+        </aside>
     </main>
 
     <footer>

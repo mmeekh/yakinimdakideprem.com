@@ -5,8 +5,8 @@
     <loc>https://yakinimdakideprem.com/</loc>
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/og-yakinimdakideprem.webp</image:loc>
-      <image:title>Anlık Deprem Türkiye 🔴 Canlı Harita | Son Depremler AFAD + Kandilli</image:title>
-      <image:caption>Anlık deprem Türkiye 🔴 AFAD + Kandilli verisiyle 20 saniyede güncellenen canlı deprem haritası. 81 il için son depremler, yakınımdaki sarsıntı, deprem mi oldu sorgusu — tek ekranda.</image:caption>
+      <image:title>🔴 Anlık Deprem Türkiye - Canlı AFAD/Kandilli Haritası</image:title>
+      <image:caption>Canlı deprem haritası — AFAD ve Kandilli verileriyle 20 saniyede güncel. Yakınımdaki son depremler, deprem mi oldu, anlık takip ve push bildirim.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>
@@ -23,8 +23,8 @@
     <loc>https://yakinimdakideprem.com/son-dakika-deprem.html</loc>
     <image:image>
       <image:loc>https://yakinimdakideprem.com/images/blog-son-deprem-haberleri.webp</image:loc>
-      <image:title>🔴 Son Dakika Deprem Türkiye - Az Önce Deprem Mi Oldu? | Canlı Liste</image:title>
-      <image:caption>Son dakika deprem Türkiye 🔴 Az önce deprem mi oldu? AFAD + Kandilli verisiyle 20 saniyede güncellenen canlı son depremler listesi. Tüm illeri kapsayan anlık takip.</image:caption>
+      <image:title>🔴 ŞU AN Son Dakika Deprem | Az Önce Oldu Mu? Canlı Liste</image:title>
+      <image:caption>Az önce deprem mi oldu? 🔴 AFAD/Kandilli birleşik veri, 20 saniyede güncel son depremler listesi ve push bildirim. 81 il canlı son dakika takip — şimdi açın.</image:caption>
       <image:license>https://yakinimdakideprem.com/kullanim-sartlari.html</image:license>
     </image:image>
   </url>

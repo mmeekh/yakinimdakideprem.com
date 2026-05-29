@@ -207,3 +207,15 @@
     columns: 1;
   }
 }
+
+/* Direct Answer Block — SEO/GEO answer-first pattern */
+.answer-block {
+  background: #fef3c7;
+  border-left: 4px solid #dc2626;
+  padding: 16px;
+  margin: 16px 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  border-radius: 4px;
+}
+.answer-block strong { color: #991b1b; }

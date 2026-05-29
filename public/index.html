@@ -27,6 +27,33 @@
         content="Canlı deprem haritası — AFAD ve Kandilli verileriyle 20 saniyede güncel. Yakınımdaki son depremler, deprem mi oldu, anlık takip ve push bildirim.">
     <meta name="twitter:image" content="https://yakinimdakideprem.com/images/og-yakinimdakideprem.webp">
     <meta name="twitter:image:alt" content="Yakınımdaki Deprem - Gerçek Zamanlı Deprem Bilgileri görseli">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Türkiye Son Depremler",
+      "description": "AFAD ve Kandilli verisi ile son 6 saatte gerçekleşen depremler",
+      "itemListOrder": "https://schema.org/ItemListOrderDescending",
+      "url": "https://yakinimdakideprem.com/"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "Türkiye Deprem Veri Agregasyonu — Yakınımdaki Deprem",
+      "description": "AFAD ve Kandilli Rasathanesi verilerini birleştiren açık deprem veri seti. M2.0+ depremler, 2024-2026 zaman aralığı.",
+      "url": "https://yakinimdakideprem.com/",
+      "keywords": ["deprem", "Türkiye", "sismik veri", "AFAD", "Kandilli"],
+      "isBasedOn": [
+        { "@type": "Dataset", "url": "https://www.afad.gov.tr", "name": "AFAD Sismik İstasyon Ağı" },
+        { "@type": "Dataset", "url": "https://www.koeri.boun.edu.tr", "name": "Kandilli Rasathanesi Deprem Listesi" }
+      ],
+      "creator": { "@type": "Person", "@id": "https://yakinimdakideprem.com/yazar/emin-kilic#person", "name": "Emin Kılıç" },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "temporalCoverage": "2024-01-01/.."
+    }
+    </script>
     <!-- Performance: Preconnect to external domains -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
@@ -465,6 +492,10 @@
     <!-- Harita ve Overlay Alanı -->
     <main id="main-content" class="map-wrapper" aria-label="Canlı deprem haritası ve son depremler">
         <h1 class="map-h1">Anlık Deprem Haritası Türkiye – Canlı Son Depremler</h1>
+        <div class="answer-block" id="quick-answer">
+          <strong>Az önce Türkiye'de deprem oldu mu?</strong> Yakınımdaki Deprem, AFAD ve Kandilli Rasathanesi verilerini 20 saniyede bir birleştirerek Türkiye'deki son depremleri gösterir. Harita ve liste M2.5+ tüm sarsıntıları kapsar; M3.5+ için anlık push bildirim alabilirsiniz. 81 il için ayrı sayfalarda fay hatları, geçmiş depremler ve hazırlık rehberleri bulunur.
+        </div>
+        <!-- Veri kaynakları: AFAD diri fay haritası 2020, Kandilli historical catalog -->
 
         <div id="map"></div>
         <noscript>
@@ -600,6 +631,8 @@
         <div class="container">
             <div class="seo-grid">
                 <div class="seo-main">
+                    <h2>Deprem mi oldu, hemen kontrol et</h2>
+                    <p>Türkiye'de son 6 saatte yaşanan tüm M2.5 ve üzeri depremler bu sayfada listelenmiştir. AFAD ve Kandilli Rasathanesi'nin paylaştığı veriler 20 saniyede bir doğrulanır. Haritada deprem ikonunun büyüklüğü ve rengi sarsıntının şiddetini gösterir. M3.5 ve üzeri için tarayıcı bildirimi açabilirsiniz.</p>
                     <h2>Anlık Deprem ve Türkiye Deprem Haritası</h2>
                     <p><strong>Deprem</strong>, Türkiye'nin jeolojik gerçeğidir. Ülkemiz, Kuzey Anadolu Fay Hattı (KAF),
                         Doğu Anadolu Fay Hattı (DAF) ve Batı Anadolu Fay Hattı (BAF) üzerinde yer aldığından, aktif bir

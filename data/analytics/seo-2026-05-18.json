@@ -1,0 +1,1511 @@
+{
+  "generated_at": "2026-05-18",
+  "site": "sc-domain:yakinimdakideprem.com",
+  "search_console": {
+    "date_range": "2026-05-09 → 2026-05-16",
+    "days": 7,
+    "top_queries": [
+      {
+        "query": "anlık deprem",
+        "clicks": 13,
+        "impressions": 1545,
+        "ctr": 0.84,
+        "position": 8.6
+      },
+      {
+        "query": "son dakika deprem türkiye",
+        "clicks": 13,
+        "impressions": 1765,
+        "ctr": 0.74,
+        "position": 8.7
+      },
+      {
+        "query": "yakınımdaki deprem",
+        "clicks": 11,
+        "impressions": 664,
+        "ctr": 1.66,
+        "position": 6.2
+      },
+      {
+        "query": "anlık deprem türkiye",
+        "clicks": 4,
+        "impressions": 63,
+        "ctr": 6.35,
+        "position": 7.3
+      },
+      {
+        "query": "canlı deprem haritası",
+        "clicks": 4,
+        "impressions": 140,
+        "ctr": 2.86,
+        "position": 9.2
+      },
+      {
+        "query": "deprem anlık",
+        "clicks": 4,
+        "impressions": 370,
+        "ctr": 1.08,
+        "position": 8.5
+      },
+      {
+        "query": "deprem canlı",
+        "clicks": 3,
+        "impressions": 54,
+        "ctr": 5.56,
+        "position": 14.3
+      },
+      {
+        "query": "yakinimdaki deprem",
+        "clicks": 3,
+        "impressions": 27,
+        "ctr": 11.11,
+        "position": 4.9
+      },
+      {
+        "query": "deprem son dakika türkiye",
+        "clicks": 2,
+        "impressions": 227,
+        "ctr": 0.88,
+        "position": 9.4
+      },
+      {
+        "query": "canli deprem",
+        "clicks": 1,
+        "impressions": 11,
+        "ctr": 9.09,
+        "position": 9.3
+      },
+      {
+        "query": "deprem haritası",
+        "clicks": 1,
+        "impressions": 24,
+        "ctr": 4.17,
+        "position": 16.6
+      },
+      {
+        "query": "deprem türkiye",
+        "clicks": 1,
+        "impressions": 118,
+        "ctr": 0.85,
+        "position": 10.2
+      },
+      {
+        "query": "haritalı son depremler",
+        "clicks": 1,
+        "impressions": 61,
+        "ctr": 1.64,
+        "position": 9.2
+      },
+      {
+        "query": "son dakika deprem",
+        "clicks": 1,
+        "impressions": 96,
+        "ctr": 1.04,
+        "position": 18.4
+      },
+      {
+        "query": "son dakika deprem bakırköy yakınında",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 7
+      },
+      {
+        "query": "son dakika deprem bilgisi",
+        "clicks": 1,
+        "impressions": 6,
+        "ctr": 16.67,
+        "position": 7.2
+      },
+      {
+        "query": "yakın depremler",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 7
+      },
+      {
+        "query": "2019 deprem yönetmeliğinde neler değişti",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 25
+      },
+      {
+        "query": "acil durum toplanma alanı",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 33
+      },
+      {
+        "query": "acil toplanma alanı sorgulama",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 22
+      },
+      {
+        "query": "afad api",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 13
+      },
+      {
+        "query": "afad canlı deprem",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "query": "afad canlı deprem haritası",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "query": "afad deprem anında çök kapan tutun resmi öneri",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "query": "afad deprem api son depremler json",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "query": "afad deprem haritası canlı",
+        "clicks": 0,
+        "impressions": 62,
+        "ctr": 0,
+        "position": 9.1
+      },
+      {
+        "query": "afad deprem haritası sorgulama",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "query": "afad son depremler api",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 20
+      },
+      {
+        "query": "afad son depremler api json",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 8.3
+      },
+      {
+        "query": "afad son depremler harita",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "query": "afad son depremler i̇stanbul kadıköy",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "query": "afad son depremler kadıköy i̇stanbul",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "query": "afad toplanma alanı e-devlet",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "query": "afad toplanma alanı e-devlet resmi",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "query": "afet ve acil durum toplanma alanı sorgulama",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "query": "aktif deprem haritası",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 18
+      },
+      {
+        "query": "alanlari",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 28
+      },
+      {
+        "query": "amasya da deprem mi oldu",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "amasya deprem bölgesi mi",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "query": "amasya deprem mi oldu",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "query": "amasya deprem son dakika",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "query": "amasya fay hattı nereden geçiyor",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 44
+      },
+      {
+        "query": "ani deprem",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "query": "anlik deprem",
+        "clicks": 0,
+        "impressions": 48,
+        "ctr": 0,
+        "position": 9.2
+      },
+      {
+        "query": "anlık depre",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "query": "anlık deprem antalya",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 11.3
+      },
+      {
+        "query": "anlık deprem bilgisi",
+        "clicks": 0,
+        "impressions": 28,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "query": "anlık deprem gaziantep",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 9.6
+      },
+      {
+        "query": "anlık deprem haritası",
+        "clicks": 0,
+        "impressions": 31,
+        "ctr": 0,
+        "position": 10.1
+      },
+      {
+        "query": "anlık deprem istanbul",
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 8.7
+      }
+    ],
+    "top_pages": [
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "clicks": 71,
+        "impressions": 7792,
+        "ctr": 0.91,
+        "position": 9.1
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-istanbul.html",
+        "clicks": 1,
+        "impressions": 113,
+        "ctr": 0.88,
+        "position": 9.1
+      },
+      {
+        "page": "https://yakinimdakideprem.com/ilk-yardim-cantasi.html",
+        "clicks": 1,
+        "impressions": 11,
+        "ctr": 9.09,
+        "position": 6.9
+      },
+      {
+        "page": "https://yakinimdakideprem.com/api.html",
+        "clicks": 0,
+        "impressions": 72,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-bina-deprem-performans-raporu-nedir.html",
+        "clicks": 0,
+        "impressions": 59,
+        "ctr": 0,
+        "position": 7.3
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-dask-nedir.html",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-deprem-aninda-yatakta.html",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 9.7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-deprem-cantasi.html",
+        "clicks": 0,
+        "impressions": 42,
+        "ctr": 0,
+        "position": 6.6
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-deprem-sonrasi-gida-saklama-ve-su-temini.html",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 17.8
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-deprem-sonrasi-ilk-24-saat.html",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 17
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-deprem-sonrasi-kiracilarin-haklari.html",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 6.1
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-disaridaysaniz.html",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-dunya-deprem-haritasi-canli.html",
+        "clicks": 0,
+        "impressions": 25,
+        "ctr": 0,
+        "position": 8.3
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-evim-depreme-dayanikli-mi.html",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 27.2
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-izmir-deprem-tarihi.html",
+        "clicks": 0,
+        "impressions": 25,
+        "ctr": 0,
+        "position": 11.8
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-marmara-depremi-1999-dersler.html",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 8.1
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-tbdy-2019-nedir.html",
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 10.9
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-toplanma-alani-sorgulama.html",
+        "clicks": 0,
+        "impressions": 157,
+        "ctr": 0,
+        "position": 10.3
+      },
+      {
+        "page": "https://yakinimdakideprem.com/blog-turkiye-en-cok-deprem-iller.html",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-amasya.html",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 12.6
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-aninda.html",
+        "clicks": 0,
+        "impressions": 59,
+        "ctr": 0,
+        "position": 7.6
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-antalya.html",
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 11.2
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-aydin.html",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 10.1
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-bayburt.html",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 9.8
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-corum.html",
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 12.1
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-denizli.html",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 13.8
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-edirne.html",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 9.4
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-elazig.html",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 18.6
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-erzurum.html",
+        "clicks": 0,
+        "impressions": 25,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-gaziantep.html",
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 12.2
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-hatay.html",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 26.7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-kirklareli.html",
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 12.4
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-kocaeli.html",
+        "clicks": 0,
+        "impressions": 57,
+        "ctr": 0,
+        "position": 17.5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-manisa.html",
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 22.1
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-mugla.html",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 31.9
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-nevsehir.html",
+        "clicks": 0,
+        "impressions": 41,
+        "ctr": 0,
+        "position": 10.0
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-sehirleri.html",
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 34.7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-trabzon.html",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-van.html",
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 14.3
+      },
+      {
+        "page": "https://yakinimdakideprem.com/embed.html",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "page": "https://yakinimdakideprem.com/iletisim.html",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "page": "https://yakinimdakideprem.com/son-dakika-deprem.html",
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 40.3
+      },
+      {
+        "page": "https://yakinimdakideprem.com/sorumluluk-reddi.html",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 18
+      },
+      {
+        "page": "https://yakinimdakideprem.com/veri-kaynaklari.html",
+        "clicks": 0,
+        "impressions": 174,
+        "ctr": 0,
+        "position": 9.8
+      }
+    ],
+    "page_query_pairs": [
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "anlık deprem",
+        "clicks": 13,
+        "impressions": 1545,
+        "ctr": 0.84,
+        "position": 8.6
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "son dakika deprem türkiye",
+        "clicks": 13,
+        "impressions": 1765,
+        "ctr": 0.74,
+        "position": 8.7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "yakınımdaki deprem",
+        "clicks": 11,
+        "impressions": 659,
+        "ctr": 1.67,
+        "position": 6.2
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "anlık deprem türkiye",
+        "clicks": 4,
+        "impressions": 63,
+        "ctr": 6.35,
+        "position": 7.3
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "canlı deprem haritası",
+        "clicks": 4,
+        "impressions": 140,
+        "ctr": 2.86,
+        "position": 9.2
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem anlık",
+        "clicks": 4,
+        "impressions": 370,
+        "ctr": 1.08,
+        "position": 8.5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem canlı",
+        "clicks": 3,
+        "impressions": 54,
+        "ctr": 5.56,
+        "position": 14.3
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "yakinimdaki deprem",
+        "clicks": 3,
+        "impressions": 27,
+        "ctr": 11.11,
+        "position": 4.9
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem son dakika türkiye",
+        "clicks": 2,
+        "impressions": 227,
+        "ctr": 0.88,
+        "position": 9.4
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "canli deprem",
+        "clicks": 1,
+        "impressions": 11,
+        "ctr": 9.09,
+        "position": 9.3
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem haritası",
+        "clicks": 1,
+        "impressions": 24,
+        "ctr": 4.17,
+        "position": 16.6
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem türkiye",
+        "clicks": 1,
+        "impressions": 118,
+        "ctr": 0.85,
+        "position": 10.2
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "haritalı son depremler",
+        "clicks": 1,
+        "impressions": 61,
+        "ctr": 1.64,
+        "position": 9.2
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "son dakika deprem",
+        "clicks": 1,
+        "impressions": 96,
+        "ctr": 1.04,
+        "position": 18.4
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "son dakika deprem bilgisi",
+        "clicks": 1,
+        "impressions": 6,
+        "ctr": 16.67,
+        "position": 7.2
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "yakın depremler",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/deprem-istanbul.html",
+        "query": "son dakika deprem bakırköy yakınında",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "afad canlı deprem",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "afad canlı deprem haritası",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "afad deprem haritası canlı",
+        "clicks": 0,
+        "impressions": 62,
+        "ctr": 0,
+        "position": 9.1
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "afad deprem haritası sorgulama",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 16
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "afad son depremler harita",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "aktif deprem haritası",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 18
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "ani deprem",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "anlik deprem",
+        "clicks": 0,
+        "impressions": 48,
+        "ctr": 0,
+        "position": 9.2
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "anlık depre",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "anlık deprem bilgisi",
+        "clicks": 0,
+        "impressions": 28,
+        "ctr": 0,
+        "position": 8.5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "anlık deprem haritası",
+        "clicks": 0,
+        "impressions": 31,
+        "ctr": 0,
+        "position": 10.1
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "anlık deprem son dakika",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 9.8
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "anlık deprem takibi",
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 8.3
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "anlık deprem çizelgesi",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "anlık depremler",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 14.4
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "anlık depremler türkiye",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "anlık depreö",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 8.2
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "anlık değrem",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10.7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "anında deprem",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 6.9
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "az önce deprem nereden bakılır",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 31
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "bugünkü depremler",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "canli deprem haritasi",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 14
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "canlı deprem",
+        "clicks": 0,
+        "impressions": 320,
+        "ctr": 0,
+        "position": 9.7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "canlı deprem haritası türkiye",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 11.5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "canlı deprem son dakika",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "canlı deprem takibi",
+        "clicks": 0,
+        "impressions": 13,
+        "ctr": 0,
+        "position": 6.6
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "canlı fay haritası",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 47.5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "canlı fay hattı",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 50
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem aktivitesi",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem anlik",
+        "clicks": 0,
+        "impressions": 18,
+        "ctr": 0,
+        "position": 8.2
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem anlık takip",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 19.1
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem anlık türkiye",
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 9.7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem anında",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem bilgisi",
+        "clicks": 0,
+        "impressions": 17,
+        "ctr": 0,
+        "position": 8.8
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem büyüklükleri",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem canli",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 9.6
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem canli yayin",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 44
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem canlı harita",
+        "clicks": 0,
+        "impressions": 41,
+        "ctr": 0,
+        "position": 8.2
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem canlı haritası",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem durumu",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 10.5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem grafiği",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 38.7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem güncel",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 16.3
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem hareketleri",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem harita",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem haritasi",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem haritasi canli",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem haritasi turkiye",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 22
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem haritası canlı",
+        "clicks": 0,
+        "impressions": 225,
+        "ctr": 0,
+        "position": 9.3
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem haritası son dakika",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 10.8
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem haritası türkiye",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 29.2
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem haritası türkiye canlı",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem kandilli harita",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem live",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem nerede olur",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 47
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem online harita",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 9
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem rasathanesi son dakika",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 22
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem saatleri",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 22
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem sayfası",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 7.5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem sismik hareketleri",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem siteleri",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem sitesi",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 23.5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem son dakika",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 24.5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem son dakika harita",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 9.7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem son dk türkiye",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem sorgulama",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem tablosu",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 23
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem takibi",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem takip",
+        "clicks": 0,
+        "impressions": 209,
+        "ctr": 0,
+        "position": 7.6
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem takip haritası",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 9.7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem turkiye",
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 11.3
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem yerleri",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 45
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem çizelgesi",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 26
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem şimdi",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7.5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem şuan",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem.com",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 4.5
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem.turkiye",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprem.türkiye",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "depremler turkiye",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 55
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "depremlerde son durum",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 68
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "depremtakip.com",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 7
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "deprw",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 57
+      },
+      {
+        "page": "https://yakinimdakideprem.com/",
+        "query": "dünya deprem haritası canlı",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 38.5
+      }
+    ]
+  },
+  "ga4": {
+    "date_range": "2026-05-11 → 2026-05-18",
+    "days": 7,
+    "pages": [
+      {
+        "page": "/",
+        "users": 8,
+        "views": 14,
+        "avg_duration_s": 66.6,
+        "bounce_rate": 50.0,
+        "engagement_rate": 50.0
+      },
+      {
+        "page": "/deprem-aninda.html",
+        "users": 1,
+        "views": 1,
+        "avg_duration_s": 172.4,
+        "bounce_rate": 100.0,
+        "engagement_rate": 0.0
+      }
+    ],
+    "channels": [
+      {
+        "channel": "Organic Search",
+        "users": 5,
+        "sessions": 8
+      },
+      {
+        "channel": "Unassigned",
+        "users": 3,
+        "sessions": 3
+      },
+      {
+        "channel": "Organic Social",
+        "users": 1,
+        "sessions": 1
+      }
+    ]
+  }
+}
