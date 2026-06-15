@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url>
+    <loc>https://yakinimdakideprem.com/son-dakika-deprem.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yakınımdaki Deprem</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-15T22:15:38+03:00</news:publication_date>
+      <news:title>Son Dakika Deprem Türkiye - Az Önce Deprem Mi Oldu? Canlı Liste</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-istatistikleri.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yakınımdaki Deprem</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-15T22:15:38+03:00</news:publication_date>
+      <news:title>Deprem İstatistikleri: Türkiye'de Bugün Kaç Deprem Oldu?</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-bugun-deprem-oldu-mu-turkiye.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yakınımdaki Deprem</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-15T22:15:38+03:00</news:publication_date>
+      <news:title>Bugün Deprem Oldu Mu Türkiye? 2026 Anlık Günlük Rapor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/blog-az-once-deprem-mi-oldu.html</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Yakınımdaki Deprem</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-06-15T22:15:38+03:00</news:publication_date>
+      <news:title>Az Önce Deprem Mi Oldu? Türkiye 2026 Hızlı Sorgulama</news:title>
+    </news:news>
+  </url>
+</urlset>

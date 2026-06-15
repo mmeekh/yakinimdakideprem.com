@@ -57,3 +57,4 @@ Disallow: /api/
 
 Sitemap: https://yakinimdakideprem.com/sitemap.xml
 Sitemap: https://yakinimdakideprem.com/sitemap-images.xml
+Sitemap: https://yakinimdakideprem.com/sitemap-news.xml
