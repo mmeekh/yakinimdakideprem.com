@@ -46,6 +46,9 @@ API_URL = os.getenv(
 POLL_SECONDS = int(os.getenv("FRESHNESS_POLL_SECONDS", "60"))
 MIN_MAGNITUDE = float(os.getenv("FRESHNESS_MIN_MAGNITUDE", "3.5"))
 HOURS_BACK = int(os.getenv("FRESHNESS_HOURS_BACK", "6"))
+# Bir SSR "az önce deprem" bloğu bu süreden eskiyse otomatik geri alınır
+# (nötr bloğa + standart başlığa döner). Donmuş/sahte freshness'ı önler.
+STALE_HOURS = float(os.getenv("FRESHNESS_STALE_HOURS", "12"))
 INDEXNOW_KEY = os.getenv("INDEXNOW_KEY", "")
 INDEXNOW_HOST = "yakinimdakideprem.com"
 TZ_TR = timezone(timedelta(hours=3))
@@ -286,10 +289,8 @@ def update_city_page(slug: str, city_name: str, quake: dict,
             f"🔴 {city_name}'da Az Önce {mag:.1f} Deprem | Anlık Deprem Takibi"
         )
     else:
-        # Standart CTR-optimize başlık
-        new_title = (
-            f"Anlık Deprem {city_name} 🔴 Canlı Harita ve Son Depremler"
-        )
+        # Standart CTR-optimize başlık (deprem aktif değilse)
+        new_title = default_city_title(city_name)
     new_html = re.sub(
         r"<title>[^<]+</title>",
         f"<title>{new_title}</title>",
@@ -301,6 +302,83 @@ def update_city_page(slug: str, city_name: str, quake: dict,
         return False
 
     # Atomic write
+    tmp = page.with_suffix(".html.tmp")
+    tmp.write_text(new_html, encoding="utf-8")
+    tmp.replace(page)
+    return True
+
+
+def default_city_title(city_name: str) -> str:
+    """Deprem aktif değilken kullanılan nötr, doğru başlık."""
+    return f"Anlık Deprem {city_name} 🔴 Canlı Harita ve Son Depremler"
+
+
+_BLOCK_TIME_RE = re.compile(r'itemprop="startDate"\s+datetime="([^"]+)"')
+
+
+def current_block_age_hours(html: str) -> Optional[float]:
+    """SSR bloğunda gösterilen depremin kaç saat önce olduğunu döndürür.
+    Blok nötrse (startDate yok) veya parse edilemezse None."""
+    m = re.search(re.escape(SSR_START) + r".*?" + re.escape(SSR_END),
+                  html, flags=re.DOTALL)
+    if not m:
+        return None
+    tm = _BLOCK_TIME_RE.search(m.group(0))
+    if not tm:
+        return None
+    try:
+        dt = datetime.fromisoformat(tm.group(1))
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=TZ_TR)
+    return (datetime.now(TZ_TR) - dt).total_seconds() / 3600.0
+
+
+def build_neutral_block(city_name: str) -> str:
+    """Aktif deprem yokken gösterilecek dürüst, sakin blok.
+    Yanlış 'az önce deprem' iddiası içermez (E-E-A-T / YMYL güvenliği)."""
+    iso_now = datetime.now(TZ_TR).isoformat()
+    pretty = datetime.now(TZ_TR).strftime("%d.%m.%Y %H:%M") + " TSİ"
+    return (
+        f"{SSR_START}\n"
+        '            <div class="ssr-freshness ssr-freshness--calm" aria-live="polite">\n'
+        f'                <p class="ssr-freshness__alert">🟢 '
+        f'<strong>{city_name}:</strong> Şu anda bölgede yeni bir önemli '
+        f'deprem (M{MIN_MAGNITUDE:.1f}+) bildirimi yok. Tüm son depremler için '
+        f'aşağıdaki canlı haritayı inceleyebilirsiniz.</p>\n'
+        f'                <time class="ssr-freshness__time" datetime="{iso_now}">'
+        f'Son güncelleme: {pretty}</time>\n'
+        '            </div>\n'
+        f"            {SSR_END}"
+    )
+
+
+def revert_city_page(slug: str, city_name: str) -> bool:
+    """STALE_HOURS'tan eski 'az önce deprem' bloğunu nötrle + başlığı geri al.
+    Donmuş/sahte freshness'ı (örn. TEST verisi, haftalarca kalan magnitude) temizler."""
+    page = PUBLIC / f"deprem-{slug}.html"
+    if not page.exists():
+        return False
+    html = page.read_text(encoding="utf-8")
+    if SSR_START not in html:
+        return False
+    age = current_block_age_hours(html)
+    if age is None or age < STALE_HOURS:
+        return False  # zaten nötr veya hâlâ taze — dokunma
+    new_block = build_neutral_block(city_name)
+    new_html = re.sub(
+        re.escape(SSR_START) + r".*?" + re.escape(SSR_END),
+        lambda _: new_block,
+        html, count=1, flags=re.DOTALL,
+    )
+    new_html = re.sub(
+        r"<title>[^<]+</title>",
+        lambda _: f"<title>{default_city_title(city_name)}</title>",
+        new_html, count=1,
+    )
+    if new_html == html:
+        return False
     tmp = page.with_suffix(".html.tmp")
     tmp.write_text(new_html, encoding="utf-8")
     tmp.replace(page)
@@ -361,7 +439,9 @@ def update_homepage(quakes: list, cities: dict) -> bool:
         qtime = parse_quake_time(q.get("time", ""))
         ago = humanize_minutes_ago(qtime)
         slug = find_city_slug(place, cities)
-        href = f"/deprem-{slug}.html" if slug else "#"
+        # Yurt dışı / açık deniz merkezleri için şehir sayfası yok → ölü "#" yerine
+        # ulusal son-dakika akışına yönlendir (kırık link SEO/UX'i zedeliyordu).
+        href = f"/deprem-{slug}.html" if slug else "/son-dakika-deprem.html"
         items.append((mag, place, depth, qtime, ago, href))
 
     if not items:
@@ -450,9 +530,8 @@ def run_once(cities: dict) -> int:
     Deduplication: aynı deprem ID'si tekrar yazılmaz."""
     global _LAST_HOMEPAGE
     quakes = fetch_recent_quakes()
-    if not quakes:
-        return 0
-
+    # NOT: API boş dönse bile aşağıdaki revert-pass çalışır (bayat blokları
+    # temizlemek API'ye bağlı değil), bu yüzden erken return yok.
     quakes.sort(key=lambda q: q.get("time", ""), reverse=True)
 
     # ----- Anasayfa: top 5'in ID-set'i değiştiyse güncelle -----
@@ -505,6 +584,27 @@ def run_once(cities: dict) -> int:
                 f"✓ {slug:15s} M{mag:>3.1f} {place[:50]}"
             )
             updated += 1
+
+    # ----- Revert pass: STALE_HOURS'tan eski "az önce" bloklarını nötrle -----
+    # Daemon sadece yeni deprem olunca yazıyordu, asla geri almıyordu; bu yüzden
+    # şehirler haftalarca "🔴 Az Önce X Deprem" başlığında donuyordu. Bu pass
+    # her turda tüm şehirleri tarar, bayat olanları nötr bloğa + standart başlığa
+    # döndürür. Bu turda taze yazılanlara (seen) dokunmaz.
+    reverted = 0
+    for r_slug, r_info in cities.items():
+        if r_slug in seen:
+            continue
+        try:
+            if revert_city_page(r_slug, r_info["name"]):
+                update_sitemap(r_slug)
+                _LAST_WRITTEN.pop(r_slug, None)
+                reverted += 1
+                log.info(f"↩ {r_slug:15s} bayat freshness nötrlendi")
+        except Exception as e:
+            log.warning(f"revert {r_slug}: {e}")
+    if reverted:
+        log.info(f"↩ Toplam {reverted} şehir nötrlendi")
+
     return updated
 
 
@@ -526,6 +626,8 @@ def main():
     p.add_argument("--once", action="store_true", help="Tek tur, daemon değil")
     p.add_argument("--simulate-quake", metavar="SLUG",
                    help="Belirtilen şehir için sahte deprem inject et (test)")
+    p.add_argument("--allow-prod-write", action="store_true",
+                   help="--simulate-quake'in CANLI public/ klasörüne yazmasına izin ver (tehlikeli)")
     args = p.parse_args()
 
     cities = load_cities()
@@ -536,6 +638,13 @@ def main():
         if slug not in cities:
             log.error(f"Unknown slug: {slug}")
             sys.exit(1)
+        if not args.allow_prod_write:
+            log.error(
+                "GÜVENLİK: --simulate-quake CANLI public/ klasörüne sahte deprem yazar. "
+                "Bilerek yapıyorsanız --allow-prod-write ekleyin ve sonra mutlaka `--once` "
+                "ile geri alın. (İstanbul TEST verisi bu yüzden 27 gün yayında kaldı.)"
+            )
+            sys.exit(2)
         fake = {
             "magnitude": 4.2,
             "place": f"TEST-{cities[slug]['name'].upper()}",

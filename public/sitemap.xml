@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://yakinimdakideprem.com/</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -28,21 +28,21 @@
 
   <url>
     <loc>https://yakinimdakideprem.com/deprem-istanbul.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/deprem-izmir.html</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/deprem-ankara.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -53,14 +53,14 @@
 
   <url>
     <loc>https://yakinimdakideprem.com/deprem-elazig.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://yakinimdakideprem.com/deprem-kahramanmaras.html</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.78</priority>
   </url>
@@ -88,52 +88,52 @@
   </url>
 
   <!-- Tüm 81 il sayfaları (Nisan 2026'da eklendi) -->
-  <url><loc>https://yakinimdakideprem.com/deprem-adiyaman.html</loc><lastmod>2026-05-24</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-afyonkarahisar.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-adiyaman.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-afyonkarahisar.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-agri.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-aksaray.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-antalya.html</loc><lastmod>2026-05-09</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-antalya.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-ardahan.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-artvin.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-aydin.html</loc><lastmod>2026-05-05</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-balikesir.html</loc><lastmod>2026-05-30</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-aydin.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-balikesir.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-bartin.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-batman.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-bilecik.html</loc><lastmod>2026-05-28</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-bilecik.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-bingol.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-bitlis.html</loc><lastmod>2026-05-29</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-bitlis.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-bolu.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-burdur.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-canakkale.html</loc><lastmod>2026-06-07</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-canakkale.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-cankiri.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-corum.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-denizli.html</loc><lastmod>2026-05-05</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-denizli.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-duzce.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-edirne.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-erzincan.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-erzurum.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-eskisehir.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-gaziantep.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.78</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-gaziantep.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.78</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-giresun.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.68</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-gumushane.html</loc><lastmod>2026-05-05</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-hakkari.html</loc><lastmod>2026-06-01</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-hatay.html</loc><lastmod>2026-05-05</lastmod><changefreq>daily</changefreq><priority>0.78</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-gumushane.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-hakkari.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-hatay.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.78</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-igdir.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-isparta.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.68</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-karabuk.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-karaman.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-kars.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.68</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-kastamonu.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.68</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-kayseri.html</loc><lastmod>2026-05-10</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-kayseri.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-kilis.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-kirikkale.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.68</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-kirsehir.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-kocaeli.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.78</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-konya.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-kutahya.html</loc><lastmod>2026-05-05</lastmod><changefreq>daily</changefreq><priority>0.68</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-malatya.html</loc><lastmod>2026-05-20</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-malatya.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-mersin.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-mugla.html</loc><lastmod>2026-05-31</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-mugla.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-mus.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.68</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-nigde.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-ordu.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.68</priority></url>
@@ -148,10 +148,10 @@
   <url><loc>https://yakinimdakideprem.com/deprem-sivas.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-tekirdag.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-tokat.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-trabzon.html</loc><lastmod>2026-05-26</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-trabzon.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.72</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-tunceli.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.68</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-usak.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.68</priority></url>
-  <url><loc>https://yakinimdakideprem.com/deprem-van.html</loc><lastmod>2026-05-21</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://yakinimdakideprem.com/deprem-van.html</loc><lastmod>2026-06-14</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-yalova.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-yozgat.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
   <url><loc>https://yakinimdakideprem.com/deprem-zonguldak.html</loc><lastmod>2026-05-04</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
@@ -594,4 +594,46 @@
     <priority>0.5</priority>
   </url>
 
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-amasya.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-bayburt.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-diyarbakir.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-kirklareli.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-manisa.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-mardin.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yakinimdakideprem.com/deprem-nevsehir.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
