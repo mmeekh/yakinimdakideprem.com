@@ -55,6 +55,8 @@ TZ_TR = timezone(timedelta(hours=3))
 
 SSR_START = "<!-- SSR-FRESHNESS-START -->"
 SSR_END = "<!-- SSR-FRESHNESS-END -->"
+SD_START = "<!-- SSR-SONDAKIKA-START -->"
+SD_END = "<!-- SSR-SONDAKIKA-END -->"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -94,15 +96,19 @@ def find_city_slug(place: str, cities: dict) -> Optional[str]:
     return best
 
 
-def fetch_recent_quakes() -> list:
-    params = {"hours_back": HOURS_BACK, "min_magnitude": MIN_MAGNITUDE, "limit": 50}
+def fetch_quakes(min_magnitude: float, hours_back: int, limit: int = 50) -> list:
+    params = {"hours_back": hours_back, "min_magnitude": min_magnitude, "limit": limit}
     try:
         r = requests.get(API_URL, params=params, timeout=10)
         r.raise_for_status()
         return r.json().get("data", []) or []
     except Exception as e:
-        log.error(f"API fetch failed: {e}")
+        log.error(f"API fetch failed (m{min_magnitude}/{hours_back}h): {e}")
         return []
+
+
+def fetch_recent_quakes() -> list:
+    return fetch_quakes(MIN_MAGNITUDE, HOURS_BACK, 50)
 
 
 def parse_quake_time(raw: str) -> datetime:
@@ -519,10 +525,166 @@ def update_homepage(quakes: list, cities: dict) -> bool:
     return True
 
 
+def _sd_table_rows(quakes: list, limit: int) -> str:
+    if not quakes:
+        return '<tr><td colspan="4">Şu anda görüntülenecek yeni deprem kaydı yok.</td></tr>'
+    rows = []
+    for q in quakes[:limit]:
+        mag = float(q.get("magnitude", 0) or 0)
+        place = q.get("location") or q.get("place") or "Bilinmiyor"
+        depth = q.get("depth", "?")
+        try:
+            depth_str = f"{float(depth):.1f} km"
+        except (TypeError, ValueError):
+            depth_str = "—"
+        qt = parse_quake_time(q.get("time", ""))
+        rows.append(
+            f'<tr><td>{qt.strftime("%d.%m.%Y %H:%M")}</td>'
+            f'<td><strong>M{mag:.1f}</strong></td>'
+            f'<td>{depth_str}</td><td>{place}</td></tr>'
+        )
+    return "\n                                ".join(rows)
+
+
+def update_son_dakika() -> bool:
+    """son-dakika-deprem.html'i sunucu-render et: tablolar + canlı kutu + LiveBlogPosting.
+    Sayfa %100 client-side'dı; Google boş 'Veriler yükleniyor' indeksliyordu (en yüksek
+    hacimli niyet: 'son dakika / az önce deprem'). Sadece yeni deprem geldiğinde yazar."""
+    global _LAST_SONDAKIKA
+    page = PUBLIC / "son-dakika-deprem.html"
+    if not page.exists():
+        return False
+    # NOT: API min_magnitude parametresini YOK SAYIYOR (M4 istesek de M2 döner),
+    # bu yüzden büyüklük filtresini client-side yapıyoruz (run_once'taki şehir
+    # döngüsü de aynı sebepten client-side filtreliyor).
+    def _mag(q):
+        try:
+            return float(q.get("magnitude", 0) or 0)
+        except (TypeError, ValueError):
+            return 0.0
+    pool = fetch_quakes(min_magnitude=0, hours_back=24 * 7, limit=100)
+    if not pool:
+        return False  # API boş/erişilemez → mevcut içeriği SİLME
+    pool.sort(key=lambda q: q.get("time", ""), reverse=True)
+    latest_list = [q for q in pool if _mag(q) >= 2.0][:20] or pool[:20]
+    m4_list = [q for q in pool if _mag(q) >= 4.0][:20]
+
+    top_id = latest_list[0].get("id") or latest_list[0].get("time")
+    if top_id == _LAST_SONDAKIKA:
+        return False  # yeni deprem yok, yeniden yazma (I/O + IndexNow rate limit)
+
+    html = page.read_text(encoding="utf-8")
+    orig = html
+    now = datetime.now(TZ_TR)
+    now_iso = now.isoformat()
+    now_pretty = now.strftime("%d.%m.%Y %H:%M") + " TSİ"
+
+    latest = latest_list[0]
+    l_mag = float(latest.get("magnitude", 0) or 0)
+    l_place = latest.get("location") or latest.get("place") or "Bilinmiyor"
+    l_time = parse_quake_time(latest.get("time", ""))
+    l_ago = humanize_minutes_ago(l_time)
+    mins = (now - l_time).total_seconds() / 60
+
+    # --- Tablolar (gerçek satırlar) ---
+    html = re.sub(
+        r'(<tbody id="latest-quakes-table">).*?(</tbody>)',
+        lambda m: f'{m.group(1)}\n                                {_sd_table_rows(latest_list, 20)}\n                            {m.group(2)}',
+        html, count=1, flags=re.DOTALL,
+    )
+    html = re.sub(
+        r'(<tbody id="m4plus-table">).*?(</tbody>)',
+        lambda m: f'{m.group(1)}\n                                {_sd_table_rows(m4_list, 20)}\n                            {m.group(2)}',
+        html, count=1, flags=re.DOTALL,
+    )
+
+    # --- Canlı kutu: "Az önce deprem oldu mu?" + "Son deprem" ---
+    if mins < 60:
+        just_now = (f'🔴 <strong>Evet</strong>, {l_ago.lower()}, {l_place} bölgesinde '
+                    f'<strong>M{l_mag:.1f}</strong> büyüklüğünde bir deprem kaydedildi.')
+    else:
+        just_now = (f'Son saatlerde yeni bir büyük deprem kaydedilmedi. En son: '
+                    f'{l_ago.lower()}, {l_place} <strong>M{l_mag:.1f}</strong>.')
+    html = re.sub(r'(<p id="just-now-info">).*?(</p>)',
+                  lambda m: f'{m.group(1)}{just_now}{m.group(2)}',
+                  html, count=1, flags=re.DOTALL)
+    latest_txt = (f'<strong>{l_place}</strong> — M{l_mag:.1f} • '
+                  f'{l_time.strftime("%d.%m.%Y %H:%M")} TSİ ({l_ago})')
+    html = re.sub(r'(<p id="latest-quake">).*?(</p>)',
+                  lambda m: f'{m.group(1)}{latest_txt}{m.group(2)}',
+                  html, count=1, flags=re.DOTALL)
+    html = re.sub(r'(<strong id="live-updated">).*?(</strong>)',
+                  lambda m: f'{m.group(1)}{now_pretty}{m.group(2)}',
+                  html, count=1, flags=re.DOTALL)
+
+    # --- LiveBlogPosting schema (SSR marker arası) ---
+    canonical = "https://yakinimdakideprem.com/son-dakika-deprem.html"
+    updates = []
+    for q in latest_list[:10]:
+        mag = float(q.get("magnitude", 0) or 0)
+        place = q.get("location") or q.get("place") or "Bilinmiyor"
+        qt = parse_quake_time(q.get("time", ""))
+        updates.append({
+            "@type": "BlogPosting",
+            "headline": f"{place} M{mag:.1f} deprem",
+            "datePublished": qt.isoformat(),
+            "articleBody": (f"{humanize_minutes_ago(qt)}, {place} bölgesinde "
+                            f"{mag:.1f} büyüklüğünde deprem kaydedildi."),
+        })
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "LiveBlogPosting",
+        "@id": f"{canonical}#liveblog",
+        "headline": "Son Dakika Deprem — Türkiye Canlı Deprem Takibi",
+        "url": canonical,
+        "datePublished": l_time.isoformat(),
+        "dateModified": now_iso,
+        "coverageStartTime": l_time.isoformat(),
+        "about": {"@type": "Place", "name": "Türkiye", "addressCountry": "TR"},
+        "publisher": {
+            "@type": "Organization",
+            "name": "Yakınımdaki Deprem",
+            "@id": "https://yakinimdakideprem.com/#organization",
+            "logo": {"@type": "ImageObject",
+                     "url": "https://yakinimdakideprem.com/icons/android-chrome-512x512.png"},
+        },
+        "liveBlogUpdate": updates,
+    }
+    schema_block = (
+        f'{SD_START}\n'
+        '    <script type="application/ld+json">\n'
+        f'    {json.dumps(schema, ensure_ascii=False)}\n'
+        '    </script>\n'
+        f'    {SD_END}'
+    )
+    if SD_START in html:
+        html = re.sub(re.escape(SD_START) + r".*?" + re.escape(SD_END),
+                      lambda _: schema_block, html, count=1, flags=re.DOTALL)
+    else:
+        html = html.replace("</head>", schema_block + "\n</head>", 1)
+
+    # --- Dinamik title (en son deprem çok taze ise) ---
+    if l_mag >= 3.0 and mins < 30:
+        new_title = f"🔴 {l_place} {l_mag:.1f} Deprem ({l_ago}) | Son Dakika Deprem"
+    else:
+        new_title = "🔴 Son Dakika Deprem | Az Önce Deprem Oldu Mu? Canlı Liste"
+    html = re.sub(r"<title>[^<]*</title>",
+                  lambda _: f"<title>{new_title}</title>", html, count=1)
+
+    if html == orig:
+        return False
+    tmp = page.with_suffix(".html.tmp")
+    tmp.write_text(html, encoding="utf-8")
+    tmp.replace(page)
+    _LAST_SONDAKIKA = top_id
+    return True
+
+
 # Deduplication state — process'in hayatı boyunca aynı (slug, quake_id) tekrar
 # yazılmasın (gereksiz disk I/O + IndexNow rate limit'ten kaçın).
 _LAST_WRITTEN: dict[str, str] = {}   # slug → last quake_id
 _LAST_HOMEPAGE: tuple = None         # (top_quake_id, ...) tuple of latest 5 ids
+_LAST_SONDAKIKA = None               # son-dakika sayfasındaki en yeni deprem id'si
 
 
 def run_once(cities: dict) -> int:
@@ -543,6 +705,15 @@ def run_once(cities: dict) -> int:
             log.info(f"✓ Anasayfa güncellendi (son {len(top5_ids)} deprem)")
             ping_indexnow_url("https://yakinimdakideprem.com/")
             _LAST_HOMEPAGE = top5_ids
+
+    # ----- Son dakika sayfası: yeni deprem geldiğinde SSR render -----
+    # (kendi fetch'ini yapar: M2.0+/24s; quakes boş olsa da çalışır)
+    try:
+        if update_son_dakika():
+            ping_indexnow_url("https://yakinimdakideprem.com/son-dakika-deprem.html")
+            log.info("✓ son-dakika-deprem.html SSR güncellendi")
+    except Exception as e:
+        log.warning(f"son-dakika update: {e}")
 
     # ----- Şehir sayfaları: her şehir için en yeni deprem (M3.5+) -----
     # quakes_by_city: slug → en yeni 5 deprem (SSR quake table için)
