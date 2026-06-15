@@ -57,6 +57,8 @@ SSR_START = "<!-- SSR-FRESHNESS-START -->"
 SSR_END = "<!-- SSR-FRESHNESS-END -->"
 SD_START = "<!-- SSR-SONDAKIKA-START -->"
 SD_END = "<!-- SSR-SONDAKIKA-END -->"
+INTENT_START = "<!-- SSR-INTENT-START -->"
+INTENT_END = "<!-- SSR-INTENT-END -->"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -680,11 +682,107 @@ def update_son_dakika() -> bool:
     return True
 
 
+def _build_intent_block(kind: str, pool: list, now: datetime) -> str:
+    """kind='azonce' | 'bugun' için H1 altına girecek taze cevap kutusu."""
+    def _mag(q):
+        try:
+            return float(q.get("magnitude", 0) or 0)
+        except (TypeError, ValueError):
+            return 0.0
+    latest = pool[0]
+    l_mag = _mag(latest)
+    l_place = latest.get("location") or latest.get("place") or "Bilinmiyor"
+    l_time = parse_quake_time(latest.get("time", ""))
+    l_ago = humanize_minutes_ago(l_time)
+    upd = now.strftime("%d.%m.%Y %H:%M") + " TSİ"
+
+    if kind == "azonce":
+        mins = (now - l_time).total_seconds() / 60
+        if mins < 180:
+            body = (f'🔴 <strong>Evet, az önce deprem oldu.</strong> {l_ago}, '
+                    f'<strong>{l_place}</strong> bölgesinde <strong>M{l_mag:.1f}</strong> '
+                    f'büyüklüğünde bir deprem kaydedildi.')
+        else:
+            body = ("Son birkaç saatte Türkiye'de yeni bir önemli deprem kaydedilmedi. "
+                    f'En son kayıt: {l_ago}, <strong>{l_place}</strong> M{l_mag:.1f}.')
+    else:  # bugun
+        today = now.date()
+        todays = [q for q in pool if parse_quake_time(q.get("time", "")).date() == today]
+        if todays:
+            strongest = max(todays, key=_mag)
+            s_mag = _mag(strongest)
+            s_place = strongest.get("location") or strongest.get("place") or "Bilinmiyor"
+            body = (f'📊 <strong>Bugün ({now.strftime("%d.%m.%Y")}) Türkiye\'de '
+                    f'{len(todays)} deprem</strong> kaydedildi. En büyüğü: '
+                    f'<strong>M{s_mag:.1f}</strong> — {s_place}. En son: {l_ago}, '
+                    f'{l_place} M{l_mag:.1f}.')
+        else:
+            body = (f'Bugün ({now.strftime("%d.%m.%Y")}) henüz M2.0+ deprem kaydedilmedi. '
+                    f'En son kayıt: {l_ago}, {l_place} M{l_mag:.1f}.')
+
+    return (
+        f'{INTENT_START}\n'
+        '            <div class="ssr-intent-answer" aria-live="polite" '
+        'style="background:#fff3f3;border-left:4px solid #e23;padding:14px 18px;'
+        'margin:16px 0;border-radius:8px;">\n'
+        f'                <p style="margin:0;font-size:1.05rem;">{body}</p>\n'
+        '                <p style="margin:6px 0 0;font-size:.85rem;opacity:.7;">'
+        f'Son güncelleme: <time datetime="{now.isoformat()}">{upd}</time> · '
+        'Kaynak: Kandilli/AFAD</p>\n'
+        '            </div>\n'
+        f'            {INTENT_END}'
+    )
+
+
+def update_intent_blogs() -> int:
+    """2 'para' blogunu tazele (bugün/az önce deprem): H1 altı canlı cevap + dateModified=now.
+    2026-05-05'te donmuşlardı; donmuş tarih 'bugün deprem oldu mu' için negatif sinyal."""
+    global _LAST_INTENT
+    pool = fetch_quakes(min_magnitude=0, hours_back=24 * 7, limit=100)
+    if not pool:
+        return 0
+    pool.sort(key=lambda q: q.get("time", ""), reverse=True)
+    now = datetime.now(TZ_TR)
+    top_id = pool[0].get("id") or pool[0].get("time")
+    gate = (top_id, now.strftime("%Y-%m-%d"))  # yeni deprem VEYA gün değişince güncelle
+    if gate == _LAST_INTENT:
+        return 0
+
+    updated = 0
+    for fname, kind in [("blog-az-once-deprem-mi-oldu.html", "azonce"),
+                        ("blog-bugun-deprem-oldu-mu-turkiye.html", "bugun")]:
+        page = PUBLIC / fname
+        if not page.exists():
+            continue
+        html = page.read_text(encoding="utf-8")
+        orig = html
+        block = _build_intent_block(kind, pool, now)
+        if INTENT_START in html:
+            html = re.sub(re.escape(INTENT_START) + r".*?" + re.escape(INTENT_END),
+                          lambda _: block, html, count=1, flags=re.DOTALL)
+        else:
+            html = re.sub(r"(<h1[^>]*>.*?</h1>)",
+                          lambda m: m.group(1) + "\n            " + block,
+                          html, count=1, flags=re.DOTALL)
+        html = re.sub(r'("dateModified":\s*")[^"]*(")',
+                      lambda m: f'{m.group(1)}{now.isoformat()}{m.group(2)}',
+                      html, count=1)
+        if html != orig:
+            tmp = page.with_suffix(".html.tmp")
+            tmp.write_text(html, encoding="utf-8")
+            tmp.replace(page)
+            updated += 1
+    if updated:
+        _LAST_INTENT = gate
+    return updated
+
+
 # Deduplication state — process'in hayatı boyunca aynı (slug, quake_id) tekrar
 # yazılmasın (gereksiz disk I/O + IndexNow rate limit'ten kaçın).
 _LAST_WRITTEN: dict[str, str] = {}   # slug → last quake_id
 _LAST_HOMEPAGE: tuple = None         # (top_quake_id, ...) tuple of latest 5 ids
 _LAST_SONDAKIKA = None               # son-dakika sayfasındaki en yeni deprem id'si
+_LAST_INTENT = None                  # (top_id, gün) — 2 intent blogu için
 
 
 def run_once(cities: dict) -> int:
@@ -714,6 +812,16 @@ def run_once(cities: dict) -> int:
             log.info("✓ son-dakika-deprem.html SSR güncellendi")
     except Exception as e:
         log.warning(f"son-dakika update: {e}")
+
+    # ----- 2 'para' blogu (bugün/az önce deprem): canlı cevap + dateModified -----
+    try:
+        n = update_intent_blogs()
+        if n:
+            ping_indexnow_url("https://yakinimdakideprem.com/blog-az-once-deprem-mi-oldu.html")
+            ping_indexnow_url("https://yakinimdakideprem.com/blog-bugun-deprem-oldu-mu-turkiye.html")
+            log.info(f"✓ {n} intent blogu tazelendi")
+    except Exception as e:
+        log.warning(f"intent blog update: {e}")
 
     # ----- Şehir sayfaları: her şehir için en yeni deprem (M3.5+) -----
     # quakes_by_city: slug → en yeni 5 deprem (SSR quake table için)
