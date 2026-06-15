@@ -47,8 +47,9 @@ REGION_RISK = {
         "kalan, görece sakin fakat orta büyüklükte depremlere açık bir bölgedir."
     ),
     "Karadeniz": (
-        "Kuzey Anadolu Fay Hattı'nın doğu kolu ile yerel kıyı fayları nedeniyle "
-        "orta-yüksek sismik risk taşır. 1939 Erzincan depremi bu bölgeyi etkilemiştir."
+        "Kuzey Anadolu Fay Hattı'nın bölgeden geçen kolları nedeniyle orta-yüksek "
+        "sismik risk taşır. 1942 Niksar-Erbaa ve 1943 Tosya-Ladik depremleri bu "
+        "hattın bölgedeki yıkıcı etkisini göstermiştir."
     ),
     "Doğu Anadolu": (
         "Doğu Anadolu Fay Hattı (DAF) ile Kuzey Anadolu Fay Hattı'nın kesişim "
