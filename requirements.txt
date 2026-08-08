@@ -1,6 +1,16 @@
-fastapi~=0.115.0
-uvicorn~=0.32.0
-httpx~=0.28.0
-requests~=2.32.3
-tweepy~=4.15.0
-Pillow~=11.0
+# 2026-08-06: Dependabot 15 açık (11 high) kapatma turu — bilinen CVE'li
+# geçişli bağımlılıklara açık tabanlar kondu (h11/urllib3/starlette dalgası).
+fastapi~=0.119.0
+uvicorn~=0.36.0
+httpx~=0.28.1
+requests~=2.32.5          # CVE-2024-47081 fix >=2.32.4
+tweepy~=4.16.0
+Pillow~=11.3              # CVE-2025-48379 fix >=11.3.0
+
+# Geçişli bağımlılık güvenlik tabanları (Dependabot bunları da tarar):
+h11>=0.16.0               # CVE-2025-43859 (request smuggling, high)
+urllib3>=2.5.0            # CVE-2025-50181/50182
+starlette>=0.47.2         # CVE-2025-54121 (multipart DoS)
+anyio>=4.4.0
+certifi>=2025.1.31
+idna>=3.7                 # CVE-2024-3651
