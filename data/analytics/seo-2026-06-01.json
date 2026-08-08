@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-06-01",
+  "site_key": "yakinimdakideprem",
+  "domain": "yakinimdakideprem.com",
+  "sc_property": "sc-domain:yakinimdakideprem.com",
+  "search_console": {
+    "error": "<HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/sc-domain%3Ayakinimdakideprem.com/searchAnalytics/query?alt=json returned \"User does not have sufficient permission for site 'sc-domain:yakinimdakideprem.com'. See also: https://support.google.com/webmasters/answer/2451999.\". Details: \"[{'message': \"User does not have sufficient permission for site 'sc-domain:yakinimdakideprem.com'. See also: https://support.google.com/webmasters/answer/2451999.\", 'domain': 'global', 'reason': 'forbidden'}]\">"
+  },
+  "ga4": {
+    "error": "403 User does not have sufficient permissions for this property. To learn more about Property ID, see https://developers.google.com/analytics/devguides/reporting/data/v1/property-id."
+  }
+}

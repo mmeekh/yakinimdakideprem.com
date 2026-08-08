@@ -22,3 +22,5 @@ reports/
 # IndexNow key file (regenerated per env)
 public/*.txt
 !public/robots.txt
+data/analytics/*.log
+data/analytics/cron.log

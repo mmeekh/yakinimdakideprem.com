@@ -66,7 +66,7 @@ git push origin --force --all
 ## Raporlama
 
 Güvenlik sorununu sorumlu şekilde bildirmek için:
-**emin.kilic@clemta.com**
+**muhammeteminkilic012@gmail.com**
 
 Public GitHub issue açmadan önce lütfen e-posta ile bildirin.
 
